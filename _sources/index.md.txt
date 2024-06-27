@@ -5,5 +5,6 @@
 caption: Contents
 titlesonly: true
 ---
-aruco.md
+cv2.aruco.md
+cv2.dnn.md
 ```
