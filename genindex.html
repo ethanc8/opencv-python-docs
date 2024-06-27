@@ -214,6 +214,8 @@
   <p class="caption" role="heading"><span class="caption-text">Contents</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="cv2.aruco.html"><code class="docutils literal notranslate"><span class="pre">cv2.aruco</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="cv2.barcode.html"><code class="docutils literal notranslate"><span class="pre">cv2.barcode</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="cv2.cuda.html"><code class="docutils literal notranslate"><span class="pre">cv2.cuda</span></code></a></li>
 <li class="toctree-l1"><a class="reference internal" href="cv2.dnn.html"><code class="docutils literal notranslate"><span class="pre">cv2.dnn</span></code></a></li>
 </ul>
 
@@ -252,7 +254,7 @@
           
 <section class="genindex-section">
   <h1 id="index">Index</h1>
-  <div class="genindex-jumpbox"><a href="#_"><strong>_</strong></a> | <a href="#A"><strong>A</strong></a> | <a href="#B"><strong>B</strong></a> | <a href="#C"><strong>C</strong></a> | <a href="#D"><strong>D</strong></a> | <a href="#E"><strong>E</strong></a> | <a href="#F"><strong>F</strong></a> | <a href="#G"><strong>G</strong></a> | <a href="#I"><strong>I</strong></a> | <a href="#K"><strong>K</strong></a> | <a href="#L"><strong>L</strong></a> | <a href="#M"><strong>M</strong></a> | <a href="#N"><strong>N</strong></a> | <a href="#O"><strong>O</strong></a> | <a href="#P"><strong>P</strong></a> | <a href="#Q"><strong>Q</strong></a> | <a href="#R"><strong>R</strong></a> | <a href="#S"><strong>S</strong></a> | <a href="#T"><strong>T</strong></a> | <a href="#U"><strong>U</strong></a> | <a href="#W"><strong>W</strong></a></div>
+  <div class="genindex-jumpbox"><a href="#_"><strong>_</strong></a> | <a href="#A"><strong>A</strong></a> | <a href="#B"><strong>B</strong></a> | <a href="#C"><strong>C</strong></a> | <a href="#D"><strong>D</strong></a> | <a href="#E"><strong>E</strong></a> | <a href="#F"><strong>F</strong></a> | <a href="#G"><strong>G</strong></a> | <a href="#H"><strong>H</strong></a> | <a href="#I"><strong>I</strong></a> | <a href="#K"><strong>K</strong></a> | <a href="#L"><strong>L</strong></a> | <a href="#M"><strong>M</strong></a> | <a href="#N"><strong>N</strong></a> | <a href="#O"><strong>O</strong></a> | <a href="#P"><strong>P</strong></a> | <a href="#Q"><strong>Q</strong></a> | <a href="#R"><strong>R</strong></a> | <a href="#S"><strong>S</strong></a> | <a href="#T"><strong>T</strong></a> | <a href="#U"><strong>U</strong></a> | <a href="#W"><strong>W</strong></a></div>
 </section>
 <section id="_" class="genindex-section">
   <h2>_</h2>
@@ -276,6 +278,20 @@
           <li><a href="cv2.aruco.html#cv2.aruco.GridBoard.__init__">(cv2.aruco.GridBoard method)</a>, <a href="cv2.aruco.html#id12">[1]</a>
 </li>
           <li><a href="cv2.aruco.html#cv2.aruco.RefineParameters.__init__">(cv2.aruco.RefineParameters method)</a>
+</li>
+          <li><a href="cv2.barcode.html#cv2.barcode.BarcodeDetector.__init__">(cv2.barcode.BarcodeDetector method)</a>, <a href="cv2.barcode.html#id0">[1]</a>
+</li>
+          <li><a href="cv2.cuda.html#cv2.cuda.BufferPool.__init__">(cv2.cuda.BufferPool method)</a>
+</li>
+          <li><a href="cv2.cuda.html#cv2.cuda.DeviceInfo.__init__">(cv2.cuda.DeviceInfo method)</a>, <a href="cv2.cuda.html#id1">[1]</a>
+</li>
+          <li><a href="cv2.cuda.html#cv2.cuda.Event.__init__">(cv2.cuda.Event method)</a>
+</li>
+          <li><a href="cv2.cuda.html#cv2.cuda.GpuMat.__init__">(cv2.cuda.GpuMat method)</a>, <a href="cv2.cuda.html#id10">[1]</a>, <a href="cv2.cuda.html#id11">[2]</a>, <a href="cv2.cuda.html#id2">[3]</a>, <a href="cv2.cuda.html#id3">[4]</a>, <a href="cv2.cuda.html#id4">[5]</a>, <a href="cv2.cuda.html#id5">[6]</a>, <a href="cv2.cuda.html#id6">[7]</a>, <a href="cv2.cuda.html#id7">[8]</a>, <a href="cv2.cuda.html#id8">[9]</a>, <a href="cv2.cuda.html#id9">[10]</a>
+</li>
+          <li><a href="cv2.cuda.html#cv2.cuda.HostMem.__init__">(cv2.cuda.HostMem method)</a>, <a href="cv2.cuda.html#id37">[1]</a>, <a href="cv2.cuda.html#id38">[2]</a>, <a href="cv2.cuda.html#id39">[3]</a>, <a href="cv2.cuda.html#id40">[4]</a>, <a href="cv2.cuda.html#id41">[5]</a>
+</li>
+          <li><a href="cv2.cuda.html#cv2.cuda.Stream.__init__">(cv2.cuda.Stream method)</a>, <a href="cv2.cuda.html#id42">[1]</a>, <a href="cv2.cuda.html#id43">[2]</a>
 </li>
           <li><a href="cv2.dnn.html#cv2.dnn.ClassificationModel.__init__">(cv2.dnn.ClassificationModel method)</a>, <a href="cv2.dnn.html#id0">[1]</a>
 </li>
@@ -316,14 +332,16 @@
 </li>
         <li><a href="cv2.aruco.html#cv2.aruco.DetectorParameters.adaptiveThreshWinSizeStep">adaptiveThreshWinSizeStep (cv2.aruco.DetectorParameters attribute)</a>
 </li>
+        <li><a href="cv2.cuda.html#cv2.cuda.GpuMat.adjustROI">adjustROI() (cv2.cuda.GpuMat method)</a>
+</li>
         <li><a href="cv2.aruco.html#cv2.aruco.DetectorParameters.aprilTagCriticalRad">aprilTagCriticalRad (cv2.aruco.DetectorParameters attribute)</a>
 </li>
         <li><a href="cv2.aruco.html#cv2.aruco.DetectorParameters.aprilTagDeglitch">aprilTagDeglitch (cv2.aruco.DetectorParameters attribute)</a>
 </li>
-    </ul></td>
-    <td style="width: 33%; vertical-align: top;"><ul>
         <li><a href="cv2.aruco.html#cv2.aruco.DetectorParameters.aprilTagMaxLineFitMse">aprilTagMaxLineFitMse (cv2.aruco.DetectorParameters attribute)</a>
 </li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
         <li><a href="cv2.aruco.html#cv2.aruco.DetectorParameters.aprilTagMaxNmaxima">aprilTagMaxNmaxima (cv2.aruco.DetectorParameters attribute)</a>
 </li>
         <li><a href="cv2.aruco.html#cv2.aruco.DetectorParameters.aprilTagMinClusterPixels">aprilTagMinClusterPixels (cv2.aruco.DetectorParameters attribute)</a>
@@ -336,6 +354,10 @@
 </li>
         <li><a href="cv2.aruco.html#cv2.aruco.ArucoDetector">ArucoDetector (class in cv2.aruco)</a>
 </li>
+        <li><a href="cv2.cuda.html#cv2.cuda.GpuMat.assignTo">assignTo() (cv2.cuda.GpuMat method)</a>
+</li>
+        <li><a href="cv2.cuda.html#cv2.cuda.DeviceInfo.asyncEngineCount">asyncEngineCount() (cv2.cuda.DeviceInfo method)</a>
+</li>
     </ul></td>
   </tr></table>
 </section>
@@ -344,6 +366,8 @@
   <h2>B</h2>
   <table style="width: 100%" class="indextable genindextable"><tr>
     <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="cv2.barcode.html#cv2.barcode.BarcodeDetector">BarcodeDetector (class in cv2.barcode)</a>
+</li>
         <li><a href="cv2.dnn.html#cv2.dnn.blobFromImage">blobFromImage() (in module cv2.dnn)</a>
 </li>
         <li><a href="cv2.dnn.html#cv2.dnn.blobFromImages">blobFromImages() (in module cv2.dnn)</a>
@@ -364,6 +388,8 @@
 </li>
         <li><a href="cv2.dnn.html#cv2.dnn.Image2BlobParams.borderValue">borderValue (cv2.dnn.Image2BlobParams attribute)</a>
 </li>
+        <li><a href="cv2.cuda.html#cv2.cuda.BufferPool">BufferPool (class in cv2.cuda)</a>
+</li>
         <li><a href="cv2.aruco.html#cv2.aruco.Dictionary.bytesList">bytesList (cv2.aruco.Dictionary attribute)</a>
 </li>
     </ul></td>
@@ -376,6 +402,14 @@
     <td style="width: 33%; vertical-align: top;"><ul>
         <li><a href="cv2.aruco.html#cv2.aruco.CharucoParameters.cameraMatrix">cameraMatrix (cv2.aruco.CharucoParameters attribute)</a>
 </li>
+        <li><a href="cv2.cuda.html#cv2.cuda.DeviceInfo.canMapHostMemory">canMapHostMemory() (cv2.cuda.DeviceInfo method)</a>
+</li>
+        <li><a href="cv2.cuda.html#cv2.cuda.GpuMat.channels">channels() (cv2.cuda.GpuMat method)</a>
+
+        <ul>
+          <li><a href="cv2.cuda.html#cv2.cuda.HostMem.channels">(cv2.cuda.HostMem method)</a>
+</li>
+        </ul></li>
         <li><a href="cv2.aruco.html#cv2.aruco.CharucoBoard">CharucoBoard (class in cv2.aruco)</a>
 </li>
         <li><a href="cv2.aruco.html#cv2.aruco.CharucoDetector">CharucoDetector (class in cv2.aruco)</a>
@@ -390,7 +424,27 @@
 </li>
         <li><a href="cv2.dnn.html#cv2.dnn.ClassificationModel.classify">classify() (cv2.dnn.ClassificationModel method)</a>, <a href="cv2.dnn.html#id1">[1]</a>
 </li>
+        <li><a href="cv2.cuda.html#cv2.cuda.DeviceInfo.clockRate">clockRate() (cv2.cuda.DeviceInfo method)</a>
+</li>
+        <li><a href="cv2.cuda.html#cv2.cuda.GpuMat.clone">clone() (cv2.cuda.GpuMat method)</a>
+
+        <ul>
+          <li><a href="cv2.cuda.html#cv2.cuda.HostMem.clone">(cv2.cuda.HostMem method)</a>
+</li>
+        </ul></li>
+        <li><a href="cv2.cuda.html#cv2.cuda.GpuMat.col">col() (cv2.cuda.GpuMat method)</a>
+</li>
+        <li><a href="cv2.cuda.html#cv2.cuda.GpuMat.colRange">colRange() (cv2.cuda.GpuMat method)</a>, <a href="cv2.cuda.html#id36">[1]</a>
+</li>
+        <li><a href="cv2.cuda.html#cv2.cuda.DeviceInfo.computeMode">computeMode() (cv2.cuda.DeviceInfo method)</a>
+</li>
+        <li><a href="cv2.cuda.html#cv2.cuda.DeviceInfo.concurrentKernels">concurrentKernels() (cv2.cuda.DeviceInfo method)</a>
+</li>
         <li><a href="cv2.dnn.html#cv2.dnn.Net.connect">connect() (cv2.dnn.Net method)</a>
+</li>
+        <li><a href="cv2.cuda.html#cv2.cuda.GpuMat.convertTo">convertTo() (cv2.cuda.GpuMat method)</a>, <a href="cv2.cuda.html#id33">[1]</a>, <a href="cv2.cuda.html#id34">[2]</a>
+</li>
+        <li><a href="cv2.cuda.html#cv2.cuda.GpuMat.copyTo">copyTo() (cv2.cuda.GpuMat method)</a>, <a href="cv2.cuda.html#id23">[1]</a>, <a href="cv2.cuda.html#id24">[2]</a>, <a href="cv2.cuda.html#id25">[3]</a>
 </li>
         <li><a href="cv2.aruco.html#cv2.aruco.CORNER_REFINE_APRILTAG">CORNER_REFINE_APRILTAG (in module cv2.aruco)</a>
 </li>
@@ -410,11 +464,43 @@
 </li>
         <li><a href="cv2.aruco.html#cv2.aruco.DetectorParameters.cornerRefinementWinSize">cornerRefinementWinSize (cv2.aruco.DetectorParameters attribute)</a>
 </li>
+        <li><a href="cv2.cuda.html#cv2.cuda.GpuMat.create">create() (cv2.cuda.GpuMat method)</a>, <a href="cv2.cuda.html#id12">[1]</a>
+
+        <ul>
+          <li><a href="cv2.cuda.html#cv2.cuda.HostMem.create">(cv2.cuda.HostMem method)</a>
+</li>
+        </ul></li>
+        <li><a href="cv2.cuda.html#cv2.cuda.createContinuous">createContinuous() (in module cv2.cuda)</a>
+</li>
+        <li><a href="cv2.cuda.html#cv2.cuda.createGpuMatFromCudaMemory">createGpuMatFromCudaMemory() (in module cv2.cuda)</a>
+</li>
+        <li><a href="cv2.cuda.html#cv2.cuda.HostMem.createMatHeader">createMatHeader() (cv2.cuda.HostMem method)</a>
+</li>
+        <li><a href="cv2.cuda.html#cv2.cuda.GpuMat.cudaPtr">cudaPtr() (cv2.cuda.GpuMat method)</a>
+
+        <ul>
+          <li><a href="cv2.cuda.html#cv2.cuda.Stream.cudaPtr">(cv2.cuda.Stream method)</a>
+</li>
+        </ul></li>
         <li>
     cv2.aruco
 
         <ul>
           <li><a href="cv2.aruco.html#module-cv2.aruco">module</a>
+</li>
+        </ul></li>
+        <li>
+    cv2.barcode
+
+        <ul>
+          <li><a href="cv2.barcode.html#module-cv2.barcode">module</a>
+</li>
+        </ul></li>
+        <li>
+    cv2.cuda
+
+        <ul>
+          <li><a href="cv2.cuda.html#module-cv2.cuda">module</a>
 </li>
         </ul></li>
         <li>
@@ -436,12 +522,24 @@
 </li>
         <li><a href="cv2.dnn.html#cv2.dnn.Image2BlobParams.ddepth">ddepth (cv2.dnn.Image2BlobParams attribute)</a>
 </li>
+        <li><a href="cv2.barcode.html#cv2.barcode.BarcodeDetector.decodeWithType">decodeWithType() (cv2.barcode.BarcodeDetector method)</a>, <a href="cv2.barcode.html#id1">[1]</a>
+</li>
+        <li><a href="cv2.cuda.html#cv2.cuda.GpuMat.defaultAllocator">defaultAllocator() (cv2.cuda.GpuMat static method)</a>
+</li>
+        <li><a href="cv2.cuda.html#cv2.cuda.GpuMat.depth">depth() (cv2.cuda.GpuMat method)</a>
+
+        <ul>
+          <li><a href="cv2.cuda.html#cv2.cuda.HostMem.depth">(cv2.cuda.HostMem method)</a>
+</li>
+        </ul></li>
         <li><a href="cv2.dnn.html#cv2.dnn.DetectionModel.detect">detect() (cv2.dnn.DetectionModel method)</a>, <a href="cv2.dnn.html#id3">[1]</a>
 
         <ul>
           <li><a href="cv2.dnn.html#cv2.dnn.TextDetectionModel.detect">(cv2.dnn.TextDetectionModel method)</a>, <a href="cv2.dnn.html#id32">[1]</a>, <a href="cv2.dnn.html#id33">[2]</a>, <a href="cv2.dnn.html#id34">[3]</a>
 </li>
         </ul></li>
+        <li><a href="cv2.barcode.html#cv2.barcode.BarcodeDetector.detectAndDecodeWithType">detectAndDecodeWithType() (cv2.barcode.BarcodeDetector method)</a>, <a href="cv2.barcode.html#id2">[1]</a>
+</li>
         <li><a href="cv2.aruco.html#cv2.aruco.CharucoDetector.detectBoard">detectBoard() (cv2.aruco.CharucoDetector method)</a>, <a href="cv2.aruco.html#id7">[1]</a>
 </li>
         <li><a href="cv2.aruco.html#cv2.aruco.CharucoDetector.detectDiamonds">detectDiamonds() (cv2.aruco.CharucoDetector method)</a>, <a href="cv2.aruco.html#id8">[1]</a>
@@ -455,6 +553,26 @@
         <li><a href="cv2.aruco.html#cv2.aruco.DetectorParameters">DetectorParameters (class in cv2.aruco)</a>
 </li>
         <li><a href="cv2.dnn.html#cv2.dnn.TextDetectionModel.detectTextRectangles">detectTextRectangles() (cv2.dnn.TextDetectionModel method)</a>, <a href="cv2.dnn.html#id35">[1]</a>, <a href="cv2.dnn.html#id36">[2]</a>, <a href="cv2.dnn.html#id37">[3]</a>
+</li>
+        <li><a href="cv2.cuda.html#cv2.cuda.DEVICE_INFO_COMPUTE_MODE_DEFAULT">DEVICE_INFO_COMPUTE_MODE_DEFAULT (in module cv2.cuda)</a>
+</li>
+        <li><a href="cv2.cuda.html#cv2.cuda.DEVICE_INFO_COMPUTE_MODE_EXCLUSIVE">DEVICE_INFO_COMPUTE_MODE_EXCLUSIVE (in module cv2.cuda)</a>
+</li>
+        <li><a href="cv2.cuda.html#cv2.cuda.DEVICE_INFO_COMPUTE_MODE_EXCLUSIVE_PROCESS">DEVICE_INFO_COMPUTE_MODE_EXCLUSIVE_PROCESS (in module cv2.cuda)</a>
+</li>
+        <li><a href="cv2.cuda.html#cv2.cuda.DEVICE_INFO_COMPUTE_MODE_PROHIBITED">DEVICE_INFO_COMPUTE_MODE_PROHIBITED (in module cv2.cuda)</a>
+</li>
+        <li><a href="cv2.cuda.html#cv2.cuda.DeviceInfo.deviceID">deviceID() (cv2.cuda.DeviceInfo method)</a>
+</li>
+        <li><a href="cv2.cuda.html#cv2.cuda.DeviceInfo">DeviceInfo (class in cv2.cuda)</a>
+</li>
+        <li><a href="cv2.cuda.html#cv2.cuda.DeviceInfo_ComputeModeDefault">DeviceInfo_ComputeModeDefault (in module cv2.cuda)</a>
+</li>
+        <li><a href="cv2.cuda.html#cv2.cuda.DeviceInfo_ComputeModeExclusive">DeviceInfo_ComputeModeExclusive (in module cv2.cuda)</a>
+</li>
+        <li><a href="cv2.cuda.html#cv2.cuda.DeviceInfo_ComputeModeExclusiveProcess">DeviceInfo_ComputeModeExclusiveProcess (in module cv2.cuda)</a>
+</li>
+        <li><a href="cv2.cuda.html#cv2.cuda.DeviceInfo_ComputeModeProhibited">DeviceInfo_ComputeModeProhibited (in module cv2.cuda)</a>
 </li>
         <li><a href="cv2.aruco.html#cv2.aruco.DICT_4X4_100">DICT_4X4_100 (in module cv2.aruco)</a>
 </li>
@@ -498,6 +616,8 @@
 </li>
         <li><a href="cv2.aruco.html#cv2.aruco.DICT_APRILTAG_36H10">DICT_APRILTAG_36H10 (in module cv2.aruco)</a>
 </li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
         <li><a href="cv2.aruco.html#cv2.aruco.DICT_APRILTAG_36h10">DICT_APRILTAG_36h10 (in module cv2.aruco)</a>
 </li>
         <li><a href="cv2.aruco.html#cv2.aruco.DICT_APRILTAG_36H11">DICT_APRILTAG_36H11 (in module cv2.aruco)</a>
@@ -512,8 +632,6 @@
 </li>
         <li><a href="cv2.aruco.html#cv2.aruco.Dictionary">Dictionary (class in cv2.aruco)</a>
 </li>
-    </ul></td>
-    <td style="width: 33%; vertical-align: top;"><ul>
         <li><a href="cv2.aruco.html#cv2.aruco.Dictionary_getBitsFromByteList">Dictionary_getBitsFromByteList() (in module cv2.aruco)</a>
 </li>
         <li><a href="cv2.aruco.html#cv2.aruco.Dictionary_getByteListFromBits">Dictionary_getByteListFromBits() (in module cv2.aruco)</a>
@@ -582,6 +700,8 @@
 </li>
         <li><a href="cv2.dnn.html#cv2.dnn.DNN_TARGET_VULKAN">DNN_TARGET_VULKAN (in module cv2.dnn)</a>
 </li>
+        <li><a href="cv2.cuda.html#cv2.cuda.GpuMat.download">download() (cv2.cuda.GpuMat method)</a>, <a href="cv2.cuda.html#id18">[1]</a>, <a href="cv2.cuda.html#id19">[2]</a>, <a href="cv2.cuda.html#id20">[3]</a>, <a href="cv2.cuda.html#id21">[4]</a>, <a href="cv2.cuda.html#id22">[5]</a>
+</li>
         <li><a href="cv2.aruco.html#cv2.aruco.drawDetectedCornersCharuco">drawDetectedCornersCharuco() (in module cv2.aruco)</a>
 </li>
         <li><a href="cv2.aruco.html#cv2.aruco.drawDetectedDiamonds">drawDetectedDiamonds() (in module cv2.aruco)</a>
@@ -592,6 +712,8 @@
 </li>
         <li><a href="cv2.dnn.html#cv2.dnn.Net.dumpToFile">dumpToFile() (cv2.dnn.Net method)</a>
 </li>
+        <li><a href="cv2.cuda.html#cv2.cuda.DYNAMIC_PARALLELISM">DYNAMIC_PARALLELISM (in module cv2.cuda)</a>
+</li>
     </ul></td>
   </tr></table>
 </section>
@@ -600,8 +722,30 @@
   <h2>E</h2>
   <table style="width: 100%" class="indextable genindextable"><tr>
     <td style="width: 33%; vertical-align: top;"><ul>
-        <li><a href="cv2.dnn.html#cv2.dnn.Net.empty">empty() (cv2.dnn.Net method)</a>
+        <li><a href="cv2.cuda.html#cv2.cuda.DeviceInfo.ECCEnabled">ECCEnabled() (cv2.cuda.DeviceInfo method)</a>
 </li>
+        <li><a href="cv2.cuda.html#cv2.cuda.Event.elapsedTime">elapsedTime() (cv2.cuda.Event static method)</a>
+</li>
+        <li><a href="cv2.cuda.html#cv2.cuda.GpuMat.elemSize">elemSize() (cv2.cuda.GpuMat method)</a>
+
+        <ul>
+          <li><a href="cv2.cuda.html#cv2.cuda.HostMem.elemSize">(cv2.cuda.HostMem method)</a>
+</li>
+        </ul></li>
+        <li><a href="cv2.cuda.html#cv2.cuda.GpuMat.elemSize1">elemSize1() (cv2.cuda.GpuMat method)</a>
+
+        <ul>
+          <li><a href="cv2.cuda.html#cv2.cuda.HostMem.elemSize1">(cv2.cuda.HostMem method)</a>
+</li>
+        </ul></li>
+        <li><a href="cv2.cuda.html#cv2.cuda.GpuMat.empty">empty() (cv2.cuda.GpuMat method)</a>
+
+        <ul>
+          <li><a href="cv2.cuda.html#cv2.cuda.HostMem.empty">(cv2.cuda.HostMem method)</a>
+</li>
+          <li><a href="cv2.dnn.html#cv2.dnn.Net.empty">(cv2.dnn.Net method)</a>
+</li>
+        </ul></li>
         <li><a href="cv2.dnn.html#cv2.dnn.Net.enableFusion">enableFusion() (cv2.dnn.Net method)</a>
 </li>
         <li><a href="cv2.dnn.html#cv2.dnn.Model.enableWinograd">enableWinograd() (cv2.dnn.Model method)</a>
@@ -610,6 +754,8 @@
           <li><a href="cv2.dnn.html#cv2.dnn.Net.enableWinograd">(cv2.dnn.Net method)</a>
 </li>
         </ul></li>
+        <li><a href="cv2.cuda.html#cv2.cuda.ensureSizeIsEnough">ensureSizeIsEnough() (in module cv2.cuda)</a>
+</li>
     </ul></td>
     <td style="width: 33%; vertical-align: top;"><ul>
         <li><a href="cv2.aruco.html#cv2.aruco.DetectorParameters.errorCorrectionRate">errorCorrectionRate (cv2.aruco.DetectorParameters attribute)</a>
@@ -619,6 +765,26 @@
 </li>
         </ul></li>
         <li><a href="cv2.dnn.html#cv2.dnn.KeypointsModel.estimate">estimate() (cv2.dnn.KeypointsModel method)</a>, <a href="cv2.dnn.html#id8">[1]</a>
+</li>
+        <li><a href="cv2.cuda.html#cv2.cuda.Event">Event (class in cv2.cuda)</a>
+</li>
+        <li><a href="cv2.cuda.html#cv2.cuda.EVENT_BLOCKING_SYNC">EVENT_BLOCKING_SYNC (in module cv2.cuda)</a>
+</li>
+        <li><a href="cv2.cuda.html#cv2.cuda.Event_BLOCKING_SYNC">Event_BLOCKING_SYNC (in module cv2.cuda)</a>
+</li>
+        <li><a href="cv2.cuda.html#cv2.cuda.EVENT_DEFAULT">EVENT_DEFAULT (in module cv2.cuda)</a>
+</li>
+        <li><a href="cv2.cuda.html#cv2.cuda.Event_DEFAULT">Event_DEFAULT (in module cv2.cuda)</a>
+</li>
+        <li><a href="cv2.cuda.html#cv2.cuda.EVENT_DISABLE_TIMING">EVENT_DISABLE_TIMING (in module cv2.cuda)</a>
+</li>
+        <li><a href="cv2.cuda.html#cv2.cuda.Event_DISABLE_TIMING">Event_DISABLE_TIMING (in module cv2.cuda)</a>
+</li>
+        <li><a href="cv2.cuda.html#cv2.cuda.Event_elapsedTime">Event_elapsedTime() (in module cv2.cuda)</a>
+</li>
+        <li><a href="cv2.cuda.html#cv2.cuda.EVENT_INTERPROCESS">EVENT_INTERPROCESS (in module cv2.cuda)</a>
+</li>
+        <li><a href="cv2.cuda.html#cv2.cuda.Event_INTERPROCESS">Event_INTERPROCESS (in module cv2.cuda)</a>
 </li>
         <li><a href="cv2.aruco.html#cv2.aruco.extendDictionary">extendDictionary() (in module cv2.aruco)</a>
 </li>
@@ -630,15 +796,41 @@
   <h2>F</h2>
   <table style="width: 100%" class="indextable genindextable"><tr>
     <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="cv2.cuda.html#cv2.cuda.fastNlMeansDenoising">fastNlMeansDenoising() (in module cv2.cuda)</a>
+</li>
+        <li><a href="cv2.cuda.html#cv2.cuda.fastNlMeansDenoisingColored">fastNlMeansDenoisingColored() (in module cv2.cuda)</a>
+</li>
+        <li><a href="cv2.cuda.html#cv2.cuda.FEATURE_SET_COMPUTE_10">FEATURE_SET_COMPUTE_10 (in module cv2.cuda)</a>
+</li>
+        <li><a href="cv2.cuda.html#cv2.cuda.FEATURE_SET_COMPUTE_11">FEATURE_SET_COMPUTE_11 (in module cv2.cuda)</a>
+</li>
+        <li><a href="cv2.cuda.html#cv2.cuda.FEATURE_SET_COMPUTE_12">FEATURE_SET_COMPUTE_12 (in module cv2.cuda)</a>
+</li>
+        <li><a href="cv2.cuda.html#cv2.cuda.FEATURE_SET_COMPUTE_13">FEATURE_SET_COMPUTE_13 (in module cv2.cuda)</a>
+</li>
+        <li><a href="cv2.cuda.html#cv2.cuda.FEATURE_SET_COMPUTE_20">FEATURE_SET_COMPUTE_20 (in module cv2.cuda)</a>
+</li>
+        <li><a href="cv2.cuda.html#cv2.cuda.FEATURE_SET_COMPUTE_21">FEATURE_SET_COMPUTE_21 (in module cv2.cuda)</a>
+</li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="cv2.cuda.html#cv2.cuda.FEATURE_SET_COMPUTE_30">FEATURE_SET_COMPUTE_30 (in module cv2.cuda)</a>
+</li>
+        <li><a href="cv2.cuda.html#cv2.cuda.FEATURE_SET_COMPUTE_32">FEATURE_SET_COMPUTE_32 (in module cv2.cuda)</a>
+</li>
+        <li><a href="cv2.cuda.html#cv2.cuda.FEATURE_SET_COMPUTE_35">FEATURE_SET_COMPUTE_35 (in module cv2.cuda)</a>
+</li>
+        <li><a href="cv2.cuda.html#cv2.cuda.FEATURE_SET_COMPUTE_50">FEATURE_SET_COMPUTE_50 (in module cv2.cuda)</a>
+</li>
         <li><a href="cv2.dnn.html#cv2.dnn.Layer.finalize">finalize() (cv2.dnn.Layer method)</a>, <a href="cv2.dnn.html#id9">[1]</a>
 </li>
         <li><a href="cv2.dnn.html#cv2.dnn.Net.forward">forward() (cv2.dnn.Net method)</a>, <a href="cv2.dnn.html#id16">[1]</a>, <a href="cv2.dnn.html#id17">[2]</a>, <a href="cv2.dnn.html#id18">[3]</a>, <a href="cv2.dnn.html#id19">[4]</a>
 </li>
-    </ul></td>
-    <td style="width: 33%; vertical-align: top;"><ul>
         <li><a href="cv2.dnn.html#cv2.dnn.Net.forwardAndRetrieve">forwardAndRetrieve() (cv2.dnn.Net method)</a>
 </li>
         <li><a href="cv2.dnn.html#cv2.dnn.Net.forwardAsync">forwardAsync() (cv2.dnn.Net method)</a>
+</li>
+        <li><a href="cv2.cuda.html#cv2.cuda.DeviceInfo.freeMemory">freeMemory() (cv2.cuda.DeviceInfo method)</a>
 </li>
     </ul></td>
   </tr></table>
@@ -656,6 +848,8 @@
           <li><a href="cv2.aruco.html#cv2.aruco.generateImageMarker">(in module cv2.aruco)</a>
 </li>
         </ul></li>
+        <li><a href="cv2.cuda.html#cv2.cuda.BufferPool.getAllocator">getAllocator() (cv2.cuda.BufferPool method)</a>
+</li>
         <li><a href="cv2.dnn.html#cv2.dnn.getAvailableTargets">getAvailableTargets() (in module cv2.dnn)</a>
 </li>
         <li><a href="cv2.dnn.html#cv2.dnn.TextDetectionModel_DB.getBinaryThreshold">getBinaryThreshold() (cv2.dnn.TextDetectionModel_DB method)</a>
@@ -663,6 +857,8 @@
         <li><a href="cv2.aruco.html#cv2.aruco.Dictionary.getBitsFromByteList">getBitsFromByteList() (cv2.aruco.Dictionary static method)</a>
 </li>
         <li><a href="cv2.aruco.html#cv2.aruco.CharucoDetector.getBoard">getBoard() (cv2.aruco.CharucoDetector method)</a>
+</li>
+        <li><a href="cv2.cuda.html#cv2.cuda.BufferPool.getBuffer">getBuffer() (cv2.cuda.BufferPool method)</a>, <a href="cv2.cuda.html#id0">[1]</a>
 </li>
         <li><a href="cv2.aruco.html#cv2.aruco.Dictionary.getByteListFromBits">getByteListFromBits() (cv2.aruco.Dictionary static method)</a>
 </li>
@@ -674,6 +870,8 @@
 </li>
         <li><a href="cv2.dnn.html#cv2.dnn.TextDetectionModel_EAST.getConfidenceThreshold">getConfidenceThreshold() (cv2.dnn.TextDetectionModel_EAST method)</a>
 </li>
+        <li><a href="cv2.cuda.html#cv2.cuda.getCudaEnabledDeviceCount">getCudaEnabledDeviceCount() (in module cv2.cuda)</a>
+</li>
         <li><a href="cv2.dnn.html#cv2.dnn.TextRecognitionModel.getDecodeType">getDecodeType() (cv2.dnn.TextRecognitionModel method)</a>
 </li>
         <li><a href="cv2.aruco.html#cv2.aruco.ArucoDetector.getDetectorParameters">getDetectorParameters() (cv2.aruco.ArucoDetector method)</a>
@@ -682,6 +880,8 @@
           <li><a href="cv2.aruco.html#cv2.aruco.CharucoDetector.getDetectorParameters">(cv2.aruco.CharucoDetector method)</a>
 </li>
         </ul></li>
+        <li><a href="cv2.cuda.html#cv2.cuda.getDevice">getDevice() (in module cv2.cuda)</a>
+</li>
         <li><a href="cv2.aruco.html#cv2.aruco.ArucoDetector.getDictionary">getDictionary() (cv2.aruco.ArucoDetector method)</a>
 
         <ul>
@@ -708,10 +908,10 @@
 </li>
         <li><a href="cv2.dnn.html#cv2.dnn.Net.getLayerNames">getLayerNames() (cv2.dnn.Net method)</a>
 </li>
-    </ul></td>
-    <td style="width: 33%; vertical-align: top;"><ul>
         <li><a href="cv2.dnn.html#cv2.dnn.Net.getLayersCount">getLayersCount() (cv2.dnn.Net method)</a>
 </li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
         <li><a href="cv2.dnn.html#cv2.dnn.Net.getLayersShapes">getLayersShapes() (cv2.dnn.Net method)</a>, <a href="cv2.dnn.html#id24">[1]</a>
 </li>
         <li><a href="cv2.dnn.html#cv2.dnn.Net.getLayerTypes">getLayerTypes() (cv2.dnn.Net method)</a>
@@ -768,7 +968,57 @@
 </li>
         <li><a href="cv2.dnn.html#cv2.dnn.TextRecognitionModel.getVocabulary">getVocabulary() (cv2.dnn.TextRecognitionModel method)</a>
 </li>
+        <li><a href="cv2.cuda.html#cv2.cuda.GLOBAL_ATOMICS">GLOBAL_ATOMICS (in module cv2.cuda)</a>
+</li>
+        <li><a href="cv2.cuda.html#cv2.cuda.GpuData">GpuData (class in cv2.cuda)</a>
+</li>
+        <li><a href="cv2.cuda.html#cv2.cuda.GpuMat">GpuMat (class in cv2.cuda)</a>
+</li>
+        <li><a href="cv2.cuda.html#cv2.cuda.GpuMat_defaultAllocator">GpuMat_defaultAllocator() (in module cv2.cuda)</a>
+</li>
+        <li><a href="cv2.cuda.html#cv2.cuda.GpuMat_setDefaultAllocator">GpuMat_setDefaultAllocator() (in module cv2.cuda)</a>
+</li>
+        <li><a href="cv2.cuda.html#cv2.cuda.GpuMatND">GpuMatND (class in cv2.cuda)</a>
+</li>
         <li><a href="cv2.aruco.html#cv2.aruco.GridBoard">GridBoard (class in cv2.aruco)</a>
+</li>
+    </ul></td>
+  </tr></table>
+</section>
+
+<section id="H" class="genindex-section">
+  <h2>H</h2>
+  <table style="width: 100%" class="indextable genindextable"><tr>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="cv2.cuda.html#cv2.cuda.TargetArchs.has">has() (cv2.cuda.TargetArchs static method)</a>
+</li>
+        <li><a href="cv2.cuda.html#cv2.cuda.TargetArchs.hasBin">hasBin() (cv2.cuda.TargetArchs static method)</a>
+</li>
+        <li><a href="cv2.cuda.html#cv2.cuda.TargetArchs.hasEqualOrGreater">hasEqualOrGreater() (cv2.cuda.TargetArchs static method)</a>
+</li>
+        <li><a href="cv2.cuda.html#cv2.cuda.TargetArchs.hasEqualOrGreaterBin">hasEqualOrGreaterBin() (cv2.cuda.TargetArchs static method)</a>
+</li>
+        <li><a href="cv2.cuda.html#cv2.cuda.TargetArchs.hasEqualOrGreaterPtx">hasEqualOrGreaterPtx() (cv2.cuda.TargetArchs static method)</a>
+</li>
+        <li><a href="cv2.cuda.html#cv2.cuda.TargetArchs.hasEqualOrLessPtx">hasEqualOrLessPtx() (cv2.cuda.TargetArchs static method)</a>
+</li>
+        <li><a href="cv2.cuda.html#cv2.cuda.TargetArchs.hasPtx">hasPtx() (cv2.cuda.TargetArchs static method)</a>
+</li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="cv2.cuda.html#cv2.cuda.HOST_MEM_PAGE_LOCKED">HOST_MEM_PAGE_LOCKED (in module cv2.cuda)</a>
+</li>
+        <li><a href="cv2.cuda.html#cv2.cuda.HOST_MEM_SHARED">HOST_MEM_SHARED (in module cv2.cuda)</a>
+</li>
+        <li><a href="cv2.cuda.html#cv2.cuda.HOST_MEM_WRITE_COMBINED">HOST_MEM_WRITE_COMBINED (in module cv2.cuda)</a>
+</li>
+        <li><a href="cv2.cuda.html#cv2.cuda.HostMem">HostMem (class in cv2.cuda)</a>
+</li>
+        <li><a href="cv2.cuda.html#cv2.cuda.HostMem_PAGE_LOCKED">HostMem_PAGE_LOCKED (in module cv2.cuda)</a>
+</li>
+        <li><a href="cv2.cuda.html#cv2.cuda.HostMem_SHARED">HostMem_SHARED (in module cv2.cuda)</a>
+</li>
+        <li><a href="cv2.cuda.html#cv2.cuda.HostMem_WRITE_COMBINED">HostMem_WRITE_COMBINED (in module cv2.cuda)</a>
 </li>
     </ul></td>
   </tr></table>
@@ -784,8 +1034,18 @@
 </li>
         <li><a href="cv2.dnn.html#cv2.dnn.imagesFromBlob">imagesFromBlob() (in module cv2.dnn)</a>
 </li>
+        <li><a href="cv2.cuda.html#cv2.cuda.DeviceInfo.integrated">integrated() (cv2.cuda.DeviceInfo method)</a>
+</li>
+        <li><a href="cv2.cuda.html#cv2.cuda.DeviceInfo.isCompatible">isCompatible() (cv2.cuda.DeviceInfo method)</a>
+</li>
     </ul></td>
     <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="cv2.cuda.html#cv2.cuda.GpuMat.isContinuous">isContinuous() (cv2.cuda.GpuMat method)</a>
+
+        <ul>
+          <li><a href="cv2.cuda.html#cv2.cuda.HostMem.isContinuous">(cv2.cuda.HostMem method)</a>
+</li>
+        </ul></li>
         <li><a href="cv2.dnn.html#cv2.dnn.DictValue.isInt">isInt() (cv2.dnn.DictValue method)</a>
 </li>
         <li><a href="cv2.dnn.html#cv2.dnn.DictValue.isReal">isReal() (cv2.dnn.DictValue method)</a>
@@ -800,6 +1060,10 @@
   <h2>K</h2>
   <table style="width: 100%" class="indextable genindextable"><tr>
     <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="cv2.cuda.html#cv2.cuda.DeviceInfo.kernelExecTimeoutEnabled">kernelExecTimeoutEnabled() (cv2.cuda.DeviceInfo method)</a>
+</li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
         <li><a href="cv2.dnn.html#cv2.dnn.KeypointsModel">KeypointsModel (class in cv2.dnn)</a>
 </li>
     </ul></td>
@@ -810,7 +1074,13 @@
   <h2>L</h2>
   <table style="width: 100%" class="indextable genindextable"><tr>
     <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="cv2.cuda.html#cv2.cuda.DeviceInfo.l2CacheSize">l2CacheSize() (cv2.cuda.DeviceInfo method)</a>
+</li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
         <li><a href="cv2.dnn.html#cv2.dnn.Layer">Layer (class in cv2.dnn)</a>
+</li>
+        <li><a href="cv2.cuda.html#cv2.cuda.GpuMat.locateROI">locateROI() (cv2.cuda.GpuMat method)</a>
 </li>
     </ul></td>
   </tr></table>
@@ -820,6 +1090,8 @@
   <h2>M</h2>
   <table style="width: 100%" class="indextable genindextable"><tr>
     <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="cv2.cuda.html#cv2.cuda.DeviceInfo.majorVersion">majorVersion() (cv2.cuda.DeviceInfo method)</a>
+</li>
         <li><a href="cv2.aruco.html#cv2.aruco.DetectorParameters.markerBorderBits">markerBorderBits (cv2.aruco.DetectorParameters attribute)</a>
 </li>
         <li><a href="cv2.aruco.html#cv2.aruco.Dictionary.markerSize">markerSize (cv2.aruco.Dictionary attribute)</a>
@@ -830,9 +1102,63 @@
 </li>
         <li><a href="cv2.aruco.html#cv2.aruco.DetectorParameters.maxErroneousBitsInBorderRate">maxErroneousBitsInBorderRate (cv2.aruco.DetectorParameters attribute)</a>
 </li>
+        <li><a href="cv2.cuda.html#cv2.cuda.DeviceInfo.maxGridSize">maxGridSize() (cv2.cuda.DeviceInfo method)</a>
+</li>
         <li><a href="cv2.aruco.html#cv2.aruco.DetectorParameters.maxMarkerPerimeterRate">maxMarkerPerimeterRate (cv2.aruco.DetectorParameters attribute)</a>
 </li>
+        <li><a href="cv2.cuda.html#cv2.cuda.DeviceInfo.maxSurface1D">maxSurface1D() (cv2.cuda.DeviceInfo method)</a>
+</li>
+        <li><a href="cv2.cuda.html#cv2.cuda.DeviceInfo.maxSurface1DLayered">maxSurface1DLayered() (cv2.cuda.DeviceInfo method)</a>
+</li>
+        <li><a href="cv2.cuda.html#cv2.cuda.DeviceInfo.maxSurface2D">maxSurface2D() (cv2.cuda.DeviceInfo method)</a>
+</li>
+        <li><a href="cv2.cuda.html#cv2.cuda.DeviceInfo.maxSurface2DLayered">maxSurface2DLayered() (cv2.cuda.DeviceInfo method)</a>
+</li>
+        <li><a href="cv2.cuda.html#cv2.cuda.DeviceInfo.maxSurface3D">maxSurface3D() (cv2.cuda.DeviceInfo method)</a>
+</li>
+        <li><a href="cv2.cuda.html#cv2.cuda.DeviceInfo.maxSurfaceCubemap">maxSurfaceCubemap() (cv2.cuda.DeviceInfo method)</a>
+</li>
+        <li><a href="cv2.cuda.html#cv2.cuda.DeviceInfo.maxSurfaceCubemapLayered">maxSurfaceCubemapLayered() (cv2.cuda.DeviceInfo method)</a>
+</li>
+        <li><a href="cv2.cuda.html#cv2.cuda.DeviceInfo.maxTexture1D">maxTexture1D() (cv2.cuda.DeviceInfo method)</a>
+</li>
+        <li><a href="cv2.cuda.html#cv2.cuda.DeviceInfo.maxTexture1DLayered">maxTexture1DLayered() (cv2.cuda.DeviceInfo method)</a>
+</li>
+        <li><a href="cv2.cuda.html#cv2.cuda.DeviceInfo.maxTexture1DLinear">maxTexture1DLinear() (cv2.cuda.DeviceInfo method)</a>
+</li>
+        <li><a href="cv2.cuda.html#cv2.cuda.DeviceInfo.maxTexture1DMipmap">maxTexture1DMipmap() (cv2.cuda.DeviceInfo method)</a>
+</li>
+        <li><a href="cv2.cuda.html#cv2.cuda.DeviceInfo.maxTexture2D">maxTexture2D() (cv2.cuda.DeviceInfo method)</a>
+</li>
+        <li><a href="cv2.cuda.html#cv2.cuda.DeviceInfo.maxTexture2DGather">maxTexture2DGather() (cv2.cuda.DeviceInfo method)</a>
+</li>
+        <li><a href="cv2.cuda.html#cv2.cuda.DeviceInfo.maxTexture2DLayered">maxTexture2DLayered() (cv2.cuda.DeviceInfo method)</a>
+</li>
+        <li><a href="cv2.cuda.html#cv2.cuda.DeviceInfo.maxTexture2DLinear">maxTexture2DLinear() (cv2.cuda.DeviceInfo method)</a>
+</li>
+        <li><a href="cv2.cuda.html#cv2.cuda.DeviceInfo.maxTexture2DMipmap">maxTexture2DMipmap() (cv2.cuda.DeviceInfo method)</a>
+</li>
+        <li><a href="cv2.cuda.html#cv2.cuda.DeviceInfo.maxTexture3D">maxTexture3D() (cv2.cuda.DeviceInfo method)</a>
+</li>
+        <li><a href="cv2.cuda.html#cv2.cuda.DeviceInfo.maxTextureCubemap">maxTextureCubemap() (cv2.cuda.DeviceInfo method)</a>
+</li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="cv2.cuda.html#cv2.cuda.DeviceInfo.maxTextureCubemapLayered">maxTextureCubemapLayered() (cv2.cuda.DeviceInfo method)</a>
+</li>
+        <li><a href="cv2.cuda.html#cv2.cuda.DeviceInfo.maxThreadsDim">maxThreadsDim() (cv2.cuda.DeviceInfo method)</a>
+</li>
+        <li><a href="cv2.cuda.html#cv2.cuda.DeviceInfo.maxThreadsPerBlock">maxThreadsPerBlock() (cv2.cuda.DeviceInfo method)</a>
+</li>
+        <li><a href="cv2.cuda.html#cv2.cuda.DeviceInfo.maxThreadsPerMultiProcessor">maxThreadsPerMultiProcessor() (cv2.cuda.DeviceInfo method)</a>
+</li>
         <li><a href="cv2.dnn.html#cv2.dnn.Image2BlobParams.mean">mean (cv2.dnn.Image2BlobParams attribute)</a>
+</li>
+        <li><a href="cv2.cuda.html#cv2.cuda.DeviceInfo.memoryBusWidth">memoryBusWidth() (cv2.cuda.DeviceInfo method)</a>
+</li>
+        <li><a href="cv2.cuda.html#cv2.cuda.DeviceInfo.memoryClockRate">memoryClockRate() (cv2.cuda.DeviceInfo method)</a>
+</li>
+        <li><a href="cv2.cuda.html#cv2.cuda.DeviceInfo.memPitch">memPitch() (cv2.cuda.DeviceInfo method)</a>
 </li>
         <li><a href="cv2.aruco.html#cv2.aruco.DetectorParameters.minCornerDistanceRate">minCornerDistanceRate (cv2.aruco.DetectorParameters attribute)</a>
 </li>
@@ -840,8 +1166,6 @@
 </li>
         <li><a href="cv2.aruco.html#cv2.aruco.DetectorParameters.minGroupDistance">minGroupDistance (cv2.aruco.DetectorParameters attribute)</a>
 </li>
-    </ul></td>
-    <td style="width: 33%; vertical-align: top;"><ul>
         <li><a href="cv2.aruco.html#cv2.aruco.DetectorParameters.minMarkerDistanceRate">minMarkerDistanceRate (cv2.aruco.DetectorParameters attribute)</a>
 </li>
         <li><a href="cv2.aruco.html#cv2.aruco.DetectorParameters.minMarkerLengthRatioOriginalImg">minMarkerLengthRatioOriginalImg (cv2.aruco.DetectorParameters attribute)</a>
@@ -849,6 +1173,8 @@
         <li><a href="cv2.aruco.html#cv2.aruco.DetectorParameters.minMarkerPerimeterRate">minMarkerPerimeterRate (cv2.aruco.DetectorParameters attribute)</a>
 </li>
         <li><a href="cv2.aruco.html#cv2.aruco.CharucoParameters.minMarkers">minMarkers (cv2.aruco.CharucoParameters attribute)</a>
+</li>
+        <li><a href="cv2.cuda.html#cv2.cuda.DeviceInfo.minorVersion">minorVersion() (cv2.cuda.DeviceInfo method)</a>
 </li>
         <li><a href="cv2.aruco.html#cv2.aruco.DetectorParameters.minOtsuStdDev">minOtsuStdDev (cv2.aruco.DetectorParameters attribute)</a>
 </li>
@@ -864,9 +1190,15 @@
         <ul>
           <li><a href="cv2.aruco.html#module-cv2.aruco">cv2.aruco</a>
 </li>
+          <li><a href="cv2.barcode.html#module-cv2.barcode">cv2.barcode</a>
+</li>
+          <li><a href="cv2.cuda.html#module-cv2.cuda">cv2.cuda</a>
+</li>
           <li><a href="cv2.dnn.html#module-cv2.dnn">cv2.dnn</a>
 </li>
         </ul></li>
+        <li><a href="cv2.cuda.html#cv2.cuda.DeviceInfo.multiProcessorCount">multiProcessorCount() (cv2.cuda.DeviceInfo method)</a>
+</li>
     </ul></td>
   </tr></table>
 </section>
@@ -876,6 +1208,8 @@
   <table style="width: 100%" class="indextable genindextable"><tr>
     <td style="width: 33%; vertical-align: top;"><ul>
         <li><a href="cv2.dnn.html#cv2.dnn.Layer.name">name() (cv2.dnn.Layer method)</a>
+</li>
+        <li><a href="cv2.cuda.html#cv2.cuda.NATIVE_DOUBLE">NATIVE_DOUBLE (in module cv2.cuda)</a>
 </li>
         <li><a href="cv2.dnn.html#cv2.dnn.Net">Net (class in cv2.dnn)</a>
 </li>
@@ -888,6 +1222,10 @@
         <li><a href="cv2.dnn.html#cv2.dnn.NMSBoxesBatched">NMSBoxesBatched() (in module cv2.dnn)</a>
 </li>
         <li><a href="cv2.dnn.html#cv2.dnn.NMSBoxesRotated">NMSBoxesRotated() (in module cv2.dnn)</a>
+</li>
+        <li><a href="cv2.cuda.html#cv2.cuda.nonLocalMeans">nonLocalMeans() (in module cv2.cuda)</a>
+</li>
+        <li><a href="cv2.cuda.html#cv2.cuda.Stream.Null">Null() (cv2.cuda.Stream class method)</a>
 </li>
     </ul></td>
   </tr></table>
@@ -909,17 +1247,27 @@
     <td style="width: 33%; vertical-align: top;"><ul>
         <li><a href="cv2.dnn.html#cv2.dnn.Image2BlobParams.paddingmode">paddingmode (cv2.dnn.Image2BlobParams attribute)</a>
 </li>
-        <li><a href="cv2.aruco.html#cv2.aruco.DetectorParameters.perspectiveRemoveIgnoredMarginPerCell">perspectiveRemoveIgnoredMarginPerCell (cv2.aruco.DetectorParameters attribute)</a>
+        <li><a href="cv2.cuda.html#cv2.cuda.DeviceInfo.pciBusID">pciBusID() (cv2.cuda.DeviceInfo method)</a>
 </li>
-        <li><a href="cv2.aruco.html#cv2.aruco.DetectorParameters.perspectiveRemovePixelPerCell">perspectiveRemovePixelPerCell (cv2.aruco.DetectorParameters attribute)</a>
+        <li><a href="cv2.cuda.html#cv2.cuda.DeviceInfo.pciDeviceID">pciDeviceID() (cv2.cuda.DeviceInfo method)</a>
+</li>
+        <li><a href="cv2.cuda.html#cv2.cuda.DeviceInfo.pciDomainID">pciDomainID() (cv2.cuda.DeviceInfo method)</a>
+</li>
+        <li><a href="cv2.aruco.html#cv2.aruco.DetectorParameters.perspectiveRemoveIgnoredMarginPerCell">perspectiveRemoveIgnoredMarginPerCell (cv2.aruco.DetectorParameters attribute)</a>
 </li>
     </ul></td>
     <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="cv2.aruco.html#cv2.aruco.DetectorParameters.perspectiveRemovePixelPerCell">perspectiveRemovePixelPerCell (cv2.aruco.DetectorParameters attribute)</a>
+</li>
         <li><a href="cv2.aruco.html#cv2.aruco.DetectorParameters.polygonalApproxAccuracyRate">polygonalApproxAccuracyRate (cv2.aruco.DetectorParameters attribute)</a>
 </li>
         <li><a href="cv2.dnn.html#cv2.dnn.Model.predict">predict() (cv2.dnn.Model method)</a>, <a href="cv2.dnn.html#id12">[1]</a>
 </li>
         <li><a href="cv2.dnn.html#cv2.dnn.Layer.preferableTarget">preferableTarget() (cv2.dnn.Layer method)</a>
+</li>
+        <li><a href="cv2.cuda.html#cv2.cuda.printCudaDeviceInfo">printCudaDeviceInfo() (in module cv2.cuda)</a>
+</li>
+        <li><a href="cv2.cuda.html#cv2.cuda.printShortCudaDeviceInfo">printShortCudaDeviceInfo() (in module cv2.cuda)</a>
 </li>
     </ul></td>
   </tr></table>
@@ -930,6 +1278,16 @@
   <table style="width: 100%" class="indextable genindextable"><tr>
     <td style="width: 33%; vertical-align: top;"><ul>
         <li><a href="cv2.dnn.html#cv2.dnn.Net.quantize">quantize() (cv2.dnn.Net method)</a>, <a href="cv2.dnn.html#id20">[1]</a>
+</li>
+        <li><a href="cv2.cuda.html#cv2.cuda.Event.queryIfComplete">queryIfComplete() (cv2.cuda.Event method)</a>
+
+        <ul>
+          <li><a href="cv2.cuda.html#cv2.cuda.Stream.queryIfComplete">(cv2.cuda.Stream method)</a>
+</li>
+        </ul></li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="cv2.cuda.html#cv2.cuda.DeviceInfo.queryMemory">queryMemory() (cv2.cuda.DeviceInfo method)</a>
 </li>
     </ul></td>
   </tr></table>
@@ -959,8 +1317,6 @@
 </li>
         <li><a href="cv2.dnn.html#cv2.dnn.readNetFromTensorflow">readNetFromTensorflow() (in module cv2.dnn)</a>
 </li>
-    </ul></td>
-    <td style="width: 33%; vertical-align: top;"><ul>
         <li><a href="cv2.dnn.html#cv2.dnn.readNetFromTFLite">readNetFromTFLite() (in module cv2.dnn)</a>
 </li>
         <li><a href="cv2.dnn.html#cv2.dnn.readNetFromTorch">readNetFromTorch() (in module cv2.dnn)</a>
@@ -969,15 +1325,37 @@
 </li>
         <li><a href="cv2.dnn.html#cv2.dnn.readTensorFromONNX">readTensorFromONNX() (in module cv2.dnn)</a>
 </li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
         <li><a href="cv2.dnn.html#cv2.dnn.readTorchBlob">readTorchBlob() (in module cv2.dnn)</a>
 </li>
         <li><a href="cv2.dnn.html#cv2.dnn.TextRecognitionModel.recognize">recognize() (cv2.dnn.TextRecognitionModel method)</a>, <a href="cv2.dnn.html#id41">[1]</a>, <a href="cv2.dnn.html#id42">[2]</a>, <a href="cv2.dnn.html#id43">[3]</a>
+</li>
+        <li><a href="cv2.cuda.html#cv2.cuda.Event.record">record() (cv2.cuda.Event method)</a>
 </li>
         <li><a href="cv2.aruco.html#cv2.aruco.ArucoDetector.refineDetectedMarkers">refineDetectedMarkers() (cv2.aruco.ArucoDetector method)</a>, <a href="cv2.aruco.html#id1">[1]</a>
 </li>
         <li><a href="cv2.aruco.html#cv2.aruco.RefineParameters">RefineParameters (class in cv2.aruco)</a>
 </li>
+        <li><a href="cv2.cuda.html#cv2.cuda.registerPageLocked">registerPageLocked() (in module cv2.cuda)</a>
+</li>
+        <li><a href="cv2.cuda.html#cv2.cuda.DeviceInfo.regsPerBlock">regsPerBlock() (cv2.cuda.DeviceInfo method)</a>
+</li>
         <li><a href="cv2.aruco.html#cv2.aruco.DetectorParameters.relativeCornerRefinmentWinSize">relativeCornerRefinmentWinSize (cv2.aruco.DetectorParameters attribute)</a>
+</li>
+        <li><a href="cv2.cuda.html#cv2.cuda.GpuMat.release">release() (cv2.cuda.GpuMat method)</a>
+</li>
+        <li><a href="cv2.cuda.html#cv2.cuda.resetDevice">resetDevice() (in module cv2.cuda)</a>
+</li>
+        <li><a href="cv2.cuda.html#cv2.cuda.GpuMat.reshape">reshape() (cv2.cuda.GpuMat method)</a>
+
+        <ul>
+          <li><a href="cv2.cuda.html#cv2.cuda.HostMem.reshape">(cv2.cuda.HostMem method)</a>
+</li>
+        </ul></li>
+        <li><a href="cv2.cuda.html#cv2.cuda.GpuMat.row">row() (cv2.cuda.GpuMat method)</a>
+</li>
+        <li><a href="cv2.cuda.html#cv2.cuda.GpuMat.rowRange">rowRange() (cv2.cuda.GpuMat method)</a>, <a href="cv2.cuda.html#id35">[1]</a>
 </li>
         <li><a href="cv2.dnn.html#cv2.dnn.Layer.run">run() (cv2.dnn.Layer method)</a>
 </li>
@@ -999,6 +1377,10 @@
 </li>
         <li><a href="cv2.aruco.html#cv2.aruco.CharucoDetector.setBoard">setBoard() (cv2.aruco.CharucoDetector method)</a>
 </li>
+        <li><a href="cv2.cuda.html#cv2.cuda.setBufferPoolConfig">setBufferPoolConfig() (in module cv2.cuda)</a>
+</li>
+        <li><a href="cv2.cuda.html#cv2.cuda.setBufferPoolUsage">setBufferPoolUsage() (in module cv2.cuda)</a>
+</li>
         <li><a href="cv2.aruco.html#cv2.aruco.CharucoDetector.setCharucoParameters">setCharucoParameters() (cv2.aruco.CharucoDetector method)</a>
 </li>
         <li><a href="cv2.dnn.html#cv2.dnn.TextDetectionModel_EAST.setConfidenceThreshold">setConfidenceThreshold() (cv2.dnn.TextDetectionModel_EAST method)</a>
@@ -1007,12 +1389,16 @@
 </li>
         <li><a href="cv2.dnn.html#cv2.dnn.TextRecognitionModel.setDecodeType">setDecodeType() (cv2.dnn.TextRecognitionModel method)</a>
 </li>
+        <li><a href="cv2.cuda.html#cv2.cuda.GpuMat.setDefaultAllocator">setDefaultAllocator() (cv2.cuda.GpuMat static method)</a>
+</li>
         <li><a href="cv2.aruco.html#cv2.aruco.ArucoDetector.setDetectorParameters">setDetectorParameters() (cv2.aruco.ArucoDetector method)</a>
 
         <ul>
           <li><a href="cv2.aruco.html#cv2.aruco.CharucoDetector.setDetectorParameters">(cv2.aruco.CharucoDetector method)</a>
 </li>
         </ul></li>
+        <li><a href="cv2.cuda.html#cv2.cuda.setDevice">setDevice() (in module cv2.cuda)</a>
+</li>
         <li><a href="cv2.aruco.html#cv2.aruco.ArucoDetector.setDictionary">setDictionary() (cv2.aruco.ArucoDetector method)</a>
 </li>
         <li><a href="cv2.dnn.html#cv2.dnn.ClassificationModel.setEnableSoftmaxPostProcessing">setEnableSoftmaxPostProcessing() (cv2.dnn.ClassificationModel method)</a>
@@ -1035,8 +1421,6 @@
 </li>
         <li><a href="cv2.dnn.html#cv2.dnn.Net.setInputsNames">setInputsNames() (cv2.dnn.Net method)</a>
 </li>
-    </ul></td>
-    <td style="width: 33%; vertical-align: top;"><ul>
         <li><a href="cv2.dnn.html#cv2.dnn.Model.setInputSwapRB">setInputSwapRB() (cv2.dnn.Model method)</a>
 </li>
         <li><a href="cv2.aruco.html#cv2.aruco.CharucoBoard.setLegacyPattern">setLegacyPattern() (cv2.aruco.CharucoBoard method)</a>
@@ -1047,6 +1431,8 @@
 </li>
         <li><a href="cv2.dnn.html#cv2.dnn.TextDetectionModel_EAST.setNMSThreshold">setNMSThreshold() (cv2.dnn.TextDetectionModel_EAST method)</a>
 </li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
         <li><a href="cv2.dnn.html#cv2.dnn.Net.setParam">setParam() (cv2.dnn.Net method)</a>, <a href="cv2.dnn.html#id22">[1]</a>
 </li>
         <li><a href="cv2.dnn.html#cv2.dnn.TextDetectionModel_DB.setPolygonThreshold">setPolygonThreshold() (cv2.dnn.TextDetectionModel_DB method)</a>
@@ -1069,14 +1455,26 @@
           <li><a href="cv2.aruco.html#cv2.aruco.CharucoDetector.setRefineParameters">(cv2.aruco.CharucoDetector method)</a>
 </li>
         </ul></li>
+        <li><a href="cv2.cuda.html#cv2.cuda.GpuMat.setTo">setTo() (cv2.cuda.GpuMat method)</a>, <a href="cv2.cuda.html#id26">[1]</a>, <a href="cv2.cuda.html#id27">[2]</a>, <a href="cv2.cuda.html#id28">[3]</a>, <a href="cv2.cuda.html#id29">[4]</a>, <a href="cv2.cuda.html#id30">[5]</a>, <a href="cv2.cuda.html#id31">[6]</a>, <a href="cv2.cuda.html#id32">[7]</a>
+</li>
         <li><a href="cv2.dnn.html#cv2.dnn.TextDetectionModel_DB.setUnclipRatio">setUnclipRatio() (cv2.dnn.TextDetectionModel_DB method)</a>
 </li>
         <li><a href="cv2.dnn.html#cv2.dnn.TextRecognitionModel.setVocabulary">setVocabulary() (cv2.dnn.TextRecognitionModel method)</a>
+</li>
+        <li><a href="cv2.cuda.html#cv2.cuda.SHARED_ATOMICS">SHARED_ATOMICS (in module cv2.cuda)</a>
+</li>
+        <li><a href="cv2.cuda.html#cv2.cuda.DeviceInfo.sharedMemPerBlock">sharedMemPerBlock() (cv2.cuda.DeviceInfo method)</a>
 </li>
         <li><a href="cv2.dnn.html#cv2.dnn.shrinkCaffeModel">shrinkCaffeModel() (in module cv2.dnn)</a>
 </li>
         <li><a href="cv2.dnn.html#cv2.dnn.Image2BlobParams.size">size (cv2.dnn.Image2BlobParams attribute)</a>
 </li>
+        <li><a href="cv2.cuda.html#cv2.cuda.GpuMat.size">size() (cv2.cuda.GpuMat method)</a>
+
+        <ul>
+          <li><a href="cv2.cuda.html#cv2.cuda.HostMem.size">(cv2.cuda.HostMem method)</a>
+</li>
+        </ul></li>
         <li><a href="cv2.dnn.html#cv2.dnn.SOFT_NMSMETHOD_SOFTNMS_GAUSSIAN">SOFT_NMSMETHOD_SOFTNMS_GAUSSIAN (in module cv2.dnn)</a>
 </li>
         <li><a href="cv2.dnn.html#cv2.dnn.SOFT_NMSMETHOD_SOFTNMS_LINEAR">SOFT_NMSMETHOD_SOFTNMS_LINEAR (in module cv2.dnn)</a>
@@ -1087,6 +1485,30 @@
 </li>
         <li><a href="cv2.dnn.html#cv2.dnn.SoftNMSMethod_SOFTNMS_LINEAR">SoftNMSMethod_SOFTNMS_LINEAR (in module cv2.dnn)</a>
 </li>
+        <li><a href="cv2.cuda.html#cv2.cuda.GpuMat.step">step() (cv2.cuda.GpuMat method)</a>
+
+        <ul>
+          <li><a href="cv2.cuda.html#cv2.cuda.HostMem.step">(cv2.cuda.HostMem method)</a>
+</li>
+        </ul></li>
+        <li><a href="cv2.cuda.html#cv2.cuda.GpuMat.step1">step1() (cv2.cuda.GpuMat method)</a>
+
+        <ul>
+          <li><a href="cv2.cuda.html#cv2.cuda.HostMem.step1">(cv2.cuda.HostMem method)</a>
+</li>
+        </ul></li>
+        <li><a href="cv2.cuda.html#cv2.cuda.Stream">Stream (class in cv2.cuda)</a>
+</li>
+        <li><a href="cv2.cuda.html#cv2.cuda.Stream_Null">Stream_Null() (in module cv2.cuda)</a>
+</li>
+        <li><a href="cv2.cuda.html#cv2.cuda.DeviceInfo.surfaceAlignment">surfaceAlignment() (cv2.cuda.DeviceInfo method)</a>
+</li>
+        <li><a href="cv2.cuda.html#cv2.cuda.GpuMat.swap">swap() (cv2.cuda.GpuMat method)</a>
+
+        <ul>
+          <li><a href="cv2.cuda.html#cv2.cuda.HostMem.swap">(cv2.cuda.HostMem method)</a>
+</li>
+        </ul></li>
         <li><a href="cv2.dnn.html#cv2.dnn.Image2BlobParams.swapRB">swapRB (cv2.dnn.Image2BlobParams attribute)</a>
 </li>
     </ul></td>
@@ -1097,20 +1519,54 @@
   <h2>T</h2>
   <table style="width: 100%" class="indextable genindextable"><tr>
     <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="cv2.cuda.html#cv2.cuda.TargetArchs">TargetArchs (class in cv2.cuda)</a>
+</li>
+        <li><a href="cv2.cuda.html#cv2.cuda.TargetArchs_has">TargetArchs_has() (in module cv2.cuda)</a>
+</li>
+        <li><a href="cv2.cuda.html#cv2.cuda.TargetArchs_hasBin">TargetArchs_hasBin() (in module cv2.cuda)</a>
+</li>
+        <li><a href="cv2.cuda.html#cv2.cuda.TargetArchs_hasEqualOrGreater">TargetArchs_hasEqualOrGreater() (in module cv2.cuda)</a>
+</li>
+        <li><a href="cv2.cuda.html#cv2.cuda.TargetArchs_hasEqualOrGreaterBin">TargetArchs_hasEqualOrGreaterBin() (in module cv2.cuda)</a>
+</li>
+        <li><a href="cv2.cuda.html#cv2.cuda.TargetArchs_hasEqualOrGreaterPtx">TargetArchs_hasEqualOrGreaterPtx() (in module cv2.cuda)</a>
+</li>
+        <li><a href="cv2.cuda.html#cv2.cuda.TargetArchs_hasEqualOrLessPtx">TargetArchs_hasEqualOrLessPtx() (in module cv2.cuda)</a>
+</li>
+        <li><a href="cv2.cuda.html#cv2.cuda.TargetArchs_hasPtx">TargetArchs_hasPtx() (in module cv2.cuda)</a>
+</li>
+        <li><a href="cv2.cuda.html#cv2.cuda.DeviceInfo.tccDriver">tccDriver() (cv2.cuda.DeviceInfo method)</a>
+</li>
         <li><a href="cv2.dnn.html#cv2.dnn.TextDetectionModel">TextDetectionModel (class in cv2.dnn)</a>
 </li>
         <li><a href="cv2.dnn.html#cv2.dnn.TextDetectionModel_DB">TextDetectionModel_DB (class in cv2.dnn)</a>
 </li>
-        <li><a href="cv2.dnn.html#cv2.dnn.TextDetectionModel_EAST">TextDetectionModel_EAST (class in cv2.dnn)</a>
-</li>
     </ul></td>
     <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="cv2.dnn.html#cv2.dnn.TextDetectionModel_EAST">TextDetectionModel_EAST (class in cv2.dnn)</a>
+</li>
         <li><a href="cv2.dnn.html#cv2.dnn.TextRecognitionModel">TextRecognitionModel (class in cv2.dnn)</a>
+</li>
+        <li><a href="cv2.cuda.html#cv2.cuda.DeviceInfo.textureAlignment">textureAlignment() (cv2.cuda.DeviceInfo method)</a>
+</li>
+        <li><a href="cv2.cuda.html#cv2.cuda.DeviceInfo.texturePitchAlignment">texturePitchAlignment() (cv2.cuda.DeviceInfo method)</a>
+</li>
+        <li><a href="cv2.cuda.html#cv2.cuda.DeviceInfo.totalConstMem">totalConstMem() (cv2.cuda.DeviceInfo method)</a>
+</li>
+        <li><a href="cv2.cuda.html#cv2.cuda.DeviceInfo.totalGlobalMem">totalGlobalMem() (cv2.cuda.DeviceInfo method)</a>
+</li>
+        <li><a href="cv2.cuda.html#cv2.cuda.DeviceInfo.totalMemory">totalMemory() (cv2.cuda.DeviceInfo method)</a>
 </li>
         <li><a href="cv2.aruco.html#cv2.aruco.CharucoParameters.tryRefineMarkers">tryRefineMarkers (cv2.aruco.CharucoParameters attribute)</a>
 </li>
-        <li><a href="cv2.dnn.html#cv2.dnn.Layer.type">type() (cv2.dnn.Layer method)</a>
+        <li><a href="cv2.cuda.html#cv2.cuda.GpuMat.type">type() (cv2.cuda.GpuMat method)</a>
+
+        <ul>
+          <li><a href="cv2.cuda.html#cv2.cuda.HostMem.type">(cv2.cuda.HostMem method)</a>
 </li>
+          <li><a href="cv2.dnn.html#cv2.dnn.Layer.type">(cv2.dnn.Layer method)</a>
+</li>
+        </ul></li>
     </ul></td>
   </tr></table>
 </section>
@@ -1119,6 +1575,16 @@
   <h2>U</h2>
   <table style="width: 100%" class="indextable genindextable"><tr>
     <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="cv2.cuda.html#cv2.cuda.DeviceInfo.unifiedAddressing">unifiedAddressing() (cv2.cuda.DeviceInfo method)</a>
+</li>
+        <li><a href="cv2.cuda.html#cv2.cuda.unregisterPageLocked">unregisterPageLocked() (in module cv2.cuda)</a>
+</li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="cv2.cuda.html#cv2.cuda.GpuMat.updateContinuityFlag">updateContinuityFlag() (cv2.cuda.GpuMat method)</a>
+</li>
+        <li><a href="cv2.cuda.html#cv2.cuda.GpuMat.upload">upload() (cv2.cuda.GpuMat method)</a>, <a href="cv2.cuda.html#id13">[1]</a>, <a href="cv2.cuda.html#id14">[2]</a>, <a href="cv2.cuda.html#id15">[3]</a>, <a href="cv2.cuda.html#id16">[4]</a>, <a href="cv2.cuda.html#id17">[5]</a>
+</li>
         <li><a href="cv2.aruco.html#cv2.aruco.DetectorParameters.useAruco3Detection">useAruco3Detection (cv2.aruco.DetectorParameters attribute)</a>
 </li>
     </ul></td>
@@ -1129,12 +1595,26 @@
   <h2>W</h2>
   <table style="width: 100%" class="indextable genindextable"><tr>
     <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="cv2.cuda.html#cv2.cuda.Stream.waitEvent">waitEvent() (cv2.cuda.Stream method)</a>
+</li>
+        <li><a href="cv2.cuda.html#cv2.cuda.Event.waitForCompletion">waitForCompletion() (cv2.cuda.Event method)</a>
+
+        <ul>
+          <li><a href="cv2.cuda.html#cv2.cuda.Stream.waitForCompletion">(cv2.cuda.Stream method)</a>
+</li>
+        </ul></li>
+        <li><a href="cv2.cuda.html#cv2.cuda.WARP_SHUFFLE_FUNCTIONS">WARP_SHUFFLE_FUNCTIONS (in module cv2.cuda)</a>
+</li>
+        <li><a href="cv2.cuda.html#cv2.cuda.DeviceInfo.warpSize">warpSize() (cv2.cuda.DeviceInfo method)</a>
+</li>
+    </ul></td>
+    <td style="width: 33%; vertical-align: top;"><ul>
+        <li><a href="cv2.cuda.html#cv2.cuda.wrapStream">wrapStream() (in module cv2.cuda)</a>
+</li>
         <li><a href="cv2.aruco.html#cv2.aruco.ArucoDetector.write">write() (cv2.aruco.ArucoDetector method)</a>
 </li>
         <li><a href="cv2.aruco.html#cv2.aruco.DetectorParameters.writeDetectorParameters">writeDetectorParameters() (cv2.aruco.DetectorParameters method)</a>
 </li>
-    </ul></td>
-    <td style="width: 33%; vertical-align: top;"><ul>
         <li><a href="cv2.aruco.html#cv2.aruco.Dictionary.writeDictionary">writeDictionary() (cv2.aruco.Dictionary method)</a>
 </li>
         <li><a href="cv2.aruco.html#cv2.aruco.RefineParameters.writeRefineParameters">writeRefineParameters() (cv2.aruco.RefineParameters method)</a>
