@@ -218,7 +218,7 @@ The function does not correct lens distortion or takes it into account. It's rec
 :type ids: cv2.typing.MatLike | None
 :param rejectedImgPoints: contains the imgPoints of those squares whose inner code has not acorrect codification. Useful for debugging purposes. 
 :type rejectedImgPoints: _typing.Sequence[cv2.typing.MatLike] | None
-:rettype: tuple[_typing.Sequence[cv2.typing.MatLike], cv2.typing.MatLike, _typing.Sequence[cv2.typing.MatLike]]
+:rtype: tuple[_typing.Sequence[cv2.typing.MatLike], cv2.typing.MatLike, _typing.Sequence[cv2.typing.MatLike]]
 ````
 
 ````{py:method} detectMarkers(image[, corners[, ids[, rejectedImgPoints]]]) -> corners, ids, rejectedImgPoints
@@ -242,7 +242,7 @@ The function does not correct lens distortion or takes it into account. It's rec
 :type ids: cv2.UMat | None
 :param rejectedImgPoints: contains the imgPoints of those squares whose inner code has not acorrect codification. Useful for debugging purposes. 
 :type rejectedImgPoints: _typing.Sequence[cv2.UMat] | None
-:rettype: tuple[_typing.Sequence[cv2.UMat], cv2.UMat, _typing.Sequence[cv2.UMat]]
+:rtype: tuple[_typing.Sequence[cv2.UMat], cv2.UMat, _typing.Sequence[cv2.UMat]]
 ````
 
 ````{py:method} refineDetectedMarkers(image, board, detectedCorners, detectedIds, rejectedCorners[, cameraMatrix[, distCoeffs[, recoveredIdxs]]]) -> detectedCorners, detectedIds, rejectedCorners, recoveredIdxs
@@ -270,7 +270,7 @@ This function tries to find markers that were not detected in the basic detecMar
 :type distCoeffs: cv2.typing.MatLike | None
 :param recoveredIdxs: Optional array to returns the indexes of the recovered candidates in theoriginal rejectedCorners array. 
 :type recoveredIdxs: cv2.typing.MatLike | None
-:rettype: tuple[_typing.Sequence[cv2.typing.MatLike], cv2.typing.MatLike, _typing.Sequence[cv2.typing.MatLike], cv2.typing.MatLike]
+:rtype: tuple[_typing.Sequence[cv2.typing.MatLike], cv2.typing.MatLike, _typing.Sequence[cv2.typing.MatLike], cv2.typing.MatLike]
 ````
 
 ````{py:method} refineDetectedMarkers(image, board, detectedCorners, detectedIds, rejectedCorners[, cameraMatrix[, distCoeffs[, recoveredIdxs]]]) -> detectedCorners, detectedIds, rejectedCorners, recoveredIdxs
@@ -298,7 +298,7 @@ This function tries to find markers that were not detected in the basic detecMar
 :type distCoeffs: cv2.UMat | None
 :param recoveredIdxs: Optional array to returns the indexes of the recovered candidates in theoriginal rejectedCorners array. 
 :type recoveredIdxs: cv2.UMat | None
-:rettype: tuple[_typing.Sequence[cv2.UMat], cv2.UMat, _typing.Sequence[cv2.UMat], cv2.UMat]
+:rtype: tuple[_typing.Sequence[cv2.UMat], cv2.UMat, _typing.Sequence[cv2.UMat], cv2.UMat]
 ````
 
 ````{py:method} __init__(self, dictionary: Dictionary=..., detectorParams: DetectorParameters=..., refineParams: RefineParameters=...)
@@ -315,7 +315,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 :type detectorParams: DetectorParameters
 :param refineParams: 
 :type refineParams: RefineParameters
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getDictionary() -> retval
@@ -326,7 +326,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 
 :param self: 
 :type self: 
-:rettype: Dictionary
+:rtype: Dictionary
 ````
 
 ````{py:method} setDictionary(dictionary) -> None
@@ -339,7 +339,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 :type self: 
 :param dictionary: 
 :type dictionary: Dictionary
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getDetectorParameters() -> retval
@@ -350,7 +350,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 
 :param self: 
 :type self: 
-:rettype: DetectorParameters
+:rtype: DetectorParameters
 ````
 
 ````{py:method} setDetectorParameters(detectorParameters) -> None
@@ -363,7 +363,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 :type self: 
 :param detectorParameters: 
 :type detectorParameters: DetectorParameters
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getRefineParameters() -> retval
@@ -374,7 +374,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 
 :param self: 
 :type self: 
-:rettype: RefineParameters
+:rtype: RefineParameters
 ````
 
 ````{py:method} setRefineParameters(refineParameters) -> None
@@ -387,7 +387,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 :type self: 
 :param refineParameters: 
 :type refineParameters: RefineParameters
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} write(fs, name) -> None
@@ -402,7 +402,7 @@ simplified API for language bindings
 :type fs: cv2.FileStorage
 :param name: 
 :type name: str
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} read(fn) -> None
@@ -415,7 +415,7 @@ Reads algorithm parameters from a file storage
 :type self: 
 :param fn: 
 :type fn: cv2.FileNode
-:rettype: None
+:rtype: None
 ````
 
 
@@ -442,7 +442,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 :type dictionary: Dictionary
 :param ids: 
 :type ids: cv2.typing.MatLike
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} __init__(self, objPoints: _typing.Sequence[cv2.UMat], dictionary: Dictionary, ids: cv2.UMat)
@@ -460,7 +460,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 :type dictionary: Dictionary
 :param ids: 
 :type ids: cv2.UMat
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} matchImagePoints(detectedCorners, detectedIds[, objPoints[, imgPoints]]) -> objPoints, imgPoints
@@ -481,7 +481,7 @@ Given a board configuration and a set of detected markers, returns the correspon
 :type objPoints: cv2.typing.MatLike | None
 :param imgPoints: Vector of marker points in the image coordinate space.For any Board class the method expects std::vector<cv::Point2f> objectPoints or cv::Mat 
 :type imgPoints: cv2.typing.MatLike | None
-:rettype: tuple[cv2.typing.MatLike, cv2.typing.MatLike]
+:rtype: tuple[cv2.typing.MatLike, cv2.typing.MatLike]
 ````
 
 ````{py:method} matchImagePoints(detectedCorners, detectedIds[, objPoints[, imgPoints]]) -> objPoints, imgPoints
@@ -502,7 +502,7 @@ Given a board configuration and a set of detected markers, returns the correspon
 :type objPoints: cv2.UMat | None
 :param imgPoints: Vector of marker points in the image coordinate space.For any Board class the method expects std::vector<cv::Point2f> objectPoints or cv::Mat 
 :type imgPoints: cv2.UMat | None
-:rettype: tuple[cv2.UMat, cv2.UMat]
+:rtype: tuple[cv2.UMat, cv2.UMat]
 ````
 
 ````{py:method} generateImage(outSize[, img[, marginSize[, borderBits]]]) -> img
@@ -522,7 +522,7 @@ This function return the image of the board, ready to be printed.
 :type marginSize: int
 :param borderBits: width of the marker borders.
 :type borderBits: int
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 ````{py:method} generateImage(outSize[, img[, marginSize[, borderBits]]]) -> img
@@ -542,7 +542,7 @@ This function return the image of the board, ready to be printed.
 :type marginSize: int
 :param borderBits: width of the marker borders.
 :type borderBits: int
-:rettype: cv2.UMat
+:rtype: cv2.UMat
 ````
 
 ````{py:method} getDictionary() -> retval
@@ -553,7 +553,7 @@ return the Dictionary of markers employed for this board
 
 :param self: 
 :type self: 
-:rettype: Dictionary
+:rtype: Dictionary
 ````
 
 ````{py:method} getObjPoints() -> retval
@@ -564,7 +564,7 @@ Each marker include its 4 corners in this order: -   objPoints[i][0] - left-top 
 
 :param self: 
 :type self: 
-:rettype: _typing.Sequence[_typing.Sequence[cv2.typing.Point3f]]
+:rtype: _typing.Sequence[_typing.Sequence[cv2.typing.Point3f]]
 ````
 
 ````{py:method} getIds() -> retval
@@ -576,7 +576,7 @@ vector of the identifiers of the markers in the board (should be the same size a
 :param self: 
 :type self: 
 :return: vector of the identifiers of the markers
-:rettype: _typing.Sequence[int]
+:rtype: _typing.Sequence[int]
 ````
 
 ````{py:method} getRightBottomCorner() -> retval
@@ -587,7 +587,7 @@ get coordinate of the bottom right corner of the board, is set when calling the 
 
 :param self: 
 :type self: 
-:rettype: cv2.typing.Point3f
+:rtype: cv2.typing.Point3f
 ````
 
 
@@ -618,7 +618,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 :type dictionary: Dictionary
 :param ids: 
 :type ids: cv2.typing.MatLike | None
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} __init__(self, size: cv2.typing.Size, squareLength: float, markerLength: float, dictionary: Dictionary, ids: cv2.UMat | None=...)
@@ -640,7 +640,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 :type dictionary: Dictionary
 :param ids: 
 :type ids: cv2.UMat | None
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} checkCharucoCornersCollinear(charucoIds) -> retval
@@ -655,7 +655,7 @@ The number of ids in charucoIDs should be <= the number of chessboard corners in
 :param charucoIds: list of identifiers for each corner in charucoCorners per frame.
 :type charucoIds: cv2.typing.MatLike
 :return: bool value, 1 (true) if detected corners form a line, 0 (false) if they do not.solvePnP, calibration functions will fail if the corners are collinear (true). 
-:rettype: bool
+:rtype: bool
 ````
 
 ````{py:method} checkCharucoCornersCollinear(charucoIds) -> retval
@@ -670,7 +670,7 @@ The number of ids in charucoIDs should be <= the number of chessboard corners in
 :param charucoIds: list of identifiers for each corner in charucoCorners per frame.
 :type charucoIds: cv2.UMat
 :return: bool value, 1 (true) if detected corners form a line, 0 (false) if they do not.solvePnP, calibration functions will fail if the corners are collinear (true). 
-:rettype: bool
+:rtype: bool
 ````
 
 ````{py:method} setLegacyPattern(legacyPattern) -> None
@@ -683,7 +683,7 @@ Legacy setting creates chessboard patterns starting with a white box in the uppe
 :type self: 
 :param legacyPattern: 
 :type legacyPattern: bool
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getLegacyPattern() -> retval
@@ -694,7 +694,7 @@ Legacy setting creates chessboard patterns starting with a white box in the uppe
 
 :param self: 
 :type self: 
-:rettype: bool
+:rtype: bool
 ````
 
 ````{py:method} getChessboardSize() -> retval
@@ -705,7 +705,7 @@ Legacy setting creates chessboard patterns starting with a white box in the uppe
 
 :param self: 
 :type self: 
-:rettype: cv2.typing.Size
+:rtype: cv2.typing.Size
 ````
 
 ````{py:method} getSquareLength() -> retval
@@ -716,7 +716,7 @@ Legacy setting creates chessboard patterns starting with a white box in the uppe
 
 :param self: 
 :type self: 
-:rettype: float
+:rtype: float
 ````
 
 ````{py:method} getMarkerLength() -> retval
@@ -727,7 +727,7 @@ Legacy setting creates chessboard patterns starting with a white box in the uppe
 
 :param self: 
 :type self: 
-:rettype: float
+:rtype: float
 ````
 
 ````{py:method} getChessboardCorners() -> retval
@@ -738,7 +738,7 @@ get CharucoBoard::chessboardCorners
 
 :param self: 
 :type self: 
-:rettype: _typing.Sequence[cv2.typing.Point3f]
+:rtype: _typing.Sequence[cv2.typing.Point3f]
 ````
 
 
@@ -770,7 +770,7 @@ This function receives the detected markers and returns the 2D position of the c
 :type markerCorners: _typing.Sequence[cv2.typing.MatLike] | None
 :param markerIds: list of identifiers for each marker in corners.If markerCorners and markerCorners are empty, the function detect aruco markers and ids. 
 :type markerIds: cv2.typing.MatLike | None
-:rettype: tuple[cv2.typing.MatLike, cv2.typing.MatLike, _typing.Sequence[cv2.typing.MatLike], cv2.typing.MatLike]
+:rtype: tuple[cv2.typing.MatLike, cv2.typing.MatLike, _typing.Sequence[cv2.typing.MatLike], cv2.typing.MatLike]
 ````
 
 ````{py:method} detectBoard(image[, charucoCorners[, charucoIds[, markerCorners[, markerIds]]]]) -> charucoCorners, charucoIds, markerCorners, markerIds
@@ -793,7 +793,7 @@ This function receives the detected markers and returns the 2D position of the c
 :type markerCorners: _typing.Sequence[cv2.UMat] | None
 :param markerIds: list of identifiers for each marker in corners.If markerCorners and markerCorners are empty, the function detect aruco markers and ids. 
 :type markerIds: cv2.UMat | None
-:rettype: tuple[cv2.UMat, cv2.UMat, _typing.Sequence[cv2.UMat], cv2.UMat]
+:rtype: tuple[cv2.UMat, cv2.UMat, _typing.Sequence[cv2.UMat], cv2.UMat]
 ````
 
 ````{py:method} detectDiamonds(image[, diamondCorners[, diamondIds[, markerCorners[, markerIds]]]]) -> diamondCorners, diamondIds, markerCorners, markerIds
@@ -815,7 +815,7 @@ This function detects Diamond markers from the previous detected ArUco markers. 
 :type markerCorners: _typing.Sequence[cv2.typing.MatLike] | None
 :param markerIds: list of marker ids in markerCorners.If markerCorners and markerCorners are empty, the function detect aruco markers and ids. 
 :type markerIds: cv2.typing.MatLike | None
-:rettype: tuple[_typing.Sequence[cv2.typing.MatLike], cv2.typing.MatLike, _typing.Sequence[cv2.typing.MatLike], cv2.typing.MatLike]
+:rtype: tuple[_typing.Sequence[cv2.typing.MatLike], cv2.typing.MatLike, _typing.Sequence[cv2.typing.MatLike], cv2.typing.MatLike]
 ````
 
 ````{py:method} detectDiamonds(image[, diamondCorners[, diamondIds[, markerCorners[, markerIds]]]]) -> diamondCorners, diamondIds, markerCorners, markerIds
@@ -837,7 +837,7 @@ This function detects Diamond markers from the previous detected ArUco markers. 
 :type markerCorners: _typing.Sequence[cv2.UMat] | None
 :param markerIds: list of marker ids in markerCorners.If markerCorners and markerCorners are empty, the function detect aruco markers and ids. 
 :type markerIds: cv2.UMat | None
-:rettype: tuple[_typing.Sequence[cv2.UMat], cv2.UMat, _typing.Sequence[cv2.UMat], cv2.UMat]
+:rtype: tuple[_typing.Sequence[cv2.UMat], cv2.UMat, _typing.Sequence[cv2.UMat], cv2.UMat]
 ````
 
 ````{py:method} __init__(self, board: CharucoBoard, charucoParams: CharucoParameters=..., detectorParams: DetectorParameters=..., refineParams: RefineParameters=...)
@@ -856,7 +856,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 :type detectorParams: DetectorParameters
 :param refineParams: 
 :type refineParams: RefineParameters
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getBoard() -> retval
@@ -867,7 +867,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 
 :param self: 
 :type self: 
-:rettype: CharucoBoard
+:rtype: CharucoBoard
 ````
 
 ````{py:method} setBoard(board) -> None
@@ -880,7 +880,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 :type self: 
 :param board: 
 :type board: CharucoBoard
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getCharucoParameters() -> retval
@@ -891,7 +891,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 
 :param self: 
 :type self: 
-:rettype: CharucoParameters
+:rtype: CharucoParameters
 ````
 
 ````{py:method} setCharucoParameters(charucoParameters) -> None
@@ -904,7 +904,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 :type self: 
 :param charucoParameters: 
 :type charucoParameters: CharucoParameters
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getDetectorParameters() -> retval
@@ -915,7 +915,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 
 :param self: 
 :type self: 
-:rettype: DetectorParameters
+:rtype: DetectorParameters
 ````
 
 ````{py:method} setDetectorParameters(detectorParameters) -> None
@@ -928,7 +928,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 :type self: 
 :param detectorParameters: 
 :type detectorParameters: DetectorParameters
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getRefineParameters() -> retval
@@ -939,7 +939,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 
 :param self: 
 :type self: 
-:rettype: RefineParameters
+:rtype: RefineParameters
 ````
 
 ````{py:method} setRefineParameters(refineParameters) -> None
@@ -952,7 +952,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 :type self: 
 :param refineParameters: 
 :type refineParameters: RefineParameters
-:rettype: None
+:rtype: None
 ````
 
 
@@ -972,7 +972,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 
 :param self: 
 :type self: 
-:rettype: None
+:rtype: None
 ````
 
 ```{py:attribute} cameraMatrix
@@ -1008,7 +1008,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 
 :param self: 
 :type self: 
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} readDetectorParameters(fn) -> retval
@@ -1021,7 +1021,7 @@ Read a new set of DetectorParameters from FileNode (use FileStorage.root()).
 :type self: 
 :param fn: 
 :type fn: cv2.FileNode
-:rettype: bool
+:rtype: bool
 ````
 
 ````{py:method} writeDetectorParameters(fs[, name]) -> retval
@@ -1036,7 +1036,7 @@ Write a set of DetectorParameters to FileStorage
 :type fs: cv2.FileStorage
 :param name: 
 :type name: str
-:rettype: bool
+:rtype: bool
 ````
 
 ```{py:attribute} adaptiveThreshWinSizeMin
@@ -1193,7 +1193,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 
 :param self: 
 :type self: 
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} __init__(self, bytesList: cv2.typing.MatLike, _markerSize: int, maxcorr: int=...)
@@ -1211,7 +1211,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 :type _markerSize: int
 :param maxcorr: 
 :type maxcorr: int
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getDistanceToId(bits, id[, allRotations]) -> retval
@@ -1229,7 +1229,7 @@ If `allRotations` flag is set, the four posible marker rotations are considered
 :type id: int
 :param allRotations: 
 :type allRotations: bool
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} getDistanceToId(bits, id[, allRotations]) -> retval
@@ -1247,7 +1247,7 @@ If `allRotations` flag is set, the four posible marker rotations are considered
 :type id: int
 :param allRotations: 
 :type allRotations: bool
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} generateImageMarker(id, sidePixels[, _img[, borderBits]]) -> _img
@@ -1267,7 +1267,7 @@ Generate a canonical marker image
 :type _img: cv2.typing.MatLike | None
 :param borderBits: 
 :type borderBits: int
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 ````{py:method} generateImageMarker(id, sidePixels[, _img[, borderBits]]) -> _img
@@ -1287,7 +1287,7 @@ Generate a canonical marker image
 :type _img: cv2.UMat | None
 :param borderBits: 
 :type borderBits: int
-:rettype: cv2.UMat
+:rtype: cv2.UMat
 ````
 
 ````{py:method} readDictionary(fn) -> retval
@@ -1300,7 +1300,7 @@ Dictionary example in YAML format:\n nmarkers: 35\n markersize: 6\n maxCorrectio
 :type self: 
 :param fn: 
 :type fn: cv2.FileNode
-:rettype: bool
+:rtype: bool
 ````
 
 ````{py:method} writeDictionary(fs[, name]) -> None
@@ -1315,7 +1315,7 @@ Write a dictionary to FileStorage, format is the same as in readDictionary().
 :type fs: cv2.FileStorage
 :param name: 
 :type name: str
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} identify(onlyBits, maxCorrectionRate) -> retval, idx, rotation
@@ -1330,7 +1330,7 @@ Returns reference to the marker id in the dictionary (if any) and its rotation.
 :type onlyBits: cv2.typing.MatLike
 :param maxCorrectionRate: 
 :type maxCorrectionRate: float
-:rettype: tuple[bool, int, int]
+:rtype: tuple[bool, int, int]
 ````
 
 ````{py:method} getByteListFromBits(bits) -> retval
@@ -1342,7 +1342,7 @@ Transform matrix of bits to list of bytes with 4 marker rotations
 
 :param bits: 
 :type bits: cv2.typing.MatLike
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 ````{py:method} getBitsFromByteList(byteList, markerSize) -> retval
@@ -1356,7 +1356,7 @@ Transform list of bytes to matrix of bits
 :type byteList: cv2.typing.MatLike
 :param markerSize: 
 :type markerSize: int
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 ```{py:attribute} bytesList
@@ -1399,7 +1399,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 :type dictionary: Dictionary
 :param ids: 
 :type ids: cv2.typing.MatLike | None
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} __init__(self, size: cv2.typing.Size, markerLength: float, markerSeparation: float, dictionary: Dictionary, ids: cv2.UMat | None=...)
@@ -1421,7 +1421,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 :type dictionary: Dictionary
 :param ids: 
 :type ids: cv2.UMat | None
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getGridSize() -> retval
@@ -1432,7 +1432,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 
 :param self: 
 :type self: 
-:rettype: cv2.typing.Size
+:rtype: cv2.typing.Size
 ````
 
 ````{py:method} getMarkerLength() -> retval
@@ -1443,7 +1443,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 
 :param self: 
 :type self: 
-:rettype: float
+:rtype: float
 ````
 
 ````{py:method} getMarkerSeparation() -> retval
@@ -1454,7 +1454,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 
 :param self: 
 :type self: 
-:rettype: float
+:rtype: float
 ````
 
 
@@ -1480,7 +1480,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 :type errorCorrectionRate: float
 :param checkAllOrders: 
 :type checkAllOrders: bool
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} readRefineParameters(fn) -> retval
@@ -1493,7 +1493,7 @@ Read a new set of RefineParameters from FileNode (use FileStorage.root()).
 :type self: 
 :param fn: 
 :type fn: cv2.FileNode
-:rettype: bool
+:rtype: bool
 ````
 
 ````{py:method} writeRefineParameters(fs[, name]) -> retval
@@ -1508,7 +1508,7 @@ Write a set of RefineParameters to FileStorage
 :type fs: cv2.FileStorage
 :param name: 
 :type name: str
-:rettype: bool
+:rtype: bool
 ````
 
 ```{py:attribute} minRepDistance
@@ -1536,7 +1536,7 @@ Transform list of bytes to matrix of bits
 
 
 
-:rettype: object
+:rtype: object
 ````
 
 
@@ -1547,7 +1547,7 @@ Transform matrix of bits to list of bytes with 4 marker rotations
 
 
 
-:rettype: object
+:rtype: object
 ````
 
 
@@ -1566,7 +1566,7 @@ This function draws a set of detected Charuco corners. If identifiers vector is 
 :type charucoIds: cv2.typing.MatLike | None
 :param cornerColor: color of the square surrounding each corner
 :type cornerColor: cv2.typing.Scalar
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -1585,7 +1585,7 @@ Given an array of detected diamonds, this functions draws them in the image. The
 :type diamondIds: cv2.typing.MatLike | None
 :param borderColor: color of marker borders. Rest of colors (text color and first corner color)are calculated based on this one. 
 :type borderColor: cv2.typing.Scalar
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -1604,7 +1604,7 @@ Given an array of detected marker corners and its corresponding ids, this functi
 :type ids: cv2.typing.MatLike | None
 :param borderColor: color of marker borders. Rest of colors (text color and first corner color)are calculated based on this one to improve visualization. 
 :type borderColor: cv2.typing.Scalar
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -1623,7 +1623,7 @@ This function creates a new dictionary composed by nMarkers markers and each mar
 :type baseDictionary: Dictionary
 :param randomSeed: a user supplied seed for theRNG()
 :type randomSeed: int
-:rettype: Dictionary
+:rtype: Dictionary
 ````
 
 
@@ -1644,7 +1644,7 @@ This function returns a marker image in its canonical form (i.e. ready to be pri
 :type img: cv2.typing.MatLike | None
 :param borderBits: width of the marker border.
 :type borderBits: int
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -1657,7 +1657,7 @@ Returns one of the predefined dictionaries referenced by DICT_*.
 
 :param dict: 
 :type dict: int
-:rettype: Dictionary
+:rtype: Dictionary
 ````
 
 
