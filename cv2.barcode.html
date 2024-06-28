@@ -274,8 +274,7 @@
 <dd><dl class="py method">
 <dt class="sig sig-object py" id="cv2.barcode.BarcodeDetector.__init__">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#cv2.barcode.BarcodeDetector.__init__" title="Permalink to this definition">¶</a></dt>
-<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
-<dl class="myst field-list simple">
+<dd><dl class="myst field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><p><strong>self</strong> – </p>
 </dd>
@@ -288,8 +287,7 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="id0">
 <span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">prototxt_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">model_path</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><span class="pre">str</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#id0" title="Permalink to this definition">¶</a></dt>
-<dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
-<dl class="myst field-list simple">
+<dd><dl class="myst field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>self</strong> – </p></li>
@@ -306,22 +304,24 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="cv2.barcode.BarcodeDetector.decodeWithType">
 <span class="sig-name descname"><span class="pre">decodeWithType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">img</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">points</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">retval</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">decoded_info</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">decoded_type</span></span></span><a class="headerlink" href="#cv2.barcode.BarcodeDetector.decodeWithType" title="Permalink to this definition">¶</a></dt>
-<dd><p>Decodes barcode in image once it’s found by the detect() method.</p>
+<dd><p>Decodes barcode in image once it’s found by the detect() method.     *
+* &#64;param img grayscale or color (BGR) image containing bar code.
+* &#64;param points vector of rotated rectangle vertices found by detect() method (or some other algorithm).
+* For N detected barcodes, the dimensions of this array should be [N][4].
+* Order of four points in vector<Point2f> is bottomLeft, topLeft, topRight, bottomRight.
+* &#64;param decoded_info UTF8-encoded output vector of string or empty vector of string if the codes cannot be decoded.
+* &#64;param decoded_type vector strings, specifies the type of these barcodes
+* &#64;return true if at least one valid barcode have been found</p>
 <dl class="myst field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>self</strong> – </p></li>
-<li><p><strong>img</strong> (<em>cv2.typing.MatLike</em>) – grayscale or color (BGR) image containing bar code.</p></li>
-<li><p><strong>points</strong> (<em>cv2.typing.MatLike</em>) – vector of rotated rectangle vertices found by detect() method (or some other algorithm).For N detected barcodes, the dimensions of this array should be [N][4]. Order of four points in vector<Point2f> is bottomLeft, topLeft, topRight, bottomRight.</p></li>
-<li><p><strong>decoded_info</strong> – UTF8-encoded output vector of string or empty vector of string if the codes cannot be decoded.</p></li>
-<li><p><strong>decoded_type</strong> – vector strings, specifies the type of these barcodes</p></li>
+<li><p><strong>img</strong> (<em>cv2.typing.MatLike</em>) – </p></li>
+<li><p><strong>points</strong> (<em>cv2.typing.MatLike</em>) – </p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>true if at least one valid barcode have been found</p>
-</dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.12)">tuple</a>[<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)">bool</a>, _typing.Sequence[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a>], _typing.Sequence[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a>]]</p>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.12)">tuple</a>[<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)">bool</a>, _typing.Sequence[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a>], _typing.Sequence[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a>]]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -329,22 +329,24 @@
 <dl class="py method">
 <dt class="sig sig-object py" id="id1">
 <span class="sig-name descname"><span class="pre">decodeWithType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">img</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">points</span></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">retval</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">decoded_info</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">decoded_type</span></span></span><a class="headerlink" href="#id1" title="Permalink to this definition">¶</a></dt>
-<dd><p>Decodes barcode in image once it’s found by the detect() method.</p>
+<dd><p>Decodes barcode in image once it’s found by the detect() method.     *
+* &#64;param img grayscale or color (BGR) image containing bar code.
+* &#64;param points vector of rotated rectangle vertices found by detect() method (or some other algorithm).
+* For N detected barcodes, the dimensions of this array should be [N][4].
+* Order of four points in vector<Point2f> is bottomLeft, topLeft, topRight, bottomRight.
+* &#64;param decoded_info UTF8-encoded output vector of string or empty vector of string if the codes cannot be decoded.
+* &#64;param decoded_type vector strings, specifies the type of these barcodes
+* &#64;return true if at least one valid barcode have been found</p>
 <dl class="myst field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>self</strong> – </p></li>
-<li><p><strong>img</strong> (<a class="reference internal" href="cv2.html#cv2.UMat" title="cv2.UMat"><em>cv2.UMat</em></a>) – grayscale or color (BGR) image containing bar code.</p></li>
-<li><p><strong>points</strong> (<a class="reference internal" href="cv2.html#cv2.UMat" title="cv2.UMat"><em>cv2.UMat</em></a>) – vector of rotated rectangle vertices found by detect() method (or some other algorithm).For N detected barcodes, the dimensions of this array should be [N][4]. Order of four points in vector<Point2f> is bottomLeft, topLeft, topRight, bottomRight.</p></li>
-<li><p><strong>decoded_info</strong> – UTF8-encoded output vector of string or empty vector of string if the codes cannot be decoded.</p></li>
-<li><p><strong>decoded_type</strong> – vector strings, specifies the type of these barcodes</p></li>
+<li><p><strong>img</strong> (<a class="reference internal" href="cv2.html#cv2.UMat" title="cv2.UMat"><em>cv2.UMat</em></a>) – </p></li>
+<li><p><strong>points</strong> (<a class="reference internal" href="cv2.html#cv2.UMat" title="cv2.UMat"><em>cv2.UMat</em></a>) – </p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>true if at least one valid barcode have been found</p>
-</dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.12)">tuple</a>[<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)">bool</a>, _typing.Sequence[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a>], _typing.Sequence[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a>]]</p>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.12)">tuple</a>[<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)">bool</a>, _typing.Sequence[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a>], _typing.Sequence[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a>]]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -353,21 +355,23 @@
 <dt class="sig sig-object py" id="cv2.barcode.BarcodeDetector.detectAndDecodeWithType">
 <span class="sig-name descname"><span class="pre">detectAndDecodeWithType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">img</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">points</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">retval</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">decoded_info</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">decoded_type</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">points</span></span></span><a class="headerlink" href="#cv2.barcode.BarcodeDetector.detectAndDecodeWithType" title="Permalink to this definition">¶</a></dt>
 <dd><p>Both detects and decodes barcode</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span> * @param img grayscale or color (BGR) image containing barcode.
+ * @param decoded_info UTF8-encoded output vector of string(s) or empty vector of string if the codes cannot be decoded.
+ * @param decoded_type vector of strings, specifies the type of these barcodes
+ * @param points optional output vector of vertices of the found  barcode rectangle. Will be empty if not found.
+ * @return true if at least one valid barcode have been found
+</pre></div>
+</div>
 <dl class="myst field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>self</strong> – </p></li>
-<li><p><strong>img</strong> (<em>cv2.typing.MatLike</em>) – grayscale or color (BGR) image containing barcode.</p></li>
-<li><p><strong>points</strong> (<em>cv2.typing.MatLike</em><em> | </em><em>None</em>) – optional output vector of vertices of the found barcode rectangle. Will be empty if not found.</p></li>
-<li><p><strong>decoded_info</strong> – UTF8-encoded output vector of string(s) or empty vector of string if the codes cannot be decoded.</p></li>
-<li><p><strong>decoded_type</strong> – vector of strings, specifies the type of these barcodes</p></li>
+<li><p><strong>img</strong> (<em>cv2.typing.MatLike</em>) – </p></li>
+<li><p><strong>points</strong> (<em>cv2.typing.MatLike</em><em> | </em><em>None</em>) – </p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>true if at least one valid barcode have been found</p>
-</dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.12)">tuple</a>[<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)">bool</a>, _typing.Sequence[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a>], _typing.Sequence[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a>], cv2.typing.MatLike]</p>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.12)">tuple</a>[<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)">bool</a>, _typing.Sequence[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a>], _typing.Sequence[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a>], cv2.typing.MatLike]</p>
 </dd>
 </dl>
 </dd></dl>
@@ -376,21 +380,23 @@
 <dt class="sig sig-object py" id="id2">
 <span class="sig-name descname"><span class="pre">detectAndDecodeWithType</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">img</span></span></em><span class="optional">[</span>, <em class="sig-param"><span class="n"><span class="pre">points</span></span></em><span class="optional">]</span><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">retval</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">decoded_info</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">decoded_type</span><span class="p"><span class="pre">,</span></span><span class="w"> </span><span class="pre">points</span></span></span><a class="headerlink" href="#id2" title="Permalink to this definition">¶</a></dt>
 <dd><p>Both detects and decodes barcode</p>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span> * @param img grayscale or color (BGR) image containing barcode.
+ * @param decoded_info UTF8-encoded output vector of string(s) or empty vector of string if the codes cannot be decoded.
+ * @param decoded_type vector of strings, specifies the type of these barcodes
+ * @param points optional output vector of vertices of the found  barcode rectangle. Will be empty if not found.
+ * @return true if at least one valid barcode have been found
+</pre></div>
+</div>
 <dl class="myst field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>self</strong> – </p></li>
-<li><p><strong>img</strong> (<a class="reference internal" href="cv2.html#cv2.UMat" title="cv2.UMat"><em>cv2.UMat</em></a>) – grayscale or color (BGR) image containing barcode.</p></li>
-<li><p><strong>points</strong> (<a class="reference internal" href="cv2.html#cv2.UMat" title="cv2.UMat"><em>cv2.UMat</em></a><em> | </em><em>None</em>) – optional output vector of vertices of the found barcode rectangle. Will be empty if not found.</p></li>
-<li><p><strong>decoded_info</strong> – UTF8-encoded output vector of string(s) or empty vector of string if the codes cannot be decoded.</p></li>
-<li><p><strong>decoded_type</strong> – vector of strings, specifies the type of these barcodes</p></li>
+<li><p><strong>img</strong> (<a class="reference internal" href="cv2.html#cv2.UMat" title="cv2.UMat"><em>cv2.UMat</em></a>) – </p></li>
+<li><p><strong>points</strong> (<a class="reference internal" href="cv2.html#cv2.UMat" title="cv2.UMat"><em>cv2.UMat</em></a><em> | </em><em>None</em>) – </p></li>
 </ul>
 </dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p>true if at least one valid barcode have been found</p>
-</dd>
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.12)">tuple</a>[<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)">bool</a>, _typing.Sequence[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a>], _typing.Sequence[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a>], <a class="reference internal" href="cv2.html#cv2.UMat" title="cv2.UMat">cv2.UMat</a>]</p>
+<dt class="field-even">Return type<span class="colon">:</span></dt>
+<dd class="field-even"><p><a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#tuple" title="(in Python v3.12)">tuple</a>[<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)">bool</a>, _typing.Sequence[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a>], _typing.Sequence[<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)">str</a>], <a class="reference internal" href="cv2.html#cv2.UMat" title="cv2.UMat">cv2.UMat</a>]</p>
 </dd>
 </dl>
 </dd></dl>

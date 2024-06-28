@@ -199,108 +199,172 @@ None
 
 ````{py:method} detectMarkers(image[, corners[, ids[, rejectedImgPoints]]]) -> corners, ids, rejectedImgPoints
 
-Basic marker detection
+Basic marker detection     *
+     * @param image input image
+     * @param corners vector of detected marker corners. For each marker, its four corners
+     * are provided, (e.g std::vector<std::vector<cv::Point2f> > ). For N detected markers,
+     * the dimensions of this array is Nx4. The order of the corners is clockwise.
+     * @param ids vector of identifiers of the detected markers. The identifier is of type int
+     * (e.g. std::vector<int>). For N detected markers, the size of ids is also N.
+     * The identifiers have the same order than the markers in the imgPoints array.
+     * @param rejectedImgPoints contains the imgPoints of those squares whose inner code has not a
+     * correct codification. Useful for debugging purposes.
+     *
+     * Performs marker detection in the input image. Only markers included in the specific dictionary
+     * are searched. For each detected marker, it returns the 2D position of its corner in the image
+     * and its corresponding identifier.
+     * Note that this function does not perform pose estimation.
+     * @note The function does not correct lens distortion or takes it into account. It's recommended to undistort
+     * input image with corresponding camera model, if camera parameters are known
+     * @sa undistort, estimatePoseSingleMarkers,  estimatePoseBoard
 
 
-Performs marker detection in the input image. Only markers included in the specific dictionary are searched. For each detected marker, it returns the 2D position of its corner in the image and its corresponding identifier. Note that this function does not perform pose estimation. 
-```{note}
-The function does not correct lens distortion or takes it into account. It's recommended to undistortinput image with corresponding camera model, if camera parameters are known 
-```
-**See also:** undistort, estimatePoseSingleMarkers,  estimatePoseBoard
+
 
 
 :param self: 
 :type self: 
-:param image: input image
+:param image: 
 :type image: cv2.typing.MatLike
-:param corners: vector of detected marker corners. For each marker, its four cornersare provided, (e.g std::vector<std::vector<cv::Point2f> > ). For N detected markers, the dimensions of this array is Nx4. The order of the corners is clockwise. 
+:param corners: 
 :type corners: _typing.Sequence[cv2.typing.MatLike] | None
-:param ids: vector of identifiers of the detected markers. The identifier is of type int(e.g. std::vector<int>). For N detected markers, the size of ids is also N. The identifiers have the same order than the markers in the imgPoints array. 
+:param ids: 
 :type ids: cv2.typing.MatLike | None
-:param rejectedImgPoints: contains the imgPoints of those squares whose inner code has not acorrect codification. Useful for debugging purposes. 
+:param rejectedImgPoints: 
 :type rejectedImgPoints: _typing.Sequence[cv2.typing.MatLike] | None
 :rtype: tuple[_typing.Sequence[cv2.typing.MatLike], cv2.typing.MatLike, _typing.Sequence[cv2.typing.MatLike]]
 ````
 
 ````{py:method} detectMarkers(image[, corners[, ids[, rejectedImgPoints]]]) -> corners, ids, rejectedImgPoints
 
-Basic marker detection
+Basic marker detection     *
+     * @param image input image
+     * @param corners vector of detected marker corners. For each marker, its four corners
+     * are provided, (e.g std::vector<std::vector<cv::Point2f> > ). For N detected markers,
+     * the dimensions of this array is Nx4. The order of the corners is clockwise.
+     * @param ids vector of identifiers of the detected markers. The identifier is of type int
+     * (e.g. std::vector<int>). For N detected markers, the size of ids is also N.
+     * The identifiers have the same order than the markers in the imgPoints array.
+     * @param rejectedImgPoints contains the imgPoints of those squares whose inner code has not a
+     * correct codification. Useful for debugging purposes.
+     *
+     * Performs marker detection in the input image. Only markers included in the specific dictionary
+     * are searched. For each detected marker, it returns the 2D position of its corner in the image
+     * and its corresponding identifier.
+     * Note that this function does not perform pose estimation.
+     * @note The function does not correct lens distortion or takes it into account. It's recommended to undistort
+     * input image with corresponding camera model, if camera parameters are known
+     * @sa undistort, estimatePoseSingleMarkers,  estimatePoseBoard
 
 
-Performs marker detection in the input image. Only markers included in the specific dictionary are searched. For each detected marker, it returns the 2D position of its corner in the image and its corresponding identifier. Note that this function does not perform pose estimation. 
-```{note}
-The function does not correct lens distortion or takes it into account. It's recommended to undistortinput image with corresponding camera model, if camera parameters are known 
-```
-**See also:** undistort, estimatePoseSingleMarkers,  estimatePoseBoard
+
 
 
 :param self: 
 :type self: 
-:param image: input image
+:param image: 
 :type image: cv2.UMat
-:param corners: vector of detected marker corners. For each marker, its four cornersare provided, (e.g std::vector<std::vector<cv::Point2f> > ). For N detected markers, the dimensions of this array is Nx4. The order of the corners is clockwise. 
+:param corners: 
 :type corners: _typing.Sequence[cv2.UMat] | None
-:param ids: vector of identifiers of the detected markers. The identifier is of type int(e.g. std::vector<int>). For N detected markers, the size of ids is also N. The identifiers have the same order than the markers in the imgPoints array. 
+:param ids: 
 :type ids: cv2.UMat | None
-:param rejectedImgPoints: contains the imgPoints of those squares whose inner code has not acorrect codification. Useful for debugging purposes. 
+:param rejectedImgPoints: 
 :type rejectedImgPoints: _typing.Sequence[cv2.UMat] | None
 :rtype: tuple[_typing.Sequence[cv2.UMat], cv2.UMat, _typing.Sequence[cv2.UMat]]
 ````
 
 ````{py:method} refineDetectedMarkers(image, board, detectedCorners, detectedIds, rejectedCorners[, cameraMatrix[, distCoeffs[, recoveredIdxs]]]) -> detectedCorners, detectedIds, rejectedCorners, recoveredIdxs
 
-Refine not detected markers based on the already detected and the board layout
+Refine not detected markers based on the already detected and the board layout     *
+     * @param image input image
+     * @param board layout of markers in the board.
+     * @param detectedCorners vector of already detected marker corners.
+     * @param detectedIds vector of already detected marker identifiers.
+     * @param rejectedCorners vector of rejected candidates during the marker detection process.
+     * @param cameraMatrix optional input 3x3 floating-point camera matrix
+     * $A = \vecthreethree{f_x}{0}{c_x}{0}{f_y}{c_y}{0}{0}{1}$
+     * @param distCoeffs optional vector of distortion coefficients
+     * $(k_1, k_2, p_1, p_2[, k_3[, k_4, k_5, k_6],[s_1, s_2, s_3, s_4]])$ of 4, 5, 8 or 12 elements
+     * @param recoveredIdxs Optional array to returns the indexes of the recovered candidates in the
+     * original rejectedCorners array.
+     *
+     * This function tries to find markers that were not detected in the basic detecMarkers function.
+     * First, based on the current detected marker and the board layout, the function interpolates
+     * the position of the missing markers. Then it tries to find correspondence between the reprojected
+     * markers and the rejected candidates based on the minRepDistance and errorCorrectionRate parameters.
+     * If camera parameters and distortion coefficients are provided, missing markers are reprojected
+     * using projectPoint function. If not, missing marker projections are interpolated using global
+     * homography, and all the marker corners in the board must have the same Z coordinate.
 
 
-This function tries to find markers that were not detected in the basic detecMarkers function. First, based on the current detected marker and the board layout, the function interpolates the position of the missing markers. Then it tries to find correspondence between the reprojected markers and the rejected candidates based on the minRepDistance and errorCorrectionRate parameters. If camera parameters and distortion coefficients are provided, missing markers are reprojected using projectPoint function. If not, missing marker projections are interpolated using global homography, and all the marker corners in the board must have the same Z coordinate. 
+
 
 
 :param self: 
 :type self: 
-:param image: input image
+:param image: 
 :type image: cv2.typing.MatLike
-:param board: layout of markers in the board.
+:param board: 
 :type board: Board
-:param detectedCorners: vector of already detected marker corners.
+:param detectedCorners: 
 :type detectedCorners: _typing.Sequence[cv2.typing.MatLike]
-:param detectedIds: vector of already detected marker identifiers.
+:param detectedIds: 
 :type detectedIds: cv2.typing.MatLike
-:param rejectedCorners: vector of rejected candidates during the marker detection process.
+:param rejectedCorners: 
 :type rejectedCorners: _typing.Sequence[cv2.typing.MatLike]
-:param cameraMatrix: optional input 3x3 floating-point camera matrix$A = \vecthreethree{f_x}{0}{c_x}{0}{f_y}{c_y}{0}{0}{1}$ 
+:param cameraMatrix: 
 :type cameraMatrix: cv2.typing.MatLike | None
-:param distCoeffs: optional vector of distortion coefficients$(k_1, k_2, p_1, p_2[, k_3[, k_4, k_5, k_6],[s_1, s_2, s_3, s_4]])$ of 4, 5, 8 or 12 elements 
+:param distCoeffs: 
 :type distCoeffs: cv2.typing.MatLike | None
-:param recoveredIdxs: Optional array to returns the indexes of the recovered candidates in theoriginal rejectedCorners array. 
+:param recoveredIdxs: 
 :type recoveredIdxs: cv2.typing.MatLike | None
 :rtype: tuple[_typing.Sequence[cv2.typing.MatLike], cv2.typing.MatLike, _typing.Sequence[cv2.typing.MatLike], cv2.typing.MatLike]
 ````
 
 ````{py:method} refineDetectedMarkers(image, board, detectedCorners, detectedIds, rejectedCorners[, cameraMatrix[, distCoeffs[, recoveredIdxs]]]) -> detectedCorners, detectedIds, rejectedCorners, recoveredIdxs
 
-Refine not detected markers based on the already detected and the board layout
+Refine not detected markers based on the already detected and the board layout     *
+     * @param image input image
+     * @param board layout of markers in the board.
+     * @param detectedCorners vector of already detected marker corners.
+     * @param detectedIds vector of already detected marker identifiers.
+     * @param rejectedCorners vector of rejected candidates during the marker detection process.
+     * @param cameraMatrix optional input 3x3 floating-point camera matrix
+     * $A = \vecthreethree{f_x}{0}{c_x}{0}{f_y}{c_y}{0}{0}{1}$
+     * @param distCoeffs optional vector of distortion coefficients
+     * $(k_1, k_2, p_1, p_2[, k_3[, k_4, k_5, k_6],[s_1, s_2, s_3, s_4]])$ of 4, 5, 8 or 12 elements
+     * @param recoveredIdxs Optional array to returns the indexes of the recovered candidates in the
+     * original rejectedCorners array.
+     *
+     * This function tries to find markers that were not detected in the basic detecMarkers function.
+     * First, based on the current detected marker and the board layout, the function interpolates
+     * the position of the missing markers. Then it tries to find correspondence between the reprojected
+     * markers and the rejected candidates based on the minRepDistance and errorCorrectionRate parameters.
+     * If camera parameters and distortion coefficients are provided, missing markers are reprojected
+     * using projectPoint function. If not, missing marker projections are interpolated using global
+     * homography, and all the marker corners in the board must have the same Z coordinate.
 
 
-This function tries to find markers that were not detected in the basic detecMarkers function. First, based on the current detected marker and the board layout, the function interpolates the position of the missing markers. Then it tries to find correspondence between the reprojected markers and the rejected candidates based on the minRepDistance and errorCorrectionRate parameters. If camera parameters and distortion coefficients are provided, missing markers are reprojected using projectPoint function. If not, missing marker projections are interpolated using global homography, and all the marker corners in the board must have the same Z coordinate. 
+
 
 
 :param self: 
 :type self: 
-:param image: input image
+:param image: 
 :type image: cv2.UMat
-:param board: layout of markers in the board.
+:param board: 
 :type board: Board
-:param detectedCorners: vector of already detected marker corners.
+:param detectedCorners: 
 :type detectedCorners: _typing.Sequence[cv2.UMat]
-:param detectedIds: vector of already detected marker identifiers.
+:param detectedIds: 
 :type detectedIds: cv2.UMat
-:param rejectedCorners: vector of rejected candidates during the marker detection process.
+:param rejectedCorners: 
 :type rejectedCorners: _typing.Sequence[cv2.UMat]
-:param cameraMatrix: optional input 3x3 floating-point camera matrix$A = \vecthreethree{f_x}{0}{c_x}{0}{f_y}{c_y}{0}{0}{1}$ 
+:param cameraMatrix: 
 :type cameraMatrix: cv2.UMat | None
-:param distCoeffs: optional vector of distortion coefficients$(k_1, k_2, p_1, p_2[, k_3[, k_4, k_5, k_6],[s_1, s_2, s_3, s_4]])$ of 4, 5, 8 or 12 elements 
+:param distCoeffs: 
 :type distCoeffs: cv2.UMat | None
-:param recoveredIdxs: Optional array to returns the indexes of the recovered candidates in theoriginal rejectedCorners array. 
+:param recoveredIdxs: 
 :type recoveredIdxs: cv2.UMat | None
 :rtype: tuple[_typing.Sequence[cv2.UMat], cv2.UMat, _typing.Sequence[cv2.UMat], cv2.UMat]
 ````
@@ -309,7 +373,6 @@ This function tries to find markers that were not detected in the basic detecMar
 
 
 
-Initialize self.  See help(type(self)) for accurate signature. 
 
 
 :param self: 
@@ -437,7 +500,6 @@ Reads algorithm parameters from a file storage
 
 
 
-Initialize self.  See help(type(self)) for accurate signature. 
 
 
 :param self: 
@@ -456,7 +518,6 @@ Initialize self.  See help(type(self)) for accurate signature.
 
 
 
-Initialize self.  See help(type(self)) for accurate signature. 
 
 
 :param self: 
@@ -472,84 +533,128 @@ Initialize self.  See help(type(self)) for accurate signature.
 
 ````{py:method} matchImagePoints(detectedCorners, detectedIds[, objPoints[, imgPoints]]) -> objPoints, imgPoints
 
-Given a board configuration and a set of detected markers, returns the correspondingimage points and object points, can be used in solvePnP() 
+Given a board configuration and a set of detected markers, returns the corresponding     * image points and object points, can be used in solvePnP()
+     *
+     * @param detectedCorners List of detected marker corners of the board.
+     * For cv::Board and cv::GridBoard the method expects std::vector<std::vector<Point2f>> or std::vector<Mat> with Aruco marker corners.
+     * For cv::CharucoBoard the method expects std::vector<Point2f> or Mat with ChAruco corners (chess board corners matched with Aruco markers).
+     *
+     * @param detectedIds List of identifiers for each marker or charuco corner.
+     * For any Board class the method expects std::vector<int> or Mat.
+     *
+     * @param objPoints Vector of marker points in the board coordinate space.
+     * For any Board class the method expects std::vector<cv::Point3f> objectPoints or cv::Mat
+     *
+     * @param imgPoints Vector of marker points in the image coordinate space.
+     * For any Board class the method expects std::vector<cv::Point2f> objectPoints or cv::Mat
+     *
+     * @sa solvePnP
 
 
-**See also:** solvePnP
+
 
 
 :param self: 
 :type self: 
-:param detectedCorners: List of detected marker corners of the board.For cv::Board and cv::GridBoard the method expects std::vector<std::vector<Point2f>> or std::vector<Mat> with Aruco marker corners. For cv::CharucoBoard the method expects std::vector<Point2f> or Mat with ChAruco corners (chess board corners matched with Aruco markers). 
+:param detectedCorners: 
 :type detectedCorners: _typing.Sequence[cv2.typing.MatLike]
-:param detectedIds: List of identifiers for each marker or charuco corner.For any Board class the method expects std::vector<int> or Mat. 
+:param detectedIds: 
 :type detectedIds: cv2.typing.MatLike
-:param objPoints: Vector of marker points in the board coordinate space.For any Board class the method expects std::vector<cv::Point3f> objectPoints or cv::Mat 
+:param objPoints: 
 :type objPoints: cv2.typing.MatLike | None
-:param imgPoints: Vector of marker points in the image coordinate space.For any Board class the method expects std::vector<cv::Point2f> objectPoints or cv::Mat 
+:param imgPoints: 
 :type imgPoints: cv2.typing.MatLike | None
 :rtype: tuple[cv2.typing.MatLike, cv2.typing.MatLike]
 ````
 
 ````{py:method} matchImagePoints(detectedCorners, detectedIds[, objPoints[, imgPoints]]) -> objPoints, imgPoints
 
-Given a board configuration and a set of detected markers, returns the correspondingimage points and object points, can be used in solvePnP() 
+Given a board configuration and a set of detected markers, returns the corresponding     * image points and object points, can be used in solvePnP()
+     *
+     * @param detectedCorners List of detected marker corners of the board.
+     * For cv::Board and cv::GridBoard the method expects std::vector<std::vector<Point2f>> or std::vector<Mat> with Aruco marker corners.
+     * For cv::CharucoBoard the method expects std::vector<Point2f> or Mat with ChAruco corners (chess board corners matched with Aruco markers).
+     *
+     * @param detectedIds List of identifiers for each marker or charuco corner.
+     * For any Board class the method expects std::vector<int> or Mat.
+     *
+     * @param objPoints Vector of marker points in the board coordinate space.
+     * For any Board class the method expects std::vector<cv::Point3f> objectPoints or cv::Mat
+     *
+     * @param imgPoints Vector of marker points in the image coordinate space.
+     * For any Board class the method expects std::vector<cv::Point2f> objectPoints or cv::Mat
+     *
+     * @sa solvePnP
 
 
-**See also:** solvePnP
+
 
 
 :param self: 
 :type self: 
-:param detectedCorners: List of detected marker corners of the board.For cv::Board and cv::GridBoard the method expects std::vector<std::vector<Point2f>> or std::vector<Mat> with Aruco marker corners. For cv::CharucoBoard the method expects std::vector<Point2f> or Mat with ChAruco corners (chess board corners matched with Aruco markers). 
+:param detectedCorners: 
 :type detectedCorners: _typing.Sequence[cv2.UMat]
-:param detectedIds: List of identifiers for each marker or charuco corner.For any Board class the method expects std::vector<int> or Mat. 
+:param detectedIds: 
 :type detectedIds: cv2.UMat
-:param objPoints: Vector of marker points in the board coordinate space.For any Board class the method expects std::vector<cv::Point3f> objectPoints or cv::Mat 
+:param objPoints: 
 :type objPoints: cv2.UMat | None
-:param imgPoints: Vector of marker points in the image coordinate space.For any Board class the method expects std::vector<cv::Point2f> objectPoints or cv::Mat 
+:param imgPoints: 
 :type imgPoints: cv2.UMat | None
 :rtype: tuple[cv2.UMat, cv2.UMat]
 ````
 
 ````{py:method} generateImage(outSize[, img[, marginSize[, borderBits]]]) -> img
 
-Draw a planar board
+Draw a planar board     *
+     * @param outSize size of the output image in pixels.
+     * @param img output image with the board. The size of this image will be outSize
+     * and the board will be on the center, keeping the board proportions.
+     * @param marginSize minimum margins (in pixels) of the board in the output image
+     * @param borderBits width of the marker borders.
+     *
+     * This function return the image of the board, ready to be printed.
 
 
-This function return the image of the board, ready to be printed. 
+
 
 
 :param self: 
 :type self: 
-:param outSize: size of the output image in pixels.
+:param outSize: 
 :type outSize: cv2.typing.Size
-:param img: output image with the board. The size of this image will be outSizeand the board will be on the center, keeping the board proportions. 
+:param img: 
 :type img: cv2.typing.MatLike | None
-:param marginSize: minimum margins (in pixels) of the board in the output image
+:param marginSize: 
 :type marginSize: int
-:param borderBits: width of the marker borders.
+:param borderBits: 
 :type borderBits: int
 :rtype: cv2.typing.MatLike
 ````
 
 ````{py:method} generateImage(outSize[, img[, marginSize[, borderBits]]]) -> img
 
-Draw a planar board
+Draw a planar board     *
+     * @param outSize size of the output image in pixels.
+     * @param img output image with the board. The size of this image will be outSize
+     * and the board will be on the center, keeping the board proportions.
+     * @param marginSize minimum margins (in pixels) of the board in the output image
+     * @param borderBits width of the marker borders.
+     *
+     * This function return the image of the board, ready to be printed.
 
 
-This function return the image of the board, ready to be printed. 
+
 
 
 :param self: 
 :type self: 
-:param outSize: size of the output image in pixels.
+:param outSize: 
 :type outSize: cv2.typing.Size
-:param img: output image with the board. The size of this image will be outSizeand the board will be on the center, keeping the board proportions. 
+:param img: 
 :type img: cv2.UMat | None
-:param marginSize: minimum margins (in pixels) of the board in the output image
+:param marginSize: 
 :type marginSize: int
-:param borderBits: width of the marker borders.
+:param borderBits: 
 :type borderBits: int
 :rtype: cv2.UMat
 ````
@@ -566,11 +671,17 @@ return the Dictionary of markers employed for this board
 ````
 
 ````{py:method} getObjPoints() -> retval
-return array of object points of all the marker corners in the board.
+return array of object points of all the marker corners in the board.     *
+     * Each marker include its 4 corners in this order:
+     * -   objPoints[i][0] - left-top point of i-th marker
+     * -   objPoints[i][1] - right-top point of i-th marker
+     * -   objPoints[i][2] - right-bottom point of i-th marker
+     * -   objPoints[i][3] - left-bottom point of i-th marker
+     *
+     * Markers are placed in a certain order - row by row, left to right in every row. For M markers, the size is Mx4.
 
 
-Each marker include its 4 corners in this order: -   objPoints[i][0] - left-top point of i-th marker -   objPoints[i][1] - right-top point of i-th marker -   objPoints[i][2] - right-bottom point of i-th marker -   objPoints[i][3] - left-bottom point of i-th marker 
-Markers are placed in a certain order - row by row, left to right in every row. For M markers, the size is Mx4. 
+
 
 
 :param self: 
@@ -579,14 +690,14 @@ Markers are placed in a certain order - row by row, left to right in every row. 
 ````
 
 ````{py:method} getIds() -> retval
-vector of the identifiers of the markers in the board (should be the same size as objPoints)
+vector of the identifiers of the markers in the board (should be the same size as objPoints)     * @return vector of the identifiers of the markers
+
 
 
 
 
 :param self: 
 :type self: 
-:return: vector of the identifiers of the markers
 :rtype: _typing.Sequence[int]
 ````
 
@@ -615,7 +726,6 @@ get coordinate of the bottom right corner of the board, is set when calling the 
 
 
 
-Initialize self.  See help(type(self)) for accurate signature. 
 
 
 :param self: 
@@ -638,7 +748,6 @@ Initialize self.  See help(type(self)) for accurate signature.
 
 
 
-Initialize self.  See help(type(self)) for accurate signature. 
 
 
 :param self: 
@@ -658,42 +767,61 @@ Initialize self.  See help(type(self)) for accurate signature.
 
 ````{py:method} checkCharucoCornersCollinear(charucoIds) -> retval
 
-check whether the ChArUco markers are collinear
+check whether the ChArUco markers are collinear     *
+     * @param charucoIds list of identifiers for each corner in charucoCorners per frame.
+     * @return bool value, 1 (true) if detected corners form a line, 0 (false) if they do not.
+     * solvePnP, calibration functions will fail if the corners are collinear (true).
+     *
+     * The number of ids in charucoIDs should be <= the number of chessboard corners in the board.
+     * This functions checks whether the charuco corners are on a straight line (returns true, if so), or not (false).
+     * Axis parallel, as well as diagonal and other straight lines detected.  Degenerate cases:
+     * for number of charucoIDs <= 2,the function returns true.
 
 
-The number of ids in charucoIDs should be <= the number of chessboard corners in the board. This functions checks whether the charuco corners are on a straight line (returns true, if so), or not (false). Axis parallel, as well as diagonal and other straight lines detected.  Degenerate cases: for number of charucoIDs <= 2,the function returns true. 
+
 
 
 :param self: 
 :type self: 
-:param charucoIds: list of identifiers for each corner in charucoCorners per frame.
+:param charucoIds: 
 :type charucoIds: cv2.typing.MatLike
-:return: bool value, 1 (true) if detected corners form a line, 0 (false) if they do not.solvePnP, calibration functions will fail if the corners are collinear (true). 
 :rtype: bool
 ````
 
 ````{py:method} checkCharucoCornersCollinear(charucoIds) -> retval
 
-check whether the ChArUco markers are collinear
+check whether the ChArUco markers are collinear     *
+     * @param charucoIds list of identifiers for each corner in charucoCorners per frame.
+     * @return bool value, 1 (true) if detected corners form a line, 0 (false) if they do not.
+     * solvePnP, calibration functions will fail if the corners are collinear (true).
+     *
+     * The number of ids in charucoIDs should be <= the number of chessboard corners in the board.
+     * This functions checks whether the charuco corners are on a straight line (returns true, if so), or not (false).
+     * Axis parallel, as well as diagonal and other straight lines detected.  Degenerate cases:
+     * for number of charucoIDs <= 2,the function returns true.
 
 
-The number of ids in charucoIDs should be <= the number of chessboard corners in the board. This functions checks whether the charuco corners are on a straight line (returns true, if so), or not (false). Axis parallel, as well as diagonal and other straight lines detected.  Degenerate cases: for number of charucoIDs <= 2,the function returns true. 
+
 
 
 :param self: 
 :type self: 
-:param charucoIds: list of identifiers for each corner in charucoCorners per frame.
+:param charucoIds: 
 :type charucoIds: cv2.UMat
-:return: bool value, 1 (true) if detected corners form a line, 0 (false) if they do not.solvePnP, calibration functions will fail if the corners are collinear (true). 
 :rtype: bool
 ````
 
 ````{py:method} setLegacyPattern(legacyPattern) -> None
-set legacy chessboard pattern.
+set legacy chessboard pattern.     *
+     * Legacy setting creates chessboard patterns starting with a white box in the upper left corner
+     * if there is an even row count of chessboard boxes, otherwise it starts with a black box.
+     * This setting ensures compatibility to patterns created with OpenCV versions prior OpenCV 4.6.0.
+     * See https://github.com/opencv/opencv/issues/23152.
+     *
+     * Default value: false.
 
 
-Legacy setting creates chessboard patterns starting with a white box in the upper left corner if there is an even row count of chessboard boxes, otherwise it starts with a black box. This setting ensures compatibility to patterns created with OpenCV versions prior OpenCV 4.6.0. See https://github.com/opencv/opencv/issues/23152. 
-Default value: false. 
+
 
 
 :param self: 
@@ -769,98 +897,168 @@ get CharucoBoard::chessboardCorners
 
 ````{py:method} detectBoard(image[, charucoCorners[, charucoIds[, markerCorners[, markerIds]]]]) -> charucoCorners, charucoIds, markerCorners, markerIds
 
-detect aruco markers and interpolate position of ChArUco board corners
 
 
-This function receives the detected markers and returns the 2D position of the chessboard corners from a ChArUco board using the detected Aruco markers. 
-If markerCorners and markerCorners are empty, the detectMarkers() will run and detect aruco markers and ids. 
-If camera parameters are provided, the process is based in an approximated pose estimation, else it is based on local homography. Only visible corners are returned. For each corner, its corresponding identifier is also returned in charucoIds. 
-**See also:** findChessboardCorners
+
+* @brief detect aruco markers and interpolate position of ChArUco board corners
+     * @param image input image necesary for corner refinement. Note that markers are not detected and
+     * should be sent in corners and ids parameters.
+     * @param charucoCorners interpolated chessboard corners.
+     * @param charucoIds interpolated chessboard corners identifiers.
+     * @param markerCorners vector of already detected markers corners. For each marker, its four
+     * corners are provided, (e.g std::vector<std::vector<cv::Point2f> > ). For N detected markers, the
+     * dimensions of this array should be Nx4. The order of the corners should be clockwise.
+     * If markerCorners and markerCorners are empty, the function detect aruco markers and ids.
+     * @param markerIds list of identifiers for each marker in corners.
+     *  If markerCorners and markerCorners are empty, the function detect aruco markers and ids.
+     *
+     * This function receives the detected markers and returns the 2D position of the chessboard corners
+     * from a ChArUco board using the detected Aruco markers.
+     *
+     * If markerCorners and markerCorners are empty, the detectMarkers() will run and detect aruco markers and ids.
+     *
+     * If camera parameters are provided, the process is based in an approximated pose estimation, else it is based on local homography.
+     * Only visible corners are returned. For each corner, its corresponding identifier is also returned in charucoIds.
+     * @sa findChessboardCorners
+
 
 
 :param self: 
 :type self: 
-:param image: input image necesary for corner refinement. Note that markers are not detected andshould be sent in corners and ids parameters. 
+:param image: 
 :type image: cv2.typing.MatLike
-:param charucoCorners: interpolated chessboard corners.
+:param charucoCorners: 
 :type charucoCorners: cv2.typing.MatLike | None
-:param charucoIds: interpolated chessboard corners identifiers.
+:param charucoIds: 
 :type charucoIds: cv2.typing.MatLike | None
-:param markerCorners: vector of already detected markers corners. For each marker, its fourcorners are provided, (e.g std::vector<std::vector<cv::Point2f> > ). For N detected markers, the dimensions of this array should be Nx4. The order of the corners should be clockwise. If markerCorners and markerCorners are empty, the function detect aruco markers and ids. 
+:param markerCorners: 
 :type markerCorners: _typing.Sequence[cv2.typing.MatLike] | None
-:param markerIds: list of identifiers for each marker in corners.If markerCorners and markerCorners are empty, the function detect aruco markers and ids. 
+:param markerIds: 
 :type markerIds: cv2.typing.MatLike | None
 :rtype: tuple[cv2.typing.MatLike, cv2.typing.MatLike, _typing.Sequence[cv2.typing.MatLike], cv2.typing.MatLike]
 ````
 
 ````{py:method} detectBoard(image[, charucoCorners[, charucoIds[, markerCorners[, markerIds]]]]) -> charucoCorners, charucoIds, markerCorners, markerIds
 
-detect aruco markers and interpolate position of ChArUco board corners
 
 
-This function receives the detected markers and returns the 2D position of the chessboard corners from a ChArUco board using the detected Aruco markers. 
-If markerCorners and markerCorners are empty, the detectMarkers() will run and detect aruco markers and ids. 
-If camera parameters are provided, the process is based in an approximated pose estimation, else it is based on local homography. Only visible corners are returned. For each corner, its corresponding identifier is also returned in charucoIds. 
-**See also:** findChessboardCorners
+
+* @brief detect aruco markers and interpolate position of ChArUco board corners
+     * @param image input image necesary for corner refinement. Note that markers are not detected and
+     * should be sent in corners and ids parameters.
+     * @param charucoCorners interpolated chessboard corners.
+     * @param charucoIds interpolated chessboard corners identifiers.
+     * @param markerCorners vector of already detected markers corners. For each marker, its four
+     * corners are provided, (e.g std::vector<std::vector<cv::Point2f> > ). For N detected markers, the
+     * dimensions of this array should be Nx4. The order of the corners should be clockwise.
+     * If markerCorners and markerCorners are empty, the function detect aruco markers and ids.
+     * @param markerIds list of identifiers for each marker in corners.
+     *  If markerCorners and markerCorners are empty, the function detect aruco markers and ids.
+     *
+     * This function receives the detected markers and returns the 2D position of the chessboard corners
+     * from a ChArUco board using the detected Aruco markers.
+     *
+     * If markerCorners and markerCorners are empty, the detectMarkers() will run and detect aruco markers and ids.
+     *
+     * If camera parameters are provided, the process is based in an approximated pose estimation, else it is based on local homography.
+     * Only visible corners are returned. For each corner, its corresponding identifier is also returned in charucoIds.
+     * @sa findChessboardCorners
+
 
 
 :param self: 
 :type self: 
-:param image: input image necesary for corner refinement. Note that markers are not detected andshould be sent in corners and ids parameters. 
+:param image: 
 :type image: cv2.UMat
-:param charucoCorners: interpolated chessboard corners.
+:param charucoCorners: 
 :type charucoCorners: cv2.UMat | None
-:param charucoIds: interpolated chessboard corners identifiers.
+:param charucoIds: 
 :type charucoIds: cv2.UMat | None
-:param markerCorners: vector of already detected markers corners. For each marker, its fourcorners are provided, (e.g std::vector<std::vector<cv::Point2f> > ). For N detected markers, the dimensions of this array should be Nx4. The order of the corners should be clockwise. If markerCorners and markerCorners are empty, the function detect aruco markers and ids. 
+:param markerCorners: 
 :type markerCorners: _typing.Sequence[cv2.UMat] | None
-:param markerIds: list of identifiers for each marker in corners.If markerCorners and markerCorners are empty, the function detect aruco markers and ids. 
+:param markerIds: 
 :type markerIds: cv2.UMat | None
 :rtype: tuple[cv2.UMat, cv2.UMat, _typing.Sequence[cv2.UMat], cv2.UMat]
 ````
 
 ````{py:method} detectDiamonds(image[, diamondCorners[, diamondIds[, markerCorners[, markerIds]]]]) -> diamondCorners, diamondIds, markerCorners, markerIds
 
-Detect ChArUco Diamond markers
 
 
-This function detects Diamond markers from the previous detected ArUco markers. The diamonds are returned in the diamondCorners and diamondIds parameters. If camera calibration parameters are provided, the diamond search is based on reprojection. If not, diamond search is based on homography. Homography is faster than reprojection, but less accurate. 
+
+* @brief Detect ChArUco Diamond markers
+     *
+     * @param image input image necessary for corner subpixel.
+     * @param diamondCorners output list of detected diamond corners (4 corners per diamond). The order
+     * is the same than in marker corners: top left, top right, bottom right and bottom left. Similar
+     * format than the corners returned by detectMarkers (e.g std::vector<std::vector<cv::Point2f> > ).
+     * @param diamondIds ids of the diamonds in diamondCorners. The id of each diamond is in fact of
+     * type Vec4i, so each diamond has 4 ids, which are the ids of the aruco markers composing the
+     * diamond.
+     * @param markerCorners list of detected marker corners from detectMarkers function.
+     * If markerCorners and markerCorners are empty, the function detect aruco markers and ids.
+     * @param markerIds list of marker ids in markerCorners.
+     * If markerCorners and markerCorners are empty, the function detect aruco markers and ids.
+     *
+     * This function detects Diamond markers from the previous detected ArUco markers. The diamonds
+     * are returned in the diamondCorners and diamondIds parameters. If camera calibration parameters
+     * are provided, the diamond search is based on reprojection. If not, diamond search is based on
+     * homography. Homography is faster than reprojection, but less accurate.
+
 
 
 :param self: 
 :type self: 
-:param image: input image necessary for corner subpixel.
+:param image: 
 :type image: cv2.typing.MatLike
-:param diamondCorners: output list of detected diamond corners (4 corners per diamond). The orderis the same than in marker corners: top left, top right, bottom right and bottom left. Similar format than the corners returned by detectMarkers (e.g std::vector<std::vector<cv::Point2f> > ). 
+:param diamondCorners: 
 :type diamondCorners: _typing.Sequence[cv2.typing.MatLike] | None
-:param diamondIds: ids of the diamonds in diamondCorners. The id of each diamond is in fact oftype Vec4i, so each diamond has 4 ids, which are the ids of the aruco markers composing the diamond. 
+:param diamondIds: 
 :type diamondIds: cv2.typing.MatLike | None
-:param markerCorners: list of detected marker corners from detectMarkers function.If markerCorners and markerCorners are empty, the function detect aruco markers and ids. 
+:param markerCorners: 
 :type markerCorners: _typing.Sequence[cv2.typing.MatLike] | None
-:param markerIds: list of marker ids in markerCorners.If markerCorners and markerCorners are empty, the function detect aruco markers and ids. 
+:param markerIds: 
 :type markerIds: cv2.typing.MatLike | None
 :rtype: tuple[_typing.Sequence[cv2.typing.MatLike], cv2.typing.MatLike, _typing.Sequence[cv2.typing.MatLike], cv2.typing.MatLike]
 ````
 
 ````{py:method} detectDiamonds(image[, diamondCorners[, diamondIds[, markerCorners[, markerIds]]]]) -> diamondCorners, diamondIds, markerCorners, markerIds
 
-Detect ChArUco Diamond markers
 
 
-This function detects Diamond markers from the previous detected ArUco markers. The diamonds are returned in the diamondCorners and diamondIds parameters. If camera calibration parameters are provided, the diamond search is based on reprojection. If not, diamond search is based on homography. Homography is faster than reprojection, but less accurate. 
+
+* @brief Detect ChArUco Diamond markers
+     *
+     * @param image input image necessary for corner subpixel.
+     * @param diamondCorners output list of detected diamond corners (4 corners per diamond). The order
+     * is the same than in marker corners: top left, top right, bottom right and bottom left. Similar
+     * format than the corners returned by detectMarkers (e.g std::vector<std::vector<cv::Point2f> > ).
+     * @param diamondIds ids of the diamonds in diamondCorners. The id of each diamond is in fact of
+     * type Vec4i, so each diamond has 4 ids, which are the ids of the aruco markers composing the
+     * diamond.
+     * @param markerCorners list of detected marker corners from detectMarkers function.
+     * If markerCorners and markerCorners are empty, the function detect aruco markers and ids.
+     * @param markerIds list of marker ids in markerCorners.
+     * If markerCorners and markerCorners are empty, the function detect aruco markers and ids.
+     *
+     * This function detects Diamond markers from the previous detected ArUco markers. The diamonds
+     * are returned in the diamondCorners and diamondIds parameters. If camera calibration parameters
+     * are provided, the diamond search is based on reprojection. If not, diamond search is based on
+     * homography. Homography is faster than reprojection, but less accurate.
+
 
 
 :param self: 
 :type self: 
-:param image: input image necessary for corner subpixel.
+:param image: 
 :type image: cv2.UMat
-:param diamondCorners: output list of detected diamond corners (4 corners per diamond). The orderis the same than in marker corners: top left, top right, bottom right and bottom left. Similar format than the corners returned by detectMarkers (e.g std::vector<std::vector<cv::Point2f> > ). 
+:param diamondCorners: 
 :type diamondCorners: _typing.Sequence[cv2.UMat] | None
-:param diamondIds: ids of the diamonds in diamondCorners. The id of each diamond is in fact oftype Vec4i, so each diamond has 4 ids, which are the ids of the aruco markers composing the diamond. 
+:param diamondIds: 
 :type diamondIds: cv2.UMat | None
-:param markerCorners: list of detected marker corners from detectMarkers function.If markerCorners and markerCorners are empty, the function detect aruco markers and ids. 
+:param markerCorners: 
 :type markerCorners: _typing.Sequence[cv2.UMat] | None
-:param markerIds: list of marker ids in markerCorners.If markerCorners and markerCorners are empty, the function detect aruco markers and ids. 
+:param markerIds: 
 :type markerIds: cv2.UMat | None
 :rtype: tuple[_typing.Sequence[cv2.UMat], cv2.UMat, _typing.Sequence[cv2.UMat], cv2.UMat]
 ````
@@ -869,7 +1067,6 @@ This function detects Diamond markers from the previous detected ArUco markers. 
 
 
 
-Initialize self.  See help(type(self)) for accurate signature. 
 
 
 :param self: 
@@ -994,7 +1191,6 @@ Initialize self.  See help(type(self)) for accurate signature.
 
 
 
-Initialize self.  See help(type(self)) for accurate signature. 
 
 
 :param self: 
@@ -1031,7 +1227,6 @@ Initialize self.  See help(type(self)) for accurate signature.
 
 
 
-Initialize self.  See help(type(self)) for accurate signature. 
 
 
 :param self: 
@@ -1217,7 +1412,6 @@ Write a set of DetectorParameters to FileStorage
 
 
 
-Initialize self.  See help(type(self)) for accurate signature. 
 
 
 :param self: 
@@ -1230,7 +1424,6 @@ Initialize self.  See help(type(self)) for accurate signature.
 
 
 
-Initialize self.  See help(type(self)) for accurate signature. 
 
 
 :param self: 
@@ -1246,10 +1439,11 @@ Initialize self.  See help(type(self)) for accurate signature.
 
 ````{py:method} getDistanceToId(bits, id[, allRotations]) -> retval
 
-Returns Hamming distance of the input bits to the specific id.
+Returns Hamming distance of the input bits to the specific id.     *
+     * If `allRotations` flag is set, the four posible marker rotations are considered
 
 
-If `allRotations` flag is set, the four posible marker rotations are considered 
+
 
 
 :param self: 
@@ -1265,10 +1459,11 @@ If `allRotations` flag is set, the four posible marker rotations are considered
 
 ````{py:method} getDistanceToId(bits, id[, allRotations]) -> retval
 
-Returns Hamming distance of the input bits to the specific id.
+Returns Hamming distance of the input bits to the specific id.     *
+     * If `allRotations` flag is set, the four posible marker rotations are considered
 
 
-If `allRotations` flag is set, the four posible marker rotations are considered 
+
 
 
 :param self: 
@@ -1323,10 +1518,17 @@ Generate a canonical marker image
 ````
 
 ````{py:method} readDictionary(fn) -> retval
-Read a new dictionary from FileNode.
+Read a new dictionary from FileNode.     *
+     * Dictionary example in YAML format:\n
+     * nmarkers: 35\n
+     * markersize: 6\n
+     * maxCorrectionBits: 5\n
+     * marker_0: "101011111011111001001001101100000000"\n
+     * ...\n
+     * marker_34: "011111010000111011111110110101100101"
 
 
-Dictionary example in YAML format:\n nmarkers: 35\n markersize: 6\n maxCorrectionBits: 5\n marker_0: "101011111011111001001001101100000000"\n \n marker_34: "011111010000111011111110110101100101" 
+
 
 
 :param self: 
@@ -1352,10 +1554,11 @@ Write a dictionary to FileStorage, format is the same as in readDictionary().
 ````
 
 ````{py:method} identify(onlyBits, maxCorrectionRate) -> retval, idx, rotation
-Given a matrix of bits. Returns whether if marker is identified or not.
+Given a matrix of bits. Returns whether if marker is identified or not.     *
+     * Returns reference to the marker id in the dictionary (if any) and its rotation.
 
 
-Returns reference to the marker id in the dictionary (if any) and its rotation. 
+
 
 
 :param self: 
@@ -1419,7 +1622,6 @@ Transform list of bytes to matrix of bits
 
 
 
-Initialize self.  See help(type(self)) for accurate signature. 
 
 
 :param self: 
@@ -1442,7 +1644,6 @@ Initialize self.  See help(type(self)) for accurate signature.
 
 
 
-Initialize self.  See help(type(self)) for accurate signature. 
 
 
 :param self: 
@@ -1506,7 +1707,6 @@ Initialize self.  See help(type(self)) for accurate signature.
 
 
 
-Initialize self.  See help(type(self)) for accurate signature. 
 
 
 :param self: 
@@ -1590,19 +1790,28 @@ Transform matrix of bits to list of bytes with 4 marker rotations
 
 ````{py:function} drawDetectedCornersCharuco(image, charucoCorners[, charucoIds[, cornerColor]]) -> image
 
-Draws a set of Charuco corners
 
 
-This function draws a set of detected Charuco corners. If identifiers vector is provided, it also draws the id of each corner. 
+
+* @brief Draws a set of Charuco corners
+ * @param image input/output image. It must have 1 or 3 channels. The number of channels is not
+ * altered.
+ * @param charucoCorners vector of detected charuco corners
+ * @param charucoIds list of identifiers for each corner in charucoCorners
+ * @param cornerColor color of the square surrounding each corner
+ *
+ * This function draws a set of detected Charuco corners. If identifiers vector is provided, it also
+ * draws the id of each corner.
 
 
-:param image: input/output image. It must have 1 or 3 channels. The number of channels is notaltered. 
+
+:param image: 
 :type image: cv2.typing.MatLike
-:param charucoCorners: vector of detected charuco corners
+:param charucoCorners: 
 :type charucoCorners: cv2.typing.MatLike
-:param charucoIds: list of identifiers for each corner in charucoCorners
+:param charucoIds: 
 :type charucoIds: cv2.typing.MatLike | None
-:param cornerColor: color of the square surrounding each corner
+:param cornerColor: 
 :type cornerColor: cv2.typing.Scalar
 :rtype: cv2.typing.MatLike
 ````
@@ -1610,19 +1819,35 @@ This function draws a set of detected Charuco corners. If identifiers vector is 
 
 ````{py:function} drawDetectedDiamonds(image, diamondCorners[, diamondIds[, borderColor]]) -> image
 
-Draw a set of detected ChArUco Diamond markers
 
 
-Given an array of detected diamonds, this functions draws them in the image. The marker borders are painted and the markers identifiers if provided. Useful for debugging purposes. 
+
+* @brief Draw a set of detected ChArUco Diamond markers
+ *
+ * @param image input/output image. It must have 1 or 3 channels. The number of channels is not
+ * altered.
+ * @param diamondCorners positions of diamond corners in the same format returned by
+ * detectCharucoDiamond(). (e.g std::vector<std::vector<cv::Point2f> > ). For N detected markers,
+ * the dimensions of this array should be Nx4. The order of the corners should be clockwise.
+ * @param diamondIds vector of identifiers for diamonds in diamondCorners, in the same format
+ * returned by detectCharucoDiamond() (e.g. std::vector<Vec4i>).
+ * Optional, if not provided, ids are not painted.
+ * @param borderColor color of marker borders. Rest of colors (text color and first corner color)
+ * are calculated based on this one.
+ *
+ * Given an array of detected diamonds, this functions draws them in the image. The marker borders
+ * are painted and the markers identifiers if provided.
+ * Useful for debugging purposes.
 
 
-:param image: input/output image. It must have 1 or 3 channels. The number of channels is notaltered. 
+
+:param image: 
 :type image: cv2.typing.MatLike
-:param diamondCorners: positions of diamond corners in the same format returned bydetectCharucoDiamond(). (e.g std::vector<std::vector<cv::Point2f> > ). For N detected markers, the dimensions of this array should be Nx4. The order of the corners should be clockwise. 
+:param diamondCorners: 
 :type diamondCorners: _typing.Sequence[cv2.typing.MatLike]
-:param diamondIds: vector of identifiers for diamonds in diamondCorners, in the same formatreturned by detectCharucoDiamond() (e.g. std::vector<Vec4i>). Optional, if not provided, ids are not painted. 
+:param diamondIds: 
 :type diamondIds: cv2.typing.MatLike | None
-:param borderColor: color of marker borders. Rest of colors (text color and first corner color)are calculated based on this one. 
+:param borderColor: 
 :type borderColor: cv2.typing.Scalar
 :rtype: cv2.typing.MatLike
 ````
@@ -1630,19 +1855,31 @@ Given an array of detected diamonds, this functions draws them in the image. The
 
 ````{py:function} drawDetectedMarkers(image, corners[, ids[, borderColor]]) -> image
 
-Draw detected markers in image
+Draw detected markers in image *
+ * @param image input/output image. It must have 1 or 3 channels. The number of channels is not altered.
+ * @param corners positions of marker corners on input image.
+ * (e.g std::vector<std::vector<cv::Point2f> > ). For N detected markers, the dimensions of
+ * this array should be Nx4. The order of the corners should be clockwise.
+ * @param ids vector of identifiers for markers in markersCorners .
+ * Optional, if not provided, ids are not painted.
+ * @param borderColor color of marker borders. Rest of colors (text color and first corner color)
+ * are calculated based on this one to improve visualization.
+ *
+ * Given an array of detected marker corners and its corresponding ids, this functions draws
+ * the markers in the image. The marker borders are painted and the markers identifiers if provided.
+ * Useful for debugging purposes.
 
 
-Given an array of detected marker corners and its corresponding ids, this functions draws the markers in the image. The marker borders are painted and the markers identifiers if provided. Useful for debugging purposes. 
 
 
-:param image: input/output image. It must have 1 or 3 channels. The number of channels is not altered.
+
+:param image: 
 :type image: cv2.typing.MatLike
-:param corners: positions of marker corners on input image.(e.g std::vector<std::vector<cv::Point2f> > ). For N detected markers, the dimensions of this array should be Nx4. The order of the corners should be clockwise. 
+:param corners: 
 :type corners: _typing.Sequence[cv2.typing.MatLike]
-:param ids: vector of identifiers for markers in markersCorners .Optional, if not provided, ids are not painted. 
+:param ids: 
 :type ids: cv2.typing.MatLike | None
-:param borderColor: color of marker borders. Rest of colors (text color and first corner color)are calculated based on this one to improve visualization. 
+:param borderColor: 
 :type borderColor: cv2.typing.Scalar
 :rtype: cv2.typing.MatLike
 ````
@@ -1650,19 +1887,28 @@ Given an array of detected marker corners and its corresponding ids, this functi
 
 ````{py:function} extendDictionary(nMarkers, markerSize[, baseDictionary[, randomSeed]]) -> retval
 
-Extend base dictionary by new nMarkers
+Extend base dictionary by new nMarkers  *
+  * @param nMarkers number of markers in the dictionary
+  * @param markerSize number of bits per dimension of each markers
+  * @param baseDictionary Include the markers in this dictionary at the beginning (optional)
+  * @param randomSeed a user supplied seed for theRNG()
+  *
+  * This function creates a new dictionary composed by nMarkers markers and each markers composed
+  * by markerSize x markerSize bits. If baseDictionary is provided, its markers are directly
+  * included and the rest are generated based on them. If the size of baseDictionary is higher
+  * than nMarkers, only the first nMarkers in baseDictionary are taken and no new marker is added.
 
 
-This function creates a new dictionary composed by nMarkers markers and each markers composed by markerSize x markerSize bits. If baseDictionary is provided, its markers are directly included and the rest are generated based on them. If the size of baseDictionary is higher than nMarkers, only the first nMarkers in baseDictionary are taken and no new marker is added. 
 
 
-:param nMarkers: number of markers in the dictionary
+
+:param nMarkers: 
 :type nMarkers: int
-:param markerSize: number of bits per dimension of each markers
+:param markerSize: 
 :type markerSize: int
-:param baseDictionary: Include the markers in this dictionary at the beginning (optional)
+:param baseDictionary: 
 :type baseDictionary: Dictionary
-:param randomSeed: a user supplied seed for theRNG()
+:param randomSeed: 
 :type randomSeed: int
 :rtype: Dictionary
 ````
@@ -1670,21 +1916,28 @@ This function creates a new dictionary composed by nMarkers markers and each mar
 
 ````{py:function} generateImageMarker(dictionary, id, sidePixels[, img[, borderBits]]) -> img
 
-Generate a canonical marker image
+Generate a canonical marker image *
+ * @param dictionary dictionary of markers indicating the type of markers
+ * @param id identifier of the marker that will be returned. It has to be a valid id in the specified dictionary.
+ * @param sidePixels size of the image in pixels
+ * @param img output image with the marker
+ * @param borderBits width of the marker border.
+ *
+ * This function returns a marker image in its canonical form (i.e. ready to be printed)
 
 
-This function returns a marker image in its canonical form (i.e. ready to be printed) 
 
 
-:param dictionary: dictionary of markers indicating the type of markers
+
+:param dictionary: 
 :type dictionary: Dictionary
-:param id: identifier of the marker that will be returned. It has to be a valid id in the specified dictionary.
+:param id: 
 :type id: int
-:param sidePixels: size of the image in pixels
+:param sidePixels: 
 :type sidePixels: int
-:param img: output image with the marker
+:param img: 
 :type img: cv2.typing.MatLike | None
-:param borderBits: width of the marker border.
+:param borderBits: 
 :type borderBits: int
 :rtype: cv2.typing.MatLike
 ````
