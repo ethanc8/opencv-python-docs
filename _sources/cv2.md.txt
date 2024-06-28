@@ -15799,7 +15799,7 @@ This method computes overlap for pair of keypoints. Overlap is the ratio between
 Performs a look-up table transform of an array.
 
 
-The function LUT fills the output array with values from the look-up table. Indices of the entries are taken from the input array. That is, the function processes each element of src as follows: \f[\texttt{dst} (I)  \leftarrow \texttt{lut(src(I) + d)}\f] where \f[d =  \fork{0}{if \(\texttt{src}\) has depth \(\texttt{CV_8U}\)}{128}{if \(\texttt{src}\) has depth \(\texttt{CV_8S}\)}\f] 
+The function LUT fills the output array with values from the look-up table. Indices of the entries are taken from the input array. That is, the function processes each element of src as follows: $\texttt{dst} (I)  \leftarrow \texttt{lut(src(I) + d)}$ where $d =  \fork{0}{if \(\texttt{src}\) has depth \(\texttt{CV_8U}\)}{128}{if \(\texttt{src}\) has depth \(\texttt{CV_8S}\)}$ 
 **See also:**  convertScaleAbs, Mat::convertTo
 
 
@@ -15819,9 +15819,9 @@ Calculates the Laplacian of an image.
 
 
 The function calculates the Laplacian of the source image by adding up the second x and y derivatives calculated using the Sobel operator: 
-\f[\texttt{dst} =  \Delta \texttt{src} =  \frac{\partial^2 \texttt{src}}{\partial x^2} +  \frac{\partial^2 \texttt{src}}{\partial y^2}\f] 
+$\texttt{dst} =  \Delta \texttt{src} =  \frac{\partial^2 \texttt{src}}{\partial x^2} +  \frac{\partial^2 \texttt{src}}{\partial y^2}$ 
 This is done when `ksize > 1`. When `ksize == 1`, the Laplacian is computed by filtering the image with the following $3 \times 3$ aperture: 
-\f[\vecthreethree {0}{1}{0}{1}{-4}{1}{0}{1}{0}\f] 
+$\vecthreethree {0}{1}{0}{1}{-4}{1}{0}{1}{0}$ 
 **See also:**  Sobel, Scharr
 
 
@@ -15877,7 +15877,7 @@ Full constructor for %MSER detector
 Calculates the Mahalanobis distance between two vectors.
 
 
-The function cv::Mahalanobis calculates and returns the weighted distance between two vectors: \f[d( \texttt{vec1} , \texttt{vec2} )= \sqrt{\sum_{i,j}{\texttt{icovar(i,j)}\cdot(\texttt{vec1}(I)-\texttt{vec2}(I))\cdot(\texttt{vec1(j)}-\texttt{vec2(j)})} }\f] The covariance matrix may be calculated using the #calcCovarMatrix function and then inverted using the invert function (preferably using the #DECOMP_SVD method, as the most accurate). 
+The function cv::Mahalanobis calculates and returns the weighted distance between two vectors: $d( \texttt{vec1} , \texttt{vec2} )= \sqrt{\sum_{i,j}{\texttt{icovar(i,j)}\cdot(\texttt{vec1}(I)-\texttt{vec2}(I))\cdot(\texttt{vec1(j)}-\texttt{vec2(j)})} }$ The covariance matrix may be calculated using the #calcCovarMatrix function and then inverted using the invert function (preferably using the #DECOMP_SVD method, as the most accurate). 
 
 
 :param v1: first 1D input vector.
@@ -16010,7 +16010,7 @@ Computes the Peak Signal-to-Noise Ratio (PSNR) image quality metric.
 
 This function calculates the Peak Signal-to-Noise Ratio (PSNR) image quality metric in decibels (dB), between two input arrays src1 and src2. The arrays must have the same type. 
 The PSNR is calculated as follows: 
-\f[ \texttt{PSNR} = 10 \cdot \log_{10}{\left( \frac{R^2}{MSE} \right) } \f] 
+$ \texttt{PSNR} = 10 \cdot \log_{10}{\left( \frac{R^2}{MSE} \right) } $ 
 where R is the maximum integer value of depth (e.g. 255 in the case of CV_8U data) and MSE is the mean squared error between the two arrays. 
 
 
@@ -16067,9 +16067,9 @@ It optionally returns three rotation matrices, one for each axis, and the three 
 Converts a rotation matrix to a rotation vector or vice versa.
 
 
-\f[\begin{array}{l} \theta \leftarrow norm(r) \\ r  \leftarrow r/ \theta \\ R =  \cos(\theta) I + (1- \cos{\theta} ) r r^T +  \sin(\theta) \vecthreethree{0}{-r_z}{r_y}{r_z}{0}{-r_x}{-r_y}{r_x}{0} \end{array}\f] 
+$\begin{array}{l} \theta \leftarrow norm(r) \\ r  \leftarrow r/ \theta \\ R =  \cos(\theta) I + (1- \cos{\theta} ) r r^T +  \sin(\theta) \vecthreethree{0}{-r_z}{r_y}{r_z}{0}{-r_x}{-r_y}{r_x}{0} \end{array}$ 
 Inverse transformation can be also done easily, since 
-\f[\sin ( \theta ) \vecthreethree{0}{-r_z}{r_y}{r_z}{0}{-r_x}{-r_y}{r_x}{0} = \frac{R - R^T}{2}\f] 
+$\sin ( \theta ) \vecthreethree{0}{-r_z}{r_y}{r_z}{0}{-r_x}{-r_y}{r_x}{0} = \frac{R - R^T}{2}$ 
 A rotation vector is a convenient and most compact representation of a rotation matrix (since any rotation matrix has just 3 degrees of freedom). The representation is used in the global 3D geometry optimization procedures like @ref calibrateCamera, @ref stereoCalibrate, or @ref solvePnP . 
 ```{note}
 More information about the computation of the derivative of a 3D rotation matrix with respect to its exponential coordinatecan be found in: - A Compact Formula for the Derivative of a 3-D Rotation in Exponential Coordinates, Guillermo Gallego, Anthony J. Yezzi @cite Gallego2014ACF 
@@ -16171,9 +16171,9 @@ Calculates the first x- or y- image derivative using Scharr operator.
 
 
 The function computes the first x- or y- spatial image derivative using the Scharr operator. The call 
-\f[\texttt{Scharr(src, dst, ddepth, dx, dy, scale, delta, borderType)}\f] 
+$\texttt{Scharr(src, dst, ddepth, dx, dy, scale, delta, borderType)}$ 
 is equivalent to 
-\f[\texttt{Sobel(src, dst, ddepth, dx, dy, FILTER_SCHARR, scale, delta, borderType)} .\f] 
+$\texttt{Sobel(src, dst, ddepth, dx, dy, FILTER_SCHARR, scale, delta, borderType)} .$ 
 **See also:**  cartToPolar
 
 
@@ -16215,14 +16215,14 @@ Calculates the first, second, third, or mixed image derivatives using an extende
 
 In all cases except one, the $\texttt{ksize} \times \texttt{ksize}$ separable kernel is used to calculate the derivative. When $\texttt{ksize = 1}$, the $3 \times 1$ or $1 \times 3$ kernel is used (that is, no Gaussian smoothing is done). `ksize = 1` can only be used for the first or the second x- or y- derivatives. 
 There is also the special value `ksize = #FILTER_SCHARR (-1)` that corresponds to the $3\times3$ Scharr filter that may give more accurate results than the $3\times3$ Sobel. The Scharr aperture is 
-\f[\vecthreethree{-3}{0}{3}{-10}{0}{10}{-3}{0}{3}\f] 
+$\vecthreethree{-3}{0}{3}{-10}{0}{10}{-3}{0}{3}$ 
 for the x-derivative, or transposed for the y-derivative. 
 The function calculates an image derivative by convolving the image with the appropriate kernel: 
-\f[\texttt{dst} =  \frac{\partial^{xorder+yorder} \texttt{src}}{\partial x^{xorder} \partial y^{yorder}}\f] 
+$\texttt{dst} =  \frac{\partial^{xorder+yorder} \texttt{src}}{\partial x^{xorder} \partial y^{yorder}}$ 
 The Sobel operators combine Gaussian smoothing and differentiation, so the result is more or less resistant to the noise. Most often, the function is called with ( xorder = 1, yorder = 0, ksize = 3) or ( xorder = 0, yorder = 1, ksize = 3) to calculate the first x- or y- image derivative. The first case corresponds to a kernel of: 
-\f[\vecthreethree{-1}{0}{1}{-2}{0}{2}{-1}{0}{1}\f] 
+$\vecthreethree{-1}{0}{1}{-2}{0}{2}{-1}{0}{1}$ 
 The second case corresponds to a kernel of: 
-\f[\vecthreethree{-1}{-2}{-1}{0}{0}{0}{1}{2}{1}\f] 
+$\vecthreethree{-1}{-2}{-1}{0}{0}{0}{1}{2}{1}$ 
 **See also:**  Scharr, Laplacian, sepFilter2D, filter2D, GaussianBlur, cartToPolar
 
 
@@ -16493,7 +16493,7 @@ This static method constructs the fourcc code of the codec to be used in the con
 Calculates the per-element absolute difference between two arrays or between an array and a scalar.
 
 
-The function cv::absdiff calculates: Absolute difference between two arrays when they have the same size and type: \f[\texttt{dst}(I) =  \texttt{saturate} (| \texttt{src1}(I) -  \texttt{src2}(I)|)\f] Absolute difference between an array and a scalar when the second array is constructed from Scalar or has as many elements as the number of channels in `src1`: \f[\texttt{dst}(I) =  \texttt{saturate} (| \texttt{src1}(I) -  \texttt{src2} |)\f] Absolute difference between a scalar and an array when the first array is constructed from Scalar or has as many elements as the number of channels in `src2`: \f[\texttt{dst}(I) =  \texttt{saturate} (| \texttt{src1} -  \texttt{src2}(I) |)\f] where I is a multi-dimensional index of array elements. In case of multi-channel arrays, each channel is processed independently. 
+The function cv::absdiff calculates: Absolute difference between two arrays when they have the same size and type: $\texttt{dst}(I) =  \texttt{saturate} (| \texttt{src1}(I) -  \texttt{src2}(I)|)$ Absolute difference between an array and a scalar when the second array is constructed from Scalar or has as many elements as the number of channels in `src1`: $\texttt{dst}(I) =  \texttt{saturate} (| \texttt{src1}(I) -  \texttt{src2} |)$ Absolute difference between a scalar and an array when the first array is constructed from Scalar or has as many elements as the number of channels in `src2`: $\texttt{dst}(I) =  \texttt{saturate} (| \texttt{src1} -  \texttt{src2}(I) |)$ where I is a multi-dimensional index of array elements. In case of multi-channel arrays, each channel is processed independently. 
 ```{note}
 Saturation is not applied when the arrays have the depth CV_32S.You may even get a negative value in the case of overflow. 
 ```
@@ -16519,7 +16519,7 @@ Adds an image to the accumulator image.
 
 
 The function adds src or some of its elements to dst : 
-\f[\texttt{dst} (x,y)  \leftarrow \texttt{dst} (x,y) +  \texttt{src} (x,y)  \quad \text{if} \quad \texttt{mask} (x,y)  \ne 0\f] 
+$\texttt{dst} (x,y)  \leftarrow \texttt{dst} (x,y) +  \texttt{src} (x,y)  \quad \text{if} \quad \texttt{mask} (x,y)  \ne 0$ 
 The function supports multi-channel images. Each channel is processed independently. 
 The function cv::accumulate can be used, for example, to collect statistics of a scene background viewed by a still camera and for the further foreground-background segmentation. 
 **See also:**  accumulateSquare, accumulateProduct, accumulateWeighted
@@ -16541,7 +16541,7 @@ Adds the per-element product of two input images to the accumulator image.
 
 
 The function adds the product of two images or their selected regions to the accumulator dst : 
-\f[\texttt{dst} (x,y)  \leftarrow \texttt{dst} (x,y) +  \texttt{src1} (x,y)  \cdot \texttt{src2} (x,y)  \quad \text{if} \quad \texttt{mask} (x,y)  \ne 0\f] 
+$\texttt{dst} (x,y)  \leftarrow \texttt{dst} (x,y) +  \texttt{src1} (x,y)  \cdot \texttt{src2} (x,y)  \quad \text{if} \quad \texttt{mask} (x,y)  \ne 0$ 
 The function supports multi-channel images. Each channel is processed independently. 
 **See also:**  accumulate, accumulateSquare, accumulateWeighted
 
@@ -16564,7 +16564,7 @@ Adds the square of a source image to the accumulator image.
 
 
 The function adds the input image src or its selected region, raised to a power of 2, to the accumulator dst : 
-\f[\texttt{dst} (x,y)  \leftarrow \texttt{dst} (x,y) +  \texttt{src} (x,y)^2  \quad \text{if} \quad \texttt{mask} (x,y)  \ne 0\f] 
+$\texttt{dst} (x,y)  \leftarrow \texttt{dst} (x,y) +  \texttt{src} (x,y)^2  \quad \text{if} \quad \texttt{mask} (x,y)  \ne 0$ 
 The function supports multi-channel images. Each channel is processed independently. 
 **See also:**  accumulateSquare, accumulateProduct, accumulateWeighted
 
@@ -16585,7 +16585,7 @@ Updates a running average.
 
 
 The function calculates the weighted sum of the input image src and the accumulator dst so that dst becomes a running average of a frame sequence: 
-\f[\texttt{dst} (x,y)  \leftarrow (1- \texttt{alpha} )  \cdot \texttt{dst} (x,y) +  \texttt{alpha} \cdot \texttt{src} (x,y)  \quad \text{if} \quad \texttt{mask} (x,y)  \ne 0\f] 
+$\texttt{dst} (x,y)  \leftarrow (1- \texttt{alpha} )  \cdot \texttt{dst} (x,y) +  \texttt{alpha} \cdot \texttt{src} (x,y)  \quad \text{if} \quad \texttt{mask} (x,y)  \ne 0$ 
 That is, alpha regulates the update speed (how fast the accumulator "forgets" about earlier images). The function supports multi-channel images. Each channel is processed independently. 
 **See also:**  accumulate, accumulateSquare, accumulateProduct
 
@@ -16607,7 +16607,7 @@ That is, alpha regulates the update speed (how fast the accumulator "forgets" ab
 Applies an adaptive threshold to an array.
 
 
-The function transforms a grayscale image to a binary image according to the formulae: -   **THRESH_BINARY** \f[dst(x,y) =  \fork{\texttt{maxValue}}{if \(src(x,y) > T(x,y)\)}{0}{otherwise}\f] -   **THRESH_BINARY_INV** \f[dst(x,y) =  \fork{0}{if \(src(x,y) > T(x,y)\)}{\texttt{maxValue}}{otherwise}\f] where $T(x,y)$ is a threshold calculated individually for each pixel (see adaptiveMethod parameter). 
+The function transforms a grayscale image to a binary image according to the formulae: -   **THRESH_BINARY** $dst(x,y) =  \fork{\texttt{maxValue}}{if \(src(x,y) > T(x,y)\)}{0}{otherwise}$ -   **THRESH_BINARY_INV** $dst(x,y) =  \fork{0}{if \(src(x,y) > T(x,y)\)}{\texttt{maxValue}}{otherwise}$ where $T(x,y)$ is a threshold calculated individually for each pixel (see adaptiveMethod parameter). 
 The function can process the image in-place. 
 **See also:**  threshold, blur, GaussianBlur
 
@@ -16635,7 +16635,7 @@ The function can process the image in-place.
 Calculates the per-element sum of two arrays or an array and a scalar.
 
 
-The function add calculates: - Sum of two arrays when both input arrays have the same size and the same number of channels: \f[\texttt{dst}(I) =  \texttt{saturate} ( \texttt{src1}(I) +  \texttt{src2}(I)) \quad \texttt{if mask}(I) \ne0\f] - Sum of an array and a scalar when src2 is constructed from Scalar or has the same number of elements as `src1.channels()`: \f[\texttt{dst}(I) =  \texttt{saturate} ( \texttt{src1}(I) +  \texttt{src2} ) \quad \texttt{if mask}(I) \ne0\f] - Sum of a scalar and an array when src1 is constructed from Scalar or has the same number of elements as `src2.channels()`: \f[\texttt{dst}(I) =  \texttt{saturate} ( \texttt{src1} +  \texttt{src2}(I) ) \quad \texttt{if mask}(I) \ne0\f] where `I` is a multi-dimensional index of array elements. In case of multi-channel arrays, each channel is processed independently. 
+The function add calculates: - Sum of two arrays when both input arrays have the same size and the same number of channels: $\texttt{dst}(I) =  \texttt{saturate} ( \texttt{src1}(I) +  \texttt{src2}(I)) \quad \texttt{if mask}(I) \ne0$ - Sum of an array and a scalar when src2 is constructed from Scalar or has the same number of elements as `src1.channels()`: $\texttt{dst}(I) =  \texttt{saturate} ( \texttt{src1}(I) +  \texttt{src2} ) \quad \texttt{if mask}(I) \ne0$ - Sum of a scalar and an array when src1 is constructed from Scalar or has the same number of elements as `src2.channels()`: $\texttt{dst}(I) =  \texttt{saturate} ( \texttt{src1} +  \texttt{src2}(I) ) \quad \texttt{if mask}(I) \ne0$ where `I` is a multi-dimensional index of array elements. In case of multi-channel arrays, each channel is processed independently. 
 The first function in the list above can be replaced with matrix expressions: 
 ```cpp
 dst = src1 + src2;
@@ -16699,7 +16699,7 @@ Draws a text on the image.
 Calculates the weighted sum of two arrays.
 
 
-The function addWeighted calculates the weighted sum of two arrays as follows: \f[\texttt{dst} (I)= \texttt{saturate} ( \texttt{src1} (I)* \texttt{alpha} +  \texttt{src2} (I)* \texttt{beta} +  \texttt{gamma} )\f] where I is a multi-dimensional index of array elements. In case of multi-channel arrays, each channel is processed independently. The function can be replaced with a matrix expression: 
+The function addWeighted calculates the weighted sum of two arrays as follows: $\texttt{dst} (I)= \texttt{saturate} ( \texttt{src1} (I)* \texttt{alpha} +  \texttt{src2} (I)* \texttt{beta} +  \texttt{gamma} )$ where I is a multi-dimensional index of array elements. In case of multi-channel arrays, each channel is processed independently. The function can be replaced with a matrix expression: 
 ```cpp
 dst = src1*alpha + src2*beta + gamma;
 ```
@@ -16876,7 +16876,7 @@ This filter does not work inplace.
 computes bitwise conjunction of the two arrays (dst = src1 & src2)Calculates the per-element bit-wise conjunction of two arrays or an array and a scalar. 
 
 
-The function cv::bitwise_and calculates the per-element bit-wise logical conjunction for: Two arrays when src1 and src2 have the same size: \f[\texttt{dst} (I) =  \texttt{src1} (I)  \wedge \texttt{src2} (I) \quad \texttt{if mask} (I) \ne0\f] An array and a scalar when src2 is constructed from Scalar or has the same number of elements as `src1.channels()`: \f[\texttt{dst} (I) =  \texttt{src1} (I)  \wedge \texttt{src2} \quad \texttt{if mask} (I) \ne0\f] A scalar and an array when src1 is constructed from Scalar or has the same number of elements as `src2.channels()`: \f[\texttt{dst} (I) =  \texttt{src1}  \wedge \texttt{src2} (I) \quad \texttt{if mask} (I) \ne0\f] In case of floating-point arrays, their machine-specific bit representations (usually IEEE754-compliant) are used for the operation. In case of multi-channel arrays, each channel is processed independently. In the second and third cases above, the scalar is first converted to the array type. 
+The function cv::bitwise_and calculates the per-element bit-wise logical conjunction for: Two arrays when src1 and src2 have the same size: $\texttt{dst} (I) =  \texttt{src1} (I)  \wedge \texttt{src2} (I) \quad \texttt{if mask} (I) \ne0$ An array and a scalar when src2 is constructed from Scalar or has the same number of elements as `src1.channels()`: $\texttt{dst} (I) =  \texttt{src1} (I)  \wedge \texttt{src2} \quad \texttt{if mask} (I) \ne0$ A scalar and an array when src1 is constructed from Scalar or has the same number of elements as `src2.channels()`: $\texttt{dst} (I) =  \texttt{src1}  \wedge \texttt{src2} (I) \quad \texttt{if mask} (I) \ne0$ In case of floating-point arrays, their machine-specific bit representations (usually IEEE754-compliant) are used for the operation. In case of multi-channel arrays, each channel is processed independently. In the second and third cases above, the scalar is first converted to the array type. 
 
 
 :param src1: first input array or a scalar.
@@ -16896,7 +16896,7 @@ The function cv::bitwise_and calculates the per-element bit-wise logical conjunc
  Inverts every bit of an array.
 
 
-The function cv::bitwise_not calculates per-element bit-wise inversion of the input array: \f[\texttt{dst} (I) =  \neg \texttt{src} (I)\f] In case of a floating-point input array, its machine-specific bit representation (usually IEEE754-compliant) is used for the operation. In case of multi-channel arrays, each channel is processed independently. 
+The function cv::bitwise_not calculates per-element bit-wise inversion of the input array: $\texttt{dst} (I) =  \neg \texttt{src} (I)$ In case of a floating-point input array, its machine-specific bit representation (usually IEEE754-compliant) is used for the operation. In case of multi-channel arrays, each channel is processed independently. 
 
 
 :param src: input array.
@@ -16914,7 +16914,7 @@ The function cv::bitwise_not calculates per-element bit-wise inversion of the in
 Calculates the per-element bit-wise disjunction of two arrays or anarray and a scalar. 
 
 
-The function cv::bitwise_or calculates the per-element bit-wise logical disjunction for: Two arrays when src1 and src2 have the same size: \f[\texttt{dst} (I) =  \texttt{src1} (I)  \vee \texttt{src2} (I) \quad \texttt{if mask} (I) \ne0\f] An array and a scalar when src2 is constructed from Scalar or has the same number of elements as `src1.channels()`: \f[\texttt{dst} (I) =  \texttt{src1} (I)  \vee \texttt{src2} \quad \texttt{if mask} (I) \ne0\f] A scalar and an array when src1 is constructed from Scalar or has the same number of elements as `src2.channels()`: \f[\texttt{dst} (I) =  \texttt{src1}  \vee \texttt{src2} (I) \quad \texttt{if mask} (I) \ne0\f] In case of floating-point arrays, their machine-specific bit representations (usually IEEE754-compliant) are used for the operation. In case of multi-channel arrays, each channel is processed independently. In the second and third cases above, the scalar is first converted to the array type. 
+The function cv::bitwise_or calculates the per-element bit-wise logical disjunction for: Two arrays when src1 and src2 have the same size: $\texttt{dst} (I) =  \texttt{src1} (I)  \vee \texttt{src2} (I) \quad \texttt{if mask} (I) \ne0$ An array and a scalar when src2 is constructed from Scalar or has the same number of elements as `src1.channels()`: $\texttt{dst} (I) =  \texttt{src1} (I)  \vee \texttt{src2} \quad \texttt{if mask} (I) \ne0$ A scalar and an array when src1 is constructed from Scalar or has the same number of elements as `src2.channels()`: $\texttt{dst} (I) =  \texttt{src1}  \vee \texttt{src2} (I) \quad \texttt{if mask} (I) \ne0$ In case of floating-point arrays, their machine-specific bit representations (usually IEEE754-compliant) are used for the operation. In case of multi-channel arrays, each channel is processed independently. In the second and third cases above, the scalar is first converted to the array type. 
 
 
 :param src1: first input array or a scalar.
@@ -16934,7 +16934,7 @@ The function cv::bitwise_or calculates the per-element bit-wise logical disjunct
 Calculates the per-element bit-wise "exclusive or" operation on twoarrays or an array and a scalar. 
 
 
-The function cv::bitwise_xor calculates the per-element bit-wise logical "exclusive-or" operation for: Two arrays when src1 and src2 have the same size: \f[\texttt{dst} (I) =  \texttt{src1} (I)  \oplus \texttt{src2} (I) \quad \texttt{if mask} (I) \ne0\f] An array and a scalar when src2 is constructed from Scalar or has the same number of elements as `src1.channels()`: \f[\texttt{dst} (I) =  \texttt{src1} (I)  \oplus \texttt{src2} \quad \texttt{if mask} (I) \ne0\f] A scalar and an array when src1 is constructed from Scalar or has the same number of elements as `src2.channels()`: \f[\texttt{dst} (I) =  \texttt{src1}  \oplus \texttt{src2} (I) \quad \texttt{if mask} (I) \ne0\f] In case of floating-point arrays, their machine-specific bit representations (usually IEEE754-compliant) are used for the operation. In case of multi-channel arrays, each channel is processed independently. In the 2nd and 3rd cases above, the scalar is first converted to the array type. 
+The function cv::bitwise_xor calculates the per-element bit-wise logical "exclusive-or" operation for: Two arrays when src1 and src2 have the same size: $\texttt{dst} (I) =  \texttt{src1} (I)  \oplus \texttt{src2} (I) \quad \texttt{if mask} (I) \ne0$ An array and a scalar when src2 is constructed from Scalar or has the same number of elements as `src1.channels()`: $\texttt{dst} (I) =  \texttt{src1} (I)  \oplus \texttt{src2} \quad \texttt{if mask} (I) \ne0$ A scalar and an array when src1 is constructed from Scalar or has the same number of elements as `src2.channels()`: $\texttt{dst} (I) =  \texttt{src1}  \oplus \texttt{src2} (I) \quad \texttt{if mask} (I) \ne0$ In case of floating-point arrays, their machine-specific bit representations (usually IEEE754-compliant) are used for the operation. In case of multi-channel arrays, each channel is processed independently. In the 2nd and 3rd cases above, the scalar is first converted to the array type. 
 
 
 :param src1: first input array or a scalar.
@@ -16978,7 +16978,7 @@ Blurs an image using the normalized box filter.
 
 
 The function smooths an image using the kernel: 
-\f[\texttt{K} =  \frac{1}{\texttt{ksize.width*ksize.height}} \begin{bmatrix} 1 & 1 & 1 &  \cdots & 1 & 1  \\ 1 & 1 & 1 &  \cdots & 1 & 1  \\ \hdotsfor{6} \\ 1 & 1 & 1 &  \cdots & 1 & 1  \\ \end{bmatrix}\f] 
+$\texttt{K} =  \frac{1}{\texttt{ksize.width*ksize.height}} \begin{bmatrix} 1 & 1 & 1 &  \cdots & 1 & 1  \\ 1 & 1 & 1 &  \cdots & 1 & 1  \\ \hdotsfor{6} \\ 1 & 1 & 1 &  \cdots & 1 & 1  \\ \end{bmatrix}$ 
 The call `blur(src, dst, ksize, anchor, borderType)` is equivalent to `boxFilter(src, dst, src.type(), ksize, anchor, true, borderType)`. 
 **See also:**  boxFilter, bilateralFilter, GaussianBlur, medianBlur
 
@@ -17052,9 +17052,9 @@ Blurs an image using the box filter.
 
 
 The function smooths an image using the kernel: 
-\f[\texttt{K} =  \alpha \begin{bmatrix} 1 & 1 & 1 &  \cdots & 1 & 1  \\ 1 & 1 & 1 &  \cdots & 1 & 1  \\ \hdotsfor{6} \\ 1 & 1 & 1 &  \cdots & 1 & 1 \end{bmatrix}\f] 
+$\texttt{K} =  \alpha \begin{bmatrix} 1 & 1 & 1 &  \cdots & 1 & 1  \\ 1 & 1 & 1 &  \cdots & 1 & 1  \\ \hdotsfor{6} \\ 1 & 1 & 1 &  \cdots & 1 & 1 \end{bmatrix}$ 
 where 
-\f[\alpha = \begin{cases} \frac{1}{\texttt{ksize.width*ksize.height}} & \texttt{when } \texttt{normalize=true}  \\1 & \texttt{otherwise}\end{cases}\f] 
+$\alpha = \begin{cases} \frac{1}{\texttt{ksize.width*ksize.height}} & \texttt{when } \texttt{normalize=true}  \\1 & \texttt{otherwise}\end{cases}$ 
 Unnormalized box filter is useful for computing various integral characteristics over each pixel neighborhood, such as covariance matrices of image derivatives (used in dense optical flow algorithms, and so on). If you need to compute pixel sums over variable-size windows, use #integral. 
 **See also:**  blur, bilateralFilter, GaussianBlur, medianBlur, integral
 
@@ -17221,7 +17221,7 @@ Computes a dense optical flow using the Gunnar Farneback's algorithm.
 
 
 The function finds an optical flow for each prev pixel using the @cite Farneback2003 algorithm so that 
-\f[\texttt{prev} (y,x)  \sim \texttt{next} ( y + \texttt{flow} (y,x)[1],  x + \texttt{flow} (y,x)[0])\f] 
+$\texttt{prev} (y,x)  \sim \texttt{next} ( y + \texttt{flow} (y,x)[1],  x + \texttt{flow} (y,x)[0])$ 
 -   An example using the optical flow algorithm described by Gunnar Farneback can be found at opencv_source_code/samples/cpp/fback.cpp -   (Python) An example using the optical flow algorithm described by Gunnar Farneback can be found at opencv_source_code/samples/python/opt_flow.py 
 ```{note}
 Some examples:
@@ -17452,14 +17452,14 @@ Another approach consists in estimating simultaneously the rotation and the tran
 The following picture describes the Hand-Eye calibration problem where the transformation between a camera ("eye") mounted on a robot gripper ("hand") has to be estimated. This configuration is called eye-in-hand. 
 The eye-to-hand configuration consists in a static camera observing a calibration pattern mounted on the robot end-effector. The transformation from the camera to the robot base frame can then be estimated by inputting the suitable transformations to the function, see below. 
 ![](pics/hand-eye_figure.png) 
-The calibration procedure is the following: - a static calibration pattern is used to estimate the transformation between the target frame and the camera frame - the robot gripper is moved in order to acquire several poses - for each pose, the homogeneous transformation between the gripper frame and the robot base frame is recorded using for instance the robot kinematics \f[ \begin{bmatrix} X_b\\ Y_b\\ Z_b\\ 1 \end{bmatrix} = \begin{bmatrix} _{}^{b}\textrm{R}_g & _{}^{b}\textrm{t}_g \\ 0_{1 \times 3} & 1 \end{bmatrix} \begin{bmatrix} X_g\\ Y_g\\ Z_g\\ 1 \end{bmatrix} \f] - for each pose, the homogeneous transformation between the calibration target frame and the camera frame is recorded using for instance a pose estimation method (PnP) from 2D-3D point correspondences \f[ \begin{bmatrix} X_c\\ Y_c\\ Z_c\\ 1 \end{bmatrix} = \begin{bmatrix} _{}^{c}\textrm{R}_t & _{}^{c}\textrm{t}_t \\ 0_{1 \times 3} & 1 \end{bmatrix} \begin{bmatrix} X_t\\ Y_t\\ Z_t\\ 1 \end{bmatrix} \f] 
-The Hand-Eye calibration procedure returns the following homogeneous transformation \f[ \begin{bmatrix} X_g\\ Y_g\\ Z_g\\ 1 \end{bmatrix} = \begin{bmatrix} _{}^{g}\textrm{R}_c & _{}^{g}\textrm{t}_c \\ 0_{1 \times 3} & 1 \end{bmatrix} \begin{bmatrix} X_c\\ Y_c\\ Z_c\\ 1 \end{bmatrix} \f] 
-This problem is also known as solving the $\mathbf{A}\mathbf{X}=\mathbf{X}\mathbf{B}$ equation: - for an eye-in-hand configuration \f[ \begin{align*} ^{b}{\textrm{T}_g}^{(1)} \hspace{0.2em} ^{g}\textrm{T}_c \hspace{0.2em} ^{c}{\textrm{T}_t}^{(1)} &= \hspace{0.1em} ^{b}{\textrm{T}_g}^{(2)} \hspace{0.2em} ^{g}\textrm{T}_c \hspace{0.2em} ^{c}{\textrm{T}_t}^{(2)} \\ 
+The calibration procedure is the following: - a static calibration pattern is used to estimate the transformation between the target frame and the camera frame - the robot gripper is moved in order to acquire several poses - for each pose, the homogeneous transformation between the gripper frame and the robot base frame is recorded using for instance the robot kinematics $ \begin{bmatrix} X_b\\ Y_b\\ Z_b\\ 1 \end{bmatrix} = \begin{bmatrix} _{}^{b}\textrm{R}_g & _{}^{b}\textrm{t}_g \\ 0_{1 \times 3} & 1 \end{bmatrix} \begin{bmatrix} X_g\\ Y_g\\ Z_g\\ 1 \end{bmatrix} $ - for each pose, the homogeneous transformation between the calibration target frame and the camera frame is recorded using for instance a pose estimation method (PnP) from 2D-3D point correspondences $ \begin{bmatrix} X_c\\ Y_c\\ Z_c\\ 1 \end{bmatrix} = \begin{bmatrix} _{}^{c}\textrm{R}_t & _{}^{c}\textrm{t}_t \\ 0_{1 \times 3} & 1 \end{bmatrix} \begin{bmatrix} X_t\\ Y_t\\ Z_t\\ 1 \end{bmatrix} $ 
+The Hand-Eye calibration procedure returns the following homogeneous transformation $ \begin{bmatrix} X_g\\ Y_g\\ Z_g\\ 1 \end{bmatrix} = \begin{bmatrix} _{}^{g}\textrm{R}_c & _{}^{g}\textrm{t}_c \\ 0_{1 \times 3} & 1 \end{bmatrix} \begin{bmatrix} X_c\\ Y_c\\ Z_c\\ 1 \end{bmatrix} $ 
+This problem is also known as solving the $\mathbf{A}\mathbf{X}=\mathbf{X}\mathbf{B}$ equation: - for an eye-in-hand configuration $ \begin{align*} ^{b}{\textrm{T}_g}^{(1)} \hspace{0.2em} ^{g}\textrm{T}_c \hspace{0.2em} ^{c}{\textrm{T}_t}^{(1)} &= \hspace{0.1em} ^{b}{\textrm{T}_g}^{(2)} \hspace{0.2em} ^{g}\textrm{T}_c \hspace{0.2em} ^{c}{\textrm{T}_t}^{(2)} \\ 
 (^{b}{\textrm{T}_g}^{(2)})^{-1} \hspace{0.2em} ^{b}{\textrm{T}_g}^{(1)} \hspace{0.2em} ^{g}\textrm{T}_c &= \hspace{0.1em} ^{g}\textrm{T}_c \hspace{0.2em} ^{c}{\textrm{T}_t}^{(2)} (^{c}{\textrm{T}_t}^{(1)})^{-1} \\ 
-\textrm{A}_i \textrm{X} &= \textrm{X} \textrm{B}_i \\ \end{align*} \f] 
-- for an eye-to-hand configuration \f[ \begin{align*} ^{g}{\textrm{T}_b}^{(1)} \hspace{0.2em} ^{b}\textrm{T}_c \hspace{0.2em} ^{c}{\textrm{T}_t}^{(1)} &= \hspace{0.1em} ^{g}{\textrm{T}_b}^{(2)} \hspace{0.2em} ^{b}\textrm{T}_c \hspace{0.2em} ^{c}{\textrm{T}_t}^{(2)} \\ 
+\textrm{A}_i \textrm{X} &= \textrm{X} \textrm{B}_i \\ \end{align*} $ 
+- for an eye-to-hand configuration $ \begin{align*} ^{g}{\textrm{T}_b}^{(1)} \hspace{0.2em} ^{b}\textrm{T}_c \hspace{0.2em} ^{c}{\textrm{T}_t}^{(1)} &= \hspace{0.1em} ^{g}{\textrm{T}_b}^{(2)} \hspace{0.2em} ^{b}\textrm{T}_c \hspace{0.2em} ^{c}{\textrm{T}_t}^{(2)} \\ 
 (^{g}{\textrm{T}_b}^{(2)})^{-1} \hspace{0.2em} ^{g}{\textrm{T}_b}^{(1)} \hspace{0.2em} ^{b}\textrm{T}_c &= \hspace{0.1em} ^{b}\textrm{T}_c \hspace{0.2em} ^{c}{\textrm{T}_t}^{(2)} (^{c}{\textrm{T}_t}^{(1)})^{-1} \\ 
-\textrm{A}_i \textrm{X} &= \textrm{X} \textrm{B}_i \\ \end{align*} \f] 
+\textrm{A}_i \textrm{X} &= \textrm{X} \textrm{B}_i \\ \end{align*} $ 
 \note Additional information can be found on this [website](http://campar.in.tum.de/Chair/HandEyeCalibration). \note A minimum of 2 motions with non parallel rotation axes are necessary to determine the hand-eye transformation. So at least 3 different poses are required, but it is strongly recommended to use many more poses. 
 
 
@@ -17490,8 +17490,8 @@ The function performs the Robot-World/Hand-Eye calibration using various methods
 Another approach consists in estimating simultaneously the rotation and the translation (simultaneous solutions), with the following implemented method: - A. Li, L. Wang, and D. Wu, Simultaneous robot-world and hand-eye calibration using dual-quaternions and kronecker product \cite Li2010SimultaneousRA 
 The following picture describes the Robot-World/Hand-Eye calibration problem where the transformations between a robot and a world frame and between a robot gripper ("hand") and a camera ("eye") mounted at the robot end-effector have to be estimated. 
 ![](pics/robot-world_hand-eye_figure.png) 
-The calibration procedure is the following: - a static calibration pattern is used to estimate the transformation between the target frame and the camera frame - the robot gripper is moved in order to acquire several poses - for each pose, the homogeneous transformation between the gripper frame and the robot base frame is recorded using for instance the robot kinematics \f[ \begin{bmatrix} X_g\\ Y_g\\ Z_g\\ 1 \end{bmatrix} = \begin{bmatrix} _{}^{g}\textrm{R}_b & _{}^{g}\textrm{t}_b \\ 0_{1 \times 3} & 1 \end{bmatrix} \begin{bmatrix} X_b\\ Y_b\\ Z_b\\ 1 \end{bmatrix} \f] - for each pose, the homogeneous transformation between the calibration target frame (the world frame) and the camera frame is recorded using for instance a pose estimation method (PnP) from 2D-3D point correspondences \f[ \begin{bmatrix} X_c\\ Y_c\\ Z_c\\ 1 \end{bmatrix} = \begin{bmatrix} _{}^{c}\textrm{R}_w & _{}^{c}\textrm{t}_w \\ 0_{1 \times 3} & 1 \end{bmatrix} \begin{bmatrix} X_w\\ Y_w\\ Z_w\\ 1 \end{bmatrix} \f] 
-The Robot-World/Hand-Eye calibration procedure returns the following homogeneous transformations \f[ \begin{bmatrix} X_w\\ Y_w\\ Z_w\\ 1 \end{bmatrix} = \begin{bmatrix} _{}^{w}\textrm{R}_b & _{}^{w}\textrm{t}_b \\ 0_{1 \times 3} & 1 \end{bmatrix} \begin{bmatrix} X_b\\ Y_b\\ Z_b\\ 1 \end{bmatrix} \f] \f[ \begin{bmatrix} X_c\\ Y_c\\ Z_c\\ 1 \end{bmatrix} = \begin{bmatrix} _{}^{c}\textrm{R}_g & _{}^{c}\textrm{t}_g \\ 0_{1 \times 3} & 1 \end{bmatrix} \begin{bmatrix} X_g\\ Y_g\\ Z_g\\ 1 \end{bmatrix} \f] 
+The calibration procedure is the following: - a static calibration pattern is used to estimate the transformation between the target frame and the camera frame - the robot gripper is moved in order to acquire several poses - for each pose, the homogeneous transformation between the gripper frame and the robot base frame is recorded using for instance the robot kinematics $ \begin{bmatrix} X_g\\ Y_g\\ Z_g\\ 1 \end{bmatrix} = \begin{bmatrix} _{}^{g}\textrm{R}_b & _{}^{g}\textrm{t}_b \\ 0_{1 \times 3} & 1 \end{bmatrix} \begin{bmatrix} X_b\\ Y_b\\ Z_b\\ 1 \end{bmatrix} $ - for each pose, the homogeneous transformation between the calibration target frame (the world frame) and the camera frame is recorded using for instance a pose estimation method (PnP) from 2D-3D point correspondences $ \begin{bmatrix} X_c\\ Y_c\\ Z_c\\ 1 \end{bmatrix} = \begin{bmatrix} _{}^{c}\textrm{R}_w & _{}^{c}\textrm{t}_w \\ 0_{1 \times 3} & 1 \end{bmatrix} \begin{bmatrix} X_w\\ Y_w\\ Z_w\\ 1 \end{bmatrix} $ 
+The Robot-World/Hand-Eye calibration procedure returns the following homogeneous transformations $ \begin{bmatrix} X_w\\ Y_w\\ Z_w\\ 1 \end{bmatrix} = \begin{bmatrix} _{}^{w}\textrm{R}_b & _{}^{w}\textrm{t}_b \\ 0_{1 \times 3} & 1 \end{bmatrix} \begin{bmatrix} X_b\\ Y_b\\ Z_b\\ 1 \end{bmatrix} $ $ \begin{bmatrix} X_c\\ Y_c\\ Z_c\\ 1 \end{bmatrix} = \begin{bmatrix} _{}^{c}\textrm{R}_g & _{}^{c}\textrm{t}_g \\ 0_{1 \times 3} & 1 \end{bmatrix} \begin{bmatrix} X_g\\ Y_g\\ Z_g\\ 1 \end{bmatrix} $ 
 This problem is also known as solving the $\mathbf{A}\mathbf{X}=\mathbf{Z}\mathbf{B}$ equation, with: - $\mathbf{A} \Leftrightarrow \hspace{0.1em} _{}^{c}\textrm{T}_w$ - $\mathbf{X} \Leftrightarrow \hspace{0.1em} _{}^{w}\textrm{T}_b$ - $\mathbf{Z} \Leftrightarrow \hspace{0.1em} _{}^{c}\textrm{T}_g$ - $\mathbf{B} \Leftrightarrow \hspace{0.1em} _{}^{g}\textrm{T}_b$ 
 \note At least 3 measurements are required (input vectors size must be greater or equal to 3). 
 
@@ -17554,7 +17554,7 @@ The function computes various useful camera characteristics from the previously 
 Calculates the magnitude and angle of 2D vectors.
 
 
-The function cv::cartToPolar calculates either the magnitude, angle, or both for every 2D vector (x(I),y(I)): \f[\begin{array}{l} \texttt{magnitude} (I)= \sqrt{\texttt{x}(I)^2+\texttt{y}(I)^2} , \\ \texttt{angle} (I)= \texttt{atan2} ( \texttt{y} (I), \texttt{x} (I))[ \cdot180 / \pi ] \end{array}\f] 
+The function cv::cartToPolar calculates either the magnitude, angle, or both for every 2D vector (x(I),y(I)): $\begin{array}{l} \texttt{magnitude} (I)= \sqrt{\texttt{x}(I)^2+\texttt{y}(I)^2} , \\ \texttt{angle} (I)= \texttt{atan2} ( \texttt{y} (I), \texttt{x} (I))[ \cdot180 / \pi ] \end{array}$ 
 The angles are calculated with accuracy about 0.3 degrees. For the point (0,0), the angle is set to 0. 
 **See also:** Sobel, Scharr
 
@@ -17697,7 +17697,7 @@ Multiplication factor is between .5 to 2.5.
 Performs the per-element comparison of two arrays or an array and scalar value.
 
 
-The function compares: Elements of two arrays when src1 and src2 have the same size: \f[\texttt{dst} (I) =  \texttt{src1} (I)  \,\texttt{cmpop}\, \texttt{src2} (I)\f] Elements of src1 with a scalar src2 when src2 is constructed from Scalar or has a single element: \f[\texttt{dst} (I) =  \texttt{src1}(I) \,\texttt{cmpop}\,  \texttt{src2}\f] src1 with elements of src2 when src1 is constructed from Scalar or has a single element: \f[\texttt{dst} (I) =  \texttt{src1}  \,\texttt{cmpop}\, \texttt{src2} (I)\f] When the comparison result is true, the corresponding element of output array is set to 255. The comparison operations can be replaced with the equivalent matrix expressions: 
+The function compares: Elements of two arrays when src1 and src2 have the same size: $\texttt{dst} (I) =  \texttt{src1} (I)  \,\texttt{cmpop}\, \texttt{src2} (I)$ Elements of src1 with a scalar src2 when src2 is constructed from Scalar or has a single element: $\texttt{dst} (I) =  \texttt{src1}(I) \,\texttt{cmpop}\,  \texttt{src2}$ src1 with elements of src2 when src1 is constructed from Scalar or has a single element: $\texttt{dst} (I) =  \texttt{src1}  \,\texttt{cmpop}\, \texttt{src2} (I)$ When the comparison result is true, the corresponding element of output array is set to 255. The comparison operations can be replaced with the equivalent matrix expressions: 
 ```cpp
 Mat dst1 = src1 >= src2;
 Mat dst2 = src1 < 8;
@@ -17762,7 +17762,7 @@ Combines two rotation-and-shift transformations.
 
 
 The functions compute: 
-\f[\begin{array}{l} \texttt{rvec3} =  \mathrm{rodrigues} ^{-1} \left ( \mathrm{rodrigues} ( \texttt{rvec2} )  \cdot \mathrm{rodrigues} ( \texttt{rvec1} ) \right )  \\ \texttt{tvec3} =  \mathrm{rodrigues} ( \texttt{rvec2} )  \cdot \texttt{tvec1} +  \texttt{tvec2} \end{array} ,\f] 
+$\begin{array}{l} \texttt{rvec3} =  \mathrm{rodrigues} ^{-1} \left ( \mathrm{rodrigues} ( \texttt{rvec2} )  \cdot \mathrm{rodrigues} ( \texttt{rvec1} ) \right )  \\ \texttt{tvec3} =  \mathrm{rodrigues} ( \texttt{rvec2} )  \cdot \texttt{tvec1} +  \texttt{tvec2} \end{array} ,$ 
 where $\mathrm{rodrigues}$ denotes a rotation vector to a rotation matrix transformation, and $\mathrm{rodrigues}^{-1}$ denotes the inverse transformation. See #Rodrigues for details. 
 Also, the functions can compute the derivatives of the output vectors with regards to the input vectors (see #matMulDeriv ). The functions are used inside #stereoCalibrate but can also be used in your own code where Levenberg-Marquardt or another gradient-based solver is used to optimize a function that contains a matrix multiplication. 
 
@@ -17806,9 +17806,9 @@ For points in an image of a stereo pair, computes the corresponding epilines in 
 
 For every point in one of the two images of a stereo pair, the function finds the equation of the corresponding epipolar line in the other image. 
 From the fundamental matrix definition (see #findFundamentalMat ), line $l^{(2)}_i$ in the second image for the point $p^{(1)}_i$ in the first image (when whichImage=1 ) is computed as: 
-\f[l^{(2)}_i = F p^{(1)}_i\f] 
+$l^{(2)}_i = F p^{(1)}_i$ 
 And vice versa, when whichImage=2, $l^{(1)}_i$ is computed from $p^{(2)}_i$ as: 
-\f[l^{(1)}_i = F^T p^{(2)}_i\f] 
+$l^{(1)}_i = F^T p^{(2)}_i$ 
 Line coefficients are defined up to a scale. They are normalized so that $a_i^2+b_i^2=1$ . 
 
 
@@ -18049,7 +18049,7 @@ The function converts points from Euclidean to homogeneous space by appending 1'
 Scales, calculates absolute values, and converts the result to 8-bit.
 
 
-On each element of the input array, the function convertScaleAbs performs three operations sequentially: scaling, taking an absolute value, conversion to an unsigned 8-bit type: \f[\texttt{dst} (I)= \texttt{saturate\_cast<uchar>} (| \texttt{src} (I)* \texttt{alpha} +  \texttt{beta} |)\f] In case of multi-channel arrays, the function processes each channel independently. When the output is not 8-bit, the operation can be emulated by calling the Mat::convertTo method (or by using matrix expressions) and then by calculating an absolute value of the result. For example: 
+On each element of the input array, the function convertScaleAbs performs three operations sequentially: scaling, taking an absolute value, conversion to an unsigned 8-bit type: $\texttt{dst} (I)= \texttt{saturate\_cast<uchar>} (| \texttt{src} (I)* \texttt{alpha} +  \texttt{beta} |)$ In case of multi-channel arrays, the function processes each channel independently. When the output is not 8-bit, the operation can be emulated by calling the Mat::convertTo method (or by using matrix expressions) and then by calculating an absolute value of the result. For example: 
 ```cpp
 Mat_<float> A(30,30);
 randu(A, Scalar(-100), Scalar(100));
@@ -18192,7 +18192,7 @@ Calculates eigenvalues and eigenvectors of image blocks for corner detection.
 
 
 For every pixel $p$ , the function cornerEigenValsAndVecs considers a blockSize $\times$ blockSize neighborhood $S(p)$ . It calculates the covariation matrix of derivatives over the neighborhood as: 
-\f[M =  \begin{bmatrix} \sum _{S(p)}(dI/dx)^2 &  \sum _{S(p)}dI/dx dI/dy  \\ \sum _{S(p)}dI/dx dI/dy &  \sum _{S(p)}(dI/dy)^2 \end{bmatrix}\f] 
+$M =  \begin{bmatrix} \sum _{S(p)}(dI/dx)^2 &  \sum _{S(p)}dI/dx dI/dy  \\ \sum _{S(p)}dI/dx dI/dy &  \sum _{S(p)}(dI/dy)^2 \end{bmatrix}$ 
 where the derivatives are computed using the Sobel operator. 
 After that, it finds eigenvectors and eigenvalues of $M$ and stores them in the destination image as $(\lambda_1, \lambda_2, x_1, y_1, x_2, y_2)$ where 
 -   $\lambda_1, \lambda_2$ are the non-sorted eigenvalues of $M$ -   $x_1, y_1$ are the eigenvectors corresponding to $\lambda_1$ -   $x_2, y_2$ are the eigenvectors corresponding to $\lambda_2$ 
@@ -18220,7 +18220,7 @@ Harris corner detector.
 
 
 The function runs the Harris corner detector on the image. Similarly to cornerMinEigenVal and cornerEigenValsAndVecs , for each pixel $(x, y)$ it calculates a $2\times2$ gradient covariance matrix $M^{(x,y)}$ over a $\texttt{blockSize} \times \texttt{blockSize}$ neighborhood. Then, it computes the following characteristic: 
-\f[\texttt{dst} (x,y) =  \mathrm{det} M^{(x,y)} - k  \cdot \left ( \mathrm{tr} M^{(x,y)} \right )^2\f] 
+$\texttt{dst} (x,y) =  \mathrm{det} M^{(x,y)} - k  \cdot \left ( \mathrm{tr} M^{(x,y)} \right )^2$ 
 Corners in the image can be found as the local maxima of this response map. 
 
 
@@ -18270,11 +18270,11 @@ Refines the corner locations.
 The function iterates to find the sub-pixel accurate location of corners or radial saddle points as described in @cite forstner1987fast, and as shown on the figure below. 
 ![image](pics/cornersubpix.png) 
 Sub-pixel accurate corner locator is based on the observation that every vector from the center $q$ to a point $p$ located within a neighborhood of $q$ is orthogonal to the image gradient at $p$ subject to image and measurement noise. Consider the expression: 
-\f[\epsilon _i = {DI_{p_i}}^T  \cdot (q - p_i)\f] 
+$\epsilon _i = {DI_{p_i}}^T  \cdot (q - p_i)$ 
 where ${DI_{p_i}}$ is an image gradient at one of the points $p_i$ in a neighborhood of $q$ . The value of $q$ is to be found so that $\epsilon_i$ is minimized. A system of equations may be set up with $\epsilon_i$ set to zero: 
-\f[\sum _i(DI_{p_i}  \cdot {DI_{p_i}}^T) \cdot q -  \sum _i(DI_{p_i}  \cdot {DI_{p_i}}^T  \cdot p_i)\f] 
+$\sum _i(DI_{p_i}  \cdot {DI_{p_i}}^T) \cdot q -  \sum _i(DI_{p_i}  \cdot {DI_{p_i}}^T  \cdot p_i)$ 
 where the gradients are summed within a neighborhood ("search window") of $q$ . Calling the first gradient term $G$ and the second gradient term $b$ gives: 
-\f[q = G^{-1}  \cdot b\f] 
+$q = G^{-1}  \cdot b$ 
 The algorithm sets the center of the neighborhood window at this new center $q$ and then iterates until the center stays within a set threshold. 
 
 
@@ -18319,7 +18319,7 @@ The function implements the Optimal Triangulation Method (see Multiple View Geom
 Counts non-zero array elements.
 
 
-The function returns the number of non-zero elements in src : \f[\sum _{I: \; \texttt{src} (I) \ne0 } 1\f] 
+The function returns the number of non-zero elements in src : $\sum _{I: \; \texttt{src} (I) \ne0 } 1$ 
 **See also:**  mean, meanStdDev, norm, minMaxLoc, calcCovarMatrix
 
 
@@ -18719,7 +18719,7 @@ This function only supports YUV420 to RGB conversion as of now.
 Performs a forward or inverse discrete Cosine transform of 1D or 2D array.
 
 
-The function cv::dct performs a forward or inverse discrete Cosine transform (DCT) of a 1D or 2D floating-point array: -   Forward Cosine transform of a 1D vector of N elements: \f[Y = C^{(N)}  \cdot X\f] where \f[C^{(N)}_{jk}= \sqrt{\alpha_j/N} \cos \left ( \frac{\pi(2k+1)j}{2N} \right )\f] and $\alpha_0=1$, $\alpha_j=2$ for *j \> 0*. -   Inverse Cosine transform of a 1D vector of N elements: \f[X =  \left (C^{(N)} \right )^{-1}  \cdot Y =  \left (C^{(N)} \right )^T  \cdot Y\f] (since $C^{(N)}$ is an orthogonal matrix, $C^{(N)} \cdot \left(C^{(N)}\right)^T = I$ ) -   Forward 2D Cosine transform of M x N matrix: \f[Y = C^{(N)}  \cdot X  \cdot \left (C^{(N)} \right )^T\f] -   Inverse 2D Cosine transform of M x N matrix: \f[X =  \left (C^{(N)} \right )^T  \cdot X  \cdot C^{(N)}\f] 
+The function cv::dct performs a forward or inverse discrete Cosine transform (DCT) of a 1D or 2D floating-point array: -   Forward Cosine transform of a 1D vector of N elements: $Y = C^{(N)}  \cdot X$ where $C^{(N)}_{jk}= \sqrt{\alpha_j/N} \cos \left ( \frac{\pi(2k+1)j}{2N} \right )$ and $\alpha_0=1$, $\alpha_j=2$ for *j \> 0*. -   Inverse Cosine transform of a 1D vector of N elements: $X =  \left (C^{(N)} \right )^{-1}  \cdot Y =  \left (C^{(N)} \right )^T  \cdot Y$ (since $C^{(N)}$ is an orthogonal matrix, $C^{(N)} \cdot \left(C^{(N)}\right)^T = I$ ) -   Forward 2D Cosine transform of M x N matrix: $Y = C^{(N)}  \cdot X  \cdot \left (C^{(N)} \right )^T$ -   Inverse 2D Cosine transform of M x N matrix: $X =  \left (C^{(N)} \right )^T  \cdot X  \cdot C^{(N)}$ 
 The function chooses the mode of operation by looking at the flags and size of the input array: -   If (flags & #DCT_INVERSE) == 0 , the function does a forward 1D or 2D transform. Otherwise, it is an inverse 1D or 2D transform. -   If (flags & #DCT_ROWS) != 0 , the function performs a 1D transform of each row. -   If the array is a single column or a single row, the function performs a 1D transform. -   If none of the above is true, the function performs a 2D transform. 
 ```{note}
 Currently dct supports even-size arrays (2, 4, 6 ...). For data analysis and approximation, youcan pad the array when necessary. Also, the function performance depends very much, and not monotonically, on the array size (see getOptimalDFTSize ). In the current implementation DCT of a vector of size N is calculated via DFT of a vector of size N/2 . Thus, the optimal DCT size N1 \>= N can be calculated as: 
@@ -18787,7 +18787,7 @@ Decompose a homography matrix to rotation(s), translation(s) and plane normal(s)
 
 
 This function extracts relative camera motion between two views of a planar object and returns up to four mathematical solution tuples of rotation, translation, and plane normal. The decomposition of the homography matrix H is described in detail in @cite Malis2007. 
-If the homography H, induced by the plane, gives the constraint \f[s_i \vecthree{x'_i}{y'_i}{1} \sim H \vecthree{x_i}{y_i}{1}\f] on the source image points $p_i$ and the destination image points $p'_i$, then the tuple of rotations[k] and translations[k] is a change of basis from the source camera's coordinate system to the destination camera's coordinate system. However, by decomposing H, one can only get the translation normalized by the (typically unknown) depth of the scene, i.e. its direction but with normalized length. 
+If the homography H, induced by the plane, gives the constraint $s_i \vecthree{x'_i}{y'_i}{1} \sim H \vecthree{x_i}{y_i}{1}$ on the source image points $p_i$ and the destination image points $p'_i$, then the tuple of rotations[k] and translations[k] is a change of basis from the source camera's coordinate system to the destination camera's coordinate system. However, by decomposing H, one can only get the translation normalized by the (typically unknown) depth of the scene, i.e. its direction but with normalized length. 
 If point correspondences are available, at least two solutions may further be invalidated, by applying positive depth constraint, i.e. all points must be in front of the camera. 
 
 
@@ -18872,7 +18872,7 @@ Primal-dual algorithm is an algorithm for solving special types of variational p
 
 It should be noted, that this implementation was taken from the July 2013 blog entry @cite MA13 , which also contained (slightly more general) ready-to-use source code on Python. Subsequently, that code was rewritten on C++ with the usage of openCV by Vadim Pisarevsky at the end of July 2013 and finally it was slightly adapted by later authors. 
 Although the thorough discussion and justification of the algorithm involved may be found in @cite ChambolleEtAl, it might make sense to skim over it here, following @cite MA13 . To begin with, we consider the 1-byte gray-level images as the functions from the rectangular domain of pixels (it may be seen as set $\left\{(x,y)\in\mathbb{N}\times\mathbb{N}\mid 1\leq x\leq n,\;1\leq y\leq m\right\}$ for some $m,\;n\in\mathbb{N}$) into $\{0,1,\dots,255\}$. We shall denote the noised images as $f_i$ and with this view, given some image $x$ of the same size, we may measure how bad it is by the formula 
-\f[\left\|\left\|\nabla x\right\|\right\| + \lambda\sum_i\left\|\left\|x-f_i\right\|\right\|\f] 
+$\left\|\left\|\nabla x\right\|\right\| + \lambda\sum_i\left\|\left\|x-f_i\right\|\right\|$ 
 $\|\|\cdot\|\|$ here denotes $L_2$-norm and as you see, the first addend states that we want our image to be smooth (ideally, having zero gradient, thus being constant) and the second states that we want our result to be close to the observations we've got. If we treat $x$ as a function, this is exactly the functional what we seek to minimize and here the Primal-Dual algorithm comes into play. 
 
 
@@ -18956,8 +18956,8 @@ For symmetric positively-determined matrices, it is also possible to use eigen d
 Performs a forward or inverse Discrete Fourier transform of a 1D or 2D floating-point array.
 
 
-The function cv::dft performs one of the following: -   Forward the Fourier transform of a 1D vector of N elements: \f[Y = F^{(N)}  \cdot X,\f] where $F^{(N)}_{jk}=\exp(-2\pi i j k/N)$ and $i=\sqrt{-1}$ -   Inverse the Fourier transform of a 1D vector of N elements: \f[\begin{array}{l} X'=  \left (F^{(N)} \right )^{-1}  \cdot Y =  \left (F^{(N)} \right )^*  \cdot y  \\ X = (1/N)  \cdot X, \end{array}\f] where $F^*=\left(\textrm{Re}(F^{(N)})-\textrm{Im}(F^{(N)})\right)^T$ -   Forward the 2D Fourier transform of a M x N matrix: \f[Y = F^{(M)}  \cdot X  \cdot F^{(N)}\f] -   Inverse the 2D Fourier transform of a M x N matrix: \f[\begin{array}{l} X'=  \left (F^{(M)} \right )^*  \cdot Y  \cdot \left (F^{(N)} \right )^* \\ X =  \frac{1}{M \cdot N} \cdot X' \end{array}\f] 
-In case of real (single-channel) data, the output spectrum of the forward Fourier transform or input spectrum of the inverse Fourier transform can be represented in a packed format called *CCS* (complex-conjugate-symmetrical). It was borrowed from IPL (Intel\* Image Processing Library). Here is how 2D *CCS* spectrum looks: \f[\begin{bmatrix} Re Y_{0,0} & Re Y_{0,1} & Im Y_{0,1} & Re Y_{0,2} & Im Y_{0,2} &  \cdots & Re Y_{0,N/2-1} & Im Y_{0,N/2-1} & Re Y_{0,N/2}  \\ Re Y_{1,0} & Re Y_{1,1} & Im Y_{1,1} & Re Y_{1,2} & Im Y_{1,2} &  \cdots & Re Y_{1,N/2-1} & Im Y_{1,N/2-1} & Re Y_{1,N/2}  \\ Im Y_{1,0} & Re Y_{2,1} & Im Y_{2,1} & Re Y_{2,2} & Im Y_{2,2} &  \cdots & Re Y_{2,N/2-1} & Im Y_{2,N/2-1} & Im Y_{1,N/2}  \\ \hdotsfor{9} \\ Re Y_{M/2-1,0} &  Re Y_{M-3,1}  & Im Y_{M-3,1} &  \hdotsfor{3} & Re Y_{M-3,N/2-1} & Im Y_{M-3,N/2-1}& Re Y_{M/2-1,N/2}  \\ Im Y_{M/2-1,0} &  Re Y_{M-2,1}  & Im Y_{M-2,1} &  \hdotsfor{3} & Re Y_{M-2,N/2-1} & Im Y_{M-2,N/2-1}& Im Y_{M/2-1,N/2}  \\ Re Y_{M/2,0}  &  Re Y_{M-1,1} &  Im Y_{M-1,1} &  \hdotsfor{3} & Re Y_{M-1,N/2-1} & Im Y_{M-1,N/2-1}& Re Y_{M/2,N/2} \end{bmatrix}\f] 
+The function cv::dft performs one of the following: -   Forward the Fourier transform of a 1D vector of N elements: $Y = F^{(N)}  \cdot X,$ where $F^{(N)}_{jk}=\exp(-2\pi i j k/N)$ and $i=\sqrt{-1}$ -   Inverse the Fourier transform of a 1D vector of N elements: $\begin{array}{l} X'=  \left (F^{(N)} \right )^{-1}  \cdot Y =  \left (F^{(N)} \right )^*  \cdot y  \\ X = (1/N)  \cdot X, \end{array}$ where $F^*=\left(\textrm{Re}(F^{(N)})-\textrm{Im}(F^{(N)})\right)^T$ -   Forward the 2D Fourier transform of a M x N matrix: $Y = F^{(M)}  \cdot X  \cdot F^{(N)}$ -   Inverse the 2D Fourier transform of a M x N matrix: $\begin{array}{l} X'=  \left (F^{(M)} \right )^*  \cdot Y  \cdot \left (F^{(N)} \right )^* \\ X =  \frac{1}{M \cdot N} \cdot X' \end{array}$ 
+In case of real (single-channel) data, the output spectrum of the forward Fourier transform or input spectrum of the inverse Fourier transform can be represented in a packed format called *CCS* (complex-conjugate-symmetrical). It was borrowed from IPL (Intel\* Image Processing Library). Here is how 2D *CCS* spectrum looks: $\begin{bmatrix} Re Y_{0,0} & Re Y_{0,1} & Im Y_{0,1} & Re Y_{0,2} & Im Y_{0,2} &  \cdots & Re Y_{0,N/2-1} & Im Y_{0,N/2-1} & Re Y_{0,N/2}  \\ Re Y_{1,0} & Re Y_{1,1} & Im Y_{1,1} & Re Y_{1,2} & Im Y_{1,2} &  \cdots & Re Y_{1,N/2-1} & Im Y_{1,N/2-1} & Re Y_{1,N/2}  \\ Im Y_{1,0} & Re Y_{2,1} & Im Y_{2,1} & Re Y_{2,2} & Im Y_{2,2} &  \cdots & Re Y_{2,N/2-1} & Im Y_{2,N/2-1} & Im Y_{1,N/2}  \\ \hdotsfor{9} \\ Re Y_{M/2-1,0} &  Re Y_{M-3,1}  & Im Y_{M-3,1} &  \hdotsfor{3} & Re Y_{M-3,N/2-1} & Im Y_{M-3,N/2-1}& Re Y_{M/2-1,N/2}  \\ Im Y_{M/2-1,0} &  Re Y_{M-2,1}  & Im Y_{M-2,1} &  \hdotsfor{3} & Re Y_{M-2,N/2-1} & Im Y_{M-2,N/2-1}& Im Y_{M/2-1,N/2}  \\ Re Y_{M/2,0}  &  Re Y_{M-1,1} &  Im Y_{M-1,1} &  \hdotsfor{3} & Re Y_{M-1,N/2-1} & Im Y_{M-1,N/2-1}& Re Y_{M/2,N/2} \end{bmatrix}$ 
 In case of 1D transform of a real vector, the output looks like the first row of the matrix above. 
 So, the function chooses an operation mode depending on the flags and size of the input array: -   If #DFT_ROWS is set or the input array has a single row or single column, the function performs a 1D forward or inverse transform of each row of a matrix when #DFT_ROWS is set. Otherwise, it performs a 2D transform. -   If the input array is real and #DFT_INVERSE is not set, the function performs a forward 1D or 2D transform: -   When #DFT_COMPLEX_OUTPUT is set, the output is a complex matrix of the same size as input. -   When #DFT_COMPLEX_OUTPUT is not set, the output is a real matrix of the same size as input. In case of 2D transform, it uses the packed format as shown above. In case of a single 1D transform, it looks like the first row of the matrix above. In case of multiple 1D transforms (when using the #DFT_ROWS flag), each row of the output matrix looks like the first row of the matrix above. -   If the input array is complex and either #DFT_INVERSE or #DFT_REAL_OUTPUT are not set, the output is a complex array of the same size as input. The function performs a forward or inverse 1D or 2D transform of the whole input array or each row of the input array independently, depending on the flags DFT_INVERSE and DFT_ROWS. -   When #DFT_INVERSE is set and the input array is real, or it is complex but #DFT_REAL_OUTPUT is set, the output is a real array of the same size as input. The function performs a 1D or 2D inverse transformation of the whole input array or each individual row, depending on the flags #DFT_INVERSE and #DFT_ROWS. 
 If #DFT_SCALE is set, the scaling is done after the transformation. 
@@ -19026,7 +19026,7 @@ All of the above improvements have been implemented in #matchTemplate and #filte
 Dilates an image by using a specific structuring element.
 
 
-The function dilates the source image using the specified structuring element that determines the shape of a pixel neighborhood over which the maximum is taken: \f[\texttt{dst} (x,y) =  \max _{(x',y'):  \, \texttt{element} (x',y') \ne0 } \texttt{src} (x+x',y+y')\f] 
+The function dilates the source image using the specified structuring element that determines the shape of a pixel neighborhood over which the maximum is taken: $\texttt{dst} (x,y) =  \max _{(x',y'):  \, \texttt{element} (x',y') \ne0 } \texttt{src} (x+x',y+y')$ 
 The function supports the in-place mode. Dilation can be applied several ( iterations ) times. In case of multi-channel images, each channel is processed independently. 
 **See also:**  erode, morphologyEx, getStructuringElement
 
@@ -19163,7 +19163,7 @@ The function cv::divSpectrums performs the per-element division of the first arr
 Performs per-element division of two arrays or a scalar by an array.
 
 
-The function cv::divide divides one array by another: \f[\texttt{dst(I) = saturate(src1(I)*scale/src2(I))}\f] or a scalar by an array when there is no src1 : \f[\texttt{dst(I) = saturate(scale/src2(I))}\f] 
+The function cv::divide divides one array by another: $\texttt{dst(I) = saturate(src1(I)*scale/src2(I))}$ or a scalar by an array when there is no src1 : $\texttt{dst(I) = saturate(scale/src2(I))}$ 
 Different channels of multi-channel arrays are processed independently. 
 For integer types when src2(I) is zero, dst(I) will also be zero. 
 divide(scale, src2[, dst[, dtype]]) -> dst @overload 
@@ -19586,7 +19586,7 @@ Equalizes the histogram of a grayscale image.
 
 
 The function equalizes the histogram of the input image using the following algorithm: 
-- Calculate the histogram $H$ for src . - Normalize the histogram so that the sum of histogram bins is 255. - Compute the integral of the histogram: \f[H'_i =  \sum _{0  \le j < i} H(j)\f] - Transform the image using $H'$ as a look-up table: $\texttt{dst}(x,y) = H'(\texttt{src}(x,y))$ 
+- Calculate the histogram $H$ for src . - Normalize the histogram so that the sum of histogram bins is 255. - Compute the integral of the histogram: $H'_i =  \sum _{0  \le j < i} H(j)$ - Transform the image using $H'$ as a look-up table: $\texttt{dst}(x,y) = H'(\texttt{src}(x,y))$ 
 The algorithm normalizes the brightness and increases the contrast of the image. 
 
 
@@ -19604,7 +19604,7 @@ Erodes an image by using a specific structuring element.
 
 
 The function erodes the source image using the specified structuring element that determines the shape of a pixel neighborhood over which the minimum is taken: 
-\f[\texttt{dst} (x,y) =  \min _{(x',y'):  \, \texttt{element} (x',y') \ne0 } \texttt{src} (x+x',y+y')\f] 
+$\texttt{dst} (x,y) =  \min _{(x',y'):  \, \texttt{element} (x',y') \ne0 } \texttt{src} (x+x',y+y')$ 
 The function supports the in-place mode. Erosion can be applied several ( iterations ) times. In case of multi-channel images, each channel is processed independently. 
 **See also:**  dilate, morphologyEx, getStructuringElement
 
@@ -19632,7 +19632,7 @@ The function supports the in-place mode. Erosion can be applied several ( iterat
 Computes an optimal affine transformation between two 2D point sets.
 
 
-It computes \f[ \begin{bmatrix} x\\ y\\ \end{bmatrix} = \begin{bmatrix} a_{11} & a_{12}\\ a_{21} & a_{22}\\ \end{bmatrix} \begin{bmatrix} X\\ Y\\ \end{bmatrix} + \begin{bmatrix} b_1\\ b_2\\ \end{bmatrix} \f] 
+It computes $ \begin{bmatrix} x\\ y\\ \end{bmatrix} = \begin{bmatrix} a_{11} & a_{12}\\ a_{21} & a_{22}\\ \end{bmatrix} \begin{bmatrix} X\\ Y\\ \end{bmatrix} + \begin{bmatrix} b_1\\ b_2\\ \end{bmatrix} $ 
 The function estimates an optimal 2D affine transformation between two 2D point sets using the selected robust algorithm. 
 The computed transformation is then refined further (using only inliers) with the Levenberg-Marquardt method to reduce the re-projection error even more. 
 @note The RANSAC method can handle practically any ratio of outliers but needs a threshold to distinguish inliers from outliers. The method LMeDS does not need any threshold but it works correctly only when there are more than 50% of inliers. 
@@ -19658,7 +19658,7 @@ estimateAffine2D(pts1, pts2, params[, inliers]) -> retval, inliers
 :type refineIters: int
 :param from_: 
 :type from_: cv2.typing.MatLike
-:return: Output 2D affine transformation matrix $2 \times 3$ or empty matrix if transformationcould not be estimated. The returned matrix has the following form: \f[ \begin{bmatrix} a_{11} & a_{12} & b_1\\ a_{21} & a_{22} & b_2\\ \end{bmatrix} \f] 
+:return: Output 2D affine transformation matrix $2 \times 3$ or empty matrix if transformationcould not be estimated. The returned matrix has the following form: $ \begin{bmatrix} a_{11} & a_{12} & b_1\\ a_{21} & a_{22} & b_2\\ \end{bmatrix} $ 
 :rtype: tuple[cv2.typing.MatLike, cv2.typing.MatLike]
 ````
 
@@ -19668,7 +19668,7 @@ estimateAffine2D(pts1, pts2, params[, inliers]) -> retval, inliers
 Computes an optimal affine transformation between two 3D point sets.
 
 
-It computes \f[ \begin{bmatrix} x\\ y\\ z\\ \end{bmatrix} = \begin{bmatrix} a_{11} & a_{12} & a_{13}\\ a_{21} & a_{22} & a_{23}\\ a_{31} & a_{32} & a_{33}\\ \end{bmatrix} \begin{bmatrix} X\\ Y\\ Z\\ \end{bmatrix} + \begin{bmatrix} b_1\\ b_2\\ b_3\\ \end{bmatrix} \f] 
+It computes $ \begin{bmatrix} x\\ y\\ z\\ \end{bmatrix} = \begin{bmatrix} a_{11} & a_{12} & a_{13}\\ a_{21} & a_{22} & a_{23}\\ a_{31} & a_{32} & a_{33}\\ \end{bmatrix} \begin{bmatrix} X\\ Y\\ Z\\ \end{bmatrix} + \begin{bmatrix} b_1\\ b_2\\ b_3\\ \end{bmatrix} $ 
 The function estimates an optimal 3D affine transformation between two 3D point sets using the RANSAC algorithm. 
 estimateAffine3D(src, dst[, force_rotation]) -> retval, scale 
 It computes $R,s,t$ minimizing $\sum{i} dst_i - c \cdot R \cdot src_i $ where $R$ is a 3x3 rotation matrix, $t$ is a 3x1 translation vector and $s$ is a scalar size value. This is an implementation of the algorithm by Umeyama \cite umeyama1991least . The estimated affine transform has a homogeneous scale which is a subclass of affine transformations with 7 degrees of freedom. The paired point sets need to comprise at least 3 points each. 
@@ -19678,7 +19678,7 @@ It computes $R,s,t$ minimizing $\sum{i} dst_i - c \cdot R \cdot src_i $ where $R
 :type src: cv2.typing.MatLike
 :param dst: Second input 3D point set.
 :type dst: cv2.typing.MatLike
-:param out: Output 3D affine transformation matrix $3 \times 4$ of the form\f[ \begin{bmatrix} a_{11} & a_{12} & a_{13} & b_1\\ a_{21} & a_{22} & a_{23} & b_2\\ a_{31} & a_{32} & a_{33} & b_3\\ \end{bmatrix} \f] 
+:param out: Output 3D affine transformation matrix $3 \times 4$ of the form$ \begin{bmatrix} a_{11} & a_{12} & a_{13} & b_1\\ a_{21} & a_{22} & a_{23} & b_2\\ a_{31} & a_{32} & a_{33} & b_3\\ \end{bmatrix} $ 
 :type out: cv2.typing.MatLike | None
 :param inliers: Output vector indicating which points are inliers (1-inlier, 0-outlier).
 :type inliers: cv2.typing.MatLike | None
@@ -19690,7 +19690,7 @@ It computes $R,s,t$ minimizing $\sum{i} dst_i - c \cdot R \cdot src_i $ where $R
 :type scale: 
 :param force_rotation: If true, the returned rotation will never be a reflection.This might be unwanted, e.g. when optimizing a transform between a right- and a left-handed coordinate system. 
 :type force_rotation: 
-:return: 3D affine transformation matrix $3 \times 4$ of the form\f[T = \begin{bmatrix} R & t\\ \end{bmatrix} \f] 
+:return: 3D affine transformation matrix $3 \times 4$ of the form$T = \begin{bmatrix} R & t\\ \end{bmatrix} $ 
 :rtype: tuple[int, cv2.typing.MatLike, cv2.typing.MatLike]
 ````
 
@@ -19702,7 +19702,7 @@ Computes an optimal limited affine transformation with 4 degrees of freedom betw
 
 The function estimates an optimal 2D affine transformation with 4 degrees of freedom limited to combinations of translation, rotation, and uniform scaling. Uses the selected algorithm for robust estimation. 
 The computed transformation is then refined further (using only inliers) with the Levenberg-Marquardt method to reduce the re-projection error even more. 
-Estimated transformation matrix is: \f[ \begin{bmatrix} \cos(\theta) \cdot s & -\sin(\theta) \cdot s & t_x \\ \sin(\theta) \cdot s & \cos(\theta) \cdot s & t_y \end{bmatrix} \f] Where $ \theta $ is the rotation angle, $ s $ the scaling factor and $ t_x, t_y $ are translations in $ x, y $ axes respectively. 
+Estimated transformation matrix is: $ \begin{bmatrix} \cos(\theta) \cdot s & -\sin(\theta) \cdot s & t_x \\ \sin(\theta) \cdot s & \cos(\theta) \cdot s & t_y \end{bmatrix} $ Where $ \theta $ is the rotation angle, $ s $ the scaling factor and $ t_x, t_y $ are translations in $ x, y $ axes respectively. 
 @note The RANSAC method can handle practically any ratio of outliers but need a threshold to distinguish inliers from outliers. The method LMeDS does not need any threshold but it works correctly only when there are more than 50% of inliers. 
 **See also:** estimateAffine2D, getAffineTransform
 
@@ -19761,7 +19761,7 @@ The optional sharpness array is of type CV_32FC1 and has for each calculated pro
 Computes an optimal translation between two 3D point sets.
 
 
-It computes \f[ \begin{bmatrix} x\\ y\\ z\\ \end{bmatrix} = \begin{bmatrix} X\\ Y\\ Z\\ \end{bmatrix} + \begin{bmatrix} b_1\\ b_2\\ b_3\\ \end{bmatrix} \f] 
+It computes $ \begin{bmatrix} x\\ y\\ z\\ \end{bmatrix} = \begin{bmatrix} X\\ Y\\ Z\\ \end{bmatrix} + \begin{bmatrix} b_1\\ b_2\\ b_3\\ \end{bmatrix} $ 
 The function estimates an optimal 3D translation between two 3D point sets using the RANSAC algorithm. 
 
 
@@ -19769,7 +19769,7 @@ The function estimates an optimal 3D translation between two 3D point sets using
 :type src: cv2.typing.MatLike
 :param dst: Second input 3D point set containing $(x,y,z)$.
 :type dst: cv2.typing.MatLike
-:param out: Output 3D translation vector $3 \times 1$ of the form\f[ \begin{bmatrix} b_1 \\ b_2 \\ b_3 \\ \end{bmatrix} \f] 
+:param out: Output 3D translation vector $3 \times 1$ of the form$ \begin{bmatrix} b_1 \\ b_2 \\ b_3 \\ \end{bmatrix} $ 
 :type out: cv2.typing.MatLike | None
 :param inliers: Output vector indicating which points are inliers (1-inlier, 0-outlier).
 :type inliers: cv2.typing.MatLike | None
@@ -19786,7 +19786,7 @@ The function estimates an optimal 3D translation between two 3D point sets using
 Calculates the exponent of every array element.
 
 
-The function cv::exp calculates the exponent of every element of the input array: \f[\texttt{dst} [I] = e^{ src(I) }\f] 
+The function cv::exp calculates the exponent of every element of the input array: $\texttt{dst} [I] = e^{ src(I) }$ 
 The maximum relative error is about 7e-6 for single-precision input and less than 1e-10 for double-precision input. Currently, the function converts denormalized values to zeros on output. Special values (NaN, Inf) are not handled. 
 **See also:** log , cartToPolar , polarToCart , phase , pow , sqrt , magnitude
 
@@ -19992,7 +19992,7 @@ Convolves an image with the kernel.
 
 The function applies an arbitrary linear filter to an image. In-place operation is supported. When the aperture is partially outside the image, the function interpolates outlier pixel values according to the specified border mode. 
 The function does actually compute correlation, not the convolution: 
-\f[\texttt{dst} (x,y) =  \sum _{ \substack{0\leq x' < \texttt{kernel.cols}\\{0\leq y' < \texttt{kernel.rows}}}}  \texttt{kernel} (x',y')* \texttt{src} (x+x'- \texttt{anchor.x} ,y+y'- \texttt{anchor.y} )\f] 
+$\texttt{dst} (x,y) =  \sum _{ \substack{0\leq x' < \texttt{kernel.cols}\\{0\leq y' < \texttt{kernel.rows}}}}  \texttt{kernel} (x',y')* \texttt{src} (x+x'- \texttt{anchor.x} ,y+y'- \texttt{anchor.y} )$ 
 That is, the kernel is not mirrored around the anchor point. If you need a real convolution, flip the kernel using #flip and set the new anchor to `(kernel.cols - anchor.x - 1, kernel.rows - anchor.y - 1)`. 
 The function uses the DFT-based algorithm in case of sufficiently large kernels (~`11 x 11` or larger) and the direct algorithm for small kernels. 
 **See also:**  sepFilter2D, dft, matchTemplate
@@ -20243,14 +20243,14 @@ Calculates an essential matrix from the corresponding points in two images from 
 
 
 This function estimates essential matrix based on the five-point algorithm solver in @cite Nister03 . @cite SteweniusCFS is also a related. The epipolar geometry is described by the following equation: 
-\f[[p_2; 1]^T K^{-T} E K^{-1} [p_1; 1] = 0\f] 
+$[p_2; 1]^T K^{-T} E K^{-1} [p_1; 1] = 0$ 
 where $E$ is an essential matrix, $p_1$ and $p_2$ are corresponding points in the first and the second images, respectively. The result of this function may be passed further to #decomposeEssentialMat or #recoverPose to recover the relative pose between cameras. 
 findEssentialMat(points1, points2[, focal[, pp[, method[, prob[, threshold[, maxIters[, mask]]]]]]]) -> retval, mask @overload 
 This function differs from the one above that it computes camera intrinsic matrix from focal length and principal point: 
-\f[A = \begin{bmatrix} f & 0 & x_{pp}  \\ 0 & f & y_{pp}  \\ 0 & 0 & 1 \end{bmatrix}\f] 
+$A = \begin{bmatrix} f & 0 & x_{pp}  \\ 0 & f & y_{pp}  \\ 0 & 0 & 1 \end{bmatrix}$ 
 findEssentialMat(points1, points2, cameraMatrix1, distCoeffs1, cameraMatrix2, distCoeffs2[, method[, prob[, threshold[, mask]]]]) -> retval, mask 
 This function estimates essential matrix based on the five-point algorithm solver in @cite Nister03 . @cite SteweniusCFS is also a related. The epipolar geometry is described by the following equation: 
-\f[[p_2; 1]^T K^{-T} E K^{-1} [p_1; 1] = 0\f] 
+$[p_2; 1]^T K^{-T} E K^{-1} [p_1; 1] = 0$ 
 where $E$ is an essential matrix, $p_1$ and $p_2$ are corresponding points in the first and the second images, respectively. The result of this function may be passed further to #decomposeEssentialMat or  #recoverPose to recover the relative pose between cameras. 
 findEssentialMat(points1, points2, cameraMatrix1, cameraMatrix2, dist_coeff1, dist_coeff2, params[, mask]) -> retval, mask 
 
@@ -20293,7 +20293,7 @@ Calculates a fundamental matrix from the corresponding points in two images.
 
 
 The epipolar geometry is described by the following equation: 
-\f[[p_2; 1]^T F [p_1; 1] = 0\f] 
+$[p_2; 1]^T F [p_1; 1] = 0$ 
 where $F$ is a fundamental matrix, $p_1$ and $p_2$ are corresponding points in the first and the second images, respectively. 
 The function calculates the fundamental matrix using one of four methods listed above and returns the found fundamental matrix. Normally just one matrix is found. But in case of the 7-point algorithm, the function may return up to 3 solutions ( $9 \times 3$ matrix that stores all 3 matrices sequentially). 
 The calculated fundamental matrix may be passed further to #computeCorrespondEpilines that finds the epipolar lines corresponding to the specified points. It can also be passed to #stereoRectifyUncalibrated to compute the rectification transformation. : 
@@ -20342,9 +20342,9 @@ Finds a perspective transformation between two planes.
 
 
 The function finds and returns the perspective transformation $H$ between the source and the destination planes: 
-\f[s_i  \vecthree{x'_i}{y'_i}{1} \sim H  \vecthree{x_i}{y_i}{1}\f] 
+$s_i  \vecthree{x'_i}{y'_i}{1} \sim H  \vecthree{x_i}{y_i}{1}$ 
 so that the back-projection error 
-\f[\sum _i \left ( x'_i- \frac{h_{11} x_i + h_{12} y_i + h_{13}}{h_{31} x_i + h_{32} y_i + h_{33}} \right )^2+ \left ( y'_i- \frac{h_{21} x_i + h_{22} y_i + h_{23}}{h_{31} x_i + h_{32} y_i + h_{33}} \right )^2\f] 
+$\sum _i \left ( x'_i- \frac{h_{11} x_i + h_{12} y_i + h_{13}}{h_{31} x_i + h_{32} y_i + h_{33}} \right )^2+ \left ( y'_i- \frac{h_{21} x_i + h_{22} y_i + h_{23}}{h_{31} x_i + h_{32} y_i + h_{33}} \right )^2$ 
 is minimized. If the parameter method is set to the default value 0, the function uses all the point pairs to compute an initial homography estimate with a simple least-squares scheme. 
 However, if not all of the point pairs ( $srcPoints_i$, $dstPoints_i$ ) fit the rigid perspective transformation (that is, there are some outliers), this initial estimate will be poor. In this case, you can use one of the three robust methods. The methods RANSAC, LMeDS and RHO try many different random subsets of the corresponding point pairs (of four pairs each, collinear pairs are discarded), estimate the homography matrix using this subset and a simple least-squares algorithm, and then compute the quality/goodness of the computed homography (which is the number of inliers for RANSAC or the least median re-projection error for LMeDS). The best subset is then used to produce the initial estimate of the homography matrix and the mask of inliers/outliers. 
 Regardless of the method, robust or not, the computed homography matrix is refined further (using inliers only in case of a robust method) with the Levenberg-Marquardt method to reduce the re-projection error even more. 
@@ -20360,7 +20360,7 @@ findHomography(srcPoints, dstPoints, params[, mask]) -> retval, mask @overload
 :type dstPoints: cv2.typing.MatLike
 :param method: Method used to compute a homography matrix. The following methods are possible:-   **0** - a regular method using all the points, i.e., the least squares method -   @ref RANSAC - RANSAC-based robust method -   @ref LMEDS - Least-Median robust method -   @ref RHO - PROSAC-based robust method 
 :type method: int
-:param ransacReprojThreshold: Maximum allowed reprojection error to treat a point pair as an inlier(used in the RANSAC and RHO methods only). That is, if \f[\| \texttt{dstPoints} _i -  \texttt{convertPointsHomogeneous} ( \texttt{H} \cdot \texttt{srcPoints} _i) \|_2  >  \texttt{ransacReprojThreshold}\f] then the point $i$ is considered as an outlier. If srcPoints and dstPoints are measured in pixels, it usually makes sense to set this parameter somewhere in the range of 1 to 10. 
+:param ransacReprojThreshold: Maximum allowed reprojection error to treat a point pair as an inlier(used in the RANSAC and RHO methods only). That is, if $\| \texttt{dstPoints} _i -  \texttt{convertPointsHomogeneous} ( \texttt{H} \cdot \texttt{srcPoints} _i) \|_2  >  \texttt{ransacReprojThreshold}$ then the point $i$ is considered as an outlier. If srcPoints and dstPoints are measured in pixels, it usually makes sense to set this parameter somewhere in the range of 1 to 10. 
 :type ransacReprojThreshold: float
 :param mask: Optional output mask set by a robust method ( RANSAC or LMeDS ). Note that the inputmask values are ignored. 
 :type mask: cv2.typing.MatLike | None
@@ -20412,9 +20412,9 @@ Finds the geometric transform (warp) between two images in terms of the ECC crit
 
 
 The function estimates the optimum transformation (warpMatrix) with respect to ECC criterion (@cite EP08), that is 
-\f[\texttt{warpMatrix} = \arg\max_{W} \texttt{ECC}(\texttt{templateImage}(x,y),\texttt{inputImage}(x',y'))\f] 
+$\texttt{warpMatrix} = \arg\max_{W} \texttt{ECC}(\texttt{templateImage}(x,y),\texttt{inputImage}(x',y'))$ 
 where 
-\f[\begin{bmatrix} x' \\ y' \end{bmatrix} = W \cdot \begin{bmatrix} x \\ y \\ 1 \end{bmatrix}\f] 
+$\begin{bmatrix} x' \\ y' \end{bmatrix} = W \cdot \begin{bmatrix} x \\ y \\ 1 \end{bmatrix}$ 
 (the equation holds with homogeneous coordinates for homography). It returns the final enhanced correlation coefficient, that is the correlation coefficient between the template image and the final warped input image. When a $3\times 3$ matrix is given with motionType =0, 1 or 2, the third row is ignored. 
 Unlike findHomography and estimateRigidTransform, the function findTransformECC implements an area-based alignment that builds on intensity similarities. In essence, the function updates the initial transformation that roughly aligns the images. If this information is missing, the identity warp (unity matrix) is used as an initialization. Note that if images undergo strong displacements/rotations, an initial transformation that roughly aligns the images is necessary (e.g., a simple euclidean/similarity transform that allows for the images showing the same image content approximately). Use inverse warping in the second image to take an image close to the first one, i.e. use the flag WARP_INVERSE_MAP with warpAffine or warpPerspective. See also the OpenCV sample image_alignment.cpp that demonstrates the use of the function. Note that the function throws an exception if algorithm does not converges. 
 @sa computeECC, estimateAffine2D, estimateAffinePartial2D, findHomography 
@@ -20495,7 +20495,7 @@ The system produces only one positive eigenvalue $ \lambda$ which is chosen as t
 Fits a line to a 2D or 3D point set.
 
 
-The function fitLine fits a line to a 2D or 3D point set by minimizing $\sum_i \rho(r_i)$ where $r_i$ is a distance between the $i^{th}$ point, the line and $\rho(r)$ is a distance function, one of the following: -  DIST_L2 \f[\rho (r) = r^2/2  \quad \text{(the simplest and the fastest least-squares method)}\f] - DIST_L1 \f[\rho (r) = r\f] - DIST_L12 \f[\rho (r) = 2  \cdot ( \sqrt{1 + \frac{r^2}{2}} - 1)\f] - DIST_FAIR \f[\rho \left (r \right ) = C^2  \cdot \left (  \frac{r}{C} -  \log{\left(1 + \frac{r}{C}\right)} \right )  \quad \text{where} \quad C=1.3998\f] - DIST_WELSCH \f[\rho \left (r \right ) =  \frac{C^2}{2} \cdot \left ( 1 -  \exp{\left(-\left(\frac{r}{C}\right)^2\right)} \right )  \quad \text{where} \quad C=2.9846\f] - DIST_HUBER \f[\rho (r) =  \fork{r^2/2}{if \(r < C\)}{C \cdot (r-C/2)}{otherwise} \quad \text{where} \quad C=1.345\f] 
+The function fitLine fits a line to a 2D or 3D point set by minimizing $\sum_i \rho(r_i)$ where $r_i$ is a distance between the $i^{th}$ point, the line and $\rho(r)$ is a distance function, one of the following: -  DIST_L2 $\rho (r) = r^2/2  \quad \text{(the simplest and the fastest least-squares method)}$ - DIST_L1 $\rho (r) = r$ - DIST_L12 $\rho (r) = 2  \cdot ( \sqrt{1 + \frac{r^2}{2}} - 1)$ - DIST_FAIR $\rho \left (r \right ) = C^2  \cdot \left (  \frac{r}{C} -  \log{\left(1 + \frac{r}{C}\right)} \right )  \quad \text{where} \quad C=1.3998$ - DIST_WELSCH $\rho \left (r \right ) =  \frac{C^2}{2} \cdot \left ( 1 -  \exp{\left(-\left(\frac{r}{C}\right)^2\right)} \right )  \quad \text{where} \quad C=2.9846$ - DIST_HUBER $\rho (r) =  \fork{r^2/2}{if \(r < C\)}{C \cdot (r-C/2)}{otherwise} \quad \text{where} \quad C=1.345$ 
 The algorithm is based on the M-estimator ( <http://en.wikipedia.org/wiki/M-estimator> ) technique that iteratively fits the line using the weighted least-squares algorithm. After each iteration the weights $w_i$ are adjusted to be inversely proportional to $\rho(r_i)$ . 
 
 
@@ -20520,7 +20520,7 @@ The algorithm is based on the M-estimator ( <http://en.wikipedia.org/wiki/M-esti
 Flips a 2D array around vertical, horizontal, or both axes.
 
 
-The function cv::flip flips the array in one of three different ways (row and column indices are 0-based): \f[\texttt{dst} _{ij} = \left\{ \begin{array}{l l} \texttt{src} _{\texttt{src.rows}-i-1,j} & if\;  \texttt{flipCode} = 0 \\ \texttt{src} _{i, \texttt{src.cols} -j-1} & if\;  \texttt{flipCode} > 0 \\ \texttt{src} _{ \texttt{src.rows} -i-1, \texttt{src.cols} -j-1} & if\; \texttt{flipCode} < 0 \\ \end{array} \right.\f] The example scenarios of using the function are the following: Vertical flipping of the image (flipCode == 0) to switch between top-left and bottom-left image origin. This is a typical operation in video processing on Microsoft Windows\* OS. Horizontal flipping of the image with the subsequent horizontal shift and absolute difference calculation to check for a vertical-axis symmetry (flipCode \> 0). Simultaneous horizontal and vertical flipping of the image with the subsequent shift and absolute difference calculation to check for a central symmetry (flipCode \< 0). Reversing the order of point arrays (flipCode \> 0 or flipCode == 0). 
+The function cv::flip flips the array in one of three different ways (row and column indices are 0-based): $\texttt{dst} _{ij} = \left\{ \begin{array}{l l} \texttt{src} _{\texttt{src.rows}-i-1,j} & if\;  \texttt{flipCode} = 0 \\ \texttt{src} _{i, \texttt{src.cols} -j-1} & if\;  \texttt{flipCode} > 0 \\ \texttt{src} _{ \texttt{src.rows} -i-1, \texttt{src.cols} -j-1} & if\; \texttt{flipCode} < 0 \\ \end{array} \right.$ The example scenarios of using the function are the following: Vertical flipping of the image (flipCode == 0) to switch between top-left and bottom-left image origin. This is a typical operation in video processing on Microsoft Windows\* OS. Horizontal flipping of the image with the subsequent horizontal shift and absolute difference calculation to check for a vertical-axis symmetry (flipCode \> 0). Simultaneous horizontal and vertical flipping of the image with the subsequent shift and absolute difference calculation to check for a central symmetry (flipCode \< 0). Reversing the order of point arrays (flipCode \> 0 or flipCode == 0). 
 **See also:** transpose , repeat , completeSymm
 
 
@@ -20557,10 +20557,10 @@ Fills a connected component with the given color.
 
 
 The function cv::floodFill fills a connected component starting from the seed point with the specified color. The connectivity is determined by the color/brightness closeness of the neighbor pixels. The pixel at $(x,y)$ is considered to belong to the repainted domain if: 
-- in case of a grayscale image and floating range \f[\texttt{src} (x',y')- \texttt{loDiff} \leq \texttt{src} (x,y)  \leq \texttt{src} (x',y')+ \texttt{upDiff}\f] 
-- in case of a grayscale image and fixed range \f[\texttt{src} ( \texttt{seedPoint} .x, \texttt{seedPoint} .y)- \texttt{loDiff} \leq \texttt{src} (x,y)  \leq \texttt{src} ( \texttt{seedPoint} .x, \texttt{seedPoint} .y)+ \texttt{upDiff}\f] 
-- in case of a color image and floating range \f[\texttt{src} (x',y')_r- \texttt{loDiff} _r \leq \texttt{src} (x,y)_r \leq \texttt{src} (x',y')_r+ \texttt{upDiff} _r,\f] \f[\texttt{src} (x',y')_g- \texttt{loDiff} _g \leq \texttt{src} (x,y)_g \leq \texttt{src} (x',y')_g+ \texttt{upDiff} _g\f] and \f[\texttt{src} (x',y')_b- \texttt{loDiff} _b \leq \texttt{src} (x,y)_b \leq \texttt{src} (x',y')_b+ \texttt{upDiff} _b\f] 
-- in case of a color image and fixed range \f[\texttt{src} ( \texttt{seedPoint} .x, \texttt{seedPoint} .y)_r- \texttt{loDiff} _r \leq \texttt{src} (x,y)_r \leq \texttt{src} ( \texttt{seedPoint} .x, \texttt{seedPoint} .y)_r+ \texttt{upDiff} _r,\f] \f[\texttt{src} ( \texttt{seedPoint} .x, \texttt{seedPoint} .y)_g- \texttt{loDiff} _g \leq \texttt{src} (x,y)_g \leq \texttt{src} ( \texttt{seedPoint} .x, \texttt{seedPoint} .y)_g+ \texttt{upDiff} _g\f] and \f[\texttt{src} ( \texttt{seedPoint} .x, \texttt{seedPoint} .y)_b- \texttt{loDiff} _b \leq \texttt{src} (x,y)_b \leq \texttt{src} ( \texttt{seedPoint} .x, \texttt{seedPoint} .y)_b+ \texttt{upDiff} _b\f] 
+- in case of a grayscale image and floating range $\texttt{src} (x',y')- \texttt{loDiff} \leq \texttt{src} (x,y)  \leq \texttt{src} (x',y')+ \texttt{upDiff}$ 
+- in case of a grayscale image and fixed range $\texttt{src} ( \texttt{seedPoint} .x, \texttt{seedPoint} .y)- \texttt{loDiff} \leq \texttt{src} (x,y)  \leq \texttt{src} ( \texttt{seedPoint} .x, \texttt{seedPoint} .y)+ \texttt{upDiff}$ 
+- in case of a color image and floating range $\texttt{src} (x',y')_r- \texttt{loDiff} _r \leq \texttt{src} (x,y)_r \leq \texttt{src} (x',y')_r+ \texttt{upDiff} _r,$ $\texttt{src} (x',y')_g- \texttt{loDiff} _g \leq \texttt{src} (x,y)_g \leq \texttt{src} (x',y')_g+ \texttt{upDiff} _g$ and $\texttt{src} (x',y')_b- \texttt{loDiff} _b \leq \texttt{src} (x,y)_b \leq \texttt{src} (x',y')_b+ \texttt{upDiff} _b$ 
+- in case of a color image and fixed range $\texttt{src} ( \texttt{seedPoint} .x, \texttt{seedPoint} .y)_r- \texttt{loDiff} _r \leq \texttt{src} (x,y)_r \leq \texttt{src} ( \texttt{seedPoint} .x, \texttt{seedPoint} .y)_r+ \texttt{upDiff} _r,$ $\texttt{src} ( \texttt{seedPoint} .x, \texttt{seedPoint} .y)_g- \texttt{loDiff} _g \leq \texttt{src} (x,y)_g \leq \texttt{src} ( \texttt{seedPoint} .x, \texttt{seedPoint} .y)_g+ \texttt{upDiff} _g$ and $\texttt{src} ( \texttt{seedPoint} .x, \texttt{seedPoint} .y)_b- \texttt{loDiff} _b \leq \texttt{src} (x,y)_b \leq \texttt{src} ( \texttt{seedPoint} .x, \texttt{seedPoint} .y)_b+ \texttt{upDiff} _b$ 
 where $src(x',y')$ is the value of one of pixel neighbors that is already known to belong to the component. That is, to be added to the connected component, a color/brightness of the pixel should be close enough to: - Color/brightness of one of its neighbors that already belong to the connected component in case of a floating range. - Color/brightness of the seed point in case of a fixed range. 
 Use these functions to either mark a connected component with the specified color in-place, or build a mask and then extract the contour, or copy the region to another image, and so on. 
 ```{note}
@@ -20594,7 +20594,7 @@ Since the mask is larger than the filled image, a pixel $(x, y)$ in image corres
 Performs generalized matrix multiplication.
 
 
-The function cv::gemm performs generalized matrix multiplication similar to the gemm functions in BLAS level 3. For example, `gemm(src1, src2, alpha, src3, beta, dst, GEMM_1_T + GEMM_3_T)` corresponds to \f[\texttt{dst} =  \texttt{alpha} \cdot \texttt{src1} ^T  \cdot \texttt{src2} +  \texttt{beta} \cdot \texttt{src3} ^T\f] 
+The function cv::gemm performs generalized matrix multiplication similar to the gemm functions in BLAS level 3. For example, `gemm(src1, src2, alpha, src3, beta, dst, GEMM_1_T + GEMM_3_T)` corresponds to $\texttt{dst} =  \texttt{alpha} \cdot \texttt{src1} ^T  \cdot \texttt{src2} +  \texttt{beta} \cdot \texttt{src3} ^T$ 
 In case of complex (two-channel) data, performed a complex matrix multiplication. 
 The function can be replaced with a matrix expression. For example, the above call can be replaced with: 
 ```cpp
@@ -20683,7 +20683,7 @@ Returns the default new camera matrix.
 
 The function returns the camera matrix that is either an exact copy of the input cameraMatrix (when centerPrinicipalPoint=false ), or the modified one (when centerPrincipalPoint=true). 
 In the latter case, the new camera matrix will be: 
-\f[\begin{bmatrix} f_x && 0 && ( \texttt{imgSize.width} -1)*0.5  \\ 0 && f_y && ( \texttt{imgSize.height} -1)*0.5  \\ 0 && 0 && 1 \end{bmatrix} ,\f] 
+$\begin{bmatrix} f_x && 0 && ( \texttt{imgSize.width} -1)*0.5  \\ 0 && f_y && ( \texttt{imgSize.height} -1)*0.5  \\ 0 && 0 && 1 \end{bmatrix} ,$ 
 where $f_x$ and $f_y$ are $(0,0)$ and $(1,1)$ elements of cameraMatrix, respectively. 
 By default, the undistortion functions in OpenCV (see #initUndistortRectifyMap, #undistort) do not move the principal point. However, when you work with stereo, it is important to move the principal points in both views to the same y-coordinate (which is required by most of stereo correspondence algorithms), and may be to the same x-coordinate too. So, you can form the new camera matrix for each view where the principal points are located at the center. 
 
@@ -20775,7 +20775,7 @@ Returns Gaussian filter coefficients.
 
 
 The function computes and returns the $\texttt{ksize} \times 1$ matrix of Gaussian filter coefficients: 
-\f[G_i= \alpha *e^{-(i-( \texttt{ksize} -1)/2)^2/(2* \texttt{sigma}^2)},\f] 
+$G_i= \alpha *e^{-(i-( \texttt{ksize} -1)/2)^2/(2* \texttt{sigma}^2)},$ 
 where $i=0..\texttt{ksize}-1$ and $\alpha$ is the scale factor chosen so that $\sum_i G_i=1$. 
 Two of such generated kernels can be passed to sepFilter2D. Those functions automatically recognize smoothing kernels (a symmetrical kernel with sum of weights equal to 1) and handle them accordingly. You may also use the higher-level GaussianBlur. 
 **See also:**  sepFilter2D, getDerivKernels, getStructuringElement, GaussianBlur
@@ -20892,9 +20892,9 @@ Calculates a perspective transform from four pairs of the corresponding points.
 
 
 The function calculates the $3 \times 3$ matrix of a perspective transform so that: 
-\f[\begin{bmatrix} t_i x'_i \\ t_i y'_i \\ t_i \end{bmatrix} = \texttt{map_matrix} \cdot \begin{bmatrix} x_i \\ y_i \\ 1 \end{bmatrix}\f] 
+$\begin{bmatrix} t_i x'_i \\ t_i y'_i \\ t_i \end{bmatrix} = \texttt{map_matrix} \cdot \begin{bmatrix} x_i \\ y_i \\ 1 \end{bmatrix}$ 
 where 
-\f[dst(i)=(x'_i,y'_i), src(i)=(x_i, y_i), i=0,1,2,3\f] 
+$dst(i)=(x'_i,y'_i), src(i)=(x_i, y_i), i=0,1,2,3$ 
 **See also:**  findHomography, warpPerspective, perspectiveTransform
 
 
@@ -20914,7 +20914,7 @@ Retrieves a pixel rectangle from an image with sub-pixel accuracy.
 
 
 The function getRectSubPix extracts pixels from src: 
-\f[patch(x, y) = src(x +  \texttt{center.x} - ( \texttt{dst.cols} -1)*0.5, y +  \texttt{center.y} - ( \texttt{dst.rows} -1)*0.5)\f] 
+$patch(x, y) = src(x +  \texttt{center.x} - ( \texttt{dst.cols} -1)*0.5, y +  \texttt{center.y} - ( \texttt{dst.rows} -1)*0.5)$ 
 where the values of the pixels at non-integer coordinates are retrieved using bilinear interpolation. Every channel of multi-channel images is processed independently. Also the image should be a single channel or three channel image. While the center of the rectangle must be inside the image, parts of the rectangle may be outside. 
 **See also:**  warpAffine, warpPerspective
 
@@ -20939,9 +20939,9 @@ Calculates an affine matrix of 2D rotation.
 
 
 The function calculates the following matrix: 
-\f[\begin{bmatrix} \alpha &  \beta & (1- \alpha )  \cdot \texttt{center.x} -  \beta \cdot \texttt{center.y} \\ - \beta &  \alpha &  \beta \cdot \texttt{center.x} + (1- \alpha )  \cdot \texttt{center.y} \end{bmatrix}\f] 
+$\begin{bmatrix} \alpha &  \beta & (1- \alpha )  \cdot \texttt{center.x} -  \beta \cdot \texttt{center.y} \\ - \beta &  \alpha &  \beta \cdot \texttt{center.x} + (1- \alpha )  \cdot \texttt{center.y} \end{bmatrix}$ 
 where 
-\f[\begin{array}{l} \alpha =  \texttt{scale} \cdot \cos \texttt{angle} , \\ \beta =  \texttt{scale} \cdot \sin \texttt{angle} \end{array}\f] 
+$\begin{array}{l} \alpha =  \texttt{scale} \cdot \cos \texttt{angle} , \\ \beta =  \texttt{scale} \cdot \sin \texttt{angle} \end{array}$ 
 The transformation maps the rotation center to itself. If this is not the target, adjust the shift. 
 **See also:**  getAffineTransform, warpAffine, transform
 
@@ -21663,7 +21663,7 @@ The sample below shows how to create a BGRA image, how to set custom compression
  Checks if array elements lie between the elements of two other arrays.
 
 
-The function checks the range as follows: -   For every element of a single-channel input array: \f[\texttt{dst} (I)= \texttt{lowerb} (I)_0  \leq \texttt{src} (I)_0 \leq  \texttt{upperb} (I)_0\f] -   For two-channel arrays: \f[\texttt{dst} (I)= \texttt{lowerb} (I)_0  \leq \texttt{src} (I)_0 \leq  \texttt{upperb} (I)_0  \land \texttt{lowerb} (I)_1  \leq \texttt{src} (I)_1 \leq  \texttt{upperb} (I)_1\f] -   and so forth. 
+The function checks the range as follows: -   For every element of a single-channel input array: $\texttt{dst} (I)= \texttt{lowerb} (I)_0  \leq \texttt{src} (I)_0 \leq  \texttt{upperb} (I)_0$ -   For two-channel arrays: $\texttt{dst} (I)= \texttt{lowerb} (I)_0  \leq \texttt{src} (I)_0 \leq  \texttt{upperb} (I)_0  \land \texttt{lowerb} (I)_1  \leq \texttt{src} (I)_1 \leq  \texttt{upperb} (I)_1$ -   and so forth. 
 That is, dst (I) is set to 255 (all 1 -bits) if src (I) is within the specified 1D, 2D, 3D, ... box and 0 otherwise. 
 When the lower and/or upper boundary parameters are scalars, the indexes (I) at lowerb and upperb in the above formulas should be omitted. 
 
@@ -21708,11 +21708,11 @@ Computes the projection and inverse-rectification transformation map. In essense
 The function computes the joint projection and inverse rectification transformation and represents the result in the form of maps for #remap. The projected image looks like a distorted version of the original which, once projected by a projector, should visually match the original. In case of a monocular camera, newCameraMatrix is usually equal to cameraMatrix, or it can be computed by #getOptimalNewCameraMatrix for a better control over scaling. In case of a projector-camera pair, newCameraMatrix is normally set to P1 or P2 computed by #stereoRectify . 
 The projector is oriented differently in the coordinate space, according to R. In case of projector-camera pairs, this helps align the projector (in the same manner as #initUndistortRectifyMap for the camera) to create a stereo-rectified pair. This allows epipolar lines on both images to become horizontal and have the same y-coordinate (in case of a horizontally aligned projector-camera pair). 
 The function builds the maps for the inverse mapping algorithm that is used by #remap. That is, for each pixel $(u, v)$ in the destination (projected and inverse-rectified) image, the function computes the corresponding coordinates in the source image (that is, in the original digital image). The following process is applied: 
-\f[ \begin{array}{l} \text{newCameraMatrix}\\ x  \leftarrow (u - {c'}_x)/{f'}_x  \\ y  \leftarrow (v - {c'}_y)/{f'}_y  \\ 
+$ \begin{array}{l} \text{newCameraMatrix}\\ x  \leftarrow (u - {c'}_x)/{f'}_x  \\ y  \leftarrow (v - {c'}_y)/{f'}_y  \\ 
 \\\text{Undistortion} \\\scriptsize{\textit{though equation shown is for radial undistortion, function implements cv::undistortPoints()}}\\ r^2  \leftarrow x^2 + y^2 \\ \theta \leftarrow \frac{1 + k_1 r^2 + k_2 r^4 + k_3 r^6}{1 + k_4 r^2 + k_5 r^4 + k_6 r^6}\\ x' \leftarrow \frac{x}{\theta} \\ y'  \leftarrow \frac{y}{\theta} \\ 
 \\\text{Rectification}\\ {[X\,Y\,W]} ^T  \leftarrow R*[x' \, y' \, 1]^T  \\ x''  \leftarrow X/W  \\ y''  \leftarrow Y/W  \\ 
-\\\text{cameraMatrix}\\ map_x(u,v)  \leftarrow x'' f_x + c_x  \\ map_y(u,v)  \leftarrow y'' f_y + c_y \end{array} \f] where $(k_1, k_2, p_1, p_2[, k_3[, k_4, k_5, k_6[, s_1, s_2, s_3, s_4[, \tau_x, \tau_y]]]])$ are the distortion coefficients vector distCoeffs. 
-In case of a stereo-rectified projector-camera pair, this function is called for the projector while #initUndistortRectifyMap is called for the camera head. This is done after #stereoRectify, which in turn is called after #stereoCalibrate. If the projector-camera pair is not calibrated, it is still possible to compute the rectification transformations directly from the fundamental matrix using #stereoRectifyUncalibrated. For the projector and camera, the function computes homography H as the rectification transformation in a pixel domain, not a rotation matrix R in 3D space. R can be computed from H as \f[\texttt{R} = \texttt{cameraMatrix} ^{-1} \cdot \texttt{H} \cdot \texttt{cameraMatrix}\f] where cameraMatrix can be chosen arbitrarily. 
+\\\text{cameraMatrix}\\ map_x(u,v)  \leftarrow x'' f_x + c_x  \\ map_y(u,v)  \leftarrow y'' f_y + c_y \end{array} $ where $(k_1, k_2, p_1, p_2[, k_3[, k_4, k_5, k_6[, s_1, s_2, s_3, s_4[, \tau_x, \tau_y]]]])$ are the distortion coefficients vector distCoeffs. 
+In case of a stereo-rectified projector-camera pair, this function is called for the projector while #initUndistortRectifyMap is called for the camera head. This is done after #stereoRectify, which in turn is called after #stereoCalibrate. If the projector-camera pair is not calibrated, it is still possible to compute the rectification transformations directly from the fundamental matrix using #stereoRectifyUncalibrated. For the projector and camera, the function computes homography H as the rectification transformation in a pixel domain, not a rotation matrix R in 3D space. R can be computed from H as $\texttt{R} = \texttt{cameraMatrix} ^{-1} \cdot \texttt{H} \cdot \texttt{cameraMatrix}$ where cameraMatrix can be chosen arbitrarily. 
 
 
 :param cameraMatrix: Input camera matrix $A=\vecthreethree{f_x}{0}{c_x}{0}{f_y}{c_y}{0}{0}{1}$ .
@@ -21742,8 +21742,8 @@ Computes the undistortion and rectification transformation map.
 
 The function computes the joint undistortion and rectification transformation and represents the result in the form of maps for #remap. The undistorted image looks like original, as if it is captured with a camera using the camera matrix =newCameraMatrix and zero distortion. In case of a monocular camera, newCameraMatrix is usually equal to cameraMatrix, or it can be computed by #getOptimalNewCameraMatrix for a better control over scaling. In case of a stereo camera, newCameraMatrix is normally set to P1 or P2 computed by #stereoRectify . 
 Also, this new camera is oriented differently in the coordinate space, according to R. That, for example, helps to align two heads of a stereo camera so that the epipolar lines on both images become horizontal and have the same y- coordinate (in case of a horizontally aligned stereo camera). 
-The function actually builds the maps for the inverse mapping algorithm that is used by #remap. That is, for each pixel $(u, v)$ in the destination (corrected and rectified) image, the function computes the corresponding coordinates in the source image (that is, in the original image from camera). The following process is applied: \f[ \begin{array}{l} x  \leftarrow (u - {c'}_x)/{f'}_x  \\ y  \leftarrow (v - {c'}_y)/{f'}_y  \\ {[X\,Y\,W]} ^T  \leftarrow R^{-1}*[x \, y \, 1]^T  \\ x'  \leftarrow X/W  \\ y'  \leftarrow Y/W  \\ r^2  \leftarrow x'^2 + y'^2 \\ x''  \leftarrow x' \frac{1 + k_1 r^2 + k_2 r^4 + k_3 r^6}{1 + k_4 r^2 + k_5 r^4 + k_6 r^6} + 2p_1 x' y' + p_2(r^2 + 2 x'^2)  + s_1 r^2 + s_2 r^4\\ y''  \leftarrow y' \frac{1 + k_1 r^2 + k_2 r^4 + k_3 r^6}{1 + k_4 r^2 + k_5 r^4 + k_6 r^6} + p_1 (r^2 + 2 y'^2) + 2 p_2 x' y' + s_3 r^2 + s_4 r^4 \\ s\vecthree{x'''}{y'''}{1} = \vecthreethree{R_{33}(\tau_x, \tau_y)}{0}{-R_{13}((\tau_x, \tau_y)} {0}{R_{33}(\tau_x, \tau_y)}{-R_{23}(\tau_x, \tau_y)} {0}{0}{1} R(\tau_x, \tau_y) \vecthree{x''}{y''}{1}\\ map_x(u,v)  \leftarrow x''' f_x + c_x  \\ map_y(u,v)  \leftarrow y''' f_y + c_y \end{array} \f] where $(k_1, k_2, p_1, p_2[, k_3[, k_4, k_5, k_6[, s_1, s_2, s_3, s_4[, \tau_x, \tau_y]]]])$ are the distortion coefficients. 
-In case of a stereo camera, this function is called twice: once for each camera head, after #stereoRectify, which in its turn is called after #stereoCalibrate. But if the stereo camera was not calibrated, it is still possible to compute the rectification transformations directly from the fundamental matrix using #stereoRectifyUncalibrated. For each camera, the function computes homography H as the rectification transformation in a pixel domain, not a rotation matrix R in 3D space. R can be computed from H as \f[\texttt{R} = \texttt{cameraMatrix} ^{-1} \cdot \texttt{H} \cdot \texttt{cameraMatrix}\f] where cameraMatrix can be chosen arbitrarily. 
+The function actually builds the maps for the inverse mapping algorithm that is used by #remap. That is, for each pixel $(u, v)$ in the destination (corrected and rectified) image, the function computes the corresponding coordinates in the source image (that is, in the original image from camera). The following process is applied: $ \begin{array}{l} x  \leftarrow (u - {c'}_x)/{f'}_x  \\ y  \leftarrow (v - {c'}_y)/{f'}_y  \\ {[X\,Y\,W]} ^T  \leftarrow R^{-1}*[x \, y \, 1]^T  \\ x'  \leftarrow X/W  \\ y'  \leftarrow Y/W  \\ r^2  \leftarrow x'^2 + y'^2 \\ x''  \leftarrow x' \frac{1 + k_1 r^2 + k_2 r^4 + k_3 r^6}{1 + k_4 r^2 + k_5 r^4 + k_6 r^6} + 2p_1 x' y' + p_2(r^2 + 2 x'^2)  + s_1 r^2 + s_2 r^4\\ y''  \leftarrow y' \frac{1 + k_1 r^2 + k_2 r^4 + k_3 r^6}{1 + k_4 r^2 + k_5 r^4 + k_6 r^6} + p_1 (r^2 + 2 y'^2) + 2 p_2 x' y' + s_3 r^2 + s_4 r^4 \\ s\vecthree{x'''}{y'''}{1} = \vecthreethree{R_{33}(\tau_x, \tau_y)}{0}{-R_{13}((\tau_x, \tau_y)} {0}{R_{33}(\tau_x, \tau_y)}{-R_{23}(\tau_x, \tau_y)} {0}{0}{1} R(\tau_x, \tau_y) \vecthree{x''}{y''}{1}\\ map_x(u,v)  \leftarrow x''' f_x + c_x  \\ map_y(u,v)  \leftarrow y''' f_y + c_y \end{array} $ where $(k_1, k_2, p_1, p_2[, k_3[, k_4, k_5, k_6[, s_1, s_2, s_3, s_4[, \tau_x, \tau_y]]]])$ are the distortion coefficients. 
+In case of a stereo camera, this function is called twice: once for each camera head, after #stereoRectify, which in its turn is called after #stereoCalibrate. But if the stereo camera was not calibrated, it is still possible to compute the rectification transformations directly from the fundamental matrix using #stereoRectifyUncalibrated. For each camera, the function computes homography H as the rectification transformation in a pixel domain, not a rotation matrix R in 3D space. R can be computed from H as $\texttt{R} = \texttt{cameraMatrix} ^{-1} \cdot \texttt{H} \cdot \texttt{cameraMatrix}$ where cameraMatrix can be chosen arbitrarily. 
 
 
 :param cameraMatrix: Input camera matrix $A=\vecthreethree{f_x}{0}{c_x}{0}{f_y}{c_y}{0}{0}{1}$ .
@@ -21853,11 +21853,11 @@ Calculates the integral of an image.
 
 
 The function calculates one or more integral images for the source image as follows: 
-\f[\texttt{sum} (X,Y) =  \sum _{x<X,y<Y}  \texttt{image} (x,y)\f] 
-\f[\texttt{sqsum} (X,Y) =  \sum _{x<X,y<Y}  \texttt{image} (x,y)^2\f] 
-\f[\texttt{tilted} (X,Y) =  \sum _{y<Y,abs(x-X+1) \leq Y-y-1}  \texttt{image} (x,y)\f] 
+$\texttt{sum} (X,Y) =  \sum _{x<X,y<Y}  \texttt{image} (x,y)$ 
+$\texttt{sqsum} (X,Y) =  \sum _{x<X,y<Y}  \texttt{image} (x,y)^2$ 
+$\texttt{tilted} (X,Y) =  \sum _{y<Y,abs(x-X+1) \leq Y-y-1}  \texttt{image} (x,y)$ 
 Using these integral images, you can calculate sum, mean, and standard deviation over a specific up-right or rotated rectangular region of the image in a constant time, for example: 
-\f[\sum _{x_1 \leq x < x_2,  \, y_1  \leq y < y_2}  \texttt{image} (x,y) =  \texttt{sum} (x_2,y_2)- \texttt{sum} (x_1,y_2)- \texttt{sum} (x_2,y_1)+ \texttt{sum} (x_1,y_1)\f] 
+$\sum _{x_1 \leq x < x_2,  \, y_1  \leq y < y_2}  \texttt{image} (x,y) =  \texttt{sum} (x_2,y_2)- \texttt{sum} (x_1,y_2)- \texttt{sum} (x_2,y_1)+ \texttt{sum} (x_1,y_1)$ 
 It makes possible to do a fast blurring or fast block correlation with a variable window size, for example. In case of multi-channel images, sums for each channel are accumulated independently. 
 As a practical example, the next figure shows the calculation of the integral of a straight rectangle Rect(4,4,3,2) and of a tilted rectangle Rect(5,1,2,3) . The selected pixels in the original image are shown, as well as the relative pixels in the integral images sum and tilted . 
 ![integral calculation example](pics/integral.png) 
@@ -21930,7 +21930,7 @@ Inverts an affine transformation.
 
 
 The function computes an inverse affine transformation represented by $2 \times 3$ matrix M: 
-\f[\begin{bmatrix} a_{11} & a_{12} & b_1  \\ a_{21} & a_{22} & b_2 \end{bmatrix}\f] 
+$\begin{bmatrix} a_{11} & a_{12} & b_1  \\ a_{21} & a_{22} & b_2 \end{bmatrix}$ 
 The result is also a $2 \times 3$ matrix of the same type as M. 
 
 
@@ -21979,7 +21979,7 @@ The function kmeans implements a k-means algorithm that finds the centers of clu
 :type flags: int
 :param centers: Output matrix of the cluster centers, one row per each cluster center.
 :type centers: cv2.typing.MatLike | None
-:return: The function returns the compactness measure that is computed as\f[\sum _i  \| \texttt{samples} _i -  \texttt{centers} _{ \texttt{labels} _i} \| ^2\f] after every attempt. The best (minimum) value is chosen and the corresponding labels and the compactness value are returned by the function. Basically, you can use only the core of the function, set the number of attempts to 1, initialize labels each time using a custom algorithm, pass them with the ( flags = #KMEANS_USE_INITIAL_LABELS ) flag, and then choose the best (most-compact) clustering. 
+:return: The function returns the compactness measure that is computed as$\sum _i  \| \texttt{samples} _i -  \texttt{centers} _{ \texttt{labels} _i} \| ^2$ after every attempt. The best (minimum) value is chosen and the corresponding labels and the compactness value are returned by the function. Basically, you can use only the core of the function, set the number of attempts to 1, initialize labels each time using a custom algorithm, pass them with the ( flags = #KMEANS_USE_INITIAL_LABELS ) flag, and then choose the best (most-compact) clustering. 
 :rtype: tuple[float, cv2.typing.MatLike, cv2.typing.MatLike]
 ````
 
@@ -22015,9 +22015,9 @@ The function line draws the line segment between pt1 and pt2 points in the image
 Remaps an image to polar coordinates space.
 
 
-@internal Transform the source image using the following transformation (See @ref polar_remaps_reference_image "Polar remaps reference image c)"): \f[\begin{array}{l} dst( \rho , \phi ) = src(x,y) \\ dst.size() \leftarrow src.size() \end{array}\f] 
-where \f[\begin{array}{l} I = (dx,dy) = (x - center.x,y - center.y) \\ \rho = Kmag \cdot \texttt{magnitude} (I) ,\\ \phi = angle \cdot \texttt{angle} (I) \end{array}\f] 
-and \f[\begin{array}{l} Kx = src.cols / maxRadius \\ Ky = src.rows / 2\Pi \end{array}\f] 
+@internal Transform the source image using the following transformation (See @ref polar_remaps_reference_image "Polar remaps reference image c)"): $\begin{array}{l} dst( \rho , \phi ) = src(x,y) \\ dst.size() \leftarrow src.size() \end{array}$ 
+where $\begin{array}{l} I = (dx,dy) = (x - center.x,y - center.y) \\ \rho = Kmag \cdot \texttt{magnitude} (I) ,\\ \phi = angle \cdot \texttt{angle} (I) \end{array}$ 
+and $\begin{array}{l} Kx = src.cols / maxRadius \\ Ky = src.rows / 2\Pi \end{array}$ 
 @note -   The function can not operate in-place. -   To calculate magnitude and angle in degrees #cartToPolar is used internally thus angles are measured from 0 to 360 with accuracy about 0.3 degrees. 
 ```{deprecated} unknown
 This function produces same result as cv::warpPolar(src, dst, src.size(), center, maxRadius, flags)
@@ -22044,7 +22044,7 @@ This function produces same result as cv::warpPolar(src, dst, src.size(), center
 Calculates the natural logarithm of every array element.
 
 
-The function cv::log calculates the natural logarithm of every element of the input array: \f[\texttt{dst} (I) =  \log (\texttt{src}(I)) \f] 
+The function cv::log calculates the natural logarithm of every element of the input array: $\texttt{dst} (I) =  \log (\texttt{src}(I)) $ 
 Output on zero, negative and special (NaN, Inf) values is undefined. 
 **See also:** exp, cartToPolar, polarToCart, phase, pow, sqrt, magnitude
 
@@ -22062,9 +22062,9 @@ Output on zero, negative and special (NaN, Inf) values is undefined.
 Remaps an image to semilog-polar coordinates space.
 
 
-@internal Transform the source image using the following transformation (See @ref polar_remaps_reference_image "Polar remaps reference image d)"): \f[\begin{array}{l} dst( \rho , \phi ) = src(x,y) \\ dst.size() \leftarrow src.size() \end{array}\f] 
-where \f[\begin{array}{l} I = (dx,dy) = (x - center.x,y - center.y) \\ \rho = M \cdot log_e(\texttt{magnitude} (I)) ,\\ \phi = Kangle \cdot \texttt{angle} (I) \\ \end{array}\f] 
-and \f[\begin{array}{l} M = src.cols / log_e(maxRadius) \\ Kangle = src.rows / 2\Pi \\ \end{array}\f] 
+@internal Transform the source image using the following transformation (See @ref polar_remaps_reference_image "Polar remaps reference image d)"): $\begin{array}{l} dst( \rho , \phi ) = src(x,y) \\ dst.size() \leftarrow src.size() \end{array}$ 
+where $\begin{array}{l} I = (dx,dy) = (x - center.x,y - center.y) \\ \rho = M \cdot log_e(\texttt{magnitude} (I)) ,\\ \phi = Kangle \cdot \texttt{angle} (I) \\ \end{array}$ 
+and $\begin{array}{l} M = src.cols / log_e(maxRadius) \\ Kangle = src.rows / 2\Pi \\ \end{array}$ 
 The function emulates the human "foveal" vision and can be used for fast scale and rotation-invariant template matching, for object tracking and so forth. 
 @note -   The function can not operate in-place. -   To calculate magnitude and angle in degrees #cartToPolar is used internally thus angles are measured from 0 to 360 with accuracy about 0.3 degrees. 
 ```{deprecated} unknown
@@ -22092,7 +22092,7 @@ This function produces same result as cv::warpPolar(src, dst, src.size(), center
 Calculates the magnitude of 2D vectors.
 
 
-The function cv::magnitude calculates the magnitude of 2D vectors formed from the corresponding elements of x and y arrays: \f[\texttt{dst} (I) =  \sqrt{\texttt{x}(I)^2 + \texttt{y}(I)^2}\f] 
+The function cv::magnitude calculates the magnitude of 2D vectors formed from the corresponding elements of x and y arrays: $\texttt{dst} (I) =  \sqrt{\texttt{x}(I)^2 + \texttt{y}(I)^2}$ 
 **See also:** cartToPolar, polarToCart, phase, sqrt
 
 
@@ -22174,7 +22174,7 @@ After the function finishes the comparison, the best matches can be found as glo
 Calculates per-element maximum of two arrays or an array and a scalar.
 
 
-The function cv::max calculates the per-element maximum of two arrays: \f[\texttt{dst} (I)= \max ( \texttt{src1} (I), \texttt{src2} (I))\f] or array and a scalar: \f[\texttt{dst} (I)= \max ( \texttt{src1} (I), \texttt{value} )\f] 
+The function cv::max calculates the per-element maximum of two arrays: $\texttt{dst} (I)= \max ( \texttt{src1} (I), \texttt{src2} (I))$ or array and a scalar: $\texttt{dst} (I)= \max ( \texttt{src1} (I), \texttt{value} )$ 
 **See also:**  min, compare, inRange, minMaxLoc, @ref MatrixExpressions
 
 
@@ -22193,7 +22193,7 @@ The function cv::max calculates the per-element maximum of two arrays: \f[\textt
 Calculates an average (mean) of array elements.
 
 
-The function cv::mean calculates the mean value M of array elements, independently for each channel, and return it: \f[\begin{array}{l} N =  \sum _{I: \; \texttt{mask} (I) \ne 0} 1 \\ M_c =  \left ( \sum _{I: \; \texttt{mask} (I) \ne 0}{ \texttt{mtx} (I)_c} \right )/N \end{array}\f] When all the mask elements are 0's, the function returns Scalar::all(0) 
+The function cv::mean calculates the mean value M of array elements, independently for each channel, and return it: $\begin{array}{l} N =  \sum _{I: \; \texttt{mask} (I) \ne 0} 1 \\ M_c =  \left ( \sum _{I: \; \texttt{mask} (I) \ne 0}{ \texttt{mtx} (I)_c} \right )/N \end{array}$ When all the mask elements are 0's, the function returns Scalar::all(0) 
 **See also:**  countNonZero, meanStdDev, norm, minMaxLoc
 
 
@@ -22228,7 +22228,7 @@ Finds an object on a back projection image.
 
 
 Calculates a mean and standard deviation of array elements. 
-The function cv::meanStdDev calculates the mean and the standard deviation M of array elements independently for each channel and returns it via the output parameters: \f[\begin{array}{l} N =  \sum _{I, \texttt{mask} (I)  \ne 0} 1 \\ \texttt{mean} _c =  \frac{\sum_{ I: \; \texttt{mask}(I) \ne 0} \texttt{src} (I)_c}{N} \\ \texttt{stddev} _c =  \sqrt{\frac{\sum_{ I: \; \texttt{mask}(I) \ne 0} \left ( \texttt{src} (I)_c -  \texttt{mean} _c \right )^2}{N}} \end{array}\f] When all the mask elements are 0's, the function returns mean=stddev=Scalar::all(0). 
+The function cv::meanStdDev calculates the mean and the standard deviation M of array elements independently for each channel and returns it via the output parameters: $\begin{array}{l} N =  \sum _{I, \texttt{mask} (I)  \ne 0} 1 \\ \texttt{mean} _c =  \frac{\sum_{ I: \; \texttt{mask}(I) \ne 0} \texttt{src} (I)_c}{N} \\ \texttt{stddev} _c =  \sqrt{\frac{\sum_{ I: \; \texttt{mask}(I) \ne 0} \left ( \texttt{src} (I)_c -  \texttt{mean} _c \right )^2}{N}} \end{array}$ When all the mask elements are 0's, the function returns mean=stddev=Scalar::all(0). 
 ```{note}
 The calculated standard deviation is only the diagonal of thecomplete normalized covariance matrix. If the full matrix is needed, you can reshape the multi-channel array M x N to the single-channel array M\*N x mtx.channels() (only possible when the matrix is continuous) and then pass the matrix to calcCovarMatrix . 
 ```
@@ -22290,7 +22290,7 @@ The median filter uses #BORDER_REPLICATE internally to cope with border pixels, 
 Calculates per-element minimum of two arrays or an array and a scalar.
 
 
-The function cv::min calculates the per-element minimum of two arrays: \f[\texttt{dst} (I)= \min ( \texttt{src1} (I), \texttt{src2} (I))\f] or array and a scalar: \f[\texttt{dst} (I)= \min ( \texttt{src1} (I), \texttt{value} )\f] 
+The function cv::min calculates the per-element minimum of two arrays: $\texttt{dst} (I)= \min ( \texttt{src1} (I), \texttt{src2} (I))$ or array and a scalar: $\texttt{dst} (I)= \min ( \texttt{src1} (I), \texttt{value} )$ 
 **See also:** max, compare, inRange, minMaxLoc
 
 
@@ -22497,7 +22497,7 @@ The function, together with dft and idft , may be used to calculate convolution 
 Calculates the product of a matrix and its transposition.
 
 
-The function cv::mulTransposed calculates the product of src and its transposition: \f[\texttt{dst} = \texttt{scale} ( \texttt{src} - \texttt{delta} )^T ( \texttt{src} - \texttt{delta} )\f] if aTa=true , and \f[\texttt{dst} = \texttt{scale} ( \texttt{src} - \texttt{delta} ) ( \texttt{src} - \texttt{delta} )^T\f] otherwise. The function is used to calculate the covariance matrix. With zero delta, it can be used as a faster substitute for general matrix product A\*B when B=A' 
+The function cv::mulTransposed calculates the product of src and its transposition: $\texttt{dst} = \texttt{scale} ( \texttt{src} - \texttt{delta} )^T ( \texttt{src} - \texttt{delta} )$ if aTa=true , and $\texttt{dst} = \texttt{scale} ( \texttt{src} - \texttt{delta} ) ( \texttt{src} - \texttt{delta} )^T$ otherwise. The function is used to calculate the covariance matrix. With zero delta, it can be used as a faster substitute for general matrix product A\*B when B=A' 
 **See also:** calcCovarMatrix, gemm, repeat, reduce
 
 
@@ -22523,7 +22523,7 @@ Calculates the per-element scaled product of two arrays.
 
 
 The function multiply calculates the per-element product of two arrays: 
-\f[\texttt{dst} (I)= \texttt{saturate} ( \texttt{scale} \cdot \texttt{src1} (I)  \cdot \texttt{src2} (I))\f] 
+$\texttt{dst} (I)= \texttt{saturate} ( \texttt{scale} \cdot \texttt{src1} (I)  \cdot \texttt{src2} (I))$ 
 There is also a @ref MatrixExpressions -friendly variant of the first function. See Mat::mul . 
 For a not-per-element matrix product, see gemm . 
 ```{note}
@@ -22602,7 +22602,7 @@ This version of cv::norm calculates the absolute difference norm or the relative
 Normalizes the norm or value range of an array.
 
 
-The function cv::normalize normalizes scale and shift the input array elements so that \f[\| \texttt{dst} \| _{L_p}= \texttt{alpha}\f] (where p=Inf, 1 or 2) when normType=NORM_INF, NORM_L1, or NORM_L2, respectively; or so that \f[\min _I  \texttt{dst} (I)= \texttt{alpha} , \, \, \max _I  \texttt{dst} (I)= \texttt{beta}\f] 
+The function cv::normalize normalizes scale and shift the input array elements so that $\| \texttt{dst} \| _{L_p}= \texttt{alpha}$ (where p=Inf, 1 or 2) when normType=NORM_INF, NORM_L1, or NORM_L2, respectively; or so that $\min _I  \texttt{dst} (I)= \texttt{alpha} , \, \, \max _I  \texttt{dst} (I)= \texttt{beta}$ 
 when normType=NORM_MINMAX (for dense arrays only). The optional mask specifies a sub-array to be normalized. This means that the norm or min-n-max are calculated over the sub-array, and then this sub-array is modified to be normalized. If you want to only use the mask to calculate the norm or min-max but modify the whole array, you can use norm and Mat::convertTo. 
 In case of sparse matrices, only the non-zero values are analyzed and transformed. Because of this, the range transformation for sparse matrices is not allowed since it can shift the zero level. 
 Possible usage with some positive example data: 
@@ -22700,7 +22700,7 @@ Pencil-like non-photorealistic line drawing
 Performs the perspective matrix transformation of vectors.
 
 
-The function cv::perspectiveTransform transforms every element of src by treating it as a 2D or 3D vector, in the following way: \f[(x, y, z)  \rightarrow (x'/w, y'/w, z'/w)\f] where \f[(x', y', z', w') =  \texttt{mat} \cdot \begin{bmatrix} x & y & z & 1  \end{bmatrix}\f] and \f[w =  \fork{w'}{if \(w' \ne 0\)}{\infty}{otherwise}\f] 
+The function cv::perspectiveTransform transforms every element of src by treating it as a 2D or 3D vector, in the following way: $(x, y, z)  \rightarrow (x'/w, y'/w, z'/w)$ where $(x', y', z', w') =  \texttt{mat} \cdot \begin{bmatrix} x & y & z & 1  \end{bmatrix}$ and $w =  \fork{w'}{if \(w' \ne 0\)}{\infty}{otherwise}$ 
 Here a 3D vector transformation is shown. In case of a 2D vector transformation, the z component is omitted. 
 ```{note}
 The function transforms a sparse set of 2D or 3D vectors. If youwant to transform an image using perspective transformation, use warpPerspective . If you have an inverse problem, that is, you want to compute the most probable perspective transformation out of several pairs of corresponding points, you can use getPerspectiveTransform or findHomography . 
@@ -22723,7 +22723,7 @@ The function transforms a sparse set of 2D or 3D vectors. If youwant to transfor
 Calculates the rotation angle of 2D vectors.
 
 
-The function cv::phase calculates the rotation angle of each 2D vector that is formed from the corresponding elements of x and y : \f[\texttt{angle} (I) =  \texttt{atan2} ( \texttt{y} (I), \texttt{x} (I))\f] 
+The function cv::phase calculates the rotation angle of each 2D vector that is formed from the corresponding elements of x and y : $\texttt{angle} (I) =  \texttt{atan2} ( \texttt{y} (I), \texttt{x} (I))$ 
 The angle estimation accuracy is about 0.3 degrees. When x(I)=y(I)=0 , the corresponding angle(I) is set to 0. 
 
 
@@ -22746,7 +22746,7 @@ The function is used to detect translational shifts that occur between two image
 
 The operation takes advantage of the Fourier shift theorem for detecting the translational shift in the frequency domain. It can be used for fast image registration as well as motion estimation. For more information please see <http://en.wikipedia.org/wiki/Phase_correlation> 
 Calculates the cross-power spectrum of two supplied source arrays. The arrays are padded if needed with getOptimalDFTSize. 
-The function performs the following equations: - First it applies a Hanning window (see <http://en.wikipedia.org/wiki/Hann_function>) to each image to remove possible edge effects. This window is cached until the array size changes to speed up processing time. - Next it computes the forward DFTs of each source array: \f[\mathbf{G}_a = \mathcal{F}\{src_1\}, \; \mathbf{G}_b = \mathcal{F}\{src_2\}\f] where $\mathcal{F}$ is the forward DFT. - It then computes the cross-power spectrum of each frequency domain array: \f[R = \frac{ \mathbf{G}_a \mathbf{G}_b^*}{|\mathbf{G}_a \mathbf{G}_b^*|}\f] - Next the cross-correlation is converted back into the time domain via the inverse DFT: \f[r = \mathcal{F}^{-1}\{R\}\f] - Finally, it computes the peak location and computes a 5x5 weighted centroid around the peak to achieve sub-pixel accuracy. \f[(\Delta x, \Delta y) = \texttt{weightedCentroid} \{\arg \max_{(x, y)}\{r\}\}\f] - If non-zero, the response parameter is computed as the sum of the elements of r within the 5x5 centroid around the peak location. It is normalized to a maximum of 1 (meaning there is a single peak) and will be smaller when there are multiple peaks. 
+The function performs the following equations: - First it applies a Hanning window (see <http://en.wikipedia.org/wiki/Hann_function>) to each image to remove possible edge effects. This window is cached until the array size changes to speed up processing time. - Next it computes the forward DFTs of each source array: $\mathbf{G}_a = \mathcal{F}\{src_1\}, \; \mathbf{G}_b = \mathcal{F}\{src_2\}$ where $\mathcal{F}$ is the forward DFT. - It then computes the cross-power spectrum of each frequency domain array: $R = \frac{ \mathbf{G}_a \mathbf{G}_b^*}{|\mathbf{G}_a \mathbf{G}_b^*|}$ - Next the cross-correlation is converted back into the time domain via the inverse DFT: $r = \mathcal{F}^{-1}\{R\}$ - Finally, it computes the peak location and computes a 5x5 weighted centroid around the peak to achieve sub-pixel accuracy. $(\Delta x, \Delta y) = \texttt{weightedCentroid} \{\arg \max_{(x, y)}\{r\}\}$ - If non-zero, the response parameter is computed as the sum of the elements of r within the 5x5 centroid around the peak location. It is normalized to a maximum of 1 (meaning there is a single peak) and will be smaller when there are multiple peaks. 
 **See also:** dft, getOptimalDFTSize, idft, mulSpectrums createHanningWindow
 
 
@@ -22788,7 +22788,7 @@ See below a sample output of the function where each image pixel is tested again
 Calculates x and y coordinates of 2D vectors from their magnitude and angle.
 
 
-The function cv::polarToCart calculates the Cartesian coordinates of each 2D vector represented by the corresponding elements of magnitude and angle: \f[\begin{array}{l} \texttt{x} (I) =  \texttt{magnitude} (I) \cos ( \texttt{angle} (I)) \\ \texttt{y} (I) =  \texttt{magnitude} (I) \sin ( \texttt{angle} (I)) \\ \end{array}\f] 
+The function cv::polarToCart calculates the Cartesian coordinates of each 2D vector represented by the corresponding elements of magnitude and angle: $\begin{array}{l} \texttt{x} (I) =  \texttt{magnitude} (I) \cos ( \texttt{angle} (I)) \\ \texttt{y} (I) =  \texttt{magnitude} (I) \sin ( \texttt{angle} (I)) \\ \end{array}$ 
 The relative accuracy of the estimated coordinates is about 1e-6. 
 **See also:** cartToPolar, magnitude, phase, exp, log, pow, sqrt
 
@@ -22856,7 +22856,7 @@ The function cv::polylines draws one or more polygonal curves.
 Raises every array element to a power.
 
 
-The function cv::pow raises every element of the input array to power : \f[\texttt{dst} (I) =  \fork{\texttt{src}(I)^{power}}{if \(\texttt{power}\) is integer}{|\texttt{src}(I)|^{power}}{otherwise}\f] 
+The function cv::pow raises every element of the input array to power : $\texttt{dst} (I) =  \fork{\texttt{src}(I)^{power}}{if \(\texttt{power}\) is integer}{|\texttt{src}(I)|^{power}}{otherwise}$ 
 So, for a non-integer power exponent, the absolute values of input array elements are used. However, it is possible to get true values for negative values using some extra operations. In the example below, computing the 5th root of array src shows: 
 ```cpp
 Mat mask = src < 0;
@@ -22884,7 +22884,7 @@ Calculates a feature map for corner detection.
 
 
 The function calculates the complex spatial derivative-based function of the source image 
-\f[\texttt{dst} = (D_x  \texttt{src} )^2  \cdot D_{yy}  \texttt{src} + (D_y  \texttt{src} )^2  \cdot D_{xx}  \texttt{src} - 2 D_x  \texttt{src} \cdot D_y  \texttt{src} \cdot D_{xy}  \texttt{src}\f] 
+$\texttt{dst} = (D_x  \texttt{src} )^2  \cdot D_{yy}  \texttt{src} + (D_y  \texttt{src} )^2  \cdot D_{xx}  \texttt{src} - 2 D_x  \texttt{src} \cdot D_y  \texttt{src} \cdot D_{xy}  \texttt{src}$ 
 where $D_x$,$D_y$ are the first image derivatives, $D_{xx}$,$D_{yy}$ are the second image derivatives, and $D_{xy}$ is the mixed derivative. 
 The corners can be found as local maximums of the functions, as shown below: 
 ```c++
@@ -22976,9 +22976,9 @@ Blurs an image and downsamples it.
 
 
 By default, size of the output image is computed as `Size((src.cols+1)/2, (src.rows+1)/2)`, but in any case, the following conditions should be satisfied: 
-\f[\begin{array}{l} | \texttt{dstsize.width} *2-src.cols| \leq 2 \\ | \texttt{dstsize.height} *2-src.rows| \leq 2 \end{array}\f] 
+$\begin{array}{l} | \texttt{dstsize.width} *2-src.cols| \leq 2 \\ | \texttt{dstsize.height} *2-src.rows| \leq 2 \end{array}$ 
 The function performs the downsampling step of the Gaussian pyramid construction. First, it convolves the source image with the kernel: 
-\f[\frac{1}{256} \begin{bmatrix} 1 & 4 & 6 & 4 & 1  \\ 4 & 16 & 24 & 16 & 4  \\ 6 & 24 & 36 & 24 & 6  \\ 4 & 16 & 24 & 16 & 4  \\ 1 & 4 & 6 & 4 & 1 \end{bmatrix}\f] 
+$\frac{1}{256} \begin{bmatrix} 1 & 4 & 6 & 4 & 1  \\ 4 & 16 & 24 & 16 & 4  \\ 6 & 24 & 36 & 24 & 6  \\ 4 & 16 & 24 & 16 & 4  \\ 1 & 4 & 6 & 4 & 1 \end{bmatrix}$ 
 Then, it downsamples the image by rejecting even rows and columns. 
 
 
@@ -23000,11 +23000,11 @@ Performs initial step of meanshift segmentation of an image.
 
 
 The function implements the filtering stage of meanshift segmentation, that is, the output of the function is the filtered "posterized" image with color gradients and fine-grain texture flattened. At every pixel (X,Y) of the input image (or down-sized input image, see below) the function executes meanshift iterations, that is, the pixel (X,Y) neighborhood in the joint space-color hyperspace is considered: 
-\f[(x,y): X- \texttt{sp} \le x  \le X+ \texttt{sp} , Y- \texttt{sp} \le y  \le Y+ \texttt{sp} , ||(R,G,B)-(r,g,b)||   \le \texttt{sr}\f] 
+$(x,y): X- \texttt{sp} \le x  \le X+ \texttt{sp} , Y- \texttt{sp} \le y  \le Y+ \texttt{sp} , ||(R,G,B)-(r,g,b)||   \le \texttt{sr}$ 
 where (R,G,B) and (r,g,b) are the vectors of color components at (X,Y) and (x,y), respectively (though, the algorithm does not depend on the color space used, so any 3-component color space can be used instead). Over the neighborhood the average spatial value (X',Y') and average color vector (R',G',B') are found and they act as the neighborhood center on the next iteration: 
-\f[(X,Y)~(X',Y'), (R,G,B)~(R',G',B').\f] 
+$(X,Y)~(X',Y'), (R,G,B)~(R',G',B').$ 
 After the iterations over, the color components of the initial pixel (that is, the pixel from where the iterations started) are set to the final value (average color at the last iteration): 
-\f[I(X,Y) <- (R*,G*,B*)\f] 
+$I(X,Y) <- (R*,G*,B*)$ 
 When maxLevel \> 0, the gaussian pyramid of maxLevel+1 levels is built, and the above procedure is run on the smallest layer first. After that, the results are propagated to the larger layer and the iterations are run again only on those pixels where the layer colors differ by more than sr from the lower-resolution layer of the pyramid. That makes boundaries of color regions sharper. Note that the results will be actually different from the ones obtained by running the meanshift procedure on the whole original image (i.e. when maxLevel==0). 
 
 
@@ -23030,7 +23030,7 @@ Upsamples an image and then blurs it.
 
 
 By default, size of the output image is computed as `Size(src.cols\*2, (src.rows\*2)`, but in any case, the following conditions should be satisfied: 
-\f[\begin{array}{l} | \texttt{dstsize.width} -src.cols*2| \leq  ( \texttt{dstsize.width}   \mod  2)  \\ | \texttt{dstsize.height} -src.rows*2| \leq  ( \texttt{dstsize.height}   \mod  2) \end{array}\f] 
+$\begin{array}{l} | \texttt{dstsize.width} -src.cols*2| \leq  ( \texttt{dstsize.width}   \mod  2)  \\ | \texttt{dstsize.height} -src.rows*2| \leq  ( \texttt{dstsize.height}   \mod  2) \end{array}$ 
 The function performs the upsampling step of the Gaussian pyramid construction, though it can actually be used to construct the Laplacian pyramid. First, it upsamples the source image by injecting even zero rows and columns and then convolves the result with the same kernel as in pyrDown multiplied by 4. 
 
 
@@ -23089,7 +23089,7 @@ The function cv::randn fills the matrix dst with normally distributed random num
 Generates a single uniformly-distributed random number or an array of random numbers.
 
 
-Non-template variant of the function fills the matrix dst with uniformly-distributed random numbers from the specified range: \f[\texttt{low} _c  \leq \texttt{dst} (I)_c <  \texttt{high} _c\f] 
+Non-template variant of the function fills the matrix dst with uniformly-distributed random numbers from the specified range: $\texttt{low} _c  \leq \texttt{dst} (I)_c <  \texttt{high} _c$ 
 **See also:** RNG, randn, theRNG
 
 
@@ -23173,7 +23173,7 @@ recoverPose(E, points1, points2, cameraMatrix, R, t, mask);
 
 recoverPose(E, points1, points2[, R[, t[, focal[, pp[, mask]]]]]) -> retval, R, t, mask @overload 
 This function differs from the one above that it computes camera intrinsic matrix from focal length and principal point: 
-\f[A = \begin{bmatrix} f & 0 & x_{pp}  \\ 0 & f & y_{pp}  \\ 0 & 0 & 1 \end{bmatrix}\f] 
+$A = \begin{bmatrix} f & 0 & x_{pp}  \\ 0 & f & y_{pp}  \\ 0 & 0 & 1 \end{bmatrix}$ 
 recoverPose(E, points1, points2, cameraMatrix, distanceThresh[, R[, t[, mask[, triangulatedPoints]]]]) -> retval, R, t, mask, triangulatedPoints @overload 
 This function differs from the one above that it outputs the triangulated 3D point that are used for the chirality check. 
 
@@ -23406,7 +23406,7 @@ Applies a generic geometrical transformation to an image.
 
 
 The function remap transforms the source image using the specified map: 
-\f[\texttt{dst} (x,y) =  \texttt{src} (map_x(x,y),map_y(x,y))\f] 
+$\texttt{dst} (x,y) =  \texttt{src} (map_x(x,y),map_y(x,y))$ 
 where values of pixels with non-integer coordinates are computed using one of available interpolation methods. $map_x$ and $map_y$ can be encoded as separate floating-point maps in $map_1$ and $map_2$ respectively, or interleaved floating-point maps of $(x,y)$ in $map_1$, or fixed-point maps created by using #convertMaps. The reason you might want to convert from floating to fixed-point representations of a map is that they can yield much faster (\~2x) remapping operations. In the converted case, $map_1$ contains pairs (cvFloor(x), cvFloor(y)) and $map_2$ contains indices in a table of interpolation coefficients. 
 This function cannot operate in-place. 
 
@@ -23434,7 +23434,7 @@ This function cannot operate in-place.
 Fills the output array with repeated copies of the input array.
 
 
-The function cv::repeat duplicates the input array one or more times along each of the two axes: \f[\texttt{dst} _{ij}= \texttt{src} _{i\mod src.rows, \; j\mod src.cols }\f] The second variant of the function is more convenient to use with @ref MatrixExpressions. 
+The function cv::repeat duplicates the input array one or more times along each of the two axes: $\texttt{dst} _{ij}= \texttt{src} _{i\mod src.rows, \; j\mod src.cols }$ The second variant of the function is more convenient to use with @ref MatrixExpressions. 
 **See also:** cv::reduce
 
 
@@ -23456,7 +23456,7 @@ Reprojects a disparity image to 3D space.
 
 
 The function transforms a single-channel disparity map to a 3-channel image representing a 3D surface. That is, for each pixel (x,y) and the corresponding disparity d=disparity(x,y) , it computes: 
-\f[\begin{bmatrix} X \\ Y \\ Z \\ W \end{bmatrix} = Q \begin{bmatrix} x \\ y \\ \texttt{disparity} (x,y) \\ z \end{bmatrix}.\f] 
+$\begin{bmatrix} X \\ Y \\ Z \\ W \end{bmatrix} = Q \begin{bmatrix} x \\ y \\ \texttt{disparity} (x,y) \\ z \end{bmatrix}.$ 
 @sa To reproject a sparse set of points {(x,y,d),...} to 3D space, use perspectiveTransform. 
 
 
@@ -23497,11 +23497,11 @@ To shrink an image, it will generally look best with #INTER_AREA interpolation, 
 :type src: cv2.typing.MatLike
 :param dst: output image; it has the size dsize (when it is non-zero) or the size computed fromsrc.size(), fx, and fy; the type of dst is the same as of src. 
 :type dst: cv2.typing.MatLike | None
-:param dsize: output image size; if it equals zero (`None` in Python), it is computed as:\f[\texttt{dsize = Size(round(fx*src.cols), round(fy*src.rows))}\f] Either dsize or both fx and fy must be non-zero. 
+:param dsize: output image size; if it equals zero (`None` in Python), it is computed as:$\texttt{dsize = Size(round(fx*src.cols), round(fy*src.rows))}$ Either dsize or both fx and fy must be non-zero. 
 :type dsize: cv2.typing.Size | None
-:param fx: scale factor along the horizontal axis; when it equals 0, it is computed as\f[\texttt{(double)dsize.width/src.cols}\f] 
+:param fx: scale factor along the horizontal axis; when it equals 0, it is computed as$\texttt{(double)dsize.width/src.cols}$ 
 :type fx: float
-:param fy: scale factor along the vertical axis; when it equals 0, it is computed as\f[\texttt{(double)dsize.height/src.rows}\f] 
+:param fy: scale factor along the vertical axis; when it equals 0, it is computed as$\texttt{(double)dsize.height/src.rows}$ 
 :type fy: float
 :param interpolation: interpolation method, see #InterpolationFlags
 :type interpolation: int
@@ -23576,7 +23576,7 @@ Below are some examples of intersection configurations. The hatched pattern indi
 Calculates the Sampson Distance between two points.
 
 
-The function cv::sampsonDistance calculates and returns the first order approximation of the geometric error as: \f[ sd( \texttt{pt1} , \texttt{pt2} )= \frac{(\texttt{pt2}^t \cdot \texttt{F} \cdot \texttt{pt1})^2} {((\texttt{F} \cdot \texttt{pt1})(0))^2 + ((\texttt{F} \cdot \texttt{pt1})(1))^2 + ((\texttt{F}^t \cdot \texttt{pt2})(0))^2 + ((\texttt{F}^t \cdot \texttt{pt2})(1))^2} \f] The fundamental matrix may be calculated using the #findFundamentalMat function. See @cite HartleyZ00 11.4.3 for details. 
+The function cv::sampsonDistance calculates and returns the first order approximation of the geometric error as: $ sd( \texttt{pt1} , \texttt{pt2} )= \frac{(\texttt{pt2}^t \cdot \texttt{F} \cdot \texttt{pt1})^2} {((\texttt{F} \cdot \texttt{pt1})(0))^2 + ((\texttt{F} \cdot \texttt{pt1})(1))^2 + ((\texttt{F}^t \cdot \texttt{pt2})(0))^2 + ((\texttt{F}^t \cdot \texttt{pt2})(1))^2} $ The fundamental matrix may be calculated using the #findFundamentalMat function. See @cite HartleyZ00 11.4.3 for details. 
 
 
 :param pt1: first homogeneous 2d point
@@ -23595,7 +23595,7 @@ The function cv::sampsonDistance calculates and returns the first order approxim
 Calculates the sum of a scaled array and another array.
 
 
-The function scaleAdd is one of the classical primitive linear algebra operations, known as DAXPY or SAXPY in [BLAS](http://en.wikipedia.org/wiki/Basic_Linear_Algebra_Subprograms). It calculates the sum of a scaled array and another array: \f[\texttt{dst} (I)= \texttt{scale} \cdot \texttt{src1} (I) +  \texttt{src2} (I)\f] The function can also be emulated with a matrix expression, for example: 
+The function scaleAdd is one of the classical primitive linear algebra operations, known as DAXPY or SAXPY in [BLAS](http://en.wikipedia.org/wiki/Basic_Linear_Algebra_Subprograms). It calculates the sum of a scaled array and another array: $\texttt{dst} (I)= \texttt{scale} \cdot \texttt{src1} (I) +  \texttt{src2} (I)$ The function can also be emulated with a matrix expression, for example: 
 ```cpp
 Mat A(3, 3, CV_64F);
 
@@ -23728,7 +23728,7 @@ The function applies a separable linear filter to the image. That is, first, eve
 Initializes a scaled identity matrix.
 
 
-The function cv::setIdentity initializes a scaled identity matrix: \f[\texttt{mtx} (i,j)= \fork{\texttt{value}}{ if \(i=j\)}{0}{otherwise}\f] 
+The function cv::setIdentity initializes a scaled identity matrix: $\texttt{mtx} (i,j)= \fork{\texttt{value}}{ if \(i=j\)}{0}{otherwise}$ 
 The function can also be emulated using the matrix initializers and the matrix expressions: 
 ```c++
 Mat A = Mat::eye(4, 3, CV_32F)*5;
@@ -23936,7 +23936,7 @@ Updates window title
 Solves one or more linear systems or least-squares problems.
 
 
-The function cv::solve solves a linear system or least-squares problem (the latter is possible with SVD or QR methods, or by specifying the flag #DECOMP_NORMAL ): \f[\texttt{dst} =  \arg \min _X \| \texttt{src1} \cdot \texttt{X} -  \texttt{src2} \|\f] 
+The function cv::solve solves a linear system or least-squares problem (the latter is possible with SVD or QR methods, or by specifying the flag #DECOMP_NORMAL ): $\texttt{dst} =  \arg \min _X \| \texttt{src1} \cdot \texttt{X} -  \texttt{src2} \|$ 
 If #DECOMP_LU or #DECOMP_CHOLESKY method is used, the function returns 1 if src1 (or $\texttt{src1}^T\texttt{src1}$ ) is non-singular. Otherwise, it returns 0. In the latter case, dst is not valid. Other methods find a pseudo-solution in case of a singular left-hand side part. 
 ```{note}
 If you want to find a unity-norm solution of an under-definedsingular system $\texttt{src1}\cdot\texttt{dst}=0$ , the function solve will not do the work. Use SVD::solveZ instead. 
@@ -23961,7 +23961,7 @@ If you want to find a unity-norm solution of an under-definedsingular system $\t
 Finds the real roots of a cubic equation.
 
 
-The function solveCubic finds the real roots of a cubic equation: -   if coeffs is a 4-element vector: \f[\texttt{coeffs} [0] x^3 +  \texttt{coeffs} [1] x^2 +  \texttt{coeffs} [2] x +  \texttt{coeffs} [3] = 0\f] -   if coeffs is a 3-element vector: \f[x^3 +  \texttt{coeffs} [0] x^2 +  \texttt{coeffs} [1] x +  \texttt{coeffs} [2] = 0\f] 
+The function solveCubic finds the real roots of a cubic equation: -   if coeffs is a 4-element vector: $\texttt{coeffs} [0] x^3 +  \texttt{coeffs} [1] x^2 +  \texttt{coeffs} [2] x +  \texttt{coeffs} [3] = 0$ -   if coeffs is a 3-element vector: $x^3 +  \texttt{coeffs} [0] x^2 +  \texttt{coeffs} [1] x +  \texttt{coeffs} [2] = 0$ 
 The roots are stored in the roots array. 
 
 
@@ -23980,7 +23980,7 @@ Solve given (non-integer) linear programming problem using the Simplex Algorithm
 
 
 What we mean here by "linear programming problem" (or LP problem, for short) can be formulated as: 
-\f[\mbox{Maximize } c\cdot x\\ \mbox{Subject to:}\\ Ax\leq b\\ x\geq 0\f] 
+$\mbox{Maximize } c\cdot x\\ \mbox{Subject to:}\\ Ax\leq b\\ x\geq 0$ 
 Where $c$ is fixed `1`-by-`n` row-vector, $A$ is fixed `m`-by-`n` matrix, $b$ is fixed `m`-by-`1` column vector and $x$ is an arbitrary `n`-by-`1` column vector, which satisfies the constraints. 
 Simplex algorithm is one of many algorithms that are designed to handle this sort of problems efficiently. Although it is not optimal in theoretical sense (there exist algorithms that can solve any problem written as above in polynomial time, while simplex method degenerates to exponential time for some special cases), it is well-studied, easy to implement and is shown to work well for real-life purposes. 
 The particular implementation is taken almost verbatim from **Introduction to Algorithms, third edition** by T. H. Cormen, C. E. Leiserson, R. L. Rivest and Clifford Stein. In particular, the Bland's rule <http://en.wikipedia.org/wiki/Bland%27s_rule> is used to prevent cycling. 
@@ -24196,7 +24196,7 @@ The function refines the object pose given at least 3 object points, their corre
 Finds the real or complex roots of a polynomial equation.
 
 
-The function cv::solvePoly finds real and complex roots of a polynomial equation: \f[\texttt{coeffs} [n] x^{n} +  \texttt{coeffs} [n-1] x^{n-1} + ... +  \texttt{coeffs} [1] x +  \texttt{coeffs} [0] = 0\f] 
+The function cv::solvePoly finds real and complex roots of a polynomial equation: $\texttt{coeffs} [n] x^{n} +  \texttt{coeffs} [n-1] x^{n-1} + ... +  \texttt{coeffs} [1] x +  \texttt{coeffs} [0] = 0$ 
 
 
 :param coeffs: array of polynomial coefficients.
@@ -24420,13 +24420,13 @@ Calibrates a stereo camera set up. This function finds the intrinsic parametersf
 
 -   @ref CALIB_SAME_FOCAL_LENGTH Enforce $f^{(0)}_x=f^{(1)}_x$ and $f^{(0)}_y=f^{(1)}_y$ . -   @ref CALIB_ZERO_TANGENT_DIST Set tangential distortion coefficients for each camera to zeros and fix there. -   @ref CALIB_FIX_K1,..., @ref CALIB_FIX_K6 Do not change the corresponding radial distortion coefficient during the optimization. If @ref CALIB_USE_INTRINSIC_GUESS is set, the coefficient from the supplied distCoeffs matrix is used. Otherwise, it is set to 0. -   @ref CALIB_RATIONAL_MODEL Enable coefficients k4, k5, and k6. To provide the backward compatibility, this extra flag should be explicitly specified to make the calibration function use the rational model and return 8 coefficients. If the flag is not set, the function computes and returns only 5 distortion coefficients. -   @ref CALIB_THIN_PRISM_MODEL Coefficients s1, s2, s3 and s4 are enabled. To provide the backward compatibility, this extra flag should be explicitly specified to make the calibration function use the thin prism model and return 12 coefficients. If the flag is not set, the function computes and returns only 5 distortion coefficients. -   @ref CALIB_FIX_S1_S2_S3_S4 The thin prism distortion coefficients are not changed during the optimization. If @ref CALIB_USE_INTRINSIC_GUESS is set, the coefficient from the supplied distCoeffs matrix is used. Otherwise, it is set to 0. -   @ref CALIB_TILTED_MODEL Coefficients tauX and tauY are enabled. To provide the backward compatibility, this extra flag should be explicitly specified to make the calibration function use the tilted sensor model and return 14 coefficients. If the flag is not set, the function computes and returns only 5 distortion coefficients. -   @ref CALIB_FIX_TAUX_TAUY The coefficients of the tilted sensor model are not changed during the optimization. If @ref CALIB_USE_INTRINSIC_GUESS is set, the coefficient from the supplied distCoeffs matrix is used. Otherwise, it is set to 0. 
 The function estimates the transformation between two cameras making a stereo pair. If one computes the poses of an object relative to the first camera and to the second camera, ( $R_1$,$T_1$ ) and ($R_2$,$T_2$), respectively, for a stereo camera where the relative position and orientation between the two cameras are fixed, then those poses definitely relate to each other. This means, if the relative position and orientation ($R$,$T$) of the two cameras is known, it is possible to compute ($R_2$,$T_2$) when ($R_1$,$T_1$) is given. This is what the described function does. It computes ($R$,$T$) such that: 
-\f[R_2=R R_1\f] \f[T_2=R T_1 + T.\f] 
+$R_2=R R_1$ $T_2=R T_1 + T.$ 
 Therefore, one can compute the coordinate representation of a 3D point for the second camera's coordinate system when given the point's coordinate representation in the first camera's coordinate system: 
-\f[\begin{bmatrix} X_2 \\ Y_2 \\ Z_2 \\ 1 \end{bmatrix} = \begin{bmatrix} R & T \\ 0 & 1 \end{bmatrix} \begin{bmatrix} X_1 \\ Y_1 \\ Z_1 \\ 1 \end{bmatrix}.\f] 
+$\begin{bmatrix} X_2 \\ Y_2 \\ Z_2 \\ 1 \end{bmatrix} = \begin{bmatrix} R & T \\ 0 & 1 \end{bmatrix} \begin{bmatrix} X_1 \\ Y_1 \\ Z_1 \\ 1 \end{bmatrix}.$ 
 Optionally, it computes the essential matrix E: 
-\f[E= \vecthreethree{0}{-T_2}{T_1}{T_2}{0}{-T_0}{-T_1}{T_0}{0} R\f] 
+$E= \vecthreethree{0}{-T_2}{T_1}{T_2}{0}{-T_0}{-T_1}{T_0}{0} R$ 
 where $T_i$ are components of the translation vector $T$ : $T=[T_0, T_1, T_2]^T$ . And the function can also compute the fundamental matrix F: 
-\f[F = cameraMatrix2^{-T}\cdot E \cdot cameraMatrix1^{-1}\f] 
+$F = cameraMatrix2^{-T}\cdot E \cdot cameraMatrix1^{-1}$ 
 Besides the stereo-related information, the function can also perform a full calibration of each of the two cameras. However, due to the high dimensionality of the parameter space and noise in the input data, the function can diverge from the correct solution. If the intrinsic parameters can be estimated with high accuracy for each of the cameras individually (for example, using #calibrateCamera ), you are recommended to do so and then pass @ref CALIB_FIX_INTRINSIC flag to the function along with the computed intrinsic parameters. Otherwise, if all the parameters are estimated at once, it makes sense to restrict some parameters, for example, pass @ref CALIB_SAME_FOCAL_LENGTH and @ref CALIB_ZERO_TANGENT_DIST flags, which is usually a reasonable assumption. 
 Similarly to #calibrateCamera, the function minimizes the total re-projection error for all the points in all the available views from both cameras. The function returns the final value of the re-projection error. 
 
@@ -24476,14 +24476,14 @@ Computes rectification transforms for each head of a calibrated stereo camera.
 
 The function computes the rotation matrices for each camera that (virtually) make both camera image planes the same plane. Consequently, this makes all the epipolar lines parallel and thus simplifies the dense stereo correspondence problem. The function takes the matrices computed by #stereoCalibrate as input. As output, it provides two rotation matrices and also two projection matrices in the new coordinates. The function distinguishes the following two cases: 
 -   **Horizontal stereo**: the first and the second camera views are shifted relative to each other mainly along the x-axis (with possible small vertical shift). In the rectified images, the corresponding epipolar lines in the left and right cameras are horizontal and have the same y-coordinate. P1 and P2 look like: 
-\f[\texttt{P1} = \begin{bmatrix} f & 0 & cx_1 & 0 \\ 0 & f & cy & 0 \\ 0 & 0 & 1 & 0 \end{bmatrix}\f] 
-\f[\texttt{P2} = \begin{bmatrix} f & 0 & cx_2 & T_x \cdot f \\ 0 & f & cy & 0 \\ 0 & 0 & 1 & 0 \end{bmatrix} ,\f] 
-\f[\texttt{Q} = \begin{bmatrix} 1 & 0 & 0 & -cx_1 \\ 0 & 1 & 0 & -cy \\ 0 & 0 & 0 & f \\ 0 & 0 & -\frac{1}{T_x} & \frac{cx_1 - cx_2}{T_x} \end{bmatrix} \f] 
+$\texttt{P1} = \begin{bmatrix} f & 0 & cx_1 & 0 \\ 0 & f & cy & 0 \\ 0 & 0 & 1 & 0 \end{bmatrix}$ 
+$\texttt{P2} = \begin{bmatrix} f & 0 & cx_2 & T_x \cdot f \\ 0 & f & cy & 0 \\ 0 & 0 & 1 & 0 \end{bmatrix} ,$ 
+$\texttt{Q} = \begin{bmatrix} 1 & 0 & 0 & -cx_1 \\ 0 & 1 & 0 & -cy \\ 0 & 0 & 0 & f \\ 0 & 0 & -\frac{1}{T_x} & \frac{cx_1 - cx_2}{T_x} \end{bmatrix} $ 
 where $T_x$ is a horizontal shift between the cameras and $cx_1=cx_2$ if @ref CALIB_ZERO_DISPARITY is set. 
 -   **Vertical stereo**: the first and the second camera views are shifted relative to each other mainly in the vertical direction (and probably a bit in the horizontal direction too). The epipolar lines in the rectified images are vertical and have the same x-coordinate. P1 and P2 look like: 
-\f[\texttt{P1} = \begin{bmatrix} f & 0 & cx & 0 \\ 0 & f & cy_1 & 0 \\ 0 & 0 & 1 & 0 \end{bmatrix}\f] 
-\f[\texttt{P2} = \begin{bmatrix} f & 0 & cx & 0 \\ 0 & f & cy_2 & T_y \cdot f \\ 0 & 0 & 1 & 0 \end{bmatrix},\f] 
-\f[\texttt{Q} = \begin{bmatrix} 1 & 0 & 0 & -cx \\ 0 & 1 & 0 & -cy_1 \\ 0 & 0 & 0 & f \\ 0 & 0 & -\frac{1}{T_y} & \frac{cy_1 - cy_2}{T_y} \end{bmatrix} \f] 
+$\texttt{P1} = \begin{bmatrix} f & 0 & cx & 0 \\ 0 & f & cy_1 & 0 \\ 0 & 0 & 1 & 0 \end{bmatrix}$ 
+$\texttt{P2} = \begin{bmatrix} f & 0 & cx & 0 \\ 0 & f & cy_2 & T_y \cdot f \\ 0 & 0 & 1 & 0 \end{bmatrix},$ 
+$\texttt{Q} = \begin{bmatrix} 1 & 0 & 0 & -cx \\ 0 & 1 & 0 & -cy_1 \\ 0 & 0 & 0 & f \\ 0 & 0 & -\frac{1}{T_y} & \frac{cy_1 - cy_2}{T_y} \end{bmatrix} $ 
 where $T_y$ is a vertical shift between the cameras and $cy_1=cy_2$ if @ref CALIB_ZERO_DISPARITY is set. 
 As you can see, the first three columns of P1 and P2 will effectively be the new "rectified" camera matrices. The matrices, together with R1 and R2 , can then be passed to #initUndistortRectifyMap to initialize the rectification map for each camera. 
 See below the screenshot from the stereo_calib.cpp sample. Some red horizontal lines pass through the corresponding image regions. This means that the images are well rectified, which is what most stereo correspondence algorithms rely on. The green rectangles are roi1 and roi2 . You see that their interiors are all valid pixels. 
@@ -24579,7 +24579,7 @@ Stylization aims to produce digital imagery with a wide variety of effects not f
 Calculates the per-element difference between two arrays or array and a scalar.
 
 
-The function subtract calculates: - Difference between two arrays, when both input arrays have the same size and the same number of channels: \f[\texttt{dst}(I) =  \texttt{saturate} ( \texttt{src1}(I) -  \texttt{src2}(I)) \quad \texttt{if mask}(I) \ne0\f] - Difference between an array and a scalar, when src2 is constructed from Scalar or has the same number of elements as `src1.channels()`: \f[\texttt{dst}(I) =  \texttt{saturate} ( \texttt{src1}(I) -  \texttt{src2} ) \quad \texttt{if mask}(I) \ne0\f] - Difference between a scalar and an array, when src1 is constructed from Scalar or has the same number of elements as `src2.channels()`: \f[\texttt{dst}(I) =  \texttt{saturate} ( \texttt{src1} -  \texttt{src2}(I) ) \quad \texttt{if mask}(I) \ne0\f] - The reverse difference between a scalar and an array in the case of `SubRS`: \f[\texttt{dst}(I) =  \texttt{saturate} ( \texttt{src2} -  \texttt{src1}(I) ) \quad \texttt{if mask}(I) \ne0\f] where I is a multi-dimensional index of array elements. In case of multi-channel arrays, each channel is processed independently. 
+The function subtract calculates: - Difference between two arrays, when both input arrays have the same size and the same number of channels: $\texttt{dst}(I) =  \texttt{saturate} ( \texttt{src1}(I) -  \texttt{src2}(I)) \quad \texttt{if mask}(I) \ne0$ - Difference between an array and a scalar, when src2 is constructed from Scalar or has the same number of elements as `src1.channels()`: $\texttt{dst}(I) =  \texttt{saturate} ( \texttt{src1}(I) -  \texttt{src2} ) \quad \texttt{if mask}(I) \ne0$ - Difference between a scalar and an array, when src1 is constructed from Scalar or has the same number of elements as `src2.channels()`: $\texttt{dst}(I) =  \texttt{saturate} ( \texttt{src1} -  \texttt{src2}(I) ) \quad \texttt{if mask}(I) \ne0$ - The reverse difference between a scalar and an array in the case of `SubRS`: $\texttt{dst}(I) =  \texttt{saturate} ( \texttt{src2} -  \texttt{src1}(I) ) \quad \texttt{if mask}(I) \ne0$ where I is a multi-dimensional index of array elements. In case of multi-channel arrays, each channel is processed independently. 
 The first function in the list above can be replaced with matrix expressions: 
 ```cpp
 dst = src1 - src2;
@@ -24681,7 +24681,7 @@ Currently, the Otsu's and Triangle methods are implemented only for 8-bit single
 Returns the trace of a matrix.
 
 
-The function cv::trace returns the sum of the diagonal elements of the matrix mtx . \f[\mathrm{tr} ( \texttt{mtx} ) =  \sum _i  \texttt{mtx} (i,i)\f] 
+The function cv::trace returns the sum of the diagonal elements of the matrix mtx . $\mathrm{tr} ( \texttt{mtx} ) =  \sum _i  \texttt{mtx} (i,i)$ 
 
 
 :param mtx: input matrix.
@@ -24695,7 +24695,7 @@ The function cv::trace returns the sum of the diagonal elements of the matrix mt
 Performs the matrix transformation of every array element.
 
 
-The function cv::transform performs the matrix transformation of every element of the array src and stores the results in dst : \f[\texttt{dst} (I) =  \texttt{m} \cdot \texttt{src} (I)\f] (when m.cols=src.channels() ), or \f[\texttt{dst} (I) =  \texttt{m} \cdot [ \texttt{src} (I); 1]\f] (when m.cols=src.channels()+1 ) 
+The function cv::transform performs the matrix transformation of every element of the array src and stores the results in dst : $\texttt{dst} (I) =  \texttt{m} \cdot \texttt{src} (I)$ (when m.cols=src.channels() ), or $\texttt{dst} (I) =  \texttt{m} \cdot [ \texttt{src} (I); 1]$ (when m.cols=src.channels()+1 ) 
 Every element of the N -channel array src is interpreted as N -element vector that is transformed using the M x N or M x (N+1) matrix m to M-element vector - the corresponding element of the output array dst . 
 The function may be used for geometrical transformation of N -dimensional points, arbitrary linear color space transformation (such as various kinds of RGB to YUV transforms), shuffling the image channels, and so forth. 
 **See also:** perspectiveTransform, getAffineTransform, estimateAffine2D, warpAffine, warpPerspective
@@ -24716,7 +24716,7 @@ The function may be used for geometrical transformation of N -dimensional points
 Transposes a matrix.
 
 
-The function cv::transpose transposes the matrix src : \f[\texttt{dst} (i,j) =  \texttt{src} (j,i)\f] 
+The function cv::transpose transposes the matrix src : $\texttt{dst} (i,j) =  \texttt{src} (j,i)$ 
 ```{note}
 No complex conjugation is done in case of a complex matrix. Itshould be done separately if needed. 
 ```
@@ -24827,7 +24827,7 @@ Computes the ideal point coordinates from the observed point coordinates.
 
 
 The function is similar to #undistort and #initUndistortRectifyMap but it operates on a sparse set of points instead of a raster image. Also the function performs a reverse transformation to  #projectPoints. In case of a 3D object, it does not reconstruct its 3D coordinates, but for a planar object, it does, up to a translation vector, if the proper R is specified. 
-For each observed point coordinate $(u, v)$ the function computes: \f[ \begin{array}{l} x^{"}  \leftarrow (u - c_x)/f_x  \\ y^{"}  \leftarrow (v - c_y)/f_y  \\ (x',y') = undistort(x^{"},y^{"}, \texttt{distCoeffs}) \\ {[X\,Y\,W]} ^T  \leftarrow R*[x' \, y' \, 1]^T  \\ x  \leftarrow X/W  \\ y  \leftarrow Y/W  \\ \text{only performed if P is specified:} \\ u'  \leftarrow x {f'}_x + {c'}_x  \\ v'  \leftarrow y {f'}_y + {c'}_y \end{array} \f] 
+For each observed point coordinate $(u, v)$ the function computes: $ \begin{array}{l} x^{"}  \leftarrow (u - c_x)/f_x  \\ y^{"}  \leftarrow (v - c_y)/f_y  \\ (x',y') = undistort(x^{"},y^{"}, \texttt{distCoeffs}) \\ {[X\,Y\,W]} ^T  \leftarrow R*[x' \, y' \, 1]^T  \\ x  \leftarrow X/W  \\ y  \leftarrow Y/W  \\ \text{only performed if P is specified:} \\ u'  \leftarrow x {f'}_x + {c'}_x  \\ v'  \leftarrow y {f'}_y + {c'}_y \end{array} $ 
 where *undistort* is an approximate iterative algorithm that estimates the normalized original point coordinates out of the normalized distorted point coordinates ("normalized" means that the coordinates do not depend on the camera matrix). 
 The function can be used for both a stereo camera head or a monocular camera (when R is empty). 
 
@@ -24992,7 +24992,7 @@ Applies an affine transformation to an image.
 
 
 The function warpAffine transforms the source image using the specified matrix: 
-\f[\texttt{dst} (x,y) =  \texttt{src} ( \texttt{M} _{11} x +  \texttt{M} _{12} y +  \texttt{M} _{13}, \texttt{M} _{21} x +  \texttt{M} _{22} y +  \texttt{M} _{23})\f] 
+$\texttt{dst} (x,y) =  \texttt{src} ( \texttt{M} _{11} x +  \texttt{M} _{12} y +  \texttt{M} _{13}, \texttt{M} _{21} x +  \texttt{M} _{22} y +  \texttt{M} _{23})$ 
 when the flag #WARP_INVERSE_MAP is set. Otherwise, the transformation is first inverted with #invertAffineTransform and then put in the formula above instead of M. The function cannot operate in-place. 
 **See also:**  warpPerspective, resize, remap, getRectSubPix, transform
 
@@ -25021,7 +25021,7 @@ Applies a perspective transformation to an image.
 
 
 The function warpPerspective transforms the source image using the specified matrix: 
-\f[\texttt{dst} (x,y) =  \texttt{src} \left ( \frac{M_{11} x + M_{12} y + M_{13}}{M_{31} x + M_{32} y + M_{33}} , \frac{M_{21} x + M_{22} y + M_{23}}{M_{31} x + M_{32} y + M_{33}} \right )\f] 
+$\texttt{dst} (x,y) =  \texttt{src} \left ( \frac{M_{11} x + M_{12} y + M_{13}}{M_{31} x + M_{32} y + M_{33}} , \frac{M_{21} x + M_{22} y + M_{23}}{M_{31} x + M_{32} y + M_{33}} \right )$ 
 when the flag #WARP_INVERSE_MAP is set. Otherwise, the transformation is first inverted with invert and then put in the formula above instead of M. The function cannot operate in-place. 
 **See also:**  warpAffine, resize, remap, getRectSubPix, perspectiveTransform
 
@@ -25051,16 +25051,16 @@ when the flag #WARP_INVERSE_MAP is set. Otherwise, the transformation is first i
 
 \brief Remaps an image to polar or semilog-polar coordinates space 
 @anchor polar_remaps_reference_image ![Polar remaps reference](pics/polar_remap_doc.png) 
-Transform the source image using the following transformation: \f[ dst(\rho , \phi ) = src(x,y) \f] 
-where \f[ \begin{array}{l} \vec{I} = (x - center.x, \;y - center.y) \\ \phi = Kangle \cdot \texttt{angle} (\vec{I}) \\ \rho = \left\{\begin{matrix} Klin \cdot \texttt{magnitude} (\vec{I}) & default \\ Klog \cdot log_e(\texttt{magnitude} (\vec{I})) & if \; semilog \\ \end{matrix}\right. \end{array} \f] 
-and \f[ \begin{array}{l} Kangle = dsize.height / 2\Pi \\ Klin = dsize.width / maxRadius \\ Klog = dsize.width / log_e(maxRadius) \\ \end{array} \f] 
+Transform the source image using the following transformation: $ dst(\rho , \phi ) = src(x,y) $ 
+where $ \begin{array}{l} \vec{I} = (x - center.x, \;y - center.y) \\ \phi = Kangle \cdot \texttt{angle} (\vec{I}) \\ \rho = \left\{\begin{matrix} Klin \cdot \texttt{magnitude} (\vec{I}) & default \\ Klog \cdot log_e(\texttt{magnitude} (\vec{I})) & if \; semilog \\ \end{matrix}\right. \end{array} $ 
+and $ \begin{array}{l} Kangle = dsize.height / 2\Pi \\ Klin = dsize.width / maxRadius \\ Klog = dsize.width / log_e(maxRadius) \\ \end{array} $ 
 \par Linear vs semilog mapping 
 Polar mapping can be linear or semi-log. Add one of #WarpPolarMode to `flags` to specify the polar mapping mode. 
 Linear is the default mode. 
 The semilog mapping emulates the human "foveal" vision that permit very high acuity on the line of sight (central vision) in contrast to peripheral vision where acuity is minor. 
 \par Option on `dsize`: 
-- if both values in `dsize <=0 ` (default), the destination image will have (almost) same area of source bounding circle: \f[\begin{array}{l} dsize.area  \leftarrow (maxRadius^2 \cdot \Pi) \\ dsize.width = \texttt{cvRound}(maxRadius) \\ dsize.height = \texttt{cvRound}(maxRadius \cdot \Pi) \\ \end{array}\f] 
-- if only `dsize.height <= 0`, the destination image area will be proportional to the bounding circle area but scaled by `Kx * Kx`: \f[\begin{array}{l} dsize.height = \texttt{cvRound}(dsize.width \cdot \Pi) \\ \end{array} \f] 
+- if both values in `dsize <=0 ` (default), the destination image will have (almost) same area of source bounding circle: $\begin{array}{l} dsize.area  \leftarrow (maxRadius^2 \cdot \Pi) \\ dsize.width = \texttt{cvRound}(maxRadius) \\ dsize.height = \texttt{cvRound}(maxRadius \cdot \Pi) \\ \end{array}$ 
+- if only `dsize.height <= 0`, the destination image area will be proportional to the bounding circle area but scaled by `Kx * Kx`: $\begin{array}{l} dsize.height = \texttt{cvRound}(dsize.width \cdot \Pi) \\ \end{array} $ 
 - if both values in `dsize > 0 `, the destination image will have the given size therefore the area of the bounding circle will be scaled to `dsize`. 
 \par Reverse mapping 
 You can get reverse mapping adding #WARP_INVERSE_MAP to `flags` \snippet polar_transforms.cpp InverseMap 
