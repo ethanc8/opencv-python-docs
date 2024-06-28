@@ -1351,7 +1351,7 @@ Sets the new input value for the network         *  @param blob        A new blo
          *
          *  If scale or mean values are specified, a final input blob is computed
          *  as:
-         * $input(n,c,h,w) = scalefactor \times (blob(n,c,h,w) - mean_c)$
+         * \begin{equation*}input(n,c,h,w) = scalefactor \times (blob(n,c,h,w) - mean_c)\end{equation*}
 
 
 
@@ -1380,7 +1380,7 @@ Sets the new input value for the network         *  @param blob        A new blo
          *
          *  If scale or mean values are specified, a final input blob is computed
          *  as:
-         * $input(n,c,h,w) = scalefactor \times (blob(n,c,h,w) - mean_c)$
+         * \begin{equation*}input(n,c,h,w) = scalefactor \times (blob(n,c,h,w) - mean_c)\end{equation*}
 
 
 
