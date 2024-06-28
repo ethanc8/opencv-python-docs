@@ -1333,7 +1333,7 @@ Returns a quantized Net from a floating-point Net.
 Sets the new input value for the network
 
 
-If scale or mean values are specified, a final input blob is computed as: \f[input(n,c,h,w) = scalefactor \times (blob(n,c,h,w) - mean_c)\f] 
+If scale or mean values are specified, a final input blob is computed as: $input(n,c,h,w) = scalefactor \times (blob(n,c,h,w) - mean_c)$ 
 **See also:** connect(String, String) to know format of the descriptor.
 
 
@@ -1355,7 +1355,7 @@ If scale or mean values are specified, a final input blob is computed as: \f[inp
 Sets the new input value for the network
 
 
-If scale or mean values are specified, a final input blob is computed as: \f[input(n,c,h,w) = scalefactor \times (blob(n,c,h,w) - mean_c)\f] 
+If scale or mean values are specified, a final input blob is computed as: $input(n,c,h,w) = scalefactor \times (blob(n,c,h,w) - mean_c)$ 
 **See also:** connect(String, String) to know format of the descriptor.
 
 
