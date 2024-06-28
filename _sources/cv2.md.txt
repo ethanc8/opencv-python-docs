@@ -8541,7 +8541,9 @@ Detect %MSER regions
 `````{py:class} 
 
 
-cv.Mat wrapper for numpy array. Stores extra metadata information how to interpret and process of numpy array for underlying C++ code. 
+
+cv.Mat wrapper for numpy array. 
+Stores extra metadata information how to interpret and process of numpy array for underlying C++ code. 
 
 
 `````
