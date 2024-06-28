@@ -201,6 +201,7 @@ None
 
 Basic marker detection
 
+
 Performs marker detection in the input image. Only markers included in the specific dictionary are searched. For each detected marker, it returns the 2D position of its corner in the image and its corresponding identifier. Note that this function does not perform pose estimation. 
 ```{note}
 The function does not correct lens distortion or takes it into account. It's recommended to undistortinput image with corresponding camera model, if camera parameters are known 
@@ -225,6 +226,7 @@ The function does not correct lens distortion or takes it into account. It's rec
 
 Basic marker detection
 
+
 Performs marker detection in the input image. Only markers included in the specific dictionary are searched. For each detected marker, it returns the 2D position of its corner in the image and its corresponding identifier. Note that this function does not perform pose estimation. 
 ```{note}
 The function does not correct lens distortion or takes it into account. It's recommended to undistortinput image with corresponding camera model, if camera parameters are known 
@@ -248,6 +250,7 @@ The function does not correct lens distortion or takes it into account. It's rec
 ````{py:method} refineDetectedMarkers(image, board, detectedCorners, detectedIds, rejectedCorners[, cameraMatrix[, distCoeffs[, recoveredIdxs]]]) -> detectedCorners, detectedIds, rejectedCorners, recoveredIdxs
 
 Refine not detected markers based on the already detected and the board layout
+
 
 This function tries to find markers that were not detected in the basic detecMarkers function. First, based on the current detected marker and the board layout, the function interpolates the position of the missing markers. Then it tries to find correspondence between the reprojected markers and the rejected candidates based on the minRepDistance and errorCorrectionRate parameters. If camera parameters and distortion coefficients are provided, missing markers are reprojected using projectPoint function. If not, missing marker projections are interpolated using global homography, and all the marker corners in the board must have the same Z coordinate. 
 
@@ -277,6 +280,7 @@ This function tries to find markers that were not detected in the basic detecMar
 
 Refine not detected markers based on the already detected and the board layout
 
+
 This function tries to find markers that were not detected in the basic detecMarkers function. First, based on the current detected marker and the board layout, the function interpolates the position of the missing markers. Then it tries to find correspondence between the reprojected markers and the rejected candidates based on the minRepDistance and errorCorrectionRate parameters. If camera parameters and distortion coefficients are provided, missing markers are reprojected using projectPoint function. If not, missing marker projections are interpolated using global homography, and all the marker corners in the board must have the same Z coordinate. 
 
 
@@ -302,6 +306,7 @@ This function tries to find markers that were not detected in the basic detecMar
 ````
 
 ````{py:method} __init__(self, dictionary: Dictionary=..., detectorParams: DetectorParameters=..., refineParams: RefineParameters=...)
+
 
 
 Initialize self.  See help(type(self)) for accurate signature. 
@@ -431,6 +436,7 @@ Reads algorithm parameters from a file storage
 
 
 
+
 Initialize self.  See help(type(self)) for accurate signature. 
 
 
@@ -446,6 +452,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 ````
 
 ````{py:method} __init__(self, objPoints: _typing.Sequence[cv2.UMat], dictionary: Dictionary, ids: cv2.UMat)
+
 
 
 
@@ -509,6 +516,7 @@ Given a board configuration and a set of detected markers, returns the correspon
 
 Draw a planar board
 
+
 This function return the image of the board, ready to be printed. 
 
 
@@ -528,6 +536,7 @@ This function return the image of the board, ready to be printed.
 ````{py:method} generateImage(outSize[, img[, marginSize[, borderBits]]]) -> img
 
 Draw a planar board
+
 
 This function return the image of the board, ready to be printed. 
 
@@ -559,7 +568,9 @@ return the Dictionary of markers employed for this board
 ````{py:method} getObjPoints() -> retval
 return array of object points of all the marker corners in the board.
 
-Each marker include its 4 corners in this order: -   objPoints[i][0] - left-top point of i-th marker -   objPoints[i][1] - right-top point of i-th marker -   objPoints[i][2] - right-bottom point of i-th marker -   objPoints[i][3] - left-bottom point of i-th marker Markers are placed in a certain order - row by row, left to right in every row. For M markers, the size is Mx4. 
+
+Each marker include its 4 corners in this order: -   objPoints[i][0] - left-top point of i-th marker -   objPoints[i][1] - right-top point of i-th marker -   objPoints[i][2] - right-bottom point of i-th marker -   objPoints[i][3] - left-bottom point of i-th marker 
+Markers are placed in a certain order - row by row, left to right in every row. For M markers, the size is Mx4. 
 
 
 :param self: 
@@ -603,6 +614,7 @@ get coordinate of the bottom right corner of the board, is set when calling the 
 
 
 
+
 Initialize self.  See help(type(self)) for accurate signature. 
 
 
@@ -622,6 +634,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 ````
 
 ````{py:method} __init__(self, size: cv2.typing.Size, squareLength: float, markerLength: float, dictionary: Dictionary, ids: cv2.UMat | None=...)
+
 
 
 
@@ -647,6 +660,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 
 check whether the ChArUco markers are collinear
 
+
 The number of ids in charucoIDs should be <= the number of chessboard corners in the board. This functions checks whether the charuco corners are on a straight line (returns true, if so), or not (false). Axis parallel, as well as diagonal and other straight lines detected.  Degenerate cases: for number of charucoIDs <= 2,the function returns true. 
 
 
@@ -662,6 +676,7 @@ The number of ids in charucoIDs should be <= the number of chessboard corners in
 
 check whether the ChArUco markers are collinear
 
+
 The number of ids in charucoIDs should be <= the number of chessboard corners in the board. This functions checks whether the charuco corners are on a straight line (returns true, if so), or not (false). Axis parallel, as well as diagonal and other straight lines detected.  Degenerate cases: for number of charucoIDs <= 2,the function returns true. 
 
 
@@ -676,7 +691,9 @@ The number of ids in charucoIDs should be <= the number of chessboard corners in
 ````{py:method} setLegacyPattern(legacyPattern) -> None
 set legacy chessboard pattern.
 
-Legacy setting creates chessboard patterns starting with a white box in the upper left corner if there is an even row count of chessboard boxes, otherwise it starts with a black box. This setting ensures compatibility to patterns created with OpenCV versions prior OpenCV 4.6.0. See https://github.com/opencv/opencv/issues/23152. Default value: false. 
+
+Legacy setting creates chessboard patterns starting with a white box in the upper left corner if there is an even row count of chessboard boxes, otherwise it starts with a black box. This setting ensures compatibility to patterns created with OpenCV versions prior OpenCV 4.6.0. See https://github.com/opencv/opencv/issues/23152. 
+Default value: false. 
 
 
 :param self: 
@@ -754,7 +771,10 @@ get CharucoBoard::chessboardCorners
 
 detect aruco markers and interpolate position of ChArUco board corners
 
-This function receives the detected markers and returns the 2D position of the chessboard corners from a ChArUco board using the detected Aruco markers. If markerCorners and markerCorners are empty, the detectMarkers() will run and detect aruco markers and ids. If camera parameters are provided, the process is based in an approximated pose estimation, else it is based on local homography. Only visible corners are returned. For each corner, its corresponding identifier is also returned in charucoIds. 
+
+This function receives the detected markers and returns the 2D position of the chessboard corners from a ChArUco board using the detected Aruco markers. 
+If markerCorners and markerCorners are empty, the detectMarkers() will run and detect aruco markers and ids. 
+If camera parameters are provided, the process is based in an approximated pose estimation, else it is based on local homography. Only visible corners are returned. For each corner, its corresponding identifier is also returned in charucoIds. 
 **See also:** findChessboardCorners
 
 
@@ -777,7 +797,10 @@ This function receives the detected markers and returns the 2D position of the c
 
 detect aruco markers and interpolate position of ChArUco board corners
 
-This function receives the detected markers and returns the 2D position of the chessboard corners from a ChArUco board using the detected Aruco markers. If markerCorners and markerCorners are empty, the detectMarkers() will run and detect aruco markers and ids. If camera parameters are provided, the process is based in an approximated pose estimation, else it is based on local homography. Only visible corners are returned. For each corner, its corresponding identifier is also returned in charucoIds. 
+
+This function receives the detected markers and returns the 2D position of the chessboard corners from a ChArUco board using the detected Aruco markers. 
+If markerCorners and markerCorners are empty, the detectMarkers() will run and detect aruco markers and ids. 
+If camera parameters are provided, the process is based in an approximated pose estimation, else it is based on local homography. Only visible corners are returned. For each corner, its corresponding identifier is also returned in charucoIds. 
 **See also:** findChessboardCorners
 
 
@@ -799,6 +822,7 @@ This function receives the detected markers and returns the 2D position of the c
 ````{py:method} detectDiamonds(image[, diamondCorners[, diamondIds[, markerCorners[, markerIds]]]]) -> diamondCorners, diamondIds, markerCorners, markerIds
 
 Detect ChArUco Diamond markers
+
 
 This function detects Diamond markers from the previous detected ArUco markers. The diamonds are returned in the diamondCorners and diamondIds parameters. If camera calibration parameters are provided, the diamond search is based on reprojection. If not, diamond search is based on homography. Homography is faster than reprojection, but less accurate. 
 
@@ -822,6 +846,7 @@ This function detects Diamond markers from the previous detected ArUco markers. 
 
 Detect ChArUco Diamond markers
 
+
 This function detects Diamond markers from the previous detected ArUco markers. The diamonds are returned in the diamondCorners and diamondIds parameters. If camera calibration parameters are provided, the diamond search is based on reprojection. If not, diamond search is based on homography. Homography is faster than reprojection, but less accurate. 
 
 
@@ -841,6 +866,7 @@ This function detects Diamond markers from the previous detected ArUco markers. 
 ````
 
 ````{py:method} __init__(self, board: CharucoBoard, charucoParams: CharucoParameters=..., detectorParams: DetectorParameters=..., refineParams: RefineParameters=...)
+
 
 
 Initialize self.  See help(type(self)) for accurate signature. 
@@ -967,6 +993,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 ````{py:method} __init__(self)
 
 
+
 Initialize self.  See help(type(self)) for accurate signature. 
 
 
@@ -1001,6 +1028,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 
 
 ````{py:method} __init__(self)
+
 
 
 Initialize self.  See help(type(self)) for accurate signature. 
@@ -1188,6 +1216,7 @@ Write a set of DetectorParameters to FileStorage
 
 
 
+
 Initialize self.  See help(type(self)) for accurate signature. 
 
 
@@ -1197,6 +1226,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 ````
 
 ````{py:method} __init__(self, bytesList: cv2.typing.MatLike, _markerSize: int, maxcorr: int=...)
+
 
 
 
@@ -1218,6 +1248,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 
 Returns Hamming distance of the input bits to the specific id.
 
+
 If `allRotations` flag is set, the four posible marker rotations are considered 
 
 
@@ -1235,6 +1266,7 @@ If `allRotations` flag is set, the four posible marker rotations are considered
 ````{py:method} getDistanceToId(bits, id[, allRotations]) -> retval
 
 Returns Hamming distance of the input bits to the specific id.
+
 
 If `allRotations` flag is set, the four posible marker rotations are considered 
 
@@ -1293,6 +1325,7 @@ Generate a canonical marker image
 ````{py:method} readDictionary(fn) -> retval
 Read a new dictionary from FileNode.
 
+
 Dictionary example in YAML format:\n nmarkers: 35\n markersize: 6\n maxCorrectionBits: 5\n marker_0: "101011111011111001001001101100000000"\n \n marker_34: "011111010000111011111110110101100101" 
 
 
@@ -1320,6 +1353,7 @@ Write a dictionary to FileStorage, format is the same as in readDictionary().
 
 ````{py:method} identify(onlyBits, maxCorrectionRate) -> retval, idx, rotation
 Given a matrix of bits. Returns whether if marker is identified or not.
+
 
 Returns reference to the marker id in the dictionary (if any) and its rotation. 
 
@@ -1384,6 +1418,7 @@ Transform list of bytes to matrix of bits
 
 
 
+
 Initialize self.  See help(type(self)) for accurate signature. 
 
 
@@ -1403,6 +1438,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 ````
 
 ````{py:method} __init__(self, size: cv2.typing.Size, markerLength: float, markerSeparation: float, dictionary: Dictionary, ids: cv2.UMat | None=...)
+
 
 
 
@@ -1467,6 +1503,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 
 
 ````{py:method} __init__(self, minRepDistance: float=..., errorCorrectionRate: float=..., checkAllOrders: bool=...)
+
 
 
 Initialize self.  See help(type(self)) for accurate signature. 
@@ -1555,6 +1592,7 @@ Transform matrix of bits to list of bytes with 4 marker rotations
 
 Draws a set of Charuco corners
 
+
 This function draws a set of detected Charuco corners. If identifiers vector is provided, it also draws the id of each corner. 
 
 
@@ -1573,6 +1611,7 @@ This function draws a set of detected Charuco corners. If identifiers vector is 
 ````{py:function} drawDetectedDiamonds(image, diamondCorners[, diamondIds[, borderColor]]) -> image
 
 Draw a set of detected ChArUco Diamond markers
+
 
 Given an array of detected diamonds, this functions draws them in the image. The marker borders are painted and the markers identifiers if provided. Useful for debugging purposes. 
 
@@ -1593,6 +1632,7 @@ Given an array of detected diamonds, this functions draws them in the image. The
 
 Draw detected markers in image
 
+
 Given an array of detected marker corners and its corresponding ids, this functions draws the markers in the image. The marker borders are painted and the markers identifiers if provided. Useful for debugging purposes. 
 
 
@@ -1612,6 +1652,7 @@ Given an array of detected marker corners and its corresponding ids, this functi
 
 Extend base dictionary by new nMarkers
 
+
 This function creates a new dictionary composed by nMarkers markers and each markers composed by markerSize x markerSize bits. If baseDictionary is provided, its markers are directly included and the rest are generated based on them. If the size of baseDictionary is higher than nMarkers, only the first nMarkers in baseDictionary are taken and no new marker is added. 
 
 
@@ -1630,6 +1671,7 @@ This function creates a new dictionary composed by nMarkers markers and each mar
 ````{py:function} generateImageMarker(dictionary, id, sidePixels[, img[, borderBits]]) -> img
 
 Generate a canonical marker image
+
 
 This function returns a marker image in its canonical form (i.e. ready to be printed) 
 
