@@ -216,6 +216,7 @@ None
 
 
 
+
 Initialize self.  See help(type(self)) for accurate signature. 
 
 
@@ -229,6 +230,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 ````
 
 ````{py:method} __init__(self, network: Net)
+
 
 
 
@@ -246,6 +248,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 
 
 
+
 @overload 
 
 
@@ -257,6 +260,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 ````
 
 ````{py:method} classify(frame) -> classId, conf
+
 
 
 
@@ -273,6 +277,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 ````{py:method} setEnableSoftmaxPostProcessing(enable) -> retval
 Set enable/disable softmax post processing option.
 
+
 If this option is true, softmax is applied after forward inference within the classify() function to convert the confidences range to [0.0-1.0]. This function allows you to toggle this behavior. Please turn true when not contain softmax layer in model. 
 
 
@@ -285,6 +290,7 @@ If this option is true, softmax is applied after forward inference within the cl
 
 ````{py:method} getEnableSoftmaxPostProcessing() -> retval
 Get enable/disable softmax post processing option.
+
 
 This option defaults to false, softmax post processing is not applied within the classify() function. 
 
@@ -307,6 +313,7 @@ This option defaults to false, softmax post processing is not applied within the
 
 
 
+
 Initialize self.  See help(type(self)) for accurate signature. 
 
 
@@ -320,6 +327,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 ````
 
 ````{py:method} __init__(self, network: Net)
+
 
 
 
@@ -418,6 +426,7 @@ Getter for nmsAcrossClasses. This variable defaults to false,such that when non 
 
 
 
+
 Initialize self.  See help(type(self)) for accurate signature. 
 
 
@@ -432,6 +441,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 
 
 
+
 Initialize self.  See help(type(self)) for accurate signature. 
 
 
@@ -443,6 +453,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 ````
 
 ````{py:method} __init__(self, s: str)
+
 
 
 
@@ -541,6 +552,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 
 
 
+
 Initialize self.  See help(type(self)) for accurate signature. 
 
 
@@ -550,6 +562,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 ````
 
 ````{py:method} __init__(self, scalefactor: cv2.typing.Scalar, size: cv2.typing.Size=..., mean: cv2.typing.Scalar=..., swapRB: bool=..., ddepth: int=..., datalayout: DataLayout=..., mode: ImagePaddingMode=..., borderValue: cv2.typing.Scalar=...)
+
 
 
 
@@ -655,6 +668,7 @@ Get rectangle coordinates in original image system from rectangle in blob coordi
 
 
 
+
 Initialize self.  See help(type(self)) for accurate signature. 
 
 
@@ -668,6 +682,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 ````
 
 ````{py:method} __init__(self, network: Net)
+
 
 
 
@@ -764,6 +779,7 @@ Given the @p input frame, create input blob, run net
 
 Computes and sets internal parameters according to inputs, outputs and blobs.
 
+
 If this method is called after network has allocated all memory for input and output blobs and before inferencing. 
 
 
@@ -779,6 +795,7 @@ If this method is called after network has allocated all memory for input and ou
 ````{py:method} finalize(inputs[, outputs]) -> outputs
 
 Computes and sets internal parameters according to inputs, outputs and blobs.
+
 
 If this method is called after network has allocated all memory for input and output blobs and before inferencing. 
 
@@ -813,9 +830,10 @@ This method will be removed in the future release.
 ````
 
 ````{py:method} outputNameToIndex(outputName) -> retval
-Returns index of output blob in output array.@see inputNameToIndex() 
+Returns index of output blob in output array.
 
 
+**See also:** inputNameToIndex()
 
 
 :param self: 
@@ -842,6 +860,7 @@ Returns index of output blob in output array.@see inputNameToIndex()
 
 
 
+
 Initialize self.  See help(type(self)) for accurate signature. 
 
 
@@ -858,6 +877,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 
 
 
+
 Initialize self.  See help(type(self)) for accurate signature. 
 
 
@@ -871,6 +891,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 ````{py:method} setInputSize(size) -> retval
 
 Set input size for frame.
+
 
 setInputSize(width, height) -> retval @overload 
 ```{note}
@@ -892,6 +913,7 @@ If shape of the new blob less than 0, then frame size not change.
 ````{py:method} setInputSize(size) -> retval
 
 Set input size for frame.
+
 
 setInputSize(width, height) -> retval @overload 
 ```{note}
@@ -1067,6 +1089,7 @@ Set preprocessing parameters for frame.
 :classmethod:
 Create a network from Intel's Model Optimizer in-memory buffers with intermediate representation (IR).
 
+
 readFromModelOptimizer(bufferModelConfig, bufferWeights) -> retval 
 
 
@@ -1087,6 +1110,7 @@ readFromModelOptimizer(bufferModelConfig, bufferWeights) -> retval
 ````{py:method} readFromModelOptimizer(xml, bin) -> retval
 :classmethod:
 Create a network from Intel's Model Optimizer in-memory buffers with intermediate representation (IR).
+
 
 readFromModelOptimizer(bufferModelConfig, bufferWeights) -> retval 
 
@@ -1109,6 +1133,7 @@ readFromModelOptimizer(bufferModelConfig, bufferWeights) -> retval
 
 Returns pointer to layer with specified id or name which the network use.
 
+
 getLayer(layerName) -> retval @overload 
 ```{deprecated} unknown
 Use int getLayerId(const String &layer)
@@ -1125,6 +1150,7 @@ Use int getLayerId(const String &layer)
 ````{py:method} getLayer(layerId) -> retval
 
 Returns pointer to layer with specified id or name which the network use.
+
 
 getLayer(layerName) -> retval @overload 
 ```{deprecated} unknown
@@ -1143,6 +1169,7 @@ Use int getLayerId(const String &layer)
 
 Returns pointer to layer with specified id or name which the network use.
 
+
 getLayer(layerName) -> retval @overload 
 ```{deprecated} unknown
 Use int getLayerId(const String &layer)
@@ -1160,7 +1187,9 @@ Use int getLayerId(const String &layer)
 
 Runs forward pass to compute outputs of layers listed in @p outBlobNames.
 
-forward([, outputBlobs[, outputName]]) -> outputBlobs forward(outBlobNames[, outputBlobs]) -> outputBlobs 
+
+forward([, outputBlobs[, outputName]]) -> outputBlobs 
+forward(outBlobNames[, outputBlobs]) -> outputBlobs 
 
 
 :param self: 
@@ -1179,7 +1208,9 @@ forward([, outputBlobs[, outputName]]) -> outputBlobs forward(outBlobNames[, out
 
 Runs forward pass to compute outputs of layers listed in @p outBlobNames.
 
-forward([, outputBlobs[, outputName]]) -> outputBlobs forward(outBlobNames[, outputBlobs]) -> outputBlobs 
+
+forward([, outputBlobs[, outputName]]) -> outputBlobs 
+forward(outBlobNames[, outputBlobs]) -> outputBlobs 
 
 
 :param self: 
@@ -1198,7 +1229,9 @@ forward([, outputBlobs[, outputName]]) -> outputBlobs forward(outBlobNames[, out
 
 Runs forward pass to compute outputs of layers listed in @p outBlobNames.
 
-forward([, outputBlobs[, outputName]]) -> outputBlobs forward(outBlobNames[, outputBlobs]) -> outputBlobs 
+
+forward([, outputBlobs[, outputName]]) -> outputBlobs 
+forward(outBlobNames[, outputBlobs]) -> outputBlobs 
 
 
 :param self: 
@@ -1217,7 +1250,9 @@ forward([, outputBlobs[, outputName]]) -> outputBlobs forward(outBlobNames[, out
 
 Runs forward pass to compute outputs of layers listed in @p outBlobNames.
 
-forward([, outputBlobs[, outputName]]) -> outputBlobs forward(outBlobNames[, outputBlobs]) -> outputBlobs 
+
+forward([, outputBlobs[, outputName]]) -> outputBlobs 
+forward(outBlobNames[, outputBlobs]) -> outputBlobs 
 
 
 :param self: 
@@ -1236,7 +1271,9 @@ forward([, outputBlobs[, outputName]]) -> outputBlobs forward(outBlobNames[, out
 
 Runs forward pass to compute outputs of layers listed in @p outBlobNames.
 
-forward([, outputBlobs[, outputName]]) -> outputBlobs forward(outBlobNames[, outputBlobs]) -> outputBlobs 
+
+forward([, outputBlobs[, outputName]]) -> outputBlobs 
+forward(outBlobNames[, outputBlobs]) -> outputBlobs 
 
 
 :param self: 
@@ -1295,7 +1332,9 @@ Returns a quantized Net from a floating-point Net.
 
 Sets the new input value for the network
 
+
 If scale or mean values are specified, a final input blob is computed as: \f[input(n,c,h,w) = scalefactor \times (blob(n,c,h,w) - mean_c)\f] 
+**See also:** connect(String, String) to know format of the descriptor.
 
 
 :param self: 
@@ -1306,7 +1345,7 @@ If scale or mean values are specified, a final input blob is computed as: \f[inp
 :type name: str
 :param scalefactor: An optional normalization scale.
 :type scalefactor: float
-:param mean: An optional mean subtraction values.@see connect(String, String) to know format of the descriptor. 
+:param mean: An optional mean subtraction values.
 :type mean: cv2.typing.Scalar
 :rtype: None
 ````
@@ -1315,7 +1354,9 @@ If scale or mean values are specified, a final input blob is computed as: \f[inp
 
 Sets the new input value for the network
 
+
 If scale or mean values are specified, a final input blob is computed as: \f[input(n,c,h,w) = scalefactor \times (blob(n,c,h,w) - mean_c)\f] 
+**See also:** connect(String, String) to know format of the descriptor.
 
 
 :param self: 
@@ -1326,7 +1367,7 @@ If scale or mean values are specified, a final input blob is computed as: \f[inp
 :type name: str
 :param scalefactor: An optional normalization scale.
 :type scalefactor: float
-:param mean: An optional mean subtraction values.@see connect(String, String) to know format of the descriptor. 
+:param mean: An optional mean subtraction values.
 :type mean: cv2.typing.Scalar
 :rtype: None
 ````
@@ -1335,7 +1376,9 @@ If scale or mean values are specified, a final input blob is computed as: \f[inp
 
 Sets the new value for the learned param of the layer.
 
+
 setParam(layerName, numParam, blob) -> None 
+**See also:** Layer::blobs
 ```{note}
 If shape of the new blob differs from the previous shape,then the following forward pass may fail. 
 ```
@@ -1347,7 +1390,7 @@ If shape of the new blob differs from the previous shape,then the following forw
 :type layer: int
 :param numParam: index of the layer parameter in the Layer::blobs array.
 :type numParam: int
-:param blob: the new value.@see Layer::blobs 
+:param blob: the new value.
 :type blob: cv2.typing.MatLike
 :rtype: None
 ````
@@ -1356,7 +1399,9 @@ If shape of the new blob differs from the previous shape,then the following forw
 
 Sets the new value for the learned param of the layer.
 
+
 setParam(layerName, numParam, blob) -> None 
+**See also:** Layer::blobs
 ```{note}
 If shape of the new blob differs from the previous shape,then the following forward pass may fail. 
 ```
@@ -1368,7 +1413,7 @@ If shape of the new blob differs from the previous shape,then the following forw
 :type layerName: str
 :param numParam: index of the layer parameter in the Layer::blobs array.
 :type numParam: int
-:param blob: the new value.@see Layer::blobs 
+:param blob: the new value.
 :type blob: cv2.typing.MatLike
 :param layer: name or id of the layer.
 :type layer: 
@@ -1379,14 +1424,16 @@ If shape of the new blob differs from the previous shape,then the following forw
 
 Returns parameter blob of the layer.
 
+
 getParam(layerName[, numParam]) -> retval 
+**See also:** Layer::blobs
 
 
 :param self: 
 :type self: 
 :param layer: name or id of the layer.
 :type layer: int
-:param numParam: index of the layer parameter in the Layer::blobs array.@see Layer::blobs 
+:param numParam: index of the layer parameter in the Layer::blobs array.
 :type numParam: int
 :rtype: cv2.typing.MatLike
 ````
@@ -1395,14 +1442,16 @@ getParam(layerName[, numParam]) -> retval
 
 Returns parameter blob of the layer.
 
+
 getParam(layerName[, numParam]) -> retval 
+**See also:** Layer::blobs
 
 
 :param self: 
 :type self: 
 :param layerName: 
 :type layerName: str
-:param numParam: index of the layer parameter in the Layer::blobs array.@see Layer::blobs 
+:param numParam: index of the layer parameter in the Layer::blobs array.
 :type numParam: int
 :param layer: name or id of the layer.
 :type layer: 
@@ -1413,6 +1462,7 @@ getParam(layerName[, numParam]) -> retval
 
 Returns input and output shapes for all layers in loaded model;preliminary inferencing isn't necessary. 
 
+
 getLayersShapes(netInputShape) -> layersIds, inLayersShapes, outLayersShapes @overload 
 
 
@@ -1433,6 +1483,7 @@ getLayersShapes(netInputShape) -> layersIds, inLayersShapes, outLayersShapes @ov
 
 Returns input and output shapes for all layers in loaded model;preliminary inferencing isn't necessary. 
 
+
 getLayersShapes(netInputShape) -> layersIds, inLayersShapes, outLayersShapes @overload 
 
 
@@ -1455,7 +1506,10 @@ getLayersShapes(netInputShape) -> layersIds, inLayersShapes, outLayersShapes @ov
 
 Computes FLOP for whole loaded model with specified input shapes.
 
-getFLOPS(netInputShape) -> retval @overload getFLOPS(layerId, netInputShapes) -> retval @overload getFLOPS(layerId, netInputShape) -> retval @overload 
+
+getFLOPS(netInputShape) -> retval @overload 
+getFLOPS(layerId, netInputShapes) -> retval @overload 
+getFLOPS(layerId, netInputShape) -> retval @overload 
 
 
 :param self: 
@@ -1470,7 +1524,10 @@ getFLOPS(netInputShape) -> retval @overload getFLOPS(layerId, netInputShapes) ->
 
 Computes FLOP for whole loaded model with specified input shapes.
 
-getFLOPS(netInputShape) -> retval @overload getFLOPS(layerId, netInputShapes) -> retval @overload getFLOPS(layerId, netInputShape) -> retval @overload 
+
+getFLOPS(netInputShape) -> retval @overload 
+getFLOPS(layerId, netInputShapes) -> retval @overload 
+getFLOPS(layerId, netInputShape) -> retval @overload 
 
 
 :param self: 
@@ -1487,7 +1544,10 @@ getFLOPS(netInputShape) -> retval @overload getFLOPS(layerId, netInputShapes) ->
 
 Computes FLOP for whole loaded model with specified input shapes.
 
-getFLOPS(netInputShape) -> retval @overload getFLOPS(layerId, netInputShapes) -> retval @overload getFLOPS(layerId, netInputShape) -> retval @overload 
+
+getFLOPS(netInputShape) -> retval @overload 
+getFLOPS(layerId, netInputShapes) -> retval @overload 
+getFLOPS(layerId, netInputShape) -> retval @overload 
 
 
 :param self: 
@@ -1504,7 +1564,10 @@ getFLOPS(netInputShape) -> retval @overload getFLOPS(layerId, netInputShapes) ->
 
 Computes FLOP for whole loaded model with specified input shapes.
 
-getFLOPS(netInputShape) -> retval @overload getFLOPS(layerId, netInputShapes) -> retval @overload getFLOPS(layerId, netInputShape) -> retval @overload 
+
+getFLOPS(netInputShape) -> retval @overload 
+getFLOPS(layerId, netInputShapes) -> retval @overload 
+getFLOPS(layerId, netInputShape) -> retval @overload 
 
 
 :param self: 
@@ -1523,7 +1586,10 @@ getFLOPS(netInputShape) -> retval @overload getFLOPS(layerId, netInputShapes) ->
 
 
 
-@overload getMemoryConsumption(layerId, netInputShapes) -> weights, blobs @overload getMemoryConsumption(layerId, netInputShape) -> weights, blobs @overload 
+
+@overload 
+getMemoryConsumption(layerId, netInputShapes) -> weights, blobs @overload 
+getMemoryConsumption(layerId, netInputShape) -> weights, blobs @overload 
 
 
 :param self: 
@@ -1537,7 +1603,10 @@ getFLOPS(netInputShape) -> retval @overload getFLOPS(layerId, netInputShapes) ->
 
 
 
-@overload getMemoryConsumption(layerId, netInputShapes) -> weights, blobs @overload getMemoryConsumption(layerId, netInputShape) -> weights, blobs @overload 
+
+@overload 
+getMemoryConsumption(layerId, netInputShapes) -> weights, blobs @overload 
+getMemoryConsumption(layerId, netInputShape) -> weights, blobs @overload 
 
 
 :param self: 
@@ -1553,7 +1622,10 @@ getFLOPS(netInputShape) -> retval @overload getFLOPS(layerId, netInputShapes) ->
 
 
 
-@overload getMemoryConsumption(layerId, netInputShapes) -> weights, blobs @overload getMemoryConsumption(layerId, netInputShape) -> weights, blobs @overload 
+
+@overload 
+getMemoryConsumption(layerId, netInputShapes) -> weights, blobs @overload 
+getMemoryConsumption(layerId, netInputShape) -> weights, blobs @overload 
 
 
 :param self: 
@@ -1568,6 +1640,7 @@ getFLOPS(netInputShape) -> retval @overload getFLOPS(layerId, netInputShapes) ->
 ````{py:method} __init__(self)
 
 
+
 Initialize self.  See help(type(self)) for accurate signature. 
 
 
@@ -1577,6 +1650,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 ````
 
 ````{py:method} empty() -> retval
+
 
 
 Returns true if there are no layers in the network. 
@@ -1603,11 +1677,12 @@ Dump net to String
 Dump net structure, hyperparameters, backend, target and fusion to dot file
 
 
+**See also:** dump()
 
 
 :param self: 
 :type self: 
-:param path: path to output file with .dot extension@see dump() 
+:param path: path to output file with .dot extension
 :type path: str
 :rtype: None
 ````
@@ -1640,7 +1715,9 @@ Converts string name of the layer to the integer identifier.
 ````{py:method} connect(outPin, inpPin) -> None
 Connects output of the first layer to input of the second layer.
 
-Descriptors have the following template <DFN>&lt;layer_name&gt;[.input_number]</DFN>: - the first part of the template <DFN>layer_name</DFN> is string name of the added layer. If this part is empty then the network input pseudo layer will be used; - the second optional part of the template <DFN>input_number</DFN> is either number of the layer input, either label one. If this part is omitted then the first layer input will be used. @see setNetInputs(), Layer::inputNameToIndex(), Layer::outputNameToIndex() 
+
+Descriptors have the following template <DFN>&lt;layer_name&gt;[.input_number]</DFN>: - the first part of the template <DFN>layer_name</DFN> is string name of the added layer. If this part is empty then the network input pseudo layer will be used; - the second optional part of the template <DFN>input_number</DFN> is either number of the layer input, either label one. If this part is omitted then the first layer input will be used. 
+**See also:** setNetInputs(), Layer::inputNameToIndex(), Layer::outputNameToIndex()
 
 
 :param self: 
@@ -1654,6 +1731,7 @@ Descriptors have the following template <DFN>&lt;layer_name&gt;[.input_number]</
 
 ````{py:method} setInputsNames(inputBlobNames) -> None
 Sets outputs names of the network input pseudo layer.
+
 
 Each net always has special own the network input pseudo layer with id=0. This layer stores the user blobs only and don't make any computations. In fact, this layer provides the only way to pass user data into the network. As any other layer, this layer can label its outputs and this function provides an easy way to do this. 
 
@@ -1682,6 +1760,7 @@ Specify shape of network input.
 
 ````{py:method} forwardAsync([, outputName]) -> retval
 Runs forward pass to compute output of layer with name @p outputName.
+
 
 This is an asynchronous version of forward(const String&). dnn::DNN_BACKEND_INFERENCE_ENGINE backend is required. 
 
@@ -1741,12 +1820,14 @@ Returns output scale and zeropoint for a quantized Net.
 ````{py:method} setHalideScheduler(scheduler) -> None
 Compile Halide layers.
 
+
 Schedule layers that support Halide backend. Then compile them for specific target. For layers that not represented in scheduling file or if no manual scheduling used at all, automatic scheduling will be applied. 
+**See also:** setPreferableBackend
 
 
 :param self: 
 :type self: 
-:param scheduler: [in] Path to YAML file with scheduling directives.@see setPreferableBackend 
+:param scheduler: [in] Path to YAML file with scheduling directives.
 :type scheduler: str
 :rtype: None
 ````
@@ -1755,11 +1836,12 @@ Schedule layers that support Halide backend. Then compile them for specific targ
 Ask network to use specific computation backend where it supported.
 
 
+**See also:** Backend
 
 
 :param self: 
 :type self: 
-:param backendId: [in] backend identifier.@see Backend 
+:param backendId: [in] backend identifier.
 :type backendId: int
 :rtype: None
 ````
@@ -1767,18 +1849,21 @@ Ask network to use specific computation backend where it supported.
 ````{py:method} setPreferableTarget(targetId) -> None
 Ask network to make computations on specific target device.
 
+
 List of supported combinations backend / target: |                        | DNN_BACKEND_OPENCV | DNN_BACKEND_INFERENCE_ENGINE | DNN_BACKEND_HALIDE |  DNN_BACKEND_CUDA | |------------------------|--------------------|------------------------------|--------------------|-------------------| | DNN_TARGET_CPU         |                  + |                            + |                  + |                   | | DNN_TARGET_OPENCL      |                  + |                            + |                  + |                   | | DNN_TARGET_OPENCL_FP16 |                  + |                            + |                    |                   | | DNN_TARGET_MYRIAD      |                    |                            + |                    |                   | | DNN_TARGET_FPGA        |                    |                            + |                    |                   | | DNN_TARGET_CUDA        |                    |                              |                    |                 + | | DNN_TARGET_CUDA_FP16   |                    |                              |                    |                 + | | DNN_TARGET_HDDL        |                    |                            + |                    |                   | 
+**See also:** Target
 
 
 :param self: 
 :type self: 
-:param targetId: [in] target identifier.@see Target 
+:param targetId: [in] target identifier.
 :type targetId: int
 :rtype: None
 ````
 
 ````{py:method} getUnconnectedOutLayers() -> retval
 Returns indexes of layers with unconnected outputs.
+
 
 FIXIT: Rework API to registerOutput() approach, deprecate this call 
 
@@ -1790,6 +1875,7 @@ FIXIT: Rework API to registerOutput() approach, deprecate this call
 
 ````{py:method} getUnconnectedOutLayersNames() -> retval
 Returns names of layers with unconnected outputs.
+
 
 FIXIT: Rework API to registerOutput() approach, deprecate this call 
 
@@ -1855,6 +1941,7 @@ Enables or disables the Winograd compute branch. The Winograd compute branch can
 ````{py:method} getPerfProfile() -> retval, timings
 Returns overall time for inference and timings (in ticks) for layers.
 
+
 Indexes in returned vector correspond to layers ids. Some layers can be fused with others, in this case zero ticks count will be return for that skipped layers. Supported by DNN_BACKEND_OPENCV on DNN_TARGET_CPU only. 
 
 
@@ -1879,6 +1966,7 @@ Indexes in returned vector correspond to layers ids. Some layers can be fused wi
 
 
 
+
 Initialize self.  See help(type(self)) for accurate signature. 
 
 
@@ -1892,6 +1980,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 ````
 
 ````{py:method} __init__(self, network: Net)
+
 
 
 
@@ -1950,7 +2039,11 @@ Given the @p input frame, create input blob, run net
 
 Performs detection
 
-Given the input @p frame, prepare network input, run network inference, post-process network output and return result detections. Each result is quadrangle's 4 points in this order: - bottom-left - top-left - top-right - bottom-right Use cv::getPerspectiveTransform function to retrieve image region without perspective transformations. detect(frame) -> detections @overload 
+
+Given the input @p frame, prepare network input, run network inference, post-process network output and return result detections. 
+Each result is quadrangle's 4 points in this order: - bottom-left - top-left - top-right - bottom-right 
+Use cv::getPerspectiveTransform function to retrieve image region without perspective transformations. 
+detect(frame) -> detections @overload 
 ```{note}
 If DL model doesn't support that kind of output then result may be derived from detectTextRectangles() output.
 ```
@@ -1971,7 +2064,11 @@ If DL model doesn't support that kind of output then result may be derived from 
 
 Performs detection
 
-Given the input @p frame, prepare network input, run network inference, post-process network output and return result detections. Each result is quadrangle's 4 points in this order: - bottom-left - top-left - top-right - bottom-right Use cv::getPerspectiveTransform function to retrieve image region without perspective transformations. detect(frame) -> detections @overload 
+
+Given the input @p frame, prepare network input, run network inference, post-process network output and return result detections. 
+Each result is quadrangle's 4 points in this order: - bottom-left - top-left - top-right - bottom-right 
+Use cv::getPerspectiveTransform function to retrieve image region without perspective transformations. 
+detect(frame) -> detections @overload 
 ```{note}
 If DL model doesn't support that kind of output then result may be derived from detectTextRectangles() output.
 ```
@@ -1992,7 +2089,11 @@ If DL model doesn't support that kind of output then result may be derived from 
 
 Performs detection
 
-Given the input @p frame, prepare network input, run network inference, post-process network output and return result detections. Each result is quadrangle's 4 points in this order: - bottom-left - top-left - top-right - bottom-right Use cv::getPerspectiveTransform function to retrieve image region without perspective transformations. detect(frame) -> detections @overload 
+
+Given the input @p frame, prepare network input, run network inference, post-process network output and return result detections. 
+Each result is quadrangle's 4 points in this order: - bottom-left - top-left - top-right - bottom-right 
+Use cv::getPerspectiveTransform function to retrieve image region without perspective transformations. 
+detect(frame) -> detections @overload 
 ```{note}
 If DL model doesn't support that kind of output then result may be derived from detectTextRectangles() output.
 ```
@@ -2013,7 +2114,11 @@ If DL model doesn't support that kind of output then result may be derived from 
 
 Performs detection
 
-Given the input @p frame, prepare network input, run network inference, post-process network output and return result detections. Each result is quadrangle's 4 points in this order: - bottom-left - top-left - top-right - bottom-right Use cv::getPerspectiveTransform function to retrieve image region without perspective transformations. detect(frame) -> detections @overload 
+
+Given the input @p frame, prepare network input, run network inference, post-process network output and return result detections. 
+Each result is quadrangle's 4 points in this order: - bottom-left - top-left - top-right - bottom-right 
+Use cv::getPerspectiveTransform function to retrieve image region without perspective transformations. 
+detect(frame) -> detections @overload 
 ```{note}
 If DL model doesn't support that kind of output then result may be derived from detectTextRectangles() output.
 ```
@@ -2034,7 +2139,10 @@ If DL model doesn't support that kind of output then result may be derived from 
 
 Performs detection
 
-Given the input @p frame, prepare network input, run network inference, post-process network output and return result detections. Each result is rotated rectangle. detectTextRectangles(frame) -> detections @overload 
+
+Given the input @p frame, prepare network input, run network inference, post-process network output and return result detections. 
+Each result is rotated rectangle. 
+detectTextRectangles(frame) -> detections @overload 
 ```{note}
 Result may be inaccurate in case of strong perspective transformations.
 ```
@@ -2055,7 +2163,10 @@ Result may be inaccurate in case of strong perspective transformations.
 
 Performs detection
 
-Given the input @p frame, prepare network input, run network inference, post-process network output and return result detections. Each result is rotated rectangle. detectTextRectangles(frame) -> detections @overload 
+
+Given the input @p frame, prepare network input, run network inference, post-process network output and return result detections. 
+Each result is rotated rectangle. 
+detectTextRectangles(frame) -> detections @overload 
 ```{note}
 Result may be inaccurate in case of strong perspective transformations.
 ```
@@ -2076,7 +2187,10 @@ Result may be inaccurate in case of strong perspective transformations.
 
 Performs detection
 
-Given the input @p frame, prepare network input, run network inference, post-process network output and return result detections. Each result is rotated rectangle. detectTextRectangles(frame) -> detections @overload 
+
+Given the input @p frame, prepare network input, run network inference, post-process network output and return result detections. 
+Each result is rotated rectangle. 
+detectTextRectangles(frame) -> detections @overload 
 ```{note}
 Result may be inaccurate in case of strong perspective transformations.
 ```
@@ -2097,7 +2211,10 @@ Result may be inaccurate in case of strong perspective transformations.
 
 Performs detection
 
-Given the input @p frame, prepare network input, run network inference, post-process network output and return result detections. Each result is rotated rectangle. detectTextRectangles(frame) -> detections @overload 
+
+Given the input @p frame, prepare network input, run network inference, post-process network output and return result detections. 
+Each result is rotated rectangle. 
+detectTextRectangles(frame) -> detections @overload 
 ```{note}
 Result may be inaccurate in case of strong perspective transformations.
 ```
@@ -2127,6 +2244,7 @@ Result may be inaccurate in case of strong perspective transformations.
 
 
 
+
 Initialize self.  See help(type(self)) for accurate signature. 
 
 
@@ -2138,6 +2256,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 ````
 
 ````{py:method} __init__(self, model: str, config: str=...)
+
 
 
 
@@ -2262,6 +2381,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 
 
 
+
 Initialize self.  See help(type(self)) for accurate signature. 
 
 
@@ -2273,6 +2393,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 ````
 
 ````{py:method} __init__(self, model: str, config: str=...)
+
 
 
 
@@ -2349,6 +2470,7 @@ Get the detection confidence threshold
 
 
 
+
 Initialize self.  See help(type(self)) for accurate signature. 
 
 
@@ -2360,6 +2482,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 ````
 
 ````{py:method} __init__(self, model: str, config: str=...)
+
 
 
 
@@ -2379,6 +2502,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 
 Given the @p input frame, create input blob, run net and return recognition result
 
+
 recognize(frame, roiRects) -> results 
 
 
@@ -2397,6 +2521,7 @@ recognize(frame, roiRects) -> results
 ````{py:method} recognize(frame) -> retval
 
 Given the @p input frame, create input blob, run net and return recognition result
+
 
 recognize(frame, roiRects) -> results 
 
@@ -2417,6 +2542,7 @@ recognize(frame, roiRects) -> results
 
 Given the @p input frame, create input blob, run net and return recognition result
 
+
 recognize(frame, roiRects) -> results 
 
 
@@ -2435,6 +2561,7 @@ recognize(frame, roiRects) -> results
 ````{py:method} recognize(frame) -> retval
 
 Given the @p input frame, create input blob, run net and return recognition result
+
 
 recognize(frame, roiRects) -> results 
 
@@ -2601,6 +2728,7 @@ Performs batched non maximum suppression on given boxes and corresponding scores
 
 Create a network from Intel's Model Optimizer in-memory buffers with intermediate representation (IR).
 
+
 Net_readFromModelOptimizer(bufferModelConfig, bufferWeights) -> retval 
 
 
@@ -2620,6 +2748,7 @@ Net_readFromModelOptimizer(bufferModelConfig, bufferWeights) -> retval
 ````{py:function} blobFromImage(image[, scalefactor[, size[, mean[, swapRB[, crop[, ddepth]]]]]]) -> retval
 
 Creates 4-dimensional blob from image. Optionally resizes and crops @p image from center,subtract @p mean values, scales values by @p scalefactor, swap Blue and Red channels. 
+
 
 @note The order and usage of `scalefactor` and `mean` are (input - mean) * scalefactor. 
 
@@ -2647,7 +2776,9 @@ Creates 4-dimensional blob from image. Optionally resizes and crops @p image fro
 
 Creates 4-dimensional blob from image with given params.
 
-@details This function is an extension of @ref blobFromImage to meet more image preprocess needs. Given input image and preprocessing parameters, and function outputs the blob. blobFromImageWithParams(image[, blob[, param]]) -> blob @overload 
+
+@details This function is an extension of @ref blobFromImage to meet more image preprocess needs. Given input image and preprocessing parameters, and function outputs the blob. 
+blobFromImageWithParams(image[, blob[, param]]) -> blob @overload 
 
 
 :param image: input image (all with 1-, 3- or 4-channels).
@@ -2662,6 +2793,7 @@ Creates 4-dimensional blob from image with given params.
 ````{py:function} blobFromImages(images[, scalefactor[, size[, mean[, swapRB[, crop[, ddepth]]]]]]) -> retval
 
 Creates 4-dimensional blob from series of images. Optionally resizes andcrops @p images from center, subtract @p mean values, scales values by @p scalefactor, swap Blue and Red channels. 
+
 
 @note The order and usage of `scalefactor` and `mean` are (input - mean) * scalefactor. 
 
@@ -2689,7 +2821,9 @@ Creates 4-dimensional blob from series of images. Optionally resizes andcrops @p
 
 Creates 4-dimensional blob from series of images with given params.
 
-@details This function is an extension of @ref blobFromImages to meet more image preprocess needs. Given input image and preprocessing parameters, and function outputs the blob. blobFromImagesWithParams(images[, blob[, param]]) -> blob @overload 
+
+@details This function is an extension of @ref blobFromImages to meet more image preprocess needs. Given input image and preprocessing parameters, and function outputs the blob. 
+blobFromImagesWithParams(images[, blob[, param]]) -> blob @overload 
 
 
 :param images: input image (all with 1-, 3- or 4-channels).
@@ -2733,7 +2867,9 @@ Parse a 4D blob and output the images it contains as 2D arrays through a simpler
 
 Read deep learning network represented in one of the supported formats.@details This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. 
 
-This function automatically detects an origin framework of trained model and calls an appropriate function such @ref readNetFromCaffe, @ref readNetFromTensorflow, @ref readNetFromTorch or @ref readNetFromDarknet. An order of @p model and @p config arguments does not matter. readNet(framework, bufferModel[, bufferConfig]) -> retval 
+
+This function automatically detects an origin framework of trained model and calls an appropriate function such @ref readNetFromCaffe, @ref readNetFromTensorflow, @ref readNetFromTorch or @ref readNetFromDarknet. An order of @p model and @p config arguments does not matter. 
+readNet(framework, bufferModel[, bufferConfig]) -> retval 
 
 
 :param model: [in] Binary file contains trained weights. The following fileextensions are expected for models from different frameworks: `*.caffemodel` (Caffe, http://caffe.berkeleyvision.org/) `*.pb` (TensorFlow, https://www.tensorflow.org/) `*.t7` | `*.net` (Torch, http://torch.ch/) `*.weights` (Darknet, https://pjreddie.com/darknet/) `*.bin` | `*.onnx` (OpenVINO, https://software.intel.com/openvino-toolkit) `*.onnx` (ONNX, https://onnx.ai/) 
@@ -2755,6 +2891,7 @@ This function automatically detects an origin framework of trained model and cal
 
 Reads a network model stored in Caffe model in memory.
 
+
 readNetFromCaffe(bufferProto[, bufferModel]) -> retval 
 
 
@@ -2774,6 +2911,7 @@ readNetFromCaffe(bufferProto[, bufferModel]) -> retval
 ````{py:function} readNetFromDarknet(cfgFile[, darknetModel]) -> retval
 
 Reads a network model stored in <a href="https://pjreddie.com/darknet/">Darknet</a> model files.
+
 
 readNetFromDarknet(bufferCfg[, bufferModel]) -> retval 
 
@@ -2795,6 +2933,7 @@ readNetFromDarknet(bufferCfg[, bufferModel]) -> retval
 
 Load a network from Intel's Model Optimizer intermediate representation.
 
+
 readNetFromModelOptimizer(bufferModelConfig, bufferWeights) -> retval 
 
 
@@ -2815,6 +2954,7 @@ readNetFromModelOptimizer(bufferModelConfig, bufferWeights) -> retval
 
 Reads a network model from <a href="https://onnx.ai/">ONNX</a>in-memory buffer. 
 
+
 readNetFromONNX(buffer) -> retval 
 
 
@@ -2831,6 +2971,7 @@ readNetFromONNX(buffer) -> retval
 
 Reads a network model stored in <a href="https://www.tensorflow.org/lite">TFLite</a> framework's format.
 
+
 readNetFromTFLite(bufferModel) -> retval 
 
 
@@ -2846,6 +2987,7 @@ readNetFromTFLite(bufferModel) -> retval
 ````{py:function} readNetFromTensorflow(model[, config]) -> retval
 
 Reads a network model stored in <a href="https://www.tensorflow.org/">TensorFlow</a> framework's format.
+
 
 readNetFromTensorflow(bufferModel[, bufferConfig]) -> retval 
 
@@ -2867,7 +3009,10 @@ readNetFromTensorflow(bufferModel[, bufferConfig]) -> retval
 
 Reads a network model stored in <a href="http://torch.ch">Torch7</a> framework's format.
 
-The loading file must contain serialized <a href="https://github.com/torch/nn/blob/master/doc/module.md">nn.Module</a> object with importing network. Try to eliminate a custom objects from serialazing data to avoid importing errors. List of supported layers (i.e. object instances derived from Torch nn.Module class): - nn.Sequential - nn.Parallel - nn.Concat - nn.Linear - nn.SpatialConvolution - nn.SpatialMaxPooling, nn.SpatialAveragePooling - nn.ReLU, nn.TanH, nn.Sigmoid - nn.Reshape - nn.SoftMax, nn.LogSoftMax Also some equivalents of these classes from cunn, cudnn, and fbcunn may be successfully imported. 
+
+The loading file must contain serialized <a href="https://github.com/torch/nn/blob/master/doc/module.md">nn.Module</a> object with importing network. Try to eliminate a custom objects from serialazing data to avoid importing errors. 
+List of supported layers (i.e. object instances derived from Torch nn.Module class): - nn.Sequential - nn.Parallel - nn.Concat - nn.Linear - nn.SpatialConvolution - nn.SpatialMaxPooling, nn.SpatialAveragePooling - nn.ReLU, nn.TanH, nn.Sigmoid - nn.Reshape - nn.SoftMax, nn.LogSoftMax 
+Also some equivalents of these classes from cunn, cudnn, and fbcunn may be successfully imported. 
 ```{note}
 Ascii mode of Torch serializer is more preferable, because binary mode extensively use `long` type of C language,which has various bit-length on different systems. 
 ```
@@ -2938,6 +3083,7 @@ Shrinked model has no origin float32 weights so it can't be usedin origin Caffe 
 Performs soft non maximum suppression given boxes and corresponding scores.Reference: https://arxiv.org/abs/1704.04503 
 
 
+**See also:** SoftNMSMethod
 
 
 :param bboxes: a set of bounding boxes to apply Soft NMS.
@@ -2956,7 +3102,7 @@ Performs soft non maximum suppression given boxes and corresponding scores.Refer
 :type top_k: int
 :param sigma: parameter of Gaussian weighting.
 :type sigma: float
-:param method: Gaussian or linear.@see SoftNMSMethod 
+:param method: Gaussian or linear.
 :type method: SoftNMSMethod
 :rtype: tuple[_typing.Sequence[float], _typing.Sequence[int]]
 ````

@@ -46,6 +46,7 @@ None
 
 
 
+
 Initialize self.  See help(type(self)) for accurate signature. 
 
 
@@ -55,6 +56,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 ````
 
 ````{py:method} __init__(self, prototxt_path: str, model_path: str)
+
 
 
 

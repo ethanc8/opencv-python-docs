@@ -231,6 +231,7 @@ None
 
 
 
+
 getBuffer(size, type) -> retval 
 
 
@@ -249,6 +250,7 @@ getBuffer(size, type) -> retval
 
 
 
+
 getBuffer(size, type) -> retval 
 
 
@@ -262,6 +264,7 @@ getBuffer(size, type) -> retval
 ````
 
 ````{py:method} __init__(self, stream: Stream)
+
 
 
 Initialize self.  See help(type(self)) for accurate signature. 
@@ -298,6 +301,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 
 
 
+
 Initialize self.  See help(type(self)) for accurate signature. 
 
 
@@ -307,6 +311,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 ````
 
 ````{py:method} __init__(self, device_id: int)
+
 
 
 
@@ -932,6 +937,7 @@ Returns system index of the CUDA device starting with 0.
 ````{py:method} isCompatible() -> retval
 Checks the CUDA module and device compatibility.
 
+
 This function returns true if the CUDA module can be run on the specified device. Otherwise, it returns false . 
 
 
@@ -950,6 +956,7 @@ This function returns true if the CUDA module can be run on the specified device
 
 
 ````{py:method} __init__(self, flags: Event_CreateFlags=...)
+
 
 
 Initialize self.  See help(type(self)) for accurate signature. 
@@ -1045,6 +1052,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 
 
 
+
 Initialize self.  See help(type(self)) for accurate signature. 
 
 
@@ -1056,6 +1064,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 ````
 
 ````{py:method} __init__(self, rows: int, cols: int, type: int, allocator: GpuMat.Allocator=...)
+
 
 
 
@@ -1079,6 +1088,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 
 
 
+
 Initialize self.  See help(type(self)) for accurate signature. 
 
 
@@ -1094,6 +1104,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 ````
 
 ````{py:method} __init__(self, rows: int, cols: int, type: int, s: cv2.typing.Scalar, allocator: GpuMat.Allocator=...)
+
 
 
 
@@ -1119,6 +1130,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 
 
 
+
 Initialize self.  See help(type(self)) for accurate signature. 
 
 
@@ -1139,6 +1151,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 
 
 
+
 Initialize self.  See help(type(self)) for accurate signature. 
 
 
@@ -1150,6 +1163,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 ````
 
 ````{py:method} __init__(self, m: GpuMat, rowRange: cv2.typing.Range, colRange: cv2.typing.Range)
+
 
 
 
@@ -1171,6 +1185,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 
 
 
+
 Initialize self.  See help(type(self)) for accurate signature. 
 
 
@@ -1184,6 +1199,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 ````
 
 ````{py:method} __init__(self, arr: cv2.typing.MatLike, allocator: GpuMat.Allocator=...)
+
 
 
 
@@ -1203,6 +1219,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 
 
 
+
 Initialize self.  See help(type(self)) for accurate signature. 
 
 
@@ -1219,6 +1236,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 
 
 
+
 Initialize self.  See help(type(self)) for accurate signature. 
 
 
@@ -1232,6 +1250,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 ````
 
 ````{py:method} create(rows, cols, type) -> None
+
 
 
 
@@ -1253,6 +1272,7 @@ create(size, type) -> None
 
 
 
+
 create(size, type) -> None 
 
 
@@ -1269,7 +1289,11 @@ create(size, type) -> None
 
 Performs data upload to GpuMat (Non-Blocking call)
 
-This function copies data from host memory to device memory. As being a blocking call, it is guaranteed that the copy operation is finished when this function returns. upload(arr, stream) -> None This function copies data from host memory to device memory. As being a non-blocking call, this function may return even if the copy operation is not finished. The copy operation may be overlapped with operations in other non-default streams if \p stream is not the default stream and \p dst is HostMem allocated with HostMem::PAGE_LOCKED option. 
+
+This function copies data from host memory to device memory. As being a blocking call, it is guaranteed that the copy operation is finished when this function returns. 
+upload(arr, stream) -> None 
+This function copies data from host memory to device memory. As being a non-blocking call, this function may return even if the copy operation is not finished. 
+The copy operation may be overlapped with operations in other non-default streams if \p stream is not the default stream and \p dst is HostMem allocated with HostMem::PAGE_LOCKED option. 
 
 
 :param self: 
@@ -1283,7 +1307,11 @@ This function copies data from host memory to device memory. As being a blocking
 
 Performs data upload to GpuMat (Non-Blocking call)
 
-This function copies data from host memory to device memory. As being a blocking call, it is guaranteed that the copy operation is finished when this function returns. upload(arr, stream) -> None This function copies data from host memory to device memory. As being a non-blocking call, this function may return even if the copy operation is not finished. The copy operation may be overlapped with operations in other non-default streams if \p stream is not the default stream and \p dst is HostMem allocated with HostMem::PAGE_LOCKED option. 
+
+This function copies data from host memory to device memory. As being a blocking call, it is guaranteed that the copy operation is finished when this function returns. 
+upload(arr, stream) -> None 
+This function copies data from host memory to device memory. As being a non-blocking call, this function may return even if the copy operation is not finished. 
+The copy operation may be overlapped with operations in other non-default streams if \p stream is not the default stream and \p dst is HostMem allocated with HostMem::PAGE_LOCKED option. 
 
 
 :param self: 
@@ -1297,7 +1325,11 @@ This function copies data from host memory to device memory. As being a blocking
 
 Performs data upload to GpuMat (Non-Blocking call)
 
-This function copies data from host memory to device memory. As being a blocking call, it is guaranteed that the copy operation is finished when this function returns. upload(arr, stream) -> None This function copies data from host memory to device memory. As being a non-blocking call, this function may return even if the copy operation is not finished. The copy operation may be overlapped with operations in other non-default streams if \p stream is not the default stream and \p dst is HostMem allocated with HostMem::PAGE_LOCKED option. 
+
+This function copies data from host memory to device memory. As being a blocking call, it is guaranteed that the copy operation is finished when this function returns. 
+upload(arr, stream) -> None 
+This function copies data from host memory to device memory. As being a non-blocking call, this function may return even if the copy operation is not finished. 
+The copy operation may be overlapped with operations in other non-default streams if \p stream is not the default stream and \p dst is HostMem allocated with HostMem::PAGE_LOCKED option. 
 
 
 :param self: 
@@ -1311,7 +1343,11 @@ This function copies data from host memory to device memory. As being a blocking
 
 Performs data upload to GpuMat (Non-Blocking call)
 
-This function copies data from host memory to device memory. As being a blocking call, it is guaranteed that the copy operation is finished when this function returns. upload(arr, stream) -> None This function copies data from host memory to device memory. As being a non-blocking call, this function may return even if the copy operation is not finished. The copy operation may be overlapped with operations in other non-default streams if \p stream is not the default stream and \p dst is HostMem allocated with HostMem::PAGE_LOCKED option. 
+
+This function copies data from host memory to device memory. As being a blocking call, it is guaranteed that the copy operation is finished when this function returns. 
+upload(arr, stream) -> None 
+This function copies data from host memory to device memory. As being a non-blocking call, this function may return even if the copy operation is not finished. 
+The copy operation may be overlapped with operations in other non-default streams if \p stream is not the default stream and \p dst is HostMem allocated with HostMem::PAGE_LOCKED option. 
 
 
 :param self: 
@@ -1327,7 +1363,11 @@ This function copies data from host memory to device memory. As being a blocking
 
 Performs data upload to GpuMat (Non-Blocking call)
 
-This function copies data from host memory to device memory. As being a blocking call, it is guaranteed that the copy operation is finished when this function returns. upload(arr, stream) -> None This function copies data from host memory to device memory. As being a non-blocking call, this function may return even if the copy operation is not finished. The copy operation may be overlapped with operations in other non-default streams if \p stream is not the default stream and \p dst is HostMem allocated with HostMem::PAGE_LOCKED option. 
+
+This function copies data from host memory to device memory. As being a blocking call, it is guaranteed that the copy operation is finished when this function returns. 
+upload(arr, stream) -> None 
+This function copies data from host memory to device memory. As being a non-blocking call, this function may return even if the copy operation is not finished. 
+The copy operation may be overlapped with operations in other non-default streams if \p stream is not the default stream and \p dst is HostMem allocated with HostMem::PAGE_LOCKED option. 
 
 
 :param self: 
@@ -1343,7 +1383,11 @@ This function copies data from host memory to device memory. As being a blocking
 
 Performs data upload to GpuMat (Non-Blocking call)
 
-This function copies data from host memory to device memory. As being a blocking call, it is guaranteed that the copy operation is finished when this function returns. upload(arr, stream) -> None This function copies data from host memory to device memory. As being a non-blocking call, this function may return even if the copy operation is not finished. The copy operation may be overlapped with operations in other non-default streams if \p stream is not the default stream and \p dst is HostMem allocated with HostMem::PAGE_LOCKED option. 
+
+This function copies data from host memory to device memory. As being a blocking call, it is guaranteed that the copy operation is finished when this function returns. 
+upload(arr, stream) -> None 
+This function copies data from host memory to device memory. As being a non-blocking call, this function may return even if the copy operation is not finished. 
+The copy operation may be overlapped with operations in other non-default streams if \p stream is not the default stream and \p dst is HostMem allocated with HostMem::PAGE_LOCKED option. 
 
 
 :param self: 
@@ -1359,7 +1403,11 @@ This function copies data from host memory to device memory. As being a blocking
 
 Performs data download from GpuMat (Non-Blocking call)
 
-This function copies data from device memory to host memory. As being a blocking call, it is guaranteed that the copy operation is finished when this function returns. download(stream[, dst]) -> dst This function copies data from device memory to host memory. As being a non-blocking call, this function may return even if the copy operation is not finished. The copy operation may be overlapped with operations in other non-default streams if \p stream is not the default stream and \p dst is HostMem allocated with HostMem::PAGE_LOCKED option. 
+
+This function copies data from device memory to host memory. As being a blocking call, it is guaranteed that the copy operation is finished when this function returns. 
+download(stream[, dst]) -> dst 
+This function copies data from device memory to host memory. As being a non-blocking call, this function may return even if the copy operation is not finished. 
+The copy operation may be overlapped with operations in other non-default streams if \p stream is not the default stream and \p dst is HostMem allocated with HostMem::PAGE_LOCKED option. 
 
 
 :param self: 
@@ -1373,7 +1421,11 @@ This function copies data from device memory to host memory. As being a blocking
 
 Performs data download from GpuMat (Non-Blocking call)
 
-This function copies data from device memory to host memory. As being a blocking call, it is guaranteed that the copy operation is finished when this function returns. download(stream[, dst]) -> dst This function copies data from device memory to host memory. As being a non-blocking call, this function may return even if the copy operation is not finished. The copy operation may be overlapped with operations in other non-default streams if \p stream is not the default stream and \p dst is HostMem allocated with HostMem::PAGE_LOCKED option. 
+
+This function copies data from device memory to host memory. As being a blocking call, it is guaranteed that the copy operation is finished when this function returns. 
+download(stream[, dst]) -> dst 
+This function copies data from device memory to host memory. As being a non-blocking call, this function may return even if the copy operation is not finished. 
+The copy operation may be overlapped with operations in other non-default streams if \p stream is not the default stream and \p dst is HostMem allocated with HostMem::PAGE_LOCKED option. 
 
 
 :param self: 
@@ -1387,7 +1439,11 @@ This function copies data from device memory to host memory. As being a blocking
 
 Performs data download from GpuMat (Non-Blocking call)
 
-This function copies data from device memory to host memory. As being a blocking call, it is guaranteed that the copy operation is finished when this function returns. download(stream[, dst]) -> dst This function copies data from device memory to host memory. As being a non-blocking call, this function may return even if the copy operation is not finished. The copy operation may be overlapped with operations in other non-default streams if \p stream is not the default stream and \p dst is HostMem allocated with HostMem::PAGE_LOCKED option. 
+
+This function copies data from device memory to host memory. As being a blocking call, it is guaranteed that the copy operation is finished when this function returns. 
+download(stream[, dst]) -> dst 
+This function copies data from device memory to host memory. As being a non-blocking call, this function may return even if the copy operation is not finished. 
+The copy operation may be overlapped with operations in other non-default streams if \p stream is not the default stream and \p dst is HostMem allocated with HostMem::PAGE_LOCKED option. 
 
 
 :param self: 
@@ -1401,7 +1457,11 @@ This function copies data from device memory to host memory. As being a blocking
 
 Performs data download from GpuMat (Non-Blocking call)
 
-This function copies data from device memory to host memory. As being a blocking call, it is guaranteed that the copy operation is finished when this function returns. download(stream[, dst]) -> dst This function copies data from device memory to host memory. As being a non-blocking call, this function may return even if the copy operation is not finished. The copy operation may be overlapped with operations in other non-default streams if \p stream is not the default stream and \p dst is HostMem allocated with HostMem::PAGE_LOCKED option. 
+
+This function copies data from device memory to host memory. As being a blocking call, it is guaranteed that the copy operation is finished when this function returns. 
+download(stream[, dst]) -> dst 
+This function copies data from device memory to host memory. As being a non-blocking call, this function may return even if the copy operation is not finished. 
+The copy operation may be overlapped with operations in other non-default streams if \p stream is not the default stream and \p dst is HostMem allocated with HostMem::PAGE_LOCKED option. 
 
 
 :param self: 
@@ -1417,7 +1477,11 @@ This function copies data from device memory to host memory. As being a blocking
 
 Performs data download from GpuMat (Non-Blocking call)
 
-This function copies data from device memory to host memory. As being a blocking call, it is guaranteed that the copy operation is finished when this function returns. download(stream[, dst]) -> dst This function copies data from device memory to host memory. As being a non-blocking call, this function may return even if the copy operation is not finished. The copy operation may be overlapped with operations in other non-default streams if \p stream is not the default stream and \p dst is HostMem allocated with HostMem::PAGE_LOCKED option. 
+
+This function copies data from device memory to host memory. As being a blocking call, it is guaranteed that the copy operation is finished when this function returns. 
+download(stream[, dst]) -> dst 
+This function copies data from device memory to host memory. As being a non-blocking call, this function may return even if the copy operation is not finished. 
+The copy operation may be overlapped with operations in other non-default streams if \p stream is not the default stream and \p dst is HostMem allocated with HostMem::PAGE_LOCKED option. 
 
 
 :param self: 
@@ -1433,7 +1497,11 @@ This function copies data from device memory to host memory. As being a blocking
 
 Performs data download from GpuMat (Non-Blocking call)
 
-This function copies data from device memory to host memory. As being a blocking call, it is guaranteed that the copy operation is finished when this function returns. download(stream[, dst]) -> dst This function copies data from device memory to host memory. As being a non-blocking call, this function may return even if the copy operation is not finished. The copy operation may be overlapped with operations in other non-default streams if \p stream is not the default stream and \p dst is HostMem allocated with HostMem::PAGE_LOCKED option. 
+
+This function copies data from device memory to host memory. As being a blocking call, it is guaranteed that the copy operation is finished when this function returns. 
+download(stream[, dst]) -> dst 
+This function copies data from device memory to host memory. As being a non-blocking call, this function may return even if the copy operation is not finished. 
+The copy operation may be overlapped with operations in other non-default streams if \p stream is not the default stream and \p dst is HostMem allocated with HostMem::PAGE_LOCKED option. 
 
 
 :param self: 
@@ -1449,7 +1517,10 @@ This function copies data from device memory to host memory. As being a blocking
 
 
 
-copyTo(stream[, dst]) -> dst copyTo(mask[, dst]) -> dst copyTo(mask, stream[, dst]) -> dst 
+
+copyTo(stream[, dst]) -> dst 
+copyTo(mask[, dst]) -> dst 
+copyTo(mask, stream[, dst]) -> dst 
 
 
 :param self: 
@@ -1463,7 +1534,10 @@ copyTo(stream[, dst]) -> dst copyTo(mask[, dst]) -> dst copyTo(mask, stream[, ds
 
 
 
-copyTo(stream[, dst]) -> dst copyTo(mask[, dst]) -> dst copyTo(mask, stream[, dst]) -> dst 
+
+copyTo(stream[, dst]) -> dst 
+copyTo(mask[, dst]) -> dst 
+copyTo(mask, stream[, dst]) -> dst 
 
 
 :param self: 
@@ -1479,7 +1553,10 @@ copyTo(stream[, dst]) -> dst copyTo(mask[, dst]) -> dst copyTo(mask, stream[, ds
 
 
 
-copyTo(stream[, dst]) -> dst copyTo(mask[, dst]) -> dst copyTo(mask, stream[, dst]) -> dst 
+
+copyTo(stream[, dst]) -> dst 
+copyTo(mask[, dst]) -> dst 
+copyTo(mask, stream[, dst]) -> dst 
 
 
 :param self: 
@@ -1495,7 +1572,10 @@ copyTo(stream[, dst]) -> dst copyTo(mask[, dst]) -> dst copyTo(mask, stream[, ds
 
 
 
-copyTo(stream[, dst]) -> dst copyTo(mask[, dst]) -> dst copyTo(mask, stream[, dst]) -> dst 
+
+copyTo(stream[, dst]) -> dst 
+copyTo(mask[, dst]) -> dst 
+copyTo(mask, stream[, dst]) -> dst 
 
 
 :param self: 
@@ -1513,7 +1593,10 @@ copyTo(stream[, dst]) -> dst copyTo(mask[, dst]) -> dst copyTo(mask, stream[, ds
 
 
 
-setTo(s, stream) -> retval setTo(s, mask) -> retval setTo(s, mask, stream) -> retval 
+
+setTo(s, stream) -> retval 
+setTo(s, mask) -> retval 
+setTo(s, mask, stream) -> retval 
 
 
 :param self: 
@@ -1527,7 +1610,10 @@ setTo(s, stream) -> retval setTo(s, mask) -> retval setTo(s, mask, stream) -> re
 
 
 
-setTo(s, stream) -> retval setTo(s, mask) -> retval setTo(s, mask, stream) -> retval 
+
+setTo(s, stream) -> retval 
+setTo(s, mask) -> retval 
+setTo(s, mask, stream) -> retval 
 
 
 :param self: 
@@ -1543,7 +1629,10 @@ setTo(s, stream) -> retval setTo(s, mask) -> retval setTo(s, mask, stream) -> re
 
 
 
-setTo(s, stream) -> retval setTo(s, mask) -> retval setTo(s, mask, stream) -> retval 
+
+setTo(s, stream) -> retval 
+setTo(s, mask) -> retval 
+setTo(s, mask, stream) -> retval 
 
 
 :param self: 
@@ -1559,7 +1648,10 @@ setTo(s, stream) -> retval setTo(s, mask) -> retval setTo(s, mask, stream) -> re
 
 
 
-setTo(s, stream) -> retval setTo(s, mask) -> retval setTo(s, mask, stream) -> retval 
+
+setTo(s, stream) -> retval 
+setTo(s, mask) -> retval 
+setTo(s, mask, stream) -> retval 
 
 
 :param self: 
@@ -1575,7 +1667,10 @@ setTo(s, stream) -> retval setTo(s, mask) -> retval setTo(s, mask, stream) -> re
 
 
 
-setTo(s, stream) -> retval setTo(s, mask) -> retval setTo(s, mask, stream) -> retval 
+
+setTo(s, stream) -> retval 
+setTo(s, mask) -> retval 
+setTo(s, mask, stream) -> retval 
 
 
 :param self: 
@@ -1591,7 +1686,10 @@ setTo(s, stream) -> retval setTo(s, mask) -> retval setTo(s, mask, stream) -> re
 
 
 
-setTo(s, stream) -> retval setTo(s, mask) -> retval setTo(s, mask, stream) -> retval 
+
+setTo(s, stream) -> retval 
+setTo(s, mask) -> retval 
+setTo(s, mask, stream) -> retval 
 
 
 :param self: 
@@ -1609,7 +1707,10 @@ setTo(s, stream) -> retval setTo(s, mask) -> retval setTo(s, mask, stream) -> re
 
 
 
-setTo(s, stream) -> retval setTo(s, mask) -> retval setTo(s, mask, stream) -> retval 
+
+setTo(s, stream) -> retval 
+setTo(s, mask) -> retval 
+setTo(s, mask, stream) -> retval 
 
 
 :param self: 
@@ -1627,7 +1728,10 @@ setTo(s, stream) -> retval setTo(s, mask) -> retval setTo(s, mask, stream) -> re
 
 
 
-setTo(s, stream) -> retval setTo(s, mask) -> retval setTo(s, mask, stream) -> retval 
+
+setTo(s, stream) -> retval 
+setTo(s, mask) -> retval 
+setTo(s, mask, stream) -> retval 
 
 
 :param self: 
@@ -1645,7 +1749,9 @@ setTo(s, stream) -> retval setTo(s, mask) -> retval setTo(s, mask, stream) -> re
 
 
 
-convertTo(rtype[, dst[, alpha[, beta]]]) -> dst convertTo(rtype, alpha, beta, stream[, dst]) -> dst 
+
+convertTo(rtype[, dst[, alpha[, beta]]]) -> dst 
+convertTo(rtype, alpha, beta, stream[, dst]) -> dst 
 
 
 :param self: 
@@ -1663,7 +1769,9 @@ convertTo(rtype[, dst[, alpha[, beta]]]) -> dst convertTo(rtype, alpha, beta, st
 
 
 
-convertTo(rtype[, dst[, alpha[, beta]]]) -> dst convertTo(rtype, alpha, beta, stream[, dst]) -> dst 
+
+convertTo(rtype[, dst[, alpha[, beta]]]) -> dst 
+convertTo(rtype, alpha, beta, stream[, dst]) -> dst 
 
 
 :param self: 
@@ -1683,7 +1791,9 @@ convertTo(rtype[, dst[, alpha[, beta]]]) -> dst convertTo(rtype, alpha, beta, st
 
 
 
-convertTo(rtype[, dst[, alpha[, beta]]]) -> dst convertTo(rtype, alpha, beta, stream[, dst]) -> dst 
+
+convertTo(rtype[, dst[, alpha[, beta]]]) -> dst 
+convertTo(rtype, alpha, beta, stream[, dst]) -> dst 
 
 
 :param self: 
@@ -1702,6 +1812,7 @@ convertTo(rtype[, dst[, alpha[, beta]]]) -> dst convertTo(rtype, alpha, beta, st
 ````
 
 ````{py:method} rowRange(startrow, endrow) -> retval
+
 
 
 
@@ -1721,6 +1832,7 @@ rowRange(r) -> retval
 
 
 
+
 rowRange(r) -> retval 
 
 
@@ -1732,6 +1844,7 @@ rowRange(r) -> retval
 ````
 
 ````{py:method} colRange(startcol, endcol) -> retval
+
 
 
 
@@ -1748,6 +1861,7 @@ colRange(r) -> retval
 ````
 
 ````{py:method} colRange(startcol, endcol) -> retval
+
 
 
 
@@ -2063,6 +2177,7 @@ colRange(r) -> retval
 
 
 
+
 Initialize self.  See help(type(self)) for accurate signature. 
 
 
@@ -2074,6 +2189,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 ````
 
 ````{py:method} __init__(self, rows: int, cols: int, type: int, alloc_type: HostMem_AllocType=...)
+
 
 
 
@@ -2097,6 +2213,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 
 
 
+
 Initialize self.  See help(type(self)) for accurate signature. 
 
 
@@ -2112,6 +2229,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 ````
 
 ````{py:method} __init__(self, arr: cv2.typing.MatLike, alloc_type: HostMem_AllocType=...)
+
 
 
 
@@ -2131,6 +2249,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 
 
 
+
 Initialize self.  See help(type(self)) for accurate signature. 
 
 
@@ -2144,6 +2263,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 ````
 
 ````{py:method} __init__(self, arr: cv2.UMat, alloc_type: HostMem_AllocType=...)
+
 
 
 
@@ -2228,6 +2348,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 
 ````{py:method} isContinuous() -> retval
 Maps CPU memory to GPU address space and creates the cuda::GpuMat header without reference countingfor it. 
+
 
 This can be done only if memory was allocated with the SHARED flag and if it is supported by the hardware. Laptops often share video and CPU memory, so address spaces can be mapped, which eliminates an extra copy. 
 
@@ -2353,6 +2474,7 @@ Callbacks must not make any CUDA API calls. Callbacks must not perform any synch
 
 
 
+
 Initialize self.  See help(type(self)) for accurate signature. 
 
 
@@ -2362,6 +2484,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 ````
 
 ````{py:method} __init__(self, allocator: GpuMat.Allocator)
+
 
 
 
@@ -2376,6 +2499,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 ````
 
 ````{py:method} __init__(self, cudaFlags: int)
+
 
 
 
@@ -2680,6 +2804,7 @@ There is a set of methods to check whether the module contains intermediate (PTX
 
 Creates a continuous matrix.
 
+
 Matrix is called continuous if its elements are stored continuously, that is, without gaps at the end of each row. 
 
 
@@ -2698,6 +2823,7 @@ Matrix is called continuous if its elements are stored continuously, that is, wi
 ````{py:function} createGpuMatFromCudaMemory(rows, cols, type, cudaMemoryAddress[, step]) -> retval
 
 Bindings overload to create a GpuMat from existing GPU memory.
+
 
 createGpuMatFromCudaMemory(size, type, cudaMemoryAddress[, step]) -> retval @overload 
 ```{note}
@@ -2728,6 +2854,7 @@ Overload for generation of bindings only, not exported or intended for use inter
 
 Ensures that the size of a matrix is big enough and the matrix has a proper type.
 
+
 The function does not reallocate memory if the matrix has proper attributes already. 
 
 
@@ -2747,7 +2874,9 @@ The function does not reallocate memory if the matrix has proper attributes alre
 
 Perform image denoising using Non-local Means Denoising algorithm<http://www.ipol.im/pub/algo/bcm_non_local_means_denoising> with several computational optimizations. Noise expected to be a gaussian white noise 
 
-This function expected to be applied to grayscale images. For colored images look at FastNonLocalMeansDenoising::labMethod. @sa fastNlMeansDenoising 
+
+This function expected to be applied to grayscale images. For colored images look at FastNonLocalMeansDenoising::labMethod. 
+@sa fastNlMeansDenoising 
 
 
 :param src: Input 8-bit 1-channel, 2-channel or 3-channel image.
@@ -2770,7 +2899,9 @@ This function expected to be applied to grayscale images. For colored images loo
 
 Modification of fastNlMeansDenoising function for colored images
 
-The function converts image to CIELAB colorspace and then separately denoise L and AB components with given h parameters using FastNonLocalMeansDenoising::simpleMethod function. @sa fastNlMeansDenoisingColored 
+
+The function converts image to CIELAB colorspace and then separately denoise L and AB components with given h parameters using FastNonLocalMeansDenoising::simpleMethod function. 
+@sa fastNlMeansDenoisingColored 
 
 
 :param src: Input 8-bit 3-channel image.
@@ -2795,6 +2926,7 @@ The function converts image to CIELAB colorspace and then separately denoise L a
 
 Returns the number of installed CUDA-enabled devices.
 
+
 Use this function before any other CUDA functions calls. If OpenCV is compiled without CUDA support, this function returns 0. If the CUDA driver is not installed, or is incompatible, this function returns -1. 
 
 
@@ -2816,6 +2948,7 @@ Returns the current device index set by cuda::setDevice or initialized by defaul
 ````{py:function} nonLocalMeans(src, h[, dst[, search_window[, block_size[, borderMode[, stream]]]]]) -> dst
 
 Performs pure non local means denoising without any simplification, and thus it is not fast.
+
 
 @sa fastNlMeansDenoising 
 
@@ -2881,6 +3014,7 @@ Page-locks the memory of matrix and maps it for the device(s).
 
 Explicitly destroys and cleans up all resources associated with the current device in the currentprocess. 
 
+
 Any subsequent API call to this device will reinitialize the device. 
 
 
@@ -2921,6 +3055,7 @@ Any subsequent API call to this device will reinitialize the device.
 ````{py:function} setDevice(device) -> None
 
 Sets a device and initializes it for the current thread.
+
 
 If the call of this function is omitted, a default device is initialized at the fist CUDA usage. 
 
