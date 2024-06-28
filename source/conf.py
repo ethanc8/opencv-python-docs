@@ -40,7 +40,8 @@ extensions = [
 myst_enable_extensions = [
     'tasklist',
     'fieldlist',
-    'dollarmath'
+    'dollarmath',
+    'amsmath'
 ]
 
 # Intersphinx mapping
