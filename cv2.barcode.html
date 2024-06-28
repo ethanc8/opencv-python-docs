@@ -219,6 +219,7 @@
 <li class="toctree-l1 current current-page"><a class="current reference internal" href="#"><code class="docutils literal notranslate"><span class="pre">cv2.barcode</span></code></a></li>
 <li class="toctree-l1"><a class="reference internal" href="cv2.cuda.html"><code class="docutils literal notranslate"><span class="pre">cv2.cuda</span></code></a></li>
 <li class="toctree-l1"><a class="reference internal" href="cv2.dnn.html"><code class="docutils literal notranslate"><span class="pre">cv2.dnn</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="cv2.html"><code class="docutils literal notranslate"><span class="pre">cv2</span></code></a></li>
 </ul>
 
 </div>
@@ -333,8 +334,8 @@
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>self</strong> – </p></li>
-<li><p><strong>img</strong> (<em>cv2.UMat</em>) – grayscale or color (BGR) image containing bar code.</p></li>
-<li><p><strong>points</strong> (<em>cv2.UMat</em>) – vector of rotated rectangle vertices found by detect() method (or some other algorithm).For N detected barcodes, the dimensions of this array should be [N][4]. Order of four points in vector<Point2f> is bottomLeft, topLeft, topRight, bottomRight.</p></li>
+<li><p><strong>img</strong> (<a class="reference internal" href="cv2.html#cv2.UMat" title="cv2.UMat"><em>cv2.UMat</em></a>) – grayscale or color (BGR) image containing bar code.</p></li>
+<li><p><strong>points</strong> (<a class="reference internal" href="cv2.html#cv2.UMat" title="cv2.UMat"><em>cv2.UMat</em></a>) – vector of rotated rectangle vertices found by detect() method (or some other algorithm).For N detected barcodes, the dimensions of this array should be [N][4]. Order of four points in vector<Point2f> is bottomLeft, topLeft, topRight, bottomRight.</p></li>
 <li><p><strong>decoded_info</strong> – UTF8-encoded output vector of string or empty vector of string if the codes cannot be decoded.</p></li>
 <li><p><strong>decoded_type</strong> – vector strings, specifies the type of these barcodes</p></li>
 </ul>
@@ -379,8 +380,8 @@
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>self</strong> – </p></li>
-<li><p><strong>img</strong> (<em>cv2.UMat</em>) – grayscale or color (BGR) image containing barcode.</p></li>
-<li><p><strong>points</strong> (<em>cv2.UMat</em><em> | </em><em>None</em>) – optional output vector of vertices of the found barcode rectangle. Will be empty if not found.</p></li>
+<li><p><strong>img</strong> (<a class="reference internal" href="cv2.html#cv2.UMat" title="cv2.UMat"><em>cv2.UMat</em></a>) – grayscale or color (BGR) image containing barcode.</p></li>
+<li><p><strong>points</strong> (<a class="reference internal" href="cv2.html#cv2.UMat" title="cv2.UMat"><em>cv2.UMat</em></a><em> | </em><em>None</em>) – optional output vector of vertices of the found barcode rectangle. Will be empty if not found.</p></li>
 <li><p><strong>decoded_info</strong> – UTF8-encoded output vector of string(s) or empty vector of string if the codes cannot be decoded.</p></li>
 <li><p><strong>decoded_type</strong> – vector of strings, specifies the type of these barcodes</p></li>
 </ul>

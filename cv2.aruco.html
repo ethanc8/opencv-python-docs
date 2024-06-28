@@ -219,6 +219,7 @@
 <li class="toctree-l1"><a class="reference internal" href="cv2.barcode.html"><code class="docutils literal notranslate"><span class="pre">cv2.barcode</span></code></a></li>
 <li class="toctree-l1"><a class="reference internal" href="cv2.cuda.html"><code class="docutils literal notranslate"><span class="pre">cv2.cuda</span></code></a></li>
 <li class="toctree-l1"><a class="reference internal" href="cv2.dnn.html"><code class="docutils literal notranslate"><span class="pre">cv2.dnn</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="cv2.html"><code class="docutils literal notranslate"><span class="pre">cv2</span></code></a></li>
 </ul>
 
 </div>
@@ -465,10 +466,10 @@
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>self</strong> – </p></li>
-<li><p><strong>image</strong> (<em>cv2.UMat</em>) – input image</p></li>
-<li><p><strong>corners</strong> (<em>_typing.Sequence</em><em>[</em><em>cv2.UMat</em><em>] </em><em>| </em><em>None</em>) – vector of detected marker corners. For each marker, its four cornersare provided, (e.g std::vector&lt;std::vector<a class="reference external" href="cv::Point2f">cv::Point2f</a> &gt; ). For N detected markers, the dimensions of this array is Nx4. The order of the corners is clockwise.</p></li>
-<li><p><strong>ids</strong> (<em>cv2.UMat</em><em> | </em><em>None</em>) – vector of identifiers of the detected markers. The identifier is of type int(e.g. std::vector<int>). For N detected markers, the size of ids is also N. The identifiers have the same order than the markers in the imgPoints array.</p></li>
-<li><p><strong>rejectedImgPoints</strong> (<em>_typing.Sequence</em><em>[</em><em>cv2.UMat</em><em>] </em><em>| </em><em>None</em>) – contains the imgPoints of those squares whose inner code has not acorrect codification. Useful for debugging purposes.</p></li>
+<li><p><strong>image</strong> (<a class="reference internal" href="cv2.html#cv2.UMat" title="cv2.UMat"><em>cv2.UMat</em></a>) – input image</p></li>
+<li><p><strong>corners</strong> (<em>_typing.Sequence</em><em>[</em><a class="reference internal" href="cv2.html#cv2.UMat" title="cv2.UMat"><em>cv2.UMat</em></a><em>] </em><em>| </em><em>None</em>) – vector of detected marker corners. For each marker, its four cornersare provided, (e.g std::vector&lt;std::vector<a class="reference external" href="cv::Point2f">cv::Point2f</a> &gt; ). For N detected markers, the dimensions of this array is Nx4. The order of the corners is clockwise.</p></li>
+<li><p><strong>ids</strong> (<a class="reference internal" href="cv2.html#cv2.UMat" title="cv2.UMat"><em>cv2.UMat</em></a><em> | </em><em>None</em>) – vector of identifiers of the detected markers. The identifier is of type int(e.g. std::vector<int>). For N detected markers, the size of ids is also N. The identifiers have the same order than the markers in the imgPoints array.</p></li>
+<li><p><strong>rejectedImgPoints</strong> (<em>_typing.Sequence</em><em>[</em><a class="reference internal" href="cv2.html#cv2.UMat" title="cv2.UMat"><em>cv2.UMat</em></a><em>] </em><em>| </em><em>None</em>) – contains the imgPoints of those squares whose inner code has not acorrect codification. Useful for debugging purposes.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Rettype<span class="colon">:</span></dt>
@@ -511,14 +512,14 @@
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>self</strong> – </p></li>
-<li><p><strong>image</strong> (<em>cv2.UMat</em>) – input image</p></li>
+<li><p><strong>image</strong> (<a class="reference internal" href="cv2.html#cv2.UMat" title="cv2.UMat"><em>cv2.UMat</em></a>) – input image</p></li>
 <li><p><strong>board</strong> (<a class="reference internal" href="#cv2.aruco.Board" title="cv2.aruco.Board"><em>Board</em></a>) – layout of markers in the board.</p></li>
-<li><p><strong>detectedCorners</strong> (<em>_typing.Sequence</em><em>[</em><em>cv2.UMat</em><em>]</em>) – vector of already detected marker corners.</p></li>
-<li><p><strong>detectedIds</strong> (<em>cv2.UMat</em>) – vector of already detected marker identifiers.</p></li>
-<li><p><strong>rejectedCorners</strong> (<em>_typing.Sequence</em><em>[</em><em>cv2.UMat</em><em>]</em>) – vector of rejected candidates during the marker detection process.</p></li>
-<li><p><strong>cameraMatrix</strong> (<em>cv2.UMat</em><em> | </em><em>None</em>) – optional input 3x3 floating-point camera matrix<span class="math notranslate nohighlight">\(A = \vecthreethree{f_x}{0}{c_x}{0}{f_y}{c_y}{0}{0}{1}\)</span></p></li>
-<li><p><strong>distCoeffs</strong> (<em>cv2.UMat</em><em> | </em><em>None</em>) – optional vector of distortion coefficients<span class="math notranslate nohighlight">\((k_1, k_2, p_1, p_2[, k_3[, k_4, k_5, k_6],[s_1, s_2, s_3, s_4]])\)</span> of 4, 5, 8 or 12 elements</p></li>
-<li><p><strong>recoveredIdxs</strong> (<em>cv2.UMat</em><em> | </em><em>None</em>) – Optional array to returns the indexes of the recovered candidates in theoriginal rejectedCorners array.</p></li>
+<li><p><strong>detectedCorners</strong> (<em>_typing.Sequence</em><em>[</em><a class="reference internal" href="cv2.html#cv2.UMat" title="cv2.UMat"><em>cv2.UMat</em></a><em>]</em>) – vector of already detected marker corners.</p></li>
+<li><p><strong>detectedIds</strong> (<a class="reference internal" href="cv2.html#cv2.UMat" title="cv2.UMat"><em>cv2.UMat</em></a>) – vector of already detected marker identifiers.</p></li>
+<li><p><strong>rejectedCorners</strong> (<em>_typing.Sequence</em><em>[</em><a class="reference internal" href="cv2.html#cv2.UMat" title="cv2.UMat"><em>cv2.UMat</em></a><em>]</em>) – vector of rejected candidates during the marker detection process.</p></li>
+<li><p><strong>cameraMatrix</strong> (<a class="reference internal" href="cv2.html#cv2.UMat" title="cv2.UMat"><em>cv2.UMat</em></a><em> | </em><em>None</em>) – optional input 3x3 floating-point camera matrix<span class="math notranslate nohighlight">\(A = \vecthreethree{f_x}{0}{c_x}{0}{f_y}{c_y}{0}{0}{1}\)</span></p></li>
+<li><p><strong>distCoeffs</strong> (<a class="reference internal" href="cv2.html#cv2.UMat" title="cv2.UMat"><em>cv2.UMat</em></a><em> | </em><em>None</em>) – optional vector of distortion coefficients<span class="math notranslate nohighlight">\((k_1, k_2, p_1, p_2[, k_3[, k_4, k_5, k_6],[s_1, s_2, s_3, s_4]])\)</span> of 4, 5, 8 or 12 elements</p></li>
+<li><p><strong>recoveredIdxs</strong> (<a class="reference internal" href="cv2.html#cv2.UMat" title="cv2.UMat"><em>cv2.UMat</em></a><em> | </em><em>None</em>) – Optional array to returns the indexes of the recovered candidates in theoriginal rejectedCorners array.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Rettype<span class="colon">:</span></dt>
@@ -641,7 +642,7 @@
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>self</strong> – </p></li>
-<li><p><strong>fs</strong> (<em>cv2.FileStorage</em>) – </p></li>
+<li><p><strong>fs</strong> (<a class="reference internal" href="cv2.html#cv2.FileStorage" title="cv2.FileStorage"><em>cv2.FileStorage</em></a>) – </p></li>
 <li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a>) – </p></li>
 </ul>
 </dd>
@@ -659,7 +660,7 @@
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>self</strong> – </p></li>
-<li><p><strong>fn</strong> (<em>cv2.FileNode</em>) – </p></li>
+<li><p><strong>fn</strong> (<a class="reference internal" href="cv2.html#cv2.FileNode" title="cv2.FileNode"><em>cv2.FileNode</em></a>) – </p></li>
 </ul>
 </dd>
 <dt class="field-even">Rettype<span class="colon">:</span></dt>
@@ -694,15 +695,15 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="id2">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">objPoints</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">_typing.Sequence</span><span class="p"><span class="pre">[</span></span><span class="pre">cv2.UMat</span><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dictionary</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#cv2.aruco.Dictionary" title="cv2.aruco.Dictionary"><span class="pre">Dictionary</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">ids</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">cv2.UMat</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#id2" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">objPoints</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">_typing.Sequence</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="cv2.html#cv2.UMat" title="cv2.UMat"><span class="pre">cv2.UMat</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">dictionary</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#cv2.aruco.Dictionary" title="cv2.aruco.Dictionary"><span class="pre">Dictionary</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">ids</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="cv2.html#cv2.UMat" title="cv2.UMat"><span class="pre">cv2.UMat</span></a></span></em><span class="sig-paren">)</span><a class="headerlink" href="#id2" title="Permalink to this definition">¶</a></dt>
 <dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
 <dl class="myst field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>self</strong> – </p></li>
-<li><p><strong>objPoints</strong> (<em>_typing.Sequence</em><em>[</em><em>cv2.UMat</em><em>]</em>) – </p></li>
+<li><p><strong>objPoints</strong> (<em>_typing.Sequence</em><em>[</em><a class="reference internal" href="cv2.html#cv2.UMat" title="cv2.UMat"><em>cv2.UMat</em></a><em>]</em>) – </p></li>
 <li><p><strong>dictionary</strong> (<a class="reference internal" href="#cv2.aruco.Dictionary" title="cv2.aruco.Dictionary"><em>Dictionary</em></a>) – </p></li>
-<li><p><strong>ids</strong> (<em>cv2.UMat</em>) – </p></li>
+<li><p><strong>ids</strong> (<a class="reference internal" href="cv2.html#cv2.UMat" title="cv2.UMat"><em>cv2.UMat</em></a>) – </p></li>
 </ul>
 </dd>
 <dt class="field-even">Rettype<span class="colon">:</span></dt>
@@ -741,10 +742,10 @@
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>self</strong> – </p></li>
-<li><p><strong>detectedCorners</strong> (<em>_typing.Sequence</em><em>[</em><em>cv2.UMat</em><em>]</em>) – List of detected marker corners of the board.For cv::Board and cv::GridBoard the method expects std::vector&lt;std::vector<Point2f>&gt; or std::vector<Mat> with Aruco marker corners. For cv::CharucoBoard the method expects std::vector<Point2f> or Mat with ChAruco corners (chess board corners matched with Aruco markers).</p></li>
-<li><p><strong>detectedIds</strong> (<em>cv2.UMat</em>) – List of identifiers for each marker or charuco corner.For any Board class the method expects std::vector<int> or Mat.</p></li>
-<li><p><strong>objPoints</strong> (<em>cv2.UMat</em><em> | </em><em>None</em>) – Vector of marker points in the board coordinate space.For any Board class the method expects std::vector<a class="reference external" href="cv::Point3f">cv::Point3f</a> objectPoints or cv::Mat</p></li>
-<li><p><strong>imgPoints</strong> (<em>cv2.UMat</em><em> | </em><em>None</em>) – Vector of marker points in the image coordinate space.For any Board class the method expects std::vector<a class="reference external" href="cv::Point2f">cv::Point2f</a> objectPoints or cv::Mat</p></li>
+<li><p><strong>detectedCorners</strong> (<em>_typing.Sequence</em><em>[</em><a class="reference internal" href="cv2.html#cv2.UMat" title="cv2.UMat"><em>cv2.UMat</em></a><em>]</em>) – List of detected marker corners of the board.For cv::Board and cv::GridBoard the method expects std::vector&lt;std::vector<Point2f>&gt; or std::vector<Mat> with Aruco marker corners. For cv::CharucoBoard the method expects std::vector<Point2f> or Mat with ChAruco corners (chess board corners matched with Aruco markers).</p></li>
+<li><p><strong>detectedIds</strong> (<a class="reference internal" href="cv2.html#cv2.UMat" title="cv2.UMat"><em>cv2.UMat</em></a>) – List of identifiers for each marker or charuco corner.For any Board class the method expects std::vector<int> or Mat.</p></li>
+<li><p><strong>objPoints</strong> (<a class="reference internal" href="cv2.html#cv2.UMat" title="cv2.UMat"><em>cv2.UMat</em></a><em> | </em><em>None</em>) – Vector of marker points in the board coordinate space.For any Board class the method expects std::vector<a class="reference external" href="cv::Point3f">cv::Point3f</a> objectPoints or cv::Mat</p></li>
+<li><p><strong>imgPoints</strong> (<a class="reference internal" href="cv2.html#cv2.UMat" title="cv2.UMat"><em>cv2.UMat</em></a><em> | </em><em>None</em>) – Vector of marker points in the image coordinate space.For any Board class the method expects std::vector<a class="reference external" href="cv::Point2f">cv::Point2f</a> objectPoints or cv::Mat</p></li>
 </ul>
 </dd>
 <dt class="field-even">Rettype<span class="colon">:</span></dt>
@@ -784,7 +785,7 @@
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>self</strong> – </p></li>
 <li><p><strong>outSize</strong> (<em>cv2.typing.Size</em>) – size of the output image in pixels.</p></li>
-<li><p><strong>img</strong> (<em>cv2.UMat</em><em> | </em><em>None</em>) – output image with the board. The size of this image will be outSizeand the board will be on the center, keeping the board proportions.</p></li>
+<li><p><strong>img</strong> (<a class="reference internal" href="cv2.html#cv2.UMat" title="cv2.UMat"><em>cv2.UMat</em></a><em> | </em><em>None</em>) – output image with the board. The size of this image will be outSizeand the board will be on the center, keeping the board proportions.</p></li>
 <li><p><strong>marginSize</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><em>int</em></a>) – minimum margins (in pixels) of the board in the output image</p></li>
 <li><p><strong>borderBits</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><em>int</em></a>) – width of the marker borders.</p></li>
 </ul>
@@ -883,7 +884,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="id5">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">cv2.typing.Size</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">squareLength</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.12)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">markerLength</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.12)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">dictionary</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#cv2.aruco.Dictionary" title="cv2.aruco.Dictionary"><span class="pre">Dictionary</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">ids</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">cv2.UMat</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.12)"><span class="pre">None</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">...</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#id5" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">cv2.typing.Size</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">squareLength</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.12)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">markerLength</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.12)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">dictionary</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#cv2.aruco.Dictionary" title="cv2.aruco.Dictionary"><span class="pre">Dictionary</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">ids</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="cv2.html#cv2.UMat" title="cv2.UMat"><span class="pre">cv2.UMat</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.12)"><span class="pre">None</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">...</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#id5" title="Permalink to this definition">¶</a></dt>
 <dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
 <dl class="myst field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -893,7 +894,7 @@
 <li><p><strong>squareLength</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.12)"><em>float</em></a>) – </p></li>
 <li><p><strong>markerLength</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.12)"><em>float</em></a>) – </p></li>
 <li><p><strong>dictionary</strong> (<a class="reference internal" href="#cv2.aruco.Dictionary" title="cv2.aruco.Dictionary"><em>Dictionary</em></a>) – </p></li>
-<li><p><strong>ids</strong> (<em>cv2.UMat</em><em> | </em><em>None</em>) – </p></li>
+<li><p><strong>ids</strong> (<a class="reference internal" href="cv2.html#cv2.UMat" title="cv2.UMat"><em>cv2.UMat</em></a><em> | </em><em>None</em>) – </p></li>
 </ul>
 </dd>
 <dt class="field-even">Rettype<span class="colon">:</span></dt>
@@ -932,7 +933,7 @@
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>self</strong> – </p></li>
-<li><p><strong>charucoIds</strong> (<em>cv2.UMat</em>) – list of identifiers for each corner in charucoCorners per frame.</p></li>
+<li><p><strong>charucoIds</strong> (<a class="reference internal" href="cv2.html#cv2.UMat" title="cv2.UMat"><em>cv2.UMat</em></a>) – list of identifiers for each corner in charucoCorners per frame.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Returns<span class="colon">:</span></dt>
@@ -1066,11 +1067,11 @@
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>self</strong> – </p></li>
-<li><p><strong>image</strong> (<em>cv2.UMat</em>) – input image necesary for corner refinement. Note that markers are not detected andshould be sent in corners and ids parameters.</p></li>
-<li><p><strong>charucoCorners</strong> (<em>cv2.UMat</em><em> | </em><em>None</em>) – interpolated chessboard corners.</p></li>
-<li><p><strong>charucoIds</strong> (<em>cv2.UMat</em><em> | </em><em>None</em>) – interpolated chessboard corners identifiers.</p></li>
-<li><p><strong>markerCorners</strong> (<em>_typing.Sequence</em><em>[</em><em>cv2.UMat</em><em>] </em><em>| </em><em>None</em>) – vector of already detected markers corners. For each marker, its fourcorners are provided, (e.g std::vector&lt;std::vector<a class="reference external" href="cv::Point2f">cv::Point2f</a> &gt; ). For N detected markers, the dimensions of this array should be Nx4. The order of the corners should be clockwise. If markerCorners and markerCorners are empty, the function detect aruco markers and ids.</p></li>
-<li><p><strong>markerIds</strong> (<em>cv2.UMat</em><em> | </em><em>None</em>) – list of identifiers for each marker in corners.If markerCorners and markerCorners are empty, the function detect aruco markers and ids.</p></li>
+<li><p><strong>image</strong> (<a class="reference internal" href="cv2.html#cv2.UMat" title="cv2.UMat"><em>cv2.UMat</em></a>) – input image necesary for corner refinement. Note that markers are not detected andshould be sent in corners and ids parameters.</p></li>
+<li><p><strong>charucoCorners</strong> (<a class="reference internal" href="cv2.html#cv2.UMat" title="cv2.UMat"><em>cv2.UMat</em></a><em> | </em><em>None</em>) – interpolated chessboard corners.</p></li>
+<li><p><strong>charucoIds</strong> (<a class="reference internal" href="cv2.html#cv2.UMat" title="cv2.UMat"><em>cv2.UMat</em></a><em> | </em><em>None</em>) – interpolated chessboard corners identifiers.</p></li>
+<li><p><strong>markerCorners</strong> (<em>_typing.Sequence</em><em>[</em><a class="reference internal" href="cv2.html#cv2.UMat" title="cv2.UMat"><em>cv2.UMat</em></a><em>] </em><em>| </em><em>None</em>) – vector of already detected markers corners. For each marker, its fourcorners are provided, (e.g std::vector&lt;std::vector<a class="reference external" href="cv::Point2f">cv::Point2f</a> &gt; ). For N detected markers, the dimensions of this array should be Nx4. The order of the corners should be clockwise. If markerCorners and markerCorners are empty, the function detect aruco markers and ids.</p></li>
+<li><p><strong>markerIds</strong> (<a class="reference internal" href="cv2.html#cv2.UMat" title="cv2.UMat"><em>cv2.UMat</em></a><em> | </em><em>None</em>) – list of identifiers for each marker in corners.If markerCorners and markerCorners are empty, the function detect aruco markers and ids.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Rettype<span class="colon">:</span></dt>
@@ -1110,11 +1111,11 @@
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>self</strong> – </p></li>
-<li><p><strong>image</strong> (<em>cv2.UMat</em>) – input image necessary for corner subpixel.</p></li>
-<li><p><strong>diamondCorners</strong> (<em>_typing.Sequence</em><em>[</em><em>cv2.UMat</em><em>] </em><em>| </em><em>None</em>) – output list of detected diamond corners (4 corners per diamond). The orderis the same than in marker corners: top left, top right, bottom right and bottom left. Similar format than the corners returned by detectMarkers (e.g std::vector&lt;std::vector<a class="reference external" href="cv::Point2f">cv::Point2f</a> &gt; ).</p></li>
-<li><p><strong>diamondIds</strong> (<em>cv2.UMat</em><em> | </em><em>None</em>) – ids of the diamonds in diamondCorners. The id of each diamond is in fact oftype Vec4i, so each diamond has 4 ids, which are the ids of the aruco markers composing the diamond.</p></li>
-<li><p><strong>markerCorners</strong> (<em>_typing.Sequence</em><em>[</em><em>cv2.UMat</em><em>] </em><em>| </em><em>None</em>) – list of detected marker corners from detectMarkers function.If markerCorners and markerCorners are empty, the function detect aruco markers and ids.</p></li>
-<li><p><strong>markerIds</strong> (<em>cv2.UMat</em><em> | </em><em>None</em>) – list of marker ids in markerCorners.If markerCorners and markerCorners are empty, the function detect aruco markers and ids.</p></li>
+<li><p><strong>image</strong> (<a class="reference internal" href="cv2.html#cv2.UMat" title="cv2.UMat"><em>cv2.UMat</em></a>) – input image necessary for corner subpixel.</p></li>
+<li><p><strong>diamondCorners</strong> (<em>_typing.Sequence</em><em>[</em><a class="reference internal" href="cv2.html#cv2.UMat" title="cv2.UMat"><em>cv2.UMat</em></a><em>] </em><em>| </em><em>None</em>) – output list of detected diamond corners (4 corners per diamond). The orderis the same than in marker corners: top left, top right, bottom right and bottom left. Similar format than the corners returned by detectMarkers (e.g std::vector&lt;std::vector<a class="reference external" href="cv::Point2f">cv::Point2f</a> &gt; ).</p></li>
+<li><p><strong>diamondIds</strong> (<a class="reference internal" href="cv2.html#cv2.UMat" title="cv2.UMat"><em>cv2.UMat</em></a><em> | </em><em>None</em>) – ids of the diamonds in diamondCorners. The id of each diamond is in fact oftype Vec4i, so each diamond has 4 ids, which are the ids of the aruco markers composing the diamond.</p></li>
+<li><p><strong>markerCorners</strong> (<em>_typing.Sequence</em><em>[</em><a class="reference internal" href="cv2.html#cv2.UMat" title="cv2.UMat"><em>cv2.UMat</em></a><em>] </em><em>| </em><em>None</em>) – list of detected marker corners from detectMarkers function.If markerCorners and markerCorners are empty, the function detect aruco markers and ids.</p></li>
+<li><p><strong>markerIds</strong> (<a class="reference internal" href="cv2.html#cv2.UMat" title="cv2.UMat"><em>cv2.UMat</em></a><em> | </em><em>None</em>) – list of marker ids in markerCorners.If markerCorners and markerCorners are empty, the function detect aruco markers and ids.</p></li>
 </ul>
 </dd>
 <dt class="field-even">Rettype<span class="colon">:</span></dt>
@@ -1325,7 +1326,7 @@
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>self</strong> – </p></li>
-<li><p><strong>fn</strong> (<em>cv2.FileNode</em>) – </p></li>
+<li><p><strong>fn</strong> (<a class="reference internal" href="cv2.html#cv2.FileNode" title="cv2.FileNode"><em>cv2.FileNode</em></a>) – </p></li>
 </ul>
 </dd>
 <dt class="field-even">Rettype<span class="colon">:</span></dt>
@@ -1342,7 +1343,7 @@
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>self</strong> – </p></li>
-<li><p><strong>fs</strong> (<em>cv2.FileStorage</em>) – </p></li>
+<li><p><strong>fs</strong> (<a class="reference internal" href="cv2.html#cv2.FileStorage" title="cv2.FileStorage"><em>cv2.FileStorage</em></a>) – </p></li>
 <li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a>) – </p></li>
 </ul>
 </dd>
@@ -1589,7 +1590,7 @@
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>self</strong> – </p></li>
-<li><p><strong>bits</strong> (<em>cv2.UMat</em>) – </p></li>
+<li><p><strong>bits</strong> (<a class="reference internal" href="cv2.html#cv2.UMat" title="cv2.UMat"><em>cv2.UMat</em></a>) – </p></li>
 <li><p><strong>id</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><em>int</em></a>) – </p></li>
 <li><p><strong>allRotations</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#bool" title="(in Python v3.12)"><em>bool</em></a>) – </p></li>
 </ul>
@@ -1630,7 +1631,7 @@
 <li><p><strong>self</strong> – </p></li>
 <li><p><strong>id</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><em>int</em></a>) – </p></li>
 <li><p><strong>sidePixels</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><em>int</em></a>) – </p></li>
-<li><p><strong>_img</strong> (<em>cv2.UMat</em><em> | </em><em>None</em>) – </p></li>
+<li><p><strong>_img</strong> (<a class="reference internal" href="cv2.html#cv2.UMat" title="cv2.UMat"><em>cv2.UMat</em></a><em> | </em><em>None</em>) – </p></li>
 <li><p><strong>borderBits</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#int" title="(in Python v3.12)"><em>int</em></a>) – </p></li>
 </ul>
 </dd>
@@ -1649,7 +1650,7 @@
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>self</strong> – </p></li>
-<li><p><strong>fn</strong> (<em>cv2.FileNode</em>) – </p></li>
+<li><p><strong>fn</strong> (<a class="reference internal" href="cv2.html#cv2.FileNode" title="cv2.FileNode"><em>cv2.FileNode</em></a>) – </p></li>
 </ul>
 </dd>
 <dt class="field-even">Rettype<span class="colon">:</span></dt>
@@ -1666,7 +1667,7 @@
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>self</strong> – </p></li>
-<li><p><strong>fs</strong> (<em>cv2.FileStorage</em>) – </p></li>
+<li><p><strong>fs</strong> (<a class="reference internal" href="cv2.html#cv2.FileStorage" title="cv2.FileStorage"><em>cv2.FileStorage</em></a>) – </p></li>
 <li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a>) – </p></li>
 </ul>
 </dd>
@@ -1769,7 +1770,7 @@
 
 <dl class="py method">
 <dt class="sig sig-object py" id="id12">
-<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">cv2.typing.Size</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">markerLength</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.12)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">markerSeparation</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.12)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">dictionary</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#cv2.aruco.Dictionary" title="cv2.aruco.Dictionary"><span class="pre">Dictionary</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">ids</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">cv2.UMat</span><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.12)"><span class="pre">None</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">...</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#id12" title="Permalink to this definition">¶</a></dt>
+<span class="sig-name descname"><span class="pre">__init__</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">self</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">size</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">cv2.typing.Size</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">markerLength</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.12)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">markerSeparation</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.12)"><span class="pre">float</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">dictionary</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="#cv2.aruco.Dictionary" title="cv2.aruco.Dictionary"><span class="pre">Dictionary</span></a></span></em>, <em class="sig-param"><span class="n"><span class="pre">ids</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="cv2.html#cv2.UMat" title="cv2.UMat"><span class="pre">cv2.UMat</span></a><span class="w"> </span><span class="p"><span class="pre">|</span></span><span class="w"> </span><a class="reference external" href="https://docs.python.org/3/library/constants.html#None" title="(in Python v3.12)"><span class="pre">None</span></a></span><span class="w"> </span><span class="o"><span class="pre">=</span></span><span class="w"> </span><span class="default_value"><span class="pre">...</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#id12" title="Permalink to this definition">¶</a></dt>
 <dd><p>Initialize self.  See help(type(self)) for accurate signature.</p>
 <dl class="myst field-list simple">
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
@@ -1779,7 +1780,7 @@
 <li><p><strong>markerLength</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.12)"><em>float</em></a>) – </p></li>
 <li><p><strong>markerSeparation</strong> (<a class="reference external" href="https://docs.python.org/3/library/functions.html#float" title="(in Python v3.12)"><em>float</em></a>) – </p></li>
 <li><p><strong>dictionary</strong> (<a class="reference internal" href="#cv2.aruco.Dictionary" title="cv2.aruco.Dictionary"><em>Dictionary</em></a>) – </p></li>
-<li><p><strong>ids</strong> (<em>cv2.UMat</em><em> | </em><em>None</em>) – </p></li>
+<li><p><strong>ids</strong> (<a class="reference internal" href="cv2.html#cv2.UMat" title="cv2.UMat"><em>cv2.UMat</em></a><em> | </em><em>None</em>) – </p></li>
 </ul>
 </dd>
 <dt class="field-even">Rettype<span class="colon">:</span></dt>
@@ -1859,7 +1860,7 @@
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>self</strong> – </p></li>
-<li><p><strong>fn</strong> (<em>cv2.FileNode</em>) – </p></li>
+<li><p><strong>fn</strong> (<a class="reference internal" href="cv2.html#cv2.FileNode" title="cv2.FileNode"><em>cv2.FileNode</em></a>) – </p></li>
 </ul>
 </dd>
 <dt class="field-even">Rettype<span class="colon">:</span></dt>
@@ -1876,7 +1877,7 @@
 <dt class="field-odd">Parameters<span class="colon">:</span></dt>
 <dd class="field-odd"><ul class="simple">
 <li><p><strong>self</strong> – </p></li>
-<li><p><strong>fs</strong> (<em>cv2.FileStorage</em>) – </p></li>
+<li><p><strong>fs</strong> (<a class="reference internal" href="cv2.html#cv2.FileStorage" title="cv2.FileStorage"><em>cv2.FileStorage</em></a>) – </p></li>
 <li><p><strong>name</strong> (<a class="reference external" href="https://docs.python.org/3/library/stdtypes.html#str" title="(in Python v3.12)"><em>str</em></a>) – </p></li>
 </ul>
 </dd>
