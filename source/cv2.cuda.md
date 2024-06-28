@@ -242,7 +242,7 @@ getBuffer(size, type) -> retval
 :type cols: int
 :param type: 
 :type type: int
-:rettype: GpuMat
+:rtype: GpuMat
 ````
 
 ````{py:method} getBuffer(rows, cols, type) -> retval
@@ -258,7 +258,7 @@ getBuffer(size, type) -> retval
 :type size: cv2.typing.Size
 :param type: 
 :type type: int
-:rettype: GpuMat
+:rtype: GpuMat
 ````
 
 ````{py:method} __init__(self, stream: Stream)
@@ -271,7 +271,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 :type self: 
 :param stream: 
 :type stream: Stream
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getAllocator() -> retval
@@ -282,7 +282,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 
 :param self: 
 :type self: 
-:rettype: GpuMat.Allocator
+:rtype: GpuMat.Allocator
 ````
 
 
@@ -303,7 +303,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 
 :param self: 
 :type self: 
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} __init__(self, device_id: int)
@@ -317,7 +317,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 :type self: 
 :param device_id: 
 :type device_id: int
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} deviceID() -> retval
@@ -328,7 +328,7 @@ Returns system index of the CUDA device starting with 0.
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} totalGlobalMem() -> retval
@@ -339,7 +339,7 @@ Returns system index of the CUDA device starting with 0.
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} sharedMemPerBlock() -> retval
@@ -350,7 +350,7 @@ Returns system index of the CUDA device starting with 0.
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} regsPerBlock() -> retval
@@ -361,7 +361,7 @@ Returns system index of the CUDA device starting with 0.
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} warpSize() -> retval
@@ -372,7 +372,7 @@ Returns system index of the CUDA device starting with 0.
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} memPitch() -> retval
@@ -383,7 +383,7 @@ Returns system index of the CUDA device starting with 0.
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} maxThreadsPerBlock() -> retval
@@ -394,7 +394,7 @@ Returns system index of the CUDA device starting with 0.
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} maxThreadsDim() -> retval
@@ -405,7 +405,7 @@ Returns system index of the CUDA device starting with 0.
 
 :param self: 
 :type self: 
-:rettype: cv2.typing.Vec3i
+:rtype: cv2.typing.Vec3i
 ````
 
 ````{py:method} maxGridSize() -> retval
@@ -416,7 +416,7 @@ Returns system index of the CUDA device starting with 0.
 
 :param self: 
 :type self: 
-:rettype: cv2.typing.Vec3i
+:rtype: cv2.typing.Vec3i
 ````
 
 ````{py:method} clockRate() -> retval
@@ -427,7 +427,7 @@ Returns system index of the CUDA device starting with 0.
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} totalConstMem() -> retval
@@ -438,7 +438,7 @@ Returns system index of the CUDA device starting with 0.
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} majorVersion() -> retval
@@ -449,7 +449,7 @@ Returns system index of the CUDA device starting with 0.
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} minorVersion() -> retval
@@ -460,7 +460,7 @@ Returns system index of the CUDA device starting with 0.
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} textureAlignment() -> retval
@@ -471,7 +471,7 @@ Returns system index of the CUDA device starting with 0.
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} texturePitchAlignment() -> retval
@@ -482,7 +482,7 @@ Returns system index of the CUDA device starting with 0.
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} multiProcessorCount() -> retval
@@ -493,7 +493,7 @@ Returns system index of the CUDA device starting with 0.
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} kernelExecTimeoutEnabled() -> retval
@@ -504,7 +504,7 @@ Returns system index of the CUDA device starting with 0.
 
 :param self: 
 :type self: 
-:rettype: bool
+:rtype: bool
 ````
 
 ````{py:method} integrated() -> retval
@@ -515,7 +515,7 @@ Returns system index of the CUDA device starting with 0.
 
 :param self: 
 :type self: 
-:rettype: bool
+:rtype: bool
 ````
 
 ````{py:method} canMapHostMemory() -> retval
@@ -526,7 +526,7 @@ Returns system index of the CUDA device starting with 0.
 
 :param self: 
 :type self: 
-:rettype: bool
+:rtype: bool
 ````
 
 ````{py:method} computeMode() -> retval
@@ -537,7 +537,7 @@ Returns system index of the CUDA device starting with 0.
 
 :param self: 
 :type self: 
-:rettype: DeviceInfo_ComputeMode
+:rtype: DeviceInfo_ComputeMode
 ````
 
 ````{py:method} maxTexture1D() -> retval
@@ -548,7 +548,7 @@ Returns system index of the CUDA device starting with 0.
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} maxTexture1DMipmap() -> retval
@@ -559,7 +559,7 @@ Returns system index of the CUDA device starting with 0.
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} maxTexture1DLinear() -> retval
@@ -570,7 +570,7 @@ Returns system index of the CUDA device starting with 0.
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} maxTexture2D() -> retval
@@ -581,7 +581,7 @@ Returns system index of the CUDA device starting with 0.
 
 :param self: 
 :type self: 
-:rettype: cv2.typing.Vec2i
+:rtype: cv2.typing.Vec2i
 ````
 
 ````{py:method} maxTexture2DMipmap() -> retval
@@ -592,7 +592,7 @@ Returns system index of the CUDA device starting with 0.
 
 :param self: 
 :type self: 
-:rettype: cv2.typing.Vec2i
+:rtype: cv2.typing.Vec2i
 ````
 
 ````{py:method} maxTexture2DLinear() -> retval
@@ -603,7 +603,7 @@ Returns system index of the CUDA device starting with 0.
 
 :param self: 
 :type self: 
-:rettype: cv2.typing.Vec3i
+:rtype: cv2.typing.Vec3i
 ````
 
 ````{py:method} maxTexture2DGather() -> retval
@@ -614,7 +614,7 @@ Returns system index of the CUDA device starting with 0.
 
 :param self: 
 :type self: 
-:rettype: cv2.typing.Vec2i
+:rtype: cv2.typing.Vec2i
 ````
 
 ````{py:method} maxTexture3D() -> retval
@@ -625,7 +625,7 @@ Returns system index of the CUDA device starting with 0.
 
 :param self: 
 :type self: 
-:rettype: cv2.typing.Vec3i
+:rtype: cv2.typing.Vec3i
 ````
 
 ````{py:method} maxTextureCubemap() -> retval
@@ -636,7 +636,7 @@ Returns system index of the CUDA device starting with 0.
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} maxTexture1DLayered() -> retval
@@ -647,7 +647,7 @@ Returns system index of the CUDA device starting with 0.
 
 :param self: 
 :type self: 
-:rettype: cv2.typing.Vec2i
+:rtype: cv2.typing.Vec2i
 ````
 
 ````{py:method} maxTexture2DLayered() -> retval
@@ -658,7 +658,7 @@ Returns system index of the CUDA device starting with 0.
 
 :param self: 
 :type self: 
-:rettype: cv2.typing.Vec3i
+:rtype: cv2.typing.Vec3i
 ````
 
 ````{py:method} maxTextureCubemapLayered() -> retval
@@ -669,7 +669,7 @@ Returns system index of the CUDA device starting with 0.
 
 :param self: 
 :type self: 
-:rettype: cv2.typing.Vec2i
+:rtype: cv2.typing.Vec2i
 ````
 
 ````{py:method} maxSurface1D() -> retval
@@ -680,7 +680,7 @@ Returns system index of the CUDA device starting with 0.
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} maxSurface2D() -> retval
@@ -691,7 +691,7 @@ Returns system index of the CUDA device starting with 0.
 
 :param self: 
 :type self: 
-:rettype: cv2.typing.Vec2i
+:rtype: cv2.typing.Vec2i
 ````
 
 ````{py:method} maxSurface3D() -> retval
@@ -702,7 +702,7 @@ Returns system index of the CUDA device starting with 0.
 
 :param self: 
 :type self: 
-:rettype: cv2.typing.Vec3i
+:rtype: cv2.typing.Vec3i
 ````
 
 ````{py:method} maxSurface1DLayered() -> retval
@@ -713,7 +713,7 @@ Returns system index of the CUDA device starting with 0.
 
 :param self: 
 :type self: 
-:rettype: cv2.typing.Vec2i
+:rtype: cv2.typing.Vec2i
 ````
 
 ````{py:method} maxSurface2DLayered() -> retval
@@ -724,7 +724,7 @@ Returns system index of the CUDA device starting with 0.
 
 :param self: 
 :type self: 
-:rettype: cv2.typing.Vec3i
+:rtype: cv2.typing.Vec3i
 ````
 
 ````{py:method} maxSurfaceCubemap() -> retval
@@ -735,7 +735,7 @@ Returns system index of the CUDA device starting with 0.
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} maxSurfaceCubemapLayered() -> retval
@@ -746,7 +746,7 @@ Returns system index of the CUDA device starting with 0.
 
 :param self: 
 :type self: 
-:rettype: cv2.typing.Vec2i
+:rtype: cv2.typing.Vec2i
 ````
 
 ````{py:method} surfaceAlignment() -> retval
@@ -757,7 +757,7 @@ Returns system index of the CUDA device starting with 0.
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} concurrentKernels() -> retval
@@ -768,7 +768,7 @@ Returns system index of the CUDA device starting with 0.
 
 :param self: 
 :type self: 
-:rettype: bool
+:rtype: bool
 ````
 
 ````{py:method} ECCEnabled() -> retval
@@ -779,7 +779,7 @@ Returns system index of the CUDA device starting with 0.
 
 :param self: 
 :type self: 
-:rettype: bool
+:rtype: bool
 ````
 
 ````{py:method} pciBusID() -> retval
@@ -790,7 +790,7 @@ Returns system index of the CUDA device starting with 0.
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} pciDeviceID() -> retval
@@ -801,7 +801,7 @@ Returns system index of the CUDA device starting with 0.
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} pciDomainID() -> retval
@@ -812,7 +812,7 @@ Returns system index of the CUDA device starting with 0.
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} tccDriver() -> retval
@@ -823,7 +823,7 @@ Returns system index of the CUDA device starting with 0.
 
 :param self: 
 :type self: 
-:rettype: bool
+:rtype: bool
 ````
 
 ````{py:method} asyncEngineCount() -> retval
@@ -834,7 +834,7 @@ Returns system index of the CUDA device starting with 0.
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} unifiedAddressing() -> retval
@@ -845,7 +845,7 @@ Returns system index of the CUDA device starting with 0.
 
 :param self: 
 :type self: 
-:rettype: bool
+:rtype: bool
 ````
 
 ````{py:method} memoryClockRate() -> retval
@@ -856,7 +856,7 @@ Returns system index of the CUDA device starting with 0.
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} memoryBusWidth() -> retval
@@ -867,7 +867,7 @@ Returns system index of the CUDA device starting with 0.
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} l2CacheSize() -> retval
@@ -878,7 +878,7 @@ Returns system index of the CUDA device starting with 0.
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} maxThreadsPerMultiProcessor() -> retval
@@ -889,7 +889,7 @@ Returns system index of the CUDA device starting with 0.
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} queryMemory(totalMemory, freeMemory) -> None
@@ -904,7 +904,7 @@ Returns system index of the CUDA device starting with 0.
 :type totalMemory: int
 :param freeMemory: 
 :type freeMemory: int
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} freeMemory() -> retval
@@ -915,7 +915,7 @@ Returns system index of the CUDA device starting with 0.
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} totalMemory() -> retval
@@ -926,7 +926,7 @@ Returns system index of the CUDA device starting with 0.
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} isCompatible() -> retval
@@ -937,7 +937,7 @@ This function returns true if the CUDA module can be run on the specified device
 
 :param self: 
 :type self: 
-:rettype: bool
+:rtype: bool
 ````
 
 
@@ -959,7 +959,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 :type self: 
 :param flags: 
 :type flags: Event_CreateFlags
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} record([, stream]) -> None
@@ -972,7 +972,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 :type self: 
 :param stream: 
 :type stream: Stream
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} queryIfComplete() -> retval
@@ -983,7 +983,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 
 :param self: 
 :type self: 
-:rettype: bool
+:rtype: bool
 ````
 
 ````{py:method} waitForCompletion() -> None
@@ -994,7 +994,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 
 :param self: 
 :type self: 
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} elapsedTime(start, end) -> retval
@@ -1008,7 +1008,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 :type start: Event
 :param end: 
 :type end: Event
-:rettype: float
+:rtype: float
 ````
 
 
@@ -1038,7 +1038,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} __init__(self, allocator: GpuMat.Allocator=...)
@@ -1052,7 +1052,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 :type self: 
 :param allocator: 
 :type allocator: GpuMat.Allocator
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} __init__(self, rows: int, cols: int, type: int, allocator: GpuMat.Allocator=...)
@@ -1072,7 +1072,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 :type type: int
 :param allocator: 
 :type allocator: GpuMat.Allocator
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} __init__(self, size: cv2.typing.Size, type: int, allocator: GpuMat.Allocator=...)
@@ -1090,7 +1090,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 :type type: int
 :param allocator: 
 :type allocator: GpuMat.Allocator
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} __init__(self, rows: int, cols: int, type: int, s: cv2.typing.Scalar, allocator: GpuMat.Allocator=...)
@@ -1112,7 +1112,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 :type s: cv2.typing.Scalar
 :param allocator: 
 :type allocator: GpuMat.Allocator
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} __init__(self, size: cv2.typing.Size, type: int, s: cv2.typing.Scalar, allocator: GpuMat.Allocator=...)
@@ -1132,7 +1132,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 :type s: cv2.typing.Scalar
 :param allocator: 
 :type allocator: GpuMat.Allocator
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} __init__(self, m: GpuMat)
@@ -1146,7 +1146,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 :type self: 
 :param m: 
 :type m: GpuMat
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} __init__(self, m: GpuMat, rowRange: cv2.typing.Range, colRange: cv2.typing.Range)
@@ -1164,7 +1164,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 :type rowRange: cv2.typing.Range
 :param colRange: 
 :type colRange: cv2.typing.Range
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} __init__(self, m: GpuMat, roi: cv2.typing.Rect)
@@ -1180,7 +1180,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 :type m: GpuMat
 :param roi: 
 :type roi: cv2.typing.Rect
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} __init__(self, arr: cv2.typing.MatLike, allocator: GpuMat.Allocator=...)
@@ -1196,7 +1196,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 :type arr: cv2.typing.MatLike
 :param allocator: 
 :type allocator: GpuMat.Allocator
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} __init__(self, arr: GpuMat, allocator: GpuMat.Allocator=...)
@@ -1212,7 +1212,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 :type arr: GpuMat
 :param allocator: 
 :type allocator: GpuMat.Allocator
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} __init__(self, arr: cv2.UMat, allocator: GpuMat.Allocator=...)
@@ -1228,7 +1228,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 :type arr: cv2.UMat
 :param allocator: 
 :type allocator: GpuMat.Allocator
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} create(rows, cols, type) -> None
@@ -1246,7 +1246,7 @@ create(size, type) -> None
 :type cols: int
 :param type: 
 :type type: int
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} create(rows, cols, type) -> None
@@ -1262,7 +1262,7 @@ create(size, type) -> None
 :type size: cv2.typing.Size
 :param type: 
 :type type: int
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} upload(arr) -> None
@@ -1276,7 +1276,7 @@ This function copies data from host memory to device memory. As being a blocking
 :type self: 
 :param arr: 
 :type arr: cv2.typing.MatLike
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} upload(arr) -> None
@@ -1290,7 +1290,7 @@ This function copies data from host memory to device memory. As being a blocking
 :type self: 
 :param arr: 
 :type arr: GpuMat
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} upload(arr) -> None
@@ -1304,7 +1304,7 @@ This function copies data from host memory to device memory. As being a blocking
 :type self: 
 :param arr: 
 :type arr: cv2.UMat
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} upload(arr) -> None
@@ -1320,7 +1320,7 @@ This function copies data from host memory to device memory. As being a blocking
 :type arr: cv2.typing.MatLike
 :param stream: 
 :type stream: Stream
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} upload(arr) -> None
@@ -1336,7 +1336,7 @@ This function copies data from host memory to device memory. As being a blocking
 :type arr: GpuMat
 :param stream: 
 :type stream: Stream
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} upload(arr) -> None
@@ -1352,7 +1352,7 @@ This function copies data from host memory to device memory. As being a blocking
 :type arr: cv2.UMat
 :param stream: 
 :type stream: Stream
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} download([, dst]) -> dst
@@ -1366,7 +1366,7 @@ This function copies data from device memory to host memory. As being a blocking
 :type self: 
 :param dst: 
 :type dst: cv2.typing.MatLike | None
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 ````{py:method} download([, dst]) -> dst
@@ -1380,7 +1380,7 @@ This function copies data from device memory to host memory. As being a blocking
 :type self: 
 :param dst: 
 :type dst: GpuMat | None
-:rettype: GpuMat
+:rtype: GpuMat
 ````
 
 ````{py:method} download([, dst]) -> dst
@@ -1394,7 +1394,7 @@ This function copies data from device memory to host memory. As being a blocking
 :type self: 
 :param dst: 
 :type dst: cv2.UMat | None
-:rettype: cv2.UMat
+:rtype: cv2.UMat
 ````
 
 ````{py:method} download([, dst]) -> dst
@@ -1410,7 +1410,7 @@ This function copies data from device memory to host memory. As being a blocking
 :type stream: Stream
 :param dst: 
 :type dst: cv2.typing.MatLike | None
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 ````{py:method} download([, dst]) -> dst
@@ -1426,7 +1426,7 @@ This function copies data from device memory to host memory. As being a blocking
 :type stream: Stream
 :param dst: 
 :type dst: GpuMat | None
-:rettype: GpuMat
+:rtype: GpuMat
 ````
 
 ````{py:method} download([, dst]) -> dst
@@ -1442,7 +1442,7 @@ This function copies data from device memory to host memory. As being a blocking
 :type stream: Stream
 :param dst: 
 :type dst: cv2.UMat | None
-:rettype: cv2.UMat
+:rtype: cv2.UMat
 ````
 
 ````{py:method} copyTo([, dst]) -> dst
@@ -1456,7 +1456,7 @@ copyTo(stream[, dst]) -> dst copyTo(mask[, dst]) -> dst copyTo(mask, stream[, ds
 :type self: 
 :param dst: 
 :type dst: GpuMat | None
-:rettype: GpuMat
+:rtype: GpuMat
 ````
 
 ````{py:method} copyTo([, dst]) -> dst
@@ -1472,7 +1472,7 @@ copyTo(stream[, dst]) -> dst copyTo(mask[, dst]) -> dst copyTo(mask, stream[, ds
 :type stream: Stream
 :param dst: 
 :type dst: GpuMat | None
-:rettype: GpuMat
+:rtype: GpuMat
 ````
 
 ````{py:method} copyTo([, dst]) -> dst
@@ -1488,7 +1488,7 @@ copyTo(stream[, dst]) -> dst copyTo(mask[, dst]) -> dst copyTo(mask, stream[, ds
 :type mask: GpuMat
 :param dst: 
 :type dst: GpuMat | None
-:rettype: GpuMat
+:rtype: GpuMat
 ````
 
 ````{py:method} copyTo([, dst]) -> dst
@@ -1506,7 +1506,7 @@ copyTo(stream[, dst]) -> dst copyTo(mask[, dst]) -> dst copyTo(mask, stream[, ds
 :type stream: Stream
 :param dst: 
 :type dst: GpuMat | None
-:rettype: GpuMat
+:rtype: GpuMat
 ````
 
 ````{py:method} setTo(s) -> retval
@@ -1520,7 +1520,7 @@ setTo(s, stream) -> retval setTo(s, mask) -> retval setTo(s, mask, stream) -> re
 :type self: 
 :param s: 
 :type s: cv2.typing.Scalar
-:rettype: GpuMat
+:rtype: GpuMat
 ````
 
 ````{py:method} setTo(s) -> retval
@@ -1536,7 +1536,7 @@ setTo(s, stream) -> retval setTo(s, mask) -> retval setTo(s, mask, stream) -> re
 :type s: cv2.typing.Scalar
 :param stream: 
 :type stream: Stream
-:rettype: GpuMat
+:rtype: GpuMat
 ````
 
 ````{py:method} setTo(s) -> retval
@@ -1552,7 +1552,7 @@ setTo(s, stream) -> retval setTo(s, mask) -> retval setTo(s, mask, stream) -> re
 :type s: cv2.typing.Scalar
 :param mask: 
 :type mask: cv2.typing.MatLike
-:rettype: GpuMat
+:rtype: GpuMat
 ````
 
 ````{py:method} setTo(s) -> retval
@@ -1568,7 +1568,7 @@ setTo(s, stream) -> retval setTo(s, mask) -> retval setTo(s, mask, stream) -> re
 :type s: cv2.typing.Scalar
 :param mask: 
 :type mask: GpuMat
-:rettype: GpuMat
+:rtype: GpuMat
 ````
 
 ````{py:method} setTo(s) -> retval
@@ -1584,7 +1584,7 @@ setTo(s, stream) -> retval setTo(s, mask) -> retval setTo(s, mask, stream) -> re
 :type s: cv2.typing.Scalar
 :param mask: 
 :type mask: cv2.UMat
-:rettype: GpuMat
+:rtype: GpuMat
 ````
 
 ````{py:method} setTo(s) -> retval
@@ -1602,7 +1602,7 @@ setTo(s, stream) -> retval setTo(s, mask) -> retval setTo(s, mask, stream) -> re
 :type mask: cv2.typing.MatLike
 :param stream: 
 :type stream: Stream
-:rettype: GpuMat
+:rtype: GpuMat
 ````
 
 ````{py:method} setTo(s) -> retval
@@ -1620,7 +1620,7 @@ setTo(s, stream) -> retval setTo(s, mask) -> retval setTo(s, mask, stream) -> re
 :type mask: GpuMat
 :param stream: 
 :type stream: Stream
-:rettype: GpuMat
+:rtype: GpuMat
 ````
 
 ````{py:method} setTo(s) -> retval
@@ -1638,7 +1638,7 @@ setTo(s, stream) -> retval setTo(s, mask) -> retval setTo(s, mask, stream) -> re
 :type mask: cv2.UMat
 :param stream: 
 :type stream: Stream
-:rettype: GpuMat
+:rtype: GpuMat
 ````
 
 ````{py:method} convertTo(rtype, stream[, dst]) -> dst
@@ -1656,7 +1656,7 @@ convertTo(rtype[, dst[, alpha[, beta]]]) -> dst convertTo(rtype, alpha, beta, st
 :type stream: Stream
 :param dst: 
 :type dst: GpuMat | None
-:rettype: GpuMat
+:rtype: GpuMat
 ````
 
 ````{py:method} convertTo(rtype, stream[, dst]) -> dst
@@ -1676,7 +1676,7 @@ convertTo(rtype[, dst[, alpha[, beta]]]) -> dst convertTo(rtype, alpha, beta, st
 :type alpha: float
 :param beta: 
 :type beta: float
-:rettype: GpuMat
+:rtype: GpuMat
 ````
 
 ````{py:method} convertTo(rtype, stream[, dst]) -> dst
@@ -1698,7 +1698,7 @@ convertTo(rtype[, dst[, alpha[, beta]]]) -> dst convertTo(rtype, alpha, beta, st
 :type stream: Stream
 :param dst: 
 :type dst: GpuMat | None
-:rettype: GpuMat
+:rtype: GpuMat
 ````
 
 ````{py:method} rowRange(startrow, endrow) -> retval
@@ -1714,7 +1714,7 @@ rowRange(r) -> retval
 :type startrow: int
 :param endrow: 
 :type endrow: int
-:rettype: GpuMat
+:rtype: GpuMat
 ````
 
 ````{py:method} rowRange(startrow, endrow) -> retval
@@ -1728,7 +1728,7 @@ rowRange(r) -> retval
 :type self: 
 :param r: 
 :type r: cv2.typing.Range
-:rettype: GpuMat
+:rtype: GpuMat
 ````
 
 ````{py:method} colRange(startcol, endcol) -> retval
@@ -1744,7 +1744,7 @@ colRange(r) -> retval
 :type startcol: int
 :param endcol: 
 :type endcol: int
-:rettype: GpuMat
+:rtype: GpuMat
 ````
 
 ````{py:method} colRange(startcol, endcol) -> retval
@@ -1758,7 +1758,7 @@ colRange(r) -> retval
 :type self: 
 :param r: 
 :type r: cv2.typing.Range
-:rettype: GpuMat
+:rtype: GpuMat
 ````
 
 ````{py:method} defaultAllocator() -> retval
@@ -1768,7 +1768,7 @@ colRange(r) -> retval
 
 
 
-:rettype: GpuMat.Allocator
+:rtype: GpuMat.Allocator
 ````
 
 ````{py:method} setDefaultAllocator(allocator) -> None
@@ -1780,7 +1780,7 @@ colRange(r) -> retval
 
 :param allocator: 
 :type allocator: GpuMat.Allocator
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} release() -> None
@@ -1791,7 +1791,7 @@ colRange(r) -> retval
 
 :param self: 
 :type self: 
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} swap(mat) -> None
@@ -1804,7 +1804,7 @@ colRange(r) -> retval
 :type self: 
 :param mat: 
 :type mat: GpuMat
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} clone() -> retval
@@ -1815,7 +1815,7 @@ colRange(r) -> retval
 
 :param self: 
 :type self: 
-:rettype: GpuMat
+:rtype: GpuMat
 ````
 
 ````{py:method} assignTo(m[, type]) -> None
@@ -1830,7 +1830,7 @@ colRange(r) -> retval
 :type m: GpuMat
 :param type: 
 :type type: int
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} row(y) -> retval
@@ -1843,7 +1843,7 @@ colRange(r) -> retval
 :type self: 
 :param y: 
 :type y: int
-:rettype: GpuMat
+:rtype: GpuMat
 ````
 
 ````{py:method} col(x) -> retval
@@ -1856,7 +1856,7 @@ colRange(r) -> retval
 :type self: 
 :param x: 
 :type x: int
-:rettype: GpuMat
+:rtype: GpuMat
 ````
 
 ````{py:method} reshape(cn[, rows]) -> retval
@@ -1871,7 +1871,7 @@ colRange(r) -> retval
 :type cn: int
 :param rows: 
 :type rows: int
-:rettype: GpuMat
+:rtype: GpuMat
 ````
 
 ````{py:method} locateROI(wholeSize, ofs) -> None
@@ -1886,7 +1886,7 @@ colRange(r) -> retval
 :type wholeSize: cv2.typing.Size
 :param ofs: 
 :type ofs: cv2.typing.Point
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} adjustROI(dtop, dbottom, dleft, dright) -> retval
@@ -1905,7 +1905,7 @@ colRange(r) -> retval
 :type dleft: int
 :param dright: 
 :type dright: int
-:rettype: GpuMat
+:rtype: GpuMat
 ````
 
 ````{py:method} isContinuous() -> retval
@@ -1916,7 +1916,7 @@ colRange(r) -> retval
 
 :param self: 
 :type self: 
-:rettype: bool
+:rtype: bool
 ````
 
 ````{py:method} elemSize() -> retval
@@ -1927,7 +1927,7 @@ colRange(r) -> retval
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} elemSize1() -> retval
@@ -1938,7 +1938,7 @@ colRange(r) -> retval
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} type() -> retval
@@ -1949,7 +1949,7 @@ colRange(r) -> retval
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} depth() -> retval
@@ -1960,7 +1960,7 @@ colRange(r) -> retval
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} channels() -> retval
@@ -1971,7 +1971,7 @@ colRange(r) -> retval
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} step1() -> retval
@@ -1982,7 +1982,7 @@ colRange(r) -> retval
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} size() -> retval
@@ -1993,7 +1993,7 @@ colRange(r) -> retval
 
 :param self: 
 :type self: 
-:rettype: cv2.typing.Size
+:rtype: cv2.typing.Size
 ````
 
 ````{py:method} empty() -> retval
@@ -2004,7 +2004,7 @@ colRange(r) -> retval
 
 :param self: 
 :type self: 
-:rettype: bool
+:rtype: bool
 ````
 
 ````{py:method} cudaPtr() -> retval
@@ -2015,7 +2015,7 @@ colRange(r) -> retval
 
 :param self: 
 :type self: 
-:rettype: cv2.typing.IntPointer
+:rtype: cv2.typing.IntPointer
 ````
 
 ````{py:method} updateContinuityFlag() -> None
@@ -2026,7 +2026,7 @@ colRange(r) -> retval
 
 :param self: 
 :type self: 
-:rettype: None
+:rtype: None
 ````
 
 
@@ -2056,7 +2056,7 @@ colRange(r) -> retval
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} __init__(self, alloc_type: HostMem_AllocType=...)
@@ -2070,7 +2070,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 :type self: 
 :param alloc_type: 
 :type alloc_type: HostMem_AllocType
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} __init__(self, rows: int, cols: int, type: int, alloc_type: HostMem_AllocType=...)
@@ -2090,7 +2090,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 :type type: int
 :param alloc_type: 
 :type alloc_type: HostMem_AllocType
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} __init__(self, size: cv2.typing.Size, type: int, alloc_type: HostMem_AllocType=...)
@@ -2108,7 +2108,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 :type type: int
 :param alloc_type: 
 :type alloc_type: HostMem_AllocType
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} __init__(self, arr: cv2.typing.MatLike, alloc_type: HostMem_AllocType=...)
@@ -2124,7 +2124,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 :type arr: cv2.typing.MatLike
 :param alloc_type: 
 :type alloc_type: HostMem_AllocType
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} __init__(self, arr: GpuMat, alloc_type: HostMem_AllocType=...)
@@ -2140,7 +2140,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 :type arr: GpuMat
 :param alloc_type: 
 :type alloc_type: HostMem_AllocType
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} __init__(self, arr: cv2.UMat, alloc_type: HostMem_AllocType=...)
@@ -2156,7 +2156,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 :type arr: cv2.UMat
 :param alloc_type: 
 :type alloc_type: HostMem_AllocType
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} swap(b) -> None
@@ -2169,7 +2169,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 :type self: 
 :param b: 
 :type b: HostMem
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} clone() -> retval
@@ -2180,7 +2180,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 
 :param self: 
 :type self: 
-:rettype: HostMem
+:rtype: HostMem
 ````
 
 ````{py:method} create(rows, cols, type) -> None
@@ -2197,7 +2197,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 :type cols: int
 :param type: 
 :type type: int
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} reshape(cn[, rows]) -> retval
@@ -2212,7 +2212,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 :type cn: int
 :param rows: 
 :type rows: int
-:rettype: HostMem
+:rtype: HostMem
 ````
 
 ````{py:method} createMatHeader() -> retval
@@ -2223,7 +2223,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 
 :param self: 
 :type self: 
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 ````{py:method} isContinuous() -> retval
@@ -2234,7 +2234,7 @@ This can be done only if memory was allocated with the SHARED flag and if it is 
 
 :param self: 
 :type self: 
-:rettype: bool
+:rtype: bool
 ````
 
 ````{py:method} elemSize() -> retval
@@ -2245,7 +2245,7 @@ This can be done only if memory was allocated with the SHARED flag and if it is 
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} elemSize1() -> retval
@@ -2256,7 +2256,7 @@ This can be done only if memory was allocated with the SHARED flag and if it is 
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} type() -> retval
@@ -2267,7 +2267,7 @@ This can be done only if memory was allocated with the SHARED flag and if it is 
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} depth() -> retval
@@ -2278,7 +2278,7 @@ This can be done only if memory was allocated with the SHARED flag and if it is 
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} channels() -> retval
@@ -2289,7 +2289,7 @@ This can be done only if memory was allocated with the SHARED flag and if it is 
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} step1() -> retval
@@ -2300,7 +2300,7 @@ This can be done only if memory was allocated with the SHARED flag and if it is 
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} size() -> retval
@@ -2311,7 +2311,7 @@ This can be done only if memory was allocated with the SHARED flag and if it is 
 
 :param self: 
 :type self: 
-:rettype: cv2.typing.Size
+:rtype: cv2.typing.Size
 ````
 
 ````{py:method} empty() -> retval
@@ -2322,7 +2322,7 @@ This can be done only if memory was allocated with the SHARED flag and if it is 
 
 :param self: 
 :type self: 
-:rettype: bool
+:rtype: bool
 ````
 
 
@@ -2346,7 +2346,7 @@ Callbacks must not make any CUDA API calls. Callbacks must not perform any synch
 
 :param cls: 
 :type cls: 
-:rettype: Stream
+:rtype: Stream
 ````
 
 ````{py:method} __init__(self)
@@ -2358,7 +2358,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 
 :param self: 
 :type self: 
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} __init__(self, allocator: GpuMat.Allocator)
@@ -2372,7 +2372,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 :type self: 
 :param allocator: 
 :type allocator: GpuMat.Allocator
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} __init__(self, cudaFlags: int)
@@ -2386,7 +2386,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 :type self: 
 :param cudaFlags: 
 :type cudaFlags: int
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} queryIfComplete() -> retval
@@ -2397,7 +2397,7 @@ Returns true if the current stream queue is finished. Otherwise, it returns fals
 
 :param self: 
 :type self: 
-:rettype: bool
+:rtype: bool
 ````
 
 ````{py:method} waitForCompletion() -> None
@@ -2408,7 +2408,7 @@ Blocks the current CPU thread until all operations in the stream are complete.
 
 :param self: 
 :type self: 
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} waitEvent(event) -> None
@@ -2421,7 +2421,7 @@ Makes a compute stream wait on an event.
 :type self: 
 :param event: 
 :type event: Event
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} cudaPtr() -> retval
@@ -2432,7 +2432,7 @@ Makes a compute stream wait on an event.
 
 :param self: 
 :type self: 
-:rettype: cv2.typing.IntPointer
+:rtype: cv2.typing.IntPointer
 ````
 
 
@@ -2455,7 +2455,7 @@ There is a set of methods to check whether the module contains intermediate (PTX
 :type major: int
 :param minor: Minor compute capability version.
 :type minor: int
-:rettype: bool
+:rtype: bool
 ````
 
 ````{py:method} hasPtx(major, minor) -> retval
@@ -2469,7 +2469,7 @@ There is a set of methods to check whether the module contains intermediate (PTX
 :type major: int
 :param minor: 
 :type minor: int
-:rettype: bool
+:rtype: bool
 ````
 
 ````{py:method} hasBin(major, minor) -> retval
@@ -2483,7 +2483,7 @@ There is a set of methods to check whether the module contains intermediate (PTX
 :type major: int
 :param minor: 
 :type minor: int
-:rettype: bool
+:rtype: bool
 ````
 
 ````{py:method} hasEqualOrLessPtx(major, minor) -> retval
@@ -2497,7 +2497,7 @@ There is a set of methods to check whether the module contains intermediate (PTX
 :type major: int
 :param minor: 
 :type minor: int
-:rettype: bool
+:rtype: bool
 ````
 
 ````{py:method} hasEqualOrGreater(major, minor) -> retval
@@ -2511,7 +2511,7 @@ There is a set of methods to check whether the module contains intermediate (PTX
 :type major: int
 :param minor: 
 :type minor: int
-:rettype: bool
+:rtype: bool
 ````
 
 ````{py:method} hasEqualOrGreaterPtx(major, minor) -> retval
@@ -2525,7 +2525,7 @@ There is a set of methods to check whether the module contains intermediate (PTX
 :type major: int
 :param minor: 
 :type minor: int
-:rettype: bool
+:rtype: bool
 ````
 
 ````{py:method} hasEqualOrGreaterBin(major, minor) -> retval
@@ -2539,7 +2539,7 @@ There is a set of methods to check whether the module contains intermediate (PTX
 :type major: int
 :param minor: 
 :type minor: int
-:rettype: bool
+:rtype: bool
 ````
 
 
@@ -2555,7 +2555,7 @@ There is a set of methods to check whether the module contains intermediate (PTX
 
 
 
-:rettype: object
+:rtype: object
 ````
 
 
@@ -2566,7 +2566,7 @@ There is a set of methods to check whether the module contains intermediate (PTX
 
 
 
-:rettype: object
+:rtype: object
 ````
 
 
@@ -2577,7 +2577,7 @@ There is a set of methods to check whether the module contains intermediate (PTX
 
 
 
-:rettype: object
+:rtype: object
 ````
 
 
@@ -2591,7 +2591,7 @@ Callbacks must not make any CUDA API calls. Callbacks must not perform any synch
 ```
 
 
-:rettype: object
+:rtype: object
 ````
 
 
@@ -2606,7 +2606,7 @@ There is a set of methods to check whether the module contains intermediate (PTX
 :type major: 
 :param minor: Minor compute capability version.
 :type minor: 
-:rettype: object
+:rtype: object
 ````
 
 
@@ -2617,7 +2617,7 @@ There is a set of methods to check whether the module contains intermediate (PTX
 
 
 
-:rettype: object
+:rtype: object
 ````
 
 
@@ -2628,7 +2628,7 @@ There is a set of methods to check whether the module contains intermediate (PTX
 
 
 
-:rettype: object
+:rtype: object
 ````
 
 
@@ -2639,7 +2639,7 @@ There is a set of methods to check whether the module contains intermediate (PTX
 
 
 
-:rettype: object
+:rtype: object
 ````
 
 
@@ -2650,7 +2650,7 @@ There is a set of methods to check whether the module contains intermediate (PTX
 
 
 
-:rettype: object
+:rtype: object
 ````
 
 
@@ -2661,7 +2661,7 @@ There is a set of methods to check whether the module contains intermediate (PTX
 
 
 
-:rettype: object
+:rtype: object
 ````
 
 
@@ -2672,7 +2672,7 @@ There is a set of methods to check whether the module contains intermediate (PTX
 
 
 
-:rettype: object
+:rtype: object
 ````
 
 
@@ -2691,7 +2691,7 @@ Matrix is called continuous if its elements are stored continuously, that is, wi
 :type type: int
 :param arr: Destination matrix. This parameter changes only if it has a proper type and area ($\texttt{rows} \times \texttt{cols}$ ). 
 :type arr: cv2.typing.MatLike | None
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -2720,7 +2720,7 @@ Overload for generation of bindings only, not exported or intended for use inter
 :type step: int
 :param size: 2D array size: Size(cols, rows). In the Size() constructor, the number of rows and the number of columns go in the reverse order.
 :type size: 
-:rettype: GpuMat
+:rtype: GpuMat
 ````
 
 
@@ -2739,7 +2739,7 @@ The function does not reallocate memory if the matrix has proper attributes alre
 :type type: int
 :param arr: Destination matrix.
 :type arr: cv2.typing.MatLike | None
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -2762,7 +2762,7 @@ This function expected to be applied to grayscale images. For colored images loo
 :type block_size: int
 :param stream: Stream for the asynchronous invocations.
 :type stream: Stream
-:rettype: GpuMat
+:rtype: GpuMat
 ````
 
 
@@ -2787,7 +2787,7 @@ The function converts image to CIELAB colorspace and then separately denoise L a
 :type block_size: int
 :param stream: Stream for the asynchronous invocations.
 :type stream: Stream
-:rettype: GpuMat
+:rtype: GpuMat
 ````
 
 
@@ -2798,7 +2798,7 @@ Returns the number of installed CUDA-enabled devices.
 Use this function before any other CUDA functions calls. If OpenCV is compiled without CUDA support, this function returns 0. If the CUDA driver is not installed, or is incompatible, this function returns -1. 
 
 
-:rettype: int
+:rtype: int
 ````
 
 
@@ -2809,7 +2809,7 @@ Returns the current device index set by cuda::setDevice or initialized by defaul
 
 
 
-:rettype: int
+:rtype: int
 ````
 
 
@@ -2834,7 +2834,7 @@ Performs pure non local means denoising without any simplification, and thus it 
 :type borderMode: int
 :param stream: Stream for the asynchronous version.
 :type stream: Stream
-:rettype: GpuMat
+:rtype: GpuMat
 ````
 
 
@@ -2847,7 +2847,7 @@ Performs pure non local means denoising without any simplification, and thus it 
 
 :param device: 
 :type device: int
-:rettype: None
+:rtype: None
 ````
 
 
@@ -2860,7 +2860,7 @@ Performs pure non local means denoising without any simplification, and thus it 
 
 :param device: 
 :type device: int
-:rettype: None
+:rtype: None
 ````
 
 
@@ -2873,7 +2873,7 @@ Page-locks the memory of matrix and maps it for the device(s).
 
 :param m: Input matrix.
 :type m: cv2.typing.MatLike
-:rettype: None
+:rtype: None
 ````
 
 
@@ -2884,7 +2884,7 @@ Explicitly destroys and cleans up all resources associated with the current devi
 Any subsequent API call to this device will reinitialize the device. 
 
 
-:rettype: None
+:rtype: None
 ````
 
 
@@ -2901,7 +2901,7 @@ Any subsequent API call to this device will reinitialize the device.
 :type stackSize: int
 :param stackCount: 
 :type stackCount: int
-:rettype: None
+:rtype: None
 ````
 
 
@@ -2914,7 +2914,7 @@ Any subsequent API call to this device will reinitialize the device.
 
 :param on: 
 :type on: bool
-:rettype: None
+:rtype: None
 ````
 
 
@@ -2927,7 +2927,7 @@ If the call of this function is omitted, a default device is initialized at the 
 
 :param device: System index of a CUDA device starting with 0.
 :type device: int
-:rettype: None
+:rtype: None
 ````
 
 
@@ -2940,7 +2940,7 @@ Unmaps the memory of matrix and makes it pageable again.
 
 :param m: Input matrix.
 :type m: cv2.typing.MatLike
-:rettype: None
+:rtype: None
 ````
 
 
@@ -2956,7 +2956,7 @@ Overload for generation of bindings only, not exported or intended for use inter
 
 :param cudaStreamMemoryAddress: Memory address stored in a CUDA Runtime API stream pointer (cudaStream_t). The created Stream object does not perform any allocation or deallocation and simply wraps existing raw CUDA Runtime API stream pointer.
 :type cudaStreamMemoryAddress: int
-:rettype: Stream
+:rtype: Stream
 ````
 
 

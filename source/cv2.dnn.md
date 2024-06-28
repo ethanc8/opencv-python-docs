@@ -225,7 +225,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 :type model: str
 :param config: 
 :type config: str
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} __init__(self, network: Net)
@@ -239,7 +239,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 :type self: 
 :param network: 
 :type network: Net
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} classify(frame) -> classId, conf
@@ -253,7 +253,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 :type self: 
 :param frame: 
 :type frame: cv2.typing.MatLike
-:rettype: tuple[int, float]
+:rtype: tuple[int, float]
 ````
 
 ````{py:method} classify(frame) -> classId, conf
@@ -267,20 +267,20 @@ Initialize self.  See help(type(self)) for accurate signature.
 :type self: 
 :param frame: 
 :type frame: cv2.UMat
-:rettype: tuple[int, float]
+:rtype: tuple[int, float]
 ````
 
 ````{py:method} setEnableSoftmaxPostProcessing(enable) -> retval
 Set enable/disable softmax post processing option.
 
-If this option is true, softmax is applied after forward inference within the classify() function to convert the confidences range to [0.0-1.0]. This function allows you to toggle this behavior. Please turn true when not contain softmax layer in model. @param[in] enable Set enable softmax post processing within the classify() function. 
+If this option is true, softmax is applied after forward inference within the classify() function to convert the confidences range to [0.0-1.0]. This function allows you to toggle this behavior. Please turn true when not contain softmax layer in model. 
 
 
 :param self: 
 :type self: 
-:param enable: 
+:param enable: [in] Set enable softmax post processing within the classify() function.
 :type enable: bool
-:rettype: ClassificationModel
+:rtype: ClassificationModel
 ````
 
 ````{py:method} getEnableSoftmaxPostProcessing() -> retval
@@ -291,7 +291,7 @@ This option defaults to false, softmax post processing is not applied within the
 
 :param self: 
 :type self: 
-:rettype: bool
+:rtype: bool
 ````
 
 
@@ -316,7 +316,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 :type model: str
 :param config: 
 :type config: str
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} __init__(self, network: Net)
@@ -330,56 +330,68 @@ Initialize self.  See help(type(self)) for accurate signature.
 :type self: 
 :param network: 
 :type network: Net
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} detect(frame[, confThreshold[, nmsThreshold]]) -> classIds, confidences, boxes
 
-Given the @p input frame, create input blob, run net and return result detections.@param[in]  frame  The input image. @param[out] classIds Class indexes in result detection. @param[out] confidences A set of corresponding confidences. @param[out] boxes A set of bounding boxes. @param[in] confThreshold A threshold used to filter boxes by confidences. @param[in] nmsThreshold A threshold used in non maximum suppression. 
+Given the @p input frame, create input blob, run net and return result detections.
 
 
 
 
 :param self: 
 :type self: 
-:param frame: 
+:param frame: [in] The input image.
 :type frame: cv2.typing.MatLike
-:param confThreshold: 
+:param confThreshold: [in] A threshold used to filter boxes by confidences.
 :type confThreshold: float
-:param nmsThreshold: 
+:param nmsThreshold: [in] A threshold used in non maximum suppression.
 :type nmsThreshold: float
-:rettype: tuple[_typing.Sequence[int], _typing.Sequence[float], _typing.Sequence[cv2.typing.Rect]]
+:param classIds: [out] Class indexes in result detection.
+:type classIds: 
+:param confidences: [out] A set of corresponding confidences.
+:type confidences: 
+:param boxes: [out] A set of bounding boxes.
+:type boxes: 
+:rtype: tuple[_typing.Sequence[int], _typing.Sequence[float], _typing.Sequence[cv2.typing.Rect]]
 ````
 
 ````{py:method} detect(frame[, confThreshold[, nmsThreshold]]) -> classIds, confidences, boxes
 
-Given the @p input frame, create input blob, run net and return result detections.@param[in]  frame  The input image. @param[out] classIds Class indexes in result detection. @param[out] confidences A set of corresponding confidences. @param[out] boxes A set of bounding boxes. @param[in] confThreshold A threshold used to filter boxes by confidences. @param[in] nmsThreshold A threshold used in non maximum suppression. 
+Given the @p input frame, create input blob, run net and return result detections.
 
 
 
 
 :param self: 
 :type self: 
-:param frame: 
+:param frame: [in] The input image.
 :type frame: cv2.UMat
-:param confThreshold: 
+:param confThreshold: [in] A threshold used to filter boxes by confidences.
 :type confThreshold: float
-:param nmsThreshold: 
+:param nmsThreshold: [in] A threshold used in non maximum suppression.
 :type nmsThreshold: float
-:rettype: tuple[_typing.Sequence[int], _typing.Sequence[float], _typing.Sequence[cv2.typing.Rect]]
+:param classIds: [out] Class indexes in result detection.
+:type classIds: 
+:param confidences: [out] A set of corresponding confidences.
+:type confidences: 
+:param boxes: [out] A set of bounding boxes.
+:type boxes: 
+:rtype: tuple[_typing.Sequence[int], _typing.Sequence[float], _typing.Sequence[cv2.typing.Rect]]
 ````
 
 ````{py:method} setNmsAcrossClasses(value) -> retval
-nmsAcrossClasses defaults to false,such that when non max suppression is used during the detect() function, it will do so per-class. This function allows you to toggle this behaviour. @param[in] value The new value for nmsAcrossClasses 
+nmsAcrossClasses defaults to false,such that when non max suppression is used during the detect() function, it will do so per-class. This function allows you to toggle this behaviour. 
 
 
 
 
 :param self: 
 :type self: 
-:param value: 
+:param value: [in] The new value for nmsAcrossClasses
 :type value: bool
-:rettype: DetectionModel
+:rtype: DetectionModel
 ````
 
 ````{py:method} getNmsAcrossClasses() -> retval
@@ -390,7 +402,7 @@ Getter for nmsAcrossClasses. This variable defaults to false,such that when non 
 
 :param self: 
 :type self: 
-:rettype: bool
+:rtype: bool
 ````
 
 
@@ -413,7 +425,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 :type self: 
 :param i: 
 :type i: int
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} __init__(self, p: float)
@@ -427,7 +439,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 :type self: 
 :param p: 
 :type p: float
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} __init__(self, s: str)
@@ -441,7 +453,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 :type self: 
 :param s: 
 :type s: str
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} isInt() -> retval
@@ -452,7 +464,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 
 :param self: 
 :type self: 
-:rettype: bool
+:rtype: bool
 ````
 
 ````{py:method} isString() -> retval
@@ -463,7 +475,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 
 :param self: 
 :type self: 
-:rettype: bool
+:rtype: bool
 ````
 
 ````{py:method} isReal() -> retval
@@ -474,7 +486,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 
 :param self: 
 :type self: 
-:rettype: bool
+:rtype: bool
 ````
 
 ````{py:method} getIntValue([, idx]) -> retval
@@ -487,7 +499,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 :type self: 
 :param idx: 
 :type idx: int
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} getRealValue([, idx]) -> retval
@@ -500,7 +512,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 :type self: 
 :param idx: 
 :type idx: int
-:rettype: float
+:rtype: float
 ````
 
 ````{py:method} getStringValue([, idx]) -> retval
@@ -513,7 +525,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 :type self: 
 :param idx: 
 :type idx: int
-:rettype: str
+:rtype: str
 ````
 
 
@@ -534,7 +546,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 
 :param self: 
 :type self: 
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} __init__(self, scalefactor: cv2.typing.Scalar, size: cv2.typing.Size=..., mean: cv2.typing.Scalar=..., swapRB: bool=..., ddepth: int=..., datalayout: DataLayout=..., mode: ImagePaddingMode=..., borderValue: cv2.typing.Scalar=...)
@@ -562,7 +574,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 :type mode: ImagePaddingMode
 :param borderValue: 
 :type borderValue: cv2.typing.Scalar
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} blobRectToImageRect(rBlob, size) -> retval
@@ -575,9 +587,10 @@ Get rectangle coordinates in original image system from rectangle in blob coordi
 :type self: 
 :param rBlob: rect in blob coordinates.
 :type rBlob: cv2.typing.Rect
-:param size: original input image size.@returns rectangle in original image coordinates. 
+:param size: original input image size.
 :type size: cv2.typing.Size
-:rettype: cv2.typing.Rect
+:return: rectangle in original image coordinates.
+:rtype: cv2.typing.Rect
 ````
 
 ````{py:method} blobRectsToImageRects(rBlob, size) -> rImg
@@ -594,7 +607,7 @@ Get rectangle coordinates in original image system from rectangle in blob coordi
 :type size: cv2.typing.Size
 :param rImg: result rect in image coordinates.
 :type rImg: 
-:rettype: _typing.Sequence[cv2.typing.Rect]
+:rtype: _typing.Sequence[cv2.typing.Rect]
 ````
 
 ```{py:attribute} scalefactor
@@ -651,7 +664,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 :type model: str
 :param config: 
 :type config: str
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} __init__(self, network: Net)
@@ -665,39 +678,41 @@ Initialize self.  See help(type(self)) for accurate signature.
 :type self: 
 :param network: 
 :type network: Net
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} estimate(frame[, thresh]) -> retval
 
-Given the @p input frame, create input blob, run net@param[in]  frame  The input image. 
+Given the @p input frame, create input blob, run net
 
 
 
 
 :param self: 
 :type self: 
-:param frame: 
+:param frame: [in] The input image.
 :type frame: cv2.typing.MatLike
-:param thresh: minimum confidence threshold to select a keypoint@returns a vector holding the x and y coordinates of each detected keypoint 
+:param thresh: minimum confidence threshold to select a keypoint
 :type thresh: float
-:rettype: _typing.Sequence[cv2.typing.Point2f]
+:return: a vector holding the x and y coordinates of each detected keypoint
+:rtype: _typing.Sequence[cv2.typing.Point2f]
 ````
 
 ````{py:method} estimate(frame[, thresh]) -> retval
 
-Given the @p input frame, create input blob, run net@param[in]  frame  The input image. 
+Given the @p input frame, create input blob, run net
 
 
 
 
 :param self: 
 :type self: 
-:param frame: 
+:param frame: [in] The input image.
 :type frame: cv2.UMat
-:param thresh: minimum confidence threshold to select a keypoint@returns a vector holding the x and y coordinates of each detected keypoint 
+:param thresh: minimum confidence threshold to select a keypoint
 :type thresh: float
-:rettype: _typing.Sequence[cv2.typing.Point2f]
+:return: a vector holding the x and y coordinates of each detected keypoint
+:rtype: _typing.Sequence[cv2.typing.Point2f]
 ````
 
 
@@ -718,7 +733,7 @@ Given the @p input frame, create input blob, run net@param[in]  frame  The input
 
 :param self: 
 :type self: 
-:rettype: str
+:rtype: str
 ````
 
 ````{py:method} type
@@ -730,7 +745,7 @@ Given the @p input frame, create input blob, run net@param[in]  frame  The input
 
 :param self: 
 :type self: 
-:rettype: str
+:rtype: str
 ````
 
 ````{py:method} preferableTarget
@@ -742,39 +757,39 @@ Given the @p input frame, create input blob, run net@param[in]  frame  The input
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} finalize(inputs[, outputs]) -> outputs
 
-Computes and sets internal parameters according to inputs, outputs and blobs.@param[in]  inputs  vector of already allocated input blobs @param[out] outputs vector of already allocated output blobs 
+Computes and sets internal parameters according to inputs, outputs and blobs.
 
 If this method is called after network has allocated all memory for input and output blobs and before inferencing. 
 
 
 :param self: 
 :type self: 
-:param inputs: 
+:param inputs: [in] vector of already allocated input blobs
 :type inputs: _typing.Sequence[cv2.typing.MatLike]
-:param outputs: 
+:param outputs: [out] vector of already allocated output blobs
 :type outputs: _typing.Sequence[cv2.typing.MatLike] | None
-:rettype: _typing.Sequence[cv2.typing.MatLike]
+:rtype: _typing.Sequence[cv2.typing.MatLike]
 ````
 
 ````{py:method} finalize(inputs[, outputs]) -> outputs
 
-Computes and sets internal parameters according to inputs, outputs and blobs.@param[in]  inputs  vector of already allocated input blobs @param[out] outputs vector of already allocated output blobs 
+Computes and sets internal parameters according to inputs, outputs and blobs.
 
 If this method is called after network has allocated all memory for input and output blobs and before inferencing. 
 
 
 :param self: 
 :type self: 
-:param inputs: 
+:param inputs: [in] vector of already allocated input blobs
 :type inputs: _typing.Sequence[cv2.UMat]
-:param outputs: 
+:param outputs: [out] vector of already allocated output blobs
 :type outputs: _typing.Sequence[cv2.UMat] | None
-:rettype: _typing.Sequence[cv2.UMat]
+:rtype: _typing.Sequence[cv2.UMat]
 ````
 
 ````{py:method} run(inputs, internals[, outputs]) -> outputs, internals
@@ -794,7 +809,7 @@ This method will be removed in the future release.
 :type internals: _typing.Sequence[cv2.typing.MatLike]
 :param outputs: 
 :type outputs: _typing.Sequence[cv2.typing.MatLike] | None
-:rettype: tuple[_typing.Sequence[cv2.typing.MatLike], _typing.Sequence[cv2.typing.MatLike]]
+:rtype: tuple[_typing.Sequence[cv2.typing.MatLike], _typing.Sequence[cv2.typing.MatLike]]
 ````
 
 ````{py:method} outputNameToIndex(outputName) -> retval
@@ -807,7 +822,7 @@ Returns index of output blob in output array.@see inputNameToIndex()
 :type self: 
 :param outputName: 
 :type outputName: str
-:rettype: int
+:rtype: int
 ````
 
 ```{py:attribute} blobs
@@ -836,7 +851,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 :type model: str
 :param config: 
 :type config: str
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} __init__(self, network: Net)
@@ -850,14 +865,14 @@ Initialize self.  See help(type(self)) for accurate signature.
 :type self: 
 :param network: 
 :type network: Net
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} setInputSize(size) -> retval
 
-Set input size for frame.@param[in] size New input size. 
+Set input size for frame.
 
-setInputSize(width, height) -> retval @overload @param[in] width New input width. @param[in] height New input height. 
+setInputSize(width, height) -> retval @overload 
 ```{note}
 If shape of the new blob less than 0, then frame size not change.
 ```
@@ -865,16 +880,20 @@ If shape of the new blob less than 0, then frame size not change.
 
 :param self: 
 :type self: 
-:param size: 
+:param size: [in] New input size.
 :type size: cv2.typing.Size
-:rettype: Model
+:param width: [in] New input width.
+:type width: 
+:param height: [in] New input height.
+:type height: 
+:rtype: Model
 ````
 
 ````{py:method} setInputSize(size) -> retval
 
-Set input size for frame.@param[in] size New input size. 
+Set input size for frame.
 
-setInputSize(width, height) -> retval @overload @param[in] width New input width. @param[in] height New input height. 
+setInputSize(width, height) -> retval @overload 
 ```{note}
 If shape of the new blob less than 0, then frame size not change.
 ```
@@ -882,116 +901,118 @@ If shape of the new blob less than 0, then frame size not change.
 
 :param self: 
 :type self: 
-:param width: 
+:param width: [in] New input width.
 :type width: int
-:param height: 
+:param height: [in] New input height.
 :type height: int
-:rettype: Model
+:param size: [in] New input size.
+:type size: 
+:rtype: Model
 ````
 
 ````{py:method} predict(frame[, outs]) -> outs
 
-Given the @p input frame, create input blob, run net and return the output @p blobs.@param[in]  frame  The input image. @param[out] outs Allocated output blobs, which will store results of the computation. 
+Given the @p input frame, create input blob, run net and return the output @p blobs.
 
 
 
 
 :param self: 
 :type self: 
-:param frame: 
+:param frame: [in] The input image.
 :type frame: cv2.typing.MatLike
-:param outs: 
+:param outs: [out] Allocated output blobs, which will store results of the computation.
 :type outs: _typing.Sequence[cv2.typing.MatLike] | None
-:rettype: _typing.Sequence[cv2.typing.MatLike]
+:rtype: _typing.Sequence[cv2.typing.MatLike]
 ````
 
 ````{py:method} predict(frame[, outs]) -> outs
 
-Given the @p input frame, create input blob, run net and return the output @p blobs.@param[in]  frame  The input image. @param[out] outs Allocated output blobs, which will store results of the computation. 
+Given the @p input frame, create input blob, run net and return the output @p blobs.
 
 
 
 
 :param self: 
 :type self: 
-:param frame: 
+:param frame: [in] The input image.
 :type frame: cv2.UMat
-:param outs: 
+:param outs: [out] Allocated output blobs, which will store results of the computation.
 :type outs: _typing.Sequence[cv2.UMat] | None
-:rettype: _typing.Sequence[cv2.UMat]
+:rtype: _typing.Sequence[cv2.UMat]
 ````
 
 ````{py:method} setInputMean(mean) -> retval
-Set mean value for frame.@param[in] mean Scalar with mean values which are subtracted from channels. 
+Set mean value for frame.
 
 
 
 
 :param self: 
 :type self: 
-:param mean: 
+:param mean: [in] Scalar with mean values which are subtracted from channels.
 :type mean: cv2.typing.Scalar
-:rettype: Model
+:rtype: Model
 ````
 
 ````{py:method} setInputScale(scale) -> retval
-Set scalefactor value for frame.@param[in] scale Multiplier for frame values. 
+Set scalefactor value for frame.
 
 
 
 
 :param self: 
 :type self: 
-:param scale: 
+:param scale: [in] Multiplier for frame values.
 :type scale: cv2.typing.Scalar
-:rettype: Model
+:rtype: Model
 ````
 
 ````{py:method} setInputCrop(crop) -> retval
-Set flag crop for frame.@param[in] crop Flag which indicates whether image will be cropped after resize or not. 
+Set flag crop for frame.
 
 
 
 
 :param self: 
 :type self: 
-:param crop: 
+:param crop: [in] Flag which indicates whether image will be cropped after resize or not.
 :type crop: bool
-:rettype: Model
+:rtype: Model
 ````
 
 ````{py:method} setInputSwapRB(swapRB) -> retval
-Set flag swapRB for frame.@param[in] swapRB Flag which indicates that swap first and last channels. 
+Set flag swapRB for frame.
 
 
 
 
 :param self: 
 :type self: 
-:param swapRB: 
+:param swapRB: [in] Flag which indicates that swap first and last channels.
 :type swapRB: bool
-:rettype: Model
+:rtype: Model
 ````
 
 ````{py:method} setInputParams([, scale[, size[, mean[, swapRB[, crop]]]]]) -> None
-Set preprocessing parameters for frame.@param[in] size New input size. @param[in] mean Scalar with mean values which are subtracted from channels. @param[in] scale Multiplier for frame values. @param[in] swapRB Flag which indicates that swap first and last channels. @param[in] crop Flag which indicates whether image will be cropped after resize or not. blob(n, c, y, x) = scale * resize( frame(y, x, c) ) - mean(c) ) 
+Set preprocessing parameters for frame.
 
 
 
 
 :param self: 
 :type self: 
-:param scale: 
+:param scale: [in] Multiplier for frame values.
 :type scale: float
-:param size: 
+:param size: [in] New input size.
 :type size: cv2.typing.Size
-:param mean: 
+:param mean: [in] Scalar with mean values which are subtracted from channels.
 :type mean: cv2.typing.Scalar
-:param swapRB: 
+:param swapRB: [in] Flag which indicates that swap first and last channels.
 :type swapRB: bool
-:param crop: 
+:param crop: [in] Flag which indicates whether image will be cropped after resize or not.blob(n, c, y, x) = scale * resize( frame(y, x, c) ) - mean(c) ) 
 :type crop: bool
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} setPreferableBackend(backendId) -> retval
@@ -1004,7 +1025,7 @@ Set preprocessing parameters for frame.@param[in] size New input size. @param[in
 :type self: 
 :param backendId: 
 :type backendId: Backend
-:rettype: Model
+:rtype: Model
 ````
 
 ````{py:method} setPreferableTarget(targetId) -> retval
@@ -1017,7 +1038,7 @@ Set preprocessing parameters for frame.@param[in] size New input size. @param[in
 :type self: 
 :param targetId: 
 :type targetId: Target
-:rettype: Model
+:rtype: Model
 ````
 
 ````{py:method} enableWinograd(useWinograd) -> retval
@@ -1030,7 +1051,7 @@ Set preprocessing parameters for frame.@param[in] size New input size. @param[in
 :type self: 
 :param useWinograd: 
 :type useWinograd: bool
-:rettype: Model
+:rtype: Model
 ````
 
 
@@ -1044,34 +1065,44 @@ Set preprocessing parameters for frame.@param[in] size New input size. @param[in
 
 ````{py:method} readFromModelOptimizer(xml, bin) -> retval
 :classmethod:
-Create a network from Intel's Model Optimizer in-memory buffers with intermediate representation (IR).@param[in] bufferModelConfig buffer with model's configuration. @param[in] bufferWeights buffer with model's trained weights. @returns Net object. 
+Create a network from Intel's Model Optimizer in-memory buffers with intermediate representation (IR).
 
 readFromModelOptimizer(bufferModelConfig, bufferWeights) -> retval 
 
 
 :param cls: 
 :type cls: 
-:param xml: 
+:param xml: [in] XML configuration file with network's topology.
 :type xml: str
-:param bin: 
+:param bin: [in] Binary file with trained weights.Networks imported from Intel's Model Optimizer are launched in Intel's Inference Engine backend. 
 :type bin: str
-:rettype: Net
+:param bufferModelConfig: [in] buffer with model's configuration.
+:type bufferModelConfig: 
+:param bufferWeights: [in] buffer with model's trained weights.
+:type bufferWeights: 
+:return: Net object.
+:rtype: Net
 ````
 
 ````{py:method} readFromModelOptimizer(xml, bin) -> retval
 :classmethod:
-Create a network from Intel's Model Optimizer in-memory buffers with intermediate representation (IR).@param[in] bufferModelConfig buffer with model's configuration. @param[in] bufferWeights buffer with model's trained weights. @returns Net object. 
+Create a network from Intel's Model Optimizer in-memory buffers with intermediate representation (IR).
 
 readFromModelOptimizer(bufferModelConfig, bufferWeights) -> retval 
 
 
 :param cls: 
 :type cls: 
-:param bufferModelConfig: 
+:param bufferModelConfig: [in] buffer with model's configuration.
 :type bufferModelConfig: numpy.ndarray[_typing.Any, numpy.dtype[numpy.uint8]]
-:param bufferWeights: 
+:param bufferWeights: [in] buffer with model's trained weights.
 :type bufferWeights: numpy.ndarray[_typing.Any, numpy.dtype[numpy.uint8]]
-:rettype: Net
+:param xml: [in] XML configuration file with network's topology.
+:type xml: 
+:param bin: [in] Binary file with trained weights.Networks imported from Intel's Model Optimizer are launched in Intel's Inference Engine backend. 
+:type bin: 
+:return: Net object.
+:rtype: Net
 ````
 
 ````{py:method} getLayer(layerId) -> retval
@@ -1088,7 +1119,7 @@ Use int getLayerId(const String &layer)
 :type self: 
 :param layerId: 
 :type layerId: int
-:rettype: Layer
+:rtype: Layer
 ````
 
 ````{py:method} getLayer(layerId) -> retval
@@ -1105,7 +1136,7 @@ Use int getLayerId(const String &layer)
 :type self: 
 :param layerName: 
 :type layerName: str
-:rettype: Layer
+:rtype: Layer
 ````
 
 ````{py:method} getLayer(layerId) -> retval
@@ -1122,7 +1153,7 @@ Use int getLayerId(const String &layer)
 :type self: 
 :param layerId: 
 :type layerId: cv2.typing.LayerId
-:rettype: Layer
+:rtype: Layer
 ````
 
 ````{py:method} forward([, outputName]) -> retval
@@ -1141,7 +1172,7 @@ forward([, outputBlobs[, outputName]]) -> outputBlobs forward(outBlobNames[, out
 :param outBlobNames: names for layers which outputs are needed to get
 :type outBlobNames: 
 :return: blob for first output of specified layer.@details By default runs forward pass for the whole network. 
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 ````{py:method} forward([, outputName]) -> retval
@@ -1160,7 +1191,7 @@ forward([, outputBlobs[, outputName]]) -> outputBlobs forward(outBlobNames[, out
 :param outBlobNames: names for layers which outputs are needed to get
 :type outBlobNames: 
 :return: blob for first output of specified layer.@details By default runs forward pass for the whole network. 
-:rettype: _typing.Sequence[cv2.typing.MatLike]
+:rtype: _typing.Sequence[cv2.typing.MatLike]
 ````
 
 ````{py:method} forward([, outputName]) -> retval
@@ -1179,7 +1210,7 @@ forward([, outputBlobs[, outputName]]) -> outputBlobs forward(outBlobNames[, out
 :param outBlobNames: names for layers which outputs are needed to get
 :type outBlobNames: 
 :return: blob for first output of specified layer.@details By default runs forward pass for the whole network. 
-:rettype: _typing.Sequence[cv2.UMat]
+:rtype: _typing.Sequence[cv2.UMat]
 ````
 
 ````{py:method} forward([, outputName]) -> retval
@@ -1198,7 +1229,7 @@ forward([, outputBlobs[, outputName]]) -> outputBlobs forward(outBlobNames[, out
 :param outputName: name for layer which output is needed to get@details If @p outputName is empty, runs forward pass for the whole network. 
 :type outputName: 
 :return: blob for first output of specified layer.@details By default runs forward pass for the whole network. 
-:rettype: _typing.Sequence[cv2.typing.MatLike]
+:rtype: _typing.Sequence[cv2.typing.MatLike]
 ````
 
 ````{py:method} forward([, outputName]) -> retval
@@ -1217,7 +1248,7 @@ forward([, outputBlobs[, outputName]]) -> outputBlobs forward(outBlobNames[, out
 :param outputName: name for layer which output is needed to get@details If @p outputName is empty, runs forward pass for the whole network. 
 :type outputName: 
 :return: blob for first output of specified layer.@details By default runs forward pass for the whole network. 
-:rettype: _typing.Sequence[cv2.UMat]
+:rtype: _typing.Sequence[cv2.UMat]
 ````
 
 ````{py:method} quantize(calibData, inputsDtype, outputsDtype[, perChannel]) -> retval
@@ -1237,7 +1268,7 @@ Returns a quantized Net from a floating-point Net.
 :type outputsDtype: int
 :param perChannel: Quantization granularity of quantized Net. The default is true, that means quantize modelin per-channel way (channel-wise). Set it false to quantize model in per-tensor way (or tensor-wise). 
 :type perChannel: bool
-:rettype: Net
+:rtype: Net
 ````
 
 ````{py:method} quantize(calibData, inputsDtype, outputsDtype[, perChannel]) -> retval
@@ -1257,7 +1288,7 @@ Returns a quantized Net from a floating-point Net.
 :type outputsDtype: int
 :param perChannel: Quantization granularity of quantized Net. The default is true, that means quantize modelin per-channel way (channel-wise). Set it false to quantize model in per-tensor way (or tensor-wise). 
 :type perChannel: bool
-:rettype: Net
+:rtype: Net
 ````
 
 ````{py:method} setInput(blob[, name[, scalefactor[, mean]]]) -> None
@@ -1277,7 +1308,7 @@ If scale or mean values are specified, a final input blob is computed as: \f[inp
 :type scalefactor: float
 :param mean: An optional mean subtraction values.@see connect(String, String) to know format of the descriptor. 
 :type mean: cv2.typing.Scalar
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} setInput(blob[, name[, scalefactor[, mean]]]) -> None
@@ -1297,7 +1328,7 @@ If scale or mean values are specified, a final input blob is computed as: \f[inp
 :type scalefactor: float
 :param mean: An optional mean subtraction values.@see connect(String, String) to know format of the descriptor. 
 :type mean: cv2.typing.Scalar
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} setParam(layer, numParam, blob) -> None
@@ -1318,7 +1349,7 @@ If shape of the new blob differs from the previous shape,then the following forw
 :type numParam: int
 :param blob: the new value.@see Layer::blobs 
 :type blob: cv2.typing.MatLike
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} setParam(layer, numParam, blob) -> None
@@ -1341,7 +1372,7 @@ If shape of the new blob differs from the previous shape,then the following forw
 :type blob: cv2.typing.MatLike
 :param layer: name or id of the layer.
 :type layer: 
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getParam(layer[, numParam]) -> retval
@@ -1357,7 +1388,7 @@ getParam(layerName[, numParam]) -> retval
 :type layer: int
 :param numParam: index of the layer parameter in the Layer::blobs array.@see Layer::blobs 
 :type numParam: int
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 ````{py:method} getParam(layer[, numParam]) -> retval
@@ -1375,7 +1406,7 @@ getParam(layerName[, numParam]) -> retval
 :type numParam: int
 :param layer: name or id of the layer.
 :type layer: 
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 ````{py:method} getLayersShapes(netInputShapes) -> layersIds, inLayersShapes, outLayersShapes
@@ -1395,7 +1426,7 @@ getLayersShapes(netInputShape) -> layersIds, inLayersShapes, outLayersShapes @ov
 :type inLayersShapes: 
 :param outLayersShapes: output parameter for output layers shapes;order is the same as in layersIds 
 :type outLayersShapes: 
-:rettype: tuple[_typing.Sequence[int], _typing.Sequence[_typing.Sequence[cv2.typing.MatShape]], _typing.Sequence[_typing.Sequence[cv2.typing.MatShape]]]
+:rtype: tuple[_typing.Sequence[int], _typing.Sequence[_typing.Sequence[cv2.typing.MatShape]], _typing.Sequence[_typing.Sequence[cv2.typing.MatShape]]]
 ````
 
 ````{py:method} getLayersShapes(netInputShapes) -> layersIds, inLayersShapes, outLayersShapes
@@ -1417,7 +1448,7 @@ getLayersShapes(netInputShape) -> layersIds, inLayersShapes, outLayersShapes @ov
 :type inLayersShapes: 
 :param outLayersShapes: output parameter for output layers shapes;order is the same as in layersIds 
 :type outLayersShapes: 
-:rettype: tuple[_typing.Sequence[int], _typing.Sequence[_typing.Sequence[cv2.typing.MatShape]], _typing.Sequence[_typing.Sequence[cv2.typing.MatShape]]]
+:rtype: tuple[_typing.Sequence[int], _typing.Sequence[_typing.Sequence[cv2.typing.MatShape]], _typing.Sequence[_typing.Sequence[cv2.typing.MatShape]]]
 ````
 
 ````{py:method} getFLOPS(netInputShapes) -> retval
@@ -1429,9 +1460,10 @@ getFLOPS(netInputShape) -> retval @overload getFLOPS(layerId, netInputShapes) ->
 
 :param self: 
 :type self: 
-:param netInputShapes: vector of shapes for all net inputs.@returns computed FLOP. 
+:param netInputShapes: vector of shapes for all net inputs.
 :type netInputShapes: _typing.Sequence[cv2.typing.MatShape]
-:rettype: int
+:return: computed FLOP.
+:rtype: int
 ````
 
 ````{py:method} getFLOPS(netInputShapes) -> retval
@@ -1445,9 +1477,10 @@ getFLOPS(netInputShape) -> retval @overload getFLOPS(layerId, netInputShapes) ->
 :type self: 
 :param netInputShape: 
 :type netInputShape: cv2.typing.MatShape
-:param netInputShapes: vector of shapes for all net inputs.@returns computed FLOP. 
+:param netInputShapes: vector of shapes for all net inputs.
 :type netInputShapes: 
-:rettype: int
+:return: computed FLOP.
+:rtype: int
 ````
 
 ````{py:method} getFLOPS(netInputShapes) -> retval
@@ -1461,9 +1494,10 @@ getFLOPS(netInputShape) -> retval @overload getFLOPS(layerId, netInputShapes) ->
 :type self: 
 :param layerId: 
 :type layerId: int
-:param netInputShapes: vector of shapes for all net inputs.@returns computed FLOP. 
+:param netInputShapes: vector of shapes for all net inputs.
 :type netInputShapes: _typing.Sequence[cv2.typing.MatShape]
-:rettype: int
+:return: computed FLOP.
+:rtype: int
 ````
 
 ````{py:method} getFLOPS(netInputShapes) -> retval
@@ -1479,9 +1513,10 @@ getFLOPS(netInputShape) -> retval @overload getFLOPS(layerId, netInputShapes) ->
 :type layerId: int
 :param netInputShape: 
 :type netInputShape: cv2.typing.MatShape
-:param netInputShapes: vector of shapes for all net inputs.@returns computed FLOP. 
+:param netInputShapes: vector of shapes for all net inputs.
 :type netInputShapes: 
-:rettype: int
+:return: computed FLOP.
+:rtype: int
 ````
 
 ````{py:method} getMemoryConsumption(netInputShape) -> weights, blobs
@@ -1495,7 +1530,7 @@ getFLOPS(netInputShape) -> retval @overload getFLOPS(layerId, netInputShapes) ->
 :type self: 
 :param netInputShape: 
 :type netInputShape: cv2.typing.MatShape
-:rettype: tuple[int, int]
+:rtype: tuple[int, int]
 ````
 
 ````{py:method} getMemoryConsumption(netInputShape) -> weights, blobs
@@ -1511,7 +1546,7 @@ getFLOPS(netInputShape) -> retval @overload getFLOPS(layerId, netInputShapes) ->
 :type layerId: int
 :param netInputShapes: 
 :type netInputShapes: _typing.Sequence[cv2.typing.MatShape]
-:rettype: tuple[int, int]
+:rtype: tuple[int, int]
 ````
 
 ````{py:method} getMemoryConsumption(netInputShape) -> weights, blobs
@@ -1527,7 +1562,7 @@ getFLOPS(netInputShape) -> retval @overload getFLOPS(layerId, netInputShapes) ->
 :type layerId: int
 :param netInputShape: 
 :type netInputShape: cv2.typing.MatShape
-:rettype: tuple[int, int]
+:rtype: tuple[int, int]
 ````
 
 ````{py:method} __init__(self)
@@ -1538,7 +1573,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 
 :param self: 
 :type self: 
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} empty() -> retval
@@ -1549,18 +1584,19 @@ Returns true if there are no layers in the network.
 
 :param self: 
 :type self: 
-:rettype: bool
+:rtype: bool
 ````
 
 ````{py:method} dump() -> retval
-Dump net to String@returns String with structure, hyperparameters, backend, target and fusion Call method after setInput(). To see correct backend, target and fusion run after forward(). 
+Dump net to String
 
 
 
 
 :param self: 
 :type self: 
-:rettype: str
+:return: String with structure, hyperparameters, backend, target and fusionCall method after setInput(). To see correct backend, target and fusion run after forward(). 
+:rtype: str
 ````
 
 ````{py:method} dumpToFile(path) -> None
@@ -1573,11 +1609,11 @@ Dump net structure, hyperparameters, backend, target and fusion to dot file
 :type self: 
 :param path: path to output file with .dot extension@see dump() 
 :type path: str
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getLayerId(layer) -> retval
-Converts string name of the layer to the integer identifier.@returns id of the layer, or -1 if the layer wasn't found. 
+Converts string name of the layer to the integer identifier.
 
 
 
@@ -1586,7 +1622,8 @@ Converts string name of the layer to the integer identifier.@returns id of the l
 :type self: 
 :param layer: 
 :type layer: str
-:rettype: int
+:return: id of the layer, or -1 if the layer wasn't found.
+:rtype: int
 ````
 
 ````{py:method} getLayerNames() -> retval
@@ -1597,7 +1634,7 @@ Converts string name of the layer to the integer identifier.@returns id of the l
 
 :param self: 
 :type self: 
-:rettype: _typing.Sequence[str]
+:rtype: _typing.Sequence[str]
 ````
 
 ````{py:method} connect(outPin, inpPin) -> None
@@ -1612,7 +1649,7 @@ Descriptors have the following template <DFN>&lt;layer_name&gt;[.input_number]</
 :type outPin: str
 :param inpPin: descriptor of the second layer input.
 :type inpPin: str
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} setInputsNames(inputBlobNames) -> None
@@ -1625,7 +1662,7 @@ Each net always has special own the network input pseudo layer with id=0. This l
 :type self: 
 :param inputBlobNames: 
 :type inputBlobNames: _typing.Sequence[str]
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} setInputShape(inputName, shape) -> None
@@ -1640,7 +1677,7 @@ Specify shape of network input.
 :type inputName: str
 :param shape: 
 :type shape: cv2.typing.MatShape
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} forwardAsync([, outputName]) -> retval
@@ -1653,7 +1690,7 @@ This is an asynchronous version of forward(const String&). dnn::DNN_BACKEND_INFE
 :type self: 
 :param outputName: name for layer which output is needed to get@details By default runs forward pass for the whole network. 
 :type outputName: str
-:rettype: cv2.AsyncArray
+:rtype: cv2.AsyncArray
 ````
 
 ````{py:method} forwardAndRetrieve(outBlobNames) -> outputBlobs
@@ -1668,7 +1705,7 @@ Runs forward pass to compute outputs of layers listed in @p outBlobNames.
 :type outBlobNames: _typing.Sequence[str]
 :param outputBlobs: contains all output blobs for each layer specified in @p outBlobNames.
 :type outputBlobs: 
-:rettype: _typing.Sequence[_typing.Sequence[cv2.typing.MatLike]]
+:rtype: _typing.Sequence[_typing.Sequence[cv2.typing.MatLike]]
 ````
 
 ````{py:method} getInputDetails() -> scales, zeropoints
@@ -1683,7 +1720,7 @@ Returns input scale and zeropoint for a quantized Net.
 :type scales: 
 :param zeropoints: output parameter for returning input zeropoints.
 :type zeropoints: 
-:rettype: tuple[_typing.Sequence[float], _typing.Sequence[int]]
+:rtype: tuple[_typing.Sequence[float], _typing.Sequence[int]]
 ````
 
 ````{py:method} getOutputDetails() -> scales, zeropoints
@@ -1698,46 +1735,46 @@ Returns output scale and zeropoint for a quantized Net.
 :type scales: 
 :param zeropoints: output parameter for returning output zeropoints.
 :type zeropoints: 
-:rettype: tuple[_typing.Sequence[float], _typing.Sequence[int]]
+:rtype: tuple[_typing.Sequence[float], _typing.Sequence[int]]
 ````
 
 ````{py:method} setHalideScheduler(scheduler) -> None
-Compile Halide layers.@param[in] scheduler Path to YAML file with scheduling directives. @see setPreferableBackend 
+Compile Halide layers.
 
 Schedule layers that support Halide backend. Then compile them for specific target. For layers that not represented in scheduling file or if no manual scheduling used at all, automatic scheduling will be applied. 
 
 
 :param self: 
 :type self: 
-:param scheduler: 
+:param scheduler: [in] Path to YAML file with scheduling directives.@see setPreferableBackend 
 :type scheduler: str
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} setPreferableBackend(backendId) -> None
-Ask network to use specific computation backend where it supported.@param[in] backendId backend identifier. @see Backend 
+Ask network to use specific computation backend where it supported.
 
 
 
 
 :param self: 
 :type self: 
-:param backendId: 
+:param backendId: [in] backend identifier.@see Backend 
 :type backendId: int
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} setPreferableTarget(targetId) -> None
-Ask network to make computations on specific target device.@param[in] targetId target identifier. @see Target 
+Ask network to make computations on specific target device.
 
 List of supported combinations backend / target: |                        | DNN_BACKEND_OPENCV | DNN_BACKEND_INFERENCE_ENGINE | DNN_BACKEND_HALIDE |  DNN_BACKEND_CUDA | |------------------------|--------------------|------------------------------|--------------------|-------------------| | DNN_TARGET_CPU         |                  + |                            + |                  + |                   | | DNN_TARGET_OPENCL      |                  + |                            + |                  + |                   | | DNN_TARGET_OPENCL_FP16 |                  + |                            + |                    |                   | | DNN_TARGET_MYRIAD      |                    |                            + |                    |                   | | DNN_TARGET_FPGA        |                    |                            + |                    |                   | | DNN_TARGET_CUDA        |                    |                              |                    |                 + | | DNN_TARGET_CUDA_FP16   |                    |                              |                    |                 + | | DNN_TARGET_HDDL        |                    |                            + |                    |                   | 
 
 
 :param self: 
 :type self: 
-:param targetId: 
+:param targetId: [in] target identifier.@see Target 
 :type targetId: int
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getUnconnectedOutLayers() -> retval
@@ -1748,7 +1785,7 @@ FIXIT: Rework API to registerOutput() approach, deprecate this call
 
 :param self: 
 :type self: 
-:rettype: _typing.Sequence[int]
+:rtype: _typing.Sequence[int]
 ````
 
 ````{py:method} getUnconnectedOutLayersNames() -> retval
@@ -1759,7 +1796,7 @@ FIXIT: Rework API to registerOutput() approach, deprecate this call
 
 :param self: 
 :type self: 
-:rettype: _typing.Sequence[str]
+:rtype: _typing.Sequence[str]
 ````
 
 ````{py:method} getLayerTypes() -> layersTypes
@@ -1772,7 +1809,7 @@ Returns list of types for layer used in model.
 :type self: 
 :param layersTypes: output parameter for returning types.
 :type layersTypes: 
-:rettype: _typing.Sequence[str]
+:rtype: _typing.Sequence[str]
 ````
 
 ````{py:method} getLayersCount(layerType) -> retval
@@ -1783,9 +1820,10 @@ Returns count of layers of specified type.
 
 :param self: 
 :type self: 
-:param layerType: type.@returns count of layers 
+:param layerType: type.
 :type layerType: str
-:rettype: int
+:return: count of layers
+:rtype: int
 ````
 
 ````{py:method} enableFusion(fusion) -> None
@@ -1798,7 +1836,7 @@ Enables or disables layer fusion in the network.
 :type self: 
 :param fusion: true to enable the fusion, false to disable. The fusion is enabled by default.
 :type fusion: bool
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} enableWinograd(useWinograd) -> None
@@ -1811,19 +1849,21 @@ Enables or disables the Winograd compute branch. The Winograd compute branch can
 :type self: 
 :param useWinograd: true to enable the Winograd compute branch. The default is true.
 :type useWinograd: bool
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getPerfProfile() -> retval, timings
 Returns overall time for inference and timings (in ticks) for layers.
 
-Indexes in returned vector correspond to layers ids. Some layers can be fused with others, in this case zero ticks count will be return for that skipped layers. Supported by DNN_BACKEND_OPENCV on DNN_TARGET_CPU only. @param[out] timings vector for tick timings for all layers. 
+Indexes in returned vector correspond to layers ids. Some layers can be fused with others, in this case zero ticks count will be return for that skipped layers. Supported by DNN_BACKEND_OPENCV on DNN_TARGET_CPU only. 
 
 
 :param self: 
 :type self: 
+:param timings: [out] vector for tick timings for all layers.
+:type timings: 
 :return: overall ticks for model inference.
-:rettype: tuple[int, _typing.Sequence[float]]
+:rtype: tuple[int, _typing.Sequence[float]]
 ````
 
 
@@ -1848,7 +1888,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 :type model: str
 :param config: 
 :type config: str
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} __init__(self, network: Net)
@@ -1862,39 +1902,39 @@ Initialize self.  See help(type(self)) for accurate signature.
 :type self: 
 :param network: 
 :type network: Net
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} segment(frame[, mask]) -> mask
 
-Given the @p input frame, create input blob, run net@param[in]  frame  The input image. @param[out] mask Allocated class prediction for each pixel 
+Given the @p input frame, create input blob, run net
 
 
 
 
 :param self: 
 :type self: 
-:param frame: 
+:param frame: [in] The input image.
 :type frame: cv2.typing.MatLike
-:param mask: 
+:param mask: [out] Allocated class prediction for each pixel
 :type mask: cv2.typing.MatLike | None
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 ````{py:method} segment(frame[, mask]) -> mask
 
-Given the @p input frame, create input blob, run net@param[in]  frame  The input image. @param[out] mask Allocated class prediction for each pixel 
+Given the @p input frame, create input blob, run net
 
 
 
 
 :param self: 
 :type self: 
-:param frame: 
+:param frame: [in] The input image.
 :type frame: cv2.UMat
-:param mask: 
+:param mask: [out] Allocated class prediction for each pixel
 :type mask: cv2.UMat | None
-:rettype: cv2.UMat
+:rtype: cv2.UMat
 ````
 
 
@@ -1910,7 +1950,7 @@ Given the @p input frame, create input blob, run net@param[in]  frame  The input
 
 Performs detection
 
-Given the input @p frame, prepare network input, run network inference, post-process network output and return result detections. Each result is quadrangle's 4 points in this order: - bottom-left - top-left - top-right - bottom-right Use cv::getPerspectiveTransform function to retrieve image region without perspective transformations. @param[in] frame The input image @param[out] detections array with detections' quadrangles (4 points per result) @param[out] confidences array with detection confidences detect(frame) -> detections @overload 
+Given the input @p frame, prepare network input, run network inference, post-process network output and return result detections. Each result is quadrangle's 4 points in this order: - bottom-left - top-left - top-right - bottom-right Use cv::getPerspectiveTransform function to retrieve image region without perspective transformations. detect(frame) -> detections @overload 
 ```{note}
 If DL model doesn't support that kind of output then result may be derived from detectTextRectangles() output.
 ```
@@ -1918,16 +1958,20 @@ If DL model doesn't support that kind of output then result may be derived from 
 
 :param self: 
 :type self: 
-:param frame: 
+:param frame: [in] The input image
 :type frame: cv2.typing.MatLike
-:rettype: tuple[_typing.Sequence[_typing.Sequence[cv2.typing.Point]], _typing.Sequence[float]]
+:param detections: [out] array with detections' quadrangles (4 points per result)
+:type detections: 
+:param confidences: [out] array with detection confidences
+:type confidences: 
+:rtype: tuple[_typing.Sequence[_typing.Sequence[cv2.typing.Point]], _typing.Sequence[float]]
 ````
 
 ````{py:method} detect(frame) -> detections, confidences
 
 Performs detection
 
-Given the input @p frame, prepare network input, run network inference, post-process network output and return result detections. Each result is quadrangle's 4 points in this order: - bottom-left - top-left - top-right - bottom-right Use cv::getPerspectiveTransform function to retrieve image region without perspective transformations. @param[in] frame The input image @param[out] detections array with detections' quadrangles (4 points per result) @param[out] confidences array with detection confidences detect(frame) -> detections @overload 
+Given the input @p frame, prepare network input, run network inference, post-process network output and return result detections. Each result is quadrangle's 4 points in this order: - bottom-left - top-left - top-right - bottom-right Use cv::getPerspectiveTransform function to retrieve image region without perspective transformations. detect(frame) -> detections @overload 
 ```{note}
 If DL model doesn't support that kind of output then result may be derived from detectTextRectangles() output.
 ```
@@ -1935,16 +1979,20 @@ If DL model doesn't support that kind of output then result may be derived from 
 
 :param self: 
 :type self: 
-:param frame: 
+:param frame: [in] The input image
 :type frame: cv2.UMat
-:rettype: tuple[_typing.Sequence[_typing.Sequence[cv2.typing.Point]], _typing.Sequence[float]]
+:param detections: [out] array with detections' quadrangles (4 points per result)
+:type detections: 
+:param confidences: [out] array with detection confidences
+:type confidences: 
+:rtype: tuple[_typing.Sequence[_typing.Sequence[cv2.typing.Point]], _typing.Sequence[float]]
 ````
 
 ````{py:method} detect(frame) -> detections, confidences
 
 Performs detection
 
-Given the input @p frame, prepare network input, run network inference, post-process network output and return result detections. Each result is quadrangle's 4 points in this order: - bottom-left - top-left - top-right - bottom-right Use cv::getPerspectiveTransform function to retrieve image region without perspective transformations. @param[in] frame The input image @param[out] detections array with detections' quadrangles (4 points per result) @param[out] confidences array with detection confidences detect(frame) -> detections @overload 
+Given the input @p frame, prepare network input, run network inference, post-process network output and return result detections. Each result is quadrangle's 4 points in this order: - bottom-left - top-left - top-right - bottom-right Use cv::getPerspectiveTransform function to retrieve image region without perspective transformations. detect(frame) -> detections @overload 
 ```{note}
 If DL model doesn't support that kind of output then result may be derived from detectTextRectangles() output.
 ```
@@ -1952,16 +2000,20 @@ If DL model doesn't support that kind of output then result may be derived from 
 
 :param self: 
 :type self: 
-:param frame: 
+:param frame: [in] The input image
 :type frame: cv2.typing.MatLike
-:rettype: _typing.Sequence[_typing.Sequence[cv2.typing.Point]]
+:param detections: [out] array with detections' quadrangles (4 points per result)
+:type detections: 
+:param confidences: [out] array with detection confidences
+:type confidences: 
+:rtype: _typing.Sequence[_typing.Sequence[cv2.typing.Point]]
 ````
 
 ````{py:method} detect(frame) -> detections, confidences
 
 Performs detection
 
-Given the input @p frame, prepare network input, run network inference, post-process network output and return result detections. Each result is quadrangle's 4 points in this order: - bottom-left - top-left - top-right - bottom-right Use cv::getPerspectiveTransform function to retrieve image region without perspective transformations. @param[in] frame The input image @param[out] detections array with detections' quadrangles (4 points per result) @param[out] confidences array with detection confidences detect(frame) -> detections @overload 
+Given the input @p frame, prepare network input, run network inference, post-process network output and return result detections. Each result is quadrangle's 4 points in this order: - bottom-left - top-left - top-right - bottom-right Use cv::getPerspectiveTransform function to retrieve image region without perspective transformations. detect(frame) -> detections @overload 
 ```{note}
 If DL model doesn't support that kind of output then result may be derived from detectTextRectangles() output.
 ```
@@ -1969,16 +2021,20 @@ If DL model doesn't support that kind of output then result may be derived from 
 
 :param self: 
 :type self: 
-:param frame: 
+:param frame: [in] The input image
 :type frame: cv2.UMat
-:rettype: _typing.Sequence[_typing.Sequence[cv2.typing.Point]]
+:param detections: [out] array with detections' quadrangles (4 points per result)
+:type detections: 
+:param confidences: [out] array with detection confidences
+:type confidences: 
+:rtype: _typing.Sequence[_typing.Sequence[cv2.typing.Point]]
 ````
 
 ````{py:method} detectTextRectangles(frame) -> detections, confidences
 
 Performs detection
 
-Given the input @p frame, prepare network input, run network inference, post-process network output and return result detections. Each result is rotated rectangle. @param[in] frame the input image @param[out] detections array with detections' RotationRect results @param[out] confidences array with detection confidences detectTextRectangles(frame) -> detections @overload 
+Given the input @p frame, prepare network input, run network inference, post-process network output and return result detections. Each result is rotated rectangle. detectTextRectangles(frame) -> detections @overload 
 ```{note}
 Result may be inaccurate in case of strong perspective transformations.
 ```
@@ -1986,16 +2042,20 @@ Result may be inaccurate in case of strong perspective transformations.
 
 :param self: 
 :type self: 
-:param frame: 
+:param frame: [in] the input image
 :type frame: cv2.typing.MatLike
-:rettype: tuple[_typing.Sequence[cv2.typing.RotatedRect], _typing.Sequence[float]]
+:param detections: [out] array with detections' RotationRect results
+:type detections: 
+:param confidences: [out] array with detection confidences
+:type confidences: 
+:rtype: tuple[_typing.Sequence[cv2.typing.RotatedRect], _typing.Sequence[float]]
 ````
 
 ````{py:method} detectTextRectangles(frame) -> detections, confidences
 
 Performs detection
 
-Given the input @p frame, prepare network input, run network inference, post-process network output and return result detections. Each result is rotated rectangle. @param[in] frame the input image @param[out] detections array with detections' RotationRect results @param[out] confidences array with detection confidences detectTextRectangles(frame) -> detections @overload 
+Given the input @p frame, prepare network input, run network inference, post-process network output and return result detections. Each result is rotated rectangle. detectTextRectangles(frame) -> detections @overload 
 ```{note}
 Result may be inaccurate in case of strong perspective transformations.
 ```
@@ -2003,16 +2063,20 @@ Result may be inaccurate in case of strong perspective transformations.
 
 :param self: 
 :type self: 
-:param frame: 
+:param frame: [in] the input image
 :type frame: cv2.UMat
-:rettype: tuple[_typing.Sequence[cv2.typing.RotatedRect], _typing.Sequence[float]]
+:param detections: [out] array with detections' RotationRect results
+:type detections: 
+:param confidences: [out] array with detection confidences
+:type confidences: 
+:rtype: tuple[_typing.Sequence[cv2.typing.RotatedRect], _typing.Sequence[float]]
 ````
 
 ````{py:method} detectTextRectangles(frame) -> detections, confidences
 
 Performs detection
 
-Given the input @p frame, prepare network input, run network inference, post-process network output and return result detections. Each result is rotated rectangle. @param[in] frame the input image @param[out] detections array with detections' RotationRect results @param[out] confidences array with detection confidences detectTextRectangles(frame) -> detections @overload 
+Given the input @p frame, prepare network input, run network inference, post-process network output and return result detections. Each result is rotated rectangle. detectTextRectangles(frame) -> detections @overload 
 ```{note}
 Result may be inaccurate in case of strong perspective transformations.
 ```
@@ -2020,16 +2084,20 @@ Result may be inaccurate in case of strong perspective transformations.
 
 :param self: 
 :type self: 
-:param frame: 
+:param frame: [in] the input image
 :type frame: cv2.typing.MatLike
-:rettype: _typing.Sequence[cv2.typing.RotatedRect]
+:param detections: [out] array with detections' RotationRect results
+:type detections: 
+:param confidences: [out] array with detection confidences
+:type confidences: 
+:rtype: _typing.Sequence[cv2.typing.RotatedRect]
 ````
 
 ````{py:method} detectTextRectangles(frame) -> detections, confidences
 
 Performs detection
 
-Given the input @p frame, prepare network input, run network inference, post-process network output and return result detections. Each result is rotated rectangle. @param[in] frame the input image @param[out] detections array with detections' RotationRect results @param[out] confidences array with detection confidences detectTextRectangles(frame) -> detections @overload 
+Given the input @p frame, prepare network input, run network inference, post-process network output and return result detections. Each result is rotated rectangle. detectTextRectangles(frame) -> detections @overload 
 ```{note}
 Result may be inaccurate in case of strong perspective transformations.
 ```
@@ -2037,9 +2105,13 @@ Result may be inaccurate in case of strong perspective transformations.
 
 :param self: 
 :type self: 
-:param frame: 
+:param frame: [in] the input image
 :type frame: cv2.UMat
-:rettype: _typing.Sequence[cv2.typing.RotatedRect]
+:param detections: [out] array with detections' RotationRect results
+:type detections: 
+:param confidences: [out] array with detection confidences
+:type confidences: 
+:rtype: _typing.Sequence[cv2.typing.RotatedRect]
 ````
 
 
@@ -2062,7 +2134,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 :type self: 
 :param network: 
 :type network: Net
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} __init__(self, model: str, config: str=...)
@@ -2078,7 +2150,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 :type model: str
 :param config: 
 :type config: str
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} setBinaryThreshold(binaryThreshold) -> retval
@@ -2091,7 +2163,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 :type self: 
 :param binaryThreshold: 
 :type binaryThreshold: float
-:rettype: TextDetectionModel_DB
+:rtype: TextDetectionModel_DB
 ````
 
 ````{py:method} getBinaryThreshold() -> retval
@@ -2102,7 +2174,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 
 :param self: 
 :type self: 
-:rettype: float
+:rtype: float
 ````
 
 ````{py:method} setPolygonThreshold(polygonThreshold) -> retval
@@ -2115,7 +2187,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 :type self: 
 :param polygonThreshold: 
 :type polygonThreshold: float
-:rettype: TextDetectionModel_DB
+:rtype: TextDetectionModel_DB
 ````
 
 ````{py:method} getPolygonThreshold() -> retval
@@ -2126,7 +2198,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 
 :param self: 
 :type self: 
-:rettype: float
+:rtype: float
 ````
 
 ````{py:method} setUnclipRatio(unclipRatio) -> retval
@@ -2139,7 +2211,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 :type self: 
 :param unclipRatio: 
 :type unclipRatio: float
-:rettype: TextDetectionModel_DB
+:rtype: TextDetectionModel_DB
 ````
 
 ````{py:method} getUnclipRatio() -> retval
@@ -2150,7 +2222,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 
 :param self: 
 :type self: 
-:rettype: float
+:rtype: float
 ````
 
 ````{py:method} setMaxCandidates(maxCandidates) -> retval
@@ -2163,7 +2235,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 :type self: 
 :param maxCandidates: 
 :type maxCandidates: int
-:rettype: TextDetectionModel_DB
+:rtype: TextDetectionModel_DB
 ````
 
 ````{py:method} getMaxCandidates() -> retval
@@ -2174,7 +2246,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 
@@ -2197,7 +2269,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 :type self: 
 :param network: 
 :type network: Net
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} __init__(self, model: str, config: str=...)
@@ -2213,20 +2285,20 @@ Initialize self.  See help(type(self)) for accurate signature.
 :type model: str
 :param config: 
 :type config: str
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} setConfidenceThreshold(confThreshold) -> retval
-Set the detection confidence threshold@param[in] confThreshold A threshold used to filter boxes by confidences 
+Set the detection confidence threshold
 
 
 
 
 :param self: 
 :type self: 
-:param confThreshold: 
+:param confThreshold: [in] A threshold used to filter boxes by confidences
 :type confThreshold: float
-:rettype: TextDetectionModel_EAST
+:rtype: TextDetectionModel_EAST
 ````
 
 ````{py:method} getConfidenceThreshold() -> retval
@@ -2237,20 +2309,20 @@ Get the detection confidence threshold
 
 :param self: 
 :type self: 
-:rettype: float
+:rtype: float
 ````
 
 ````{py:method} setNMSThreshold(nmsThreshold) -> retval
-Set the detection NMS filter threshold@param[in] nmsThreshold A threshold used in non maximum suppression 
+Set the detection NMS filter threshold
 
 
 
 
 :param self: 
 :type self: 
-:param nmsThreshold: 
+:param nmsThreshold: [in] A threshold used in non maximum suppression
 :type nmsThreshold: float
-:rettype: TextDetectionModel_EAST
+:rtype: TextDetectionModel_EAST
 ````
 
 ````{py:method} getNMSThreshold() -> retval
@@ -2261,7 +2333,7 @@ Get the detection confidence threshold
 
 :param self: 
 :type self: 
-:rettype: float
+:rtype: float
 ````
 
 
@@ -2284,7 +2356,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 :type self: 
 :param network: 
 :type network: Net
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} __init__(self, model: str, config: str=...)
@@ -2300,84 +2372,96 @@ Initialize self.  See help(type(self)) for accurate signature.
 :type model: str
 :param config: 
 :type config: str
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} recognize(frame) -> retval
 
-Given the @p input frame, create input blob, run net and return recognition result@param[in] frame The input image @param[in] roiRects List of text detection regions of interest (cv::Rect, CV_32SC4). ROIs is be cropped as the network inputs @param[out] results A set of text recognition results. 
+Given the @p input frame, create input blob, run net and return recognition result
 
 recognize(frame, roiRects) -> results 
 
 
 :param self: 
 :type self: 
-:param frame: 
+:param frame: [in] The input image
 :type frame: cv2.typing.MatLike
+:param roiRects: [in] List of text detection regions of interest (cv::Rect, CV_32SC4). ROIs is be cropped as the network inputs
+:type roiRects: 
+:param results: [out] A set of text recognition results.
+:type results: 
 :return: The text recognition result
-:rettype: str
+:rtype: str
 ````
 
 ````{py:method} recognize(frame) -> retval
 
-Given the @p input frame, create input blob, run net and return recognition result@param[in] frame The input image @param[in] roiRects List of text detection regions of interest (cv::Rect, CV_32SC4). ROIs is be cropped as the network inputs @param[out] results A set of text recognition results. 
+Given the @p input frame, create input blob, run net and return recognition result
 
 recognize(frame, roiRects) -> results 
 
 
 :param self: 
 :type self: 
-:param frame: 
+:param frame: [in] The input image
 :type frame: cv2.UMat
+:param roiRects: [in] List of text detection regions of interest (cv::Rect, CV_32SC4). ROIs is be cropped as the network inputs
+:type roiRects: 
+:param results: [out] A set of text recognition results.
+:type results: 
 :return: The text recognition result
-:rettype: str
+:rtype: str
 ````
 
 ````{py:method} recognize(frame) -> retval
 
-Given the @p input frame, create input blob, run net and return recognition result@param[in] frame The input image @param[in] roiRects List of text detection regions of interest (cv::Rect, CV_32SC4). ROIs is be cropped as the network inputs @param[out] results A set of text recognition results. 
+Given the @p input frame, create input blob, run net and return recognition result
 
 recognize(frame, roiRects) -> results 
 
 
 :param self: 
 :type self: 
-:param frame: 
+:param frame: [in] The input image
 :type frame: cv2.typing.MatLike
-:param roiRects: 
+:param roiRects: [in] List of text detection regions of interest (cv::Rect, CV_32SC4). ROIs is be cropped as the network inputs
 :type roiRects: _typing.Sequence[cv2.typing.MatLike]
+:param results: [out] A set of text recognition results.
+:type results: 
 :return: The text recognition result
-:rettype: _typing.Sequence[str]
+:rtype: _typing.Sequence[str]
 ````
 
 ````{py:method} recognize(frame) -> retval
 
-Given the @p input frame, create input blob, run net and return recognition result@param[in] frame The input image @param[in] roiRects List of text detection regions of interest (cv::Rect, CV_32SC4). ROIs is be cropped as the network inputs @param[out] results A set of text recognition results. 
+Given the @p input frame, create input blob, run net and return recognition result
 
 recognize(frame, roiRects) -> results 
 
 
 :param self: 
 :type self: 
-:param frame: 
+:param frame: [in] The input image
 :type frame: cv2.UMat
-:param roiRects: 
+:param roiRects: [in] List of text detection regions of interest (cv::Rect, CV_32SC4). ROIs is be cropped as the network inputs
 :type roiRects: _typing.Sequence[cv2.UMat]
+:param results: [out] A set of text recognition results.
+:type results: 
 :return: The text recognition result
-:rettype: _typing.Sequence[str]
+:rtype: _typing.Sequence[str]
 ````
 
 ````{py:method} setDecodeType(decodeType) -> retval
-Set the decoding method of translating the network output into string@param[in] decodeType The decoding method of translating the network output into string, currently supported type: - `"CTC-greedy"` greedy decoding for the output of CTC-based methods - `"CTC-prefix-beam-search"` Prefix beam search decoding for the output of CTC-based methods 
+Set the decoding method of translating the network output into string
 
 
 
 
 :param self: 
 :type self: 
-:param decodeType: 
+:param decodeType: [in] The decoding method of translating the network output into string, currently supported type:- `"CTC-greedy"` greedy decoding for the output of CTC-based methods - `"CTC-prefix-beam-search"` Prefix beam search decoding for the output of CTC-based methods 
 :type decodeType: str
-:rettype: TextRecognitionModel
+:rtype: TextRecognitionModel
 ````
 
 ````{py:method} getDecodeType() -> retval
@@ -2389,35 +2473,35 @@ Get the decoding method
 :param self: 
 :type self: 
 :return: the decoding method
-:rettype: str
+:rtype: str
 ````
 
 ````{py:method} setDecodeOptsCTCPrefixBeamSearch(beamSize[, vocPruneSize]) -> retval
-Set the decoding method options for `"CTC-prefix-beam-search"` decode usage@param[in] beamSize Beam size for search @param[in] vocPruneSize Parameter to optimize big vocabulary search, only take top @p vocPruneSize tokens in each search step, @p vocPruneSize <= 0 stands for disable this prune. 
+Set the decoding method options for `"CTC-prefix-beam-search"` decode usage
 
 
 
 
 :param self: 
 :type self: 
-:param beamSize: 
+:param beamSize: [in] Beam size for search
 :type beamSize: int
-:param vocPruneSize: 
+:param vocPruneSize: [in] Parameter to optimize big vocabulary search,only take top @p vocPruneSize tokens in each search step, @p vocPruneSize <= 0 stands for disable this prune. 
 :type vocPruneSize: int
-:rettype: TextRecognitionModel
+:rtype: TextRecognitionModel
 ````
 
 ````{py:method} setVocabulary(vocabulary) -> retval
-Set the vocabulary for recognition.@param[in] vocabulary the associated vocabulary of the network. 
+Set the vocabulary for recognition.
 
 
 
 
 :param self: 
 :type self: 
-:param vocabulary: 
+:param vocabulary: [in] the associated vocabulary of the network.
 :type vocabulary: _typing.Sequence[str]
-:rettype: TextRecognitionModel
+:rtype: TextRecognitionModel
 ````
 
 ````{py:method} getVocabulary() -> retval
@@ -2429,7 +2513,7 @@ Get the vocabulary for recognition.
 :param self: 
 :type self: 
 :return: vocabulary the associated vocabulary
-:rettype: _typing.Sequence[str]
+:rtype: _typing.Sequence[str]
 ````
 
 
@@ -2459,7 +2543,7 @@ Performs non maximum suppression given boxes and corresponding scores.
 :type eta: float
 :param top_k: if `>0`, keep at most @p top_k picked indices.
 :type top_k: int
-:rettype: _typing.Sequence[int]
+:rtype: _typing.Sequence[int]
 ````
 
 
@@ -2486,7 +2570,7 @@ Performs batched non maximum suppression on given boxes and corresponding scores
 :type eta: float
 :param top_k: if `>0`, keep at most @p top_k picked indices.
 :type top_k: int
-:rettype: _typing.Sequence[int]
+:rtype: _typing.Sequence[int]
 ````
 
 
@@ -2509,18 +2593,27 @@ Performs batched non maximum suppression on given boxes and corresponding scores
 :type eta: float
 :param top_k: 
 :type top_k: int
-:rettype: _typing.Sequence[int]
+:rtype: _typing.Sequence[int]
 ````
 
 
 ````{py:function} Net_readFromModelOptimizer(xml, bin) -> retval
 
-Create a network from Intel's Model Optimizer in-memory buffers with intermediate representation (IR).@param[in] bufferModelConfig buffer with model's configuration. @param[in] bufferWeights buffer with model's trained weights. @returns Net object. 
+Create a network from Intel's Model Optimizer in-memory buffers with intermediate representation (IR).
 
 Net_readFromModelOptimizer(bufferModelConfig, bufferWeights) -> retval 
 
 
-:rettype: object
+:param xml: [in] XML configuration file with network's topology.
+:type xml: 
+:param bin: [in] Binary file with trained weights.Networks imported from Intel's Model Optimizer are launched in Intel's Inference Engine backend. 
+:type bin: 
+:param bufferModelConfig: [in] buffer with model's configuration.
+:type bufferModelConfig: 
+:param bufferWeights: [in] buffer with model's trained weights.
+:type bufferWeights: 
+:return: Net object.
+:rtype: object
 ````
 
 
@@ -2543,9 +2636,10 @@ Creates 4-dimensional blob from image. Optionally resizes and crops @p image fro
 :type swapRB: bool
 :param crop: flag which indicates whether image will be cropped after resize or not
 :type crop: bool
-:param ddepth: Depth of output blob. Choose CV_32F or CV_8U.@details if @p crop is true, input image is resized so one side after resize is equal to corresponding dimension in @p size and another one is equal or larger. Then, crop from the center is performed. If @p crop is false, direct resize without cropping and preserving aspect ratio is performed. @returns 4-dimensional Mat with NCHW dimensions order. 
+:param ddepth: Depth of output blob. Choose CV_32F or CV_8U.@details if @p crop is true, input image is resized so one side after resize is equal to corresponding dimension in @p size and another one is equal or larger. Then, crop from the center is performed. If @p crop is false, direct resize without cropping and preserving aspect ratio is performed. 
 :type ddepth: int
-:rettype: cv2.typing.MatLike
+:return: 4-dimensional Mat with NCHW dimensions order.
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -2561,7 +2655,7 @@ Creates 4-dimensional blob from image with given params.
 :param param: struct of Image2BlobParams, contains all parameters needed by processing of image to blob.
 :type param: Image2BlobParams
 :return: 4-dimensional Mat.
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -2584,9 +2678,10 @@ Creates 4-dimensional blob from series of images. Optionally resizes andcrops @p
 :type swapRB: bool
 :param crop: flag which indicates whether image will be cropped after resize or not
 :type crop: bool
-:param ddepth: Depth of output blob. Choose CV_32F or CV_8U.@details if @p crop is true, input image is resized so one side after resize is equal to corresponding dimension in @p size and another one is equal or larger. Then, crop from the center is performed. If @p crop is false, direct resize without cropping and preserving aspect ratio is performed. @returns 4-dimensional Mat with NCHW dimensions order. 
+:param ddepth: Depth of output blob. Choose CV_32F or CV_8U.@details if @p crop is true, input image is resized so one side after resize is equal to corresponding dimension in @p size and another one is equal or larger. Then, crop from the center is performed. If @p crop is false, direct resize without cropping and preserving aspect ratio is performed. 
 :type ddepth: int
-:rettype: cv2.typing.MatLike
+:return: 4-dimensional Mat with NCHW dimensions order.
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -2599,9 +2694,10 @@ Creates 4-dimensional blob from series of images with given params.
 
 :param images: input image (all with 1-, 3- or 4-channels).
 :type images: _typing.Sequence[cv2.typing.MatLike]
-:param param: struct of Image2BlobParams, contains all parameters needed by processing of image to blob.@returns 4-dimensional Mat. 
+:param param: struct of Image2BlobParams, contains all parameters needed by processing of image to blob.
 :type param: Image2BlobParams
-:rettype: cv2.typing.MatLike
+:return: 4-dimensional Mat.
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -2614,39 +2710,44 @@ Creates 4-dimensional blob from series of images with given params.
 
 :param be: 
 :type be: Backend
-:rettype: _typing.Sequence[Target]
+:rtype: _typing.Sequence[Target]
 ````
 
 
 ````{py:function} imagesFromBlob(blob_[, images_]) -> images_
 
-Parse a 4D blob and output the images it contains as 2D arrays through a simpler data structure(std::vector<cv::Mat>). @param[in] blob_ 4 dimensional array (images, channels, height, width) in floating point precision (CV_32F) from which you would like to extract the images. @param[out] images_ array of 2D Mat containing the images extracted from the blob in floating point precision (CV_32F). They are non normalized neither mean added. The number of returned images equals the first dimension of the blob (batch size). Every image has a number of channels equals to the second dimension of the blob (depth). 
+Parse a 4D blob and output the images it contains as 2D arrays through a simpler data structure(std::vector<cv::Mat>). 
 
 
 
 
-:param blob_: 
+:param blob_: [in] 4 dimensional array (images, channels, height, width) in floating point precision (CV_32F) fromwhich you would like to extract the images. 
 :type blob_: cv2.typing.MatLike
-:param images_: 
+:param images_: [out] array of 2D Mat containing the images extracted from the blob in floating point precision(CV_32F). They are non normalized neither mean added. The number of returned images equals the first dimension of the blob (batch size). Every image has a number of channels equals to the second dimension of the blob (depth). 
 :type images_: _typing.Sequence[cv2.typing.MatLike] | None
-:rettype: _typing.Sequence[cv2.typing.MatLike]
+:rtype: _typing.Sequence[cv2.typing.MatLike]
 ````
 
 
 ````{py:function} readNet(model[, config[, framework]]) -> retval
 
-Read deep learning network represented in one of the supported formats.@details This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. @param[in] framework    Name of origin framework. @param[in] bufferModel  A buffer with a content of binary file with weights @param[in] bufferConfig A buffer with a content of text file contains network configuration. @returns Net object. 
+Read deep learning network represented in one of the supported formats.@details This is an overloaded member function, provided for convenience. It differs from the above function only in what argument(s) it accepts. 
 
 This function automatically detects an origin framework of trained model and calls an appropriate function such @ref readNetFromCaffe, @ref readNetFromTensorflow, @ref readNetFromTorch or @ref readNetFromDarknet. An order of @p model and @p config arguments does not matter. readNet(framework, bufferModel[, bufferConfig]) -> retval 
 
 
-:param model: 
+:param model: [in] Binary file contains trained weights. The following fileextensions are expected for models from different frameworks: `*.caffemodel` (Caffe, http://caffe.berkeleyvision.org/) `*.pb` (TensorFlow, https://www.tensorflow.org/) `*.t7` | `*.net` (Torch, http://torch.ch/) `*.weights` (Darknet, https://pjreddie.com/darknet/) `*.bin` | `*.onnx` (OpenVINO, https://software.intel.com/openvino-toolkit) `*.onnx` (ONNX, https://onnx.ai/) 
 :type model: str
-:param config: 
+:param config: [in] Text file contains network configuration. It could be afile with the following extensions: `*.prototxt` (Caffe, http://caffe.berkeleyvision.org/) `*.pbtxt` (TensorFlow, https://www.tensorflow.org/) `*.cfg` (Darknet, https://pjreddie.com/darknet/) `*.xml` (OpenVINO, https://software.intel.com/openvino-toolkit) 
 :type config: str
-:param framework: 
+:param framework: [in] Name of origin framework.
 :type framework: str
-:rettype: Net
+:param bufferModel: [in] A buffer with a content of binary file with weights
+:type bufferModel: 
+:param bufferConfig: [in] A buffer with a content of text file contains network configuration.
+:type bufferConfig: 
+:return: Net object.
+:rtype: Net
 ````
 
 
@@ -2659,13 +2760,14 @@ readNetFromCaffe(bufferProto[, bufferModel]) -> retval
 
 :param prototxt: path to the .prototxt file with text description of the network architecture.
 :type prototxt: str
-:param caffeModel: path to the .caffemodel file with learned network.@returns Net object. 
+:param caffeModel: path to the .caffemodel file with learned network.
 :type caffeModel: str
 :param bufferProto: buffer containing the content of the .prototxt file
 :type bufferProto: 
-:param bufferModel: buffer containing the content of the .caffemodel file@returns Net object. 
+:param bufferModel: buffer containing the content of the .caffemodel file
 :type bufferModel: 
-:rettype: Net
+:return: Net object.
+:rtype: Net
 ````
 
 
@@ -2678,28 +2780,34 @@ readNetFromDarknet(bufferCfg[, bufferModel]) -> retval
 
 :param cfgFile: path to the .cfg file with text description of the network architecture.
 :type cfgFile: str
-:param darknetModel: path to the .weights file with learned network.@returns Network object that ready to do forward, throw an exception in failure cases. 
+:param darknetModel: path to the .weights file with learned network.
 :type darknetModel: str
 :param bufferCfg: A buffer contains a content of .cfg file with text description of the network architecture.
 :type bufferCfg: 
-:param bufferModel: A buffer contains a content of .weights file with learned network.@returns Net object. 
+:param bufferModel: A buffer contains a content of .weights file with learned network.
 :type bufferModel: 
-:rettype: Net
+:return: Net object.
+:rtype: Net
 ````
 
 
 ````{py:function} readNetFromModelOptimizer(xml[, bin]) -> retval
 
-Load a network from Intel's Model Optimizer intermediate representation.@param[in] bufferModelConfig Buffer contains XML configuration with network's topology. @param[in] bufferWeights Buffer contains binary data with trained weights. @returns Net object. Networks imported from Intel's Model Optimizer are launched in Intel's Inference Engine backend. 
+Load a network from Intel's Model Optimizer intermediate representation.
 
 readNetFromModelOptimizer(bufferModelConfig, bufferWeights) -> retval 
 
 
-:param xml: 
+:param xml: [in] XML configuration file with network's topology.
 :type xml: str
-:param bin: 
+:param bin: [in] Binary file with trained weights.
 :type bin: str
-:rettype: Net
+:param bufferModelConfig: [in] Buffer contains XML configuration with network's topology.
+:type bufferModelConfig: 
+:param bufferWeights: [in] Buffer contains binary data with trained weights.
+:type bufferWeights: 
+:return: Net object.Networks imported from Intel's Model Optimizer are launched in Intel's Inference Engine backend. 
+:rtype: Net
 ````
 
 
@@ -2710,11 +2818,12 @@ Reads a network model from <a href="https://onnx.ai/">ONNX</a>in-memory buffer.
 readNetFromONNX(buffer) -> retval 
 
 
-:param onnxFile: path to the .onnx file with text description of the network architecture.@returns Network object that ready to do forward, throw an exception in failure cases. 
+:param onnxFile: path to the .onnx file with text description of the network architecture.
 :type onnxFile: str
-:param buffer: in-memory buffer that stores the ONNX model bytes.@returns Network object that ready to do forward, throw an exception in failure cases. 
+:param buffer: in-memory buffer that stores the ONNX model bytes.
 :type buffer: 
-:rettype: Net
+:return: Network object that ready to do forward, throw an exceptionin failure cases. 
+:rtype: Net
 ````
 
 
@@ -2725,11 +2834,12 @@ Reads a network model stored in <a href="https://www.tensorflow.org/lite">TFLite
 readNetFromTFLite(bufferModel) -> retval 
 
 
-:param model: path to the .tflite file with binary flatbuffers description of the network architecture@returns Net object. 
+:param model: path to the .tflite file with binary flatbuffers description of the network architecture
 :type model: str
-:param bufferModel: buffer containing the content of the tflite file@returns Net object. 
+:param bufferModel: buffer containing the content of the tflite file
 :type bufferModel: 
-:rettype: Net
+:return: Net object.
+:rtype: Net
 ````
 
 
@@ -2742,13 +2852,14 @@ readNetFromTensorflow(bufferModel[, bufferConfig]) -> retval
 
 :param model: path to the .pb file with binary protobuf description of the network architecture
 :type model: str
-:param config: path to the .pbtxt file that contains text graph definition in protobuf format.Resulting Net object is built by text graph using weights from a binary one that let us make it more flexible. @returns Net object. 
+:param config: path to the .pbtxt file that contains text graph definition in protobuf format.Resulting Net object is built by text graph using weights from a binary one that let us make it more flexible. 
 :type config: str
 :param bufferModel: buffer containing the content of the pb file
 :type bufferModel: 
-:param bufferConfig: buffer containing the content of the pbtxt file@returns Net object. 
+:param bufferConfig: buffer containing the content of the pbtxt file
 :type bufferConfig: 
-:rettype: Net
+:return: Net object.
+:rtype: Net
 ````
 
 
@@ -2766,9 +2877,10 @@ Ascii mode of Torch serializer is more preferable, because binary mode extensive
 :type model: str
 :param isBinary: specifies whether the network was serialized in ascii mode or binary.
 :type isBinary: bool
-:param evaluate: specifies testing phase of network. If true, it's similar to evaluate() method in Torch.@returns Net object. 
+:param evaluate: specifies testing phase of network. If true, it's similar to evaluate() method in Torch.
 :type evaluate: bool
-:rettype: Net
+:return: Net object.
+:rtype: Net
 ````
 
 
@@ -2779,9 +2891,10 @@ Creates blob from .pb file.
 
 
 
-:param path: to the .pb file with input tensor.@returns Mat. 
+:param path: to the .pb file with input tensor.
 :type path: str
-:rettype: cv2.typing.MatLike
+:return: Mat.
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -2796,7 +2909,7 @@ Loads blob which was serialized as torch.Tensor object of Torch7 framework.@warn
 :type filename: str
 :param isBinary: 
 :type isBinary: bool
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -2816,7 +2929,7 @@ Shrinked model has no origin float32 weights so it can't be usedin origin Caffe 
 :type dst: str
 :param layersTypes: Set of layers types which parameters will be converted.By default, converts only Convolutional and Fully-Connected layers' weights. 
 :type layersTypes: _typing.Sequence[str]
-:rettype: None
+:rtype: None
 ````
 
 
@@ -2845,13 +2958,13 @@ Performs soft non maximum suppression given boxes and corresponding scores.Refer
 :type sigma: float
 :param method: Gaussian or linear.@see SoftNMSMethod 
 :type method: SoftNMSMethod
-:rettype: tuple[_typing.Sequence[float], _typing.Sequence[int]]
+:rtype: tuple[_typing.Sequence[float], _typing.Sequence[int]]
 ````
 
 
 ````{py:function} writeTextGraph(model, output) -> None
 
-Create a text representation for a binary network stored in protocol buffer format.@param[in] model  A path to binary network. @param[in] output A path to output text file to be created. 
+Create a text representation for a binary network stored in protocol buffer format.
 
 
 ```{note}
@@ -2859,11 +2972,11 @@ To reduce output file size, trained weights are not included.
 ```
 
 
-:param model: 
+:param model: [in] A path to binary network.
 :type model: str
-:param output: 
+:param output: [in] A path to output text file to be created.
 :type output: str
-:rettype: None
+:rtype: None
 ````
 
 

@@ -35,7 +35,7 @@ The AKAZE constructor
 :type diffusivity: KAZE_DiffusivityType
 :param max_points: Maximum amount of returned points. In case if image containsmore features, then the features with highest response are returned. Negative value means no limitation. 
 :type max_points: int
-:rettype: AKAZE
+:rtype: AKAZE
 ````
 
 ````{py:method} setDescriptorType(dtype) -> None
@@ -48,7 +48,7 @@ The AKAZE constructor
 :type self: 
 :param dtype: 
 :type dtype: AKAZE_DescriptorType
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getDescriptorType() -> retval
@@ -59,7 +59,7 @@ The AKAZE constructor
 
 :param self: 
 :type self: 
-:rettype: AKAZE_DescriptorType
+:rtype: AKAZE_DescriptorType
 ````
 
 ````{py:method} setDescriptorSize(dsize) -> None
@@ -72,7 +72,7 @@ The AKAZE constructor
 :type self: 
 :param dsize: 
 :type dsize: int
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getDescriptorSize() -> retval
@@ -83,7 +83,7 @@ The AKAZE constructor
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} setDescriptorChannels(dch) -> None
@@ -96,7 +96,7 @@ The AKAZE constructor
 :type self: 
 :param dch: 
 :type dch: int
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getDescriptorChannels() -> retval
@@ -107,7 +107,7 @@ The AKAZE constructor
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} setThreshold(threshold) -> None
@@ -120,7 +120,7 @@ The AKAZE constructor
 :type self: 
 :param threshold: 
 :type threshold: float
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getThreshold() -> retval
@@ -131,7 +131,7 @@ The AKAZE constructor
 
 :param self: 
 :type self: 
-:rettype: float
+:rtype: float
 ````
 
 ````{py:method} setNOctaves(octaves) -> None
@@ -144,7 +144,7 @@ The AKAZE constructor
 :type self: 
 :param octaves: 
 :type octaves: int
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getNOctaves() -> retval
@@ -155,7 +155,7 @@ The AKAZE constructor
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} setNOctaveLayers(octaveLayers) -> None
@@ -168,7 +168,7 @@ The AKAZE constructor
 :type self: 
 :param octaveLayers: 
 :type octaveLayers: int
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getNOctaveLayers() -> retval
@@ -179,7 +179,7 @@ The AKAZE constructor
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} setDiffusivity(diff) -> None
@@ -192,7 +192,7 @@ The AKAZE constructor
 :type self: 
 :param diff: 
 :type diff: KAZE_DiffusivityType
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getDiffusivity() -> retval
@@ -203,7 +203,7 @@ The AKAZE constructor
 
 :param self: 
 :type self: 
-:rettype: KAZE_DiffusivityType
+:rtype: KAZE_DiffusivityType
 ````
 
 ````{py:method} getDefaultName() -> retval
@@ -214,7 +214,7 @@ The AKAZE constructor
 
 :param self: 
 :type self: 
-:rettype: str
+:rtype: str
 ````
 
 ````{py:method} setMaxPoints(max_points) -> None
@@ -227,7 +227,7 @@ The AKAZE constructor
 :type self: 
 :param max_points: 
 :type max_points: int
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getMaxPoints() -> retval
@@ -238,7 +238,7 @@ The AKAZE constructor
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 
@@ -269,7 +269,7 @@ The AKAZE constructor
 :type tiltStep: float
 :param rotateStepBase: Rotation sampling step factor b in Algorithm 1 in the paper.
 :type rotateStepBase: float
-:rettype: AffineFeature
+:rtype: AffineFeature
 ````
 
 ````{py:method} setViewParams(tilts, rolls) -> None
@@ -284,7 +284,7 @@ The AKAZE constructor
 :type tilts: _typing.Sequence[float]
 :param rolls: 
 :type rolls: _typing.Sequence[float]
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getViewParams(tilts, rolls) -> None
@@ -299,7 +299,7 @@ The AKAZE constructor
 :type tilts: _typing.Sequence[float]
 :param rolls: 
 :type rolls: _typing.Sequence[float]
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getDefaultName() -> retval
@@ -310,7 +310,7 @@ The AKAZE constructor
 
 :param self: 
 :type self: 
-:rettype: str
+:rtype: str
 ````
 
 
@@ -337,7 +337,7 @@ The AKAZE constructor
 :type nonmaxSuppression: bool
 :param type: 
 :type type: AgastFeatureDetector_DetectorType
-:rettype: AgastFeatureDetector
+:rtype: AgastFeatureDetector
 ````
 
 ````{py:method} setThreshold(threshold) -> None
@@ -350,7 +350,7 @@ The AKAZE constructor
 :type self: 
 :param threshold: 
 :type threshold: int
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getThreshold() -> retval
@@ -361,7 +361,7 @@ The AKAZE constructor
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} setNonmaxSuppression(f) -> None
@@ -374,7 +374,7 @@ The AKAZE constructor
 :type self: 
 :param f: 
 :type f: bool
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getNonmaxSuppression() -> retval
@@ -385,7 +385,7 @@ The AKAZE constructor
 
 :param self: 
 :type self: 
-:rettype: bool
+:rtype: bool
 ````
 
 ````{py:method} setType(type) -> None
@@ -398,7 +398,7 @@ The AKAZE constructor
 :type self: 
 :param type: 
 :type type: AgastFeatureDetector_DetectorType
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getType() -> retval
@@ -409,7 +409,7 @@ The AKAZE constructor
 
 :param self: 
 :type self: 
-:rettype: AgastFeatureDetector_DetectorType
+:rtype: AgastFeatureDetector_DetectorType
 ````
 
 ````{py:method} getDefaultName() -> retval
@@ -420,7 +420,7 @@ The AKAZE constructor
 
 :param self: 
 :type self: 
-:rettype: str
+:rtype: str
 ````
 
 
@@ -443,7 +443,7 @@ write(fs, name) -> None @overload
 :type self: 
 :param fs: 
 :type fs: FileStorage
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} write(fs) -> None
@@ -459,7 +459,7 @@ write(fs, name) -> None @overload
 :type fs: FileStorage
 :param name: 
 :type name: str
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} clear() -> None
@@ -470,7 +470,7 @@ Clears the algorithm state
 
 :param self: 
 :type self: 
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} read(fn) -> None
@@ -483,7 +483,7 @@ Reads algorithm parameters from a file storage
 :type self: 
 :param fn: 
 :type fn: FileNode
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} empty() -> retval
@@ -494,7 +494,7 @@ Returns true if the Algorithm is empty (e.g. in the very beginning or after unsu
 
 :param self: 
 :type self: 
-:rettype: bool
+:rtype: bool
 ````
 
 ````{py:method} save(filename) -> None
@@ -507,7 +507,7 @@ Saves the algorithm to a file. In order to make this method work, the derived cl
 :type self: 
 :param filename: 
 :type filename: str
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getDefaultName() -> retval
@@ -518,7 +518,7 @@ Returns the algorithm string identifier. This string is used as top level xml/ym
 
 :param self: 
 :type self: 
-:rettype: str
+:rtype: str
 ````
 
 
@@ -547,7 +547,7 @@ Aligns images
 :type times: cv2.typing.MatLike
 :param response: 256x1 matrix with inverse camera response function for each pixel value, it shouldhave the same number of channels as images. 
 :type response: cv2.typing.MatLike
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} process(src, dst, times, response) -> None
@@ -567,7 +567,7 @@ Aligns images
 :type times: UMat
 :param response: 256x1 matrix with inverse camera response function for each pixel value, it shouldhave the same number of channels as images. 
 :type response: UMat
-:rettype: None
+:rtype: None
 ````
 
 
@@ -596,7 +596,7 @@ process(src, dst) -> None
 :type times: cv2.typing.MatLike
 :param response: 
 :type response: cv2.typing.MatLike
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} process(src, dst, times, response) -> None
@@ -616,7 +616,7 @@ process(src, dst) -> None
 :type times: UMat
 :param response: 
 :type response: UMat
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} process(src, dst, times, response) -> None
@@ -632,7 +632,7 @@ process(src, dst) -> None
 :type src: _typing.Sequence[cv2.typing.MatLike]
 :param dst: vector of aligned images
 :type dst: _typing.Sequence[cv2.typing.MatLike]
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} process(src, dst, times, response) -> None
@@ -648,7 +648,7 @@ process(src, dst) -> None
 :type src: _typing.Sequence[UMat]
 :param dst: vector of aligned images
 :type dst: _typing.Sequence[cv2.typing.MatLike]
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} calculateShift(img0, img1) -> retval
@@ -664,7 +664,7 @@ Calculates shift between two images, i. e. how to shift the second image to corr
 :type img0: cv2.typing.MatLike
 :param img1: second image
 :type img1: cv2.typing.MatLike
-:rettype: cv2.typing.Point
+:rtype: cv2.typing.Point
 ````
 
 ````{py:method} calculateShift(img0, img1) -> retval
@@ -680,7 +680,7 @@ Calculates shift between two images, i. e. how to shift the second image to corr
 :type img0: UMat
 :param img1: second image
 :type img1: UMat
-:rettype: cv2.typing.Point
+:rtype: cv2.typing.Point
 ````
 
 ````{py:method} shiftMat(src, shift[, dst]) -> dst
@@ -698,7 +698,7 @@ Helper function, that shift Mat filling new regions with zeros.
 :type shift: cv2.typing.Point
 :param dst: result image
 :type dst: cv2.typing.MatLike | None
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 ````{py:method} shiftMat(src, shift[, dst]) -> dst
@@ -716,7 +716,7 @@ Helper function, that shift Mat filling new regions with zeros.
 :type shift: cv2.typing.Point
 :param dst: result image
 :type dst: UMat | None
-:rettype: UMat
+:rtype: UMat
 ````
 
 ````{py:method} computeBitmaps(img[, tb[, eb]]) -> tb, eb
@@ -734,7 +734,7 @@ Computes median threshold and exclude bitmaps of given image.
 :type tb: cv2.typing.MatLike | None
 :param eb: exclude bitmap
 :type eb: cv2.typing.MatLike | None
-:rettype: tuple[cv2.typing.MatLike, cv2.typing.MatLike]
+:rtype: tuple[cv2.typing.MatLike, cv2.typing.MatLike]
 ````
 
 ````{py:method} computeBitmaps(img[, tb[, eb]]) -> tb, eb
@@ -752,7 +752,7 @@ Computes median threshold and exclude bitmaps of given image.
 :type tb: UMat | None
 :param eb: exclude bitmap
 :type eb: UMat | None
-:rettype: tuple[UMat, UMat]
+:rtype: tuple[UMat, UMat]
 ````
 
 ````{py:method} getMaxBits() -> retval
@@ -763,7 +763,7 @@ Computes median threshold and exclude bitmaps of given image.
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} setMaxBits(max_bits) -> None
@@ -776,7 +776,7 @@ Computes median threshold and exclude bitmaps of given image.
 :type self: 
 :param max_bits: 
 :type max_bits: int
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getExcludeRange() -> retval
@@ -787,7 +787,7 @@ Computes median threshold and exclude bitmaps of given image.
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} setExcludeRange(exclude_range) -> None
@@ -800,7 +800,7 @@ Computes median threshold and exclude bitmaps of given image.
 :type self: 
 :param exclude_range: 
 :type exclude_range: int
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getCut() -> retval
@@ -811,7 +811,7 @@ Computes median threshold and exclude bitmaps of given image.
 
 :param self: 
 :type self: 
-:rettype: bool
+:rtype: bool
 ````
 
 ````{py:method} setCut(value) -> None
@@ -824,7 +824,7 @@ Computes median threshold and exclude bitmaps of given image.
 :type self: 
 :param value: 
 :type value: bool
-:rettype: None
+:rtype: None
 ````
 
 
@@ -840,7 +840,7 @@ Computes median threshold and exclude bitmaps of given image.
 
 
 
-Fetch the result. @param[out] dst destination array Waits for result until container has valid result. Throws exception if exception was stored as a result. Throws exception on invalid container state. get(timeoutNs[, dst]) -> retval, dst Retrieving the result with timeout @param[out] dst destination array @param[in] timeoutNs timeout in nanoseconds, -1 for infinite wait @returns true if result is ready, false if the timeout has expired 
+Fetch the result. Waits for result until container has valid result. Throws exception if exception was stored as a result. Throws exception on invalid container state. get(timeoutNs[, dst]) -> retval, dst Retrieving the result with timeout 
 ```{note}
 Result or stored exception can be fetched only once.
 ```
@@ -851,16 +851,19 @@ Result or stored exception can be fetched only once.
 
 :param self: 
 :type self: 
-:param dst: 
+:param dst: [out] destination array
 :type dst: cv2.typing.MatLike | None
-:rettype: cv2.typing.MatLike
+:param timeoutNs: [in] timeout in nanoseconds, -1 for infinite wait
+:type timeoutNs: 
+:return: true if result is ready, false if the timeout has expired
+:rtype: cv2.typing.MatLike
 ````
 
 ````{py:method} get([, dst]) -> dst
 
 
 
-Fetch the result. @param[out] dst destination array Waits for result until container has valid result. Throws exception if exception was stored as a result. Throws exception on invalid container state. get(timeoutNs[, dst]) -> retval, dst Retrieving the result with timeout @param[out] dst destination array @param[in] timeoutNs timeout in nanoseconds, -1 for infinite wait @returns true if result is ready, false if the timeout has expired 
+Fetch the result. Waits for result until container has valid result. Throws exception if exception was stored as a result. Throws exception on invalid container state. get(timeoutNs[, dst]) -> retval, dst Retrieving the result with timeout 
 ```{note}
 Result or stored exception can be fetched only once.
 ```
@@ -871,16 +874,19 @@ Result or stored exception can be fetched only once.
 
 :param self: 
 :type self: 
-:param dst: 
+:param dst: [out] destination array
 :type dst: UMat | None
-:rettype: UMat
+:param timeoutNs: [in] timeout in nanoseconds, -1 for infinite wait
+:type timeoutNs: 
+:return: true if result is ready, false if the timeout has expired
+:rtype: UMat
 ````
 
 ````{py:method} get([, dst]) -> dst
 
 
 
-Fetch the result. @param[out] dst destination array Waits for result until container has valid result. Throws exception if exception was stored as a result. Throws exception on invalid container state. get(timeoutNs[, dst]) -> retval, dst Retrieving the result with timeout @param[out] dst destination array @param[in] timeoutNs timeout in nanoseconds, -1 for infinite wait @returns true if result is ready, false if the timeout has expired 
+Fetch the result. Waits for result until container has valid result. Throws exception if exception was stored as a result. Throws exception on invalid container state. get(timeoutNs[, dst]) -> retval, dst Retrieving the result with timeout 
 ```{note}
 Result or stored exception can be fetched only once.
 ```
@@ -891,18 +897,19 @@ Result or stored exception can be fetched only once.
 
 :param self: 
 :type self: 
-:param timeoutNs: 
+:param timeoutNs: [in] timeout in nanoseconds, -1 for infinite wait
 :type timeoutNs: float
-:param dst: 
+:param dst: [out] destination array
 :type dst: cv2.typing.MatLike | None
-:rettype: tuple[bool, cv2.typing.MatLike]
+:return: true if result is ready, false if the timeout has expired
+:rtype: tuple[bool, cv2.typing.MatLike]
 ````
 
 ````{py:method} get([, dst]) -> dst
 
 
 
-Fetch the result. @param[out] dst destination array Waits for result until container has valid result. Throws exception if exception was stored as a result. Throws exception on invalid container state. get(timeoutNs[, dst]) -> retval, dst Retrieving the result with timeout @param[out] dst destination array @param[in] timeoutNs timeout in nanoseconds, -1 for infinite wait @returns true if result is ready, false if the timeout has expired 
+Fetch the result. Waits for result until container has valid result. Throws exception if exception was stored as a result. Throws exception on invalid container state. get(timeoutNs[, dst]) -> retval, dst Retrieving the result with timeout 
 ```{note}
 Result or stored exception can be fetched only once.
 ```
@@ -913,11 +920,12 @@ Result or stored exception can be fetched only once.
 
 :param self: 
 :type self: 
-:param timeoutNs: 
+:param timeoutNs: [in] timeout in nanoseconds, -1 for infinite wait
 :type timeoutNs: float
-:param dst: 
+:param dst: [out] destination array
 :type dst: UMat | None
-:rettype: tuple[bool, UMat]
+:return: true if result is ready, false if the timeout has expired
+:rtype: tuple[bool, UMat]
 ````
 
 ````{py:method} __init__(self)
@@ -928,7 +936,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 
 :param self: 
 :type self: 
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} release() -> None
@@ -939,7 +947,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 
 :param self: 
 :type self: 
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} wait_for(timeoutNs) -> retval
@@ -952,7 +960,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 :type self: 
 :param timeoutNs: 
 :type timeoutNs: float
-:rettype: bool
+:rtype: bool
 ````
 
 ````{py:method} valid() -> retval
@@ -963,7 +971,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 
 :param self: 
 :type self: 
-:rettype: bool
+:rtype: bool
 ````
 
 
@@ -988,7 +996,7 @@ Brute-force matcher create method.
 :type normType: int
 :param crossCheck: If it is false, this is will be default BFMatcher behaviour when it finds the knearest neighbors for each query descriptor. If crossCheck==true, then the knnMatch() method with k=1 will only return pairs (i,j) such that for i-th query descriptor the j-th descriptor in the matcher's collection is the nearest and vice versa, i.e. the BFMatcher will only return consistent pairs. Such technique usually produces best results with minimal number of outliers when there are enough matches. This is alternative to the ratio test, used by D. Lowe in SIFT paper. 
 :type crossCheck: bool
-:rettype: BFMatcher
+:rtype: BFMatcher
 ````
 
 ````{py:method} __init__(self, normType: int=..., crossCheck: bool=...)
@@ -1003,7 +1011,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 :type normType: int
 :param crossCheck: 
 :type crossCheck: bool
-:rettype: None
+:rtype: None
 ````
 
 
@@ -1027,7 +1035,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 :type dextractor: Feature2D
 :param dmatcher: 
 :type dmatcher: DescriptorMatcher
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} setVocabulary(vocabulary) -> None
@@ -1040,7 +1048,7 @@ Sets a visual vocabulary.
 :type self: 
 :param vocabulary: Vocabulary (can be trained using the inheritor of BOWTrainer ). Each row of thevocabulary is a visual word (cluster center). 
 :type vocabulary: cv2.typing.MatLike
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getVocabulary() -> retval
@@ -1051,7 +1059,7 @@ Returns the set vocabulary.
 
 :param self: 
 :type self: 
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 ````{py:method} compute(image, keypoints[, imgDescriptor]) -> imgDescriptor
@@ -1072,7 +1080,7 @@ Returns the set vocabulary.
 :type keypointDescriptors: 
 :param pointIdxsOfClusters: Indices of keypoints that belong to the cluster. This means thatpointIdxsOfClusters[i] are keypoint indices that belong to the i -th cluster (word of vocabulary) returned if it is non-zero. 
 :type pointIdxsOfClusters: 
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 ````{py:method} descriptorSize() -> retval
@@ -1083,7 +1091,7 @@ Returns an image descriptor size if the vocabulary is set. Otherwise, it returns
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} descriptorType() -> retval
@@ -1094,7 +1102,7 @@ Returns an image descriptor type.
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 
@@ -1115,7 +1123,7 @@ cluster(descriptors) -> retval
 
 :param self: 
 :type self: 
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 ````{py:method} cluster() -> retval
@@ -1129,7 +1137,7 @@ cluster(descriptors) -> retval
 :type self: 
 :param descriptors: 
 :type descriptors: cv2.typing.MatLike
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 ````{py:method} __init__(self, clusterCount: int, termcrit: cv2.typing.TermCriteria=..., attempts: int=..., flags: int=...)
@@ -1148,7 +1156,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 :type attempts: int
 :param flags: 
 :type flags: int
-:rettype: None
+:rtype: None
 ````
 
 
@@ -1171,7 +1179,7 @@ Clusters train descriptors.
 :type self: 
 :param descriptors: Descriptors to cluster. Each row of the descriptors matrix is a descriptor.Descriptors are not added to the inner train descriptor set. 
 :type descriptors: 
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 ````{py:method} cluster() -> retval
@@ -1185,7 +1193,7 @@ Clusters train descriptors.
 :type self: 
 :param descriptors: Descriptors to cluster. Each row of the descriptors matrix is a descriptor.Descriptors are not added to the inner train descriptor set. 
 :type descriptors: cv2.typing.MatLike
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 ````{py:method} add(descriptors) -> None
@@ -1198,7 +1206,7 @@ The training set is clustered using clustermethod to construct the vocabulary.
 :type self: 
 :param descriptors: Descriptors to add to a training set. Each row of the descriptors matrix is adescriptor. 
 :type descriptors: cv2.typing.MatLike
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getDescriptors() -> retval
@@ -1209,7 +1217,7 @@ Returns a training set of descriptors.
 
 :param self: 
 :type self: 
-:rettype: _typing.Sequence[cv2.typing.MatLike]
+:rtype: _typing.Sequence[cv2.typing.MatLike]
 ````
 
 ````{py:method} descriptorsCount() -> retval
@@ -1220,7 +1228,7 @@ Returns the count of all descriptors stored in the training set.
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} clear() -> None
@@ -1231,7 +1239,7 @@ Returns the count of all descriptors stored in the training set.
 
 :param self: 
 :type self: 
-:rettype: None
+:rtype: None
 ````
 
 
@@ -1268,7 +1276,7 @@ create(radiusList, numberList[, dMax[, dMin[, indexChange]]]) -> retval create(t
 :type dMin: 
 :param indexChange: index remapping of the bits.
 :type indexChange: 
-:rettype: BRISK
+:rtype: BRISK
 ````
 
 ````{py:method} create([, thresh[, octaves[, patternScale]]]) -> retval
@@ -1296,7 +1304,7 @@ create(radiusList, numberList[, dMax[, dMin[, indexChange]]]) -> retval create(t
 :type octaves: 
 :param patternScale: apply this scale to the pattern used for sampling the neighbourhood of akeypoint. 
 :type patternScale: 
-:rettype: BRISK
+:rtype: BRISK
 ````
 
 ````{py:method} create([, thresh[, octaves[, patternScale]]]) -> retval
@@ -1324,7 +1332,7 @@ create(radiusList, numberList[, dMax[, dMin[, indexChange]]]) -> retval create(t
 :type indexChange: _typing.Sequence[int]
 :param patternScale: apply this scale to the pattern used for sampling the neighbourhood of akeypoint. 
 :type patternScale: 
-:rettype: BRISK
+:rtype: BRISK
 ````
 
 ````{py:method} getDefaultName() -> retval
@@ -1335,7 +1343,7 @@ create(radiusList, numberList[, dMax[, dMin[, indexChange]]]) -> retval create(t
 
 :param self: 
 :type self: 
-:rettype: str
+:rtype: str
 ````
 
 ````{py:method} setThreshold(threshold) -> None
@@ -1348,7 +1356,7 @@ Set detection threshold.
 :type self: 
 :param threshold: AGAST detection threshold score.
 :type threshold: int
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getThreshold() -> retval
@@ -1359,7 +1367,7 @@ Set detection threshold.
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} setOctaves(octaves) -> None
@@ -1372,7 +1380,7 @@ Set detection octaves.
 :type self: 
 :param octaves: detection octaves. Use 0 to do single scale.
 :type octaves: int
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getOctaves() -> retval
@@ -1383,7 +1391,7 @@ Set detection octaves.
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} setPatternScale(patternScale) -> None
@@ -1396,7 +1404,7 @@ Set detection patternScale.
 :type self: 
 :param patternScale: apply this scale to the pattern used for sampling the neighbourhood of akeypoint. 
 :type patternScale: float
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getPatternScale() -> retval
@@ -1407,7 +1415,7 @@ Set detection patternScale.
 
 :param self: 
 :type self: 
-:rettype: float
+:rtype: float
 ````
 
 
@@ -1434,7 +1442,7 @@ Computes a foreground mask.
 :type fgmask: cv2.typing.MatLike | None
 :param learningRate: The value between 0 and 1 that indicates how fast the background model islearnt. Negative parameter value makes the algorithm to use some automatically chosen learning rate. 0 means that the background model is not updated at all, 1 means that the background model is completely reinitialized from the last frame. 
 :type learningRate: float
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 ````{py:method} apply(image[, fgmask[, learningRate]]) -> fgmask
@@ -1452,7 +1460,7 @@ Computes a foreground mask.
 :type fgmask: UMat | None
 :param learningRate: The value between 0 and 1 that indicates how fast the background model islearnt. Negative parameter value makes the algorithm to use some automatically chosen learning rate. 0 means that the background model is not updated at all, 1 means that the background model is completely reinitialized from the last frame. 
 :type learningRate: float
-:rettype: UMat
+:rtype: UMat
 ````
 
 ````{py:method} getBackgroundImage([, backgroundImage]) -> backgroundImage
@@ -1469,7 +1477,7 @@ Sometimes the background image can be very blurry, as it contain the average bac
 :type self: 
 :param backgroundImage: The output background image.
 :type backgroundImage: cv2.typing.MatLike | None
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 ````{py:method} getBackgroundImage([, backgroundImage]) -> backgroundImage
@@ -1486,7 +1494,7 @@ Sometimes the background image can be very blurry, as it contain the average bac
 :type self: 
 :param backgroundImage: The output background image.
 :type backgroundImage: UMat | None
-:rettype: UMat
+:rtype: UMat
 ````
 
 
@@ -1506,7 +1514,7 @@ Returns the number of last frames that affect the background model
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} setHistory(history) -> None
@@ -1519,7 +1527,7 @@ Sets the number of last frames that affect the background model
 :type self: 
 :param history: 
 :type history: int
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getNSamples() -> retval
@@ -1530,7 +1538,7 @@ Returns the number of data samples in the background model
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} setNSamples(_nN) -> None
@@ -1543,7 +1551,7 @@ The model needs to be reinitalized to reserve memory.
 :type self: 
 :param _nN: 
 :type _nN: int
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getDist2Threshold() -> retval
@@ -1554,7 +1562,7 @@ The threshold on the squared distance between the pixel and the sample to decide
 
 :param self: 
 :type self: 
-:rettype: float
+:rtype: float
 ````
 
 ````{py:method} setDist2Threshold(_dist2Threshold) -> None
@@ -1567,7 +1575,7 @@ Sets the threshold on the squared distance
 :type self: 
 :param _dist2Threshold: 
 :type _dist2Threshold: float
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getkNNSamples() -> retval
@@ -1578,7 +1586,7 @@ K is the number of samples that need to be within dist2Threshold in order to dec
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} setkNNSamples(_nkNN) -> None
@@ -1591,7 +1599,7 @@ Sets the k in the kNN. How many nearest neighbours need to match.
 :type self: 
 :param _nkNN: 
 :type _nkNN: int
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getDetectShadows() -> retval
@@ -1602,7 +1610,7 @@ If true, the algorithm detects shadows and marks them. See createBackgroundSubtr
 
 :param self: 
 :type self: 
-:rettype: bool
+:rtype: bool
 ````
 
 ````{py:method} setDetectShadows(detectShadows) -> None
@@ -1615,7 +1623,7 @@ Enables or disables shadow detection
 :type self: 
 :param detectShadows: 
 :type detectShadows: bool
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getShadowValue() -> retval
@@ -1626,7 +1634,7 @@ Shadow value is the value used to mark shadows in the foreground mask. Default v
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} setShadowValue(value) -> None
@@ -1639,7 +1647,7 @@ Sets the shadow value
 :type self: 
 :param value: 
 :type value: int
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getShadowThreshold() -> retval
@@ -1650,7 +1658,7 @@ A shadow is detected if pixel is a darker version of the background. The shadow 
 
 :param self: 
 :type self: 
-:rettype: float
+:rtype: float
 ````
 
 ````{py:method} setShadowThreshold(threshold) -> None
@@ -1663,7 +1671,7 @@ Sets the shadow threshold
 :type self: 
 :param threshold: 
 :type threshold: float
-:rettype: None
+:rtype: None
 ````
 
 
@@ -1690,7 +1698,7 @@ Computes a foreground mask.
 :type fgmask: cv2.typing.MatLike | None
 :param learningRate: The value between 0 and 1 that indicates how fast the background model islearnt. Negative parameter value makes the algorithm to use some automatically chosen learning rate. 0 means that the background model is not updated at all, 1 means that the background model is completely reinitialized from the last frame. 
 :type learningRate: float
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 ````{py:method} apply(image[, fgmask[, learningRate]]) -> fgmask
@@ -1708,7 +1716,7 @@ Computes a foreground mask.
 :type fgmask: UMat | None
 :param learningRate: The value between 0 and 1 that indicates how fast the background model islearnt. Negative parameter value makes the algorithm to use some automatically chosen learning rate. 0 means that the background model is not updated at all, 1 means that the background model is completely reinitialized from the last frame. 
 :type learningRate: float
-:rettype: UMat
+:rtype: UMat
 ````
 
 ````{py:method} getHistory() -> retval
@@ -1719,7 +1727,7 @@ Returns the number of last frames that affect the background model
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} setHistory(history) -> None
@@ -1732,7 +1740,7 @@ Sets the number of last frames that affect the background model
 :type self: 
 :param history: 
 :type history: int
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getNMixtures() -> retval
@@ -1743,7 +1751,7 @@ Returns the number of gaussian components in the background model
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} setNMixtures(nmixtures) -> None
@@ -1756,7 +1764,7 @@ The model needs to be reinitalized to reserve memory.
 :type self: 
 :param nmixtures: 
 :type nmixtures: int
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getBackgroundRatio() -> retval
@@ -1767,7 +1775,7 @@ If a foreground pixel keeps semi-constant value for about backgroundRatio\*histo
 
 :param self: 
 :type self: 
-:rettype: float
+:rtype: float
 ````
 
 ````{py:method} setBackgroundRatio(ratio) -> None
@@ -1780,7 +1788,7 @@ Sets the "background ratio" parameter of the algorithm
 :type self: 
 :param ratio: 
 :type ratio: float
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getVarThreshold() -> retval
@@ -1791,7 +1799,7 @@ The main threshold on the squared Mahalanobis distance to decide if the sample i
 
 :param self: 
 :type self: 
-:rettype: float
+:rtype: float
 ````
 
 ````{py:method} setVarThreshold(varThreshold) -> None
@@ -1804,7 +1812,7 @@ Sets the variance threshold for the pixel-model match
 :type self: 
 :param varThreshold: 
 :type varThreshold: float
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getVarThresholdGen() -> retval
@@ -1815,7 +1823,7 @@ Threshold for the squared Mahalanobis distance that helps decide when a sample i
 
 :param self: 
 :type self: 
-:rettype: float
+:rtype: float
 ````
 
 ````{py:method} setVarThresholdGen(varThresholdGen) -> None
@@ -1828,7 +1836,7 @@ Sets the variance threshold for the pixel-model match used for new mixture compo
 :type self: 
 :param varThresholdGen: 
 :type varThresholdGen: float
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getVarInit() -> retval
@@ -1839,7 +1847,7 @@ Returns the initial variance of each gaussian component
 
 :param self: 
 :type self: 
-:rettype: float
+:rtype: float
 ````
 
 ````{py:method} setVarInit(varInit) -> None
@@ -1852,7 +1860,7 @@ Sets the initial variance of each gaussian component
 :type self: 
 :param varInit: 
 :type varInit: float
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getVarMin() -> retval
@@ -1863,7 +1871,7 @@ Sets the initial variance of each gaussian component
 
 :param self: 
 :type self: 
-:rettype: float
+:rtype: float
 ````
 
 ````{py:method} setVarMin(varMin) -> None
@@ -1876,7 +1884,7 @@ Sets the initial variance of each gaussian component
 :type self: 
 :param varMin: 
 :type varMin: float
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getVarMax() -> retval
@@ -1887,7 +1895,7 @@ Sets the initial variance of each gaussian component
 
 :param self: 
 :type self: 
-:rettype: float
+:rtype: float
 ````
 
 ````{py:method} setVarMax(varMax) -> None
@@ -1900,7 +1908,7 @@ Sets the initial variance of each gaussian component
 :type self: 
 :param varMax: 
 :type varMax: float
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getComplexityReductionThreshold() -> retval
@@ -1911,7 +1919,7 @@ This parameter defines the number of samples needed to accept to prove the compo
 
 :param self: 
 :type self: 
-:rettype: float
+:rtype: float
 ````
 
 ````{py:method} setComplexityReductionThreshold(ct) -> None
@@ -1924,7 +1932,7 @@ Sets the complexity reduction threshold
 :type self: 
 :param ct: 
 :type ct: float
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getDetectShadows() -> retval
@@ -1935,7 +1943,7 @@ If true, the algorithm detects shadows and marks them. See createBackgroundSubtr
 
 :param self: 
 :type self: 
-:rettype: bool
+:rtype: bool
 ````
 
 ````{py:method} setDetectShadows(detectShadows) -> None
@@ -1948,7 +1956,7 @@ Enables or disables shadow detection
 :type self: 
 :param detectShadows: 
 :type detectShadows: bool
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getShadowValue() -> retval
@@ -1959,7 +1967,7 @@ Shadow value is the value used to mark shadows in the foreground mask. Default v
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} setShadowValue(value) -> None
@@ -1972,7 +1980,7 @@ Sets the shadow value
 :type self: 
 :param value: 
 :type value: int
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getShadowThreshold() -> retval
@@ -1983,7 +1991,7 @@ A shadow is detected if pixel is a darker version of the background. The shadow 
 
 :param self: 
 :type self: 
-:rettype: float
+:rtype: float
 ````
 
 ````{py:method} setShadowThreshold(threshold) -> None
@@ -1996,7 +2004,7 @@ Sets the shadow threshold
 :type self: 
 :param threshold: 
 :type threshold: float
-:rettype: None
+:rtype: None
 ````
 
 
@@ -2030,7 +2038,7 @@ Equalizes the histogram of a grayscale image using Contrast Limited Adaptive His
 :type src: cv2.typing.MatLike
 :param dst: Destination image.
 :type dst: cv2.typing.MatLike | None
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 ````{py:method} apply(src[, dst]) -> dst
@@ -2046,7 +2054,7 @@ Equalizes the histogram of a grayscale image using Contrast Limited Adaptive His
 :type src: UMat
 :param dst: Destination image.
 :type dst: UMat | None
-:rettype: UMat
+:rtype: UMat
 ````
 
 ````{py:method} setClipLimit(clipLimit) -> None
@@ -2059,7 +2067,7 @@ Sets threshold for contrast limiting.
 :type self: 
 :param clipLimit: threshold value.
 :type clipLimit: float
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getClipLimit() -> retval
@@ -2070,7 +2078,7 @@ Sets threshold for contrast limiting.
 
 :param self: 
 :type self: 
-:rettype: float
+:rtype: float
 ````
 
 ````{py:method} setTilesGridSize(tileGridSize) -> None
@@ -2083,7 +2091,7 @@ Sets size of grid for histogram equalization. Input image will be divided intoeq
 :type self: 
 :param tileGridSize: defines the number of tiles in row and column.
 :type tileGridSize: cv2.typing.Size
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getTilesGridSize() -> retval
@@ -2094,7 +2102,7 @@ Sets size of grid for histogram equalization. Input image will be divided intoeq
 
 :param self: 
 :type self: 
-:rettype: cv2.typing.Size
+:rtype: cv2.typing.Size
 ````
 
 ````{py:method} collectGarbage() -> None
@@ -2105,7 +2113,7 @@ Sets size of grid for histogram equalization. Input image will be divided intoeq
 
 :param self: 
 :type self: 
-:rettype: None
+:rtype: None
 ````
 
 
@@ -2132,7 +2140,7 @@ Recovers inverse camera response.
 :type times: cv2.typing.MatLike
 :param dst: 256x1 matrix with inverse camera response function
 :type dst: cv2.typing.MatLike | None
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 ````{py:method} process(src, times[, dst]) -> dst
@@ -2150,7 +2158,7 @@ Recovers inverse camera response.
 :type times: UMat
 :param dst: 256x1 matrix with inverse camera response function
 :type dst: UMat | None
-:rettype: UMat
+:rtype: UMat
 ````
 
 
@@ -2170,7 +2178,7 @@ Recovers inverse camera response.
 
 :param self: 
 :type self: 
-:rettype: float
+:rtype: float
 ````
 
 ````{py:method} setLambda(lambda_) -> None
@@ -2183,7 +2191,7 @@ Recovers inverse camera response.
 :type self: 
 :param lambda_: 
 :type lambda_: float
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getSamples() -> retval
@@ -2194,7 +2202,7 @@ Recovers inverse camera response.
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} setSamples(samples) -> None
@@ -2207,7 +2215,7 @@ Recovers inverse camera response.
 :type self: 
 :param samples: 
 :type samples: int
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getRandom() -> retval
@@ -2218,7 +2226,7 @@ Recovers inverse camera response.
 
 :param self: 
 :type self: 
-:rettype: bool
+:rtype: bool
 ````
 
 ````{py:method} setRandom(random) -> None
@@ -2231,7 +2239,7 @@ Recovers inverse camera response.
 :type self: 
 :param random: 
 :type random: bool
-:rettype: None
+:rtype: None
 ````
 
 
@@ -2251,7 +2259,7 @@ Recovers inverse camera response.
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} setMaxIter(max_iter) -> None
@@ -2264,7 +2272,7 @@ Recovers inverse camera response.
 :type self: 
 :param max_iter: 
 :type max_iter: int
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getThreshold() -> retval
@@ -2275,7 +2283,7 @@ Recovers inverse camera response.
 
 :param self: 
 :type self: 
-:rettype: float
+:rtype: float
 ````
 
 ````{py:method} setThreshold(threshold) -> None
@@ -2288,7 +2296,7 @@ Recovers inverse camera response.
 :type self: 
 :param threshold: 
 :type threshold: float
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getRadiance() -> retval
@@ -2299,7 +2307,7 @@ Recovers inverse camera response.
 
 :param self: 
 :type self: 
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -2320,7 +2328,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 
 :param self: 
 :type self: 
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} __init__(self, filename: str)
@@ -2334,7 +2342,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 :type self: 
 :param filename: 
 :type filename: str
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} detectMultiScale(image[, scaleFactor[, minNeighbors[, flags[, minSize[, maxSize]]]]]) -> objects
@@ -2360,7 +2368,7 @@ Detects objects of different sizes in the input image. The detected objects are 
 :type maxSize: cv2.typing.Size
 :param objects: Vector of rectangles where each rectangle contains the detected object, therectangles may be partially outside the original image. 
 :type objects: 
-:rettype: _typing.Sequence[cv2.typing.Rect]
+:rtype: _typing.Sequence[cv2.typing.Rect]
 ````
 
 ````{py:method} detectMultiScale(image[, scaleFactor[, minNeighbors[, flags[, minSize[, maxSize]]]]]) -> objects
@@ -2386,7 +2394,7 @@ Detects objects of different sizes in the input image. The detected objects are 
 :type maxSize: cv2.typing.Size
 :param objects: Vector of rectangles where each rectangle contains the detected object, therectangles may be partially outside the original image. 
 :type objects: 
-:rettype: _typing.Sequence[cv2.typing.Rect]
+:rtype: _typing.Sequence[cv2.typing.Rect]
 ````
 
 ````{py:method} detectMultiScale2(image[, scaleFactor[, minNeighbors[, flags[, minSize[, maxSize]]]]]) -> objects, numDetections
@@ -2414,7 +2422,7 @@ Detects objects of different sizes in the input image. The detected objects are 
 :type objects: 
 :param numDetections: Vector of detection numbers for the corresponding objects. An object's numberof detections is the number of neighboring positively classified rectangles that were joined together to form the object. 
 :type numDetections: 
-:rettype: tuple[_typing.Sequence[cv2.typing.Rect], _typing.Sequence[int]]
+:rtype: tuple[_typing.Sequence[cv2.typing.Rect], _typing.Sequence[int]]
 ````
 
 ````{py:method} detectMultiScale2(image[, scaleFactor[, minNeighbors[, flags[, minSize[, maxSize]]]]]) -> objects, numDetections
@@ -2442,7 +2450,7 @@ Detects objects of different sizes in the input image. The detected objects are 
 :type objects: 
 :param numDetections: Vector of detection numbers for the corresponding objects. An object's numberof detections is the number of neighboring positively classified rectangles that were joined together to form the object. 
 :type numDetections: 
-:rettype: tuple[_typing.Sequence[cv2.typing.Rect], _typing.Sequence[int]]
+:rtype: tuple[_typing.Sequence[cv2.typing.Rect], _typing.Sequence[int]]
 ````
 
 ````{py:method} detectMultiScale3(image[, scaleFactor[, minNeighbors[, flags[, minSize[, maxSize[, outputRejectLevels]]]]]]) -> objects, rejectLevels, levelWeights
@@ -2468,7 +2476,7 @@ Detects objects of different sizes in the input image. The detected objects are 
 :type maxSize: cv2.typing.Size
 :param outputRejectLevels: 
 :type outputRejectLevels: bool
-:rettype: tuple[_typing.Sequence[cv2.typing.Rect], _typing.Sequence[int], _typing.Sequence[float]]
+:rtype: tuple[_typing.Sequence[cv2.typing.Rect], _typing.Sequence[int], _typing.Sequence[float]]
 ````
 
 ````{py:method} detectMultiScale3(image[, scaleFactor[, minNeighbors[, flags[, minSize[, maxSize[, outputRejectLevels]]]]]]) -> objects, rejectLevels, levelWeights
@@ -2494,7 +2502,7 @@ Detects objects of different sizes in the input image. The detected objects are 
 :type maxSize: cv2.typing.Size
 :param outputRejectLevels: 
 :type outputRejectLevels: bool
-:rettype: tuple[_typing.Sequence[cv2.typing.Rect], _typing.Sequence[int], _typing.Sequence[float]]
+:rtype: tuple[_typing.Sequence[cv2.typing.Rect], _typing.Sequence[int], _typing.Sequence[float]]
 ````
 
 ````{py:method} empty() -> retval
@@ -2505,7 +2513,7 @@ Checks whether the classifier has been loaded.
 
 :param self: 
 :type self: 
-:rettype: bool
+:rtype: bool
 ````
 
 ````{py:method} load(filename) -> retval
@@ -2518,7 +2526,7 @@ Loads a classifier from a file.
 :type self: 
 :param filename: Name of the file from which the classifier is loaded. The file may contain an oldHAAR classifier trained by the haartraining application or a new cascade classifier trained by the traincascade application. 
 :type filename: str
-:rettype: bool
+:rtype: bool
 ````
 
 ````{py:method} read(node) -> retval
@@ -2534,7 +2542,7 @@ The file may contain a new cascade classifier (trained by the traincascade appli
 :type self: 
 :param node: 
 :type node: FileNode
-:rettype: bool
+:rtype: bool
 ````
 
 ````{py:method} isOldFormatCascade() -> retval
@@ -2545,7 +2553,7 @@ The file may contain a new cascade classifier (trained by the traincascade appli
 
 :param self: 
 :type self: 
-:rettype: bool
+:rtype: bool
 ````
 
 ````{py:method} getOriginalWindowSize() -> retval
@@ -2556,7 +2564,7 @@ The file may contain a new cascade classifier (trained by the traincascade appli
 
 :param self: 
 :type self: 
-:rettype: cv2.typing.Size
+:rtype: cv2.typing.Size
 ````
 
 ````{py:method} getFeatureType() -> retval
@@ -2567,7 +2575,7 @@ The file may contain a new cascade classifier (trained by the traincascade appli
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} convert(oldcascade, newcascade) -> retval
@@ -2581,7 +2589,7 @@ The file may contain a new cascade classifier (trained by the traincascade appli
 :type oldcascade: str
 :param newcascade: 
 :type newcascade: str
-:rettype: bool
+:rtype: bool
 ````
 
 
@@ -2601,7 +2609,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 
 :param self: 
 :type self: 
-:rettype: None
+:rtype: None
 ````
 
 ```{py:attribute} densityNeighborhoodSize
@@ -2684,7 +2692,7 @@ Creates an instance of DISOpticalFlow
 :type cls: 
 :param preset: one of PRESET_ULTRAFAST, PRESET_FAST and PRESET_MEDIUM
 :type preset: int
-:rettype: DISOpticalFlow
+:rtype: DISOpticalFlow
 ````
 
 ````{py:method} getFinestScale() -> retval
@@ -2695,7 +2703,7 @@ Finest level of the Gaussian pyramid on which the flow is computed (zero levelco
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} setFinestScale(val) -> None
@@ -2708,7 +2716,7 @@ Finest level of the Gaussian pyramid on which the flow is computed (zero levelco
 :type self: 
 :param val: 
 :type val: int
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getPatchSize() -> retval
@@ -2719,7 +2727,7 @@ Size of an image patch for matching (in pixels). Normally, default 8x8 patches w
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} setPatchSize(val) -> None
@@ -2732,7 +2740,7 @@ Size of an image patch for matching (in pixels). Normally, default 8x8 patches w
 :type self: 
 :param val: 
 :type val: int
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getPatchStride() -> retval
@@ -2743,7 +2751,7 @@ Stride between neighbor patches. Must be less than patch size. Lower values corr
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} setPatchStride(val) -> None
@@ -2756,7 +2764,7 @@ Stride between neighbor patches. Must be less than patch size. Lower values corr
 :type self: 
 :param val: 
 :type val: int
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getGradientDescentIterations() -> retval
@@ -2767,7 +2775,7 @@ Maximum number of gradient descent iterations in the patch inverse search stage.
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} setGradientDescentIterations(val) -> None
@@ -2780,7 +2788,7 @@ Maximum number of gradient descent iterations in the patch inverse search stage.
 :type self: 
 :param val: 
 :type val: int
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getVariationalRefinementIterations() -> retval
@@ -2791,7 +2799,7 @@ Number of fixed point iterations of variational refinement per scale. Set to zer
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} setVariationalRefinementIterations(val) -> None
@@ -2804,7 +2812,7 @@ Number of fixed point iterations of variational refinement per scale. Set to zer
 :type self: 
 :param val: 
 :type val: int
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getVariationalRefinementAlpha() -> retval
@@ -2815,7 +2823,7 @@ Weight of the smoothness term@see setVariationalRefinementAlpha
 
 :param self: 
 :type self: 
-:rettype: float
+:rtype: float
 ````
 
 ````{py:method} setVariationalRefinementAlpha(val) -> None
@@ -2828,7 +2836,7 @@ Weight of the smoothness term@see setVariationalRefinementAlpha
 :type self: 
 :param val: 
 :type val: float
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getVariationalRefinementDelta() -> retval
@@ -2839,7 +2847,7 @@ Weight of the color constancy term@see setVariationalRefinementDelta
 
 :param self: 
 :type self: 
-:rettype: float
+:rtype: float
 ````
 
 ````{py:method} setVariationalRefinementDelta(val) -> None
@@ -2852,7 +2860,7 @@ Weight of the color constancy term@see setVariationalRefinementDelta
 :type self: 
 :param val: 
 :type val: float
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getVariationalRefinementGamma() -> retval
@@ -2863,7 +2871,7 @@ Weight of the gradient constancy term@see setVariationalRefinementGamma
 
 :param self: 
 :type self: 
-:rettype: float
+:rtype: float
 ````
 
 ````{py:method} setVariationalRefinementGamma(val) -> None
@@ -2876,7 +2884,7 @@ Weight of the gradient constancy term@see setVariationalRefinementGamma
 :type self: 
 :param val: 
 :type val: float
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getUseMeanNormalization() -> retval
@@ -2887,7 +2895,7 @@ Whether to use mean-normalization of patches when computing patch distance. It i
 
 :param self: 
 :type self: 
-:rettype: bool
+:rtype: bool
 ````
 
 ````{py:method} setUseMeanNormalization(val) -> None
@@ -2900,7 +2908,7 @@ Whether to use mean-normalization of patches when computing patch distance. It i
 :type self: 
 :param val: 
 :type val: bool
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getUseSpatialPropagation() -> retval
@@ -2911,7 +2919,7 @@ Whether to use spatial propagation of good optical flow vectors. This option is 
 
 :param self: 
 :type self: 
-:rettype: bool
+:rtype: bool
 ````
 
 ````{py:method} setUseSpatialPropagation(val) -> None
@@ -2924,7 +2932,7 @@ Whether to use spatial propagation of good optical flow vectors. This option is 
 :type self: 
 :param val: 
 :type val: bool
-:rettype: None
+:rtype: None
 ````
 
 
@@ -2945,7 +2953,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 
 :param self: 
 :type self: 
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} __init__(self, _queryIdx: int, _trainIdx: int, _distance: float)
@@ -2963,7 +2971,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 :type _trainIdx: int
 :param _distance: 
 :type _distance: float
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} __init__(self, _queryIdx: int, _trainIdx: int, _imgIdx: int, _distance: float)
@@ -2983,7 +2991,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 :type _imgIdx: int
 :param _distance: 
 :type _distance: float
-:rettype: None
+:rtype: None
 ````
 
 ```{py:attribute} queryIdx
@@ -3026,7 +3034,7 @@ Calculates an optical flow.
 :type I1: cv2.typing.MatLike
 :param flow: computed flow image that has the same size as prev and type CV_32FC2.
 :type flow: cv2.typing.MatLike
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 ````{py:method} calc(I0, I1, flow) -> flow
@@ -3044,7 +3052,7 @@ Calculates an optical flow.
 :type I1: UMat
 :param flow: computed flow image that has the same size as prev and type CV_32FC2.
 :type flow: UMat
-:rettype: UMat
+:rtype: UMat
 ````
 
 ````{py:method} collectGarbage() -> None
@@ -3055,7 +3063,7 @@ Releases all inner buffers.
 
 :param self: 
 :type self: 
-:rettype: None
+:rtype: None
 ````
 
 
@@ -3078,7 +3086,7 @@ create(matcherType) -> retval
 :type cls: 
 :param descriptorMatcherType: Descriptor matcher type. Now the following matcher types aresupported: -   `BruteForce` (it uses L2 ) -   `BruteForce-L1` -   `BruteForce-Hamming` -   `BruteForce-Hamming(2)` -   `FlannBased` 
 :type descriptorMatcherType: str
-:rettype: DescriptorMatcher
+:rtype: DescriptorMatcher
 ````
 
 ````{py:method} create(descriptorMatcherType) -> retval
@@ -3094,7 +3102,7 @@ create(matcherType) -> retval
 :type matcherType: DescriptorMatcher_MatcherType
 :param descriptorMatcherType: Descriptor matcher type. Now the following matcher types aresupported: -   `BruteForce` (it uses L2 ) -   `BruteForce-L1` -   `BruteForce-Hamming` -   `BruteForce-Hamming(2)` -   `FlannBased` 
 :type descriptorMatcherType: 
-:rettype: DescriptorMatcher
+:rtype: DescriptorMatcher
 ````
 
 ````{py:method} add(descriptors) -> None
@@ -3108,7 +3116,7 @@ If the collection is not empty, the new descriptors are added to existing train 
 :type self: 
 :param descriptors: Descriptors to add. Each descriptors[i] is a set of descriptors from the sametrain image. 
 :type descriptors: _typing.Sequence[cv2.typing.MatLike]
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} add(descriptors) -> None
@@ -3122,7 +3130,7 @@ If the collection is not empty, the new descriptors are added to existing train 
 :type self: 
 :param descriptors: Descriptors to add. Each descriptors[i] is a set of descriptors from the sametrain image. 
 :type descriptors: _typing.Sequence[UMat]
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} match(queryDescriptors, trainDescriptors[, mask]) -> matches
@@ -3144,7 +3152,7 @@ In the first variant of this method, the train descriptors are passed as an inpu
 :type matches: 
 :param masks: Set of masks. Each masks[i] specifies permissible matches between the input querydescriptors and stored train descriptors from the i-th image trainDescCollection[i]. 
 :type masks: 
-:rettype: _typing.Sequence[DMatch]
+:rtype: _typing.Sequence[DMatch]
 ````
 
 ````{py:method} match(queryDescriptors, trainDescriptors[, mask]) -> matches
@@ -3166,7 +3174,7 @@ In the first variant of this method, the train descriptors are passed as an inpu
 :type matches: 
 :param masks: Set of masks. Each masks[i] specifies permissible matches between the input querydescriptors and stored train descriptors from the i-th image trainDescCollection[i]. 
 :type masks: 
-:rettype: _typing.Sequence[DMatch]
+:rtype: _typing.Sequence[DMatch]
 ````
 
 ````{py:method} match(queryDescriptors, trainDescriptors[, mask]) -> matches
@@ -3188,7 +3196,7 @@ In the first variant of this method, the train descriptors are passed as an inpu
 :type matches: 
 :param mask: Mask specifying permissible matches between an input query and train matrices ofdescriptors. 
 :type mask: 
-:rettype: _typing.Sequence[DMatch]
+:rtype: _typing.Sequence[DMatch]
 ````
 
 ````{py:method} match(queryDescriptors, trainDescriptors[, mask]) -> matches
@@ -3210,7 +3218,7 @@ In the first variant of this method, the train descriptors are passed as an inpu
 :type matches: 
 :param mask: Mask specifying permissible matches between an input query and train matrices ofdescriptors. 
 :type mask: 
-:rettype: _typing.Sequence[DMatch]
+:rtype: _typing.Sequence[DMatch]
 ````
 
 ````{py:method} knnMatch(queryDescriptors, trainDescriptors, k[, mask[, compactResult]]) -> matches
@@ -3236,7 +3244,7 @@ These extended variants of DescriptorMatcher::match methods find several best ma
 :type matches: 
 :param masks: Set of masks. Each masks[i] specifies permissible matches between the input querydescriptors and stored train descriptors from the i-th image trainDescCollection[i]. 
 :type masks: 
-:rettype: _typing.Sequence[_typing.Sequence[DMatch]]
+:rtype: _typing.Sequence[_typing.Sequence[DMatch]]
 ````
 
 ````{py:method} knnMatch(queryDescriptors, trainDescriptors, k[, mask[, compactResult]]) -> matches
@@ -3262,7 +3270,7 @@ These extended variants of DescriptorMatcher::match methods find several best ma
 :type matches: 
 :param masks: Set of masks. Each masks[i] specifies permissible matches between the input querydescriptors and stored train descriptors from the i-th image trainDescCollection[i]. 
 :type masks: 
-:rettype: _typing.Sequence[_typing.Sequence[DMatch]]
+:rtype: _typing.Sequence[_typing.Sequence[DMatch]]
 ````
 
 ````{py:method} knnMatch(queryDescriptors, trainDescriptors, k[, mask[, compactResult]]) -> matches
@@ -3288,7 +3296,7 @@ These extended variants of DescriptorMatcher::match methods find several best ma
 :type mask: 
 :param matches: Matches. Each matches[i] is k or less matches for the same query descriptor.
 :type matches: 
-:rettype: _typing.Sequence[_typing.Sequence[DMatch]]
+:rtype: _typing.Sequence[_typing.Sequence[DMatch]]
 ````
 
 ````{py:method} knnMatch(queryDescriptors, trainDescriptors, k[, mask[, compactResult]]) -> matches
@@ -3314,7 +3322,7 @@ These extended variants of DescriptorMatcher::match methods find several best ma
 :type mask: 
 :param matches: Matches. Each matches[i] is k or less matches for the same query descriptor.
 :type matches: 
-:rettype: _typing.Sequence[_typing.Sequence[DMatch]]
+:rtype: _typing.Sequence[_typing.Sequence[DMatch]]
 ````
 
 ````{py:method} radiusMatch(queryDescriptors, trainDescriptors, maxDistance[, mask[, compactResult]]) -> matches
@@ -3340,7 +3348,7 @@ For each query descriptor, the methods find such training descriptors that the d
 :type matches: 
 :param masks: Set of masks. Each masks[i] specifies permissible matches between the input querydescriptors and stored train descriptors from the i-th image trainDescCollection[i]. 
 :type masks: 
-:rettype: _typing.Sequence[_typing.Sequence[DMatch]]
+:rtype: _typing.Sequence[_typing.Sequence[DMatch]]
 ````
 
 ````{py:method} radiusMatch(queryDescriptors, trainDescriptors, maxDistance[, mask[, compactResult]]) -> matches
@@ -3366,7 +3374,7 @@ For each query descriptor, the methods find such training descriptors that the d
 :type matches: 
 :param masks: Set of masks. Each masks[i] specifies permissible matches between the input querydescriptors and stored train descriptors from the i-th image trainDescCollection[i]. 
 :type masks: 
-:rettype: _typing.Sequence[_typing.Sequence[DMatch]]
+:rtype: _typing.Sequence[_typing.Sequence[DMatch]]
 ````
 
 ````{py:method} radiusMatch(queryDescriptors, trainDescriptors, maxDistance[, mask[, compactResult]]) -> matches
@@ -3392,7 +3400,7 @@ For each query descriptor, the methods find such training descriptors that the d
 :type matches: 
 :param mask: Mask specifying permissible matches between an input query and train matrices ofdescriptors. 
 :type mask: 
-:rettype: _typing.Sequence[_typing.Sequence[DMatch]]
+:rtype: _typing.Sequence[_typing.Sequence[DMatch]]
 ````
 
 ````{py:method} radiusMatch(queryDescriptors, trainDescriptors, maxDistance[, mask[, compactResult]]) -> matches
@@ -3418,7 +3426,7 @@ For each query descriptor, the methods find such training descriptors that the d
 :type matches: 
 :param mask: Mask specifying permissible matches between an input query and train matrices ofdescriptors. 
 :type mask: 
-:rettype: _typing.Sequence[_typing.Sequence[DMatch]]
+:rtype: _typing.Sequence[_typing.Sequence[DMatch]]
 ````
 
 ````{py:method} write(fileName) -> None
@@ -3432,7 +3440,7 @@ write(fs, name) -> None
 :type self: 
 :param fileName: 
 :type fileName: str
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} write(fileName) -> None
@@ -3448,7 +3456,7 @@ write(fs, name) -> None
 :type fs: FileStorage
 :param name: 
 :type name: str
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} read(fileName) -> None
@@ -3462,7 +3470,7 @@ read(arg1) -> None
 :type self: 
 :param fileName: 
 :type fileName: str
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} read(fileName) -> None
@@ -3476,7 +3484,7 @@ read(arg1) -> None
 :type self: 
 :param arg1: 
 :type arg1: FileNode
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getTrainDescriptors() -> retval
@@ -3487,7 +3495,7 @@ Returns a constant link to the train descriptor collection trainDescCollection .
 
 :param self: 
 :type self: 
-:rettype: _typing.Sequence[cv2.typing.MatLike]
+:rtype: _typing.Sequence[cv2.typing.MatLike]
 ````
 
 ````{py:method} clear() -> None
@@ -3498,7 +3506,7 @@ Clears the train descriptor collections.
 
 :param self: 
 :type self: 
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} empty() -> retval
@@ -3509,7 +3517,7 @@ Returns true if there are no train descriptors in the both collections.
 
 :param self: 
 :type self: 
-:rettype: bool
+:rtype: bool
 ````
 
 ````{py:method} isMaskSupported() -> retval
@@ -3520,7 +3528,7 @@ Returns true if the descriptor matcher supports masking permissible matches.
 
 :param self: 
 :type self: 
-:rettype: bool
+:rtype: bool
 ````
 
 ````{py:method} train() -> None
@@ -3531,7 +3539,7 @@ Trains a descriptor matcher (for example, the flann index). In all methods to ma
 
 :param self: 
 :type self: 
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} clone([, emptyTrainData]) -> retval
@@ -3544,7 +3552,7 @@ Clones the matcher.
 :type self: 
 :param emptyTrainData: If emptyTrainData is false, the method creates a deep copy of the object,that is, copies both parameters and train data. If emptyTrainData is true, the method creates an object copy with the current parameters but with empty train data. 
 :type emptyTrainData: bool
-:rettype: DescriptorMatcher
+:rtype: DescriptorMatcher
 ````
 
 
@@ -3587,7 +3595,7 @@ create(framework, bufferModel, bufferConfig, input_size[, score_threshold[, nms_
 :type bufferModel: 
 :param bufferConfig: A buffer with a content of text file contains network configuration
 :type bufferConfig: 
-:rettype: FaceDetectorYN
+:rtype: FaceDetectorYN
 ````
 
 ````{py:method} create(model, config, input_size[, score_threshold[, nms_threshold[, top_k[, backend_id[, target_id]]]]]) -> retval
@@ -3621,7 +3629,7 @@ create(framework, bufferModel, bufferConfig, input_size[, score_threshold[, nms_
 :type model: 
 :param config: the path to the config file for compability, which is not requested for ONNX models
 :type config: 
-:rettype: FaceDetectorYN
+:rtype: FaceDetectorYN
 ````
 
 ````{py:method} detect(image[, faces]) -> retval, faces
@@ -3637,7 +3645,7 @@ Detects faces in the input image. Following is an example output.
 :type image: cv2.typing.MatLike
 :param faces: detection results stored in a 2D cv::Mat of shape [num_faces, 15]- 0-1: x, y of bbox top left corner - 2-3: width, height of bbox - 4-5: x, y of right eye (blue point in the example image) - 6-7: x, y of left eye (red point in the example image) - 8-9: x, y of nose tip (green point in the example image) - 10-11: x, y of right corner of mouth (pink point in the example image) - 12-13: x, y of left corner of mouth (yellow point in the example image) - 14: face score 
 :type faces: cv2.typing.MatLike | None
-:rettype: tuple[int, cv2.typing.MatLike]
+:rtype: tuple[int, cv2.typing.MatLike]
 ````
 
 ````{py:method} detect(image[, faces]) -> retval, faces
@@ -3653,7 +3661,7 @@ Detects faces in the input image. Following is an example output.
 :type image: UMat
 :param faces: detection results stored in a 2D cv::Mat of shape [num_faces, 15]- 0-1: x, y of bbox top left corner - 2-3: width, height of bbox - 4-5: x, y of right eye (blue point in the example image) - 6-7: x, y of left eye (red point in the example image) - 8-9: x, y of nose tip (green point in the example image) - 10-11: x, y of right corner of mouth (pink point in the example image) - 12-13: x, y of left corner of mouth (yellow point in the example image) - 14: face score 
 :type faces: UMat | None
-:rettype: tuple[int, UMat]
+:rtype: tuple[int, UMat]
 ````
 
 ````{py:method} setInputSize(input_size) -> None
@@ -3666,7 +3674,7 @@ Set the size for the network input, which overwrites the input size of creating 
 :type self: 
 :param input_size: the size of the input image
 :type input_size: cv2.typing.Size
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getInputSize() -> retval
@@ -3677,7 +3685,7 @@ Set the size for the network input, which overwrites the input size of creating 
 
 :param self: 
 :type self: 
-:rettype: cv2.typing.Size
+:rtype: cv2.typing.Size
 ````
 
 ````{py:method} setScoreThreshold(score_threshold) -> None
@@ -3690,7 +3698,7 @@ Set the score threshold to filter out bounding boxes of score less than the give
 :type self: 
 :param score_threshold: threshold for filtering out bounding boxes
 :type score_threshold: float
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getScoreThreshold() -> retval
@@ -3701,7 +3709,7 @@ Set the score threshold to filter out bounding boxes of score less than the give
 
 :param self: 
 :type self: 
-:rettype: float
+:rtype: float
 ````
 
 ````{py:method} setNMSThreshold(nms_threshold) -> None
@@ -3714,7 +3722,7 @@ Set the Non-maximum-suppression threshold to suppress bounding boxes that have I
 :type self: 
 :param nms_threshold: threshold for NMS operation
 :type nms_threshold: float
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getNMSThreshold() -> retval
@@ -3725,7 +3733,7 @@ Set the Non-maximum-suppression threshold to suppress bounding boxes that have I
 
 :param self: 
 :type self: 
-:rettype: float
+:rtype: float
 ````
 
 ````{py:method} setTopK(top_k) -> None
@@ -3738,7 +3746,7 @@ Set the number of bounding boxes preserved before NMS
 :type self: 
 :param top_k: the number of bounding boxes to preserve from top rank based on score
 :type top_k: int
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getTopK() -> retval
@@ -3749,7 +3757,7 @@ Set the number of bounding boxes preserved before NMS
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 
@@ -3778,7 +3786,7 @@ Creates an instance of this class with given parameters
 :type backend_id: int
 :param target_id: the id of target device
 :type target_id: int
-:rettype: FaceRecognizerSF
+:rtype: FaceRecognizerSF
 ````
 
 ````{py:method} alignCrop(src_img, face_box[, aligned_img]) -> aligned_img
@@ -3796,7 +3804,7 @@ Aligning image to put face on the standard position
 :type face_box: cv2.typing.MatLike
 :param aligned_img: output aligned image
 :type aligned_img: cv2.typing.MatLike | None
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 ````{py:method} alignCrop(src_img, face_box[, aligned_img]) -> aligned_img
@@ -3814,7 +3822,7 @@ Aligning image to put face on the standard position
 :type face_box: UMat
 :param aligned_img: output aligned image
 :type aligned_img: UMat | None
-:rettype: UMat
+:rtype: UMat
 ````
 
 ````{py:method} feature(aligned_img[, face_feature]) -> face_feature
@@ -3830,7 +3838,7 @@ Extracting face feature from aligned image
 :type aligned_img: cv2.typing.MatLike
 :param face_feature: output face feature
 :type face_feature: cv2.typing.MatLike | None
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 ````{py:method} feature(aligned_img[, face_feature]) -> face_feature
@@ -3846,7 +3854,7 @@ Extracting face feature from aligned image
 :type aligned_img: UMat
 :param face_feature: output face feature
 :type face_feature: UMat | None
-:rettype: UMat
+:rtype: UMat
 ````
 
 ````{py:method} match(face_feature1, face_feature2[, dis_type]) -> retval
@@ -3864,7 +3872,7 @@ Calculating the distance between two face features
 :type face_feature2: cv2.typing.MatLike
 :param dis_type: defining the similarity with optional values "FR_OSINE" or "FR_NORM_L2"
 :type dis_type: int
-:rettype: float
+:rtype: float
 ````
 
 ````{py:method} match(face_feature1, face_feature2[, dis_type]) -> retval
@@ -3882,7 +3890,7 @@ Calculating the distance between two face features
 :type face_feature2: UMat
 :param dis_type: defining the similarity with optional values "FR_OSINE" or "FR_NORM_L2"
 :type dis_type: int
-:rettype: float
+:rtype: float
 ````
 
 
@@ -3919,7 +3927,7 @@ Calculating the distance between two face features
 :type polySigma: float
 :param flags: 
 :type flags: int
-:rettype: FarnebackOpticalFlow
+:rtype: FarnebackOpticalFlow
 ````
 
 ````{py:method} getNumLevels() -> retval
@@ -3930,7 +3938,7 @@ Calculating the distance between two face features
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} setNumLevels(numLevels) -> None
@@ -3943,7 +3951,7 @@ Calculating the distance between two face features
 :type self: 
 :param numLevels: 
 :type numLevels: int
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getPyrScale() -> retval
@@ -3954,7 +3962,7 @@ Calculating the distance between two face features
 
 :param self: 
 :type self: 
-:rettype: float
+:rtype: float
 ````
 
 ````{py:method} setPyrScale(pyrScale) -> None
@@ -3967,7 +3975,7 @@ Calculating the distance between two face features
 :type self: 
 :param pyrScale: 
 :type pyrScale: float
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getFastPyramids() -> retval
@@ -3978,7 +3986,7 @@ Calculating the distance between two face features
 
 :param self: 
 :type self: 
-:rettype: bool
+:rtype: bool
 ````
 
 ````{py:method} setFastPyramids(fastPyramids) -> None
@@ -3991,7 +3999,7 @@ Calculating the distance between two face features
 :type self: 
 :param fastPyramids: 
 :type fastPyramids: bool
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getWinSize() -> retval
@@ -4002,7 +4010,7 @@ Calculating the distance between two face features
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} setWinSize(winSize) -> None
@@ -4015,7 +4023,7 @@ Calculating the distance between two face features
 :type self: 
 :param winSize: 
 :type winSize: int
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getNumIters() -> retval
@@ -4026,7 +4034,7 @@ Calculating the distance between two face features
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} setNumIters(numIters) -> None
@@ -4039,7 +4047,7 @@ Calculating the distance between two face features
 :type self: 
 :param numIters: 
 :type numIters: int
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getPolyN() -> retval
@@ -4050,7 +4058,7 @@ Calculating the distance between two face features
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} setPolyN(polyN) -> None
@@ -4063,7 +4071,7 @@ Calculating the distance between two face features
 :type self: 
 :param polyN: 
 :type polyN: int
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getPolySigma() -> retval
@@ -4074,7 +4082,7 @@ Calculating the distance between two face features
 
 :param self: 
 :type self: 
-:rettype: float
+:rtype: float
 ````
 
 ````{py:method} setPolySigma(polySigma) -> None
@@ -4087,7 +4095,7 @@ Calculating the distance between two face features
 :type self: 
 :param polySigma: 
 :type polySigma: float
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getFlags() -> retval
@@ -4098,7 +4106,7 @@ Calculating the distance between two face features
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} setFlags(flags) -> None
@@ -4111,7 +4119,7 @@ Calculating the distance between two face features
 :type self: 
 :param flags: 
 :type flags: int
-:rettype: None
+:rtype: None
 ````
 
 
@@ -4138,7 +4146,7 @@ Calculating the distance between two face features
 :type nonmaxSuppression: bool
 :param type: 
 :type type: FastFeatureDetector_DetectorType
-:rettype: FastFeatureDetector
+:rtype: FastFeatureDetector
 ````
 
 ````{py:method} setThreshold(threshold) -> None
@@ -4151,7 +4159,7 @@ Calculating the distance between two face features
 :type self: 
 :param threshold: 
 :type threshold: int
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getThreshold() -> retval
@@ -4162,7 +4170,7 @@ Calculating the distance between two face features
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} setNonmaxSuppression(f) -> None
@@ -4175,7 +4183,7 @@ Calculating the distance between two face features
 :type self: 
 :param f: 
 :type f: bool
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getNonmaxSuppression() -> retval
@@ -4186,7 +4194,7 @@ Calculating the distance between two face features
 
 :param self: 
 :type self: 
-:rettype: bool
+:rtype: bool
 ````
 
 ````{py:method} setType(type) -> None
@@ -4199,7 +4207,7 @@ Calculating the distance between two face features
 :type self: 
 :param type: 
 :type type: FastFeatureDetector_DetectorType
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getType() -> retval
@@ -4210,7 +4218,7 @@ Calculating the distance between two face features
 
 :param self: 
 :type self: 
-:rettype: FastFeatureDetector_DetectorType
+:rtype: FastFeatureDetector_DetectorType
 ````
 
 ````{py:method} getDefaultName() -> retval
@@ -4221,7 +4229,7 @@ Calculating the distance between two face features
 
 :param self: 
 :type self: 
-:rettype: str
+:rtype: str
 ````
 
 
@@ -4252,7 +4260,7 @@ detect(images[, masks]) -> keypoints @overload
 :type images: 
 :param masks: Masks for each input image specifying where to look for keypoints (optional).masks[i] is a mask for images[i]. 
 :type masks: 
-:rettype: _typing.Sequence[KeyPoint]
+:rtype: _typing.Sequence[KeyPoint]
 ````
 
 ````{py:method} detect(image[, mask]) -> keypoints
@@ -4274,7 +4282,7 @@ detect(images[, masks]) -> keypoints @overload
 :type images: 
 :param masks: Masks for each input image specifying where to look for keypoints (optional).masks[i] is a mask for images[i]. 
 :type masks: 
-:rettype: _typing.Sequence[KeyPoint]
+:rtype: _typing.Sequence[KeyPoint]
 ````
 
 ````{py:method} detect(image[, mask]) -> keypoints
@@ -4296,7 +4304,7 @@ detect(images[, masks]) -> keypoints @overload
 :type keypoints: 
 :param mask: Mask specifying where to look for keypoints (optional). It must be a 8-bit integermatrix with non-zero values in the region of interest. 
 :type mask: 
-:rettype: _typing.Sequence[_typing.Sequence[KeyPoint]]
+:rtype: _typing.Sequence[_typing.Sequence[KeyPoint]]
 ````
 
 ````{py:method} detect(image[, mask]) -> keypoints
@@ -4318,7 +4326,7 @@ detect(images[, masks]) -> keypoints @overload
 :type keypoints: 
 :param mask: Mask specifying where to look for keypoints (optional). It must be a 8-bit integermatrix with non-zero values in the region of interest. 
 :type mask: 
-:rettype: _typing.Sequence[_typing.Sequence[KeyPoint]]
+:rtype: _typing.Sequence[_typing.Sequence[KeyPoint]]
 ````
 
 ````{py:method} compute(image, keypoints[, descriptors]) -> keypoints, descriptors
@@ -4338,7 +4346,7 @@ compute(images, keypoints[, descriptors]) -> keypoints, descriptors @overload
 :type descriptors: cv2.typing.MatLike | None
 :param images: Image set.
 :type images: 
-:rettype: tuple[_typing.Sequence[KeyPoint], cv2.typing.MatLike]
+:rtype: tuple[_typing.Sequence[KeyPoint], cv2.typing.MatLike]
 ````
 
 ````{py:method} compute(image, keypoints[, descriptors]) -> keypoints, descriptors
@@ -4358,7 +4366,7 @@ compute(images, keypoints[, descriptors]) -> keypoints, descriptors @overload
 :type descriptors: UMat | None
 :param images: Image set.
 :type images: 
-:rettype: tuple[_typing.Sequence[KeyPoint], UMat]
+:rtype: tuple[_typing.Sequence[KeyPoint], UMat]
 ````
 
 ````{py:method} compute(image, keypoints[, descriptors]) -> keypoints, descriptors
@@ -4378,7 +4386,7 @@ compute(images, keypoints[, descriptors]) -> keypoints, descriptors @overload
 :type descriptors: _typing.Sequence[cv2.typing.MatLike] | None
 :param image: Image.
 :type image: 
-:rettype: tuple[_typing.Sequence[_typing.Sequence[KeyPoint]], _typing.Sequence[cv2.typing.MatLike]]
+:rtype: tuple[_typing.Sequence[_typing.Sequence[KeyPoint]], _typing.Sequence[cv2.typing.MatLike]]
 ````
 
 ````{py:method} compute(image, keypoints[, descriptors]) -> keypoints, descriptors
@@ -4398,7 +4406,7 @@ compute(images, keypoints[, descriptors]) -> keypoints, descriptors @overload
 :type descriptors: _typing.Sequence[UMat] | None
 :param image: Image.
 :type image: 
-:rettype: tuple[_typing.Sequence[_typing.Sequence[KeyPoint]], _typing.Sequence[UMat]]
+:rtype: tuple[_typing.Sequence[_typing.Sequence[KeyPoint]], _typing.Sequence[UMat]]
 ````
 
 ````{py:method} detectAndCompute(image, mask[, descriptors[, useProvidedKeypoints]]) -> keypoints, descriptors
@@ -4418,7 +4426,7 @@ Detects keypoints and computes the descriptors
 :type descriptors: cv2.typing.MatLike | None
 :param useProvidedKeypoints: 
 :type useProvidedKeypoints: bool
-:rettype: tuple[_typing.Sequence[KeyPoint], cv2.typing.MatLike]
+:rtype: tuple[_typing.Sequence[KeyPoint], cv2.typing.MatLike]
 ````
 
 ````{py:method} detectAndCompute(image, mask[, descriptors[, useProvidedKeypoints]]) -> keypoints, descriptors
@@ -4438,7 +4446,7 @@ Detects keypoints and computes the descriptors
 :type descriptors: UMat | None
 :param useProvidedKeypoints: 
 :type useProvidedKeypoints: bool
-:rettype: tuple[_typing.Sequence[KeyPoint], UMat]
+:rtype: tuple[_typing.Sequence[KeyPoint], UMat]
 ````
 
 ````{py:method} write(fileName) -> None
@@ -4452,7 +4460,7 @@ write(fs, name) -> None
 :type self: 
 :param fileName: 
 :type fileName: str
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} write(fileName) -> None
@@ -4468,7 +4476,7 @@ write(fs, name) -> None
 :type fs: FileStorage
 :param name: 
 :type name: str
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} read(fileName) -> None
@@ -4482,7 +4490,7 @@ read(arg1) -> None
 :type self: 
 :param fileName: 
 :type fileName: str
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} read(fileName) -> None
@@ -4496,7 +4504,7 @@ read(arg1) -> None
 :type self: 
 :param arg1: 
 :type arg1: FileNode
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} descriptorSize() -> retval
@@ -4507,7 +4515,7 @@ read(arg1) -> None
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} descriptorType() -> retval
@@ -4518,7 +4526,7 @@ read(arg1) -> None
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} defaultNorm() -> retval
@@ -4529,7 +4537,7 @@ read(arg1) -> None
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} empty() -> retval
@@ -4540,7 +4548,7 @@ read(arg1) -> None
 
 :param self: 
 :type self: 
-:rettype: bool
+:rtype: bool
 ````
 
 ````{py:method} getDefaultName() -> retval
@@ -4551,7 +4559,7 @@ read(arg1) -> None
 
 :param self: 
 :type self: 
-:rettype: str
+:rtype: str
 ````
 
 
@@ -4571,7 +4579,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 
 :param self: 
 :type self: 
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getNode(nodename) -> retval
@@ -4584,7 +4592,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 :type self: 
 :param nodename: Name of an element in the mapping node.
 :type nodename: str
-:rettype: FileNode
+:rtype: FileNode
 ````
 
 ````{py:method} at(i) -> retval
@@ -4597,29 +4605,31 @@ Initialize self.  See help(type(self)) for accurate signature.
 :type self: 
 :param i: Index of an element in the sequence node.
 :type i: int
-:rettype: FileNode
+:rtype: FileNode
 ````
 
 ````{py:method} keys() -> retval
-Returns keys of a mapping node.@returns Keys of a mapping node. 
+Returns keys of a mapping node.
 
 
 
 
 :param self: 
 :type self: 
-:rettype: _typing.Sequence[str]
+:return: Keys of a mapping node.
+:rtype: _typing.Sequence[str]
 ````
 
 ````{py:method} type() -> retval
-Returns type of the node.@returns Type of the node. See FileNode::Type 
+Returns type of the node.
 
 
 
 
 :param self: 
 :type self: 
-:rettype: int
+:return: Type of the node. See FileNode::Type
+:rtype: int
 ````
 
 ````{py:method} empty() -> retval
@@ -4630,7 +4640,7 @@ Returns type of the node.@returns Type of the node. See FileNode::Type
 
 :param self: 
 :type self: 
-:rettype: bool
+:rtype: bool
 ````
 
 ````{py:method} isNone() -> retval
@@ -4641,7 +4651,7 @@ Returns type of the node.@returns Type of the node. See FileNode::Type
 
 :param self: 
 :type self: 
-:rettype: bool
+:rtype: bool
 ````
 
 ````{py:method} isSeq() -> retval
@@ -4652,7 +4662,7 @@ Returns type of the node.@returns Type of the node. See FileNode::Type
 
 :param self: 
 :type self: 
-:rettype: bool
+:rtype: bool
 ````
 
 ````{py:method} isMap() -> retval
@@ -4663,7 +4673,7 @@ Returns type of the node.@returns Type of the node. See FileNode::Type
 
 :param self: 
 :type self: 
-:rettype: bool
+:rtype: bool
 ````
 
 ````{py:method} isInt() -> retval
@@ -4674,7 +4684,7 @@ Returns type of the node.@returns Type of the node. See FileNode::Type
 
 :param self: 
 :type self: 
-:rettype: bool
+:rtype: bool
 ````
 
 ````{py:method} isReal() -> retval
@@ -4685,7 +4695,7 @@ Returns type of the node.@returns Type of the node. See FileNode::Type
 
 :param self: 
 :type self: 
-:rettype: bool
+:rtype: bool
 ````
 
 ````{py:method} isString() -> retval
@@ -4696,7 +4706,7 @@ Returns type of the node.@returns Type of the node. See FileNode::Type
 
 :param self: 
 :type self: 
-:rettype: bool
+:rtype: bool
 ````
 
 ````{py:method} isNamed() -> retval
@@ -4707,7 +4717,7 @@ Returns type of the node.@returns Type of the node. See FileNode::Type
 
 :param self: 
 :type self: 
-:rettype: bool
+:rtype: bool
 ````
 
 ````{py:method} name() -> retval
@@ -4718,7 +4728,7 @@ Returns type of the node.@returns Type of the node. See FileNode::Type
 
 :param self: 
 :type self: 
-:rettype: str
+:rtype: str
 ````
 
 ````{py:method} size() -> retval
@@ -4729,7 +4739,7 @@ Returns type of the node.@returns Type of the node. See FileNode::Type
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} rawSize() -> retval
@@ -4740,7 +4750,7 @@ Returns type of the node.@returns Type of the node. See FileNode::Type
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} real() -> retval
@@ -4751,7 +4761,7 @@ Internal method used when reading FileStorage. Sets the type (int, real or strin
 
 :param self: 
 :type self: 
-:rettype: float
+:rtype: float
 ````
 
 ````{py:method} string() -> retval
@@ -4762,7 +4772,7 @@ Internal method used when reading FileStorage. Sets the type (int, real or strin
 
 :param self: 
 :type self: 
-:rettype: str
+:rtype: str
 ````
 
 ````{py:method} mat() -> retval
@@ -4773,7 +4783,7 @@ Internal method used when reading FileStorage. Sets the type (int, real or strin
 
 :param self: 
 :type self: 
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -4794,7 +4804,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 
 :param self: 
 :type self: 
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} __init__(self, filename: str, flags: int, encoding: str=...)
@@ -4812,7 +4822,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 :type flags: int
 :param encoding: 
 :type encoding: str
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} write(name, val) -> None
@@ -4828,7 +4838,7 @@ Simplified writing API to use with bindings.
 :type name: str
 :param val: Value of the written object.
 :type val: int
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} write(name, val) -> None
@@ -4844,7 +4854,7 @@ Simplified writing API to use with bindings.
 :type name: str
 :param val: Value of the written object.
 :type val: float
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} write(name, val) -> None
@@ -4860,7 +4870,7 @@ Simplified writing API to use with bindings.
 :type name: str
 :param val: Value of the written object.
 :type val: str
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} write(name, val) -> None
@@ -4876,7 +4886,7 @@ Simplified writing API to use with bindings.
 :type name: str
 :param val: Value of the written object.
 :type val: cv2.typing.MatLike
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} write(name, val) -> None
@@ -4892,7 +4902,7 @@ Simplified writing API to use with bindings.
 :type name: str
 :param val: Value of the written object.
 :type val: _typing.Sequence[str]
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} open(filename, flags[, encoding]) -> retval
@@ -4909,18 +4919,19 @@ See description of parameters in FileStorage::FileStorage. The method calls File
 :type flags: int
 :param encoding: Encoding of the file. Note that UTF-16 XML encoding is not supported currently andyou should use 8-bit encoding instead of it. 
 :type encoding: str
-:rettype: bool
+:rtype: bool
 ````
 
 ````{py:method} isOpened() -> retval
 Checks whether the file is opened.
 
-@returns true if the object is associated with the current file and false otherwise. It is a good practice to call this method after you tried to open a file. 
+
 
 
 :param self: 
 :type self: 
-:rettype: bool
+:return: true if the object is associated with the current file and false otherwise. It is agood practice to call this method after you tried to open a file. 
+:rtype: bool
 ````
 
 ````{py:method} release() -> None
@@ -4931,7 +4942,7 @@ Call this method after all I/O operations with the storage are finished.
 
 :param self: 
 :type self: 
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} releaseAndGetString() -> retval
@@ -4942,18 +4953,19 @@ Call this method after all I/O operations with the storage are finished. If the 
 
 :param self: 
 :type self: 
-:rettype: str
+:rtype: str
 ````
 
 ````{py:method} getFirstTopLevelNode() -> retval
-Returns the first element of the top-level mapping.@returns The first element of the top-level mapping. 
+Returns the first element of the top-level mapping.
 
 
 
 
 :param self: 
 :type self: 
-:rettype: FileNode
+:return: The first element of the top-level mapping.
+:rtype: FileNode
 ````
 
 ````{py:method} root([, streamidx]) -> retval
@@ -4964,9 +4976,10 @@ Returns the top-level mapping
 
 :param self: 
 :type self: 
-:param streamidx: Zero-based index of the stream. In most cases there is only one stream in the file.However, YAML supports multiple streams and so there can be several. @returns The top-level mapping. 
+:param streamidx: Zero-based index of the stream. In most cases there is only one stream in the file.However, YAML supports multiple streams and so there can be several. 
 :type streamidx: int
-:rettype: FileNode
+:return: The top-level mapping.
+:rtype: FileNode
 ````
 
 ````{py:method} getNode(nodename) -> retval
@@ -4979,7 +4992,7 @@ Returns the top-level mapping
 :type self: 
 :param nodename: 
 :type nodename: str
-:rettype: FileNode
+:rtype: FileNode
 ````
 
 ````{py:method} writeComment(comment[, append]) -> None
@@ -4994,7 +5007,7 @@ The function writes a comment into file storage. The comments are skipped when t
 :type comment: str
 :param append: If true, the function tries to put the comment at the end of current line.Else if the comment is multi-line, or if it does not fit at the end of the current line, the comment starts a new line. 
 :type append: bool
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} startWriteStruct(name, flags[, typeName]) -> None
@@ -5011,7 +5024,7 @@ Starts to write a nested structure (sequence or a mapping).
 :type flags: int
 :param typeName: optional name of the type you store. The effect of setting this depends on the storage format.I.e. if the format has a specification for storing type information, this parameter is used. 
 :type typeName: str
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} endWriteStruct() -> None
@@ -5022,18 +5035,19 @@ Finishes writing nested structure (should pair startWriteStruct())
 
 :param self: 
 :type self: 
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getFormat() -> retval
-Returns the current format.@returns The current format, see FileStorage::Mode 
+Returns the current format.
 
 
 
 
 :param self: 
 :type self: 
-:rettype: int
+:return: The current format, see FileStorage::Mode
+:rtype: int
 ````
 
 
@@ -5054,7 +5068,7 @@ Returns the current format.@returns The current format, see FileStorage::Mode
 
 :param cls: 
 :type cls: 
-:rettype: FlannBasedMatcher
+:rtype: FlannBasedMatcher
 ````
 
 ````{py:method} __init__(self, indexParams: cv2.typing.IndexParams=..., searchParams: cv2.typing.SearchParams=...)
@@ -5069,7 +5083,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 :type indexParams: cv2.typing.IndexParams
 :param searchParams: 
 :type searchParams: cv2.typing.SearchParams
-:rettype: None
+:rtype: None
 ````
 
 
@@ -5109,7 +5123,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 :type self: 
 :param type: 
 :type type: cv2.gapi.ArgType
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} type() -> retval
@@ -5120,7 +5134,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 
 :param self: 
 :type self: 
-:rettype: cv2.gapi.ArgType
+:rtype: cv2.gapi.ArgType
 ````
 
 
@@ -5143,7 +5157,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 :type self: 
 :param arg: 
 :type arg: GKernelPackage
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} __init__(self, arg: cv2.gapi.GNetPackage)
@@ -5157,7 +5171,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 :type self: 
 :param arg: 
 :type arg: cv2.gapi.GNetPackage
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} __init__(self, arg: cv2.gapi.streaming.queue_capacity)
@@ -5171,7 +5185,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 :type self: 
 :param arg: 
 :type arg: cv2.gapi.streaming.queue_capacity
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} __init__(self, arg: cv2.gapi.ot.ObjectTrackerParams)
@@ -5185,7 +5199,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 :type self: 
 :param arg: 
 :type arg: cv2.gapi.ot.ObjectTrackerParams
-:rettype: None
+:rtype: None
 ````
 
 
@@ -5210,7 +5224,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 :type ins: cv2.typing.GProtoInputArgs
 :param outs: 
 :type outs: cv2.typing.GProtoOutputArgs
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} __init__(self, in_: GMat, out: GMat)
@@ -5226,7 +5240,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 :type in_: GMat
 :param out: 
 :type out: GMat
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} __init__(self, in_: GMat, out: GScalar)
@@ -5242,7 +5256,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 :type in_: GMat
 :param out: 
 :type out: GScalar
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} __init__(self, in1: GMat, in2: GMat, out: GMat)
@@ -5260,7 +5274,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 :type in2: GMat
 :param out: 
 :type out: GMat
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} compileStreaming(in_metas[, args]) -> retval
@@ -5279,7 +5293,7 @@ This method triggers compilation process and produces a new GStreamingCompiled o
 :param args: compilation arguments for this compilationprocess. Compilation arguments directly affect what kind of executable object would be produced, e.g. which kernels (and thus, devices) would be used to execute computation. 
 :type args: _typing.Sequence[GCompileArg]
 :return: GStreamingCompiled, a streaming-oriented executablecomputation compiled for any input image format. 
-:rettype: GStreamingCompiled
+:rtype: GStreamingCompiled
 ````
 
 ````{py:method} compileStreaming(in_metas[, args]) -> retval
@@ -5298,7 +5312,7 @@ This method triggers compilation process and produces a new GStreamingCompiled o
 :param in_metas: vector of input metadata configuration. Grabmetadata from real data objects (like cv::Mat or cv::Scalar) using cv::descr_of(), or create it on your own. 
 :type in_metas: 
 :return: GStreamingCompiled, a streaming-oriented executablecomputation compiled for any input image format. 
-:rettype: GStreamingCompiled
+:rtype: GStreamingCompiled
 ````
 
 ````{py:method} compileStreaming(in_metas[, args]) -> retval
@@ -5319,7 +5333,7 @@ This method triggers compilation process and produces a new GStreamingCompiled o
 :param in_metas: vector of input metadata configuration. Grabmetadata from real data objects (like cv::Mat or cv::Scalar) using cv::descr_of(), or create it on your own. 
 :type in_metas: 
 :return: GStreamingCompiled, a streaming-oriented executablecomputation compiled for any input image format. 
-:rettype: GStreamingCompiled
+:rtype: GStreamingCompiled
 ````
 
 ````{py:method} apply(callback[, args]) -> retval
@@ -5342,7 +5356,7 @@ compile() always triggers a compilation process andproduces a new GCompiled obje
 :type ins: 
 :param outs: vector of output data to fill results in. cv::Matobjects may be empty in this vector, G-API will automatically initialize it with the required format & dimensions. Don't create GRunArgsP object manually, use cv::gout() wrapper instead. 
 :type outs: 
-:rettype: _typing.Sequence[cv2.typing.GRunArg]
+:rtype: _typing.Sequence[cv2.typing.GRunArg]
 ````
 
 
@@ -5375,7 +5389,7 @@ create(maxCorners, qualityLevel, minDistance, blockSize, gradiantSize[, useHarri
 :type useHarrisDetector: bool
 :param k: 
 :type k: float
-:rettype: GFTTDetector
+:rtype: GFTTDetector
 ````
 
 ````{py:method} create([, maxCorners[, qualityLevel[, minDistance[, blockSize[, useHarrisDetector[, k]]]]]]) -> retval
@@ -5401,7 +5415,7 @@ create(maxCorners, qualityLevel, minDistance, blockSize, gradiantSize[, useHarri
 :type useHarrisDetector: bool
 :param k: 
 :type k: float
-:rettype: GFTTDetector
+:rtype: GFTTDetector
 ````
 
 ````{py:method} setMaxFeatures(maxFeatures) -> None
@@ -5414,7 +5428,7 @@ create(maxCorners, qualityLevel, minDistance, blockSize, gradiantSize[, useHarri
 :type self: 
 :param maxFeatures: 
 :type maxFeatures: int
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getMaxFeatures() -> retval
@@ -5425,7 +5439,7 @@ create(maxCorners, qualityLevel, minDistance, blockSize, gradiantSize[, useHarri
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} setQualityLevel(qlevel) -> None
@@ -5438,7 +5452,7 @@ create(maxCorners, qualityLevel, minDistance, blockSize, gradiantSize[, useHarri
 :type self: 
 :param qlevel: 
 :type qlevel: float
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getQualityLevel() -> retval
@@ -5449,7 +5463,7 @@ create(maxCorners, qualityLevel, minDistance, blockSize, gradiantSize[, useHarri
 
 :param self: 
 :type self: 
-:rettype: float
+:rtype: float
 ````
 
 ````{py:method} setMinDistance(minDistance) -> None
@@ -5462,7 +5476,7 @@ create(maxCorners, qualityLevel, minDistance, blockSize, gradiantSize[, useHarri
 :type self: 
 :param minDistance: 
 :type minDistance: float
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getMinDistance() -> retval
@@ -5473,7 +5487,7 @@ create(maxCorners, qualityLevel, minDistance, blockSize, gradiantSize[, useHarri
 
 :param self: 
 :type self: 
-:rettype: float
+:rtype: float
 ````
 
 ````{py:method} setBlockSize(blockSize) -> None
@@ -5486,7 +5500,7 @@ create(maxCorners, qualityLevel, minDistance, blockSize, gradiantSize[, useHarri
 :type self: 
 :param blockSize: 
 :type blockSize: int
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getBlockSize() -> retval
@@ -5497,7 +5511,7 @@ create(maxCorners, qualityLevel, minDistance, blockSize, gradiantSize[, useHarri
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} setGradientSize(gradientSize_) -> None
@@ -5510,7 +5524,7 @@ create(maxCorners, qualityLevel, minDistance, blockSize, gradiantSize[, useHarri
 :type self: 
 :param gradientSize_: 
 :type gradientSize_: int
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getGradientSize() -> retval
@@ -5521,7 +5535,7 @@ create(maxCorners, qualityLevel, minDistance, blockSize, gradiantSize[, useHarri
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} setHarrisDetector(val) -> None
@@ -5534,7 +5548,7 @@ create(maxCorners, qualityLevel, minDistance, blockSize, gradiantSize[, useHarri
 :type self: 
 :param val: 
 :type val: bool
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getHarrisDetector() -> retval
@@ -5545,7 +5559,7 @@ create(maxCorners, qualityLevel, minDistance, blockSize, gradiantSize[, useHarri
 
 :param self: 
 :type self: 
-:rettype: bool
+:rtype: bool
 ````
 
 ````{py:method} setK(k) -> None
@@ -5558,7 +5572,7 @@ create(maxCorners, qualityLevel, minDistance, blockSize, gradiantSize[, useHarri
 :type self: 
 :param k: 
 :type k: float
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getK() -> retval
@@ -5569,7 +5583,7 @@ create(maxCorners, qualityLevel, minDistance, blockSize, gradiantSize[, useHarri
 
 :param self: 
 :type self: 
-:rettype: float
+:rtype: float
 ````
 
 ````{py:method} getDefaultName() -> retval
@@ -5580,7 +5594,7 @@ create(maxCorners, qualityLevel, minDistance, blockSize, gradiantSize[, useHarri
 
 :param self: 
 :type self: 
-:rettype: str
+:rtype: str
 ````
 
 
@@ -5600,7 +5614,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 
 :param self: 
 :type self: 
-:rettype: None
+:rtype: None
 ````
 
 
@@ -5625,7 +5639,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 :type name: str
 :param value: 
 :type value: GMat
-:rettype: GInferInputs
+:rtype: GInferInputs
 ````
 
 ````{py:method} setInput(name, value) -> retval
@@ -5641,7 +5655,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 :type name: str
 :param value: 
 :type value: GFrame
-:rettype: GInferInputs
+:rtype: GInferInputs
 ````
 
 ````{py:method} __init__(self)
@@ -5652,7 +5666,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 
 :param self: 
 :type self: 
-:rettype: None
+:rtype: None
 ````
 
 
@@ -5677,7 +5691,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 :type name: str
 :param value: 
 :type value: GArrayT
-:rettype: GInferListInputs
+:rtype: GInferListInputs
 ````
 
 ````{py:method} setInput(name, value) -> retval
@@ -5693,7 +5707,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 :type name: str
 :param value: 
 :type value: GArrayT
-:rettype: GInferListInputs
+:rtype: GInferListInputs
 ````
 
 ````{py:method} __init__(self)
@@ -5704,7 +5718,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 
 :param self: 
 :type self: 
-:rettype: None
+:rtype: None
 ````
 
 
@@ -5724,7 +5738,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 
 :param self: 
 :type self: 
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} at(name) -> retval
@@ -5737,7 +5751,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 :type self: 
 :param name: 
 :type name: str
-:rettype: GArrayT
+:rtype: GArrayT
 ````
 
 
@@ -5757,7 +5771,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 
 :param self: 
 :type self: 
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} at(name) -> retval
@@ -5770,7 +5784,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 :type self: 
 :param name: 
 :type name: str
-:rettype: GMat
+:rtype: GMat
 ````
 
 
@@ -5791,7 +5805,7 @@ Returns total number of kernelsin the package (across all backends included)
 :param self: 
 :type self: 
 :return: a number of kernels in the package
-:rettype: int
+:rtype: int
 ````
 
 
@@ -5811,7 +5825,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 
 :param self: 
 :type self: 
-:rettype: None
+:rtype: None
 ````
 
 
@@ -5832,7 +5846,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} chan
@@ -5844,7 +5858,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} size
@@ -5856,7 +5870,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 
 :param self: 
 :type self: 
-:rettype: cv2.typing.Size
+:rtype: cv2.typing.Size
 ````
 
 ````{py:method} planar
@@ -5868,7 +5882,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 
 :param self: 
 :type self: 
-:rettype: bool
+:rtype: bool
 ````
 
 ````{py:method} dims
@@ -5880,7 +5894,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 
 :param self: 
 :type self: 
-:rettype: _typing.Sequence[int]
+:rtype: _typing.Sequence[int]
 ````
 
 ````{py:method} __init__(self, d: int, c: int, s: cv2.typing.Size, p: bool=...)
@@ -5900,7 +5914,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 :type s: cv2.typing.Size
 :param p: 
 :type p: bool
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} __init__(self, d: int, dd: _typing.Sequence[int])
@@ -5916,7 +5930,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 :type d: int
 :param dd: 
 :type dd: _typing.Sequence[int]
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} __init__(self, d: int, dd: _typing.Sequence[int])
@@ -5932,7 +5946,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 :type d: int
 :param dd: 
 :type dd: _typing.Sequence[int]
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} __init__(self)
@@ -5944,7 +5958,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 
 :param self: 
 :type self: 
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} withSizeDelta(delta) -> retval
@@ -5958,7 +5972,7 @@ withSizeDelta(dx, dy) -> retval
 :type self: 
 :param delta: 
 :type delta: cv2.typing.Size
-:rettype: GMatDesc
+:rtype: GMatDesc
 ````
 
 ````{py:method} withSizeDelta(delta) -> retval
@@ -5974,7 +5988,7 @@ withSizeDelta(dx, dy) -> retval
 :type dx: int
 :param dy: 
 :type dy: int
-:rettype: GMatDesc
+:rtype: GMatDesc
 ````
 
 ````{py:method} asPlanar() -> retval
@@ -5986,7 +6000,7 @@ asPlanar(planes) -> retval
 
 :param self: 
 :type self: 
-:rettype: GMatDesc
+:rtype: GMatDesc
 ````
 
 ````{py:method} asPlanar() -> retval
@@ -6000,7 +6014,7 @@ asPlanar(planes) -> retval
 :type self: 
 :param planes: 
 :type planes: int
-:rettype: GMatDesc
+:rtype: GMatDesc
 ````
 
 ````{py:method} withSize(sz) -> retval
@@ -6013,7 +6027,7 @@ asPlanar(planes) -> retval
 :type self: 
 :param sz: 
 :type sz: cv2.typing.Size
-:rettype: GMatDesc
+:rtype: GMatDesc
 ````
 
 ````{py:method} withDepth(ddepth) -> retval
@@ -6026,7 +6040,7 @@ asPlanar(planes) -> retval
 :type self: 
 :param ddepth: 
 :type ddepth: int
-:rettype: GMatDesc
+:rtype: GMatDesc
 ````
 
 ````{py:method} withType(ddepth, dchan) -> retval
@@ -6041,7 +6055,7 @@ asPlanar(planes) -> retval
 :type ddepth: int
 :param dchan: 
 :type dchan: int
-:rettype: GMatDesc
+:rtype: GMatDesc
 ````
 
 ````{py:method} asInterleaved() -> retval
@@ -6052,7 +6066,7 @@ asPlanar(planes) -> retval
 
 :param self: 
 :type self: 
-:rettype: GMatDesc
+:rtype: GMatDesc
 ````
 
 
@@ -6092,7 +6106,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 :type self: 
 :param type: 
 :type type: cv2.gapi.ArgType
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} type() -> retval
@@ -6103,7 +6117,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 
 :param self: 
 :type self: 
-:rettype: cv2.gapi.ArgType
+:rtype: cv2.gapi.ArgType
 ````
 
 
@@ -6124,7 +6138,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 
 :param self: 
 :type self: 
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} __init__(self, s: cv2.typing.Scalar)
@@ -6138,7 +6152,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 :type self: 
 :param s: 
 :type s: cv2.typing.Scalar
-:rettype: None
+:rtype: None
 ````
 
 
@@ -6167,7 +6181,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 
 :param self: 
 :type self: 
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} setSource(callback) -> None
@@ -6186,7 +6200,7 @@ This method is not thread-safe (with respect to the userside) at the moment. Pro
 :type callback: cv2.typing.ExtractArgsCallback
 :param ins: vector of inputs to process.
 :type ins: 
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} start() -> None
@@ -6200,7 +6214,7 @@ This method is not thread-safe (with respect to the userside) at the moment. Pro
 
 :param self: 
 :type self: 
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} pull() -> retval
@@ -6214,7 +6228,7 @@ Use gout() to create an output parameter vector. Output vectors must have the sa
 :param outs: vector of output parameters to obtain.
 :type outs: 
 :return: true if next result has been obtained,false marks end of the stream. 
-:rettype: tuple[bool, _typing.Sequence[cv2.typing.GRunArg] | _typing.Sequence[cv2.typing.GOptRunArg]]
+:rtype: tuple[bool, _typing.Sequence[cv2.typing.GRunArg] | _typing.Sequence[cv2.typing.GOptRunArg]]
 ````
 
 ````{py:method} stop() -> None
@@ -6225,7 +6239,7 @@ Note - it is not pause but a complete stop. Calling start() will cause G-API to 
 
 :param self: 
 :type self: 
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} running() -> retval
@@ -6240,7 +6254,7 @@ This method is not thread-safe (with respect to the userside) at the moment. Pro
 :param self: 
 :type self: 
 :return: true if the current stream is not over yet.
-:rettype: bool
+:rtype: bool
 ````
 
 
@@ -6265,7 +6279,7 @@ setTemplate(edges, dx, dy[, templCenter]) -> None
 :type templ: cv2.typing.MatLike
 :param templCenter: 
 :type templCenter: cv2.typing.Point
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} setTemplate(templ[, templCenter]) -> None
@@ -6281,7 +6295,7 @@ setTemplate(edges, dx, dy[, templCenter]) -> None
 :type templ: UMat
 :param templCenter: 
 :type templCenter: cv2.typing.Point
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} setTemplate(templ[, templCenter]) -> None
@@ -6301,7 +6315,7 @@ setTemplate(edges, dx, dy[, templCenter]) -> None
 :type dy: cv2.typing.MatLike
 :param templCenter: 
 :type templCenter: cv2.typing.Point
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} setTemplate(templ[, templCenter]) -> None
@@ -6321,7 +6335,7 @@ setTemplate(edges, dx, dy[, templCenter]) -> None
 :type dy: UMat
 :param templCenter: 
 :type templCenter: cv2.typing.Point
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} detect(image[, positions[, votes]]) -> positions, votes
@@ -6339,7 +6353,7 @@ detect(edges, dx, dy[, positions[, votes]]) -> positions, votes
 :type positions: cv2.typing.MatLike | None
 :param votes: 
 :type votes: cv2.typing.MatLike | None
-:rettype: tuple[cv2.typing.MatLike, cv2.typing.MatLike]
+:rtype: tuple[cv2.typing.MatLike, cv2.typing.MatLike]
 ````
 
 ````{py:method} detect(image[, positions[, votes]]) -> positions, votes
@@ -6357,7 +6371,7 @@ detect(edges, dx, dy[, positions[, votes]]) -> positions, votes
 :type positions: UMat | None
 :param votes: 
 :type votes: UMat | None
-:rettype: tuple[UMat, UMat]
+:rtype: tuple[UMat, UMat]
 ````
 
 ````{py:method} detect(image[, positions[, votes]]) -> positions, votes
@@ -6379,7 +6393,7 @@ detect(edges, dx, dy[, positions[, votes]]) -> positions, votes
 :type positions: cv2.typing.MatLike | None
 :param votes: 
 :type votes: cv2.typing.MatLike | None
-:rettype: tuple[cv2.typing.MatLike, cv2.typing.MatLike]
+:rtype: tuple[cv2.typing.MatLike, cv2.typing.MatLike]
 ````
 
 ````{py:method} detect(image[, positions[, votes]]) -> positions, votes
@@ -6401,7 +6415,7 @@ detect(edges, dx, dy[, positions[, votes]]) -> positions, votes
 :type positions: UMat | None
 :param votes: 
 :type votes: UMat | None
-:rettype: tuple[UMat, UMat]
+:rtype: tuple[UMat, UMat]
 ````
 
 ````{py:method} setCannyLowThresh(cannyLowThresh) -> None
@@ -6414,7 +6428,7 @@ detect(edges, dx, dy[, positions[, votes]]) -> positions, votes
 :type self: 
 :param cannyLowThresh: 
 :type cannyLowThresh: int
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getCannyLowThresh() -> retval
@@ -6425,7 +6439,7 @@ detect(edges, dx, dy[, positions[, votes]]) -> positions, votes
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} setCannyHighThresh(cannyHighThresh) -> None
@@ -6438,7 +6452,7 @@ detect(edges, dx, dy[, positions[, votes]]) -> positions, votes
 :type self: 
 :param cannyHighThresh: 
 :type cannyHighThresh: int
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getCannyHighThresh() -> retval
@@ -6449,7 +6463,7 @@ detect(edges, dx, dy[, positions[, votes]]) -> positions, votes
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} setMinDist(minDist) -> None
@@ -6462,7 +6476,7 @@ detect(edges, dx, dy[, positions[, votes]]) -> positions, votes
 :type self: 
 :param minDist: 
 :type minDist: float
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getMinDist() -> retval
@@ -6473,7 +6487,7 @@ detect(edges, dx, dy[, positions[, votes]]) -> positions, votes
 
 :param self: 
 :type self: 
-:rettype: float
+:rtype: float
 ````
 
 ````{py:method} setDp(dp) -> None
@@ -6486,7 +6500,7 @@ detect(edges, dx, dy[, positions[, votes]]) -> positions, votes
 :type self: 
 :param dp: 
 :type dp: float
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getDp() -> retval
@@ -6497,7 +6511,7 @@ detect(edges, dx, dy[, positions[, votes]]) -> positions, votes
 
 :param self: 
 :type self: 
-:rettype: float
+:rtype: float
 ````
 
 ````{py:method} setMaxBufferSize(maxBufferSize) -> None
@@ -6510,7 +6524,7 @@ detect(edges, dx, dy[, positions[, votes]]) -> positions, votes
 :type self: 
 :param maxBufferSize: 
 :type maxBufferSize: int
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getMaxBufferSize() -> retval
@@ -6521,7 +6535,7 @@ detect(edges, dx, dy[, positions[, votes]]) -> positions, votes
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 
@@ -6543,7 +6557,7 @@ detect(edges, dx, dy[, positions[, votes]]) -> positions, votes
 :type self: 
 :param levels: 
 :type levels: int
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getLevels() -> retval
@@ -6554,7 +6568,7 @@ detect(edges, dx, dy[, positions[, votes]]) -> positions, votes
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} setVotesThreshold(votesThreshold) -> None
@@ -6567,7 +6581,7 @@ detect(edges, dx, dy[, positions[, votes]]) -> positions, votes
 :type self: 
 :param votesThreshold: 
 :type votesThreshold: int
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getVotesThreshold() -> retval
@@ -6578,7 +6592,7 @@ detect(edges, dx, dy[, positions[, votes]]) -> positions, votes
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 
@@ -6600,7 +6614,7 @@ detect(edges, dx, dy[, positions[, votes]]) -> positions, votes
 :type self: 
 :param xi: 
 :type xi: float
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getXi() -> retval
@@ -6611,7 +6625,7 @@ detect(edges, dx, dy[, positions[, votes]]) -> positions, votes
 
 :param self: 
 :type self: 
-:rettype: float
+:rtype: float
 ````
 
 ````{py:method} setLevels(levels) -> None
@@ -6624,7 +6638,7 @@ detect(edges, dx, dy[, positions[, votes]]) -> positions, votes
 :type self: 
 :param levels: 
 :type levels: int
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getLevels() -> retval
@@ -6635,7 +6649,7 @@ detect(edges, dx, dy[, positions[, votes]]) -> positions, votes
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} setAngleEpsilon(angleEpsilon) -> None
@@ -6648,7 +6662,7 @@ detect(edges, dx, dy[, positions[, votes]]) -> positions, votes
 :type self: 
 :param angleEpsilon: 
 :type angleEpsilon: float
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getAngleEpsilon() -> retval
@@ -6659,7 +6673,7 @@ detect(edges, dx, dy[, positions[, votes]]) -> positions, votes
 
 :param self: 
 :type self: 
-:rettype: float
+:rtype: float
 ````
 
 ````{py:method} setMinAngle(minAngle) -> None
@@ -6672,7 +6686,7 @@ detect(edges, dx, dy[, positions[, votes]]) -> positions, votes
 :type self: 
 :param minAngle: 
 :type minAngle: float
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getMinAngle() -> retval
@@ -6683,7 +6697,7 @@ detect(edges, dx, dy[, positions[, votes]]) -> positions, votes
 
 :param self: 
 :type self: 
-:rettype: float
+:rtype: float
 ````
 
 ````{py:method} setMaxAngle(maxAngle) -> None
@@ -6696,7 +6710,7 @@ detect(edges, dx, dy[, positions[, votes]]) -> positions, votes
 :type self: 
 :param maxAngle: 
 :type maxAngle: float
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getMaxAngle() -> retval
@@ -6707,7 +6721,7 @@ detect(edges, dx, dy[, positions[, votes]]) -> positions, votes
 
 :param self: 
 :type self: 
-:rettype: float
+:rtype: float
 ````
 
 ````{py:method} setAngleStep(angleStep) -> None
@@ -6720,7 +6734,7 @@ detect(edges, dx, dy[, positions[, votes]]) -> positions, votes
 :type self: 
 :param angleStep: 
 :type angleStep: float
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getAngleStep() -> retval
@@ -6731,7 +6745,7 @@ detect(edges, dx, dy[, positions[, votes]]) -> positions, votes
 
 :param self: 
 :type self: 
-:rettype: float
+:rtype: float
 ````
 
 ````{py:method} setAngleThresh(angleThresh) -> None
@@ -6744,7 +6758,7 @@ detect(edges, dx, dy[, positions[, votes]]) -> positions, votes
 :type self: 
 :param angleThresh: 
 :type angleThresh: int
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getAngleThresh() -> retval
@@ -6755,7 +6769,7 @@ detect(edges, dx, dy[, positions[, votes]]) -> positions, votes
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} setMinScale(minScale) -> None
@@ -6768,7 +6782,7 @@ detect(edges, dx, dy[, positions[, votes]]) -> positions, votes
 :type self: 
 :param minScale: 
 :type minScale: float
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getMinScale() -> retval
@@ -6779,7 +6793,7 @@ detect(edges, dx, dy[, positions[, votes]]) -> positions, votes
 
 :param self: 
 :type self: 
-:rettype: float
+:rtype: float
 ````
 
 ````{py:method} setMaxScale(maxScale) -> None
@@ -6792,7 +6806,7 @@ detect(edges, dx, dy[, positions[, votes]]) -> positions, votes
 :type self: 
 :param maxScale: 
 :type maxScale: float
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getMaxScale() -> retval
@@ -6803,7 +6817,7 @@ detect(edges, dx, dy[, positions[, votes]]) -> positions, votes
 
 :param self: 
 :type self: 
-:rettype: float
+:rtype: float
 ````
 
 ````{py:method} setScaleStep(scaleStep) -> None
@@ -6816,7 +6830,7 @@ detect(edges, dx, dy[, positions[, votes]]) -> positions, votes
 :type self: 
 :param scaleStep: 
 :type scaleStep: float
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getScaleStep() -> retval
@@ -6827,7 +6841,7 @@ detect(edges, dx, dy[, positions[, votes]]) -> positions, votes
 
 :param self: 
 :type self: 
-:rettype: float
+:rtype: float
 ````
 
 ````{py:method} setScaleThresh(scaleThresh) -> None
@@ -6840,7 +6854,7 @@ detect(edges, dx, dy[, positions[, votes]]) -> positions, votes
 :type self: 
 :param scaleThresh: 
 :type scaleThresh: int
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getScaleThresh() -> retval
@@ -6851,7 +6865,7 @@ detect(edges, dx, dy[, positions[, votes]]) -> positions, votes
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} setPosThresh(posThresh) -> None
@@ -6864,7 +6878,7 @@ detect(edges, dx, dy[, positions[, votes]]) -> positions, votes
 :type self: 
 :param posThresh: 
 :type posThresh: int
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getPosThresh() -> retval
@@ -6875,7 +6889,7 @@ detect(edges, dx, dy[, positions[, votes]]) -> positions, votes
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 
@@ -6900,7 +6914,7 @@ Detects graphical code in image and returns the quadrangle containing the code.
 :type img: cv2.typing.MatLike
 :param points: Output vector of vertices of the minimum-area quadrangle containing the code.
 :type points: cv2.typing.MatLike | None
-:rettype: tuple[bool, cv2.typing.MatLike]
+:rtype: tuple[bool, cv2.typing.MatLike]
 ````
 
 ````{py:method} detect(img[, points]) -> retval, points
@@ -6916,7 +6930,7 @@ Detects graphical code in image and returns the quadrangle containing the code.
 :type img: UMat
 :param points: Output vector of vertices of the minimum-area quadrangle containing the code.
 :type points: UMat | None
-:rettype: tuple[bool, UMat]
+:rtype: tuple[bool, UMat]
 ````
 
 ````{py:method} decode(img, points[, straight_code]) -> retval, straight_code
@@ -6934,7 +6948,7 @@ Returns UTF8-encoded output string or empty string if the code cannot be decoded
 :type points: cv2.typing.MatLike
 :param straight_code: The optional output image containing binarized code, will be empty if not found.
 :type straight_code: cv2.typing.MatLike | None
-:rettype: tuple[str, cv2.typing.MatLike]
+:rtype: tuple[str, cv2.typing.MatLike]
 ````
 
 ````{py:method} decode(img, points[, straight_code]) -> retval, straight_code
@@ -6952,7 +6966,7 @@ Returns UTF8-encoded output string or empty string if the code cannot be decoded
 :type points: UMat
 :param straight_code: The optional output image containing binarized code, will be empty if not found.
 :type straight_code: UMat | None
-:rettype: tuple[str, UMat]
+:rtype: tuple[str, UMat]
 ````
 
 ````{py:method} detectAndDecode(img[, points[, straight_code]]) -> retval, points, straight_code
@@ -6970,7 +6984,7 @@ Both detects and decodes graphical code
 :type points: cv2.typing.MatLike | None
 :param straight_code: The optional output image containing binarized code
 :type straight_code: cv2.typing.MatLike | None
-:rettype: tuple[str, cv2.typing.MatLike, cv2.typing.MatLike]
+:rtype: tuple[str, cv2.typing.MatLike, cv2.typing.MatLike]
 ````
 
 ````{py:method} detectAndDecode(img[, points[, straight_code]]) -> retval, points, straight_code
@@ -6988,7 +7002,7 @@ Both detects and decodes graphical code
 :type points: UMat | None
 :param straight_code: The optional output image containing binarized code
 :type straight_code: UMat | None
-:rettype: tuple[str, UMat, UMat]
+:rtype: tuple[str, UMat, UMat]
 ````
 
 ````{py:method} detectMulti(img[, points]) -> retval, points
@@ -7004,7 +7018,7 @@ Detects graphical codes in image and returns the vector of the quadrangles conta
 :type img: cv2.typing.MatLike
 :param points: Output vector of vector of vertices of the minimum-area quadrangle containing the codes.
 :type points: cv2.typing.MatLike | None
-:rettype: tuple[bool, cv2.typing.MatLike]
+:rtype: tuple[bool, cv2.typing.MatLike]
 ````
 
 ````{py:method} detectMulti(img[, points]) -> retval, points
@@ -7020,7 +7034,7 @@ Detects graphical codes in image and returns the vector of the quadrangles conta
 :type img: UMat
 :param points: Output vector of vector of vertices of the minimum-area quadrangle containing the codes.
 :type points: UMat | None
-:rettype: tuple[bool, UMat]
+:rtype: tuple[bool, UMat]
 ````
 
 ````{py:method} decodeMulti(img, points[, straight_code]) -> retval, decoded_info, straight_code
@@ -7040,7 +7054,7 @@ Decodes graphical codes in image once it's found by the detect() method.
 :type straight_code: _typing.Sequence[cv2.typing.MatLike] | None
 :param decoded_info: UTF8-encoded output vector of string or empty vector of string if the codes cannot be decoded.
 :type decoded_info: 
-:rettype: tuple[bool, _typing.Sequence[str], _typing.Sequence[cv2.typing.MatLike]]
+:rtype: tuple[bool, _typing.Sequence[str], _typing.Sequence[cv2.typing.MatLike]]
 ````
 
 ````{py:method} decodeMulti(img, points[, straight_code]) -> retval, decoded_info, straight_code
@@ -7060,7 +7074,7 @@ Decodes graphical codes in image once it's found by the detect() method.
 :type straight_code: _typing.Sequence[UMat] | None
 :param decoded_info: UTF8-encoded output vector of string or empty vector of string if the codes cannot be decoded.
 :type decoded_info: 
-:rettype: tuple[bool, _typing.Sequence[str], _typing.Sequence[UMat]]
+:rtype: tuple[bool, _typing.Sequence[str], _typing.Sequence[UMat]]
 ````
 
 ````{py:method} detectAndDecodeMulti(img[, points[, straight_code]]) -> retval, decoded_info, points, straight_code
@@ -7080,7 +7094,7 @@ Both detects and decodes graphical codes
 :type straight_code: _typing.Sequence[cv2.typing.MatLike] | None
 :param decoded_info: UTF8-encoded output vector of string or empty vector of string if the codes cannot be decoded.
 :type decoded_info: 
-:rettype: tuple[bool, _typing.Sequence[str], cv2.typing.MatLike, _typing.Sequence[cv2.typing.MatLike]]
+:rtype: tuple[bool, _typing.Sequence[str], cv2.typing.MatLike, _typing.Sequence[cv2.typing.MatLike]]
 ````
 
 ````{py:method} detectAndDecodeMulti(img[, points[, straight_code]]) -> retval, decoded_info, points, straight_code
@@ -7100,7 +7114,7 @@ Both detects and decodes graphical codes
 :type straight_code: _typing.Sequence[UMat] | None
 :param decoded_info: UTF8-encoded output vector of string or empty vector of string if the codes cannot be decoded.
 :type decoded_info: 
-:rettype: tuple[bool, _typing.Sequence[str], UMat, _typing.Sequence[UMat]]
+:rtype: tuple[bool, _typing.Sequence[str], UMat, _typing.Sequence[UMat]]
 ````
 
 
@@ -7121,7 +7135,7 @@ Both detects and decodes graphical codes
 
 :param self: 
 :type self: 
-:rettype: cv2.typing.Size
+:rtype: cv2.typing.Size
 ````
 
 ````{py:method} blockSize
@@ -7133,7 +7147,7 @@ Both detects and decodes graphical codes
 
 :param self: 
 :type self: 
-:rettype: cv2.typing.Size
+:rtype: cv2.typing.Size
 ````
 
 ````{py:method} blockStride
@@ -7145,7 +7159,7 @@ Both detects and decodes graphical codes
 
 :param self: 
 :type self: 
-:rettype: cv2.typing.Size
+:rtype: cv2.typing.Size
 ````
 
 ````{py:method} cellSize
@@ -7157,7 +7171,7 @@ Both detects and decodes graphical codes
 
 :param self: 
 :type self: 
-:rettype: cv2.typing.Size
+:rtype: cv2.typing.Size
 ````
 
 ````{py:method} nbins
@@ -7169,7 +7183,7 @@ Both detects and decodes graphical codes
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} derivAperture
@@ -7181,7 +7195,7 @@ Both detects and decodes graphical codes
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} winSigma
@@ -7193,7 +7207,7 @@ Both detects and decodes graphical codes
 
 :param self: 
 :type self: 
-:rettype: float
+:rtype: float
 ````
 
 ````{py:method} histogramNormType
@@ -7205,7 +7219,7 @@ Both detects and decodes graphical codes
 
 :param self: 
 :type self: 
-:rettype: HOGDescriptor_HistogramNormType
+:rtype: HOGDescriptor_HistogramNormType
 ````
 
 ````{py:method} L2HysThreshold
@@ -7217,7 +7231,7 @@ Both detects and decodes graphical codes
 
 :param self: 
 :type self: 
-:rettype: float
+:rtype: float
 ````
 
 ````{py:method} gammaCorrection
@@ -7229,7 +7243,7 @@ Both detects and decodes graphical codes
 
 :param self: 
 :type self: 
-:rettype: bool
+:rtype: bool
 ````
 
 ````{py:method} svmDetector
@@ -7241,7 +7255,7 @@ Both detects and decodes graphical codes
 
 :param self: 
 :type self: 
-:rettype: _typing.Sequence[float]
+:rtype: _typing.Sequence[float]
 ````
 
 ````{py:method} nlevels
@@ -7253,7 +7267,7 @@ Both detects and decodes graphical codes
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} signedGradient
@@ -7265,7 +7279,7 @@ Both detects and decodes graphical codes
 
 :param self: 
 :type self: 
-:rettype: bool
+:rtype: bool
 ````
 
 ````{py:method} __init__(self)
@@ -7277,7 +7291,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 
 :param self: 
 :type self: 
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} __init__(self, _winSize: cv2.typing.Size, _blockSize: cv2.typing.Size, _blockStride: cv2.typing.Size, _cellSize: cv2.typing.Size, _nbins: int, _derivAperture: int=..., _winSigma: float=..., _histogramNormType: HOGDescriptor_HistogramNormType=..., _L2HysThreshold: float=..., _gammaCorrection: bool=..., _nlevels: int=..., _signedGradient: bool=...)
@@ -7313,7 +7327,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 :type _nlevels: int
 :param _signedGradient: 
 :type _signedGradient: bool
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} __init__(self, filename: str)
@@ -7327,7 +7341,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 :type self: 
 :param filename: 
 :type filename: str
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} setSVMDetector(svmdetector) -> None
@@ -7341,7 +7355,7 @@ Sets coefficients for the linear SVM classifier.
 :type self: 
 :param svmdetector: coefficients for the linear SVM classifier.
 :type svmdetector: cv2.typing.MatLike
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} setSVMDetector(svmdetector) -> None
@@ -7355,7 +7369,7 @@ Sets coefficients for the linear SVM classifier.
 :type self: 
 :param svmdetector: coefficients for the linear SVM classifier.
 :type svmdetector: UMat
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} compute(img[, winStride[, padding[, locations]]]) -> descriptors
@@ -7377,7 +7391,7 @@ Computes HOG descriptors of given image.
 :type locations: _typing.Sequence[cv2.typing.Point]
 :param descriptors: Matrix of the type CV_32F
 :type descriptors: 
-:rettype: _typing.Sequence[float]
+:rtype: _typing.Sequence[float]
 ````
 
 ````{py:method} compute(img[, winStride[, padding[, locations]]]) -> descriptors
@@ -7399,7 +7413,7 @@ Computes HOG descriptors of given image.
 :type locations: _typing.Sequence[cv2.typing.Point]
 :param descriptors: Matrix of the type CV_32F
 :type descriptors: 
-:rettype: _typing.Sequence[float]
+:rtype: _typing.Sequence[float]
 ````
 
 ````{py:method} detect(img[, hitThreshold[, winStride[, padding[, searchLocations]]]]) -> foundLocations, weights
@@ -7425,7 +7439,7 @@ Performs object detection without a multi-scale window.
 :type foundLocations: 
 :param weights: Vector that will contain confidence values for each detected object.
 :type weights: 
-:rettype: tuple[_typing.Sequence[cv2.typing.Point], _typing.Sequence[float]]
+:rtype: tuple[_typing.Sequence[cv2.typing.Point], _typing.Sequence[float]]
 ````
 
 ````{py:method} detect(img[, hitThreshold[, winStride[, padding[, searchLocations]]]]) -> foundLocations, weights
@@ -7451,7 +7465,7 @@ Performs object detection without a multi-scale window.
 :type foundLocations: 
 :param weights: Vector that will contain confidence values for each detected object.
 :type weights: 
-:rettype: tuple[_typing.Sequence[cv2.typing.Point], _typing.Sequence[float]]
+:rtype: tuple[_typing.Sequence[cv2.typing.Point], _typing.Sequence[float]]
 ````
 
 ````{py:method} detectMultiScale(img[, hitThreshold[, winStride[, padding[, scale[, groupThreshold[, useMeanshiftGrouping]]]]]]) -> foundLocations, foundWeights
@@ -7481,7 +7495,7 @@ Detects objects of different sizes in the input image. The detected objects are 
 :type foundLocations: 
 :param foundWeights: Vector that will contain confidence values for each detected object.
 :type foundWeights: 
-:rettype: tuple[_typing.Sequence[cv2.typing.Rect], _typing.Sequence[float]]
+:rtype: tuple[_typing.Sequence[cv2.typing.Rect], _typing.Sequence[float]]
 ````
 
 ````{py:method} detectMultiScale(img[, hitThreshold[, winStride[, padding[, scale[, groupThreshold[, useMeanshiftGrouping]]]]]]) -> foundLocations, foundWeights
@@ -7511,7 +7525,7 @@ Detects objects of different sizes in the input image. The detected objects are 
 :type foundLocations: 
 :param foundWeights: Vector that will contain confidence values for each detected object.
 :type foundWeights: 
-:rettype: tuple[_typing.Sequence[cv2.typing.Rect], _typing.Sequence[float]]
+:rtype: tuple[_typing.Sequence[cv2.typing.Rect], _typing.Sequence[float]]
 ````
 
 ````{py:method} computeGradient(img, grad, angleOfs[, paddingTL[, paddingBR]]) -> grad, angleOfs
@@ -7533,7 +7547,7 @@ Detects objects of different sizes in the input image. The detected objects are 
 :type paddingTL: cv2.typing.Size
 :param paddingBR: Padding from bottom-right
 :type paddingBR: cv2.typing.Size
-:rettype: tuple[cv2.typing.MatLike, cv2.typing.MatLike]
+:rtype: tuple[cv2.typing.MatLike, cv2.typing.MatLike]
 ````
 
 ````{py:method} computeGradient(img, grad, angleOfs[, paddingTL[, paddingBR]]) -> grad, angleOfs
@@ -7555,7 +7569,7 @@ Detects objects of different sizes in the input image. The detected objects are 
 :type paddingTL: cv2.typing.Size
 :param paddingBR: Padding from bottom-right
 :type paddingBR: cv2.typing.Size
-:rettype: tuple[UMat, UMat]
+:rtype: tuple[UMat, UMat]
 ````
 
 ````{py:method} getDescriptorSize() -> retval
@@ -7566,7 +7580,7 @@ Returns the number of coefficients required for the classification.
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} checkDetectorSize() -> retval
@@ -7577,7 +7591,7 @@ Checks if detector size equal to descriptor size.
 
 :param self: 
 :type self: 
-:rettype: bool
+:rtype: bool
 ````
 
 ````{py:method} getWinSigma() -> retval
@@ -7588,7 +7602,7 @@ Returns winSigma value
 
 :param self: 
 :type self: 
-:rettype: float
+:rtype: float
 ````
 
 ````{py:method} load(filename[, objname]) -> retval
@@ -7603,7 +7617,7 @@ loads HOGDescriptor parameters and coefficients for the linear SVM classifier fr
 :type filename: str
 :param objname: The optional name of the node to read (if empty, the first top-level node will be used).
 :type objname: str
-:rettype: bool
+:rtype: bool
 ````
 
 ````{py:method} save(filename[, objname]) -> None
@@ -7618,7 +7632,7 @@ saves HOGDescriptor parameters and coefficients for the linear SVM classifier to
 :type filename: str
 :param objname: Object name
 :type objname: str
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getDefaultPeopleDetector() -> retval
@@ -7628,7 +7642,7 @@ Returns coefficients of the classifier trained for people detection (for 64x128 
 
 
 
-:rettype: _typing.Sequence[float]
+:rtype: _typing.Sequence[float]
 ````
 
 ````{py:method} getDaimlerPeopleDetector() -> retval
@@ -7638,7 +7652,7 @@ Returns coefficients of the classifier trained for people detection (for 48x96 w
 
 
 
-:rettype: _typing.Sequence[float]
+:rtype: _typing.Sequence[float]
 ````
 
 
@@ -7671,7 +7685,7 @@ The KAZE constructor
 :type nOctaveLayers: int
 :param diffusivity: Diffusivity type. DIFF_PM_G1, DIFF_PM_G2, DIFF_WEICKERT orDIFF_CHARBONNIER 
 :type diffusivity: KAZE_DiffusivityType
-:rettype: KAZE
+:rtype: KAZE
 ````
 
 ````{py:method} setExtended(extended) -> None
@@ -7684,7 +7698,7 @@ The KAZE constructor
 :type self: 
 :param extended: 
 :type extended: bool
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getExtended() -> retval
@@ -7695,7 +7709,7 @@ The KAZE constructor
 
 :param self: 
 :type self: 
-:rettype: bool
+:rtype: bool
 ````
 
 ````{py:method} setUpright(upright) -> None
@@ -7708,7 +7722,7 @@ The KAZE constructor
 :type self: 
 :param upright: 
 :type upright: bool
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getUpright() -> retval
@@ -7719,7 +7733,7 @@ The KAZE constructor
 
 :param self: 
 :type self: 
-:rettype: bool
+:rtype: bool
 ````
 
 ````{py:method} setThreshold(threshold) -> None
@@ -7732,7 +7746,7 @@ The KAZE constructor
 :type self: 
 :param threshold: 
 :type threshold: float
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getThreshold() -> retval
@@ -7743,7 +7757,7 @@ The KAZE constructor
 
 :param self: 
 :type self: 
-:rettype: float
+:rtype: float
 ````
 
 ````{py:method} setNOctaves(octaves) -> None
@@ -7756,7 +7770,7 @@ The KAZE constructor
 :type self: 
 :param octaves: 
 :type octaves: int
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getNOctaves() -> retval
@@ -7767,7 +7781,7 @@ The KAZE constructor
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} setNOctaveLayers(octaveLayers) -> None
@@ -7780,7 +7794,7 @@ The KAZE constructor
 :type self: 
 :param octaveLayers: 
 :type octaveLayers: int
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getNOctaveLayers() -> retval
@@ -7791,7 +7805,7 @@ The KAZE constructor
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} setDiffusivity(diff) -> None
@@ -7804,7 +7818,7 @@ The KAZE constructor
 :type self: 
 :param diff: 
 :type diff: KAZE_DiffusivityType
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getDiffusivity() -> retval
@@ -7815,7 +7829,7 @@ The KAZE constructor
 
 :param self: 
 :type self: 
-:rettype: KAZE_DiffusivityType
+:rtype: KAZE_DiffusivityType
 ````
 
 ````{py:method} getDefaultName() -> retval
@@ -7826,7 +7840,7 @@ The KAZE constructor
 
 :param self: 
 :type self: 
-:rettype: str
+:rtype: str
 ````
 
 
@@ -7847,7 +7861,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 
 :param self: 
 :type self: 
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} __init__(self, dynamParams: int, measureParams: int, controlParams: int=..., type: int=...)
@@ -7867,7 +7881,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 :type controlParams: int
 :param type: 
 :type type: int
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} predict([, control]) -> retval
@@ -7880,7 +7894,7 @@ Computes a predicted state.
 :type self: 
 :param control: The optional input control
 :type control: cv2.typing.MatLike | None
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 ````{py:method} correct(measurement) -> retval
@@ -7893,7 +7907,7 @@ Updates the predicted state from the measurement.
 :type self: 
 :param measurement: The measured system parameters
 :type measurement: cv2.typing.MatLike
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 ```{py:attribute} statePre
@@ -7954,7 +7968,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 
 :param self: 
 :type self: 
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} __init__(self, x: float, y: float, size: float, angle: float=..., response: float=..., octave: int=..., class_id: int=...)
@@ -7980,7 +7994,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 :type octave: int
 :param class_id: 
 :type class_id: int
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} convert(keypoints[, keypointIndexes]) -> points2f
@@ -8004,7 +8018,7 @@ This method converts vector of keypoints to vector of points or the reverse, whe
 :type octave: 
 :param class_id: object id
 :type class_id: 
-:rettype: _typing.Sequence[cv2.typing.Point2f]
+:rtype: _typing.Sequence[cv2.typing.Point2f]
 ````
 
 ````{py:method} convert(keypoints[, keypointIndexes]) -> points2f
@@ -8028,7 +8042,7 @@ This method converts vector of keypoints to vector of points or the reverse, whe
 :type keypoints: 
 :param keypointIndexes: Array of indexes of keypoints to be converted to points. (Acts like a mask toconvert only specified keypoints) 
 :type keypointIndexes: 
-:rettype: _typing.Sequence[KeyPoint]
+:rtype: _typing.Sequence[KeyPoint]
 ````
 
 ````{py:method} overlap(kp1, kp2) -> retval
@@ -8042,7 +8056,7 @@ This method computes overlap for pair of keypoints. Overlap is the ratio between
 :type kp1: KeyPoint
 :param kp2: Second keypoint
 :type kp2: KeyPoint
-:rettype: float
+:rtype: float
 ````
 
 ```{py:attribute} pt
@@ -8097,7 +8111,7 @@ This is the output of the default parameters of the algorithm on the above shown
 :type prec: cv2.typing.MatLike | None
 :param nfa: Vector containing number of false alarms in the line region, with precision of 10%. Thebigger the value, logarithmically better the detection. - -1 corresponds to 10 mean false alarms - 0 corresponds to 1 mean false alarm - 1 corresponds to 0.1 mean false alarms This vector will be calculated only when the objects type is #LSD_REFINE_ADV. 
 :type nfa: cv2.typing.MatLike | None
-:rettype: tuple[cv2.typing.MatLike, cv2.typing.MatLike, cv2.typing.MatLike, cv2.typing.MatLike]
+:rtype: tuple[cv2.typing.MatLike, cv2.typing.MatLike, cv2.typing.MatLike, cv2.typing.MatLike]
 ````
 
 ````{py:method} detect(image[, lines[, width[, prec[, nfa]]]]) -> lines, width, prec, nfa
@@ -8119,7 +8133,7 @@ This is the output of the default parameters of the algorithm on the above shown
 :type prec: UMat | None
 :param nfa: Vector containing number of false alarms in the line region, with precision of 10%. Thebigger the value, logarithmically better the detection. - -1 corresponds to 10 mean false alarms - 0 corresponds to 1 mean false alarm - 1 corresponds to 0.1 mean false alarms This vector will be calculated only when the objects type is #LSD_REFINE_ADV. 
 :type nfa: UMat | None
-:rettype: tuple[UMat, UMat, UMat, UMat]
+:rtype: tuple[UMat, UMat, UMat, UMat]
 ````
 
 ````{py:method} drawSegments(image, lines) -> image
@@ -8135,7 +8149,7 @@ Draws the line segments on a given image.
 :type image: cv2.typing.MatLike
 :param lines: A vector of the lines that needed to be drawn.
 :type lines: cv2.typing.MatLike
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 ````{py:method} drawSegments(image, lines) -> image
@@ -8151,7 +8165,7 @@ Draws the line segments on a given image.
 :type image: UMat
 :param lines: A vector of the lines that needed to be drawn.
 :type lines: UMat
-:rettype: UMat
+:rtype: UMat
 ````
 
 ````{py:method} compareSegments(size, lines1, lines2[, image]) -> retval, image
@@ -8171,7 +8185,7 @@ Draws two groups of lines in blue and red, counting the non overlapping (mismatc
 :type lines2: cv2.typing.MatLike
 :param image: Optional image, where the lines will be drawn. The image should be color(3-channel)in order for lines1 and lines2 to be drawn in the above mentioned colors. 
 :type image: cv2.typing.MatLike | None
-:rettype: tuple[int, cv2.typing.MatLike]
+:rtype: tuple[int, cv2.typing.MatLike]
 ````
 
 ````{py:method} compareSegments(size, lines1, lines2[, image]) -> retval, image
@@ -8191,7 +8205,7 @@ Draws two groups of lines in blue and red, counting the non overlapping (mismatc
 :type lines2: UMat
 :param image: Optional image, where the lines will be drawn. The image should be color(3-channel)in order for lines1 and lines2 to be drawn in the above mentioned colors. 
 :type image: UMat | None
-:rettype: tuple[int, UMat]
+:rtype: tuple[int, UMat]
 ````
 
 
@@ -8230,7 +8244,7 @@ Full constructor for %MSER detector
 :type min_margin: float
 :param edge_blur_size: for color image, the aperture size for edge blur
 :type edge_blur_size: int
-:rettype: MSER
+:rtype: MSER
 ````
 
 ````{py:method} detectRegions(image) -> msers, bboxes
@@ -8248,7 +8262,7 @@ Detect %MSER regions
 :type msers: 
 :param bboxes: resulting bounding boxes
 :type bboxes: 
-:rettype: tuple[_typing.Sequence[_typing.Sequence[cv2.typing.Point]], _typing.Sequence[cv2.typing.Rect]]
+:rtype: tuple[_typing.Sequence[_typing.Sequence[cv2.typing.Point]], _typing.Sequence[cv2.typing.Rect]]
 ````
 
 ````{py:method} detectRegions(image) -> msers, bboxes
@@ -8266,7 +8280,7 @@ Detect %MSER regions
 :type msers: 
 :param bboxes: resulting bounding boxes
 :type bboxes: 
-:rettype: tuple[_typing.Sequence[_typing.Sequence[cv2.typing.Point]], _typing.Sequence[cv2.typing.Rect]]
+:rtype: tuple[_typing.Sequence[_typing.Sequence[cv2.typing.Point]], _typing.Sequence[cv2.typing.Rect]]
 ````
 
 ````{py:method} setDelta(delta) -> None
@@ -8279,7 +8293,7 @@ Detect %MSER regions
 :type self: 
 :param delta: 
 :type delta: int
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getDelta() -> retval
@@ -8290,7 +8304,7 @@ Detect %MSER regions
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} setMinArea(minArea) -> None
@@ -8303,7 +8317,7 @@ Detect %MSER regions
 :type self: 
 :param minArea: 
 :type minArea: int
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getMinArea() -> retval
@@ -8314,7 +8328,7 @@ Detect %MSER regions
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} setMaxArea(maxArea) -> None
@@ -8327,7 +8341,7 @@ Detect %MSER regions
 :type self: 
 :param maxArea: 
 :type maxArea: int
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getMaxArea() -> retval
@@ -8338,7 +8352,7 @@ Detect %MSER regions
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} setMaxVariation(maxVariation) -> None
@@ -8351,7 +8365,7 @@ Detect %MSER regions
 :type self: 
 :param maxVariation: 
 :type maxVariation: float
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getMaxVariation() -> retval
@@ -8362,7 +8376,7 @@ Detect %MSER regions
 
 :param self: 
 :type self: 
-:rettype: float
+:rtype: float
 ````
 
 ````{py:method} setMinDiversity(minDiversity) -> None
@@ -8375,7 +8389,7 @@ Detect %MSER regions
 :type self: 
 :param minDiversity: 
 :type minDiversity: float
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getMinDiversity() -> retval
@@ -8386,7 +8400,7 @@ Detect %MSER regions
 
 :param self: 
 :type self: 
-:rettype: float
+:rtype: float
 ````
 
 ````{py:method} setMaxEvolution(maxEvolution) -> None
@@ -8399,7 +8413,7 @@ Detect %MSER regions
 :type self: 
 :param maxEvolution: 
 :type maxEvolution: int
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getMaxEvolution() -> retval
@@ -8410,7 +8424,7 @@ Detect %MSER regions
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} setAreaThreshold(areaThreshold) -> None
@@ -8423,7 +8437,7 @@ Detect %MSER regions
 :type self: 
 :param areaThreshold: 
 :type areaThreshold: float
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getAreaThreshold() -> retval
@@ -8434,7 +8448,7 @@ Detect %MSER regions
 
 :param self: 
 :type self: 
-:rettype: float
+:rtype: float
 ````
 
 ````{py:method} setMinMargin(min_margin) -> None
@@ -8447,7 +8461,7 @@ Detect %MSER regions
 :type self: 
 :param min_margin: 
 :type min_margin: float
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getMinMargin() -> retval
@@ -8458,7 +8472,7 @@ Detect %MSER regions
 
 :param self: 
 :type self: 
-:rettype: float
+:rtype: float
 ````
 
 ````{py:method} setEdgeBlurSize(edge_blur_size) -> None
@@ -8471,7 +8485,7 @@ Detect %MSER regions
 :type self: 
 :param edge_blur_size: 
 :type edge_blur_size: int
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getEdgeBlurSize() -> retval
@@ -8482,7 +8496,7 @@ Detect %MSER regions
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} setPass2Only(f) -> None
@@ -8495,7 +8509,7 @@ Detect %MSER regions
 :type self: 
 :param f: 
 :type f: bool
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getPass2Only() -> retval
@@ -8506,7 +8520,7 @@ Detect %MSER regions
 
 :param self: 
 :type self: 
-:rettype: bool
+:rtype: bool
 ````
 
 ````{py:method} getDefaultName() -> retval
@@ -8517,7 +8531,7 @@ Detect %MSER regions
 
 :param self: 
 :type self: 
-:rettype: str
+:rtype: str
 ````
 
 
@@ -8555,7 +8569,7 @@ process(src, times[, dst]) -> dst
 :type response: cv2.typing.MatLike
 :param dst: 
 :type dst: cv2.typing.MatLike | None
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 ````{py:method} process(src, times, response[, dst]) -> dst
@@ -8575,7 +8589,7 @@ process(src, times[, dst]) -> dst
 :type response: UMat
 :param dst: 
 :type dst: UMat | None
-:rettype: UMat
+:rtype: UMat
 ````
 
 ````{py:method} process(src, times, response[, dst]) -> dst
@@ -8593,7 +8607,7 @@ process(src, times[, dst]) -> dst
 :type times: cv2.typing.MatLike
 :param dst: 
 :type dst: cv2.typing.MatLike | None
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 ````{py:method} process(src, times, response[, dst]) -> dst
@@ -8611,7 +8625,7 @@ process(src, times[, dst]) -> dst
 :type times: UMat
 :param dst: 
 :type dst: UMat | None
-:rettype: UMat
+:rtype: UMat
 ````
 
 
@@ -8640,7 +8654,7 @@ Merges images.
 :type response: cv2.typing.MatLike
 :param dst: result image
 :type dst: cv2.typing.MatLike | None
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 ````{py:method} process(src, times, response[, dst]) -> dst
@@ -8660,7 +8674,7 @@ Merges images.
 :type response: UMat
 :param dst: result image
 :type dst: UMat | None
-:rettype: UMat
+:rtype: UMat
 ````
 
 
@@ -8689,7 +8703,7 @@ process(src[, dst]) -> dst
 :type response: cv2.typing.MatLike
 :param dst: result image
 :type dst: cv2.typing.MatLike | None
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 ````{py:method} process(src, times, response[, dst]) -> dst
@@ -8709,7 +8723,7 @@ process(src[, dst]) -> dst
 :type response: UMat
 :param dst: result image
 :type dst: UMat | None
-:rettype: UMat
+:rtype: UMat
 ````
 
 ````{py:method} process(src, times, response[, dst]) -> dst
@@ -8725,7 +8739,7 @@ process(src[, dst]) -> dst
 :type src: _typing.Sequence[cv2.typing.MatLike]
 :param dst: result image
 :type dst: cv2.typing.MatLike | None
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 ````{py:method} process(src, times, response[, dst]) -> dst
@@ -8741,7 +8755,7 @@ process(src[, dst]) -> dst
 :type src: _typing.Sequence[UMat]
 :param dst: result image
 :type dst: UMat | None
-:rettype: UMat
+:rtype: UMat
 ````
 
 ````{py:method} getContrastWeight() -> retval
@@ -8752,7 +8766,7 @@ process(src[, dst]) -> dst
 
 :param self: 
 :type self: 
-:rettype: float
+:rtype: float
 ````
 
 ````{py:method} setContrastWeight(contrast_weiht) -> None
@@ -8765,7 +8779,7 @@ process(src[, dst]) -> dst
 :type self: 
 :param contrast_weiht: 
 :type contrast_weiht: float
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getSaturationWeight() -> retval
@@ -8776,7 +8790,7 @@ process(src[, dst]) -> dst
 
 :param self: 
 :type self: 
-:rettype: float
+:rtype: float
 ````
 
 ````{py:method} setSaturationWeight(saturation_weight) -> None
@@ -8789,7 +8803,7 @@ process(src[, dst]) -> dst
 :type self: 
 :param saturation_weight: 
 :type saturation_weight: float
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getExposureWeight() -> retval
@@ -8800,7 +8814,7 @@ process(src[, dst]) -> dst
 
 :param self: 
 :type self: 
-:rettype: float
+:rtype: float
 ````
 
 ````{py:method} setExposureWeight(exposure_weight) -> None
@@ -8813,7 +8827,7 @@ process(src[, dst]) -> dst
 :type self: 
 :param exposure_weight: 
 :type exposure_weight: float
-:rettype: None
+:rtype: None
 ````
 
 
@@ -8842,7 +8856,7 @@ process(src, times[, dst]) -> dst
 :type response: cv2.typing.MatLike
 :param dst: 
 :type dst: cv2.typing.MatLike | None
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 ````{py:method} process(src, times, response[, dst]) -> dst
@@ -8862,7 +8876,7 @@ process(src, times[, dst]) -> dst
 :type response: UMat
 :param dst: 
 :type dst: UMat | None
-:rettype: UMat
+:rtype: UMat
 ````
 
 ````{py:method} process(src, times, response[, dst]) -> dst
@@ -8880,7 +8894,7 @@ process(src, times[, dst]) -> dst
 :type times: cv2.typing.MatLike
 :param dst: 
 :type dst: cv2.typing.MatLike | None
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 ````{py:method} process(src, times, response[, dst]) -> dst
@@ -8898,7 +8912,7 @@ process(src, times[, dst]) -> dst
 :type times: UMat
 :param dst: 
 :type dst: UMat | None
-:rettype: UMat
+:rtype: UMat
 ````
 
 
@@ -8937,7 +8951,7 @@ The ORB constructor
 :type patchSize: int
 :param fastThreshold: the fast threshold
 :type fastThreshold: int
-:rettype: ORB
+:rtype: ORB
 ````
 
 ````{py:method} setMaxFeatures(maxFeatures) -> None
@@ -8950,7 +8964,7 @@ The ORB constructor
 :type self: 
 :param maxFeatures: 
 :type maxFeatures: int
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getMaxFeatures() -> retval
@@ -8961,7 +8975,7 @@ The ORB constructor
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} setScaleFactor(scaleFactor) -> None
@@ -8974,7 +8988,7 @@ The ORB constructor
 :type self: 
 :param scaleFactor: 
 :type scaleFactor: float
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getScaleFactor() -> retval
@@ -8985,7 +8999,7 @@ The ORB constructor
 
 :param self: 
 :type self: 
-:rettype: float
+:rtype: float
 ````
 
 ````{py:method} setNLevels(nlevels) -> None
@@ -8998,7 +9012,7 @@ The ORB constructor
 :type self: 
 :param nlevels: 
 :type nlevels: int
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getNLevels() -> retval
@@ -9009,7 +9023,7 @@ The ORB constructor
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} setEdgeThreshold(edgeThreshold) -> None
@@ -9022,7 +9036,7 @@ The ORB constructor
 :type self: 
 :param edgeThreshold: 
 :type edgeThreshold: int
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getEdgeThreshold() -> retval
@@ -9033,7 +9047,7 @@ The ORB constructor
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} setFirstLevel(firstLevel) -> None
@@ -9046,7 +9060,7 @@ The ORB constructor
 :type self: 
 :param firstLevel: 
 :type firstLevel: int
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getFirstLevel() -> retval
@@ -9057,7 +9071,7 @@ The ORB constructor
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} setWTA_K(wta_k) -> None
@@ -9070,7 +9084,7 @@ The ORB constructor
 :type self: 
 :param wta_k: 
 :type wta_k: int
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getWTA_K() -> retval
@@ -9081,7 +9095,7 @@ The ORB constructor
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} setScoreType(scoreType) -> None
@@ -9094,7 +9108,7 @@ The ORB constructor
 :type self: 
 :param scoreType: 
 :type scoreType: ORB_ScoreType
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getScoreType() -> retval
@@ -9105,7 +9119,7 @@ The ORB constructor
 
 :param self: 
 :type self: 
-:rettype: ORB_ScoreType
+:rtype: ORB_ScoreType
 ````
 
 ````{py:method} setPatchSize(patchSize) -> None
@@ -9118,7 +9132,7 @@ The ORB constructor
 :type self: 
 :param patchSize: 
 :type patchSize: int
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getPatchSize() -> retval
@@ -9129,7 +9143,7 @@ The ORB constructor
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} setFastThreshold(fastThreshold) -> None
@@ -9142,7 +9156,7 @@ The ORB constructor
 :type self: 
 :param fastThreshold: 
 :type fastThreshold: int
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getFastThreshold() -> retval
@@ -9153,7 +9167,7 @@ The ORB constructor
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} getDefaultName() -> retval
@@ -9164,7 +9178,7 @@ The ORB constructor
 
 :param self: 
 :type self: 
-:rettype: str
+:rtype: str
 ````
 
 
@@ -9189,7 +9203,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 :type type: str
 :param scale: 
 :type scale: float
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} __init__(self)
@@ -9201,7 +9215,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 
 :param self: 
 :type self: 
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} warpPoint(pt, K, R) -> retval
@@ -9220,7 +9234,7 @@ Projects the image point.
 :param R: Camera rotation matrix
 :type R: cv2.typing.MatLike
 :return: Projected point
-:rettype: cv2.typing.Point2f
+:rtype: cv2.typing.Point2f
 ````
 
 ````{py:method} warpPoint(pt, K, R) -> retval
@@ -9239,7 +9253,7 @@ Projects the image point.
 :param R: Camera rotation matrix
 :type R: UMat
 :return: Projected point
-:rettype: cv2.typing.Point2f
+:rtype: cv2.typing.Point2f
 ````
 
 ````{py:method} warpPointBackward(pt, K, R) -> retval
@@ -9258,7 +9272,7 @@ Projects the image point backward.
 :param R: Camera rotation matrix
 :type R: cv2.typing.MatLike
 :return: Backward-projected point
-:rettype: cv2.typing.Point2f
+:rtype: cv2.typing.Point2f
 ````
 
 ````{py:method} warpPointBackward(pt, K, R) -> retval
@@ -9277,7 +9291,7 @@ Projects the image point backward.
 :param R: Camera rotation matrix
 :type R: UMat
 :return: Backward-projected point
-:rettype: cv2.typing.Point2f
+:rtype: cv2.typing.Point2f
 ````
 
 ````{py:method} warpPointBackward(pt, K, R) -> retval
@@ -9296,7 +9310,7 @@ Projects the image point backward.
 :param R: Camera rotation matrix
 :type R: cv2.typing.MatLike
 :return: Backward-projected point
-:rettype: cv2.typing.Point2f
+:rtype: cv2.typing.Point2f
 ````
 
 ````{py:method} warpPointBackward(pt, K, R) -> retval
@@ -9315,7 +9329,7 @@ Projects the image point backward.
 :param R: Camera rotation matrix
 :type R: UMat
 :return: Backward-projected point
-:rettype: cv2.typing.Point2f
+:rtype: cv2.typing.Point2f
 ````
 
 ````{py:method} buildMaps(src_size, K, R[, xmap[, ymap]]) -> retval, xmap, ymap
@@ -9338,7 +9352,7 @@ Builds the projection maps according to the given camera data.
 :param ymap: Projection map for the y axis
 :type ymap: cv2.typing.MatLike | None
 :return: Projected image minimum bounding box
-:rettype: tuple[cv2.typing.Rect, cv2.typing.MatLike, cv2.typing.MatLike]
+:rtype: tuple[cv2.typing.Rect, cv2.typing.MatLike, cv2.typing.MatLike]
 ````
 
 ````{py:method} buildMaps(src_size, K, R[, xmap[, ymap]]) -> retval, xmap, ymap
@@ -9361,7 +9375,7 @@ Builds the projection maps according to the given camera data.
 :param ymap: Projection map for the y axis
 :type ymap: UMat | None
 :return: Projected image minimum bounding box
-:rettype: tuple[cv2.typing.Rect, UMat, UMat]
+:rtype: tuple[cv2.typing.Rect, UMat, UMat]
 ````
 
 ````{py:method} warp(src, K, R, interp_mode, border_mode[, dst]) -> retval, dst
@@ -9386,7 +9400,7 @@ Projects the image.
 :param dst: Projected image
 :type dst: cv2.typing.MatLike | None
 :return: Project image top-left corner
-:rettype: tuple[cv2.typing.Point, cv2.typing.MatLike]
+:rtype: tuple[cv2.typing.Point, cv2.typing.MatLike]
 ````
 
 ````{py:method} warp(src, K, R, interp_mode, border_mode[, dst]) -> retval, dst
@@ -9411,7 +9425,7 @@ Projects the image.
 :param dst: Projected image
 :type dst: UMat | None
 :return: Project image top-left corner
-:rettype: tuple[cv2.typing.Point, UMat]
+:rtype: tuple[cv2.typing.Point, UMat]
 ````
 
 ````{py:method} warpBackward(src, K, R, interp_mode, border_mode, dst_size[, dst]) -> dst
@@ -9437,7 +9451,7 @@ Projects the image backward.
 :type dst_size: cv2.typing.Size
 :param dst: Backward-projected image
 :type dst: cv2.typing.MatLike | None
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 ````{py:method} warpBackward(src, K, R, interp_mode, border_mode, dst_size[, dst]) -> dst
@@ -9463,7 +9477,7 @@ Projects the image backward.
 :type dst_size: cv2.typing.Size
 :param dst: Backward-projected image
 :type dst: UMat | None
-:rettype: UMat
+:rtype: UMat
 ````
 
 ````{py:method} warpRoi(src_size, K, R) -> retval
@@ -9482,7 +9496,7 @@ Projects the image backward.
 :param R: Camera rotation matrix
 :type R: cv2.typing.MatLike
 :return: Projected image minimum bounding box
-:rettype: cv2.typing.Rect
+:rtype: cv2.typing.Rect
 ````
 
 ````{py:method} warpRoi(src_size, K, R) -> retval
@@ -9501,7 +9515,7 @@ Projects the image backward.
 :param R: Camera rotation matrix
 :type R: UMat
 :return: Projected image minimum bounding box
-:rettype: cv2.typing.Rect
+:rtype: cv2.typing.Rect
 ````
 
 ````{py:method} getScale() -> retval
@@ -9512,7 +9526,7 @@ Projects the image backward.
 
 :param self: 
 :type self: 
-:rettype: float
+:rtype: float
 ````
 
 ````{py:method} setScale(arg1) -> None
@@ -9525,7 +9539,7 @@ Projects the image backward.
 :type self: 
 :param arg1: 
 :type arg1: float
-:rettype: None
+:rtype: None
 ````
 
 
@@ -9552,7 +9566,7 @@ Returns UTF8-encoded output string or empty string if the code cannot be decoded
 :type points: cv2.typing.MatLike
 :param straight_qrcode: The optional output image containing rectified and binarized QR code
 :type straight_qrcode: cv2.typing.MatLike | None
-:rettype: tuple[str, cv2.typing.MatLike]
+:rtype: tuple[str, cv2.typing.MatLike]
 ````
 
 ````{py:method} decodeCurved(img, points[, straight_qrcode]) -> retval, straight_qrcode
@@ -9570,7 +9584,7 @@ Returns UTF8-encoded output string or empty string if the code cannot be decoded
 :type points: UMat
 :param straight_qrcode: The optional output image containing rectified and binarized QR code
 :type straight_qrcode: UMat | None
-:rettype: tuple[str, UMat]
+:rtype: tuple[str, UMat]
 ````
 
 ````{py:method} detectAndDecodeCurved(img[, points[, straight_qrcode]]) -> retval, points, straight_qrcode
@@ -9588,7 +9602,7 @@ Both detects and decodes QR code on a curved surface
 :type points: cv2.typing.MatLike | None
 :param straight_qrcode: The optional output image containing rectified and binarized QR code
 :type straight_qrcode: cv2.typing.MatLike | None
-:rettype: tuple[str, cv2.typing.MatLike, cv2.typing.MatLike]
+:rtype: tuple[str, cv2.typing.MatLike, cv2.typing.MatLike]
 ````
 
 ````{py:method} detectAndDecodeCurved(img[, points[, straight_qrcode]]) -> retval, points, straight_qrcode
@@ -9606,7 +9620,7 @@ Both detects and decodes QR code on a curved surface
 :type points: UMat | None
 :param straight_qrcode: The optional output image containing rectified and binarized QR code
 :type straight_qrcode: UMat | None
-:rettype: tuple[str, UMat, UMat]
+:rtype: tuple[str, UMat, UMat]
 ````
 
 ````{py:method} __init__(self)
@@ -9617,7 +9631,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 
 :param self: 
 :type self: 
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} setEpsX(epsX) -> retval
@@ -9630,7 +9644,7 @@ sets the epsilon used during the horizontal scan of QR code stop marker detectio
 :type self: 
 :param epsX: Epsilon neighborhood, which allows you to determine the horizontal patternof the scheme 1:1:3:1:1 according to QR code standard. 
 :type epsX: float
-:rettype: QRCodeDetector
+:rtype: QRCodeDetector
 ````
 
 ````{py:method} setEpsY(epsY) -> retval
@@ -9643,7 +9657,7 @@ sets the epsilon used during the vertical scan of QR code stop marker detection.
 :type self: 
 :param epsY: Epsilon neighborhood, which allows you to determine the vertical patternof the scheme 1:1:3:1:1 according to QR code standard. 
 :type epsY: float
-:rettype: QRCodeDetector
+:rtype: QRCodeDetector
 ````
 
 ````{py:method} setUseAlignmentMarkers(useAlignmentMarkers) -> retval
@@ -9656,7 +9670,7 @@ alignmentMarkers using by default
 :type self: 
 :param useAlignmentMarkers: 
 :type useAlignmentMarkers: bool
-:rettype: QRCodeDetector
+:rtype: QRCodeDetector
 ````
 
 
@@ -9677,7 +9691,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 
 :param self: 
 :type self: 
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} __init__(self, params: QRCodeDetectorAruco.Params)
@@ -9691,7 +9705,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 :type self: 
 :param params: 
 :type params: QRCodeDetectorAruco.Params
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getDetectorParameters() -> retval
@@ -9702,7 +9716,7 @@ Detector parameters getter. See cv::QRCodeDetectorAruco::Params
 
 :param self: 
 :type self: 
-:rettype: QRCodeDetectorAruco.Params
+:rtype: QRCodeDetectorAruco.Params
 ````
 
 ````{py:method} setDetectorParameters(params) -> retval
@@ -9715,7 +9729,7 @@ Detector parameters setter. See cv::QRCodeDetectorAruco::Params
 :type self: 
 :param params: 
 :type params: QRCodeDetectorAruco.Params
-:rettype: QRCodeDetectorAruco
+:rtype: QRCodeDetectorAruco
 ````
 
 ````{py:method} getArucoParameters() -> retval
@@ -9726,7 +9740,7 @@ Aruco detector parameters are used to search for the finder patterns.
 
 :param self: 
 :type self: 
-:rettype: cv2.aruco.DetectorParameters
+:rtype: cv2.aruco.DetectorParameters
 ````
 
 ````{py:method} setArucoParameters(params) -> None
@@ -9739,7 +9753,7 @@ Aruco detector parameters are used to search for the finder patterns.
 :type self: 
 :param params: 
 :type params: cv2.aruco.DetectorParameters
-:rettype: None
+:rtype: None
 ````
 
 
@@ -9771,7 +9785,7 @@ Constructor
 :type cls: 
 :param parameters: QR code encoder parameters QRCodeEncoder::Params
 :type parameters: QRCodeEncoder.Params
-:rettype: QRCodeEncoder
+:rtype: QRCodeEncoder
 ````
 
 ````{py:method} encode(encoded_info[, qrcode]) -> qrcode
@@ -9787,7 +9801,7 @@ Generates QR code from input string.
 :type encoded_info: str
 :param qrcode: Generated QR code.
 :type qrcode: cv2.typing.MatLike | None
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 ````{py:method} encode(encoded_info[, qrcode]) -> qrcode
@@ -9803,7 +9817,7 @@ Generates QR code from input string.
 :type encoded_info: str
 :param qrcode: Generated QR code.
 :type qrcode: UMat | None
-:rettype: UMat
+:rtype: UMat
 ````
 
 ````{py:method} encodeStructuredAppend(encoded_info[, qrcodes]) -> qrcodes
@@ -9819,7 +9833,7 @@ Generates QR code from input string in Structured Append mode. The encoded messa
 :type encoded_info: str
 :param qrcodes: Vector of generated QR codes.
 :type qrcodes: _typing.Sequence[cv2.typing.MatLike] | None
-:rettype: _typing.Sequence[cv2.typing.MatLike]
+:rtype: _typing.Sequence[cv2.typing.MatLike]
 ````
 
 ````{py:method} encodeStructuredAppend(encoded_info[, qrcodes]) -> qrcodes
@@ -9835,7 +9849,7 @@ Generates QR code from input string in Structured Append mode. The encoded messa
 :type encoded_info: str
 :param qrcodes: Vector of generated QR codes.
 :type qrcodes: _typing.Sequence[UMat] | None
-:rettype: _typing.Sequence[UMat]
+:rtype: _typing.Sequence[UMat]
 ````
 
 
@@ -9865,7 +9879,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 
 :param self: 
 :type self: 
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} __init__(self, center: cv2.typing.Point2f, size: cv2.typing.Size2f, angle: float)
@@ -9883,7 +9897,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 :type size: cv2.typing.Size2f
 :param angle: 
 :type angle: float
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} __init__(self, point1: cv2.typing.Point2f, point2: cv2.typing.Point2f, point3: cv2.typing.Point2f)
@@ -9901,7 +9915,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 :type point2: cv2.typing.Point2f
 :param point3: 
 :type point3: cv2.typing.Point2f
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} points() -> pts
@@ -9917,7 +9931,7 @@ _Bottom_, _Top_, _Left_ and _Right_ sides refer to the original rectangle (angle
 :type self: 
 :param pts: The points array for storing rectangle vertices. The order is _bottomLeft_, _topLeft_, topRight, bottomRight.
 :type pts: 
-:rettype: _typing.Sequence[cv2.typing.Point2f]
+:rtype: _typing.Sequence[cv2.typing.Point2f]
 ````
 
 ````{py:method} boundingRect() -> retval
@@ -9928,7 +9942,7 @@ _Bottom_, _Top_, _Left_ and _Right_ sides refer to the original rectangle (angle
 
 :param self: 
 :type self: 
-:rettype: cv2.typing.Rect
+:rtype: cv2.typing.Rect
 ````
 
 ```{py:attribute} center
@@ -9981,7 +9995,7 @@ The contrast threshold will be divided by nOctaveLayers when the filtering is ap
 :type enable_precise_upscale: bool
 :param descriptorType: The type of descriptors. Only CV_32F and CV_8U are supported.
 :type descriptorType: 
-:rettype: SIFT
+:rtype: SIFT
 ````
 
 ````{py:method} create([, nfeatures[, nOctaveLayers[, contrastThreshold[, edgeThreshold[, sigma[, enable_precise_upscale]]]]]]) -> retval
@@ -10013,7 +10027,7 @@ The contrast threshold will be divided by nOctaveLayers when the filtering is ap
 :type descriptorType: int
 :param enable_precise_upscale: Whether to enable precise upscaling in the scale pyramid, which mapsindex $\texttt{x}$ to $\texttt{2x}$. This prevents localization bias. The option is disabled by default. 
 :type enable_precise_upscale: bool
-:rettype: SIFT
+:rtype: SIFT
 ````
 
 ````{py:method} getDefaultName() -> retval
@@ -10024,7 +10038,7 @@ The contrast threshold will be divided by nOctaveLayers when the filtering is ap
 
 :param self: 
 :type self: 
-:rettype: str
+:rtype: str
 ````
 
 ````{py:method} setNFeatures(maxFeatures) -> None
@@ -10037,7 +10051,7 @@ The contrast threshold will be divided by nOctaveLayers when the filtering is ap
 :type self: 
 :param maxFeatures: 
 :type maxFeatures: int
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getNFeatures() -> retval
@@ -10048,7 +10062,7 @@ The contrast threshold will be divided by nOctaveLayers when the filtering is ap
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} setNOctaveLayers(nOctaveLayers) -> None
@@ -10061,7 +10075,7 @@ The contrast threshold will be divided by nOctaveLayers when the filtering is ap
 :type self: 
 :param nOctaveLayers: 
 :type nOctaveLayers: int
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getNOctaveLayers() -> retval
@@ -10072,7 +10086,7 @@ The contrast threshold will be divided by nOctaveLayers when the filtering is ap
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} setContrastThreshold(contrastThreshold) -> None
@@ -10085,7 +10099,7 @@ The contrast threshold will be divided by nOctaveLayers when the filtering is ap
 :type self: 
 :param contrastThreshold: 
 :type contrastThreshold: float
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getContrastThreshold() -> retval
@@ -10096,7 +10110,7 @@ The contrast threshold will be divided by nOctaveLayers when the filtering is ap
 
 :param self: 
 :type self: 
-:rettype: float
+:rtype: float
 ````
 
 ````{py:method} setEdgeThreshold(edgeThreshold) -> None
@@ -10109,7 +10123,7 @@ The contrast threshold will be divided by nOctaveLayers when the filtering is ap
 :type self: 
 :param edgeThreshold: 
 :type edgeThreshold: float
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getEdgeThreshold() -> retval
@@ -10120,7 +10134,7 @@ The contrast threshold will be divided by nOctaveLayers when the filtering is ap
 
 :param self: 
 :type self: 
-:rettype: float
+:rtype: float
 ````
 
 ````{py:method} setSigma(sigma) -> None
@@ -10133,7 +10147,7 @@ The contrast threshold will be divided by nOctaveLayers when the filtering is ap
 :type self: 
 :param sigma: 
 :type sigma: float
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getSigma() -> retval
@@ -10144,7 +10158,7 @@ The contrast threshold will be divided by nOctaveLayers when the filtering is ap
 
 :param self: 
 :type self: 
-:rettype: float
+:rtype: float
 ````
 
 
@@ -10167,7 +10181,7 @@ The contrast threshold will be divided by nOctaveLayers when the filtering is ap
 :type cls: 
 :param parameters: 
 :type parameters: SimpleBlobDetector.Params
-:rettype: SimpleBlobDetector
+:rtype: SimpleBlobDetector
 ````
 
 ````{py:method} setParams(params) -> None
@@ -10180,7 +10194,7 @@ The contrast threshold will be divided by nOctaveLayers when the filtering is ap
 :type self: 
 :param params: 
 :type params: SimpleBlobDetector.Params
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getParams() -> retval
@@ -10191,7 +10205,7 @@ The contrast threshold will be divided by nOctaveLayers when the filtering is ap
 
 :param self: 
 :type self: 
-:rettype: SimpleBlobDetector.Params
+:rtype: SimpleBlobDetector.Params
 ````
 
 ````{py:method} getDefaultName() -> retval
@@ -10202,7 +10216,7 @@ The contrast threshold will be divided by nOctaveLayers when the filtering is ap
 
 :param self: 
 :type self: 
-:rettype: str
+:rtype: str
 ````
 
 ````{py:method} getBlobContours() -> retval
@@ -10213,7 +10227,7 @@ The contrast threshold will be divided by nOctaveLayers when the filtering is ap
 
 :param self: 
 :type self: 
-:rettype: _typing.Sequence[_typing.Sequence[cv2.typing.Point]]
+:rtype: _typing.Sequence[_typing.Sequence[cv2.typing.Point]]
 ````
 
 
@@ -10255,7 +10269,7 @@ Calculates a sparse optical flow.
 :type status: cv2.typing.MatLike | None
 :param err: Optional output vector that contains error response for each point (inverse confidence).
 :type err: cv2.typing.MatLike | None
-:rettype: tuple[cv2.typing.MatLike, cv2.typing.MatLike, cv2.typing.MatLike]
+:rtype: tuple[cv2.typing.MatLike, cv2.typing.MatLike, cv2.typing.MatLike]
 ````
 
 ````{py:method} calc(prevImg, nextImg, prevPts, nextPts[, status[, err]]) -> nextPts, status, err
@@ -10279,7 +10293,7 @@ Calculates a sparse optical flow.
 :type status: UMat | None
 :param err: Optional output vector that contains error response for each point (inverse confidence).
 :type err: UMat | None
-:rettype: tuple[UMat, UMat, UMat]
+:rtype: tuple[UMat, UMat, UMat]
 ````
 
 
@@ -10310,7 +10324,7 @@ Calculates a sparse optical flow.
 :type flags: int
 :param minEigThreshold: 
 :type minEigThreshold: float
-:rettype: SparsePyrLKOpticalFlow
+:rtype: SparsePyrLKOpticalFlow
 ````
 
 ````{py:method} getWinSize() -> retval
@@ -10321,7 +10335,7 @@ Calculates a sparse optical flow.
 
 :param self: 
 :type self: 
-:rettype: cv2.typing.Size
+:rtype: cv2.typing.Size
 ````
 
 ````{py:method} setWinSize(winSize) -> None
@@ -10334,7 +10348,7 @@ Calculates a sparse optical flow.
 :type self: 
 :param winSize: 
 :type winSize: cv2.typing.Size
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getMaxLevel() -> retval
@@ -10345,7 +10359,7 @@ Calculates a sparse optical flow.
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} setMaxLevel(maxLevel) -> None
@@ -10358,7 +10372,7 @@ Calculates a sparse optical flow.
 :type self: 
 :param maxLevel: 
 :type maxLevel: int
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getTermCriteria() -> retval
@@ -10369,7 +10383,7 @@ Calculates a sparse optical flow.
 
 :param self: 
 :type self: 
-:rettype: cv2.typing.TermCriteria
+:rtype: cv2.typing.TermCriteria
 ````
 
 ````{py:method} setTermCriteria(crit) -> None
@@ -10382,7 +10396,7 @@ Calculates a sparse optical flow.
 :type self: 
 :param crit: 
 :type crit: cv2.typing.TermCriteria
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getFlags() -> retval
@@ -10393,7 +10407,7 @@ Calculates a sparse optical flow.
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} setFlags(flags) -> None
@@ -10406,7 +10420,7 @@ Calculates a sparse optical flow.
 :type self: 
 :param flags: 
 :type flags: int
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getMinEigThreshold() -> retval
@@ -10417,7 +10431,7 @@ Calculates a sparse optical flow.
 
 :param self: 
 :type self: 
-:rettype: float
+:rtype: float
 ````
 
 ````{py:method} setMinEigThreshold(minEigThreshold) -> None
@@ -10430,7 +10444,7 @@ Calculates a sparse optical flow.
 :type self: 
 :param minEigThreshold: 
 :type minEigThreshold: float
-:rettype: None
+:rtype: None
 ````
 
 
@@ -10455,7 +10469,7 @@ The function create StereoBM object. You can then call StereoBM::compute() to co
 :type numDisparities: int
 :param blockSize: the linear size of the blocks compared by the algorithm. The size should be odd(as the block is centered at the current pixel). Larger block size implies smoother, though less accurate disparity map. Smaller block size gives more detailed disparity map, but there is higher chance for algorithm to find a wrong correspondence. 
 :type blockSize: int
-:rettype: StereoBM
+:rtype: StereoBM
 ````
 
 ````{py:method} getPreFilterType() -> retval
@@ -10466,7 +10480,7 @@ The function create StereoBM object. You can then call StereoBM::compute() to co
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} setPreFilterType(preFilterType) -> None
@@ -10479,7 +10493,7 @@ The function create StereoBM object. You can then call StereoBM::compute() to co
 :type self: 
 :param preFilterType: 
 :type preFilterType: int
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getPreFilterSize() -> retval
@@ -10490,7 +10504,7 @@ The function create StereoBM object. You can then call StereoBM::compute() to co
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} setPreFilterSize(preFilterSize) -> None
@@ -10503,7 +10517,7 @@ The function create StereoBM object. You can then call StereoBM::compute() to co
 :type self: 
 :param preFilterSize: 
 :type preFilterSize: int
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getPreFilterCap() -> retval
@@ -10514,7 +10528,7 @@ The function create StereoBM object. You can then call StereoBM::compute() to co
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} setPreFilterCap(preFilterCap) -> None
@@ -10527,7 +10541,7 @@ The function create StereoBM object. You can then call StereoBM::compute() to co
 :type self: 
 :param preFilterCap: 
 :type preFilterCap: int
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getTextureThreshold() -> retval
@@ -10538,7 +10552,7 @@ The function create StereoBM object. You can then call StereoBM::compute() to co
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} setTextureThreshold(textureThreshold) -> None
@@ -10551,7 +10565,7 @@ The function create StereoBM object. You can then call StereoBM::compute() to co
 :type self: 
 :param textureThreshold: 
 :type textureThreshold: int
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getUniquenessRatio() -> retval
@@ -10562,7 +10576,7 @@ The function create StereoBM object. You can then call StereoBM::compute() to co
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} setUniquenessRatio(uniquenessRatio) -> None
@@ -10575,7 +10589,7 @@ The function create StereoBM object. You can then call StereoBM::compute() to co
 :type self: 
 :param uniquenessRatio: 
 :type uniquenessRatio: int
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getSmallerBlockSize() -> retval
@@ -10586,7 +10600,7 @@ The function create StereoBM object. You can then call StereoBM::compute() to co
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} setSmallerBlockSize(blockSize) -> None
@@ -10599,7 +10613,7 @@ The function create StereoBM object. You can then call StereoBM::compute() to co
 :type self: 
 :param blockSize: 
 :type blockSize: int
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getROI1() -> retval
@@ -10610,7 +10624,7 @@ The function create StereoBM object. You can then call StereoBM::compute() to co
 
 :param self: 
 :type self: 
-:rettype: cv2.typing.Rect
+:rtype: cv2.typing.Rect
 ````
 
 ````{py:method} setROI1(roi1) -> None
@@ -10623,7 +10637,7 @@ The function create StereoBM object. You can then call StereoBM::compute() to co
 :type self: 
 :param roi1: 
 :type roi1: cv2.typing.Rect
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getROI2() -> retval
@@ -10634,7 +10648,7 @@ The function create StereoBM object. You can then call StereoBM::compute() to co
 
 :param self: 
 :type self: 
-:rettype: cv2.typing.Rect
+:rtype: cv2.typing.Rect
 ````
 
 ````{py:method} setROI2(roi2) -> None
@@ -10647,7 +10661,7 @@ The function create StereoBM object. You can then call StereoBM::compute() to co
 :type self: 
 :param roi2: 
 :type roi2: cv2.typing.Rect
-:rettype: None
+:rtype: None
 ````
 
 
@@ -10674,7 +10688,7 @@ Computes disparity map for the specified stereo pair
 :type right: cv2.typing.MatLike
 :param disparity: Output disparity map. It has the same size as the input images. Some algorithms,like StereoBM or StereoSGBM compute 16-bit fixed-point disparity map (where each disparity value has 4 fractional bits), whereas other algorithms output 32-bit floating-point disparity map. 
 :type disparity: cv2.typing.MatLike | None
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 ````{py:method} compute(left, right[, disparity]) -> disparity
@@ -10692,7 +10706,7 @@ Computes disparity map for the specified stereo pair
 :type right: UMat
 :param disparity: Output disparity map. It has the same size as the input images. Some algorithms,like StereoBM or StereoSGBM compute 16-bit fixed-point disparity map (where each disparity value has 4 fractional bits), whereas other algorithms output 32-bit floating-point disparity map. 
 :type disparity: UMat | None
-:rettype: UMat
+:rtype: UMat
 ````
 
 ````{py:method} getMinDisparity() -> retval
@@ -10703,7 +10717,7 @@ Computes disparity map for the specified stereo pair
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} setMinDisparity(minDisparity) -> None
@@ -10716,7 +10730,7 @@ Computes disparity map for the specified stereo pair
 :type self: 
 :param minDisparity: 
 :type minDisparity: int
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getNumDisparities() -> retval
@@ -10727,7 +10741,7 @@ Computes disparity map for the specified stereo pair
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} setNumDisparities(numDisparities) -> None
@@ -10740,7 +10754,7 @@ Computes disparity map for the specified stereo pair
 :type self: 
 :param numDisparities: 
 :type numDisparities: int
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getBlockSize() -> retval
@@ -10751,7 +10765,7 @@ Computes disparity map for the specified stereo pair
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} setBlockSize(blockSize) -> None
@@ -10764,7 +10778,7 @@ Computes disparity map for the specified stereo pair
 :type self: 
 :param blockSize: 
 :type blockSize: int
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getSpeckleWindowSize() -> retval
@@ -10775,7 +10789,7 @@ Computes disparity map for the specified stereo pair
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} setSpeckleWindowSize(speckleWindowSize) -> None
@@ -10788,7 +10802,7 @@ Computes disparity map for the specified stereo pair
 :type self: 
 :param speckleWindowSize: 
 :type speckleWindowSize: int
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getSpeckleRange() -> retval
@@ -10799,7 +10813,7 @@ Computes disparity map for the specified stereo pair
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} setSpeckleRange(speckleRange) -> None
@@ -10812,7 +10826,7 @@ Computes disparity map for the specified stereo pair
 :type self: 
 :param speckleRange: 
 :type speckleRange: int
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getDisp12MaxDiff() -> retval
@@ -10823,7 +10837,7 @@ Computes disparity map for the specified stereo pair
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} setDisp12MaxDiff(disp12MaxDiff) -> None
@@ -10836,7 +10850,7 @@ Computes disparity map for the specified stereo pair
 :type self: 
 :param disp12MaxDiff: 
 :type disp12MaxDiff: int
-:rettype: None
+:rtype: None
 ````
 
 
@@ -10879,7 +10893,7 @@ The first constructor initializes StereoSGBM with all the default parameters. So
 :type speckleRange: int
 :param mode: Set it to StereoSGBM::MODE_HH to run the full-scale two-pass dynamic programmingalgorithm. It will consume O(W\*H\*numDisparities) bytes, which is large for 640x480 stereo and huge for HD-size pictures. By default, it is set to false . 
 :type mode: int
-:rettype: StereoSGBM
+:rtype: StereoSGBM
 ````
 
 ````{py:method} getPreFilterCap() -> retval
@@ -10890,7 +10904,7 @@ The first constructor initializes StereoSGBM with all the default parameters. So
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} setPreFilterCap(preFilterCap) -> None
@@ -10903,7 +10917,7 @@ The first constructor initializes StereoSGBM with all the default parameters. So
 :type self: 
 :param preFilterCap: 
 :type preFilterCap: int
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getUniquenessRatio() -> retval
@@ -10914,7 +10928,7 @@ The first constructor initializes StereoSGBM with all the default parameters. So
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} setUniquenessRatio(uniquenessRatio) -> None
@@ -10927,7 +10941,7 @@ The first constructor initializes StereoSGBM with all the default parameters. So
 :type self: 
 :param uniquenessRatio: 
 :type uniquenessRatio: int
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getP1() -> retval
@@ -10938,7 +10952,7 @@ The first constructor initializes StereoSGBM with all the default parameters. So
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} setP1(P1) -> None
@@ -10951,7 +10965,7 @@ The first constructor initializes StereoSGBM with all the default parameters. So
 :type self: 
 :param P1: 
 :type P1: int
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getP2() -> retval
@@ -10962,7 +10976,7 @@ The first constructor initializes StereoSGBM with all the default parameters. So
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} setP2(P2) -> None
@@ -10975,7 +10989,7 @@ The first constructor initializes StereoSGBM with all the default parameters. So
 :type self: 
 :param P2: 
 :type P2: int
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getMode() -> retval
@@ -10986,7 +11000,7 @@ The first constructor initializes StereoSGBM with all the default parameters. So
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} setMode(mode) -> None
@@ -10999,7 +11013,7 @@ The first constructor initializes StereoSGBM with all the default parameters. So
 :type self: 
 :param mode: 
 :type mode: int
-:rettype: None
+:rtype: None
 ````
 
 
@@ -11023,7 +11037,7 @@ Creates a Stitcher configured in one of the stitching modes.
 :param mode: Scenario for stitcher operation. This is usually determined by source of imagesto stitch and their transformation. Default parameters will be chosen for operation in given scenario. 
 :type mode: Stitcher_Mode
 :return: Stitcher class instance.
-:rettype: Stitcher
+:rtype: Stitcher
 ````
 
 ````{py:method} estimateTransform(images[, masks]) -> retval
@@ -11043,7 +11057,7 @@ Use the functions only if you're aware of the stitching pipeline, otherwise useS
 :param masks: Masks for each input image specifying where to look for keypoints (optional).
 :type masks: _typing.Sequence[cv2.typing.MatLike] | None
 :return: Status code.
-:rettype: Stitcher_Status
+:rtype: Stitcher_Status
 ````
 
 ````{py:method} estimateTransform(images[, masks]) -> retval
@@ -11063,7 +11077,7 @@ Use the functions only if you're aware of the stitching pipeline, otherwise useS
 :param masks: Masks for each input image specifying where to look for keypoints (optional).
 :type masks: _typing.Sequence[UMat] | None
 :return: Status code.
-:rettype: Stitcher_Status
+:rtype: Stitcher_Status
 ````
 
 ````{py:method} composePanorama([, pano]) -> retval, pano
@@ -11083,7 +11097,7 @@ Use the functions only if you're aware of the stitching pipeline, otherwise useS
 :param images: Input images.
 :type images: 
 :return: Status code.
-:rettype: tuple[Stitcher_Status, cv2.typing.MatLike]
+:rtype: tuple[Stitcher_Status, cv2.typing.MatLike]
 ````
 
 ````{py:method} composePanorama([, pano]) -> retval, pano
@@ -11103,7 +11117,7 @@ Use the functions only if you're aware of the stitching pipeline, otherwise useS
 :param images: Input images.
 :type images: 
 :return: Status code.
-:rettype: tuple[Stitcher_Status, UMat]
+:rtype: tuple[Stitcher_Status, UMat]
 ````
 
 ````{py:method} composePanorama([, pano]) -> retval, pano
@@ -11123,7 +11137,7 @@ Use the functions only if you're aware of the stitching pipeline, otherwise useS
 :param pano: Final pano.
 :type pano: cv2.typing.MatLike | None
 :return: Status code.
-:rettype: tuple[Stitcher_Status, cv2.typing.MatLike]
+:rtype: tuple[Stitcher_Status, cv2.typing.MatLike]
 ````
 
 ````{py:method} composePanorama([, pano]) -> retval, pano
@@ -11143,7 +11157,7 @@ Use the functions only if you're aware of the stitching pipeline, otherwise useS
 :param pano: Final pano.
 :type pano: UMat | None
 :return: Status code.
-:rettype: tuple[Stitcher_Status, UMat]
+:rtype: tuple[Stitcher_Status, UMat]
 ````
 
 ````{py:method} stitch(images[, pano]) -> retval, pano
@@ -11162,7 +11176,7 @@ These functions try to stitch the given images.
 :param masks: Masks for each input image specifying where to look for keypoints (optional).
 :type masks: 
 :return: Status code.
-:rettype: tuple[Stitcher_Status, cv2.typing.MatLike]
+:rtype: tuple[Stitcher_Status, cv2.typing.MatLike]
 ````
 
 ````{py:method} stitch(images[, pano]) -> retval, pano
@@ -11181,7 +11195,7 @@ These functions try to stitch the given images.
 :param masks: Masks for each input image specifying where to look for keypoints (optional).
 :type masks: 
 :return: Status code.
-:rettype: tuple[Stitcher_Status, UMat]
+:rtype: tuple[Stitcher_Status, UMat]
 ````
 
 ````{py:method} stitch(images[, pano]) -> retval, pano
@@ -11200,7 +11214,7 @@ These functions try to stitch the given images.
 :param pano: Final pano.
 :type pano: cv2.typing.MatLike | None
 :return: Status code.
-:rettype: tuple[Stitcher_Status, cv2.typing.MatLike]
+:rtype: tuple[Stitcher_Status, cv2.typing.MatLike]
 ````
 
 ````{py:method} stitch(images[, pano]) -> retval, pano
@@ -11219,7 +11233,7 @@ These functions try to stitch the given images.
 :param pano: Final pano.
 :type pano: UMat | None
 :return: Status code.
-:rettype: tuple[Stitcher_Status, UMat]
+:rtype: tuple[Stitcher_Status, UMat]
 ````
 
 ````{py:method} registrationResol() -> retval
@@ -11230,7 +11244,7 @@ These functions try to stitch the given images.
 
 :param self: 
 :type self: 
-:rettype: float
+:rtype: float
 ````
 
 ````{py:method} setRegistrationResol(resol_mpx) -> None
@@ -11243,7 +11257,7 @@ These functions try to stitch the given images.
 :type self: 
 :param resol_mpx: 
 :type resol_mpx: float
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} seamEstimationResol() -> retval
@@ -11254,7 +11268,7 @@ These functions try to stitch the given images.
 
 :param self: 
 :type self: 
-:rettype: float
+:rtype: float
 ````
 
 ````{py:method} setSeamEstimationResol(resol_mpx) -> None
@@ -11267,7 +11281,7 @@ These functions try to stitch the given images.
 :type self: 
 :param resol_mpx: 
 :type resol_mpx: float
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} compositingResol() -> retval
@@ -11278,7 +11292,7 @@ These functions try to stitch the given images.
 
 :param self: 
 :type self: 
-:rettype: float
+:rtype: float
 ````
 
 ````{py:method} setCompositingResol(resol_mpx) -> None
@@ -11291,7 +11305,7 @@ These functions try to stitch the given images.
 :type self: 
 :param resol_mpx: 
 :type resol_mpx: float
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} panoConfidenceThresh() -> retval
@@ -11302,7 +11316,7 @@ These functions try to stitch the given images.
 
 :param self: 
 :type self: 
-:rettype: float
+:rtype: float
 ````
 
 ````{py:method} setPanoConfidenceThresh(conf_thresh) -> None
@@ -11315,7 +11329,7 @@ These functions try to stitch the given images.
 :type self: 
 :param conf_thresh: 
 :type conf_thresh: float
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} waveCorrection() -> retval
@@ -11326,7 +11340,7 @@ These functions try to stitch the given images.
 
 :param self: 
 :type self: 
-:rettype: bool
+:rtype: bool
 ````
 
 ````{py:method} setWaveCorrection(flag) -> None
@@ -11339,7 +11353,7 @@ These functions try to stitch the given images.
 :type self: 
 :param flag: 
 :type flag: bool
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} interpolationFlags() -> retval
@@ -11350,7 +11364,7 @@ These functions try to stitch the given images.
 
 :param self: 
 :type self: 
-:rettype: InterpolationFlags
+:rtype: InterpolationFlags
 ````
 
 ````{py:method} setInterpolationFlags(interp_flags) -> None
@@ -11363,7 +11377,7 @@ These functions try to stitch the given images.
 :type self: 
 :param interp_flags: 
 :type interp_flags: InterpolationFlags
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} workScale() -> retval
@@ -11374,7 +11388,7 @@ These functions try to stitch the given images.
 
 :param self: 
 :type self: 
-:rettype: float
+:rtype: float
 ````
 
 
@@ -11395,7 +11409,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 
 :param self: 
 :type self: 
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} __init__(self, rect: cv2.typing.Rect)
@@ -11409,14 +11423,14 @@ Initialize self.  See help(type(self)) for accurate signature.
 :type self: 
 :param rect: 
 :type rect: cv2.typing.Rect
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} insert(pt) -> retval
 
 Insert multiple points into a Delaunay triangulation.
 
-The function inserts a single point into a subdivision and modifies the subdivision topology appropriately. If a point with the same coordinates exists already, no new point is added. @returns the ID of the point. insert(ptvec) -> None The function inserts a vector of points into a subdivision and modifies the subdivision topology appropriately. 
+The function inserts a single point into a subdivision and modifies the subdivision topology appropriately. If a point with the same coordinates exists already, no new point is added. insert(ptvec) -> None The function inserts a vector of points into a subdivision and modifies the subdivision topology appropriately. 
 ```{note}
 If the point is outside of the triangulation specified rect a runtime error is raised.
 ```
@@ -11428,14 +11442,15 @@ If the point is outside of the triangulation specified rect a runtime error is r
 :type pt: cv2.typing.Point2f
 :param ptvec: Points to insert.
 :type ptvec: 
-:rettype: int
+:return: the ID of the point.
+:rtype: int
 ````
 
 ````{py:method} insert(pt) -> retval
 
 Insert multiple points into a Delaunay triangulation.
 
-The function inserts a single point into a subdivision and modifies the subdivision topology appropriately. If a point with the same coordinates exists already, no new point is added. @returns the ID of the point. insert(ptvec) -> None The function inserts a vector of points into a subdivision and modifies the subdivision topology appropriately. 
+The function inserts a single point into a subdivision and modifies the subdivision topology appropriately. If a point with the same coordinates exists already, no new point is added. insert(ptvec) -> None The function inserts a vector of points into a subdivision and modifies the subdivision topology appropriately. 
 ```{note}
 If the point is outside of the triangulation specified rect a runtime error is raised.
 ```
@@ -11447,7 +11462,8 @@ If the point is outside of the triangulation specified rect a runtime error is r
 :type ptvec: _typing.Sequence[cv2.typing.Point2f]
 :param pt: Point to insert.
 :type pt: 
-:rettype: None
+:return: the ID of the point.
+:rtype: None
 ````
 
 ````{py:method} initDelaunay(rect) -> None
@@ -11460,13 +11476,13 @@ Creates a new empty Delaunay subdivision
 :type self: 
 :param rect: Rectangle that includes all of the 2D points that are to be added to the subdivision.
 :type rect: cv2.typing.Rect
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} locate(pt) -> retval, edge, vertex
 Returns the location of a point within a Delaunay triangulation.
 
-The function locates the input point within the subdivision and gives one of the triangle edges or vertices. @returns an integer which specify one of the following five cases for point location: -  The point falls into some facet. The function returns #PTLOC_INSIDE and edge will contain one of edges of the facet. -  The point falls onto the edge. The function returns #PTLOC_ON_EDGE and edge will contain this edge. -  The point coincides with one of the subdivision vertices. The function returns #PTLOC_VERTEX and vertex will contain a pointer to the vertex. -  The point is outside the subdivision reference rectangle. The function returns #PTLOC_OUTSIDE_RECT and no pointers are filled. -  One of input arguments is invalid. A runtime error is raised or, if silent or "parent" error processing mode is selected, #PTLOC_ERROR is returned. 
+The function locates the input point within the subdivision and gives one of the triangle edges or vertices. 
 
 
 :param self: 
@@ -11477,13 +11493,14 @@ The function locates the input point within the subdivision and gives one of the
 :type edge: 
 :param vertex: Optional output vertex the input point coincides with.
 :type vertex: 
-:rettype: tuple[int, int, int]
+:return: an integer which specify one of the following five cases for point location:-  The point falls into some facet. The function returns #PTLOC_INSIDE and edge will contain one of edges of the facet. -  The point falls onto the edge. The function returns #PTLOC_ON_EDGE and edge will contain this edge. -  The point coincides with one of the subdivision vertices. The function returns #PTLOC_VERTEX and vertex will contain a pointer to the vertex. -  The point is outside the subdivision reference rectangle. The function returns #PTLOC_OUTSIDE_RECT and no pointers are filled. -  One of input arguments is invalid. A runtime error is raised or, if silent or "parent" error processing mode is selected, #PTLOC_ERROR is returned. 
+:rtype: tuple[int, int, int]
 ````
 
 ````{py:method} findNearest(pt) -> retval, nearestPt
 Finds the subdivision vertex closest to the given point.
 
-The function is another function that locates the input point within the subdivision. It finds the subdivision vertex that is the closest to the input point. It is not necessarily one of vertices of the facet containing the input point, though the facet (located using locate() ) is used as a starting point. @returns vertex ID. 
+The function is another function that locates the input point within the subdivision. It finds the subdivision vertex that is the closest to the input point. It is not necessarily one of vertices of the facet containing the input point, though the facet (located using locate() ) is used as a starting point. 
 
 
 :param self: 
@@ -11492,7 +11509,8 @@ The function is another function that locates the input point within the subdivi
 :type pt: cv2.typing.Point2f
 :param nearestPt: Output subdivision vertex point.
 :type nearestPt: 
-:rettype: tuple[int, cv2.typing.Point2f]
+:return: vertex ID.
+:rtype: tuple[int, cv2.typing.Point2f]
 ````
 
 ````{py:method} getEdgeList() -> edgeList
@@ -11505,7 +11523,7 @@ The function gives each edge as a 4 numbers vector, where each two are one of th
 :type self: 
 :param edgeList: Output vector.
 :type edgeList: 
-:rettype: _typing.Sequence[cv2.typing.Vec4f]
+:rtype: _typing.Sequence[cv2.typing.Vec4f]
 ````
 
 ````{py:method} getLeadingEdgeList() -> leadingEdgeList
@@ -11518,7 +11536,7 @@ The function gives one edge ID for each triangle.
 :type self: 
 :param leadingEdgeList: Output vector.
 :type leadingEdgeList: 
-:rettype: _typing.Sequence[int]
+:rtype: _typing.Sequence[int]
 ````
 
 ````{py:method} getTriangleList() -> triangleList
@@ -11531,7 +11549,7 @@ The function gives each triangle as a 6 numbers vector, where each two are one o
 :type self: 
 :param triangleList: Output vector.
 :type triangleList: 
-:rettype: _typing.Sequence[cv2.typing.Vec6f]
+:rtype: _typing.Sequence[cv2.typing.Vec6f]
 ````
 
 ````{py:method} getVoronoiFacetList(idx) -> facetList, facetCenters
@@ -11548,7 +11566,7 @@ Returns a list of all Voronoi facets.
 :type facetList: 
 :param facetCenters: Output vector of the Voronoi facets center points.
 :type facetCenters: 
-:rettype: tuple[_typing.Sequence[_typing.Sequence[cv2.typing.Point2f]], _typing.Sequence[cv2.typing.Point2f]]
+:rtype: tuple[_typing.Sequence[_typing.Sequence[cv2.typing.Point2f]], _typing.Sequence[cv2.typing.Point2f]]
 ````
 
 ````{py:method} getVertex(vertex) -> retval, firstEdge
@@ -11561,15 +11579,16 @@ Returns vertex location from vertex ID.
 :type self: 
 :param vertex: vertex ID.
 :type vertex: int
-:param firstEdge: Optional. The first edge ID which is connected to the vertex.@returns vertex (x,y) 
+:param firstEdge: Optional. The first edge ID which is connected to the vertex.
 :type firstEdge: 
-:rettype: tuple[cv2.typing.Point2f, int]
+:return: vertex (x,y)
+:rtype: tuple[cv2.typing.Point2f, int]
 ````
 
 ````{py:method} getEdge(edge, nextEdgeType) -> retval
 Returns one of the edges related to the given edge.
 
-![sample output](pics/quadedge.png) @returns edge ID related to the input edge. 
+![sample output](pics/quadedge.png) 
 
 
 :param self: 
@@ -11578,26 +11597,28 @@ Returns one of the edges related to the given edge.
 :type edge: int
 :param nextEdgeType: Parameter specifying which of the related edges to return.The following values are possible: -   NEXT_AROUND_ORG next around the edge origin ( eOnext on the picture below if e is the input edge) -   NEXT_AROUND_DST next around the edge vertex ( eDnext ) -   PREV_AROUND_ORG previous around the edge origin (reversed eRnext ) -   PREV_AROUND_DST previous around the edge destination (reversed eLnext ) -   NEXT_AROUND_LEFT next around the left facet ( eLnext ) -   NEXT_AROUND_RIGHT next around the right facet ( eRnext ) -   PREV_AROUND_LEFT previous around the left facet (reversed eOnext ) -   PREV_AROUND_RIGHT previous around the right facet (reversed eDnext ) 
 :type nextEdgeType: int
-:rettype: int
+:return: edge ID related to the input edge.
+:rtype: int
 ````
 
 ````{py:method} nextEdge(edge) -> retval
 Returns next edge around the edge origin.
 
-@returns an integer which is next edge ID around the edge origin: eOnext on the picture above if e is the input edge). 
+
 
 
 :param self: 
 :type self: 
 :param edge: Subdivision edge ID.
 :type edge: int
-:rettype: int
+:return: an integer which is next edge ID around the edge origin: eOnext on thepicture above if e is the input edge). 
+:rtype: int
 ````
 
 ````{py:method} rotateEdge(edge, rotate) -> retval
 Returns another edge of the same quad-edge.
 
-@returns one of the edges ID of the same quad-edge as the input edge. 
+
 
 
 :param self: 
@@ -11606,7 +11627,8 @@ Returns another edge of the same quad-edge.
 :type edge: int
 :param rotate: Parameter specifying which of the edges of the same quad-edge as the inputone to return. The following values are possible: -   0 - the input edge ( e on the picture below if e is the input edge) -   1 - the rotated edge ( eRot ) -   2 - the reversed edge (reversed e (in green)) -   3 - the reversed rotated edge (reversed eRot (in green)) 
 :type rotate: int
-:rettype: int
+:return: one of the edges ID of the same quad-edge as the input edge.
+:rtype: int
 ````
 
 ````{py:method} symEdge(edge) -> retval
@@ -11619,13 +11641,13 @@ Returns another edge of the same quad-edge.
 :type self: 
 :param edge: 
 :type edge: int
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} edgeOrg(edge) -> retval, orgpt
 Returns the edge origin.
 
-@returns vertex ID. 
+
 
 
 :param self: 
@@ -11634,13 +11656,14 @@ Returns the edge origin.
 :type edge: int
 :param orgpt: Output vertex location.
 :type orgpt: 
-:rettype: tuple[int, cv2.typing.Point2f]
+:return: vertex ID.
+:rtype: tuple[int, cv2.typing.Point2f]
 ````
 
 ````{py:method} edgeDst(edge) -> retval, dstpt
 Returns the edge destination.
 
-@returns vertex ID. 
+
 
 
 :param self: 
@@ -11649,7 +11672,8 @@ Returns the edge destination.
 :type edge: int
 :param dstpt: Output vertex location.
 :type dstpt: 
-:rettype: tuple[int, cv2.typing.Point2f]
+:return: vertex ID.
+:rtype: tuple[int, cv2.typing.Point2f]
 ````
 
 
@@ -11669,7 +11693,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 
 :param self: 
 :type self: 
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} start() -> None
@@ -11680,7 +11704,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 
 :param self: 
 :type self: 
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} stop() -> None
@@ -11691,7 +11715,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 
 :param self: 
 :type self: 
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getTimeTicks() -> retval
@@ -11702,7 +11726,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} getTimeMicro() -> retval
@@ -11713,7 +11737,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 
 :param self: 
 :type self: 
-:rettype: float
+:rtype: float
 ````
 
 ````{py:method} getTimeMilli() -> retval
@@ -11724,7 +11748,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 
 :param self: 
 :type self: 
-:rettype: float
+:rtype: float
 ````
 
 ````{py:method} getTimeSec() -> retval
@@ -11735,7 +11759,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 
 :param self: 
 :type self: 
-:rettype: float
+:rtype: float
 ````
 
 ````{py:method} getCounter() -> retval
@@ -11746,7 +11770,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} getFPS() -> retval
@@ -11757,7 +11781,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 
 :param self: 
 :type self: 
-:rettype: float
+:rtype: float
 ````
 
 ````{py:method} getAvgTimeSec() -> retval
@@ -11768,7 +11792,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 
 :param self: 
 :type self: 
-:rettype: float
+:rtype: float
 ````
 
 ````{py:method} getAvgTimeMilli() -> retval
@@ -11779,7 +11803,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 
 :param self: 
 :type self: 
-:rettype: float
+:rtype: float
 ````
 
 ````{py:method} reset() -> None
@@ -11790,7 +11814,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 
 :param self: 
 :type self: 
-:rettype: None
+:rtype: None
 ````
 
 
@@ -11815,7 +11839,7 @@ Tonemaps image
 :type src: cv2.typing.MatLike
 :param dst: destination image - CV_32FC3 Mat with values in [0, 1] range
 :type dst: cv2.typing.MatLike | None
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 ````{py:method} process(src[, dst]) -> dst
@@ -11831,7 +11855,7 @@ Tonemaps image
 :type src: UMat
 :param dst: destination image - CV_32FC3 Mat with values in [0, 1] range
 :type dst: UMat | None
-:rettype: UMat
+:rtype: UMat
 ````
 
 ````{py:method} getGamma() -> retval
@@ -11842,7 +11866,7 @@ Tonemaps image
 
 :param self: 
 :type self: 
-:rettype: float
+:rtype: float
 ````
 
 ````{py:method} setGamma(gamma) -> None
@@ -11855,7 +11879,7 @@ Tonemaps image
 :type self: 
 :param gamma: 
 :type gamma: float
-:rettype: None
+:rtype: None
 ````
 
 
@@ -11875,7 +11899,7 @@ Tonemaps image
 
 :param self: 
 :type self: 
-:rettype: float
+:rtype: float
 ````
 
 ````{py:method} setSaturation(saturation) -> None
@@ -11888,7 +11912,7 @@ Tonemaps image
 :type self: 
 :param saturation: 
 :type saturation: float
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getBias() -> retval
@@ -11899,7 +11923,7 @@ Tonemaps image
 
 :param self: 
 :type self: 
-:rettype: float
+:rtype: float
 ````
 
 ````{py:method} setBias(bias) -> None
@@ -11912,7 +11936,7 @@ Tonemaps image
 :type self: 
 :param bias: 
 :type bias: float
-:rettype: None
+:rtype: None
 ````
 
 
@@ -11932,7 +11956,7 @@ Tonemaps image
 
 :param self: 
 :type self: 
-:rettype: float
+:rtype: float
 ````
 
 ````{py:method} setScale(scale) -> None
@@ -11945,7 +11969,7 @@ Tonemaps image
 :type self: 
 :param scale: 
 :type scale: float
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getSaturation() -> retval
@@ -11956,7 +11980,7 @@ Tonemaps image
 
 :param self: 
 :type self: 
-:rettype: float
+:rtype: float
 ````
 
 ````{py:method} setSaturation(saturation) -> None
@@ -11969,7 +11993,7 @@ Tonemaps image
 :type self: 
 :param saturation: 
 :type saturation: float
-:rettype: None
+:rtype: None
 ````
 
 
@@ -11989,7 +12013,7 @@ Tonemaps image
 
 :param self: 
 :type self: 
-:rettype: float
+:rtype: float
 ````
 
 ````{py:method} setIntensity(intensity) -> None
@@ -12002,7 +12026,7 @@ Tonemaps image
 :type self: 
 :param intensity: 
 :type intensity: float
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getLightAdaptation() -> retval
@@ -12013,7 +12037,7 @@ Tonemaps image
 
 :param self: 
 :type self: 
-:rettype: float
+:rtype: float
 ````
 
 ````{py:method} setLightAdaptation(light_adapt) -> None
@@ -12026,7 +12050,7 @@ Tonemaps image
 :type self: 
 :param light_adapt: 
 :type light_adapt: float
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getColorAdaptation() -> retval
@@ -12037,7 +12061,7 @@ Tonemaps image
 
 :param self: 
 :type self: 
-:rettype: float
+:rtype: float
 ````
 
 ````{py:method} setColorAdaptation(color_adapt) -> None
@@ -12050,7 +12074,7 @@ Tonemaps image
 :type self: 
 :param color_adapt: 
 :type color_adapt: float
-:rettype: None
+:rtype: None
 ````
 
 
@@ -12075,7 +12099,7 @@ Initialize the tracker with a known bounding box that surrounded the target
 :type image: cv2.typing.MatLike
 :param boundingBox: The initial bounding box
 :type boundingBox: cv2.typing.Rect
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} init(image, boundingBox) -> None
@@ -12091,7 +12115,7 @@ Initialize the tracker with a known bounding box that surrounded the target
 :type image: UMat
 :param boundingBox: The initial bounding box
 :type boundingBox: cv2.typing.Rect
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} update(image) -> retval, boundingBox
@@ -12108,7 +12132,7 @@ Update the tracker, find the new most likely bounding box for the target
 :param boundingBox: The bounding box that represent the new target location, if true was returned, notmodified otherwise 
 :type boundingBox: 
 :return: True means that target was located and false means that tracker cannot locate target incurrent frame. Note, that latter *does not* imply that tracker has failed, maybe target is indeed missing from the frame (say, out of sight) 
-:rettype: tuple[bool, cv2.typing.Rect]
+:rtype: tuple[bool, cv2.typing.Rect]
 ````
 
 ````{py:method} update(image) -> retval, boundingBox
@@ -12125,7 +12149,7 @@ Update the tracker, find the new most likely bounding box for the target
 :param boundingBox: The bounding box that represent the new target location, if true was returned, notmodified otherwise 
 :type boundingBox: 
 :return: True means that target was located and false means that tracker cannot locate target incurrent frame. Note, that latter *does not* imply that tracker has failed, maybe target is indeed missing from the frame (say, out of sight) 
-:rettype: tuple[bool, cv2.typing.Rect]
+:rtype: tuple[bool, cv2.typing.Rect]
 ````
 
 
@@ -12148,7 +12172,7 @@ Constructor
 :type cls: 
 :param parameters: DaSiamRPN parameters TrackerDaSiamRPN::Params
 :type parameters: TrackerDaSiamRPN.Params
-:rettype: TrackerDaSiamRPN
+:rtype: TrackerDaSiamRPN
 ````
 
 ````{py:method} getTrackingScore() -> retval
@@ -12159,7 +12183,7 @@ Return tracking score
 
 :param self: 
 :type self: 
-:rettype: float
+:rtype: float
 ````
 
 
@@ -12191,7 +12215,7 @@ Constructor
 :type cls: 
 :param parameters: GOTURN parameters TrackerGOTURN::Params
 :type parameters: TrackerGOTURN.Params
-:rettype: TrackerGOTURN
+:rtype: TrackerGOTURN
 ````
 
 
@@ -12223,7 +12247,7 @@ Create MIL tracker instance
 :type cls: 
 :param parameters: MIL parameters TrackerMIL::Params
 :type parameters: TrackerMIL.Params
-:rettype: TrackerMIL
+:rtype: TrackerMIL
 ````
 
 
@@ -12255,7 +12279,7 @@ Constructor
 :type cls: 
 :param parameters: NanoTrack parameters TrackerNano::Params
 :type parameters: TrackerNano.Params
-:rettype: TrackerNano
+:rtype: TrackerNano
 ````
 
 ````{py:method} getTrackingScore() -> retval
@@ -12266,7 +12290,7 @@ Return tracking score
 
 :param self: 
 :type self: 
-:rettype: float
+:rtype: float
 ````
 
 
@@ -12298,7 +12322,7 @@ Constructor
 :type cls: 
 :param parameters: vit tracker parameters TrackerVit::Params
 :type parameters: TrackerVit.Params
-:rettype: TrackerVit
+:rtype: TrackerVit
 ````
 
 ````{py:method} getTrackingScore() -> retval
@@ -12309,7 +12333,7 @@ Return tracking score
 
 :param self: 
 :type self: 
-:rettype: float
+:rtype: float
 ````
 
 
@@ -12341,7 +12365,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 :type self: 
 :param usageFlags: 
 :type usageFlags: UMatUsageFlags
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} __init__(self, rows: int, cols: int, type: int, usageFlags: UMatUsageFlags=...)
@@ -12361,7 +12385,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 :type type: int
 :param usageFlags: 
 :type usageFlags: UMatUsageFlags
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} __init__(self, size: cv2.typing.Size, type: int, usageFlags: UMatUsageFlags=...)
@@ -12379,7 +12403,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 :type type: int
 :param usageFlags: 
 :type usageFlags: UMatUsageFlags
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} __init__(self, rows: int, cols: int, type: int, s: cv2.typing.Scalar, usageFlags: UMatUsageFlags=...)
@@ -12401,7 +12425,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 :type s: cv2.typing.Scalar
 :param usageFlags: 
 :type usageFlags: UMatUsageFlags
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} __init__(self, size: cv2.typing.Size, type: int, s: cv2.typing.Scalar, usageFlags: UMatUsageFlags=...)
@@ -12421,7 +12445,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 :type s: cv2.typing.Scalar
 :param usageFlags: 
 :type usageFlags: UMatUsageFlags
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} __init__(self, m: UMat)
@@ -12435,7 +12459,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 :type self: 
 :param m: 
 :type m: UMat
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} __init__(self, m: UMat, rowRange: cv2.typing.Range, colRange: cv2.typing.Range=...)
@@ -12453,7 +12477,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 :type rowRange: cv2.typing.Range
 :param colRange: 
 :type colRange: cv2.typing.Range
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} __init__(self, m: UMat, roi: cv2.typing.Rect)
@@ -12469,7 +12493,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 :type m: UMat
 :param roi: 
 :type roi: cv2.typing.Rect
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} __init__(self, m: UMat, ranges: _typing.Sequence[cv2.typing.Range])
@@ -12485,7 +12509,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 :type m: UMat
 :param ranges: 
 :type ranges: _typing.Sequence[cv2.typing.Range]
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} queue() -> retval
@@ -12495,7 +12519,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 
 
 
-:rettype: cv2.typing.IntPointer
+:rtype: cv2.typing.IntPointer
 ````
 
 ````{py:method} context() -> retval
@@ -12505,7 +12529,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 
 
 
-:rettype: cv2.typing.IntPointer
+:rtype: cv2.typing.IntPointer
 ````
 
 ````{py:method} get() -> retval
@@ -12516,7 +12540,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 
 :param self: 
 :type self: 
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 ````{py:method} isContinuous() -> retval
@@ -12527,7 +12551,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 
 :param self: 
 :type self: 
-:rettype: bool
+:rtype: bool
 ````
 
 ````{py:method} isSubmatrix() -> retval
@@ -12538,7 +12562,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 
 :param self: 
 :type self: 
-:rettype: bool
+:rtype: bool
 ````
 
 ````{py:method} handle(accessFlags) -> retval
@@ -12551,7 +12575,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 :type self: 
 :param accessFlags: 
 :type accessFlags: AccessFlag
-:rettype: cv2.typing.IntPointer
+:rtype: cv2.typing.IntPointer
 ````
 
 ```{py:attribute} offset
@@ -12575,7 +12599,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 
 :param self: 
 :type self: 
-:rettype: None
+:rtype: None
 ````
 
 ```{py:attribute} confidence
@@ -12648,7 +12672,7 @@ Creates an instance of VariationalRefinement
 
 :param cls: 
 :type cls: 
-:rettype: VariationalRefinement
+:rtype: VariationalRefinement
 ````
 
 ````{py:method} calcUV(I0, I1, flow_u, flow_v) -> flow_u, flow_v
@@ -12668,7 +12692,7 @@ Creates an instance of VariationalRefinement
 :type flow_u: cv2.typing.MatLike
 :param flow_v: 
 :type flow_v: cv2.typing.MatLike
-:rettype: tuple[cv2.typing.MatLike, cv2.typing.MatLike]
+:rtype: tuple[cv2.typing.MatLike, cv2.typing.MatLike]
 ````
 
 ````{py:method} calcUV(I0, I1, flow_u, flow_v) -> flow_u, flow_v
@@ -12688,7 +12712,7 @@ Creates an instance of VariationalRefinement
 :type flow_u: UMat
 :param flow_v: 
 :type flow_v: UMat
-:rettype: tuple[UMat, UMat]
+:rtype: tuple[UMat, UMat]
 ````
 
 ````{py:method} getFixedPointIterations() -> retval
@@ -12699,7 +12723,7 @@ Number of outer (fixed-point) iterations in the minimization procedure.@see setF
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} setFixedPointIterations(val) -> None
@@ -12712,7 +12736,7 @@ Number of outer (fixed-point) iterations in the minimization procedure.@see setF
 :type self: 
 :param val: 
 :type val: int
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getSorIterations() -> retval
@@ -12723,7 +12747,7 @@ Number of inner successive over-relaxation (SOR) iterationsin the minimization p
 
 :param self: 
 :type self: 
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} setSorIterations(val) -> None
@@ -12736,7 +12760,7 @@ Number of inner successive over-relaxation (SOR) iterationsin the minimization p
 :type self: 
 :param val: 
 :type val: int
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getOmega() -> retval
@@ -12747,7 +12771,7 @@ Relaxation factor in SOR@see setOmega
 
 :param self: 
 :type self: 
-:rettype: float
+:rtype: float
 ````
 
 ````{py:method} setOmega(val) -> None
@@ -12760,7 +12784,7 @@ Relaxation factor in SOR@see setOmega
 :type self: 
 :param val: 
 :type val: float
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getAlpha() -> retval
@@ -12771,7 +12795,7 @@ Weight of the smoothness term@see setAlpha
 
 :param self: 
 :type self: 
-:rettype: float
+:rtype: float
 ````
 
 ````{py:method} setAlpha(val) -> None
@@ -12784,7 +12808,7 @@ Weight of the smoothness term@see setAlpha
 :type self: 
 :param val: 
 :type val: float
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getDelta() -> retval
@@ -12795,7 +12819,7 @@ Weight of the color constancy term@see setDelta
 
 :param self: 
 :type self: 
-:rettype: float
+:rtype: float
 ````
 
 ````{py:method} setDelta(val) -> None
@@ -12808,7 +12832,7 @@ Weight of the color constancy term@see setDelta
 :type self: 
 :param val: 
 :type val: float
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getGamma() -> retval
@@ -12819,7 +12843,7 @@ Weight of the gradient constancy term@see setGamma
 
 :param self: 
 :type self: 
-:rettype: float
+:rtype: float
 ````
 
 ````{py:method} setGamma(val) -> None
@@ -12832,7 +12856,7 @@ Weight of the gradient constancy term@see setGamma
 :type self: 
 :param val: 
 :type val: float
-:rettype: None
+:rtype: None
 ````
 
 
@@ -12853,7 +12877,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 
 :param self: 
 :type self: 
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} __init__(self, filename: str, apiPreference: int=...)
@@ -12869,7 +12893,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 :type filename: str
 :param apiPreference: 
 :type apiPreference: int
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} __init__(self, filename: str, apiPreference: int, params: _typing.Sequence[int])
@@ -12887,7 +12911,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 :type apiPreference: int
 :param params: 
 :type params: _typing.Sequence[int]
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} __init__(self, index: int, apiPreference: int=...)
@@ -12903,7 +12927,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 :type index: int
 :param apiPreference: 
 :type apiPreference: int
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} __init__(self, index: int, apiPreference: int, params: _typing.Sequence[int])
@@ -12921,7 +12945,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 :type apiPreference: int
 :param params: 
 :type params: _typing.Sequence[int]
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} open(filename[, apiPreference]) -> retval
@@ -12938,7 +12962,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 :param apiPreference: 
 :type apiPreference: int
 :return: `true` if the camera has been successfully opened.
-:rettype: bool
+:rtype: bool
 ````
 
 ````{py:method} open(filename[, apiPreference]) -> retval
@@ -12957,7 +12981,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 :param params: 
 :type params: _typing.Sequence[int]
 :return: `true` if the camera has been successfully opened.
-:rettype: bool
+:rtype: bool
 ````
 
 ````{py:method} open(filename[, apiPreference]) -> retval
@@ -12974,7 +12998,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 :param apiPreference: 
 :type apiPreference: int
 :return: `true` if the camera has been successfully opened.
-:rettype: bool
+:rtype: bool
 ````
 
 ````{py:method} open(filename[, apiPreference]) -> retval
@@ -12993,7 +13017,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 :param params: 
 :type params: _typing.Sequence[int]
 :return: `true` if the camera has been successfully opened.
-:rettype: bool
+:rtype: bool
 ````
 
 ````{py:method} retrieve([, image[, flag]]) -> retval, image
@@ -13016,7 +13040,7 @@ In @ref videoio_c "C API", functions cvRetrieveFrame() and cv.RetrieveFrame() re
 :param [out]: image the video frame is returned here. If no frames has been grabbed the image will be empty.
 :type [out]: 
 :return: `false` if no frames has been grabbed
-:rettype: tuple[bool, cv2.typing.MatLike]
+:rtype: tuple[bool, cv2.typing.MatLike]
 ````
 
 ````{py:method} retrieve([, image[, flag]]) -> retval, image
@@ -13039,7 +13063,7 @@ In @ref videoio_c "C API", functions cvRetrieveFrame() and cv.RetrieveFrame() re
 :param [out]: image the video frame is returned here. If no frames has been grabbed the image will be empty.
 :type [out]: 
 :return: `false` if no frames has been grabbed
-:rettype: tuple[bool, UMat]
+:rtype: tuple[bool, UMat]
 ````
 
 ````{py:method} read([, image]) -> retval, image
@@ -13059,7 +13083,7 @@ In @ref videoio_c "C API", functions cvRetrieveFrame() and cv.RetrieveFrame() re
 :param [out]: image the video frame is returned here. If no frames has been grabbed the image will be empty.
 :type [out]: 
 :return: `false` if no frames has been grabbed
-:rettype: tuple[bool, cv2.typing.MatLike]
+:rtype: tuple[bool, cv2.typing.MatLike]
 ````
 
 ````{py:method} read([, image]) -> retval, image
@@ -13079,7 +13103,7 @@ In @ref videoio_c "C API", functions cvRetrieveFrame() and cv.RetrieveFrame() re
 :param [out]: image the video frame is returned here. If no frames has been grabbed the image will be empty.
 :type [out]: 
 :return: `false` if no frames has been grabbed
-:rettype: tuple[bool, UMat]
+:rtype: tuple[bool, UMat]
 ````
 
 ````{py:method} isOpened() -> retval
@@ -13090,7 +13114,7 @@ If the previous call to VideoCapture constructor or VideoCapture::open() succeed
 
 :param self: 
 :type self: 
-:rettype: bool
+:rtype: bool
 ````
 
 ````{py:method} release() -> None
@@ -13101,7 +13125,7 @@ The method is automatically called by subsequent VideoCapture::open and by Video
 
 :param self: 
 :type self: 
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} grab() -> retval
@@ -13113,7 +13137,7 @@ The method/function grabs the next frame from video file or camera and returns t
 :param self: 
 :type self: 
 :return: `true` (non-zero) in the case of success.
-:rettype: bool
+:rtype: bool
 ````
 
 ````{py:method} set(propId, value) -> retval
@@ -13132,7 +13156,7 @@ Even if it returns `true` this doesn't ensure that the propertyvalue has been ac
 :param value: Value of the property.
 :type value: float
 :return: `true` if the property is supported by backend used by the VideoCapture instance.
-:rettype: bool
+:rtype: bool
 ````
 
 ````{py:method} get(propId) -> retval
@@ -13149,7 +13173,7 @@ Reading / writing properties involves many layers. Some unexpected result might 
 :param propId: Property identifier from cv::VideoCaptureProperties (eg. cv::CAP_PROP_POS_MSEC, cv::CAP_PROP_POS_FRAMES, ...)or one from @ref videoio_flags_others 
 :type propId: int
 :return: Value for the specified property. Value 0 is returned when querying a property that isnot supported by the backend used by the VideoCapture instance. 
-:rettype: float
+:rtype: float
 ````
 
 ````{py:method} getBackendName() -> retval
@@ -13163,7 +13187,7 @@ Stream should be opened.
 
 :param self: 
 :type self: 
-:rettype: str
+:rtype: str
 ````
 
 ````{py:method} setExceptionMode(enable) -> None
@@ -13176,7 +13200,7 @@ Switches exceptions mode methods raise exceptions if not successful instead of r
 :type self: 
 :param enable: 
 :type enable: bool
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} getExceptionMode() -> retval
@@ -13187,7 +13211,7 @@ Switches exceptions mode methods raise exceptions if not successful instead of r
 
 :param self: 
 :type self: 
-:rettype: bool
+:rtype: bool
 ````
 
 ````{py:method} waitAny(streams[, timeoutNs]) -> retval, readyIndex
@@ -13204,7 +13228,7 @@ Wait for ready frames from VideoCapture.
 :param readyIndex: stream indexes with grabbed frames (ready to use .retrieve() to fetch actual frame)
 :type readyIndex: 
 :return: `true` if streamReady is not empty
-:rettype: tuple[bool, _typing.Sequence[int]]
+:rtype: tuple[bool, _typing.Sequence[int]]
 ````
 
 
@@ -13225,7 +13249,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 
 :param self: 
 :type self: 
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} __init__(self, filename: str, fourcc: int, fps: float, frameSize: cv2.typing.Size, isColor: bool=...)
@@ -13247,7 +13271,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 :type frameSize: cv2.typing.Size
 :param isColor: 
 :type isColor: bool
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} __init__(self, filename: str, apiPreference: int, fourcc: int, fps: float, frameSize: cv2.typing.Size, isColor: bool=...)
@@ -13271,7 +13295,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 :type frameSize: cv2.typing.Size
 :param isColor: 
 :type isColor: bool
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} __init__(self, filename: str, fourcc: int, fps: float, frameSize: cv2.typing.Size, params: _typing.Sequence[int])
@@ -13293,7 +13317,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 :type frameSize: cv2.typing.Size
 :param params: 
 :type params: _typing.Sequence[int]
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} __init__(self, filename: str, apiPreference: int, fourcc: int, fps: float, frameSize: cv2.typing.Size, params: _typing.Sequence[int])
@@ -13317,7 +13341,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 :type frameSize: cv2.typing.Size
 :param params: 
 :type params: _typing.Sequence[int]
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} open(filename, fourcc, fps, frameSize[, isColor]) -> retval
@@ -13340,7 +13364,7 @@ The method opens video writer. Parameters are the same as in the constructor Vid
 :param isColor: 
 :type isColor: bool
 :return: `true` if video writer has been successfully initialized
-:rettype: bool
+:rtype: bool
 ````
 
 ````{py:method} open(filename, fourcc, fps, frameSize[, isColor]) -> retval
@@ -13365,7 +13389,7 @@ The method opens video writer. Parameters are the same as in the constructor Vid
 :param isColor: 
 :type isColor: bool
 :return: `true` if video writer has been successfully initialized
-:rettype: bool
+:rtype: bool
 ````
 
 ````{py:method} open(filename, fourcc, fps, frameSize[, isColor]) -> retval
@@ -13388,7 +13412,7 @@ The method opens video writer. Parameters are the same as in the constructor Vid
 :param params: 
 :type params: _typing.Sequence[int]
 :return: `true` if video writer has been successfully initialized
-:rettype: bool
+:rtype: bool
 ````
 
 ````{py:method} open(filename, fourcc, fps, frameSize[, isColor]) -> retval
@@ -13413,7 +13437,7 @@ The method opens video writer. Parameters are the same as in the constructor Vid
 :param params: 
 :type params: _typing.Sequence[int]
 :return: `true` if video writer has been successfully initialized
-:rettype: bool
+:rtype: bool
 ````
 
 ````{py:method} write(image) -> None
@@ -13427,7 +13451,7 @@ The function/method writes the specified image to video file. It must have the s
 :type self: 
 :param image: The written frame. In general, color images are expected in BGR format.
 :type image: cv2.typing.MatLike
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} write(image) -> None
@@ -13441,7 +13465,7 @@ The function/method writes the specified image to video file. It must have the s
 :type self: 
 :param image: The written frame. In general, color images are expected in BGR format.
 :type image: UMat
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} isOpened() -> retval
@@ -13452,7 +13476,7 @@ Returns true if video writer has been successfully initialized.
 
 :param self: 
 :type self: 
-:rettype: bool
+:rtype: bool
 ````
 
 ````{py:method} release() -> None
@@ -13463,7 +13487,7 @@ The method is automatically called by subsequent VideoWriter::open and by the Vi
 
 :param self: 
 :type self: 
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} set(propId, value) -> retval
@@ -13479,7 +13503,7 @@ Sets a property in the VideoWriter.
 :param value: Value of the property.
 :type value: float
 :return:  `true` if the property is supported by the backend used by the VideoWriter instance.
-:rettype: bool
+:rtype: bool
 ````
 
 ````{py:method} get(propId) -> retval
@@ -13493,7 +13517,7 @@ Returns the specified VideoWriter property
 :param propId: Property identifier from cv::VideoWriterProperties (eg. cv::VIDEOWRITER_PROP_QUALITY)or one of @ref videoio_flags_others 
 :type propId: int
 :return: Value for the specified property. Value 0 is returned when querying a property that isnot supported by the backend used by the VideoWriter instance. 
-:rettype: float
+:rtype: float
 ````
 
 ````{py:method} fourcc(c1, c2, c3, c4) -> retval
@@ -13512,7 +13536,7 @@ This static method constructs the fourcc code of the codec to be used in the con
 :param c4: 
 :type c4: str
 :return: a fourcc code
-:rettype: int
+:rtype: int
 ````
 
 ````{py:method} getBackendName() -> retval
@@ -13526,7 +13550,7 @@ Stream should be opened.
 
 :param self: 
 :type self: 
-:rettype: str
+:rtype: str
 ````
 
 
@@ -14599,7 +14623,7 @@ The AKAZE constructor
 :type diffusivity: 
 :param max_points: Maximum amount of returned points. In case if image containsmore features, then the features with highest response are returned. Negative value means no limitation. 
 :type max_points: 
-:rettype: object
+:rtype: object
 ````
 
 
@@ -14620,7 +14644,7 @@ The AKAZE constructor
 :type tiltStep: 
 :param rotateStepBase: Rotation sampling step factor b in Algorithm 1 in the paper.
 :type rotateStepBase: 
-:rettype: object
+:rtype: object
 ````
 
 
@@ -14631,7 +14655,7 @@ The AKAZE constructor
 
 
 
-:rettype: object
+:rtype: object
 ````
 
 
@@ -14646,7 +14670,7 @@ Brute-force matcher create method.
 :type normType: 
 :param crossCheck: If it is false, this is will be default BFMatcher behaviour when it finds the knearest neighbors for each query descriptor. If crossCheck==true, then the knnMatch() method with k=1 will only return pairs (i,j) such that for i-th query descriptor the j-th descriptor in the matcher's collection is the nearest and vice versa, i.e. the BFMatcher will only return consistent pairs. Such technique usually produces best results with minimal number of outliers when there are enough matches. This is alternative to the ratio test, used by D. Lowe in SIFT paper. 
 :type crossCheck: 
-:rettype: object
+:rtype: object
 ````
 
 
@@ -14673,7 +14697,7 @@ BRISK_create(radiusList, numberList[, dMax[, dMin[, indexChange]]]) -> retval BR
 :type dMin: 
 :param indexChange: index remapping of the bits.
 :type indexChange: 
-:rettype: object
+:rtype: object
 ````
 
 
@@ -14686,7 +14710,7 @@ BRISK_create(radiusList, numberList[, dMax[, dMin[, indexChange]]]) -> retval BR
 
 :param channels: 
 :type channels: int
-:rettype: int
+:rtype: int
 ````
 
 
@@ -14699,7 +14723,7 @@ BRISK_create(radiusList, numberList[, dMax[, dMin[, indexChange]]]) -> retval BR
 
 :param channels: 
 :type channels: int
-:rettype: int
+:rtype: int
 ````
 
 
@@ -14712,7 +14736,7 @@ BRISK_create(radiusList, numberList[, dMax[, dMin[, indexChange]]]) -> retval BR
 
 :param channels: 
 :type channels: int
-:rettype: int
+:rtype: int
 ````
 
 
@@ -14725,7 +14749,7 @@ BRISK_create(radiusList, numberList[, dMax[, dMin[, indexChange]]]) -> retval BR
 
 :param channels: 
 :type channels: int
-:rettype: int
+:rtype: int
 ````
 
 
@@ -14738,7 +14762,7 @@ BRISK_create(radiusList, numberList[, dMax[, dMin[, indexChange]]]) -> retval BR
 
 :param channels: 
 :type channels: int
-:rettype: int
+:rtype: int
 ````
 
 
@@ -14751,7 +14775,7 @@ BRISK_create(radiusList, numberList[, dMax[, dMin[, indexChange]]]) -> retval BR
 
 :param channels: 
 :type channels: int
-:rettype: int
+:rtype: int
 ````
 
 
@@ -14764,7 +14788,7 @@ BRISK_create(radiusList, numberList[, dMax[, dMin[, indexChange]]]) -> retval BR
 
 :param channels: 
 :type channels: int
-:rettype: int
+:rtype: int
 ````
 
 
@@ -14777,7 +14801,7 @@ BRISK_create(radiusList, numberList[, dMax[, dMin[, indexChange]]]) -> retval BR
 
 :param channels: 
 :type channels: int
-:rettype: int
+:rtype: int
 ````
 
 
@@ -14792,7 +14816,7 @@ BRISK_create(radiusList, numberList[, dMax[, dMin[, indexChange]]]) -> retval BR
 :type depth: int
 :param channels: 
 :type channels: int
-:rettype: int
+:rtype: int
 ````
 
 
@@ -14809,7 +14833,7 @@ See the OpenCV sample camshiftdemo.c that tracks colored objects. @note -   (Pyt
 :type window: cv2.typing.Rect
 :param criteria: Stop criteria for the underlying meanShift.returns (in old interfaces) Number of iterations CAMSHIFT took to converge The function implements the CAMSHIFT object tracking algorithm @cite Bradski98 . First, it finds an object center using meanShift and then adjusts the window size and finds the optimal rotation. The function returns the rotated rectangle structure that includes the object position, size, and orientation. The next position of the search window can be obtained with RotatedRect::boundingRect() 
 :type criteria: cv2.typing.TermCriteria
-:rettype: tuple[cv2.typing.RotatedRect, cv2.typing.Rect]
+:rtype: tuple[cv2.typing.RotatedRect, cv2.typing.Rect]
 ````
 
 
@@ -14836,7 +14860,7 @@ The function finds edges in the input image and marks them in the output map edg
 :type dx: 
 :param dy: 16-bit y derivative of input image (same type as dx).
 :type dy: 
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -14847,7 +14871,7 @@ The function finds edges in the input image and marks them in the output map edg
 
 
 
-:rettype: object
+:rtype: object
 ````
 
 
@@ -14860,7 +14884,7 @@ Creates an instance of DISOpticalFlow
 
 :param preset: one of PRESET_ULTRAFAST, PRESET_FAST and PRESET_MEDIUM
 :type preset: 
-:rettype: object
+:rtype: object
 ````
 
 
@@ -14873,7 +14897,7 @@ DescriptorMatcher_create(matcherType) -> retval
 
 :param descriptorMatcherType: Descriptor matcher type. Now the following matcher types aresupported: -   `BruteForce` (it uses L2 ) -   `BruteForce-L1` -   `BruteForce-Hamming` -   `BruteForce-Hamming(2)` -   `FlannBased` 
 :type descriptorMatcherType: 
-:rettype: object
+:rtype: object
 ````
 
 
@@ -14896,7 +14920,7 @@ The function computes the earth mover distance and/or a lower boundary of the di
 :type lowerBound: float | None
 :param flow: Resultant $\texttt{size1} \times \texttt{size2}$ flow matrix: $\texttt{flow}_{i,j}$ isa flow from $i$ -th point of signature1 to $j$ -th point of signature2 . 
 :type flow: cv2.typing.MatLike | None
-:rettype: tuple[float, float, cv2.typing.MatLike]
+:rtype: tuple[float, float, cv2.typing.MatLike]
 ````
 
 
@@ -14929,7 +14953,7 @@ FaceDetectorYN_create(framework, bufferModel, bufferConfig, input_size[, score_t
 :type bufferModel: 
 :param bufferConfig: A buffer with a content of text file contains network configuration
 :type bufferConfig: 
-:rettype: object
+:rtype: object
 ````
 
 
@@ -14948,7 +14972,7 @@ Creates an instance of this class with given parameters
 :type backend_id: 
 :param target_id: the id of target device
 :type target_id: 
-:rettype: object
+:rtype: object
 ````
 
 
@@ -14959,7 +14983,7 @@ Creates an instance of this class with given parameters
 
 
 
-:rettype: object
+:rtype: object
 ````
 
 
@@ -14970,7 +14994,7 @@ Creates an instance of this class with given parameters
 
 
 
-:rettype: object
+:rtype: object
 ````
 
 
@@ -14981,7 +15005,7 @@ Creates an instance of this class with given parameters
 
 
 
-:rettype: object
+:rtype: object
 ````
 
 
@@ -14992,7 +15016,7 @@ Creates an instance of this class with given parameters
 GFTTDetector_create(maxCorners, qualityLevel, minDistance, blockSize, gradiantSize[, useHarrisDetector[, k]]) -> retval 
 
 
-:rettype: object
+:rtype: object
 ````
 
 
@@ -15003,7 +15027,7 @@ GFTTDetector_create(maxCorners, qualityLevel, minDistance, blockSize, gradiantSi
 
 
 
-:rettype: object
+:rtype: object
 ````
 
 
@@ -15014,7 +15038,7 @@ GFTTDetector_create(maxCorners, qualityLevel, minDistance, blockSize, gradiantSi
 
 
 
-:rettype: object
+:rtype: object
 ````
 
 
@@ -15038,7 +15062,7 @@ The function convolves the source image with the specified Gaussian kernel. In-p
 :type sigmaY: float
 :param borderType: pixel extrapolation method, see #BorderTypes. #BORDER_WRAP is not supported.
 :type borderType: int
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -15049,7 +15073,7 @@ Returns coefficients of the classifier trained for people detection (for 48x96 w
 
 
 
-:rettype: object
+:rtype: object
 ````
 
 
@@ -15060,7 +15084,7 @@ Returns coefficients of the classifier trained for people detection (for 64x128 
 
 
 
-:rettype: object
+:rtype: object
 ````
 
 
@@ -15093,7 +15117,7 @@ Usually the function detects the centers of circles well. However, it may fail t
 :type minRadius: int
 :param maxRadius: Maximum circle radius. If <= 0, uses the maximum image dimension. If < 0, #HOUGH_GRADIENT returnscenters without finding the radius. #HOUGH_GRADIENT_ALT always computes circle radiuses. 
 :type maxRadius: int
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -15122,7 +15146,7 @@ The function implements the standard or standard multi-scale Hough transform alg
 :type min_theta: float
 :param max_theta: For standard and multi-scale Hough transform, an upper bound for the angle.Must fall between min_theta and CV_PI. The actual maximum angle in the accumulator may be slightly less than max_theta, depending on the parameters min_theta and theta. 
 :type max_theta: float
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -15148,7 +15172,7 @@ The function implements the probabilistic Hough transform algorithm for line det
 :type minLineLength: float
 :param maxLineGap: Maximum allowed gap between points on the same line to link them.
 :type maxLineGap: float
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -15179,7 +15203,7 @@ The function finds lines in a set of points using a modification of the Hough tr
 :type max_theta: float
 :param theta_step: Angle resolution of the accumulator in radians.
 :type theta_step: float
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -15212,7 +15236,7 @@ This function is for bindings use only. Use original function in C++ code
 :type min_theta: float
 :param max_theta: 
 :type max_theta: float
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -15227,7 +15251,7 @@ This function is for bindings use only. Use original function in C++ code
 :type m: cv2.typing.Moments
 :param hu: 
 :type hu: cv2.typing.MatLike | None
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -15250,7 +15274,7 @@ The KAZE constructor
 :type nOctaveLayers: 
 :param diffusivity: Diffusivity type. DIFF_PM_G1, DIFF_PM_G2, DIFF_WEICKERT orDIFF_CHARBONNIER 
 :type diffusivity: 
-:rettype: object
+:rtype: object
 ````
 
 
@@ -15275,7 +15299,7 @@ This method converts vector of keypoints to vector of points or the reverse, whe
 :type octave: 
 :param class_id: object id
 :type class_id: 
-:rettype: object
+:rtype: object
 ````
 
 
@@ -15290,7 +15314,7 @@ This method computes overlap for pair of keypoints. Overlap is the ratio between
 :type kp1: 
 :param kp2: Second keypoint
 :type kp2: 
-:rettype: object
+:rtype: object
 ````
 
 
@@ -15308,7 +15332,7 @@ The function LUT fills the output array with values from the look-up table. Indi
 :type lut: cv2.typing.MatLike
 :param dst: output array of the same size and number of channels as src, and the same depth as lut.
 :type dst: cv2.typing.MatLike | None
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -15334,7 +15358,7 @@ The function calculates the Laplacian of the source image by adding up the secon
 :type delta: float
 :param borderType: Pixel extrapolation method, see #BorderTypes. #BORDER_WRAP is not supported.
 :type borderType: int
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -15363,7 +15387,7 @@ Full constructor for %MSER detector
 :type min_margin: 
 :param edge_blur_size: for color image, the aperture size for edge blur
 :type edge_blur_size: 
-:rettype: object
+:rtype: object
 ````
 
 
@@ -15380,7 +15404,7 @@ The function cv::Mahalanobis calculates and returns the weighted distance betwee
 :type v2: cv2.typing.MatLike
 :param icovar: inverse covariance matrix.
 :type icovar: cv2.typing.MatLike
-:rettype: float
+:rtype: float
 ````
 
 
@@ -15409,7 +15433,7 @@ The ORB constructor
 :type patchSize: 
 :param fastThreshold: the fast threshold
 :type fastThreshold: 
-:rettype: object
+:rtype: object
 ````
 
 
@@ -15428,7 +15452,7 @@ wrap PCA::backProject
 :type eigenvectors: cv2.typing.MatLike
 :param result: 
 :type result: cv2.typing.MatLike | None
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -15447,7 +15471,7 @@ wrap PCA::operator() PCACompute(data, mean, retainedVariance[, eigenvectors]) ->
 :type eigenvectors: cv2.typing.MatLike | None
 :param maxComponents: 
 :type maxComponents: int
-:rettype: tuple[cv2.typing.MatLike, cv2.typing.MatLike]
+:rtype: tuple[cv2.typing.MatLike, cv2.typing.MatLike]
 ````
 
 
@@ -15468,7 +15492,7 @@ wrap PCA::operator() and add eigenvalues output parameter PCACompute2(data, mean
 :type eigenvalues: cv2.typing.MatLike | None
 :param maxComponents: 
 :type maxComponents: int
-:rettype: tuple[cv2.typing.MatLike, cv2.typing.MatLike, cv2.typing.MatLike]
+:rtype: tuple[cv2.typing.MatLike, cv2.typing.MatLike, cv2.typing.MatLike]
 ````
 
 
@@ -15487,7 +15511,7 @@ wrap PCA::project
 :type eigenvectors: cv2.typing.MatLike
 :param result: 
 :type result: cv2.typing.MatLike | None
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -15504,7 +15528,7 @@ This function calculates the Peak Signal-to-Noise Ratio (PSNR) image quality met
 :type src2: cv2.typing.MatLike
 :param R: the maximum pixel value (255 by default)
 :type R: float
-:rettype: float
+:rtype: float
 ````
 
 
@@ -15517,7 +15541,7 @@ Constructor
 
 :param parameters: QR code encoder parameters QRCodeEncoder::Params
 :type parameters: 
-:rettype: object
+:rtype: object
 ````
 
 
@@ -15540,7 +15564,7 @@ The function computes a RQ decomposition using the given rotations. This functio
 :type Qy: cv2.typing.MatLike | None
 :param Qz: Optional output 3x3 rotation matrix around z-axis.
 :type Qz: cv2.typing.MatLike | None
-:rettype: tuple[cv2.typing.Vec3d, cv2.typing.MatLike, cv2.typing.MatLike, cv2.typing.MatLike, cv2.typing.MatLike, cv2.typing.MatLike]
+:rtype: tuple[cv2.typing.Vec3d, cv2.typing.MatLike, cv2.typing.MatLike, cv2.typing.MatLike, cv2.typing.MatLike, cv2.typing.MatLike]
 ````
 
 
@@ -15563,7 +15587,7 @@ Useful information on SE(3) and Lie Groups can be found in:- A tutorial on SE(3)
 :type dst: cv2.typing.MatLike | None
 :param jacobian: Optional output Jacobian matrix, 3x9 or 9x3, which is a matrix of partialderivatives of the output array components with respect to the input array components. 
 :type jacobian: cv2.typing.MatLike | None
-:rettype: tuple[cv2.typing.MatLike, cv2.typing.MatLike]
+:rtype: tuple[cv2.typing.MatLike, cv2.typing.MatLike]
 ````
 
 
@@ -15594,7 +15618,7 @@ The contrast threshold will be divided by nOctaveLayers when the filtering is ap
 :type enable_precise_upscale: 
 :param descriptorType: The type of descriptors. Only CV_32F and CV_8U are supported.
 :type descriptorType: 
-:rettype: object
+:rtype: object
 ````
 
 
@@ -15615,7 +15639,7 @@ wrap SVD::backSubst
 :type rhs: cv2.typing.MatLike
 :param dst: 
 :type dst: cv2.typing.MatLike | None
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -15636,7 +15660,7 @@ wrap SVD::compute
 :type vt: cv2.typing.MatLike | None
 :param flags: 
 :type flags: int
-:rettype: tuple[cv2.typing.MatLike, cv2.typing.MatLike, cv2.typing.MatLike]
+:rtype: tuple[cv2.typing.MatLike, cv2.typing.MatLike, cv2.typing.MatLike]
 ````
 
 
@@ -15664,7 +15688,7 @@ The function computes the first x- or y- spatial image derivative using the Scha
 :type delta: float
 :param borderType: pixel extrapolation method, see #BorderTypes. #BORDER_WRAP is not supported.
 :type borderType: int
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -15675,7 +15699,7 @@ The function computes the first x- or y- spatial image derivative using the Scha
 
 
 
-:rettype: object
+:rtype: object
 ````
 
 
@@ -15705,7 +15729,7 @@ In all cases except one, the $\texttt{ksize} \times \texttt{ksize}$ separable ke
 :type delta: float
 :param borderType: pixel extrapolation method, see #BorderTypes. #BORDER_WRAP is not supported.
 :type borderType: int
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -15716,7 +15740,7 @@ In all cases except one, the $\texttt{ksize} \times \texttt{ksize}$ separable ke
 
 
 
-:rettype: object
+:rtype: object
 ````
 
 
@@ -15731,7 +15755,7 @@ The function create StereoBM object. You can then call StereoBM::compute() to co
 :type numDisparities: 
 :param blockSize: the linear size of the blocks compared by the algorithm. The size should be odd(as the block is centered at the current pixel). Larger block size implies smoother, though less accurate disparity map. Smaller block size gives more detailed disparity map, but there is higher chance for algorithm to find a wrong correspondence. 
 :type blockSize: 
-:rettype: object
+:rtype: object
 ````
 
 
@@ -15764,7 +15788,7 @@ The first constructor initializes StereoSGBM with all the default parameters. So
 :type speckleRange: 
 :param mode: Set it to StereoSGBM::MODE_HH to run the full-scale two-pass dynamic programmingalgorithm. It will consume O(W\*H\*numDisparities) bytes, which is large for 640x480 stereo and huge for HD-size pictures. By default, it is set to false . 
 :type mode: 
-:rettype: object
+:rtype: object
 ````
 
 
@@ -15778,7 +15802,7 @@ Creates a Stitcher configured in one of the stitching modes.
 :param mode: Scenario for stitcher operation. This is usually determined by source of imagesto stitch and their transformation. Default parameters will be chosen for operation in given scenario. 
 :type mode: 
 :return: Stitcher class instance.
-:rettype: object
+:rtype: object
 ````
 
 
@@ -15791,7 +15815,7 @@ Constructor
 
 :param parameters: DaSiamRPN parameters TrackerDaSiamRPN::Params
 :type parameters: 
-:rettype: object
+:rtype: object
 ````
 
 
@@ -15804,7 +15828,7 @@ Constructor
 
 :param parameters: GOTURN parameters TrackerGOTURN::Params
 :type parameters: 
-:rettype: object
+:rtype: object
 ````
 
 
@@ -15817,7 +15841,7 @@ Create MIL tracker instance
 
 :param parameters: MIL parameters TrackerMIL::Params
 :type parameters: 
-:rettype: object
+:rtype: object
 ````
 
 
@@ -15830,7 +15854,7 @@ Constructor
 
 :param parameters: NanoTrack parameters TrackerNano::Params
 :type parameters: 
-:rettype: object
+:rtype: object
 ````
 
 
@@ -15843,7 +15867,7 @@ Constructor
 
 :param parameters: vit tracker parameters TrackerVit::Params
 :type parameters: 
-:rettype: object
+:rtype: object
 ````
 
 
@@ -15854,7 +15878,7 @@ Constructor
 
 
 
-:rettype: object
+:rtype: object
 ````
 
 
@@ -15865,7 +15889,7 @@ Constructor
 
 
 
-:rettype: object
+:rtype: object
 ````
 
 
@@ -15876,7 +15900,7 @@ Creates an instance of VariationalRefinement
 
 
 
-:rettype: object
+:rtype: object
 ````
 
 
@@ -15894,7 +15918,7 @@ Wait for ready frames from VideoCapture.
 :param timeoutNs: number of nanoseconds (0 - infinite)
 :type timeoutNs: 
 :return: `true` if streamReady is not empty
-:rettype: object
+:rtype: object
 ````
 
 
@@ -15906,7 +15930,7 @@ This static method constructs the fourcc code of the codec to be used in the con
 
 
 :return: a fourcc code
-:rettype: object
+:rtype: object
 ````
 
 
@@ -15917,7 +15941,7 @@ This static method constructs the fourcc code of the codec to be used in the con
 
 
 
-:rettype: object
+:rtype: object
 ````
 
 
@@ -15928,7 +15952,7 @@ This static method constructs the fourcc code of the codec to be used in the con
 
 
 
-:rettype: object
+:rtype: object
 ````
 
 
@@ -15939,7 +15963,7 @@ This static method constructs the fourcc code of the codec to be used in the con
 
 
 
-:rettype: object
+:rtype: object
 ````
 
 
@@ -15963,7 +15987,7 @@ Saturation is not applied when the arrays have the depth CV_32S.You may even get
 :type src2: cv2.typing.MatLike
 :param dst: output array that has the same size and type as input arrays.
 :type dst: cv2.typing.MatLike | None
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -15981,7 +16005,7 @@ The function adds src or some of its elements to dst : \f[\texttt{dst} (x,y)  \l
 :type dst: cv2.typing.MatLike
 :param mask: Optional operation mask.
 :type mask: cv2.typing.MatLike | None
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -16001,7 +16025,7 @@ The function adds the product of two images or their selected regions to the acc
 :type dst: cv2.typing.MatLike
 :param mask: Optional operation mask.
 :type mask: cv2.typing.MatLike | None
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -16019,7 +16043,7 @@ The function adds the input image src or its selected region, raised to a power 
 :type dst: cv2.typing.MatLike
 :param mask: Optional operation mask.
 :type mask: cv2.typing.MatLike | None
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -16039,7 +16063,7 @@ The function calculates the weighted sum of the input image src and the accumula
 :type alpha: float
 :param mask: Optional operation mask.
 :type mask: cv2.typing.MatLike | None
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -16065,7 +16089,7 @@ The function transforms a grayscale image to a binary image according to the for
 :type blockSize: int
 :param C: Constant subtracted from the mean or weighted mean (see the details below). Normally, itis positive but may be zero or negative as well. 
 :type C: float
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -16093,7 +16117,7 @@ Saturation is not applied when the output array has the depth CV_32S. You may ev
 :type mask: cv2.typing.MatLike | None
 :param dtype: optional depth of the output array (see the discussion below).
 :type dtype: int
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -16122,7 +16146,7 @@ Draws a text on the image.
 :type style: int
 :param spacing: Spacing between characters. It can be negative or positive.
 :type spacing: int
-:rettype: None
+:rtype: None
 ````
 
 
@@ -16151,7 +16175,7 @@ Saturation is not applied when the output array has the depth CV_32S. You may ev
 :type dst: cv2.typing.MatLike | None
 :param dtype: optional depth of the output array; when both input arrays have the same depth, dtypecan be set to -1, which will be equivalent to src1.depth(). 
 :type dtype: int
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -16170,7 +16194,7 @@ applyColorMap(src, userColor[, dst]) -> dst
 :type colormap: int
 :param userColor: The colormap to apply of type CV_8UC1 or CV_8UC3 and size 256
 :type userColor: 
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -16189,7 +16213,7 @@ The function cv::approxPolyDP approximates a curve or a polygon with another cur
 :type epsilon: float
 :param closed: If true, the approximated curve is closed (its first and last vertices areconnected). Otherwise, it is not closed. 
 :type closed: bool
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -16204,7 +16228,7 @@ The function computes a curve length or a closed contour perimeter.
 :type curve: cv2.typing.MatLike
 :param closed: Flag indicating whether the curve is closed or not.
 :type closed: bool
-:rettype: float
+:rtype: float
 ````
 
 
@@ -16231,7 +16255,7 @@ The function cv::arrowedLine draws an arrow between pt1 and pt2 points in the im
 :type shift: int
 :param tipLength: The length of the arrow tip in relation to the arrow length
 :type tipLength: float
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -16262,7 +16286,7 @@ see http://en.wikipedia.org/wiki/Nearest_neighbor_search @todo document
 :type update: int
 :param crosscheck: 
 :type crosscheck: bool
-:rettype: tuple[cv2.typing.MatLike, cv2.typing.MatLike]
+:rtype: tuple[cv2.typing.MatLike, cv2.typing.MatLike]
 ````
 
 
@@ -16285,7 +16309,7 @@ The function applies bilateral filtering to the input image, as described in htt
 :type sigmaSpace: float
 :param borderType: border mode used to extrapolate pixels outside of the image, see #BorderTypes
 :type borderType: int
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -16304,7 +16328,7 @@ The function cv::bitwise_and calculates the per-element bit-wise logical conjunc
 :type dst: cv2.typing.MatLike | None
 :param mask: optional operation mask, 8-bit single channel array, thatspecifies elements of the output array to be changed. 
 :type mask: cv2.typing.MatLike | None
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -16321,7 +16345,7 @@ The function cv::bitwise_not calculates per-element bit-wise inversion of the in
 :type dst: cv2.typing.MatLike | None
 :param mask: optional operation mask, 8-bit single channel array, thatspecifies elements of the output array to be changed. 
 :type mask: cv2.typing.MatLike | None
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -16340,7 +16364,7 @@ The function cv::bitwise_or calculates the per-element bit-wise logical disjunct
 :type dst: cv2.typing.MatLike | None
 :param mask: optional operation mask, 8-bit single channel array, thatspecifies elements of the output array to be changed. 
 :type mask: cv2.typing.MatLike | None
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -16359,7 +16383,7 @@ The function cv::bitwise_xor calculates the per-element bit-wise logical "exclus
 :type dst: cv2.typing.MatLike | None
 :param mask: optional operation mask, 8-bit single channel array, thatspecifies elements of the output array to be changed. 
 :type mask: cv2.typing.MatLike | None
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -16380,7 +16404,7 @@ The function cv::bitwise_xor calculates the per-element bit-wise logical "exclus
 :type weights2: cv2.typing.MatLike
 :param dst: 
 :type dst: cv2.typing.MatLike | None
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -16402,7 +16426,7 @@ The function smooths an image using the kernel: \f[\texttt{K} =  \frac{1}{\textt
 :type anchor: cv2.typing.Point
 :param borderType: border mode used to extrapolate pixels outside of the image, see #BorderTypes. #BORDER_WRAP is not supported.
 :type borderType: int
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -16413,7 +16437,7 @@ The function smooths an image using the kernel: \f[\texttt{K} =  \frac{1}{\textt
 
 
 
-:rettype: object
+:rtype: object
 ````
 
 
@@ -16431,7 +16455,7 @@ The function computes and returns the coordinate of a donor pixel corresponding 
 :type len: int
 :param borderType: Border type, one of the #BorderTypes, except for #BORDER_TRANSPARENT and#BORDER_ISOLATED . When borderType==#BORDER_CONSTANT , the function always returns -1, regardless of p and len. 
 :type borderType: int
-:rettype: int
+:rtype: int
 ````
 
 
@@ -16444,7 +16468,7 @@ The function calculates and returns the minimal up-right bounding rectangle for 
 
 :param array: Input gray-scale image or 2D point set, stored in std::vector or Mat.
 :type array: cv2.typing.MatLike
-:rettype: cv2.typing.Rect
+:rtype: cv2.typing.Rect
 ````
 
 
@@ -16470,7 +16494,7 @@ The function smooths an image using the kernel: \f[\texttt{K} =  \alpha \begin{b
 :type normalize: bool
 :param borderType: border mode used to extrapolate pixels outside of the image, see #BorderTypes. #BORDER_WRAP is not supported.
 :type borderType: int
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -16485,7 +16509,7 @@ The function finds the four vertices of a rotated rectangle. This function is us
 :type box: cv2.typing.RotatedRect
 :param points: The output array of four vertices of rectangles.
 :type points: cv2.typing.MatLike | None
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -16502,7 +16526,7 @@ Broadcast the given Mat to the given shape.
 :type shape: cv2.typing.MatLike
 :param dst: output array that has the given shape
 :type dst: cv2.typing.MatLike | None
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -16530,7 +16554,7 @@ Constructs the image pyramid which can be passed to calcOpticalFlowPyrLK.
 :param tryReuseInputImage: put ROI of input image into the pyramid if possible. You can pass falseto force data copying. 
 :type tryReuseInputImage: bool
 :return: number of levels in constructed pyramid. Can be less than maxLevel.
-:rettype: tuple[int, _typing.Sequence[cv2.typing.MatLike]]
+:rtype: tuple[int, _typing.Sequence[cv2.typing.MatLike]]
 ````
 
 
@@ -16553,7 +16577,7 @@ Constructs the image pyramid which can be passed to calcOpticalFlowPyrLK.
 :type scale: float
 :param dst: 
 :type dst: cv2.typing.MatLike | None
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -16577,7 +16601,7 @@ use #COVAR_ROWS or #COVAR_COLS flag
 :type flags: int
 :param ctype: type of the matrixl; it equals 'CV_64F' by default.
 :type ctype: int
-:rettype: tuple[cv2.typing.MatLike, cv2.typing.MatLike]
+:rtype: tuple[cv2.typing.MatLike, cv2.typing.MatLike]
 ````
 
 
@@ -16602,7 +16626,7 @@ use #COVAR_ROWS or #COVAR_COLS flag
 :type hist: cv2.typing.MatLike | None
 :param accumulate: 
 :type accumulate: bool
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -16636,7 +16660,7 @@ Some examples:
 :type poly_sigma: float
 :param flags: operation flags that can be a combination of the following:-   **OPTFLOW_USE_INITIAL_FLOW** uses the input flow as an initial flow approximation. -   **OPTFLOW_FARNEBACK_GAUSSIAN** uses the Gaussian $\texttt{winsize}\times\texttt{winsize}$ filter instead of a box filter of the same size for optical flow estimation; usually, this option gives z more accurate flow than with a box filter, at the cost of lower speed; normally, winsize for a Gaussian window should be set to a larger value to achieve the same level of robustness. 
 :type flags: int
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -16672,7 +16696,7 @@ Some examples:
 :type flags: int
 :param minEigThreshold: the algorithm calculates the minimum eigen value of a 2x2 normal matrix ofoptical flow equations (this matrix is called a spatial gradient matrix in @cite Bouguet00), divided by number of pixels in a window; if this value is less than minEigThreshold, then a corresponding feature is filtered out and its flow is not processed, so it allows to remove bad points and get a performance boost. 
 :type minEigThreshold: float
-:rettype: tuple[cv2.typing.MatLike, cv2.typing.MatLike, cv2.typing.MatLike]
+:rtype: tuple[cv2.typing.MatLike, cv2.typing.MatLike, cv2.typing.MatLike]
 ````
 
 
@@ -16701,7 +16725,7 @@ Some examples:
 :type flags: int
 :param criteria: 
 :type criteria: cv2.typing.TermCriteria
-:rettype: tuple[float, cv2.typing.MatLike, cv2.typing.MatLike, _typing.Sequence[cv2.typing.MatLike], _typing.Sequence[cv2.typing.MatLike]]
+:rtype: tuple[float, cv2.typing.MatLike, cv2.typing.MatLike, _typing.Sequence[cv2.typing.MatLike], _typing.Sequence[cv2.typing.MatLike]]
 ````
 
 
@@ -16737,7 +16761,7 @@ The function estimates the intrinsic camera parameters and extrinsic parameters 
 :param criteria: Termination criteria for the iterative optimization algorithm.
 :type criteria: cv2.typing.TermCriteria
 :return: the overall RMS re-projection error.
-:rettype: tuple[float, cv2.typing.MatLike, cv2.typing.MatLike, _typing.Sequence[cv2.typing.MatLike], _typing.Sequence[cv2.typing.MatLike], cv2.typing.MatLike, cv2.typing.MatLike, cv2.typing.MatLike]
+:rtype: tuple[float, cv2.typing.MatLike, cv2.typing.MatLike, _typing.Sequence[cv2.typing.MatLike], _typing.Sequence[cv2.typing.MatLike], cv2.typing.MatLike, cv2.typing.MatLike, cv2.typing.MatLike]
 ````
 
 
@@ -16770,7 +16794,7 @@ The function estimates the intrinsic camera parameters and extrinsic parameters 
 :type flags: int
 :param criteria: 
 :type criteria: cv2.typing.TermCriteria
-:rettype: tuple[float, cv2.typing.MatLike, cv2.typing.MatLike, _typing.Sequence[cv2.typing.MatLike], _typing.Sequence[cv2.typing.MatLike], cv2.typing.MatLike]
+:rtype: tuple[float, cv2.typing.MatLike, cv2.typing.MatLike, _typing.Sequence[cv2.typing.MatLike], _typing.Sequence[cv2.typing.MatLike], cv2.typing.MatLike]
 ````
 
 
@@ -16812,7 +16836,7 @@ This function is an extension of #calibrateCamera with the method of releasing o
 :param criteria: Termination criteria for the iterative optimization algorithm.
 :type criteria: cv2.typing.TermCriteria
 :return: the overall RMS re-projection error.
-:rettype: tuple[float, cv2.typing.MatLike, cv2.typing.MatLike, _typing.Sequence[cv2.typing.MatLike], _typing.Sequence[cv2.typing.MatLike], cv2.typing.MatLike, cv2.typing.MatLike, cv2.typing.MatLike, cv2.typing.MatLike, cv2.typing.MatLike]
+:rtype: tuple[float, cv2.typing.MatLike, cv2.typing.MatLike, _typing.Sequence[cv2.typing.MatLike], _typing.Sequence[cv2.typing.MatLike], cv2.typing.MatLike, cv2.typing.MatLike, cv2.typing.MatLike, cv2.typing.MatLike, cv2.typing.MatLike]
 ````
 
 
@@ -16820,24 +16844,24 @@ This function is an extension of #calibrateCamera with the method of releasing o
 
 Computes Hand-Eye calibration: $_{}^{g}\textrm{T}_c$
 
-@param[in] R_gripper2base Rotation part extracted from the homogeneous matrix that transforms a point expressed in the gripper frame to the robot base frame ($_{}^{b}\textrm{T}_g$). This is a vector (`vector<Mat>`) that contains the rotation, `(3x3)` rotation matrices or `(3x1)` rotation vectors, for all the transformations from gripper frame to robot base frame. @param[in] t_gripper2base Translation part extracted from the homogeneous matrix that transforms a point expressed in the gripper frame to the robot base frame ($_{}^{b}\textrm{T}_g$). This is a vector (`vector<Mat>`) that contains the `(3x1)` translation vectors for all the transformations from gripper frame to robot base frame. @param[in] R_target2cam Rotation part extracted from the homogeneous matrix that transforms a point expressed in the target frame to the camera frame ($_{}^{c}\textrm{T}_t$). This is a vector (`vector<Mat>`) that contains the rotation, `(3x3)` rotation matrices or `(3x1)` rotation vectors, for all the transformations from calibration target frame to camera frame. @param[in] t_target2cam Rotation part extracted from the homogeneous matrix that transforms a point expressed in the target frame to the camera frame ($_{}^{c}\textrm{T}_t$). This is a vector (`vector<Mat>`) that contains the `(3x1)` translation vectors for all the transformations from calibration target frame to camera frame. @param[out] R_cam2gripper Estimated `(3x3)` rotation part extracted from the homogeneous matrix that transforms a point expressed in the camera frame to the gripper frame ($_{}^{g}\textrm{T}_c$). @param[out] t_cam2gripper Estimated `(3x1)` translation part extracted from the homogeneous matrix that transforms a point expressed in the camera frame to the gripper frame ($_{}^{g}\textrm{T}_c$). @param[in] method One of the implemented Hand-Eye calibration method, see cv::HandEyeCalibrationMethod The function performs the Hand-Eye calibration using various methods. One approach consists in estimating the rotation then the translation (separable solutions) and the following methods are implemented: - R. Tsai, R. Lenz A New Technique for Fully Autonomous and Efficient 3D Robotics Hand/EyeCalibration \cite Tsai89 - F. Park, B. Martin Robot Sensor Calibration: Solving AX = XB on the Euclidean Group \cite Park94 - R. Horaud, F. Dornaika Hand-Eye Calibration \cite Horaud95 Another approach consists in estimating simultaneously the rotation and the translation (simultaneous solutions), with the following implemented methods: - N. Andreff, R. Horaud, B. Espiau On-line Hand-Eye Calibration \cite Andreff99 - K. Daniilidis Hand-Eye Calibration Using Dual Quaternions \cite Daniilidis98 The following picture describes the Hand-Eye calibration problem where the transformation between a camera ("eye") mounted on a robot gripper ("hand") has to be estimated. This configuration is called eye-in-hand. The eye-to-hand configuration consists in a static camera observing a calibration pattern mounted on the robot end-effector. The transformation from the camera to the robot base frame can then be estimated by inputting the suitable transformations to the function, see below. ![](pics/hand-eye_figure.png) The calibration procedure is the following: - a static calibration pattern is used to estimate the transformation between the target frame and the camera frame - the robot gripper is moved in order to acquire several poses - for each pose, the homogeneous transformation between the gripper frame and the robot base frame is recorded using for instance the robot kinematics \f[ \begin{bmatrix} X_b\\ Y_b\\ Z_b\\ 1 \end{bmatrix} = \begin{bmatrix} _{}^{b}\textrm{R}_g & _{}^{b}\textrm{t}_g \\ 0_{1 \times 3} & 1 \end{bmatrix} \begin{bmatrix} X_g\\ Y_g\\ Z_g\\ 1 \end{bmatrix} \f] - for each pose, the homogeneous transformation between the calibration target frame and the camera frame is recorded using for instance a pose estimation method (PnP) from 2D-3D point correspondences \f[ \begin{bmatrix} X_c\\ Y_c\\ Z_c\\ 1 \end{bmatrix} = \begin{bmatrix} _{}^{c}\textrm{R}_t & _{}^{c}\textrm{t}_t \\ 0_{1 \times 3} & 1 \end{bmatrix} \begin{bmatrix} X_t\\ Y_t\\ Z_t\\ 1 \end{bmatrix} \f] The Hand-Eye calibration procedure returns the following homogeneous transformation \f[ \begin{bmatrix} X_g\\ Y_g\\ Z_g\\ 1 \end{bmatrix} = \begin{bmatrix} _{}^{g}\textrm{R}_c & _{}^{g}\textrm{t}_c \\ 0_{1 \times 3} & 1 \end{bmatrix} \begin{bmatrix} X_c\\ Y_c\\ Z_c\\ 1 \end{bmatrix} \f] This problem is also known as solving the $\mathbf{A}\mathbf{X}=\mathbf{X}\mathbf{B}$ equation: - for an eye-in-hand configuration \f[ \begin{align*} ^{b}{\textrm{T}_g}^{(1)} \hspace{0.2em} ^{g}\textrm{T}_c \hspace{0.2em} ^{c}{\textrm{T}_t}^{(1)} &= \hspace{0.1em} ^{b}{\textrm{T}_g}^{(2)} \hspace{0.2em} ^{g}\textrm{T}_c \hspace{0.2em} ^{c}{\textrm{T}_t}^{(2)} \\ (^{b}{\textrm{T}_g}^{(2)})^{-1} \hspace{0.2em} ^{b}{\textrm{T}_g}^{(1)} \hspace{0.2em} ^{g}\textrm{T}_c &= \hspace{0.1em} ^{g}\textrm{T}_c \hspace{0.2em} ^{c}{\textrm{T}_t}^{(2)} (^{c}{\textrm{T}_t}^{(1)})^{-1} \\ \textrm{A}_i \textrm{X} &= \textrm{X} \textrm{B}_i \\ \end{align*} \f] - for an eye-to-hand configuration \f[ \begin{align*} ^{g}{\textrm{T}_b}^{(1)} \hspace{0.2em} ^{b}\textrm{T}_c \hspace{0.2em} ^{c}{\textrm{T}_t}^{(1)} &= \hspace{0.1em} ^{g}{\textrm{T}_b}^{(2)} \hspace{0.2em} ^{b}\textrm{T}_c \hspace{0.2em} ^{c}{\textrm{T}_t}^{(2)} \\ (^{g}{\textrm{T}_b}^{(2)})^{-1} \hspace{0.2em} ^{g}{\textrm{T}_b}^{(1)} \hspace{0.2em} ^{b}\textrm{T}_c &= \hspace{0.1em} ^{b}\textrm{T}_c \hspace{0.2em} ^{c}{\textrm{T}_t}^{(2)} (^{c}{\textrm{T}_t}^{(1)})^{-1} \\ \textrm{A}_i \textrm{X} &= \textrm{X} \textrm{B}_i \\ \end{align*} \f] \note Additional information can be found on this [website](http://campar.in.tum.de/Chair/HandEyeCalibration). \note A minimum of 2 motions with non parallel rotation axes are necessary to determine the hand-eye transformation. So at least 3 different poses are required, but it is strongly recommended to use many more poses. 
+The function performs the Hand-Eye calibration using various methods. One approach consists in estimating the rotation then the translation (separable solutions) and the following methods are implemented: - R. Tsai, R. Lenz A New Technique for Fully Autonomous and Efficient 3D Robotics Hand/EyeCalibration \cite Tsai89 - F. Park, B. Martin Robot Sensor Calibration: Solving AX = XB on the Euclidean Group \cite Park94 - R. Horaud, F. Dornaika Hand-Eye Calibration \cite Horaud95 Another approach consists in estimating simultaneously the rotation and the translation (simultaneous solutions), with the following implemented methods: - N. Andreff, R. Horaud, B. Espiau On-line Hand-Eye Calibration \cite Andreff99 - K. Daniilidis Hand-Eye Calibration Using Dual Quaternions \cite Daniilidis98 The following picture describes the Hand-Eye calibration problem where the transformation between a camera ("eye") mounted on a robot gripper ("hand") has to be estimated. This configuration is called eye-in-hand. The eye-to-hand configuration consists in a static camera observing a calibration pattern mounted on the robot end-effector. The transformation from the camera to the robot base frame can then be estimated by inputting the suitable transformations to the function, see below. ![](pics/hand-eye_figure.png) The calibration procedure is the following: - a static calibration pattern is used to estimate the transformation between the target frame and the camera frame - the robot gripper is moved in order to acquire several poses - for each pose, the homogeneous transformation between the gripper frame and the robot base frame is recorded using for instance the robot kinematics \f[ \begin{bmatrix} X_b\\ Y_b\\ Z_b\\ 1 \end{bmatrix} = \begin{bmatrix} _{}^{b}\textrm{R}_g & _{}^{b}\textrm{t}_g \\ 0_{1 \times 3} & 1 \end{bmatrix} \begin{bmatrix} X_g\\ Y_g\\ Z_g\\ 1 \end{bmatrix} \f] - for each pose, the homogeneous transformation between the calibration target frame and the camera frame is recorded using for instance a pose estimation method (PnP) from 2D-3D point correspondences \f[ \begin{bmatrix} X_c\\ Y_c\\ Z_c\\ 1 \end{bmatrix} = \begin{bmatrix} _{}^{c}\textrm{R}_t & _{}^{c}\textrm{t}_t \\ 0_{1 \times 3} & 1 \end{bmatrix} \begin{bmatrix} X_t\\ Y_t\\ Z_t\\ 1 \end{bmatrix} \f] The Hand-Eye calibration procedure returns the following homogeneous transformation \f[ \begin{bmatrix} X_g\\ Y_g\\ Z_g\\ 1 \end{bmatrix} = \begin{bmatrix} _{}^{g}\textrm{R}_c & _{}^{g}\textrm{t}_c \\ 0_{1 \times 3} & 1 \end{bmatrix} \begin{bmatrix} X_c\\ Y_c\\ Z_c\\ 1 \end{bmatrix} \f] This problem is also known as solving the $\mathbf{A}\mathbf{X}=\mathbf{X}\mathbf{B}$ equation: - for an eye-in-hand configuration \f[ \begin{align*} ^{b}{\textrm{T}_g}^{(1)} \hspace{0.2em} ^{g}\textrm{T}_c \hspace{0.2em} ^{c}{\textrm{T}_t}^{(1)} &= \hspace{0.1em} ^{b}{\textrm{T}_g}^{(2)} \hspace{0.2em} ^{g}\textrm{T}_c \hspace{0.2em} ^{c}{\textrm{T}_t}^{(2)} \\ (^{b}{\textrm{T}_g}^{(2)})^{-1} \hspace{0.2em} ^{b}{\textrm{T}_g}^{(1)} \hspace{0.2em} ^{g}\textrm{T}_c &= \hspace{0.1em} ^{g}\textrm{T}_c \hspace{0.2em} ^{c}{\textrm{T}_t}^{(2)} (^{c}{\textrm{T}_t}^{(1)})^{-1} \\ \textrm{A}_i \textrm{X} &= \textrm{X} \textrm{B}_i \\ \end{align*} \f] - for an eye-to-hand configuration \f[ \begin{align*} ^{g}{\textrm{T}_b}^{(1)} \hspace{0.2em} ^{b}\textrm{T}_c \hspace{0.2em} ^{c}{\textrm{T}_t}^{(1)} &= \hspace{0.1em} ^{g}{\textrm{T}_b}^{(2)} \hspace{0.2em} ^{b}\textrm{T}_c \hspace{0.2em} ^{c}{\textrm{T}_t}^{(2)} \\ (^{g}{\textrm{T}_b}^{(2)})^{-1} \hspace{0.2em} ^{g}{\textrm{T}_b}^{(1)} \hspace{0.2em} ^{b}\textrm{T}_c &= \hspace{0.1em} ^{b}\textrm{T}_c \hspace{0.2em} ^{c}{\textrm{T}_t}^{(2)} (^{c}{\textrm{T}_t}^{(1)})^{-1} \\ \textrm{A}_i \textrm{X} &= \textrm{X} \textrm{B}_i \\ \end{align*} \f] \note Additional information can be found on this [website](http://campar.in.tum.de/Chair/HandEyeCalibration). \note A minimum of 2 motions with non parallel rotation axes are necessary to determine the hand-eye transformation. So at least 3 different poses are required, but it is strongly recommended to use many more poses. 
 
 
-:param R_gripper2base: 
+:param R_gripper2base: [in] Rotation part extracted from the homogeneous matrix that transforms a pointexpressed in the gripper frame to the robot base frame ($_{}^{b}\textrm{T}_g$). This is a vector (`vector<Mat>`) that contains the rotation, `(3x3)` rotation matrices or `(3x1)` rotation vectors, for all the transformations from gripper frame to robot base frame. 
 :type R_gripper2base: _typing.Sequence[cv2.typing.MatLike]
-:param t_gripper2base: 
+:param t_gripper2base: [in] Translation part extracted from the homogeneous matrix that transforms a pointexpressed in the gripper frame to the robot base frame ($_{}^{b}\textrm{T}_g$). This is a vector (`vector<Mat>`) that contains the `(3x1)` translation vectors for all the transformations from gripper frame to robot base frame. 
 :type t_gripper2base: _typing.Sequence[cv2.typing.MatLike]
-:param R_target2cam: 
+:param R_target2cam: [in] Rotation part extracted from the homogeneous matrix that transforms a pointexpressed in the target frame to the camera frame ($_{}^{c}\textrm{T}_t$). This is a vector (`vector<Mat>`) that contains the rotation, `(3x3)` rotation matrices or `(3x1)` rotation vectors, for all the transformations from calibration target frame to camera frame. 
 :type R_target2cam: _typing.Sequence[cv2.typing.MatLike]
-:param t_target2cam: 
+:param t_target2cam: [in] Rotation part extracted from the homogeneous matrix that transforms a pointexpressed in the target frame to the camera frame ($_{}^{c}\textrm{T}_t$). This is a vector (`vector<Mat>`) that contains the `(3x1)` translation vectors for all the transformations from calibration target frame to camera frame. 
 :type t_target2cam: _typing.Sequence[cv2.typing.MatLike]
-:param R_cam2gripper: 
+:param R_cam2gripper: [out] Estimated `(3x3)` rotation part extracted from the homogeneous matrix that transforms a pointexpressed in the camera frame to the gripper frame ($_{}^{g}\textrm{T}_c$). 
 :type R_cam2gripper: cv2.typing.MatLike | None
-:param t_cam2gripper: 
+:param t_cam2gripper: [out] Estimated `(3x1)` translation part extracted from the homogeneous matrix that transforms a pointexpressed in the camera frame to the gripper frame ($_{}^{g}\textrm{T}_c$). 
 :type t_cam2gripper: cv2.typing.MatLike | None
-:param method: 
+:param method: [in] One of the implemented Hand-Eye calibration method, see cv::HandEyeCalibrationMethod
 :type method: HandEyeCalibrationMethod
-:rettype: tuple[cv2.typing.MatLike, cv2.typing.MatLike]
+:rtype: tuple[cv2.typing.MatLike, cv2.typing.MatLike]
 ````
 
 
@@ -16845,28 +16869,28 @@ Computes Hand-Eye calibration: $_{}^{g}\textrm{T}_c$
 
 Computes Robot-World/Hand-Eye calibration: $_{}^{w}\textrm{T}_b$ and $_{}^{c}\textrm{T}_g$
 
-@param[in] R_world2cam Rotation part extracted from the homogeneous matrix that transforms a point expressed in the world frame to the camera frame ($_{}^{c}\textrm{T}_w$). This is a vector (`vector<Mat>`) that contains the rotation, `(3x3)` rotation matrices or `(3x1)` rotation vectors, for all the transformations from world frame to the camera frame. @param[in] t_world2cam Translation part extracted from the homogeneous matrix that transforms a point expressed in the world frame to the camera frame ($_{}^{c}\textrm{T}_w$). This is a vector (`vector<Mat>`) that contains the `(3x1)` translation vectors for all the transformations from world frame to the camera frame. @param[in] R_base2gripper Rotation part extracted from the homogeneous matrix that transforms a point expressed in the robot base frame to the gripper frame ($_{}^{g}\textrm{T}_b$). This is a vector (`vector<Mat>`) that contains the rotation, `(3x3)` rotation matrices or `(3x1)` rotation vectors, for all the transformations from robot base frame to the gripper frame. @param[in] t_base2gripper Rotation part extracted from the homogeneous matrix that transforms a point expressed in the robot base frame to the gripper frame ($_{}^{g}\textrm{T}_b$). This is a vector (`vector<Mat>`) that contains the `(3x1)` translation vectors for all the transformations from robot base frame to the gripper frame. @param[out] R_base2world Estimated `(3x3)` rotation part extracted from the homogeneous matrix that transforms a point expressed in the robot base frame to the world frame ($_{}^{w}\textrm{T}_b$). @param[out] t_base2world Estimated `(3x1)` translation part extracted from the homogeneous matrix that transforms a point expressed in the robot base frame to the world frame ($_{}^{w}\textrm{T}_b$). @param[out] R_gripper2cam Estimated `(3x3)` rotation part extracted from the homogeneous matrix that transforms a point expressed in the gripper frame to the camera frame ($_{}^{c}\textrm{T}_g$). @param[out] t_gripper2cam Estimated `(3x1)` translation part extracted from the homogeneous matrix that transforms a point expressed in the gripper frame to the camera frame ($_{}^{c}\textrm{T}_g$). @param[in] method One of the implemented Robot-World/Hand-Eye calibration method, see cv::RobotWorldHandEyeCalibrationMethod The function performs the Robot-World/Hand-Eye calibration using various methods. One approach consists in estimating the rotation then the translation (separable solutions): - M. Shah, Solving the robot-world/hand-eye calibration problem using the kronecker product \cite Shah2013SolvingTR Another approach consists in estimating simultaneously the rotation and the translation (simultaneous solutions), with the following implemented method: - A. Li, L. Wang, and D. Wu, Simultaneous robot-world and hand-eye calibration using dual-quaternions and kronecker product \cite Li2010SimultaneousRA The following picture describes the Robot-World/Hand-Eye calibration problem where the transformations between a robot and a world frame and between a robot gripper ("hand") and a camera ("eye") mounted at the robot end-effector have to be estimated. ![](pics/robot-world_hand-eye_figure.png) The calibration procedure is the following: - a static calibration pattern is used to estimate the transformation between the target frame and the camera frame - the robot gripper is moved in order to acquire several poses - for each pose, the homogeneous transformation between the gripper frame and the robot base frame is recorded using for instance the robot kinematics \f[ \begin{bmatrix} X_g\\ Y_g\\ Z_g\\ 1 \end{bmatrix} = \begin{bmatrix} _{}^{g}\textrm{R}_b & _{}^{g}\textrm{t}_b \\ 0_{1 \times 3} & 1 \end{bmatrix} \begin{bmatrix} X_b\\ Y_b\\ Z_b\\ 1 \end{bmatrix} \f] - for each pose, the homogeneous transformation between the calibration target frame (the world frame) and the camera frame is recorded using for instance a pose estimation method (PnP) from 2D-3D point correspondences \f[ \begin{bmatrix} X_c\\ Y_c\\ Z_c\\ 1 \end{bmatrix} = \begin{bmatrix} _{}^{c}\textrm{R}_w & _{}^{c}\textrm{t}_w \\ 0_{1 \times 3} & 1 \end{bmatrix} \begin{bmatrix} X_w\\ Y_w\\ Z_w\\ 1 \end{bmatrix} \f] The Robot-World/Hand-Eye calibration procedure returns the following homogeneous transformations \f[ \begin{bmatrix} X_w\\ Y_w\\ Z_w\\ 1 \end{bmatrix} = \begin{bmatrix} _{}^{w}\textrm{R}_b & _{}^{w}\textrm{t}_b \\ 0_{1 \times 3} & 1 \end{bmatrix} \begin{bmatrix} X_b\\ Y_b\\ Z_b\\ 1 \end{bmatrix} \f] \f[ \begin{bmatrix} X_c\\ Y_c\\ Z_c\\ 1 \end{bmatrix} = \begin{bmatrix} _{}^{c}\textrm{R}_g & _{}^{c}\textrm{t}_g \\ 0_{1 \times 3} & 1 \end{bmatrix} \begin{bmatrix} X_g\\ Y_g\\ Z_g\\ 1 \end{bmatrix} \f] This problem is also known as solving the $\mathbf{A}\mathbf{X}=\mathbf{Z}\mathbf{B}$ equation, with: - $\mathbf{A} \Leftrightarrow \hspace{0.1em} _{}^{c}\textrm{T}_w$ - $\mathbf{X} \Leftrightarrow \hspace{0.1em} _{}^{w}\textrm{T}_b$ - $\mathbf{Z} \Leftrightarrow \hspace{0.1em} _{}^{c}\textrm{T}_g$ - $\mathbf{B} \Leftrightarrow \hspace{0.1em} _{}^{g}\textrm{T}_b$ \note At least 3 measurements are required (input vectors size must be greater or equal to 3). 
+The function performs the Robot-World/Hand-Eye calibration using various methods. One approach consists in estimating the rotation then the translation (separable solutions): - M. Shah, Solving the robot-world/hand-eye calibration problem using the kronecker product \cite Shah2013SolvingTR Another approach consists in estimating simultaneously the rotation and the translation (simultaneous solutions), with the following implemented method: - A. Li, L. Wang, and D. Wu, Simultaneous robot-world and hand-eye calibration using dual-quaternions and kronecker product \cite Li2010SimultaneousRA The following picture describes the Robot-World/Hand-Eye calibration problem where the transformations between a robot and a world frame and between a robot gripper ("hand") and a camera ("eye") mounted at the robot end-effector have to be estimated. ![](pics/robot-world_hand-eye_figure.png) The calibration procedure is the following: - a static calibration pattern is used to estimate the transformation between the target frame and the camera frame - the robot gripper is moved in order to acquire several poses - for each pose, the homogeneous transformation between the gripper frame and the robot base frame is recorded using for instance the robot kinematics \f[ \begin{bmatrix} X_g\\ Y_g\\ Z_g\\ 1 \end{bmatrix} = \begin{bmatrix} _{}^{g}\textrm{R}_b & _{}^{g}\textrm{t}_b \\ 0_{1 \times 3} & 1 \end{bmatrix} \begin{bmatrix} X_b\\ Y_b\\ Z_b\\ 1 \end{bmatrix} \f] - for each pose, the homogeneous transformation between the calibration target frame (the world frame) and the camera frame is recorded using for instance a pose estimation method (PnP) from 2D-3D point correspondences \f[ \begin{bmatrix} X_c\\ Y_c\\ Z_c\\ 1 \end{bmatrix} = \begin{bmatrix} _{}^{c}\textrm{R}_w & _{}^{c}\textrm{t}_w \\ 0_{1 \times 3} & 1 \end{bmatrix} \begin{bmatrix} X_w\\ Y_w\\ Z_w\\ 1 \end{bmatrix} \f] The Robot-World/Hand-Eye calibration procedure returns the following homogeneous transformations \f[ \begin{bmatrix} X_w\\ Y_w\\ Z_w\\ 1 \end{bmatrix} = \begin{bmatrix} _{}^{w}\textrm{R}_b & _{}^{w}\textrm{t}_b \\ 0_{1 \times 3} & 1 \end{bmatrix} \begin{bmatrix} X_b\\ Y_b\\ Z_b\\ 1 \end{bmatrix} \f] \f[ \begin{bmatrix} X_c\\ Y_c\\ Z_c\\ 1 \end{bmatrix} = \begin{bmatrix} _{}^{c}\textrm{R}_g & _{}^{c}\textrm{t}_g \\ 0_{1 \times 3} & 1 \end{bmatrix} \begin{bmatrix} X_g\\ Y_g\\ Z_g\\ 1 \end{bmatrix} \f] This problem is also known as solving the $\mathbf{A}\mathbf{X}=\mathbf{Z}\mathbf{B}$ equation, with: - $\mathbf{A} \Leftrightarrow \hspace{0.1em} _{}^{c}\textrm{T}_w$ - $\mathbf{X} \Leftrightarrow \hspace{0.1em} _{}^{w}\textrm{T}_b$ - $\mathbf{Z} \Leftrightarrow \hspace{0.1em} _{}^{c}\textrm{T}_g$ - $\mathbf{B} \Leftrightarrow \hspace{0.1em} _{}^{g}\textrm{T}_b$ \note At least 3 measurements are required (input vectors size must be greater or equal to 3). 
 
 
-:param R_world2cam: 
+:param R_world2cam: [in] Rotation part extracted from the homogeneous matrix that transforms a pointexpressed in the world frame to the camera frame ($_{}^{c}\textrm{T}_w$). This is a vector (`vector<Mat>`) that contains the rotation, `(3x3)` rotation matrices or `(3x1)` rotation vectors, for all the transformations from world frame to the camera frame. 
 :type R_world2cam: _typing.Sequence[cv2.typing.MatLike]
-:param t_world2cam: 
+:param t_world2cam: [in] Translation part extracted from the homogeneous matrix that transforms a pointexpressed in the world frame to the camera frame ($_{}^{c}\textrm{T}_w$). This is a vector (`vector<Mat>`) that contains the `(3x1)` translation vectors for all the transformations from world frame to the camera frame. 
 :type t_world2cam: _typing.Sequence[cv2.typing.MatLike]
-:param R_base2gripper: 
+:param R_base2gripper: [in] Rotation part extracted from the homogeneous matrix that transforms a pointexpressed in the robot base frame to the gripper frame ($_{}^{g}\textrm{T}_b$). This is a vector (`vector<Mat>`) that contains the rotation, `(3x3)` rotation matrices or `(3x1)` rotation vectors, for all the transformations from robot base frame to the gripper frame. 
 :type R_base2gripper: _typing.Sequence[cv2.typing.MatLike]
-:param t_base2gripper: 
+:param t_base2gripper: [in] Rotation part extracted from the homogeneous matrix that transforms a pointexpressed in the robot base frame to the gripper frame ($_{}^{g}\textrm{T}_b$). This is a vector (`vector<Mat>`) that contains the `(3x1)` translation vectors for all the transformations from robot base frame to the gripper frame. 
 :type t_base2gripper: _typing.Sequence[cv2.typing.MatLike]
-:param R_base2world: 
+:param R_base2world: [out] Estimated `(3x3)` rotation part extracted from the homogeneous matrix that transforms a pointexpressed in the robot base frame to the world frame ($_{}^{w}\textrm{T}_b$). 
 :type R_base2world: cv2.typing.MatLike | None
-:param t_base2world: 
+:param t_base2world: [out] Estimated `(3x1)` translation part extracted from the homogeneous matrix that transforms a pointexpressed in the robot base frame to the world frame ($_{}^{w}\textrm{T}_b$). 
 :type t_base2world: cv2.typing.MatLike | None
-:param R_gripper2cam: 
+:param R_gripper2cam: [out] Estimated `(3x3)` rotation part extracted from the homogeneous matrix that transforms a pointexpressed in the gripper frame to the camera frame ($_{}^{c}\textrm{T}_g$). 
 :type R_gripper2cam: cv2.typing.MatLike | None
-:param t_gripper2cam: 
+:param t_gripper2cam: [out] Estimated `(3x1)` translation part extracted from the homogeneous matrix that transforms a pointexpressed in the gripper frame to the camera frame ($_{}^{c}\textrm{T}_g$). 
 :type t_gripper2cam: cv2.typing.MatLike | None
-:param method: 
+:param method: [in] One of the implemented Robot-World/Hand-Eye calibration method, see cv::RobotWorldHandEyeCalibrationMethod
 :type method: RobotWorldHandEyeCalibrationMethod
-:rettype: tuple[cv2.typing.MatLike, cv2.typing.MatLike, cv2.typing.MatLike, cv2.typing.MatLike]
+:rtype: tuple[cv2.typing.MatLike, cv2.typing.MatLike, cv2.typing.MatLike, cv2.typing.MatLike]
 ````
 
 
@@ -16895,7 +16919,7 @@ The function computes various useful camera characteristics from the previously 
 :type principalPoint: 
 :param aspectRatio: $f_y/f_x$
 :type aspectRatio: 
-:rettype: tuple[float, float, float, cv2.typing.Point2d, float]
+:rtype: tuple[float, float, float, cv2.typing.Point2d, float]
 ````
 
 
@@ -16917,7 +16941,7 @@ The function cv::cartToPolar calculates either the magnitude, angle, or both for
 :type angle: cv2.typing.MatLike | None
 :param angleInDegrees: a flag, indicating whether the angles are measuredin radians (which is by default), or in degrees. 
 :type angleInDegrees: bool
-:rettype: tuple[cv2.typing.MatLike, cv2.typing.MatLike]
+:rtype: tuple[cv2.typing.MatLike, cv2.typing.MatLike]
 ````
 
 
@@ -16932,7 +16956,7 @@ The function cv::cartToPolar calculates either the magnitude, angle, or both for
 :type img: cv2.typing.MatLike
 :param size: 
 :type size: cv2.typing.Size
-:rettype: bool
+:rtype: bool
 ````
 
 
@@ -16945,7 +16969,7 @@ The function returns true if the host hardware supports the specified feature. W
 
 :param feature: The feature of interest, one of cv::CpuFeatures
 :type feature: int
-:rettype: bool
+:rtype: bool
 ````
 
 
@@ -16966,7 +16990,7 @@ The function cv::checkRange checks that every array element is neither NaN nor i
 :type minVal: float
 :param maxVal: exclusive upper boundary of valid values range.
 :type maxVal: float
-:rettype: tuple[bool, cv2.typing.Point]
+:rtype: tuple[bool, cv2.typing.Point]
 ````
 
 
@@ -16991,7 +17015,7 @@ The function cv::circle draws a simple or filled circle with a given center and 
 :type lineType: int
 :param shift: Number of fractional bits in the coordinates of the center and in the radius value.
 :type shift: int
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -17008,7 +17032,7 @@ The function cv::circle draws a simple or filled circle with a given center and 
 :type pt1: cv2.typing.Point
 :param pt2: Second line point.
 :type pt2: cv2.typing.Point
-:rettype: tuple[bool, cv2.typing.Point, cv2.typing.Point]
+:rtype: tuple[bool, cv2.typing.Point, cv2.typing.Point]
 ````
 
 
@@ -17031,7 +17055,7 @@ Multiplication factor is between .5 to 2.5.
 :type green_mul: float
 :param blue_mul: B-channel multiply factor.
 :type blue_mul: float
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -17051,7 +17075,7 @@ The function compares: Elements of two arrays when src1 and src2 have the same s
 :type dst: cv2.typing.MatLike | None
 :param cmpop: a flag, that specifies correspondence between the arrays (cv::CmpTypes)
 :type cmpop: int
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -17068,7 +17092,7 @@ The function cv::compareHist compares two dense or two sparse histograms using t
 :type H2: cv2.typing.MatLike
 :param method: Comparison method, see #HistCompMethods
 :type method: int
-:rettype: float
+:rtype: float
 ````
 
 
@@ -17084,7 +17108,7 @@ The function cv::completeSymm copies the lower or the upper half of a square mat
 :type m: cv2.typing.MatLike
 :param lowerToUpper: operation flag; if true, the lower half is copied tothe upper half. Otherwise, the upper half is copied to the lower half. 
 :type lowerToUpper: bool
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -17123,7 +17147,7 @@ The functions compute: \f[\begin{array}{l} \texttt{rvec3} =  \mathrm{rodrigues} 
 :type dt3dr2: cv2.typing.MatLike | None
 :param dt3dt2: Optional output derivative of tvec3 with regard to tvec2
 :type dt3dt2: cv2.typing.MatLike | None
-:rettype: tuple[cv2.typing.MatLike, cv2.typing.MatLike, cv2.typing.MatLike, cv2.typing.MatLike, cv2.typing.MatLike, cv2.typing.MatLike, cv2.typing.MatLike, cv2.typing.MatLike, cv2.typing.MatLike, cv2.typing.MatLike]
+:rtype: tuple[cv2.typing.MatLike, cv2.typing.MatLike, cv2.typing.MatLike, cv2.typing.MatLike, cv2.typing.MatLike, cv2.typing.MatLike, cv2.typing.MatLike, cv2.typing.MatLike, cv2.typing.MatLike, cv2.typing.MatLike]
 ````
 
 
@@ -17142,7 +17166,7 @@ For every point in one of the two images of a stereo pair, the function finds th
 :type F: cv2.typing.MatLike
 :param lines: Output vector of the epipolar lines corresponding to the points in the other image.Each line $ax + by + c=0$ is encoded by 3 numbers $(a, b, c)$ . 
 :type lines: cv2.typing.MatLike | None
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -17159,7 +17183,7 @@ Computes the Enhanced Correlation Coefficient value between two images @cite EP0
 :type inputImage: cv2.typing.MatLike
 :param inputMask: An optional mask to indicate valid values of inputImage.
 :type inputMask: cv2.typing.MatLike | None
-:rettype: float
+:rtype: float
 ````
 
 
@@ -17178,7 +17202,7 @@ Computes the Enhanced Correlation Coefficient value between two images @cite EP0
 :type connectivity: int
 :param ltype: output image label type. Currently CV_32S and CV_16U are supported.
 :type ltype: int
-:rettype: tuple[int, cv2.typing.MatLike]
+:rtype: tuple[int, cv2.typing.MatLike]
 ````
 
 
@@ -17199,7 +17223,7 @@ image with 4 or 8 way connectivity - returns N, the total number of labels [0, N
 :type ltype: int
 :param ccltype: connected components algorithm type (see the #ConnectedComponentsAlgorithmsTypes).
 :type ccltype: int
-:rettype: tuple[int, cv2.typing.MatLike]
+:rtype: tuple[int, cv2.typing.MatLike]
 ````
 
 
@@ -17222,7 +17246,7 @@ image with 4 or 8 way connectivity - returns N, the total number of labels [0, N
 :type connectivity: int
 :param ltype: output image label type. Currently CV_32S and CV_16U are supported.
 :type ltype: int
-:rettype: tuple[int, cv2.typing.MatLike, cv2.typing.MatLike, cv2.typing.MatLike]
+:rtype: tuple[int, cv2.typing.MatLike, cv2.typing.MatLike, cv2.typing.MatLike]
 ````
 
 
@@ -17247,7 +17271,7 @@ image with 4 or 8 way connectivity - returns N, the total number of labels [0, N
 :type ltype: int
 :param ccltype: connected components algorithm type (see #ConnectedComponentsAlgorithmsTypes).
 :type ccltype: int
-:rettype: tuple[int, cv2.typing.MatLike, cv2.typing.MatLike, cv2.typing.MatLike]
+:rtype: tuple[int, cv2.typing.MatLike, cv2.typing.MatLike, cv2.typing.MatLike]
 ````
 
 
@@ -17262,7 +17286,7 @@ The function computes a contour area. Similarly to moments , the area is compute
 :type contour: cv2.typing.MatLike
 :param oriented: Oriented area flag. If it is true, the function returns a signed area value,depending on the contour orientation (clockwise or counter-clockwise). Using this feature you can determine orientation of a contour by taking the sign of an area. By default, the parameter is false, which means that the absolute value is returned. 
 :type oriented: bool
-:rettype: float
+:rtype: float
 ````
 
 
@@ -17277,7 +17301,7 @@ This function converts FP32 (single precision floating point) from/to FP16 (half
 :type src: cv2.typing.MatLike
 :param dst: output array.
 :type dst: cv2.typing.MatLike | None
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -17301,7 +17325,7 @@ The function converts a pair of maps for remap from one representation to anothe
 :type dstmap1type: int
 :param nninterpolation: Flag indicating whether the fixed-point maps are used for thenearest-neighbor or for a more complex interpolation. 
 :type nninterpolation: bool
-:rettype: tuple[cv2.typing.MatLike, cv2.typing.MatLike]
+:rtype: tuple[cv2.typing.MatLike, cv2.typing.MatLike]
 ````
 
 
@@ -17316,7 +17340,7 @@ The function converts points homogeneous to Euclidean space using perspective pr
 :type src: cv2.typing.MatLike
 :param dst: Output vector of N-1-dimensional points.
 :type dst: cv2.typing.MatLike | None
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -17331,7 +17355,7 @@ The function converts points from Euclidean to homogeneous space by appending 1'
 :type src: cv2.typing.MatLike
 :param dst: Output vector of N+1-dimensional points.
 :type dst: cv2.typing.MatLike | None
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -17351,7 +17375,7 @@ On each element of the input array, the function convertScaleAbs performs three 
 :type alpha: float
 :param beta: optional delta added to the scaled values.
 :type beta: float
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -17373,7 +17397,7 @@ The function cv::convexHull finds the convex hull of a 2D point set using the Sk
 :type clockwise: bool
 :param returnPoints: Operation flag. In case of a matrix, when the flag is true, the functionreturns convex hull points. Otherwise, it returns indices of the convex hull points. When the output array is std::vector, the flag is ignored, and the output depends on the type of the vector: std::vector\<int\> implies returnPoints=false, std::vector\<Point\> implies returnPoints=true. 
 :type returnPoints: bool
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -17390,7 +17414,7 @@ The figure below displays convexity defects of a hand contour: ![image](pics/def
 :type convexhull: cv2.typing.MatLike
 :param convexityDefects: The output vector of convexity defects. In C++ and the new Python/Javainterface each convexity defect is represented as 4-element integer vector (a.k.a. #Vec4i): (start_index, end_index, farthest_pt_index, fixpt_depth), where indices are 0-based indices in the original contour of the convexity defect beginning, end and the farthest point, and fixpt_depth is fixed-point approximation (with 8 fractional bits) of the distance between the farthest contour point and the hull. That is, to get the floating-point value of the depth will be fixpt_depth/256.0. 
 :type convexityDefects: cv2.typing.MatLike | None
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -17421,7 +17445,7 @@ When the source image is a part (ROI) of a bigger image, the function will try t
 :type borderType: int
 :param value: Border value if borderType==BORDER_CONSTANT .
 :type value: cv2.typing.Scalar
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -17438,7 +17462,7 @@ When the source image is a part (ROI) of a bigger image, the function will try t
 :type dst: cv2.typing.MatLike | None
 :param mask: Operation mask of the same size as \*this. Its non-zero elements indicate which matrixelements need to be copied. The mask has to be of type CV_8U and can have 1 or multiple channels. 
 :type mask: cv2.typing.MatLike
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -17460,7 +17484,7 @@ For every pixel $p$ , the function cornerEigenValsAndVecs considers a blockSize 
 :type ksize: int
 :param borderType: Pixel extrapolation method. See #BorderTypes. #BORDER_WRAP is not supported.
 :type borderType: int
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -17483,7 +17507,7 @@ The function runs the Harris corner detector on the image. Similarly to cornerMi
 :type k: float
 :param borderType: Pixel extrapolation method. See #BorderTypes. #BORDER_WRAP is not supported.
 :type borderType: int
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -17504,7 +17528,7 @@ The function is similar to cornerEigenValsAndVecs but it calculates and stores o
 :type ksize: int
 :param borderType: Pixel extrapolation method. See #BorderTypes. #BORDER_WRAP is not supported.
 :type borderType: int
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -17525,7 +17549,7 @@ The function iterates to find the sub-pixel accurate location of corners or radi
 :type zeroZone: cv2.typing.Size
 :param criteria: Criteria for termination of the iterative process of corner refinement. That is,the process of corner position refinement stops either after criteria.maxCount iterations or when the corner position moves by less than criteria.epsilon on some iteration. 
 :type criteria: cv2.typing.TermCriteria
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -17546,7 +17570,7 @@ The function implements the Optimal Triangulation Method (see Multiple View Geom
 :type newPoints1: cv2.typing.MatLike | None
 :param newPoints2: The optimized points2.
 :type newPoints2: cv2.typing.MatLike | None
-:rettype: tuple[cv2.typing.MatLike, cv2.typing.MatLike]
+:rtype: tuple[cv2.typing.MatLike, cv2.typing.MatLike]
 ````
 
 
@@ -17560,7 +17584,7 @@ The function returns the number of non-zero elements in src : \f[\sum _{I: \; \t
 
 :param src: single-channel array.
 :type src: cv2.typing.MatLike
-:rettype: int
+:rtype: int
 ````
 
 
@@ -17577,7 +17601,7 @@ Creates AlignMTB object
 :type exclude_range: int
 :param cut: if true cuts images, otherwise fills the new regions with zeros.
 :type cut: bool
-:rettype: AlignMTB
+:rtype: AlignMTB
 ````
 
 
@@ -17594,7 +17618,7 @@ Creates KNN Background Subtractor
 :type dist2Threshold: float
 :param detectShadows: If true, the algorithm will detect shadows and mark them. It decreases thespeed a bit, so if you do not need this feature, set the parameter to false. 
 :type detectShadows: bool
-:rettype: BackgroundSubtractorKNN
+:rtype: BackgroundSubtractorKNN
 ````
 
 
@@ -17611,7 +17635,7 @@ Creates MOG2 Background Subtractor
 :type varThreshold: float
 :param detectShadows: If true, the algorithm will detect shadows and mark them. It decreases thespeed a bit, so if you do not need this feature, set the parameter to false. 
 :type detectShadows: bool
-:rettype: BackgroundSubtractorMOG2
+:rtype: BackgroundSubtractorMOG2
 ````
 
 
@@ -17632,7 +17656,7 @@ Creates MOG2 Background Subtractor
 :type buttonType: int
 :param initialButtonState: 
 :type initialButtonState: int
-:rettype: None
+:rtype: None
 ````
 
 
@@ -17647,7 +17671,7 @@ Creates a smart pointer to a cv::CLAHE class and initializes it.
 :type clipLimit: float
 :param tileGridSize: Size of grid for histogram equalization. Input image will be divided intoequally sized rectangular tiles. tileGridSize defines the number of tiles in row and column. 
 :type tileGridSize: cv2.typing.Size
-:rettype: CLAHE
+:rtype: CLAHE
 ````
 
 
@@ -17666,7 +17690,7 @@ Creates CalibrateDebevec object
 :type random: bool
 :param lambda_: 
 :type lambda_: float
-:rettype: CalibrateDebevec
+:rtype: CalibrateDebevec
 ````
 
 
@@ -17681,7 +17705,7 @@ Creates CalibrateRobertson object
 :type max_iter: int
 :param threshold: target difference between results of two successive steps of the minimization.
 :type threshold: float
-:rettype: CalibrateRobertson
+:rtype: CalibrateRobertson
 ````
 
 
@@ -17692,7 +17716,7 @@ Creates a smart pointer to a cv::GeneralizedHoughBallard class and initializes i
 
 
 
-:rettype: GeneralizedHoughBallard
+:rtype: GeneralizedHoughBallard
 ````
 
 
@@ -17703,7 +17727,7 @@ Creates a smart pointer to a cv::GeneralizedHoughGuil class and initializes it.
 
 
 
-:rettype: GeneralizedHoughGuil
+:rtype: GeneralizedHoughGuil
 ````
 
 
@@ -17720,7 +17744,7 @@ See (http://en.wikipedia.org/wiki/Hann_function) and (http://en.wikipedia.org/wi
 :type winSize: cv2.typing.Size
 :param type: Created array type
 :type type: int
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -17747,7 +17771,7 @@ The LineSegmentDetector algorithm is defined using the standard values. Only adv
 :type density_th: float
 :param n_bins: Number of bins in pseudo-ordering of gradient modulus.
 :type n_bins: int
-:rettype: LineSegmentDetector
+:rtype: LineSegmentDetector
 ````
 
 
@@ -17758,7 +17782,7 @@ Creates MergeDebevec object
 
 
 
-:rettype: MergeDebevec
+:rtype: MergeDebevec
 ````
 
 
@@ -17775,7 +17799,7 @@ Creates MergeMertens object
 :type saturation_weight: float
 :param exposure_weight: well-exposedness measure weight
 :type exposure_weight: float
-:rettype: MergeMertens
+:rtype: MergeMertens
 ````
 
 
@@ -17786,7 +17810,7 @@ Creates MergeRobertson object
 
 
 
-:rettype: MergeRobertson
+:rtype: MergeRobertson
 ````
 
 
@@ -17799,7 +17823,7 @@ Creates simple linear mapper with gamma correction
 
 :param gamma: positive value for gamma correction. Gamma value of 1.0 implies no correction, gammaequal to 2.2f is suitable for most displays. Generally gamma \> 1 brightens the image and gamma \< 1 darkens it. 
 :type gamma: float
-:rettype: Tonemap
+:rtype: Tonemap
 ````
 
 
@@ -17816,7 +17840,7 @@ Creates TonemapDrago object
 :type saturation: float
 :param bias: value for bias function in [0, 1] range. Values from 0.7 to 0.9 usually give bestresults, default value is 0.85. 
 :type bias: float
-:rettype: TonemapDrago
+:rtype: TonemapDrago
 ````
 
 
@@ -17833,7 +17857,7 @@ Creates TonemapMantiuk object
 :type scale: float
 :param saturation: saturation enhancement value. See createTonemapDrago
 :type saturation: float
-:rettype: TonemapMantiuk
+:rtype: TonemapMantiuk
 ````
 
 
@@ -17852,7 +17876,7 @@ Creates TonemapReinhard object
 :type light_adapt: float
 :param color_adapt: chromatic adaptation in [0, 1] range. If 1 channels are treated independently,if 0 adaptation level is the same for each channel. 
 :type color_adapt: float
-:rettype: TonemapReinhard
+:rtype: TonemapReinhard
 ````
 
 
@@ -17873,7 +17897,7 @@ Creates TonemapReinhard object
 :type count: int
 :param onChange: 
 :type onChange: _typing.Callable[[int], None]
-:rettype: None
+:rtype: None
 ````
 
 
@@ -17886,7 +17910,7 @@ The function cubeRoot computes $\sqrt[3]{\texttt{val}}$. Negative arguments are 
 
 :param val: A function argument.
 :type val: float
-:rettype: float
+:rtype: float
 ````
 
 
@@ -17905,7 +17929,7 @@ The function converts an input image from one color space to another. In case of
 :type code: int
 :param dstCn: number of channels in the destination image; if the parameter is 0, the number of thechannels is derived automatically from src and code. 
 :type dstCn: int
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -17924,7 +17948,7 @@ This function only supports YUV420 to RGB conversion as of now.
 :type dst: cv2.typing.MatLike | None
 :param code: Specifies the type of conversion. It can take any of the following values:- #COLOR_YUV2BGR_NV12 - #COLOR_YUV2RGB_NV12 - #COLOR_YUV2BGRA_NV12 - #COLOR_YUV2RGBA_NV12 - #COLOR_YUV2BGR_NV21 - #COLOR_YUV2RGB_NV21 - #COLOR_YUV2BGRA_NV21 - #COLOR_YUV2RGBA_NV21 
 :type code: int
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -17945,7 +17969,7 @@ Currently dct supports even-size arrays (2, 4, 6 ...). For data analysis and app
 :type dst: cv2.typing.MatLike | None
 :param flags: transformation flags as a combination of cv::DftFlags (DCT_*)
 :type flags: int
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -17962,7 +17986,7 @@ This function is to be applied on color images.
 :type grayscale: cv2.typing.MatLike | None
 :param color_boost: Output 8-bit 3-channel image.
 :type color_boost: cv2.typing.MatLike | None
-:rettype: tuple[cv2.typing.MatLike, cv2.typing.MatLike]
+:rtype: tuple[cv2.typing.MatLike, cv2.typing.MatLike]
 ````
 
 
@@ -17981,7 +18005,7 @@ This function decomposes the essential matrix E using svd decomposition @cite Ha
 :type R2: cv2.typing.MatLike | None
 :param t: One possible translation.
 :type t: cv2.typing.MatLike | None
-:rettype: tuple[cv2.typing.MatLike, cv2.typing.MatLike, cv2.typing.MatLike]
+:rtype: tuple[cv2.typing.MatLike, cv2.typing.MatLike, cv2.typing.MatLike]
 ````
 
 
@@ -18002,7 +18026,7 @@ This function extracts relative camera motion between two views of a planar obje
 :type translations: _typing.Sequence[cv2.typing.MatLike] | None
 :param normals: Array of plane normal matrices.
 :type normals: _typing.Sequence[cv2.typing.MatLike] | None
-:rettype: tuple[int, _typing.Sequence[cv2.typing.MatLike], _typing.Sequence[cv2.typing.MatLike], _typing.Sequence[cv2.typing.MatLike]]
+:rtype: tuple[int, _typing.Sequence[cv2.typing.MatLike], _typing.Sequence[cv2.typing.MatLike], _typing.Sequence[cv2.typing.MatLike]]
 ````
 
 
@@ -18029,7 +18053,7 @@ The function computes a decomposition of a projection matrix into a calibration 
 :type rotMatrixZ: cv2.typing.MatLike | None
 :param eulerAngles: Optional three-element vector containing three Euler angles of rotation indegrees. 
 :type eulerAngles: cv2.typing.MatLike | None
-:rettype: tuple[cv2.typing.MatLike, cv2.typing.MatLike, cv2.typing.MatLike, cv2.typing.MatLike, cv2.typing.MatLike, cv2.typing.MatLike, cv2.typing.MatLike]
+:rtype: tuple[cv2.typing.MatLike, cv2.typing.MatLike, cv2.typing.MatLike, cv2.typing.MatLike, cv2.typing.MatLike, cv2.typing.MatLike, cv2.typing.MatLike]
 ````
 
 
@@ -18049,7 +18073,7 @@ The function can do the following transformations: -   Demosaicing using bilinea
 :type code: int
 :param dstCn: number of channels in the destination image; if the parameter is 0, the number of thechannels is derived automatically from src and code. 
 :type dstCn: int
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -18070,7 +18094,7 @@ It should be noted, that this implementation was taken from the July 2013 blog e
 :type niters: int
 :param lambda_: 
 :type lambda_: float
-:rettype: None
+:rtype: None
 ````
 
 
@@ -18081,7 +18105,7 @@ Destroys all of the HighGUI windows.
 The function destroyAllWindows destroys all of the opened HighGUI windows. 
 
 
-:rettype: None
+:rtype: None
 ````
 
 
@@ -18094,7 +18118,7 @@ The function destroyWindow destroys the window with the given name.
 
 :param winname: Name of the window to be destroyed.
 :type winname: str
-:rettype: None
+:rtype: None
 ````
 
 
@@ -18113,7 +18137,7 @@ This filter enhances the details of a particular image.
 :type sigma_s: float
 :param sigma_r: %Range between 0 to 1.
 :type sigma_r: float
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -18127,7 +18151,7 @@ The function cv::determinant calculates and returns the determinant of the speci
 
 :param mtx: input matrix that must have CV_32FC1 or CV_64FC1 type andsquare size. 
 :type mtx: cv2.typing.MatLike
-:rettype: float
+:rtype: float
 ````
 
 
@@ -18147,7 +18171,7 @@ The function cv::dft performs one of the following: -   Forward the Fourier tran
 :type flags: int
 :param nonzeroRows: when the parameter is not zero, the function assumes that only the firstnonzeroRows rows of the input array (#DFT_INVERSE is not set) or only the first nonzeroRows of the output array (#DFT_INVERSE is set) contain non-zeros, thus, the function can handle the rest of the rows more efficiently and save some time; this technique is very useful for calculating array cross-correlation or convolution using DFT. 
 :type nonzeroRows: int
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -18173,7 +18197,7 @@ The function dilates the source image using the specified structuring element th
 :type borderType: int
 :param borderValue: border value in case of a constant border
 :type borderValue: cv2.typing.Scalar
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -18190,7 +18214,7 @@ The function displayOverlay displays useful information/tips on top of the windo
 :type text: str
 :param delayms: The period (in milliseconds), during which the overlay text is displayed. If thisfunction is called before the previous overlay text timed out, the timer is restarted and the text is updated. If this value is zero, the text never disappears. 
 :type delayms: int
-:rettype: None
+:rtype: None
 ````
 
 
@@ -18207,7 +18231,7 @@ The function displayStatusBar displays useful information/tips on top of the win
 :type text: str
 :param delayms: Duration (in milliseconds) to display the text. If this function is called beforethe previous text timed out, the timer is restarted and the text is updated. If this value is zero, the text never disappears. 
 :type delayms: int
-:rettype: None
+:rtype: None
 ````
 
 
@@ -18228,7 +18252,7 @@ The function displayStatusBar displays useful information/tips on top of the win
 :type maskSize: int
 :param dstType: Type of output image. It can be CV_8U or CV_32F. Type CV_8U can be used only forthe first variant of the function and distanceType == #DIST_L1. 
 :type dstType: int
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -18251,7 +18275,7 @@ The function cv::distanceTransform calculates the approximate or precise distanc
 :type maskSize: int
 :param labelType: Type of the label array to build, see #DistanceTransformLabelTypes.
 :type labelType: int
-:rettype: tuple[cv2.typing.MatLike, cv2.typing.MatLike]
+:rtype: tuple[cv2.typing.MatLike, cv2.typing.MatLike]
 ````
 
 
@@ -18272,7 +18296,7 @@ The function cv::divSpectrums performs the per-element division of the first arr
 :type flags: int
 :param conjB: optional flag that conjugates the second input array before the multiplication (true)or not (false). 
 :type conjB: bool
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -18303,7 +18327,7 @@ Saturation is not applied when the output array has the depth CV_32S. You may ev
 :type dst: cv2.typing.MatLike | None
 :param dtype: optional depth of the output array; if -1, dst will have depth src2.depth(), but incase of an array-by-array division, you can only pass -1 when src1.depth()==src2.depth(). 
 :type dtype: int
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -18318,7 +18342,7 @@ Saturation is not applied when the output array has the depth CV_32S. You may ev
 :type layerTypeName: str
 :param layerClass: 
 :type layerClass: _typing.Type[cv2.dnn.LayerProtocol]
-:rettype: None
+:rtype: None
 ````
 
 
@@ -18331,7 +18355,7 @@ Saturation is not applied when the output array has the depth CV_32S. You may ev
 
 :param layerTypeName: 
 :type layerTypeName: str
-:rettype: None
+:rtype: None
 ````
 
 
@@ -18350,7 +18374,7 @@ The function draws individual chessboard corners detected either as red circles 
 :type corners: cv2.typing.MatLike
 :param patternWasFound: Parameter indicating whether the complete board was found or not. Thereturn value of #findChessboardCorners should be passed here. 
 :type patternWasFound: bool
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -18382,7 +18406,7 @@ When thickness=#FILLED, the function is designed to handle connected components 
 :type maxLevel: int
 :param offset: Optional contour shift parameter. Shift all the drawn contours by the specified$\texttt{offset}=(dx,dy)$ . 
 :type offset: cv2.typing.Point
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -18407,7 +18431,7 @@ This function draws the axes of the world/object coordinate system w.r.t. to the
 :type length: float
 :param thickness: Line thickness of the painted axes.
 :type thickness: int
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -18428,7 +18452,7 @@ Draws keypoints.
 :type color: cv2.typing.Scalar
 :param flags: Flags setting drawing features. Possible flags bit values are defined byDrawMatchesFlags. See details above in drawMatches . 
 :type flags: DrawMatchesFlags
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -18453,7 +18477,7 @@ The function cv::drawMarker draws a marker on a given position in the image. For
 :type line_type: int
 :param markerSize: The length of the marker axis [default = 20 pixels]
 :type markerSize: int
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -18484,7 +18508,7 @@ This function draws matches of keypoints from two images in the output image. Ma
 :type matchesMask: _typing.Sequence[str]
 :param flags: Flags setting drawing features. Possible flags bit values are defined byDrawMatchesFlags. 
 :type flags: DrawMatchesFlags
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -18515,7 +18539,7 @@ This function draws matches of keypoints from two images in the output image. Ma
 :type matchesMask: _typing.Sequence[_typing.Sequence[str]]
 :param flags: 
 :type flags: DrawMatchesFlags
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -18536,7 +18560,7 @@ Filtering is the fundamental operation in image and video processing. Edge-prese
 :type sigma_s: float
 :param sigma_r: %Range between 0 to 1.
 :type sigma_r: float
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -18557,7 +18581,7 @@ Use cv::eigenNonSymmetric for calculation of real eigenvalues and eigenvectors o
 :type eigenvalues: cv2.typing.MatLike | None
 :param eigenvectors: output matrix of eigenvectors; it has the same size and type as src; theeigenvectors are stored as subsequent matrix rows, in the same order as the corresponding eigenvalues. 
 :type eigenvectors: cv2.typing.MatLike | None
-:rettype: tuple[bool, cv2.typing.MatLike, cv2.typing.MatLike]
+:rtype: tuple[bool, cv2.typing.MatLike, cv2.typing.MatLike]
 ````
 
 
@@ -18578,7 +18602,7 @@ Assumes real eigenvalues.
 :type eigenvalues: cv2.typing.MatLike | None
 :param eigenvectors: output matrix of eigenvectors (type is the same type as src). The eigenvectors are stored as subsequent matrix rows, in the same order as the corresponding eigenvalues.
 :type eigenvectors: cv2.typing.MatLike | None
-:rettype: tuple[cv2.typing.MatLike, cv2.typing.MatLike]
+:rtype: tuple[cv2.typing.MatLike, cv2.typing.MatLike]
 ````
 
 
@@ -18611,7 +18635,7 @@ The function cv::ellipse with more parameters draws an ellipse outline, a filled
 :type shift: int
 :param box: Alternative ellipse representation via RotatedRect. This means that the function drawsan ellipse inscribed in the rotated rectangle. 
 :type box: 
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -18636,7 +18660,7 @@ The function ellipse2Poly computes the vertices of a polyline that approximates 
 :type delta: int
 :param pts: Output vector of polyline vertices.
 :type pts: 
-:rettype: _typing.Sequence[cv2.typing.Point]
+:rtype: _typing.Sequence[cv2.typing.Point]
 ````
 
 
@@ -18647,7 +18671,7 @@ The function ellipse2Poly computes the vertices of a polyline that approximates 
 
 
 
-:rettype: GArrayDesc
+:rtype: GArrayDesc
 ````
 
 
@@ -18658,7 +18682,7 @@ The function ellipse2Poly computes the vertices of a polyline that approximates 
 
 
 
-:rettype: GOpaqueDesc
+:rtype: GOpaqueDesc
 ````
 
 
@@ -18669,7 +18693,7 @@ The function ellipse2Poly computes the vertices of a polyline that approximates 
 
 
 
-:rettype: GScalarDesc
+:rtype: GScalarDesc
 ````
 
 
@@ -18684,7 +18708,7 @@ The function equalizes the histogram of the input image using the following algo
 :type src: cv2.typing.MatLike
 :param dst: Destination image of the same size and type as src .
 :type dst: cv2.typing.MatLike | None
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -18710,7 +18734,7 @@ The function erodes the source image using the specified structuring element tha
 :type borderType: int
 :param borderValue: border value in case of a constant border
 :type borderValue: cv2.typing.Scalar
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -18741,7 +18765,7 @@ It computes \f[ \begin{bmatrix} x\\ y\\ \end{bmatrix} = \begin{bmatrix} a_{11} &
 :param from_: 
 :type from_: cv2.typing.MatLike
 :return: Output 2D affine transformation matrix $2 \times 3$ or empty matrix if transformationcould not be estimated. The returned matrix has the following form: \f[ \begin{bmatrix} a_{11} & a_{12} & b_1\\ a_{21} & a_{22} & b_2\\ \end{bmatrix} \f] 
-:rettype: tuple[cv2.typing.MatLike, cv2.typing.MatLike]
+:rtype: tuple[cv2.typing.MatLike, cv2.typing.MatLike]
 ````
 
 
@@ -18769,7 +18793,7 @@ It computes \f[ \begin{bmatrix} x\\ y\\ z\\ \end{bmatrix} = \begin{bmatrix} a_{1
 :param force_rotation: If true, the returned rotation will never be a reflection.This might be unwanted, e.g. when optimizing a transform between a right- and a left-handed coordinate system. 
 :type force_rotation: 
 :return: 3D affine transformation matrix $3 \times 4$ of the form\f[T = \begin{bmatrix} R & t\\ \end{bmatrix} \f] 
-:rettype: tuple[int, cv2.typing.MatLike, cv2.typing.MatLike]
+:rtype: tuple[int, cv2.typing.MatLike, cv2.typing.MatLike]
 ````
 
 
@@ -18800,7 +18824,7 @@ The function estimates an optimal 2D affine transformation with 4 degrees of fre
 :param from_: 
 :type from_: cv2.typing.MatLike
 :return: Output 2D affine transformation (4 degrees of freedom) matrix $2 \times 3$ orempty matrix if transformation could not be estimated. 
-:rettype: tuple[cv2.typing.MatLike, cv2.typing.MatLike]
+:rtype: tuple[cv2.typing.MatLike, cv2.typing.MatLike]
 ````
 
 
@@ -18824,7 +18848,7 @@ Image sharpness, as well as brightness, are a critical parameter for accuracte c
 :param sharpness: Optional output array with a sharpness value for calculated edge responses (see description)
 :type sharpness: cv2.typing.MatLike | None
 :return: Scalar(average sharpness, average min brightness, average max brightness,0)
-:rettype: tuple[cv2.typing.Scalar, cv2.typing.MatLike]
+:rtype: tuple[cv2.typing.Scalar, cv2.typing.MatLike]
 ````
 
 
@@ -18847,7 +18871,7 @@ It computes \f[ \begin{bmatrix} x\\ y\\ z\\ \end{bmatrix} = \begin{bmatrix} X\\ 
 :type ransacThreshold: float
 :param confidence: Confidence level, between 0 and 1, for the estimated transformation. Anythingbetween 0.95 and 0.99 is usually good enough. Values too close to 1 can slow down the estimation significantly. Values lower than 0.8-0.9 can result in an incorrectly estimated transformation. 
 :type confidence: float
-:rettype: tuple[int, cv2.typing.MatLike, cv2.typing.MatLike]
+:rtype: tuple[int, cv2.typing.MatLike, cv2.typing.MatLike]
 ````
 
 
@@ -18863,7 +18887,7 @@ The function cv::exp calculates the exponent of every element of the input array
 :type src: cv2.typing.MatLike
 :param dst: output array of the same size and type as src.
 :type dst: cv2.typing.MatLike | None
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -18881,7 +18905,7 @@ Extracts a single channel from src (coi is 0-based index)
 :type dst: cv2.typing.MatLike | None
 :param coi: index of channel to extract
 :type coi: int
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -18896,7 +18920,7 @@ The function fastAtan2 calculates the full-range angle of an input 2D vector. Th
 :type x: float
 :param y: y-coordinate of the vector.
 :type y: float
-:rettype: float
+:rtype: float
 ````
 
 
@@ -18919,7 +18943,7 @@ This function expected to be applied to grayscale images. For colored images loo
 :type h: float
 :param normType: Type of norm used for weight calculation. Can be either NORM_L2 or NORM_L1
 :type normType: 
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -18942,7 +18966,7 @@ The function converts image to CIELAB colorspace and then separately denoise L a
 :type h: float
 :param hColor: The same as h but for color components. For most images value equals 10will be enough to remove colored noise and do not distort colors 
 :type hColor: float
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -18969,7 +18993,7 @@ The function converts images to CIELAB colorspace and then separately denoise L 
 :type h: float
 :param hColor: The same as h but for color components.
 :type hColor: float
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -18996,7 +19020,7 @@ fastNlMeansDenoisingMulti(srcImgs, imgToDenoiseIndex, temporalWindowSize, h[, ds
 :type h: float
 :param normType: Type of norm used for weight calculation. Can be either NORM_L2 or NORM_L1
 :type normType: 
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -19017,7 +19041,7 @@ The function cv::fillConvexPoly draws a filled convex polygon. This function is 
 :type lineType: int
 :param shift: Number of fractional bits in the vertex coordinates.
 :type shift: int
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -19040,7 +19064,7 @@ The function cv::fillPoly fills an area bounded by several polygonal contours. T
 :type shift: int
 :param offset: Optional offset of all points of the contours.
 :type offset: cv2.typing.Point
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -19066,7 +19090,7 @@ The function applies an arbitrary linear filter to an image. In-place operation 
 :type delta: float
 :param borderType: pixel extrapolation method, see #BorderTypes. #BORDER_WRAP is not supported.
 :type borderType: int
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -19089,7 +19113,7 @@ This function is intended to filter the output of the #decomposeHomographyMat ba
 :type possibleSolutions: cv2.typing.MatLike | None
 :param pointsMask: optional Mat/Vector of 8u type representing the mask for the inliers as given by the #findHomography function
 :type pointsMask: cv2.typing.MatLike | None
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -19110,7 +19134,7 @@ Filters off small noise blobs (speckles) in the disparity map
 :type maxDiff: float
 :param buf: The optional temporary buffer to avoid memory allocation within the function.
 :type buf: cv2.typing.MatLike | None
-:rettype: tuple[cv2.typing.MatLike, cv2.typing.MatLike]
+:rtype: tuple[cv2.typing.MatLike, cv2.typing.MatLike]
 ````
 
 
@@ -19127,7 +19151,7 @@ Filters off small noise blobs (speckles) in the disparity map
 :type corners: cv2.typing.MatLike
 :param region_size: 
 :type region_size: cv2.typing.Size
-:rettype: tuple[bool, cv2.typing.MatLike]
+:rtype: tuple[bool, cv2.typing.MatLike]
 ````
 
 
@@ -19149,7 +19173,7 @@ The function requires white space (like a square-thick border, the wider the bet
 :type corners: cv2.typing.MatLike | None
 :param flags: Various operation flags that can be zero or a combination of the following values:-   @ref CALIB_CB_ADAPTIVE_THRESH Use adaptive thresholding to convert the image to black and white, rather than a fixed threshold level (computed from the average image brightness). -   @ref CALIB_CB_NORMALIZE_IMAGE Normalize the image gamma with #equalizeHist before applying fixed or adaptive thresholding. -   @ref CALIB_CB_FILTER_QUADS Use additional criteria (like contour area, perimeter, square-like shape) to filter out false quads extracted at the contour retrieval stage. -   @ref CALIB_CB_FAST_CHECK Run a fast check on the image that looks for chessboard corners, and shortcut the call if none is found. This can drastically speed up the call in the degenerate condition when no chessboard is observed. -   @ref CALIB_CB_PLAIN All other flags are ignored. The input image is taken as is. No image processing is done to improve to find the checkerboard. This has the effect of speeding up the execution of the function but could lead to not recognizing the checkerboard if the image is not previously binarized in the appropriate manner. 
 :type flags: int
-:rettype: tuple[bool, cv2.typing.MatLike]
+:rtype: tuple[bool, cv2.typing.MatLike]
 ````
 
 
@@ -19168,7 +19192,7 @@ The function requires white space (like a square-thick border, the wider the bet
 :type corners: cv2.typing.MatLike | None
 :param flags: 
 :type flags: int
-:rettype: tuple[bool, cv2.typing.MatLike]
+:rtype: tuple[bool, cv2.typing.MatLike]
 ````
 
 
@@ -19192,7 +19216,7 @@ The function requires a white boarder with roughly the same width as oneof the c
 :type flags: int
 :param meta: Optional output arrray of detected corners (CV_8UC1 and size = cv::Size(columns,rows)).Each entry stands for one corner of the pattern and can have one of the following values: -   0 = no meta data attached -   1 = left-top corner of a black cell -   2 = left-top corner of a white cell -   3 = left-top corner of a black cell with a white marker dot -   4 = left-top corner of a white cell with a black marker dot (pattern origin in case of markers otherwise first corner) 
 :type meta: cv2.typing.MatLike | None
-:rettype: tuple[bool, cv2.typing.MatLike, cv2.typing.MatLike]
+:rtype: tuple[bool, cv2.typing.MatLike, cv2.typing.MatLike]
 ````
 
 
@@ -19218,7 +19242,7 @@ The function requires white space (like a square-thick border, the wider the bet
 :type blobDetector: cv2.typing.FeatureDetector
 :param parameters: struct for finding circles in a grid pattern.
 :type parameters: CirclesGridFinderParameters
-:rettype: tuple[bool, cv2.typing.MatLike]
+:rtype: tuple[bool, cv2.typing.MatLike]
 ````
 
 
@@ -19247,7 +19271,7 @@ In Python, hierarchy is nested inside a top level array. Use hierarchy[0][i] to 
 :type method: int
 :param offset: Optional offset by which every contour point is shifted. This is useful if thecontours are extracted from the image ROI and then they should be analyzed in the whole image context. 
 :type offset: cv2.typing.Point
-:rettype: tuple[_typing.Sequence[cv2.typing.MatLike], cv2.typing.MatLike]
+:rtype: tuple[_typing.Sequence[cv2.typing.MatLike], cv2.typing.MatLike]
 ````
 
 
@@ -19286,7 +19310,7 @@ This function estimates essential matrix based on the five-point algorithm solve
 :type distCoeffs1: 
 :param distCoeffs2: Input vector of distortion coefficients$(k_1, k_2, p_1, p_2[, k_3[, k_4, k_5, k_6[, s_1, s_2, s_3, s_4[, \tau_x, \tau_y]]]])$ of 4, 5, 8, 12 or 14 elements. If the vector is NULL/empty, the zero distortion coefficients are assumed. 
 :type distCoeffs2: 
-:rettype: tuple[cv2.typing.MatLike, cv2.typing.MatLike]
+:rtype: tuple[cv2.typing.MatLike, cv2.typing.MatLike]
 ````
 
 
@@ -19305,13 +19329,13 @@ The epipolar geometry is described by the following equation: \f[[p_2; 1]^T F [p
 :type method: int
 :param ransacReprojThreshold: Parameter used only for RANSAC. It is the maximum distance from a point to an epipolarline in pixels, beyond which the point is considered an outlier and is not used for computing the final fundamental matrix. It can be set to something like 1-3, depending on the accuracy of the point localization, image resolution, and the image noise. 
 :type ransacReprojThreshold: float
-:param confidence: Parameter used for the RANSAC and LMedS methods only. It specifies a desirable levelof confidence (probability) that the estimated matrix is correct. @param[out] mask optional output mask 
+:param confidence: Parameter used for the RANSAC and LMedS methods only. It specifies a desirable levelof confidence (probability) that the estimated matrix is correct. 
 :type confidence: float
+:param mask: [out] optional output mask
+:type mask: cv2.typing.MatLike | None
 :param maxIters: The maximum number of robust method iterations.
 :type maxIters: int
-:param mask: 
-:type mask: cv2.typing.MatLike | None
-:rettype: tuple[cv2.typing.MatLike, cv2.typing.MatLike]
+:rtype: tuple[cv2.typing.MatLike, cv2.typing.MatLike]
 ````
 
 
@@ -19336,7 +19360,7 @@ The function finds and returns the perspective transformation $H$ between the so
 :type maxIters: int
 :param confidence: Confidence level, between 0 and 1.
 :type confidence: float
-:rettype: tuple[cv2.typing.MatLike, cv2.typing.MatLike]
+:rtype: tuple[cv2.typing.MatLike, cv2.typing.MatLike]
 ````
 
 
@@ -19351,7 +19375,7 @@ Given a binary matrix (likely returned from an operation such as threshold(), co
 :type src: cv2.typing.MatLike
 :param idx: the output array, type of cv::Mat or std::vector<Point>, corresponding to non-zero indices in the input
 :type idx: cv2.typing.MatLike | None
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -19376,7 +19400,7 @@ The function estimates the optimum transformation (warpMatrix) with respect to E
 :type inputMask: cv2.typing.MatLike
 :param gaussFiltSize: An optional value indicating size of gaussian blur filter; (DEFAULT: 5)
 :type gaussFiltSize: int
-:rettype: tuple[float, cv2.typing.MatLike]
+:rtype: tuple[float, cv2.typing.MatLike]
 ````
 
 
@@ -19389,7 +19413,7 @@ The function calculates the ellipse that fits (in a least-squares sense) a set o
 
 :param points: Input 2D point set, stored in std::vector\<\> or Mat
 :type points: cv2.typing.MatLike
-:rettype: cv2.typing.RotatedRect
+:rtype: cv2.typing.RotatedRect
 ````
 
 
@@ -19402,7 +19426,7 @@ The function calculates the ellipse that fits a set of 2D points. It returns the
 
 :param points: Input 2D point set, stored in std::vector\<\> or Mat
 :type points: cv2.typing.MatLike
-:rettype: cv2.typing.RotatedRect
+:rtype: cv2.typing.RotatedRect
 ````
 
 
@@ -19415,7 +19439,7 @@ The function calculates the ellipse that fits a set of 2D points. It returns the
 
 :param points: Input 2D point set, stored in std::vector\<\> or Mat
 :type points: cv2.typing.MatLike
-:rettype: cv2.typing.RotatedRect
+:rtype: cv2.typing.RotatedRect
 ````
 
 
@@ -19438,7 +19462,7 @@ The function fitLine fits a line to a 2D or 3D point set by minimizing $\sum_i \
 :type reps: float
 :param aeps: Sufficient accuracy for the angle. 0.01 would be a good default value for reps and aeps.
 :type aeps: float
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -19456,7 +19480,7 @@ The function cv::flip flips the array in one of three different ways (row and co
 :type dst: cv2.typing.MatLike | None
 :param flipCode: a flag to specify how to flip the array; 0 meansflipping around the x-axis and positive value (for example, 1) means flipping around y-axis. Negative value (for example, -1) means flipping around both axes. 
 :type flipCode: int
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -19473,7 +19497,7 @@ Flips a n-dimensional at given axis
 :type dst: cv2.typing.MatLike | None
 :param axis: axis that performs a flip on. 0 <= axis < src.dims.
 :type axis: int
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -19504,7 +19528,7 @@ Since the mask is larger than the filled image, a pixel $(x, y)$ in image corres
 :type rect: 
 :param flags: Operation flags. The first 8 bits contain a connectivity value. The default value of4 means that only the four nearest neighbor pixels (those that share an edge) are considered. A connectivity value of 8 means that the eight nearest neighbor pixels (those that share a corner) will be considered. The next 8 bits (8-16) contain a value between 1 and 255 with which to fill the mask (the default value is 1). For example, 4 | ( 255 \<\< 8 ) will consider 4 nearest neighbours and fill the mask with a value of 255. The following additional options occupy higher bits and therefore may be further combined with the connectivity and mask fill values using bit-wise or (|), see #FloodFillFlags. 
 :type flags: int
-:rettype: tuple[int, cv2.typing.MatLike, cv2.typing.MatLike, cv2.typing.Rect]
+:rtype: tuple[int, cv2.typing.MatLike, cv2.typing.MatLike, cv2.typing.Rect]
 ````
 
 
@@ -19530,7 +19554,7 @@ The function cv::gemm performs generalized matrix multiplication similar to the 
 :type dst: cv2.typing.MatLike | None
 :param flags: operation flags (cv::GemmFlags)
 :type flags: int
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -19545,7 +19569,7 @@ The function cv::gemm performs generalized matrix multiplication similar to the 
 :type src: cv2.typing.MatLike
 :param dst: 
 :type dst: cv2.typing.MatLike
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -19556,7 +19580,7 @@ Returns full configuration time cmake output.
 Returned value is raw cmake output including version control system revision, compiler version, compiler flags, enabled modules and third party libraries, etc. Output format depends on target architecture. 
 
 
-:rettype: str
+:rtype: str
 ````
 
 
@@ -19567,7 +19591,7 @@ Returns list of CPU features enabled during compilation.
 Returned value is a string containing space separated list of CPU features with following markers: - no markers - baseline features - prefix `*` - features enabled in dispatcher - suffix `?` - features enabled but not available in HW Example: `SSE SSE2 SSE3 *SSE4.1 *SSE4.2 *FP16 *AVX *AVX2 *AVX512-SKX?` 
 
 
-:rettype: str
+:rtype: str
 ````
 
 
@@ -19578,7 +19602,7 @@ Returns the number of CPU ticks.
 The function returns the current number of CPU ticks on some architectures (such as x86, x64, PowerPC). On other platforms the function is equivalent to getTickCount. It can also be used for very accurate time measurements, as well as for RNG initialization. Note that in case of multi-CPU systems a thread, from which getCPUTickCount is called, can be suspended and resumed at another CPU with its own counter. So, theoretically (and practically) the subsequent calls to the function do not necessary return the monotonously increasing values. Also, since a modern CPU varies the CPU frequency depending on the load, the number of CPU clocks spent in some code cannot be directly converted to time units. Therefore, getTickCount is generally a preferable solution for measuring execution time. 
 
 
-:rettype: int
+:rtype: int
 ````
 
 
@@ -19595,7 +19619,7 @@ The function returns the camera matrix that is either an exact copy of the input
 :type imgsize: cv2.typing.Size
 :param centerPrincipalPoint: Location of the principal point in the new camera matrix. Theparameter indicates whether this location should be at the image center or not. 
 :type centerPrincipalPoint: bool
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -19620,7 +19644,7 @@ The function computes and returns the filter coefficients for spatial image deri
 :type normalize: bool
 :param ktype: Type of filter coefficients. It can be CV_32f or CV_64F .
 :type ktype: int
-:rettype: tuple[cv2.typing.MatLike, cv2.typing.MatLike]
+:rtype: tuple[cv2.typing.MatLike, cv2.typing.MatLike]
 ````
 
 
@@ -19638,7 +19662,7 @@ Calculates the font-specific size to use to achieve a given height in pixels.
 :param thickness: Thickness of lines used to render the text.See putText for details.
 :type thickness: int
 :return: The fontSize to use for cv::putText
-:rettype: float
+:rtype: float
 ````
 
 
@@ -19663,7 +19687,7 @@ For more details about gabor filter equations and parameters, see: [Gabor Filter
 :type psi: float
 :param ktype: Type of filter coefficients. It can be CV_32F or CV_64F .
 :type ktype: int
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -19681,7 +19705,7 @@ The function computes and returns the $\texttt{ksize} \times 1$ matrix of Gaussi
 :type sigma: float
 :param ktype: Type of filter coefficients. It can be CV_32F or CV_64F .
 :type ktype: int
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -19694,7 +19718,7 @@ Returns empty string if feature is not defined
 
 :param feature: 
 :type feature: int
-:rettype: str
+:rtype: str
 ````
 
 
@@ -19705,7 +19729,7 @@ Returns empty string if feature is not defined
 
 
 
-:rettype: int
+:rtype: int
 ````
 
 
@@ -19717,7 +19741,7 @@ Always returns 1 if OpenCV is built without threading support. The exact meaning
 **See also:** setNumThreads, getThreadNum
 
 
-:rettype: int
+:rtype: int
 ````
 
 
@@ -19728,7 +19752,7 @@ Returns the number of logical CPUs available for the process.
 
 
 
-:rettype: int
+:rtype: int
 ````
 
 
@@ -19742,7 +19766,7 @@ DFT performance is not a monotonic function of a vector size. Therefore, when yo
 
 :param vecsize: vector size.
 :type vecsize: int
-:rettype: int
+:rtype: int
 ````
 
 
@@ -19768,7 +19792,7 @@ The function computes and returns the optimal new camera intrinsic matrix based 
 :param centerPrincipalPoint: Optional flag that indicates whether in the new camera intrinsic matrix theprincipal point should be at the image center or not. By default, the principal point is chosen to best fit a subset of the source image (determined by alpha) to the corrected image. 
 :type centerPrincipalPoint: bool
 :return: new_camera_matrix Output new camera intrinsic matrix.
-:rettype: tuple[cv2.typing.MatLike, cv2.typing.Rect]
+:rtype: tuple[cv2.typing.MatLike, cv2.typing.Rect]
 ````
 
 
@@ -19786,7 +19810,7 @@ The function calculates the $3 \times 3$ matrix of a perspective transform so th
 :type dst: cv2.typing.MatLike
 :param solveMethod: method passed to cv::solve (#DecompTypes)
 :type solveMethod: int
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -19808,7 +19832,7 @@ The function getRectSubPix extracts pixels from src: \f[patch(x, y) = src(x +  \
 :type patch: cv2.typing.MatLike | None
 :param patchType: Depth of the extracted pixels. By default, they have the same depth as src .
 :type patchType: int
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -19826,7 +19850,7 @@ The function calculates the following matrix: \f[\begin{bmatrix} \alpha &  \beta
 :type angle: float
 :param scale: Isotropic scale factor.
 :type scale: float
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -19843,7 +19867,7 @@ The function constructs and returns the structuring element that can be further 
 :type ksize: cv2.typing.Size
 :param anchor: Anchor position within the element. The default value $(-1, -1)$ means that theanchor is at the center. Note that only the shape of a cross-shaped element depends on the anchor position. In other cases the anchor just regulates how much the result of the morphological operation is shifted. 
 :type anchor: cv2.typing.Point
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -19860,10 +19884,12 @@ The function cv::getTextSize calculates and returns the size of a box that conta
 :type fontFace: int
 :param fontScale: Font scale factor that is multiplied by the font-specific base size.
 :type fontScale: float
-:param thickness: Thickness of lines used to render the text. See #putText for details.@param[out] baseLine y-coordinate of the baseline relative to the bottom-most text point. 
+:param thickness: Thickness of lines used to render the text. See #putText for details.
 :type thickness: int
+:param baseLine: [out] y-coordinate of the baseline relative to the bottom-most textpoint. 
+:type baseLine: 
 :return: The size of a box that contains the specified text.
-:rettype: tuple[cv2.typing.Size, int]
+:rtype: tuple[cv2.typing.Size, int]
 ````
 
 
@@ -19878,7 +19904,7 @@ Current implementation doesn't corresponding to this documentation.
 **See also:** setNumThreads, getNumThreads
 
 
-:rettype: int
+:rtype: int
 ````
 
 
@@ -19890,7 +19916,7 @@ The function returns the number of ticks after the certain event (for example, w
 **See also:** getTickFrequency, TickMeter
 
 
-:rettype: int
+:rtype: int
 ````
 
 
@@ -19902,7 +19928,7 @@ The function returns the number of ticks per second. That is, the following code
 **See also:** getTickCount, TickMeter
 
 
-:rettype: float
+:rtype: float
 ````
 
 
@@ -19920,7 +19946,7 @@ The function returns the current position of the specified trackbar.
 :type trackbarname: str
 :param winname: Name of the window that is the parent of the trackbar.
 :type winname: str
-:rettype: int
+:rtype: int
 ````
 
 
@@ -19941,7 +19967,7 @@ The function returns the current position of the specified trackbar.
 :type numberOfDisparities: int
 :param blockSize: 
 :type blockSize: int
-:rettype: cv2.typing.Rect
+:rtype: cv2.typing.Rect
 ````
 
 
@@ -19952,7 +19978,7 @@ Returns major library version
 
 
 
-:rettype: int
+:rtype: int
 ````
 
 
@@ -19963,7 +19989,7 @@ Returns minor library version
 
 
 
-:rettype: int
+:rtype: int
 ````
 
 
@@ -19974,7 +20000,7 @@ Returns revision field of the library version
 
 
 
-:rettype: int
+:rtype: int
 ````
 
 
@@ -19986,7 +20012,7 @@ For example "3.4.1-dev".
 **See also:** getMajorVersion, getMinorVersion, getRevisionVersion
 
 
-:rettype: str
+:rtype: str
 ````
 
 
@@ -20000,7 +20026,7 @@ The function getWindowImageRect returns the client screen coordinates, width and
 
 :param winname: Name of the window.
 :type winname: str
-:rettype: cv2.typing.Rect
+:rtype: cv2.typing.Rect
 ````
 
 
@@ -20016,7 +20042,7 @@ The function getWindowProperty returns properties of a window.
 :type winname: str
 :param prop_id: Window property to retrieve. The following operation flags are available: (cv::WindowPropertyFlags)
 :type prop_id: int
-:rettype: float
+:rtype: float
 ````
 
 
@@ -20027,7 +20053,7 @@ The function getWindowProperty returns properties of a window.
 
 
 
-:rettype: object
+:rtype: object
 ````
 
 
@@ -20060,7 +20086,7 @@ If the function is called with different values A and B of the parameter quality
 :type useHarrisDetector: bool
 :param k: Free parameter of the Harris detector.
 :type k: float
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -20093,7 +20119,7 @@ Same as above, but returns also quality measure of the detected corners.
 :type useHarrisDetector: bool
 :param k: Free parameter of the Harris detector.
 :type k: float
-:rettype: tuple[cv2.typing.MatLike, cv2.typing.MatLike]
+:rtype: tuple[cv2.typing.MatLike, cv2.typing.MatLike]
 ````
 
 
@@ -20118,7 +20144,7 @@ The function implements the [GrabCut image segmentation algorithm](http://en.wik
 :type iterCount: int
 :param mode: Operation mode that could be one of the #GrabCutModes
 :type mode: int
-:rettype: tuple[cv2.typing.MatLike, cv2.typing.MatLike, cv2.typing.MatLike]
+:rtype: tuple[cv2.typing.MatLike, cv2.typing.MatLike, cv2.typing.MatLike]
 ````
 
 
@@ -20135,7 +20161,7 @@ The function implements the [GrabCut image segmentation algorithm](http://en.wik
 :type groupThreshold: int
 :param eps: 
 :type eps: float
-:rettype: tuple[_typing.Sequence[cv2.typing.Rect], _typing.Sequence[int]]
+:rtype: tuple[_typing.Sequence[cv2.typing.Rect], _typing.Sequence[int]]
 ````
 
 
@@ -20149,7 +20175,7 @@ The function returns whether there are non-zero elements in src
 
 :param src: single-channel array.
 :type src: cv2.typing.MatLike
-:rettype: bool
+:rtype: bool
 ````
 
 
@@ -20162,7 +20188,7 @@ Returns true if the specified image can be decoded by OpenCV
 
 :param filename: File name of the image
 :type filename: str
-:rettype: bool
+:rtype: bool
 ````
 
 
@@ -20175,7 +20201,7 @@ Returns true if an image with the specified filename can be encoded by OpenCV
 
 :param filename: File name of the image
 :type filename: str
-:rettype: bool
+:rtype: bool
 ````
 
 
@@ -20186,7 +20212,7 @@ Returns true if an image with the specified filename can be encoded by OpenCV
 
 
 
-:rettype: bool
+:rtype: bool
 ````
 
 
@@ -20201,7 +20227,7 @@ Returns true if an image with the specified filename can be encoded by OpenCV
 :type src: _typing.Sequence[cv2.typing.MatLike]
 :param dst: output array. It has the same number of rows and depth as the src, and the sum of cols of the src.same depth. 
 :type dst: cv2.typing.MatLike | None
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -20219,7 +20245,7 @@ idct(src, dst, flags) is equivalent to dct(src, dst, flags | DCT_INVERSE).
 :type dst: cv2.typing.MatLike | None
 :param flags: operation flags.
 :type flags: int
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -20242,7 +20268,7 @@ None of dft and idft scales the result by default. So, you should pass #DFT_SCAL
 :type flags: int
 :param nonzeroRows: number of dst rows to process; the rest of the rows have undefined content (seethe convolution sample in dft description. 
 :type nonzeroRows: int
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -20263,7 +20289,7 @@ This is useful to highlight under-exposed foreground objects or to reduce specul
 :type alpha: float
 :param beta: Value ranges between 0-2.
 :type beta: float
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -20278,7 +20304,7 @@ The function imcount will return the number of pages in a multi-page image, or 1
 :type filename: str
 :param flags: Flag that can take values of cv::ImreadModes, default with cv::IMREAD_ANYCOLOR.
 :type flags: int
-:rettype: int
+:rtype: int
 ````
 
 
@@ -20296,7 +20322,7 @@ In the case of color images, the decoded images will have the channels stored in
 :type buf: cv2.typing.MatLike
 :param flags: The same flags as in cv::imread, see cv::ImreadModes.
 :type flags: int
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -20318,7 +20344,7 @@ In the case of color images, the decoded images will have the channels stored in
 :type mats: _typing.Sequence[cv2.typing.MatLike] | None
 :param range: A continuous selection of pages.
 :type range: cv2.typing.Range
-:rettype: tuple[bool, _typing.Sequence[cv2.typing.MatLike]]
+:rtype: tuple[bool, _typing.Sequence[cv2.typing.MatLike]]
 ````
 
 
@@ -20337,7 +20363,7 @@ The function imencode compresses the image and stores it in the memory buffer th
 :type buf: 
 :param params: Format-specific parameters. See cv::imwrite and cv::ImwriteFlags.
 :type params: _typing.Sequence[int]
-:rettype: tuple[bool, numpy.ndarray[_typing.Any, numpy.dtype[numpy.uint8]]]
+:rtype: tuple[bool, numpy.ndarray[_typing.Any, numpy.dtype[numpy.uint8]]]
 ````
 
 
@@ -20352,7 +20378,7 @@ Loads an image from a file.
 :type filename: str
 :param flags: Flag that can take values of cv::ImreadModes
 :type flags: int
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -20375,7 +20401,7 @@ The function imreadmulti loads a multi-page image from the specified file into a
 :type start: 
 :param count: Count number of images to load
 :type count: 
-:rettype: tuple[bool, _typing.Sequence[cv2.typing.MatLike]]
+:rtype: tuple[bool, _typing.Sequence[cv2.typing.MatLike]]
 ````
 
 
@@ -20396,7 +20422,7 @@ This function should be followed by a call to cv::waitKey or cv::pollKey to perf
 :type winname: str
 :param mat: Image to be shown.
 :type mat: cv2.typing.MatLike
-:rettype: None
+:rtype: None
 ````
 
 
@@ -20413,7 +20439,7 @@ The function imwrite saves the image to the specified file. The image format is 
 :type img: cv2.typing.MatLike
 :param params: Format-specific parameters encoded as pairs (paramId_1, paramValue_1, paramId_2, paramValue_2, ... .) see cv::ImwriteFlags
 :type params: _typing.Sequence[int]
-:rettype: bool
+:rtype: bool
 ````
 
 
@@ -20430,7 +20456,7 @@ The function imwrite saves the image to the specified file. The image format is 
 :type img: _typing.Sequence[cv2.typing.MatLike]
 :param params: 
 :type params: _typing.Sequence[int]
-:rettype: bool
+:rtype: bool
 ````
 
 
@@ -20449,7 +20475,7 @@ The function checks the range as follows: -   For every element of a single-chan
 :type upperb: cv2.typing.MatLike
 :param dst: output array of the same size as src and CV_8U type.
 :type dst: cv2.typing.MatLike | None
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -20468,7 +20494,7 @@ The function estimates and returns an initial camera intrinsic matrix for the ca
 :type imageSize: cv2.typing.Size
 :param aspectRatio: If it is zero or negative, both $f_x$ and $f_y$ are estimated independently.Otherwise, $f_x = f_y \cdot \texttt{aspectRatio}$ . 
 :type aspectRatio: float
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -20495,7 +20521,7 @@ The function computes the joint projection and inverse rectification transformat
 :type map1: cv2.typing.MatLike | None
 :param map2: The second output map for #remap.
 :type map2: cv2.typing.MatLike | None
-:rettype: tuple[cv2.typing.MatLike, cv2.typing.MatLike]
+:rtype: tuple[cv2.typing.MatLike, cv2.typing.MatLike]
 ````
 
 
@@ -20522,7 +20548,7 @@ The function computes the joint undistortion and rectification transformation an
 :type map1: cv2.typing.MatLike | None
 :param map2: The second output map.
 :type map2: cv2.typing.MatLike | None
-:rettype: tuple[cv2.typing.MatLike, cv2.typing.MatLike]
+:rtype: tuple[cv2.typing.MatLike, cv2.typing.MatLike]
 ````
 
 
@@ -20543,7 +20569,7 @@ The function reconstructs the selected image area from the pixel near the area b
 :type inpaintRadius: float
 :param flags: Inpainting method that could be cv::INPAINT_NS or cv::INPAINT_TELEA
 :type flags: int
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -20561,7 +20587,7 @@ Inserts a single channel to dst (coi is 0-based index)
 :type dst: cv2.typing.MatLike
 :param coi: index of channel for insertion
 :type coi: int
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -20578,7 +20604,7 @@ Inserts a single channel to dst (coi is 0-based index)
 :type sum: cv2.typing.MatLike | None
 :param sdepth: 
 :type sdepth: int
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -20599,7 +20625,7 @@ Inserts a single channel to dst (coi is 0-based index)
 :type sdepth: int
 :param sqdepth: 
 :type sqdepth: int
-:rettype: tuple[cv2.typing.MatLike, cv2.typing.MatLike]
+:rtype: tuple[cv2.typing.MatLike, cv2.typing.MatLike]
 ````
 
 
@@ -20622,7 +20648,7 @@ The function calculates one or more integral images for the source image as foll
 :type sdepth: int
 :param sqdepth: desired depth of the integral image of squared pixel values, CV_32F or CV_64F.
 :type sqdepth: int
-:rettype: tuple[cv2.typing.MatLike, cv2.typing.MatLike, cv2.typing.MatLike]
+:rtype: tuple[cv2.typing.MatLike, cv2.typing.MatLike, cv2.typing.MatLike]
 ````
 
 
@@ -20630,7 +20656,7 @@ The function calculates one or more integral images for the source image as foll
 
 Finds intersection of two convex polygons
 
-@returns Absolute value of area of intersecting polygon 
+
 ```{note}
 intersectConvexConvex doesn't confirm that both polygons are convex and will return invalid results if they aren't.
 ```
@@ -20644,7 +20670,8 @@ intersectConvexConvex doesn't confirm that both polygons are convex and will ret
 :type p12: cv2.typing.MatLike | None
 :param handleNested: When true, an intersection is found if one of the polygons is fully enclosed in the other.When false, no intersection is found. If the polygons share a side or the vertex of one polygon lies on an edge of the other, they are not considered nested and an intersection will be found regardless of the value of handleNested. 
 :type handleNested: bool
-:rettype: tuple[float, cv2.typing.MatLike]
+:return: Absolute value of area of intersecting polygon
+:rtype: tuple[float, cv2.typing.MatLike]
 ````
 
 
@@ -20662,7 +20689,7 @@ The function cv::invert inverts the matrix src and stores the result in dst When
 :type dst: cv2.typing.MatLike | None
 :param flags: inversion method (cv::DecompTypes)
 :type flags: int
-:rettype: tuple[float, cv2.typing.MatLike]
+:rtype: tuple[float, cv2.typing.MatLike]
 ````
 
 
@@ -20677,7 +20704,7 @@ The function computes an inverse affine transformation represented by $2 \times 
 :type M: cv2.typing.MatLike
 :param iM: Output reverse affine transformation.
 :type iM: cv2.typing.MatLike | None
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -20690,7 +20717,7 @@ The function tests whether the input contour is convex or not. The contour must 
 
 :param contour: Input vector of 2D points, stored in std::vector\<\> or Mat
 :type contour: cv2.typing.MatLike
-:rettype: bool
+:rtype: bool
 ````
 
 
@@ -20716,7 +20743,7 @@ The function kmeans implements a k-means algorithm that finds the centers of clu
 :param centers: Output matrix of the cluster centers, one row per each cluster center.
 :type centers: cv2.typing.MatLike | None
 :return: The function returns the compactness measure that is computed as\f[\sum _i  \| \texttt{samples} _i -  \texttt{centers} _{ \texttt{labels} _i} \| ^2\f] after every attempt. The best (minimum) value is chosen and the corresponding labels and the compactness value are returned by the function. Basically, you can use only the core of the function, set the number of attempts to 1, initialize labels each time using a custom algorithm, pass them with the ( flags = #KMEANS_USE_INITIAL_LABELS ) flag, and then choose the best (most-compact) clustering. 
-:rettype: tuple[float, cv2.typing.MatLike, cv2.typing.MatLike]
+:rtype: tuple[float, cv2.typing.MatLike, cv2.typing.MatLike]
 ````
 
 
@@ -20741,7 +20768,7 @@ The function line draws the line segment between pt1 and pt2 points in the image
 :type lineType: int
 :param shift: Number of fractional bits in the point coordinates.
 :type shift: int
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -20766,7 +20793,7 @@ This function produces same result as cv::warpPolar(src, dst, src.size(), center
 :type maxRadius: float
 :param flags: A combination of interpolation methods, see #InterpolationFlags
 :type flags: int
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -20782,7 +20809,7 @@ The function cv::log calculates the natural logarithm of every element of the in
 :type src: cv2.typing.MatLike
 :param dst: output array of the same size and type as src .
 :type dst: cv2.typing.MatLike | None
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -20807,7 +20834,7 @@ This function produces same result as cv::warpPolar(src, dst, src.size(), center
 :type M: float
 :param flags: A combination of interpolation methods, see #InterpolationFlags
 :type flags: int
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -20825,7 +20852,7 @@ The function cv::magnitude calculates the magnitude of 2D vectors formed from th
 :type y: cv2.typing.MatLike
 :param magnitude: output array of the same size and type as x.
 :type magnitude: cv2.typing.MatLike | None
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -20844,7 +20871,7 @@ The function computes partial derivatives of the elements of the matrix product 
 :type dABdA: cv2.typing.MatLike | None
 :param dABdB: Second output derivative matrix d(A\*B)/dB of size$\texttt{A.rows*B.cols} \times {B.rows*B.cols}$ . 
 :type dABdB: cv2.typing.MatLike | None
-:rettype: tuple[cv2.typing.MatLike, cv2.typing.MatLike]
+:rtype: tuple[cv2.typing.MatLike, cv2.typing.MatLike]
 ````
 
 
@@ -20863,7 +20890,7 @@ The function compares two shapes. All three implemented methods use the Hu invar
 :type method: int
 :param parameter: Method-specific parameter (not supported now).
 :type parameter: float
-:rettype: float
+:rtype: float
 ````
 
 
@@ -20884,7 +20911,7 @@ The function slides through image , compares the overlapped patches of size $w \
 :type method: int
 :param mask: Optional mask. It must have the same size as templ. It must either have the same numberof channels as template or only one channel, which is then used for all template and image channels. If the data type is #CV_8U, the mask is interpreted as a binary mask, meaning only elements where mask is nonzero are used and are kept unchanged independent of the actual mask value (weight equals 1). For data tpye #CV_32F, the mask values are used as weights. The exact formulas are documented in #TemplateMatchModes. 
 :type mask: cv2.typing.MatLike | None
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -20902,7 +20929,7 @@ The function cv::max calculates the per-element maximum of two arrays: \f[\textt
 :type src2: cv2.typing.MatLike
 :param dst: output array of the same size and type as src1.
 :type dst: cv2.typing.MatLike | None
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -20918,7 +20945,7 @@ The function cv::mean calculates the mean value M of array elements, independent
 :type src: cv2.typing.MatLike
 :param mask: optional operation mask.
 :type mask: cv2.typing.MatLike | None
-:rettype: cv2.typing.Scalar
+:rtype: cv2.typing.Scalar
 ````
 
 
@@ -20935,7 +20962,7 @@ Finds an object on a back projection image.
 :type window: cv2.typing.Rect
 :param criteria: Stop criteria for the iterative search algorithm.returns :   Number of iterations CAMSHIFT took to converge. The function implements the iterative object search algorithm. It takes the input back projection of an object and the initial position. The mass center in window of the back projection image is computed and the search window center shifts to the mass center. The procedure is repeated until the specified number of iterations criteria.maxCount is done or until the window center shifts by less than criteria.epsilon. The algorithm is used inside CamShift and, unlike CamShift , the search window size or orientation do not change during the search. You can simply pass the output of calcBackProject to this function. But better results can be obtained if you pre-filter the back projection and remove the noise. For example, you can do this by retrieving connected components with findContours , throwing away contours with small area ( contourArea ), and rendering the remaining contours with drawContours. 
 :type criteria: cv2.typing.TermCriteria
-:rettype: tuple[int, cv2.typing.Rect]
+:rtype: tuple[int, cv2.typing.Rect]
 ````
 
 
@@ -20958,7 +20985,7 @@ The calculated standard deviation is only the diagonal of thecomplete normalized
 :type stddev: cv2.typing.MatLike | None
 :param mask: optional operation mask.
 :type mask: cv2.typing.MatLike | None
-:rettype: tuple[cv2.typing.MatLike, cv2.typing.MatLike]
+:rtype: tuple[cv2.typing.MatLike, cv2.typing.MatLike]
 ````
 
 
@@ -20979,7 +21006,7 @@ The median filter uses #BORDER_REPLICATE internally to cope with border pixels, 
 :type dst: cv2.typing.MatLike | None
 :param ksize: aperture linear size; it must be odd and greater than 1, for example: 3, 5, 7 ...
 :type ksize: int
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -20994,7 +21021,7 @@ The median filter uses #BORDER_REPLICATE internally to cope with border pixels, 
 :type mv: _typing.Sequence[cv2.typing.MatLike]
 :param dst: output array of the same size and the same depth as mv[0]; The number of channels willbe the total number of channels in the matrix array. 
 :type dst: cv2.typing.MatLike | None
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -21012,7 +21039,7 @@ The function cv::min calculates the per-element minimum of two arrays: \f[\textt
 :type src2: cv2.typing.MatLike
 :param dst: output array of the same size and type as src1.
 :type dst: cv2.typing.MatLike | None
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -21025,7 +21052,7 @@ The function calculates and returns the minimum-area bounding rectangle (possibl
 
 :param points: Input vector of 2D points, stored in std::vector\<\> or Mat
 :type points: cv2.typing.MatLike
-:rettype: cv2.typing.RotatedRect
+:rtype: cv2.typing.RotatedRect
 ````
 
 
@@ -21042,7 +21069,7 @@ The function finds the minimal enclosing circle of a 2D point set using an itera
 :type center: 
 :param radius: Output radius of the circle.
 :type radius: 
-:rettype: tuple[cv2.typing.Point2f, float]
+:rtype: tuple[cv2.typing.Point2f, float]
 ````
 
 
@@ -21057,7 +21084,7 @@ The function finds a triangle of minimum area enclosing the given set of 2D poin
 :type points: cv2.typing.MatLike
 :param triangle: Output vector of three 2D points defining the vertices of the triangle. The depthof the OutputArray must be CV_32F. 
 :type triangle: cv2.typing.MatLike | None
-:rettype: tuple[float, cv2.typing.MatLike]
+:rtype: tuple[float, cv2.typing.MatLike]
 ````
 
 
@@ -21081,7 +21108,7 @@ The function cv::minMaxLoc finds the minimum and maximum element values and thei
 :type maxLoc: 
 :param mask: optional mask used to select a sub-array.
 :type mask: cv2.typing.MatLike | None
-:rettype: tuple[float, float, cv2.typing.Point, cv2.typing.Point]
+:rtype: tuple[float, float, cv2.typing.Point, cv2.typing.Point]
 ````
 
 
@@ -21098,7 +21125,7 @@ The function cv::minMaxLoc finds the minimum and maximum element values and thei
 :type dst: _typing.Sequence[cv2.typing.MatLike]
 :param fromTo: array of index pairs specifying which channels are copied and where; fromTo[k\*2] isa 0-based index of the input channel in src, fromTo[k\*2+1] is an index of the output channel in dst; the continuous channel numbering is used: the first input image channels are indexed from 0 to src[0].channels()-1, the second input image channels are indexed from src[0].channels() to src[0].channels() + src[1].channels()-1, and so on, the same scheme is used for the output image channels; as a special case, when fromTo[k\*2] is negative, the corresponding output channel is filled with zero . 
 :type fromTo: _typing.Sequence[int]
-:rettype: _typing.Sequence[cv2.typing.MatLike]
+:rtype: _typing.Sequence[cv2.typing.MatLike]
 ````
 
 
@@ -21115,9 +21142,10 @@ Only applicable to contour moments calculations from Python bindings: Note that 
 
 :param array: Raster image (single-channel, 8-bit or floating-point 2D array) or an array ($1 \times N$ or $N \times 1$ ) of 2D points (Point or Point2f ). 
 :type array: cv2.typing.MatLike
-:param binaryImage: If it is true, all non-zero image pixels are treated as 1's. The parameter isused for images only. @returns moments. 
+:param binaryImage: If it is true, all non-zero image pixels are treated as 1's. The parameter isused for images only. 
 :type binaryImage: bool
-:rettype: cv2.typing.Moments
+:return: moments.
+:rtype: cv2.typing.Moments
 ````
 
 
@@ -21148,7 +21176,7 @@ The number of iterations is the number of times erosion or dilatation operation 
 :type borderType: int
 :param borderValue: Border value in case of a constant border. The default value has a specialmeaning. 
 :type borderValue: cv2.typing.Scalar
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -21165,7 +21193,7 @@ Moves the window to the specified position
 :type x: int
 :param y: The new y-coordinate of the window.
 :type y: int
-:rettype: None
+:rtype: None
 ````
 
 
@@ -21186,7 +21214,7 @@ The function cv::mulSpectrums performs the per-element multiplication of the two
 :type flags: int
 :param conjB: optional flag that conjugates the second input array before the multiplication (true)or not (false). 
 :type conjB: bool
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -21210,7 +21238,7 @@ The function cv::mulTransposed calculates the product of src and its transpositi
 :type scale: float
 :param dtype: Optional type of the output matrix. When it is negative,the output matrix will have the same type as src . Otherwise, it will be type=CV_MAT_DEPTH(dtype) that should be either CV_32F or CV_64F . 
 :type dtype: int
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -21238,7 +21266,7 @@ Saturation is not applied when the output array has the depthCV_32S. You may eve
 :type scale: float
 :param dtype: optional depth of the output array
 :type dtype: int
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -21256,7 +21284,7 @@ Qt backend supports additional flags:-   **WINDOW_NORMAL or WINDOW_AUTOSIZE:** W
 :type winname: str
 :param flags: Flags of the window. The supported flags are: (cv::WindowFlags)
 :type flags: int
-:rettype: None
+:rtype: None
 ````
 
 
@@ -21275,7 +21303,7 @@ This version of #norm calculates the absolute norm of src1. The type of norm to 
 :type mask: cv2.typing.MatLike | None
 :param src2: second input array of the same size and the same type as src1.
 :type src2: 
-:rettype: float
+:rtype: float
 ````
 
 
@@ -21301,7 +21329,7 @@ The function cv::normalize normalizes scale and shift the input array elements s
 :type dtype: int
 :param mask: optional operation mask.
 :type mask: cv2.typing.MatLike | None
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -21316,7 +21344,7 @@ Replaces NaNs by given number
 :type a: cv2.typing.MatLike
 :param val: value to convert the NaNs
 :type val: float
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -21339,7 +21367,7 @@ Pencil-like non-photorealistic line drawing
 :type sigma_r: float
 :param shade_factor: %Range between 0 to 0.1.
 :type shade_factor: float
-:rettype: tuple[cv2.typing.MatLike, cv2.typing.MatLike]
+:rtype: tuple[cv2.typing.MatLike, cv2.typing.MatLike]
 ````
 
 
@@ -21360,7 +21388,7 @@ The function transforms a sparse set of 2D or 3D vectors. If youwant to transfor
 :type dst: cv2.typing.MatLike | None
 :param m: 3x3 or 4x4 floating-point transformation matrix.
 :type m: cv2.typing.MatLike
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -21379,7 +21407,7 @@ The function cv::phase calculates the rotation angle of each 2D vector that is f
 :type angle: cv2.typing.MatLike | None
 :param angleInDegrees: when true, the function calculates the angle indegrees, otherwise, they are measured in radians. 
 :type angleInDegrees: bool
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -21397,9 +21425,10 @@ The operation takes advantage of the Fourier shift theorem for detecting the tra
 :type src2: cv2.typing.MatLike
 :param window: Floating point array with windowing coefficients to reduce edge effects (optional).
 :type window: cv2.typing.MatLike | None
-:param response: Signal power within the 5x5 centroid around the peak, between 0 and 1 (optional).@returns detected phase shift (sub-pixel) between the two arrays. 
+:param response: Signal power within the 5x5 centroid around the peak, between 0 and 1 (optional).
 :type response: 
-:rettype: tuple[cv2.typing.Point2d, float]
+:return: detected phase shift (sub-pixel) between the two arrays.
+:rtype: tuple[cv2.typing.Point2d, float]
 ````
 
 
@@ -21416,7 +21445,7 @@ The function determines whether the point is inside a contour, outside, or lies 
 :type pt: cv2.typing.Point2f
 :param measureDist: If true, the function estimates the signed distance from the point to thenearest contour edge. Otherwise, the function only checks if the point is inside a contour or not. 
 :type measureDist: bool
-:rettype: float
+:rtype: float
 ````
 
 
@@ -21438,7 +21467,7 @@ The function cv::polarToCart calculates the Cartesian coordinates of each 2D vec
 :type y: cv2.typing.MatLike | None
 :param angleInDegrees: when true, the input angles are measured indegrees, otherwise, they are measured in radians. 
 :type angleInDegrees: bool
-:rettype: tuple[cv2.typing.MatLike, cv2.typing.MatLike]
+:rtype: tuple[cv2.typing.MatLike, cv2.typing.MatLike]
 ````
 
 
@@ -21455,7 +21484,7 @@ The function only works if there is at least one HighGUI window created and the 
 ```
 
 
-:rettype: int
+:rtype: int
 ````
 
 
@@ -21480,7 +21509,7 @@ The function cv::polylines draws one or more polygonal curves.
 :type lineType: int
 :param shift: Number of fractional bits in the vertex coordinates.
 :type shift: int
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -21498,7 +21527,7 @@ The function cv::pow raises every element of the input array to power : \f[\text
 :type power: float
 :param dst: output array of the same size and type as src.
 :type dst: cv2.typing.MatLike | None
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -21517,7 +21546,7 @@ The function calculates the complex spatial derivative-based function of the sou
 :type ksize: int
 :param borderType: Pixel extrapolation method. See #BorderTypes. #BORDER_WRAP is not supported.
 :type borderType: int
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -21547,7 +21576,7 @@ By setting rvec = tvec = $[0, 0, 0]$, or by setting cameraMatrix to a 3x3 identi
 :type jacobian: cv2.typing.MatLike | None
 :param aspectRatio: Optional "fixed aspect ratio" parameter. If the parameter is not 0, thefunction assumes that the aspect ratio ($f_x / f_y$) is fixed and correspondingly adjusts the jacobian matrix. 
 :type aspectRatio: float
-:rettype: tuple[cv2.typing.MatLike, cv2.typing.MatLike]
+:rtype: tuple[cv2.typing.MatLike, cv2.typing.MatLike]
 ````
 
 
@@ -21576,7 +21605,7 @@ The function cv::putText renders the specified text string in the image. Symbols
 :type lineType: int
 :param bottomLeftOrigin: When true, the image data origin is at the bottom-left corner. Otherwise,it is at the top-left corner. 
 :type bottomLeftOrigin: bool
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -21595,7 +21624,7 @@ By default, size of the output image is computed as `Size((src.cols+1)/2, (src.r
 :type dstsize: cv2.typing.Size
 :param borderType: Pixel extrapolation method, see #BorderTypes (#BORDER_CONSTANT isn't supported)
 :type borderType: int
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -21618,7 +21647,7 @@ The function implements the filtering stage of meanshift segmentation, that is, 
 :type maxLevel: int
 :param termcrit: Termination criteria: when to stop meanshift iterations.
 :type termcrit: cv2.typing.TermCriteria
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -21637,7 +21666,7 @@ By default, size of the output image is computed as `Size(src.cols\*2, (src.rows
 :type dstsize: cv2.typing.Size
 :param borderType: Pixel extrapolation method, see #BorderTypes (only #BORDER_DEFAULT is supported)
 :type borderType: int
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -21655,7 +21684,7 @@ The function cv::randShuffle shuffles the specified 1D array by randomly choosin
 :type iterFactor: float
 :param rng: optional random number generator used for shuffling; if it is zero, theRNG () is usedinstead. 
 :type rng: 
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -21673,7 +21702,7 @@ The function cv::randn fills the matrix dst with normally distributed random num
 :type mean: cv2.typing.MatLike
 :param stddev: standard deviation of the generated random numbers; it can be either a vector (inwhich case a diagonal standard deviation matrix is assumed) or a square matrix. 
 :type stddev: cv2.typing.MatLike
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -21691,7 +21720,7 @@ Non-template variant of the function fills the matrix dst with uniformly-distrib
 :type low: cv2.typing.MatLike
 :param high: exclusive upper boundary of the generated random numbers.
 :type high: cv2.typing.MatLike
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -21704,7 +21733,7 @@ The function readOpticalFlow loads a flow field from a file and returns it as a 
 
 :param path: Path to the file to be loaded
 :type path: str
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -21751,7 +21780,7 @@ This function decomposes an essential matrix using @ref decomposeEssentialMat an
 :type distanceThresh: 
 :param triangulatedPoints: 3D points which were reconstructed by triangulation.
 :type triangulatedPoints: 
-:rettype: tuple[int, cv2.typing.MatLike, cv2.typing.MatLike, cv2.typing.MatLike, cv2.typing.MatLike]
+:rtype: tuple[int, cv2.typing.MatLike, cv2.typing.MatLike, cv2.typing.MatLike, cv2.typing.MatLike]
 ````
 
 
@@ -21776,7 +21805,7 @@ The function cv::rectangle draws a rectangle outline or a filled rectangle whose
 :type lineType: int
 :param shift: Number of fractional bits in the point coordinates.
 :type shift: int
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -21792,7 +21821,7 @@ mainly useful for language bindings
 :param b: Second rectangle
 :type b: cv2.typing.Rect2d
 :return: the area of the intersection
-:rettype: float
+:rtype: float
 ````
 
 
@@ -21849,7 +21878,7 @@ mainly useful for language bindings
 :type P3: cv2.typing.MatLike | None
 :param Q: 
 :type Q: cv2.typing.MatLike | None
-:rettype: tuple[float, cv2.typing.MatLike, cv2.typing.MatLike, cv2.typing.MatLike, cv2.typing.MatLike, cv2.typing.MatLike, cv2.typing.MatLike, cv2.typing.MatLike, cv2.typing.Rect, cv2.typing.Rect]
+:rtype: tuple[float, cv2.typing.MatLike, cv2.typing.MatLike, cv2.typing.MatLike, cv2.typing.MatLike, cv2.typing.MatLike, cv2.typing.MatLike, cv2.typing.MatLike, cv2.typing.Rect, cv2.typing.Rect]
 ````
 
 
@@ -21862,7 +21891,7 @@ mainly useful for language bindings
 
 :param onError: 
 :type onError: _typing.Callable[[int, str, str, str, int], None] | None
-:rettype: None
+:rtype: None
 ````
 
 
@@ -21884,7 +21913,7 @@ The function #reduce reduces the matrix to a vector by treating the matrix rows/
 :type rtype: int
 :param dtype: when negative, the output vector will have the same type as the input matrix,otherwise, its type will be CV_MAKE_TYPE(CV_MAT_DEPTH(dtype), src.channels()). 
 :type dtype: int
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -21904,7 +21933,7 @@ Finds indices of max elements along provided axis
 :type lastIndex: bool
 :param axis: axis to reduce along.
 :type axis: int
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -21924,7 +21953,7 @@ Finds indices of min elements along provided axis
 :type lastIndex: bool
 :param axis: axis to reduce along.
 :type axis: int
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -21949,7 +21978,7 @@ The function remap transforms the source image using the specified map: \f[\text
 :type borderMode: int
 :param borderValue: Value used in case of a constant border. By default, it is 0.@note Due to current implementation limitations the size of an input and output images should be less than 32767x32767. 
 :type borderValue: cv2.typing.Scalar
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -21969,7 +21998,7 @@ The function cv::repeat duplicates the input array one or more times along each 
 :type nx: int
 :param dst: output array of the same type as `src`.
 :type dst: cv2.typing.MatLike | None
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -21990,7 +22019,7 @@ The function transforms a single-channel disparity map to a 3-channel image repr
 :type handleMissingValues: bool
 :param ddepth: The optional output array depth. If it is -1, the output image will have CV_32Fdepth. ddepth can also be set to CV_16S, CV_32S or CV_32F. 
 :type ddepth: int
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -22014,7 +22043,7 @@ The function resize resizes the image src down to or up to the specified size. N
 :type fy: float
 :param interpolation: interpolation method, see #InterpolationFlags
 :type interpolation: int
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -22036,7 +22065,7 @@ The specified window size is for the image area. Toolbars are not counted.Only w
 :type height: int
 :param size: The new window size.
 :type size: 
-:rettype: None
+:rtype: None
 ````
 
 
@@ -22054,7 +22083,7 @@ Rotates a 2D array in multiples of 90 degrees.The function cv::rotate rotates th
 :type dst: cv2.typing.MatLike | None
 :param rotateCode: an enum to specify how to rotate the array; see the enum #RotateFlags
 :type rotateCode: int
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -22069,9 +22098,10 @@ If there is then the vertices of the intersecting region are returned as well. B
 :type rect1: cv2.typing.RotatedRect
 :param rect2: Second rectangle
 :type rect2: cv2.typing.RotatedRect
-:param intersectingRegion: The output array of the vertices of the intersecting region. It returnsat most 8 vertices. Stored as std::vector\<cv::Point2f\> or cv::Mat as Mx1 of type CV_32FC2. @returns One of #RectanglesIntersectTypes 
+:param intersectingRegion: The output array of the vertices of the intersecting region. It returnsat most 8 vertices. Stored as std::vector\<cv::Point2f\> or cv::Mat as Mx1 of type CV_32FC2. 
 :type intersectingRegion: cv2.typing.MatLike | None
-:rettype: tuple[int, cv2.typing.MatLike]
+:return: One of #RectanglesIntersectTypes
+:rtype: tuple[int, cv2.typing.MatLike]
 ````
 
 
@@ -22089,7 +22119,7 @@ The function cv::sampsonDistance calculates and returns the first order approxim
 :param F: fundamental matrix
 :type F: cv2.typing.MatLike
 :return: The computed Sampson distance.
-:rettype: float
+:rtype: float
 ````
 
 
@@ -22109,7 +22139,7 @@ The function scaleAdd is one of the classical primitive linear algebra operation
 :type src2: cv2.typing.MatLike
 :param dst: output array of the same size and type as src1.
 :type dst: cv2.typing.MatLike | None
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -22132,7 +22162,7 @@ Image editing tasks concern either global changes (color/intensity corrections, 
 :type blend: cv2.typing.MatLike | None
 :param flags: Cloning method that could be cv::NORMAL_CLONE, cv::MIXED_CLONE or cv::MONOCHROME_TRANSFER
 :type flags: int
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -22157,7 +22187,7 @@ The function sets it's own mouse callback for specified window using cv::setMous
 :param printNotice: if true a notice to select ROI or cancel selection will be printed in console.
 :type printNotice: bool
 :return: selected ROI or empty rect if selection canceled.
-:rettype: cv2.typing.Rect
+:rtype: cv2.typing.Rect
 ````
 
 
@@ -22183,7 +22213,7 @@ The function sets it's own mouse callback for specified window using cv::setMous
 :type fromCenter: bool
 :param printNotice: if true a notice to select ROI or cancel selection will be printed in console.
 :type printNotice: bool
-:rettype: _typing.Sequence[cv2.typing.Rect]
+:rtype: _typing.Sequence[cv2.typing.Rect]
 ````
 
 
@@ -22211,7 +22241,7 @@ The function applies a separable linear filter to the image. That is, first, eve
 :type delta: float
 :param borderType: Pixel extrapolation method, see #BorderTypes. #BORDER_WRAP is not supported.
 :type borderType: int
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -22227,7 +22257,7 @@ The function cv::setIdentity initializes a scaled identity matrix: \f[\texttt{mt
 :type mtx: cv2.typing.MatLike
 :param s: value to assign to diagonal elements.
 :type s: cv2.typing.Scalar
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -22240,7 +22270,7 @@ The function cv::setIdentity initializes a scaled identity matrix: \f[\texttt{mt
 
 :param level: 
 :type level: int
-:rettype: int
+:rtype: int
 ````
 
 
@@ -22257,7 +22287,7 @@ The function cv::setIdentity initializes a scaled identity matrix: \f[\texttt{mt
 :type onMouse: _typing.Callable[[int, int, int, int, _typing.Any | None], None]
 :param param: 
 :type param: _typing.Any | None
-:rettype: None
+:rtype: None
 ````
 
 
@@ -22271,7 +22301,7 @@ If threads == 1, OpenCV will disable threading optimizations and run all it's fu
 
 :param nthreads: Number of threads used by OpenCV.
 :type nthreads: int
-:rettype: None
+:rtype: None
 ````
 
 
@@ -22285,7 +22315,7 @@ The function cv::setRNGSeed sets state of default random number generator to cus
 
 :param seed: new state for default random number generator
 :type seed: int
-:rettype: None
+:rtype: None
 ````
 
 
@@ -22305,7 +22335,7 @@ The function sets the maximum position of the specified trackbar in the specifie
 :type winname: str
 :param maxval: New maximum position.
 :type maxval: int
-:rettype: None
+:rtype: None
 ````
 
 
@@ -22325,7 +22355,7 @@ The function sets the minimum position of the specified trackbar in the specifie
 :type winname: str
 :param minval: New minimum position.
 :type minval: int
-:rettype: None
+:rtype: None
 ````
 
 
@@ -22345,7 +22375,7 @@ The function sets the position of the specified trackbar in the specified window
 :type winname: str
 :param pos: New position.
 :type pos: int
-:rettype: None
+:rtype: None
 ````
 
 
@@ -22358,7 +22388,7 @@ The function sets the position of the specified trackbar in the specified window
 
 :param flag: 
 :type flag: bool
-:rettype: None
+:rtype: None
 ````
 
 
@@ -22371,7 +22401,7 @@ The function can be used to dynamically turn on and off optimized dispatched cod
 
 :param onoff: The boolean flag specifying whether the optimized code should be used (onoff=true)or not (onoff=false). 
 :type onoff: bool
-:rettype: None
+:rtype: None
 ````
 
 
@@ -22388,7 +22418,7 @@ The function setWindowProperty enables changing properties of a window.
 :type prop_id: int
 :param prop_value: New value of the window property. The supported flags are: (cv::WindowFlags)
 :type prop_value: float
-:rettype: None
+:rtype: None
 ````
 
 
@@ -22403,7 +22433,7 @@ Updates window title
 :type winname: str
 :param title: New title.
 :type title: str
-:rettype: None
+:rtype: None
 ````
 
 
@@ -22426,7 +22456,7 @@ If you want to find a unity-norm solution of an under-definedsingular system $\t
 :type dst: cv2.typing.MatLike | None
 :param flags: solution (matrix inversion) method (#DecompTypes)
 :type flags: int
-:rettype: tuple[bool, cv2.typing.MatLike]
+:rtype: tuple[bool, cv2.typing.MatLike]
 ````
 
 
@@ -22442,7 +22472,7 @@ The function solveCubic finds the real roots of a cubic equation: -   if coeffs 
 :param roots: output array of real roots that has 1 or 3 elements.
 :type roots: cv2.typing.MatLike | None
 :return: number of real roots. It can be 0, 1 or 2.
-:rettype: tuple[int, cv2.typing.MatLike]
+:rtype: tuple[int, cv2.typing.MatLike]
 ````
 
 
@@ -22462,7 +22492,7 @@ What we mean here by "linear programming problem" (or LP problem, for short) can
 :param constr_eps: allowed numeric disparity for constraints
 :type constr_eps: float
 :return: One of cv::SolveLPResult
-:rettype: tuple[int, cv2.typing.MatLike]
+:rtype: tuple[int, cv2.typing.MatLike]
 ````
 
 
@@ -22487,7 +22517,7 @@ Finds an object pose from 3 3D-2D point correspondences.
 :type tvecs: _typing.Sequence[cv2.typing.MatLike] | None
 :param flags: Method for solving a P3P problem:-   @ref SOLVEPNP_P3P Method is based on the paper of X.S. Gao, X.-R. Hou, J. Tang, H.-F. Chang "Complete Solution Classification for the Perspective-Three-Point Problem" (@cite gao2003complete). -   @ref SOLVEPNP_AP3P Method is based on the paper of T. Ke and S. Roumeliotis. "An Efficient Algebraic Solution to the Perspective-Three-Point Problem" (@cite Ke17). 
 :type flags: int
-:rettype: tuple[int, _typing.Sequence[cv2.typing.MatLike], _typing.Sequence[cv2.typing.MatLike]]
+:rtype: tuple[int, _typing.Sequence[cv2.typing.MatLike], _typing.Sequence[cv2.typing.MatLike]]
 ````
 
 
@@ -22514,7 +22544,7 @@ Finds an object pose from 3D-2D point correspondences.
 :type useExtrinsicGuess: bool
 :param flags: Method for solving a PnP problem: see @ref calib3d_solvePnP_flags
 :type flags: int
-:rettype: tuple[bool, cv2.typing.MatLike, cv2.typing.MatLike]
+:rtype: tuple[bool, cv2.typing.MatLike, cv2.typing.MatLike]
 ````
 
 
@@ -22547,7 +22577,7 @@ Finds an object pose from 3D-2D point correspondences.
 :type tvec: cv2.typing.MatLike | None
 :param reprojectionError: Optional vector of reprojection error, that is the RMS error($ \text{RMSE} = \sqrt{\frac{\sum_{i}^{N} \left ( \hat{y_i} - y_i \right )^2}{N}} $) between the input image points and the 3D object points projected with the estimated pose. 
 :type reprojectionError: cv2.typing.MatLike | None
-:rettype: tuple[int, _typing.Sequence[cv2.typing.MatLike], _typing.Sequence[cv2.typing.MatLike], cv2.typing.MatLike]
+:rtype: tuple[int, _typing.Sequence[cv2.typing.MatLike], _typing.Sequence[cv2.typing.MatLike], cv2.typing.MatLike]
 ````
 
 
@@ -22582,7 +22612,7 @@ Finds an object pose from 3D-2D point correspondences using the RANSAC scheme.
 :type inliers: cv2.typing.MatLike | None
 :param flags: Method for solving a PnP problem (see @ref solvePnP ).
 :type flags: int
-:rettype: tuple[bool, cv2.typing.MatLike, cv2.typing.MatLike, cv2.typing.MatLike]
+:rtype: tuple[bool, cv2.typing.MatLike, cv2.typing.MatLike, cv2.typing.MatLike]
 ````
 
 
@@ -22607,7 +22637,7 @@ Refine a pose (the translation and the rotation that transform a 3D point expres
 :type tvec: cv2.typing.MatLike
 :param criteria: Criteria when to stop the Levenberg-Marquard iterative algorithm.
 :type criteria: cv2.typing.TermCriteria
-:rettype: tuple[cv2.typing.MatLike, cv2.typing.MatLike]
+:rtype: tuple[cv2.typing.MatLike, cv2.typing.MatLike]
 ````
 
 
@@ -22634,7 +22664,7 @@ Refine a pose (the translation and the rotation that transform a 3D point expres
 :type criteria: cv2.typing.TermCriteria
 :param VVSlambda: Gain for the virtual visual servoing control law, equivalent to the $\alpha$gain in the Damped Gauss-Newton formulation. 
 :type VVSlambda: float
-:rettype: tuple[cv2.typing.MatLike, cv2.typing.MatLike]
+:rtype: tuple[cv2.typing.MatLike, cv2.typing.MatLike]
 ````
 
 
@@ -22651,7 +22681,7 @@ The function cv::solvePoly finds real and complex roots of a polynomial equation
 :type roots: cv2.typing.MatLike | None
 :param maxIters: maximum number of iterations the algorithm does.
 :type maxIters: int
-:rettype: tuple[float, cv2.typing.MatLike]
+:rtype: tuple[float, cv2.typing.MatLike]
 ````
 
 
@@ -22669,7 +22699,7 @@ The function cv::sort sorts each matrix row or each matrix column in ascending o
 :type dst: cv2.typing.MatLike | None
 :param flags: operation flags, a combination of #SortFlags
 :type flags: int
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -22687,7 +22717,7 @@ The function cv::sortIdx sorts each matrix row or each matrix column in the asce
 :type dst: cv2.typing.MatLike | None
 :param flags: operation flags that could be a combination of cv::SortFlags
 :type flags: int
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -22709,7 +22739,7 @@ Equivalent to calling: @code Sobel( src, dx, CV_16SC1, 1, 0, 3 ); Sobel( src, dy
 :type ksize: int
 :param borderType: pixel extrapolation method, see #BorderTypes.Only #BORDER_DEFAULT=#BORDER_REFLECT_101 and #BORDER_REPLICATE are supported. 
 :type borderType: int
-:rettype: tuple[cv2.typing.MatLike, cv2.typing.MatLike]
+:rtype: tuple[cv2.typing.MatLike, cv2.typing.MatLike]
 ````
 
 
@@ -22724,7 +22754,7 @@ Equivalent to calling: @code Sobel( src, dx, CV_16SC1, 1, 0, 3 ); Sobel( src, dy
 :type m: cv2.typing.MatLike
 :param mv: output vector of arrays; the arrays themselves are reallocated, if needed.
 :type mv: _typing.Sequence[cv2.typing.MatLike] | None
-:rettype: _typing.Sequence[cv2.typing.MatLike]
+:rtype: _typing.Sequence[cv2.typing.MatLike]
 ````
 
 
@@ -22750,7 +22780,7 @@ For every pixel $ (x, y) $ in the source image, the function calculates the sum 
 :type normalize: bool
 :param borderType: border mode used to extrapolate pixels outside of the image, see #BorderTypes. #BORDER_WRAP is not supported.
 :type borderType: int
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -22765,7 +22795,7 @@ The function cv::sqrt calculates a square root of each input array element. In c
 :type src: cv2.typing.MatLike
 :param dst: output array of the same size and type as src.
 :type dst: cv2.typing.MatLike | None
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -22782,7 +22812,7 @@ The function applies and stackBlur to an image. stackBlur can generate similar r
 :type dst: cv2.typing.MatLike | None
 :param ksize: stack-blurring kernel size. The ksize.width and ksize.height can differ but they both must bepositive and odd. 
 :type ksize: cv2.typing.Size
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -22793,7 +22823,7 @@ The function applies and stackBlur to an image. stackBlur can generate similar r
 
 
 
-:rettype: int
+:rtype: int
 ````
 
 
@@ -22832,7 +22862,7 @@ stereoCalibrate(objectPoints, imagePoints1, imagePoints2, cameraMatrix1, distCoe
 :type flags: int
 :param criteria: 
 :type criteria: cv2.typing.TermCriteria
-:rettype: tuple[float, cv2.typing.MatLike, cv2.typing.MatLike, cv2.typing.MatLike, cv2.typing.MatLike, cv2.typing.MatLike, cv2.typing.MatLike, cv2.typing.MatLike, cv2.typing.MatLike]
+:rtype: tuple[float, cv2.typing.MatLike, cv2.typing.MatLike, cv2.typing.MatLike, cv2.typing.MatLike, cv2.typing.MatLike, cv2.typing.MatLike, cv2.typing.MatLike, cv2.typing.MatLike]
 ````
 
 
@@ -22877,7 +22907,7 @@ Calibrates a stereo camera set up. This function finds the intrinsic parametersf
 :type flags: int
 :param criteria: Termination criteria for the iterative optimization algorithm.
 :type criteria: cv2.typing.TermCriteria
-:rettype: tuple[float, cv2.typing.MatLike, cv2.typing.MatLike, cv2.typing.MatLike, cv2.typing.MatLike, cv2.typing.MatLike, cv2.typing.MatLike, cv2.typing.MatLike, cv2.typing.MatLike, _typing.Sequence[cv2.typing.MatLike], _typing.Sequence[cv2.typing.MatLike], cv2.typing.MatLike]
+:rtype: tuple[float, cv2.typing.MatLike, cv2.typing.MatLike, cv2.typing.MatLike, cv2.typing.MatLike, cv2.typing.MatLike, cv2.typing.MatLike, cv2.typing.MatLike, cv2.typing.MatLike, _typing.Sequence[cv2.typing.MatLike], _typing.Sequence[cv2.typing.MatLike], cv2.typing.MatLike]
 ````
 
 
@@ -22922,7 +22952,7 @@ The function computes the rotation matrices for each camera that (virtually) mak
 :type validPixROI1: 
 :param validPixROI2: Optional output rectangles inside the rectified images where all the pixelsare valid. If alpha=0 , the ROIs cover the whole images. Otherwise, they are likely to be smaller (see the picture below). 
 :type validPixROI2: 
-:rettype: tuple[cv2.typing.MatLike, cv2.typing.MatLike, cv2.typing.MatLike, cv2.typing.MatLike, cv2.typing.MatLike, cv2.typing.Rect, cv2.typing.Rect]
+:rtype: tuple[cv2.typing.MatLike, cv2.typing.MatLike, cv2.typing.MatLike, cv2.typing.MatLike, cv2.typing.MatLike, cv2.typing.Rect, cv2.typing.Rect]
 ````
 
 
@@ -22947,7 +22977,7 @@ The function computes the rectification transformations without knowing intrinsi
 :type H2: cv2.typing.MatLike | None
 :param threshold: Optional threshold used to filter out the outliers. If the parameter is greaterthan zero, all the point pairs that do not comply with the epipolar geometry (that is, the points for which $|\texttt{points2[i]}^T \cdot \texttt{F} \cdot \texttt{points1[i]}|>\texttt{threshold}$ ) are rejected prior to computing the homographies. Otherwise, all the points are considered inliers. 
 :type threshold: float
-:rettype: tuple[bool, cv2.typing.MatLike, cv2.typing.MatLike]
+:rtype: tuple[bool, cv2.typing.MatLike, cv2.typing.MatLike]
 ````
 
 
@@ -22966,7 +22996,7 @@ Stylization aims to produce digital imagery with a wide variety of effects not f
 :type sigma_s: float
 :param sigma_r: %Range between 0 to 1.
 :type sigma_r: float
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -22994,7 +23024,7 @@ Saturation is not applied when the output array has the depth CV_32S. You may ev
 :type mask: cv2.typing.MatLike | None
 :param dtype: optional depth of the output array
 :type dtype: int
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -23008,7 +23038,7 @@ The function cv::sum calculates and returns the sum of array elements, independe
 
 :param src: input array that must have from 1 to 4 channels.
 :type src: cv2.typing.MatLike
-:rettype: cv2.typing.Scalar
+:rtype: cv2.typing.Scalar
 ````
 
 
@@ -23031,7 +23061,7 @@ By retaining only the gradients at edge locations, before integrating with the P
 :type high_threshold: float
 :param kernel_size: The size of the Sobel kernel to be used.
 :type kernel_size: int
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -23057,7 +23087,7 @@ Currently, the Otsu's and Triangle methods are implemented only for 8-bit single
 :param type: thresholding type (see #ThresholdTypes).
 :type type: int
 :return: the computed threshold value if Otsu's or Triangle methods used.
-:rettype: tuple[float, cv2.typing.MatLike]
+:rtype: tuple[float, cv2.typing.MatLike]
 ````
 
 
@@ -23070,7 +23100,7 @@ The function cv::trace returns the sum of the diagonal elements of the matrix mt
 
 :param mtx: input matrix.
 :type mtx: cv2.typing.MatLike
-:rettype: cv2.typing.Scalar
+:rtype: cv2.typing.Scalar
 ````
 
 
@@ -23088,7 +23118,7 @@ The function cv::transform performs the matrix transformation of every element o
 :type dst: cv2.typing.MatLike | None
 :param m: transformation 2x2 or 2x3 floating-point matrix.
 :type m: cv2.typing.MatLike
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -23106,7 +23136,7 @@ No complex conjugation is done in case of a complex matrix. Itshould be done sep
 :type src: cv2.typing.MatLike
 :param dst: output array of the same type as src.
 :type dst: cv2.typing.MatLike | None
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -23126,7 +23156,7 @@ Input should be continuous single-channel matrix.
 :type order: _typing.Sequence[int]
 :param dst: output array of the same type as src.
 :type dst: cv2.typing.MatLike | None
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -23147,7 +23177,7 @@ This function reconstructs 3-dimensional points (in homogeneous coordinates) by 
 :type projPoints2: cv2.typing.MatLike
 :param points4D: 4xN array of reconstructed points in homogeneous coordinates. These points arereturned in the world's coordinate system. 
 :type points4D: cv2.typing.MatLike | None
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -23168,7 +23198,7 @@ The function transforms an image to compensate radial and tangential lens distor
 :type distCoeffs: cv2.typing.MatLike
 :param newCameraMatrix: Camera matrix of the distorted image. By default, it is the same ascameraMatrix but you may additionally scale and shift the result by using a different matrix. 
 :type newCameraMatrix: cv2.typing.MatLike | None
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -23189,7 +23219,7 @@ Compute undistorted image points position
 :type distCoeffs: cv2.typing.MatLike
 :param arg1: 
 :type arg1: cv2.typing.TermCriteria
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -23212,7 +23242,7 @@ The function is similar to #undistort and #initUndistortRectifyMap but it operat
 :type R: cv2.typing.MatLike | None
 :param P: New camera matrix (3x3) or new projection matrix (3x4) $\begin{bmatrix} {f'}_x & 0 & {c'}_x & t_x \\ 0 & {f'}_y & {c'}_y & t_y \\ 0 & 0 & 1 & t_z \end{bmatrix}$. P1 or P2 computed by#stereoRectify can be passed here. If the matrix is empty, the identity new camera matrix is used. 
 :type P: cv2.typing.MatLike | None
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -23240,7 +23270,7 @@ Default version of #undistortPoints does 5 iterations to compute undistorted poi
 :type criteria: cv2.typing.TermCriteria
 :param dst: 
 :type dst: cv2.typing.MatLike | None
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -23251,7 +23281,7 @@ Default version of #undistortPoints does 5 iterations to compute undistorted poi
 
 
 
-:rettype: bool
+:rtype: bool
 ````
 
 
@@ -23262,7 +23292,7 @@ Returns the status of optimized code usage.
 The function returns true if the optimized code is enabled. Otherwise, it returns false. 
 
 
-:rettype: bool
+:rtype: bool
 ````
 
 
@@ -23283,7 +23313,7 @@ The function returns true if the optimized code is enabled. Otherwise, it return
 :type numberOfDisparities: int
 :param disp12MaxDisp: 
 :type disp12MaxDisp: int
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -23298,7 +23328,7 @@ The function returns true if the optimized code is enabled. Otherwise, it return
 :type src: _typing.Sequence[cv2.typing.MatLike]
 :param dst: output array. It has the same number of cols and depth as the src, and the sum of rows of the src.same depth. 
 :type dst: cv2.typing.MatLike | None
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -23317,7 +23347,7 @@ The function only works if there is at least one HighGUI window created and the 
 
 :param delay: Delay in milliseconds. 0 is the special value that means "forever".
 :type delay: int
-:rettype: int
+:rtype: int
 ````
 
 
@@ -23333,7 +23363,7 @@ Key code is implementation specific and depends on used backend: QT/GTK/Win32/et
 
 :param delay: 
 :type delay: int
-:rettype: int
+:rtype: int
 ````
 
 
@@ -23359,7 +23389,7 @@ The function warpAffine transforms the source image using the specified matrix: 
 :type borderMode: int
 :param borderValue: value used in case of a constant border; by default, it is 0.
 :type borderValue: cv2.typing.Scalar
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -23385,7 +23415,7 @@ The function warpPerspective transforms the source image using the specified mat
 :type borderMode: int
 :param borderValue: value used in case of a constant border; by default, it equals 0.
 :type borderValue: cv2.typing.Scalar
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -23409,7 +23439,7 @@ The function warpPerspective transforms the source image using the specified mat
 :type maxRadius: float
 :param flags: A combination of interpolation methods, #InterpolationFlags + #WarpPolarMode.- Add #WARP_POLAR_LINEAR to select linear polar mapping (default) - Add #WARP_POLAR_LOG to select semilog polar mapping - Add #WARP_INVERSE_MAP for reverse mapping. @note -  The function can not operate in-place. -  To calculate magnitude and angle in degrees #cartToPolar is used internally thus angles are measured from 0 to 360 with accuracy about 0.3 degrees. -  This function uses #remap. Due to current implementation limitations the size of an input and output images should be less than 32767x32767. 
 :type flags: int
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -23428,7 +23458,7 @@ Any two neighbor connected components are not necessarily separated by a watersh
 :type image: cv2.typing.MatLike
 :param markers: Input/output 32-bit single-channel image (map) of markers. It should have the samesize as image . 
 :type markers: cv2.typing.MatLike
-:rettype: cv2.typing.MatLike
+:rtype: cv2.typing.MatLike
 ````
 
 
@@ -23443,7 +23473,7 @@ The function stores a flow field in a file, returns true on success, false other
 :type path: str
 :param flow: Flow field to be stored
 :type flow: cv2.typing.MatLike
-:rettype: bool
+:rtype: bool
 ````
 
 

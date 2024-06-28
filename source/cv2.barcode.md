@@ -51,7 +51,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 
 :param self: 
 :type self: 
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} __init__(self, prototxt_path: str, model_path: str)
@@ -67,7 +67,7 @@ Initialize self.  See help(type(self)) for accurate signature.
 :type prototxt_path: str
 :param model_path: 
 :type model_path: str
-:rettype: None
+:rtype: None
 ````
 
 ````{py:method} decodeWithType(img, points) -> retval, decoded_info, decoded_type
@@ -88,7 +88,7 @@ Decodes barcode in image once it's found by the detect() method.
 :param decoded_type: vector strings, specifies the type of these barcodes
 :type decoded_type: 
 :return: true if at least one valid barcode have been found
-:rettype: tuple[bool, _typing.Sequence[str], _typing.Sequence[str]]
+:rtype: tuple[bool, _typing.Sequence[str], _typing.Sequence[str]]
 ````
 
 ````{py:method} decodeWithType(img, points) -> retval, decoded_info, decoded_type
@@ -109,7 +109,7 @@ Decodes barcode in image once it's found by the detect() method.
 :param decoded_type: vector strings, specifies the type of these barcodes
 :type decoded_type: 
 :return: true if at least one valid barcode have been found
-:rettype: tuple[bool, _typing.Sequence[str], _typing.Sequence[str]]
+:rtype: tuple[bool, _typing.Sequence[str], _typing.Sequence[str]]
 ````
 
 ````{py:method} detectAndDecodeWithType(img[, points]) -> retval, decoded_info, decoded_type, points
@@ -130,7 +130,7 @@ Both detects and decodes barcode
 :param decoded_type: vector of strings, specifies the type of these barcodes
 :type decoded_type: 
 :return: true if at least one valid barcode have been found
-:rettype: tuple[bool, _typing.Sequence[str], _typing.Sequence[str], cv2.typing.MatLike]
+:rtype: tuple[bool, _typing.Sequence[str], _typing.Sequence[str], cv2.typing.MatLike]
 ````
 
 ````{py:method} detectAndDecodeWithType(img[, points]) -> retval, decoded_info, decoded_type, points
@@ -151,7 +151,7 @@ Both detects and decodes barcode
 :param decoded_type: vector of strings, specifies the type of these barcodes
 :type decoded_type: 
 :return: true if at least one valid barcode have been found
-:rettype: tuple[bool, _typing.Sequence[str], _typing.Sequence[str], cv2.UMat]
+:rtype: tuple[bool, _typing.Sequence[str], _typing.Sequence[str], cv2.UMat]
 ````
 
 
